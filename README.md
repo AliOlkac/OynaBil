@@ -28,6 +28,16 @@ npm run build      # durağan site out/ klasörüne, service worker ile birlikte
 
 `out/` klasörü herhangi bir durağan barındırmaya (Cloudflare Pages, Vercel, Netlify, okul sunucusu) olduğu gibi yüklenebilir.
 
+## Yayına alma (Vercel)
+
+Vercel ayarları `vercel.json` dosyasında hazır: kurulum `npm ci`, derleme `npm run build`, yayınlanan klasör `out/`. Service worker önbelleğe alınmaz, derleme dosyaları ise kalıcı önbelleğe alınır.
+
+1. [vercel.com/new](https://vercel.com/new) adresinde GitHub hesabıyla giriş yapın.
+2. **Import Git Repository** listesinden `AliOlkac/OynaBil` deposunu seçin.
+3. Ayarları değiştirmeden **Deploy** deyin.
+
+Bundan sonra depoya yapılan her push siteyi kendiliğinden günceller. Varsayılan daldan canlı sürüm, diğer dallardan önizleme bağlantısı üretilir.
+
 ## Klasörler
 
 ```
