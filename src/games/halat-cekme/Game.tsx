@@ -1,25 +1,40 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
-import { Check, X } from "lucide-react";
-import { useEffect, useMemo, useRef, type CSSProperties } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { ArrowRight, Check, Flame, Snowflake, X } from "lucide-react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { GameIntro } from "@/components/game/GameIntro";
 import { Results } from "@/components/game/Results";
+import { Button } from "@/components/ui/Button";
 import { TeamEmblem } from "@/components/ui/TeamEmblem";
 import type { PlayableQuestion } from "@/core/deck";
-import { usePersistentReducer, useNow } from "@/lib/hooks";
+import { clock, usePersistentReducer, useNow } from "@/lib/hooks";
+import { dur, ease, spring } from "@/lib/motion";
 import { sfx } from "@/lib/sound";
 import { halatCekme } from "../registry";
 import { TEAM_STYLES } from "../teams";
-import type { GameProps, Team } from "../types";
+import type { AnswerLog, GameProps, Team } from "../types";
 import { createTug, FREEZE_MS, tugReducer, type SideState, type TugSettings, type TugState } from "./logic";
-import { dur, ease, spring } from "@/lib/motion";
+import { TugScene, type SceneInput, type SceneTeam } from "./scene/TugScene";
 
 const LETTERS = ["A", "B", "C", "D"];
+/** Bitiş gösterisinin süresi; sonra sonuç ekranı gelir. */
+const SHOWTIME_MS = 4_600;
 
 function formatClock(ms: number) {
   const total = Math.max(0, Math.ceil(ms / 1000));
   return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, "0")}`;
+}
+
+/** Bir takımın son cevaplarından üst üste kaç doğru geldiği. */
+function streakOf(log: AnswerLog[], teamId: string) {
+  let n = 0;
+  for (let i = log.length - 1; i >= 0; i--) {
+    if (log[i].teamId !== teamId) continue;
+    if (!log[i].correct) break;
+    n++;
+  }
+  return n;
 }
 
 export default function HalatCekme({ config, deck, onRestart }: GameProps) {
@@ -27,17 +42,26 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
   const teams = config.teams.slice(0, 2) as [Team, Team];
   const reducer = useMemo(() => tugReducer(deck), [deck]);
   const [s, dispatch] = usePersistentReducer<TugState, Parameters<typeof reducer>[1]>(config.sessionId, reducer, () => createTug(teams, settings));
+  const reducedMotion = Boolean(useReducedMotion());
 
   const playing = s.phase === "playing";
   const now = useNow(playing, 100);
   const countdown = playing && s.startsAt !== null ? Math.ceil((s.startsAt - now) / 1000) : 0;
+  const goFlash = playing && s.startsAt !== null && now >= s.startsAt && now - s.startsAt < 800;
   const remaining = s.endsAt !== null ? s.endsAt - Math.max(now, s.startsAt ?? now) : settings.seconds * 1000;
 
+  // Oyun bu ekranda biterse önce bitiş gösterisi oynar; bitmiş hâlde açıldıysa sonuçlar hemen gelir.
+  const [showResults, setShowResults] = useState(() => s.phase === "finished");
   useEffect(() => {
-    if (playing && s.endsAt !== null && now >= s.endsAt) dispatch({ type: "time-up", now: Date.now() });
+    if (s.phase !== "finished" || showResults) return;
+    const id = window.setTimeout(() => setShowResults(true), SHOWTIME_MS);
+    return () => window.clearTimeout(id);
+  }, [s.phase, showResults]);
+
+  useEffect(() => {
+    if (playing && s.endsAt !== null && now >= s.endsAt) dispatch({ type: "time-up", now: clock() });
   }, [playing, now, s.endsAt, dispatch]);
 
-  // Geri sayım sesleri
   const lastCount = useRef<number | null>(null);
   useEffect(() => {
     if (!playing || lastCount.current === countdown) return;
@@ -46,18 +70,33 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
     else if (countdown === 0) sfx.go();
   }, [playing, countdown]);
 
+  const winnerIndex = s.winner === null ? null : s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1;
+  const frozen: [boolean, boolean] = [0, 1].map((i) => {
+    const f = s.sides[i].frozenUntil;
+    return f !== null && now < f;
+  }) as [boolean, boolean];
+  const sceneInput: SceneInput = {
+    rope: s.rope,
+    target: s.settings.target,
+    phase: s.phase === "finished" ? "finished" : playing && countdown <= 0 ? "go" : "ready",
+    winner: winnerIndex,
+    pullAt: [s.sides[0].correct, s.sides[1].correct],
+    missAt: [s.sides[0].wrong, s.sides[1].wrong],
+    frozen,
+  };
+
   if (s.phase === "ready") {
     return (
       <GameIntro
         game={halatCekme}
         teams={teams}
-        questionInfo={`${formatClock(settings.seconds * 1000)} dakika. İpi ${settings.target} adım kendi tarafına çeken kazanır.`}
-        onStart={() => dispatch({ type: "start", now: Date.now() })}
+        questionInfo={`${formatClock(settings.seconds * 1000)} dakika. İpi ${settings.target} adım kendi tarafına çeken kazanır, kaybeden çamura düşer.`}
+        onStart={() => dispatch({ type: "start", now: clock() })}
       />
     );
   }
 
-  if (s.phase === "finished") {
+  if (s.phase === "finished" && showResults) {
     return (
       <Results
         standings={s.sides
@@ -67,6 +106,7 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
             detail: `${side.correct} doğru, ${side.wrong} yanlış`,
           }))
           .sort((a, b) => (s.winner === b.team.id ? 1 : s.winner === a.team.id ? -1 : b.score - a.score))}
+        scoreLabel="doğru"
         winnerId={s.winner}
         log={s.log}
         deck={deck}
@@ -76,11 +116,47 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
     );
   }
 
+  const finished = s.phase === "finished";
+  const sceneTeams: [SceneTeam, SceneTeam] = [
+    { base: TEAM_STYLES[teams[0].color].base, deep: TEAM_STYLES[teams[0].color].deep },
+    { base: TEAM_STYLES[teams[1].color].base, deep: TEAM_STYLES[teams[1].color].deep },
+  ];
+  const winnerTeam = typeof winnerIndex === "number" ? teams[winnerIndex] : null;
+
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
-      <RopeArena state={s} teams={teams} remainingMs={remaining} />
+      <div className="relative mx-4 h-[44%] min-h-[13rem] shrink-0 overflow-hidden rounded-xl bg-ink-950 shadow-[var(--surface-light)] sm:mx-6">
+        <TugScene input={sceneInput} teams={sceneTeams} reducedMotion={reducedMotion} />
 
-      <div className="grid min-h-0 flex-1 grid-cols-2">
+        {/* Yayın tarzı skor çubuğu: takımlar ve süre tek yerde */}
+        <ScoreBug teams={teams} sides={s.sides} log={s.log} frozen={frozen} clock={formatClock(finished ? 0 : remaining)} finished={finished} />
+
+        {/* Doğru cevapta çeken takımın üstünde +1 */}
+        {([0, 1] as const).map((i) => {
+          const last = s.sides[i].last;
+          const show = !finished && last?.correct && now - last.at < 900;
+          return (
+            <AnimatePresence key={i}>
+              {show && (
+                <motion.span
+                  key={last!.at}
+                  className="pointer-events-none absolute top-[30%] text-5xl font-bold"
+                  style={{ left: i === 0 ? "22%" : "70%", color: TEAM_STYLES[teams[i].color].base, textShadow: "0 0.2rem 0 rgb(7 18 40 / 0.6)" }}
+                  initial={{ y: 20, opacity: 0, scale: 0.6 }}
+                  animate={{ y: -30, opacity: 1, scale: 1 }}
+                  exit={{ y: -60, opacity: 0 }}
+                  transition={spring.celebrate}
+                >
+                  Çek!
+                </motion.span>
+              )}
+            </AnimatePresence>
+          );
+        })}
+
+      </div>
+
+      <div className="relative grid min-h-0 flex-1 grid-cols-2">
         {([0, 1] as const).map((i) => (
           <SidePanel
             key={teams[i].id}
@@ -89,16 +165,38 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
             state={s.sides[i]}
             deck={deck}
             now={now}
-            locked={countdown > 0}
-            onAnswer={(option) => dispatch({ type: "answer", side: i, option, now: Date.now() })}
+            locked={countdown > 0 || finished}
+            onAnswer={(option) => dispatch({ type: "answer", side: i, option, now: clock() })}
           />
         ))}
+        {finished && (
+          <motion.div
+            className="absolute inset-0 flex flex-col items-center justify-center gap-8 bg-ink-900/90"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: dur.base }}
+          >
+            <motion.p
+              className="flex items-center gap-4 text-6xl font-bold"
+              style={{ color: winnerTeam ? TEAM_STYLES[winnerTeam.color].base : "var(--color-cream)" }}
+              initial={{ scale: 0.7, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ ...spring.celebrate, delay: 0.7 }}
+            >
+              {winnerTeam && <TeamEmblem color={winnerTeam.color} className="size-14" />}
+              {winnerTeam ? `${winnerTeam.name} kazandı!` : "Berabere! İp koptu!"}
+            </motion.p>
+            <Button variant="primary" size="xl" icon={<ArrowRight className="size-7" />} iconAfter onClick={() => setShowResults(true)}>
+              Sonuçlar
+            </Button>
+          </motion.div>
+        )}
       </div>
 
       <AnimatePresence>
-        {countdown > 0 && (
+        {(countdown > 0 || goFlash) && (
           <motion.div
-            className="absolute inset-0 z-30 grid place-items-center bg-ink-950/75"
+            className="pointer-events-none absolute inset-0 z-30 grid place-items-center bg-ink-950/45"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -106,14 +204,15 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
           >
             <AnimatePresence mode="popLayout">
               <motion.span
-                key={countdown}
-                className="tabular text-[12rem] leading-none font-bold text-kehribar"
-                initial={{ scale: 1.6, opacity: 0 }}
+                key={countdown > 0 ? countdown : "go"}
+                className={`tabular leading-none font-bold ${countdown > 0 ? "text-[12rem] text-kehribar" : "text-[10rem] text-zumrut"}`}
+                style={{ textShadow: "0 0.5rem 0 rgb(7 18 40 / 0.7)" }}
+                initial={{ scale: 1.7, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.7, opacity: 0 }}
                 transition={spring.celebrate}
               >
-                {countdown}
+                {countdown > 0 ? countdown : "ÇEK!"}
               </motion.span>
             </AnimatePresence>
           </motion.div>
@@ -123,84 +222,73 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
   );
 }
 
-function RopeArena({ state, teams, remainingMs }: { state: TugState; teams: [Team, Team]; remainingMs: number }) {
-  const target = state.settings.target;
-  const left = TEAM_STYLES[teams[0].color];
-  const right = TEAM_STYLES[teams[1].color];
-  // İp, iki uç çizgi arasında adım adım kayar: -target sol çizgi, +target sağ çizgi.
-  const span = 40; // düğümün merkezden çizgiye uzaklığı, yüzde
-  const knot = (state.rope / target) * span;
-
-  const lastRope = useRef(state.rope);
-  useEffect(() => {
-    if (state.rope !== lastRope.current) sfx.pull();
-    lastRope.current = state.rope;
-  }, [state.rope]);
-
+function ScoreBug({
+  teams,
+  sides,
+  log,
+  frozen,
+  clock: time,
+  finished,
+}: {
+  teams: [Team, Team];
+  sides: [SideState, SideState];
+  log: AnswerLog[];
+  frozen: [boolean, boolean];
+  clock: string;
+  finished: boolean;
+}) {
   return (
-    <div className="mx-8 mb-4 shrink-0 rounded-xl bg-ink-850 px-6 pt-3 pb-4 shadow-[var(--surface-light)]">
-      <div className="flex items-center justify-between gap-6">
-        <TeamTag team={teams[0]} correct={state.sides[0].correct} />
-        <div className="tabular rounded-lg bg-ink-950/70 px-4 py-1 text-3xl font-bold" role="timer">
-          {formatClock(remainingMs)}
+    <div className="pointer-events-none absolute inset-x-0 top-3 flex justify-center">
+      <div className="flex items-start gap-2">
+        {([0, 1] as const).map((i) => {
+          const team = teams[i];
+          const style = TEAM_STYLES[team.color];
+          const streak = streakOf(log, team.id);
+          return (
+            <div key={team.id} className={`flex flex-col gap-2 ${i === 0 ? "order-1 items-end" : "order-3 items-start"}`}>
+              <div
+                className={`flex items-center gap-3 rounded-xl bg-ink-950/85 py-2 ${i === 0 ? "pr-4 pl-3" : "flex-row-reverse pr-3 pl-4"}`}
+                style={{ boxShadow: `inset 0 -0.3rem 0 ${style.base}` }}
+              >
+                <TeamEmblem color={team.color} className="size-8" />
+                <span className="max-w-[14rem] truncate text-2xl font-bold" style={{ color: style.base }}>
+                  {team.name}
+                </span>
+                <span className="tabular min-w-[2ch] text-center text-3xl font-bold">{sides[i].correct}</span>
+              </div>
+              <AnimatePresence>
+                {frozen[i] && !finished && (
+                  <motion.p
+                    key="frozen"
+                    className="flex items-center gap-2 rounded-lg px-3 py-1 text-lg font-bold text-ink-950"
+                    style={{ background: "rgb(190 235 255)" }}
+                    initial={{ scale: 0.6, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.8, opacity: 0 }}
+                    transition={spring.celebrate}
+                  >
+                    <Snowflake className="size-5" /> Dondu!
+                  </motion.p>
+                )}
+                {!frozen[i] && !finished && streak >= 3 && (
+                  <motion.p
+                    key={`streak-${streak}`}
+                    className="flex items-center gap-1.5 rounded-lg bg-kehribar px-3 py-1 text-lg font-bold text-ink-950"
+                    initial={{ scale: 0.6, opacity: 0, rotate: -6 }}
+                    animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                    exit={{ scale: 0.8, opacity: 0 }}
+                    transition={spring.celebrate}
+                  >
+                    <Flame className="size-5 fill-current" /> {streak}&apos;lü seri!
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </div>
+          );
+        })}
+        <div className="tabular order-2 rounded-xl bg-ink-950/85 px-4 py-2 text-3xl font-bold" role="timer">
+          {time}
         </div>
-        <TeamTag team={teams[1]} correct={state.sides[1].correct} alignRight />
-      </div>
-
-      <div className="relative mt-3 h-20 overflow-hidden rounded-lg bg-ink-900/70">
-        {/* Kazanma alanları ve çizgileri */}
-        <div className="absolute inset-y-0 left-0" style={{ width: `${50 - span}%`, background: left.soft }} />
-        <div className="absolute inset-y-0 right-0" style={{ width: `${50 - span}%`, background: right.soft }} />
-        <div className="absolute inset-y-0 w-1 -translate-x-1/2" style={{ left: `${50 - span}%`, background: left.base }} />
-        <div className="absolute inset-y-0 w-1 translate-x-1/2" style={{ right: `${50 - span}%`, background: right.base }} />
-
-        {/* Adım işaretleri */}
-        {Array.from({ length: target * 2 - 1 }, (_, k) => k - (target - 1)).map((step) => (
-          <div
-            key={step}
-            className={`absolute bottom-2 w-0.5 -translate-x-1/2 rounded-full ${step === 0 ? "h-5 bg-cream" : "h-3 bg-ink-600"}`}
-            style={{ left: `${50 + (step / target) * span}%` }}
-          />
-        ))}
-
-        {/* İp ve düğüm birlikte kayar */}
-        <motion.div
-          className="absolute inset-y-0 -inset-x-[50%]"
-          animate={{ x: `${knot / 2}%` }}
-          transition={spring.rope}
-        >
-          <div
-            className="absolute top-1/2 h-4 w-full -translate-y-1/2 rounded-full"
-            style={{
-              background: "repeating-linear-gradient(115deg, #d9b77c 0 0.5rem, #b48a4a 0.5rem 0.85rem)",
-              boxShadow: "0 0.25rem 0 rgb(0 0 0 / 0.25)",
-            }}
-          />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <svg viewBox="0 0 24 24" className="size-14 drop-shadow-[0_0.25rem_0_rgb(0_0_0_/_0.3)]" aria-hidden>
-              <polygon
-                points="12,0.5 15.2,4.3 20.1,3.9 19.7,8.8 23.5,12 19.7,15.2 20.1,20.1 15.2,19.7 12,23.5 8.8,19.7 3.9,20.1 4.3,15.2 0.5,12 4.3,8.8 3.9,3.9 8.8,4.3"
-                fill="var(--color-cream)"
-              />
-              <circle cx="12" cy="12" r="4" fill="var(--color-mercan)" />
-            </svg>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-}
-
-function TeamTag({ team, correct, alignRight = false }: { team: Team; correct: number; alignRight?: boolean }) {
-  const style = TEAM_STYLES[team.color];
-  return (
-    <div className={`flex items-center gap-3 ${alignRight ? "flex-row-reverse text-right" : ""}`}>
-      <TeamEmblem color={team.color} className="size-9" />
-      <div className="leading-tight">
-        <p className="text-2xl font-bold" style={{ color: style.base }}>
-          {team.name}
-        </p>
-        <p className="tabular text-sm text-ink-300">{correct} doğru</p>
       </div>
     </div>
   );
@@ -230,19 +318,17 @@ function SidePanel({
   const q = deck[shownIndex % deck.length];
   const long = q.options.some((o) => o.length > 22);
 
-  const lastAt = useRef(state.last?.at);
-  useEffect(() => {
-    if (!state.last || state.last.at === lastAt.current) return;
-    lastAt.current = state.last.at;
-    if (!state.last.correct) sfx.wrong();
-  }, [state.last]);
-
   return (
     <section
-      className={`relative flex min-h-0 flex-col px-8 pt-2 pb-6 ${side === 0 ? "border-r-2 border-ink-800" : ""}`}
+      className={`relative flex min-h-0 flex-col px-4 pt-3 pb-5 sm:px-6 ${side === 0 ? "border-r-2 border-ink-800" : ""}`}
       aria-label={`${team.name} soruları`}
     >
-      <div className="h-1.5 w-24 rounded-full" style={{ background: style.base }} aria-hidden />
+      <div className={`flex items-center gap-2 ${side === 1 ? "flex-row-reverse" : ""}`}>
+        <TeamEmblem color={team.color} className="size-5" />
+        <span className="text-sm font-bold tracking-wide uppercase" style={{ color: style.base }}>
+          {team.name}
+        </span>
+      </div>
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={`${shownIndex}-${frozen ? "f" : "a"}`}
@@ -252,10 +338,10 @@ function SidePanel({
           exit={{ opacity: 0 }}
           transition={{ duration: dur.base, ease }}
         >
-          <h2 className={`mt-4 leading-tight font-bold text-balance ${q.prompt.length > 90 ? "text-2xl" : "text-3xl"}`}>{q.prompt}</h2>
+          <h2 className={`mt-2 leading-tight font-bold text-balance ${q.prompt.length > 90 ? "text-xl sm:text-2xl" : "text-2xl sm:text-3xl"}`}>{q.prompt}</h2>
           <div
-            className="mt-5 grid min-h-0 flex-1 grid-cols-2 content-start gap-3"
-            style={{ gridTemplateRows: `repeat(${Math.ceil(q.options.length / 2)}, minmax(0, 10rem))` }}
+            className="mt-4 grid min-h-0 flex-1 grid-cols-2 content-start gap-3"
+            style={{ gridTemplateRows: `repeat(${Math.ceil(q.options.length / 2)}, minmax(0, 8.5rem))` }}
           >
             {q.options.map((option, i) => {
               const tone = frozen ? (i === q.correctIndex ? "correct" : i === state.last?.option ? "wrong" : "dim") : "idle";
@@ -282,7 +368,7 @@ function SidePanel({
                       onAnswer(i);
                     }
                   }}
-                  className="pressable flex min-h-0 items-center gap-4 rounded-lg px-5 text-left disabled:cursor-default"
+                  className="pressable flex min-h-0 items-center gap-4 rounded-lg px-4 text-left disabled:cursor-default"
                   style={{ background: colors.bg, color: colors.fg, "--edge": colors.edge } as CSSProperties}
                 >
                   <span
@@ -291,7 +377,7 @@ function SidePanel({
                   >
                     {tone === "correct" ? <Check className="size-7" strokeWidth={3} /> : tone === "wrong" ? <X className="size-7" strokeWidth={3} /> : LETTERS[i]}
                   </span>
-                  <span className={`leading-tight font-semibold ${long ? "text-xl" : "text-2xl"}`}>{option}</span>
+                  <span className={`leading-tight font-semibold ${long ? "text-lg sm:text-xl" : "text-xl sm:text-2xl"}`}>{option}</span>
                 </button>
               );
             })}
@@ -300,12 +386,13 @@ function SidePanel({
       </AnimatePresence>
 
       {frozen && state.frozenUntil !== null && (
-        <div key={state.frozenUntil} className="absolute inset-x-8 bottom-2 h-1.5 overflow-hidden rounded-full bg-ink-800" aria-hidden>
+        <div key={state.frozenUntil} className="absolute inset-x-6 bottom-1.5 h-1.5 overflow-hidden rounded-full bg-ink-800" aria-hidden>
           <motion.div
-            className="h-full origin-left rounded-full bg-mercan"
+            className="h-full origin-left rounded-full"
+            style={{ background: "rgb(190 235 255)" }}
             initial={{ scaleX: 1 }}
             animate={{ scaleX: 0 }}
-            transition={{ duration: Math.max(0, state.frozenUntil - now) / 1000 || FREEZE_MS / 1000, ease: "linear" }}
+            transition={{ duration: FREEZE_MS / 1000, ease: "linear" }}
           />
         </div>
       )}

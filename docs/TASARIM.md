@@ -23,6 +23,16 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
 - **Sayaç halkası:** Gerçek bir süreyi gösterir.
 - **Konfeti:** Yalnızca kazanan ekranında, kazanan takımın rengiyle atılır.
 - **Ünite doğruluk çubukları:** Sonuç ekranında ölçülen doğru/toplam oranını gösterir.
+- **Halat Çekme sahnesi:** Okul şenliği akşamı. Gökyüzü, yıldızlar ve tepeler sahne dekorudur. Takım renklerinde bayrak dizisi takım yanlarını gösterir. Saha, çamur havuzu ve kazanma bayrakları kuralı görünür kılar.
+- **Sahnedeki sürekli hareket:** Çekişme sürerken çocukların hafif zorlanma salınımı vardır. Bu, canlı bir durumu gösterdiği için sonsuz döngü yasağının tek istisnasıdır ve oyun bitince durur. Kamera ipi hafifçe izler, tepeler daha yavaş kayar.
+- **Oyun anı efektleri:**
+  - Toz, ter damlası ve çamur sıçraması parçacıkları.
+  - Yanlış cevapta buz kalıbı ve titreme.
+  - Doğru şıktan konfeti patlaması.
+  - Skor kutusuna uçan puan.
+  - "ÇALDI!" damgası.
+  - Önde olan takımda taç, üst üste doğrularda alev rozeti.
+  - Sonuç ekranında yükselen kürsü.
 
 ## Renkler
 
@@ -41,6 +51,16 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
 | `zumrut` | `#34c784` | Doğru cevap, Yeşil Takım |
 | `mercan` | `#ff6b4f` | Yanlış cevap, Kırmızı Takım |
 | `kobalt` | `#5a96ff` | Mavi Takım |
+
+**Halat Çekme sahnesi:**
+
+| Belirteç | Değer | Kullanım |
+|---|---|---|
+| `saha` / `saha-acik` | `#23603f` / `#2b6f49` | Çim ve çim şeritleri |
+| `camur` / `camur-koyu` / `camur-parlak` | `#6b4527` / `#3f2715` / `#9a6a3f` | Çamur havuzu, kenarı, parlaması |
+| `ip` / `ip-koyu` | `#d6ab66` / `#a67a3a` | İp ve örgü deseni |
+
+Çocukların ten, saç ve kıyafet renkleri sahne dosyasında sabit bir listedir (`src/games/halat-cekme/scene/TugScene.tsx`).
 
 Her rengin `-deep` tonu, basılabilir düğmenin alt kenarıdır.
 
@@ -86,4 +106,7 @@ Kök boyut ekrana göre ölçeklenir: 1920x1080 tahtada 20 px, 1366x768 tahtada 
 | `spring.celebrate` | 400 / 18 | Puan, doğru rozeti, geri sayım |
 | `spring.rope` | 160 / 16 | İp |
 
-`prefers-reduced-motion` açıkken bütün geçişler 1 ms'ye iner ve konfeti atılmaz.
+`prefers-reduced-motion` açıkken:
+- bütün geçişler 1 ms'ye iner,
+- konfeti, puan uçuşu ve parçacıklar kapanır,
+- halat sahnesinde salınım ve titreme durur, ama ipin konumu ve bitiş pozları yine gösterilir.

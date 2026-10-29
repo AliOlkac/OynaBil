@@ -1,8 +1,9 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
-import { ArrowRight, Check, Clock, Divide, Pause, Play, SkipForward, X } from "lucide-react";
-import { useEffect, useMemo, useRef, type CSSProperties } from "react";
+import confetti from "canvas-confetti";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { ArrowRight, Check, Clock, Crown, Divide, Flame, Pause, Play, SkipForward, X } from "lucide-react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { GameIntro } from "@/components/game/GameIntro";
 import { Results } from "@/components/game/Results";
 import { TimerRing } from "@/components/game/TimerRing";
@@ -11,10 +12,11 @@ import { TeamEmblem } from "@/components/ui/TeamEmblem";
 import { findUnit } from "@/core/repository";
 import { clock, usePersistentReducer, useNow } from "@/lib/hooks";
 import { dur, ease, spring, stagger } from "@/lib/motion";
+import { cssColor } from "@/lib/color";
 import { sfx } from "@/lib/sound";
 import { bilgiYarismasi } from "../registry";
 import { TEAM_STYLES } from "../teams";
-import type { GameProps } from "../types";
+import type { AnswerLog, GameProps, Team } from "../types";
 import {
   createQuiz,
   currentTeam,
@@ -75,7 +77,11 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
   useEffect(() => {
     if (s.outcome === lastOutcome.current) return;
     lastOutcome.current = s.outcome;
-    if (s.outcome === "correct" || s.outcome === "stolen") sfx.correct();
+    if (s.outcome === "correct") sfx.correct();
+    else if (s.outcome === "stolen") {
+      sfx.correct();
+      sfx.thud();
+    }
     else if (s.outcome === "wrong" || s.outcome === "timeout" || s.outcome === "steal-failed") sfx.wrong();
   }, [s.outcome]);
 
@@ -86,8 +92,7 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
       const key = e.key.toLowerCase();
       const index = ["a", "b", "c", "d"].indexOf(key) !== -1 ? ["a", "b", "c", "d"].indexOf(key) : ["1", "2", "3", "4"].indexOf(key);
       if (index !== -1) {
-        if (s.phase === "question") dispatch({ type: "answer", option: index, now: Date.now() });
-        else if (s.phase === "steal" && s.stealTeam) dispatch({ type: "steal-answer", option: index });
+        pick(index);
       } else if ((key === "enter" || key === " ") && s.phase === "reveal") {
         e.preventDefault();
         dispatch({ type: "next", now: Date.now() });
@@ -97,9 +102,47 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [s.phase, s.stealTeam, paused, dispatch]);
+  });
 
   const unitTitle = q ? findUnit(q.unit)?.title : undefined;
+  const reducedMotion = useReducedMotion();
+  const [flights, setFlights] = useState<Flight[]>([]);
+  const flightId = useRef(0);
+  /** Doğru şıktan takımın skor kutusuna uçan puan ve şıktan çıkan konfeti. */
+  function celebrate(option: number, scorer: Team, points: number) {
+    if (reducedMotion) return;
+    const tile = document.querySelector(`[data-tile="${option}"]`);
+    const pill = document.querySelector(`[data-team-pill="${scorer.id}"]`);
+    if (!tile || !pill) return;
+    const a = tile.getBoundingClientRect();
+    const b = pill.getBoundingClientRect();
+    const from = { x: a.left + a.width / 2, y: a.top + a.height / 2 };
+    const to = { x: b.right - b.height * 0.9, y: b.top + b.height / 2 };
+    const color = TEAM_STYLES[scorer.color].base;
+    confetti({
+      particleCount: 50,
+      spread: 80,
+      startVelocity: 34,
+      scalar: 0.9,
+      origin: { x: from.x / window.innerWidth, y: from.y / window.innerHeight },
+      colors: [color, "var(--color-kehribar)", "var(--color-zumrut)", "var(--color-cream)"].map(cssColor),
+      disableForReducedMotion: true,
+    });
+    flightId.current += 1;
+    const id = flightId.current;
+    setFlights((list) => [...list, { id, from, to, text: `+${points}`, color }]);
+  }
+
+  function pick(option: number) {
+    if (s.phase === "question" && !paused) {
+      if (option === q.correctIndex && !s.hidden.includes(option)) celebrate(option, team, POINTS_CORRECT);
+      dispatch({ type: "answer", option, now: clock() });
+    } else if (s.phase === "steal" && s.stealTeam) {
+      const thief = s.teams.find((t) => t.id === s.stealTeam)!;
+      if (option === q.correctIndex && option !== s.picked && !s.hidden.includes(option)) celebrate(option, thief, POINTS_STEAL);
+      dispatch({ type: "steal-answer", option });
+    }
+  }
 
   if (s.phase === "ready") {
     return (
@@ -139,19 +182,35 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
   const revealing = s.phase === "reveal";
   const answering = s.phase === "question" || (s.phase === "steal" && s.stealTeam !== null);
   const stealTeam = s.teams.find((t) => t.id === s.stealTeam);
+  const stealer = stealTeam;
   const activeTeam = s.phase === "steal" && stealTeam ? stealTeam : team;
   const activeStyle = TEAM_STYLES[activeTeam.color];
 
-  function pick(option: number) {
-    if (s.phase === "question") dispatch({ type: "answer", option, now: clock() });
-    else if (s.phase === "steal") dispatch({ type: "steal-answer", option });
-  }
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
       <Scoreboard state={s} />
 
-      <div className="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 pt-5 sm:px-8 lg:overflow-visible">
+      {flights.map((f) => (
+        <PointsFlight key={f.id} flight={f} onDone={() => setFlights((list) => list.filter((x) => x.id !== f.id))} />
+      ))}
+
+      <div className="relative flex min-h-0 flex-1 flex-col overflow-y-auto px-4 pt-5 sm:px-8 lg:overflow-visible">
+        <AnimatePresence>
+          {revealing && s.outcome === "stolen" && stealer && (
+            <motion.div
+              key={`stamp-${q.id}`}
+              className="pointer-events-none absolute top-[58%] right-[12%] z-20 rounded-xl border-[0.35rem] bg-ink-900/85 px-6 py-1 text-6xl font-bold tracking-wide"
+              style={{ borderColor: TEAM_STYLES[stealer.color].base, color: TEAM_STYLES[stealer.color].base, rotate: -10 }}
+              initial={{ scale: 2.6, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={spring.celebrate}
+            >
+              ÇALDI!
+            </motion.div>
+          )}
+        </AnimatePresence>
         <div className="flex items-start gap-6">
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-3 text-lg text-ink-300">
@@ -308,16 +367,33 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
   );
 }
 
+/** Bir takımın kendi sırasında üst üste kaç soruyu bildiği. Çalınan sorular seriyi bozmaz. */
+function streakOf(log: AnswerLog[], teamId: string) {
+  let n = 0;
+  for (let i = log.length - 1; i >= 0; i--) {
+    const entry = log[i];
+    if (entry.teamId !== teamId || entry.stolen) continue;
+    if (!entry.correct) break;
+    n++;
+  }
+  return n;
+}
+
 function Scoreboard({ state }: { state: QuizState }) {
   const active = state.phase === "steal" && state.stealTeam ? state.stealTeam : currentTeam(state).id;
+  const top = Math.max(...state.teams.map((t) => state.scores[t.id]));
+  const leaders = state.teams.filter((t) => state.scores[t.id] === top);
   return (
     <div className="grid shrink-0 gap-2 px-4 sm:gap-3 sm:px-8" style={{ gridTemplateColumns: `repeat(${state.teams.length}, minmax(0, 1fr))` }}>
       {state.teams.map((t) => {
         const style = TEAM_STYLES[t.color];
         const isActive = t.id === active && state.phase !== "reveal";
+        const leading = top > 0 && leaders.length === 1 && leaders[0].id === t.id;
+        const streak = streakOf(state.log, t.id);
         return (
           <motion.div
             key={t.id}
+            data-team-pill={t.id}
             className="relative flex items-center gap-2 rounded-lg px-3 py-2 sm:gap-3 sm:px-5 sm:py-3"
             animate={{
               backgroundColor: isActive ? style.soft : "rgb(16 35 74 / 1)",
@@ -327,7 +403,38 @@ function Scoreboard({ state }: { state: QuizState }) {
           >
             <TeamEmblem color={t.color} className="size-8" />
             <span className="hidden min-w-0 flex-1 truncate text-xl font-bold sm:block">{t.name}</span>
+            <AnimatePresence>
+              {streak >= 2 && (
+                <motion.span
+                  key={`streak-${streak}`}
+                  className="flex items-center gap-1 rounded-md bg-kehribar px-2 py-0.5 text-base font-bold text-ink-950"
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.5, opacity: 0 }}
+                  transition={spring.celebrate}
+                  title={`Üst üste ${streak} doğru`}
+                >
+                  <Flame className="size-4 fill-current" />
+                  {streak}
+                </motion.span>
+              )}
+            </AnimatePresence>
             <Score value={state.scores[t.id]} color={style.base} />
+            <AnimatePresence>
+              {leading && (
+                <motion.span
+                  key="crown"
+                  className="absolute -top-4 left-3"
+                  initial={{ y: -14, opacity: 0, rotate: -25 }}
+                  animate={{ y: 0, opacity: 1, rotate: -12 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  transition={spring.celebrate}
+                  aria-label="Önde"
+                >
+                  <Crown className="size-7 fill-kehribar text-kehribar" />
+                </motion.span>
+              )}
+            </AnimatePresence>
           </motion.div>
         );
       })}
@@ -335,21 +442,54 @@ function Scoreboard({ state }: { state: QuizState }) {
   );
 }
 
+/** Puan, uçan "+100" kutuya vardığında artar. Sayfa yenilenince doğrudan güncel değerle açılır. */
 function Score({ value, color }: { value: number; color: string }) {
+  const [shown, setShown] = useState(value);
+  useEffect(() => {
+    if (value === shown) return;
+    const id = window.setTimeout(() => setShown(value), value > shown ? 720 : 0);
+    return () => window.clearTimeout(id);
+  }, [value, shown]);
   return (
     <AnimatePresence mode="popLayout" initial={false}>
       <motion.span
-        key={value}
+        key={shown}
         className="tabular text-3xl font-bold"
         style={{ color }}
-        initial={{ y: 20, opacity: 0, scale: 1.3 }}
+        initial={{ y: 20, opacity: 0, scale: 1.5 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
         exit={{ y: -20, opacity: 0 }}
         transition={spring.celebrate}
       >
-        {value}
+        {shown}
       </motion.span>
     </AnimatePresence>
+  );
+}
+
+type Flight = { id: number; from: { x: number; y: number }; to: { x: number; y: number }; text: string; color: string };
+
+function PointsFlight({ flight, onDone }: { flight: Flight; onDone: () => void }) {
+  // Yay, ekranın üst kenarına taşmadan skor kutusuna iner.
+  const peak = { x: (flight.from.x + flight.to.x) / 2, y: Math.max(90, Math.min(flight.from.y, flight.to.y) - 60) };
+  return (
+    <motion.div
+      className="pointer-events-none fixed top-0 left-0 z-40"
+      initial={{ x: flight.from.x, y: flight.from.y }}
+      animate={{ x: [flight.from.x, peak.x, flight.to.x], y: [flight.from.y, peak.y, flight.to.y] }}
+      transition={{ duration: 0.72, ease: ease, times: [0, 0.4, 1] }}
+      onAnimationComplete={onDone}
+    >
+      <motion.span
+        className="tabular block -translate-x-1/2 -translate-y-1/2 rounded-full px-5 py-1.5 text-4xl font-bold text-ink-950"
+        style={{ background: flight.color, boxShadow: "0 0.35rem 0 rgb(7 18 40 / 0.45)" }}
+        initial={{ scale: 0.4 }}
+        animate={{ scale: [0.4, 1.35, 0.7] }}
+        transition={{ duration: 0.72, times: [0, 0.4, 1] }}
+      >
+        {flight.text}
+      </motion.span>
+    </motion.div>
   );
 }
 
@@ -381,6 +521,7 @@ function AnswerTile({
   return (
     <motion.button
       type="button"
+      data-tile={index}
       disabled={disabled}
       onClick={onPick}
       className="pressable flex min-h-0 items-center gap-5 rounded-xl px-6 text-left disabled:cursor-default"

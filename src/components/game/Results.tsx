@@ -1,8 +1,8 @@
 "use client";
 
 import confetti from "canvas-confetti";
-import { motion, useReducedMotion } from "motion/react";
-import { Check, Home, RotateCcw, Settings2, X } from "lucide-react";
+import { animate, motion, useMotionValue, useReducedMotion, useTransform } from "motion/react";
+import { Check, Crown, Home, RotateCcw, Settings2, X } from "lucide-react";
 import { useEffect, useMemo } from "react";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { TeamEmblem } from "@/components/ui/TeamEmblem";
@@ -10,8 +10,9 @@ import type { PlayableQuestion } from "@/core/deck";
 import { findUnit } from "@/core/repository";
 import { TEAM_STYLES } from "@/games/teams";
 import type { AnswerLog, Team } from "@/games/types";
+import { cssColor } from "@/lib/color";
 import { sfx } from "@/lib/sound";
-import { dur, ease, spring, stagger } from "@/lib/motion";
+import { dur, ease, spring } from "@/lib/motion";
 
 export type Standing = { team: Team; score: number; detail: string };
 
@@ -26,8 +27,10 @@ export function Results({
   deck,
   onRestart,
   setupHref,
+  scoreLabel = "puan",
 }: {
   standings: Standing[];
+  scoreLabel?: string;
   winnerId: string | "draw" | null;
   log: AnswerLog[];
   deck: PlayableQuestion[];
@@ -40,9 +43,7 @@ export function Results({
   useEffect(() => {
     sfx.win();
     if (reduceMotion || !winner) return;
-    const colors = [TEAM_STYLES[winner.color].base, "#fbf5e9", "#3ccbc2"].map((c) =>
-      c.startsWith("var(") ? getComputedStyle(document.documentElement).getPropertyValue(c.slice(4, -1)).trim() : c,
-    );
+    const colors = [TEAM_STYLES[winner.color].base, "var(--color-cream)", "var(--color-firuze)"].map(cssColor);
     const fire = (x: number) => confetti({ particleCount: 90, spread: 70, startVelocity: 48, origin: { x, y: 0.7 }, colors, disableForReducedMotion: true });
     fire(0.2);
     const id = window.setTimeout(() => fire(0.8), 220);
@@ -87,32 +88,7 @@ export function Results({
           )}
         </motion.h1>
 
-        <ol className="mt-8 flex flex-col gap-3">
-          {standings.map((s, i) => {
-            const style = TEAM_STYLES[s.team.color];
-            const isWinner = s.team.id === winnerId;
-            return (
-              <motion.li
-                key={s.team.id}
-                className="flex items-center gap-5 rounded-xl px-6 py-4"
-                style={{ background: isWinner ? style.soft : "var(--color-ink-850)", boxShadow: isWinner ? `inset 0 0 0 2px ${style.base}` : undefined }}
-                initial={{ opacity: 0, x: -24 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ ...spring.enter, delay: 0.15 + i * stagger }}
-              >
-                <span className="tabular w-10 text-3xl font-bold text-ink-400">{i + 1}.</span>
-                <TeamEmblem color={s.team.color} className="size-10" />
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-2xl font-bold">{s.team.name}</p>
-                  <p className="text-ink-300">{s.detail}</p>
-                </div>
-                <span className="tabular text-4xl font-bold" style={{ color: style.base }}>
-                  {s.score}
-                </span>
-              </motion.li>
-            );
-          })}
-        </ol>
+        <Podium standings={standings} winnerId={winnerId} scoreLabel={scoreLabel} />
 
         <div className="mt-auto flex flex-wrap gap-3 pt-8">
           <Button variant="primary" size="lg" icon={<RotateCcw className="size-6" />} onClick={onRestart}>
@@ -179,6 +155,80 @@ export function Results({
       </section>
     </div>
   );
+}
+
+/** Kürsü: sütunlar sırayla yükselir, puanlar sayarak artar, birincinin başında taç. */
+function Podium({ standings, winnerId, scoreLabel }: { standings: Standing[]; winnerId: string | "draw" | null; scoreLabel: string }) {
+  // Eşit puan aynı basamaktır; Halat Çekme'de ipi çeken takım eşit doğruda da birincidir.
+  const ranks: number[] = [];
+  standings.forEach((s, i) => {
+    const tied = i > 0 && s.score === standings[i - 1].score && !(i === 1 && winnerId === standings[0].team.id);
+    ranks.push(tied ? ranks[i - 1] : i + 1);
+  });
+  // Klasik kürsü dizilişi: ikinci, birinci, üçüncü, dördüncü.
+  const order = standings.length === 1 ? [0] : [1, 0, 2, 3].filter((i) => i < standings.length);
+  const heights = [100, 74, 54, 40];
+
+  return (
+    <div className="mt-6 flex min-h-0 flex-1 items-end justify-center gap-4 pb-2">
+      {order.map((i) => {
+        const s = standings[i];
+        const rank = ranks[i];
+        const style = TEAM_STYLES[s.team.color];
+        const delay = 0.2 + (standings.length - rank) * 0.25;
+        return (
+          <div key={s.team.id} className="flex w-full max-w-[12rem] flex-col items-center justify-end">
+            <motion.div
+              className="flex flex-col items-center text-center"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...spring.enter, delay: delay + 0.35 }}
+            >
+              {rank === 1 && (
+                <motion.span
+                  initial={{ y: -40, opacity: 0, rotate: -20 }}
+                  animate={{ y: 0, opacity: 1, rotate: 0 }}
+                  transition={{ ...spring.celebrate, delay: delay + 0.6 }}
+                >
+                  <Crown className="size-12 fill-kehribar text-kehribar" />
+                </motion.span>
+              )}
+              <TeamEmblem color={s.team.color} className="size-14" />
+              <p className="mt-2 line-clamp-2 text-xl leading-tight font-bold">{s.team.name}</p>
+              <p className="text-sm text-ink-300">{s.detail}</p>
+            </motion.div>
+            <motion.div
+              className="mt-3 flex w-full shrink-0 origin-bottom flex-col items-center rounded-t-xl pt-3"
+              // Sütun boyu ekrana göre: 1080p tahtada en uzunu 22rem, kısa tahtada ekran yüksekliğinin %40'ı.
+              style={{ height: `calc(min(22rem, 40dvh) * ${(heights[rank - 1] ?? 30) / 100})`, background: style.base, boxShadow: `inset 0 -0.5rem 0 ${style.deep}` }}
+              initial={{ scaleY: 0 }}
+              animate={{ scaleY: 1 }}
+              transition={{ ...spring.enter, delay }}
+            >
+              <CountUp value={s.score} delay={delay + 0.2} />
+              <span className="text-sm font-semibold text-ink-950/70">{scoreLabel}</span>
+              <span className="mt-auto pb-3 text-5xl font-bold text-ink-950/35">{rank}</span>
+            </motion.div>
+          </div>
+        );
+      })}
+      <span className="sr-only">{podiumSummary(standings)}</span>
+    </div>
+  );
+}
+
+function podiumSummary(standings: Standing[]) {
+  return standings.map((s, i) => `${i + 1}. ${s.team.name}: ${s.score}`).join(", ");
+}
+
+function CountUp({ value, delay }: { value: number; delay: number }) {
+  const mv = useMotionValue(0);
+  const rounded = useTransform(mv, (v) => Math.round(v));
+  useEffect(() => {
+    const controls = animate(mv, value, { duration: 0.9, delay, ease });
+    return () => controls.stop();
+  }, [mv, value, delay]);
+  return <motion.span className="tabular text-4xl font-bold text-ink-950">{rounded}</motion.span>;
 }
 
 export function OutcomeIcon({ correct, className = "size-6" }: { correct: boolean; className?: string }) {

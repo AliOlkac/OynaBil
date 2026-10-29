@@ -12,8 +12,8 @@ Ortaokul öğretmenlerinin akıllı tahtada sınıfı takımlara ayırıp **yar�
 
 | Oyun | Takım | Nasıl oynanır |
 |---|---|---|
-| **Bilgi Yarışması** | 2-4 | Takımlar sırayla soru alır. Bilemeyen takımın sorusunu başka takım çalabilir. Her takımın birer kez yarı yarıya, +15 saniye ve pas jokeri vardır. |
-| **Halat Çekme** | 2 | Tahta ikiye bölünür, iki öğrenci aynı anda kendi sorusunu çözer. Doğru cevap ipi bir adım kendi tarafına çeker, yanlış cevap o tarafı kısa süre dondurur. |
+| **Bilgi Yarışması** | 2-4 | Takımlar sırayla soru alır. Bilemeyen takımın sorusunu başka takım çalabilir. Her takımın birer kez yarı yarıya, +15 saniye ve pas jokeri vardır. Doğru cevapta puan şıktan skor kutusuna uçar; önde olan takımda taç, üst üste bilen takımda alev rozeti çıkar. |
+| **Halat Çekme** | 2 | Tahta ikiye bölünür, iki öğrenci aynı anda kendi sorusunu çözer. Tahtanın üst yarısında çizimli bir halat çekme sahnesi vardır: doğru cevapta takım ipe asılır, yanlış cevapta buz kesilir. Kurdele bayrağa ulaşınca kaybeden takım çamura düşer, kazananlar sevinir. |
 
 Bilgi Yarışması'nı dizüstü bilgisayardan da yönetebilirsiniz: `A-D` ya da `1-4` cevap verir, `Enter` sonraki soruya geçer, `P` süreyi duraklatır.
 

@@ -1,5 +1,8 @@
 "use client";
 
+import { motion } from "motion/react";
+import { spring } from "@/lib/motion";
+
 /** Kalan süreyi gösteren halka. Son beş saniyede mercana döner. */
 export function TimerRing({
   remainingMs,
@@ -37,9 +40,17 @@ export function TimerRing({
           style={{ transition: "stroke-dashoffset 100ms linear, stroke var(--dur-base) var(--ease-out)" }}
         />
       </svg>
-      <span className="tabular text-[2.1em] leading-none font-bold" style={{ color: paused ? "var(--color-ink-400)" : urgent ? color : undefined }}>
+      {/* Son saniyelerde her saniye rakam atar: sınıf süreyi arkadan da duyar gibi görür. */}
+      <motion.span
+        key={urgent && !paused ? seconds : "steady"}
+        className="tabular text-[2.1em] leading-none font-bold"
+        style={{ color: paused ? "var(--color-ink-400)" : urgent ? color : undefined }}
+        initial={urgent && !paused ? { scale: 1.45 } : false}
+        animate={{ scale: 1 }}
+        transition={spring.celebrate}
+      >
         {seconds}
-      </span>
+      </motion.span>
     </div>
   );
 }

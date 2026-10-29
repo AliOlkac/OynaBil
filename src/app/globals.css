@@ -33,6 +33,15 @@
   --color-kobalt: #5a96ff;
   --color-kobalt-deep: #2f63c9;
 
+  /* Halat çekme sahnesi */
+  --color-saha: #23603f;
+  --color-saha-acik: #2b6f49;
+  --color-camur: #6b4527;
+  --color-camur-koyu: #3f2715;
+  --color-camur-parlak: #9a6a3f;
+  --color-ip: #d6ab66;
+  --color-ip-koyu: #a67a3a;
+
   /* Yazı ölçeği (rem; kök boyut ekrana göre ölçeklenir) */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;

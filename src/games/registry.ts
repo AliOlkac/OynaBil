@@ -54,12 +54,12 @@ export const bilgiYarismasi: GameDefinition = {
 export const halatCekme: GameDefinition = {
   id: "halat-cekme",
   name: "Halat Çekme",
-  tagline: "Tahta ikiye bölünür; iki öğrenci aynı anda yarışır, her doğru ipi çeker.",
+  tagline: "Tahta ikiye bölünür; iki öğrenci aynı anda yarışır, her doğru ipi çeker. Kaybeden çamura düşer.",
   howTo: [
     "İki takımdan birer öğrenci tahtanın kendi yarısına geçer.",
-    "Doğru cevap ipi bir adım kendi tarafına çeker, yeni soru hemen gelir.",
-    "Yanlış cevap o tarafı kısa bir süre dondurur.",
-    "İp çizgiye ulaşınca ya da süre bitince oyun biter. Öğrencileri her turda değiştirebilirsiniz.",
+    "Doğru cevapta takım ipe asılır, ip bir adım kendi tarafına gelir; yeni soru hemen çıkar.",
+    "Yanlış cevapta takım kısa bir süre buz kesilir: o sırada doğru cevap tahtada görünür.",
+    "Kurdele kendi bayrağınıza ulaşınca karşı takım çamura düşer. Süre biterse ip kimin tarafındaysa o kazanır.",
   ],
   teamCount: { min: 2, max: 2, default: 2 },
   questionTypes: ["multiple-choice", "true-false"],

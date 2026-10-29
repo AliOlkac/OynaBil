@@ -49,7 +49,65 @@ function tone(freq: number, start: number, duration: number, opts: { type?: Osci
   osc.stop(t + duration + 0.05);
 }
 
+let noiseBuffer: AudioBuffer | null = null;
+
+/** Filtrelenmiş beyaz gürültü: toz, çamur, kalabalık gibi perdesiz sesler için. */
+function noise(start: number, duration: number, opts: { freq: number; q?: number; gain?: number; type?: BiquadFilterType; attack?: number; sweepTo?: number }) {
+  const ac = audio();
+  if (!ac) return;
+  if (!noiseBuffer) {
+    noiseBuffer = ac.createBuffer(1, ac.sampleRate * 2, ac.sampleRate);
+    const data = noiseBuffer.getChannelData(0);
+    for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
+  }
+  const t = ac.currentTime + start;
+  const src = ac.createBufferSource();
+  src.buffer = noiseBuffer;
+  const filter = ac.createBiquadFilter();
+  filter.type = opts.type ?? "bandpass";
+  filter.frequency.setValueAtTime(opts.freq, t);
+  if (opts.sweepTo) filter.frequency.exponentialRampToValueAtTime(opts.sweepTo, t + duration);
+  filter.Q.value = opts.q ?? 1;
+  const g = ac.createGain();
+  g.gain.setValueAtTime(0.0001, t);
+  g.gain.exponentialRampToValueAtTime(opts.gain ?? 0.2, t + (opts.attack ?? 0.01));
+  g.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+  src.connect(filter).connect(g).connect(ac.destination);
+  src.start(t, Math.random());
+  src.stop(t + duration + 0.05);
+}
+
 export const sfx = {
+  /** Takım ipe asılır: kısa bir hamle ve ipin gerilmesi. */
+  heave: () => {
+    noise(0, 0.22, { freq: 900, q: 0.8, gain: 0.16, sweepTo: 300 });
+    tone(150, 0, 0.18, { type: "triangle", gain: 0.12, to: 95 });
+  },
+  /** Yanlış cevap: buz çıtırtısı. */
+  freeze: () => {
+    [1568, 2093, 2637].forEach((f, i) => tone(f, i * 0.05, 0.25, { type: "sine", gain: 0.05 }));
+    noise(0, 0.3, { freq: 6000, q: 2, gain: 0.05, type: "highpass" });
+    tone(196, 0, 0.2, { type: "sawtooth", gain: 0.05, to: 150 });
+  },
+  splash: () => {
+    noise(0, 0.6, { freq: 700, q: 0.7, gain: 0.35, sweepTo: 180, type: "lowpass" });
+    tone(110, 0, 0.3, { type: "sine", gain: 0.2, to: 55 });
+  },
+  /** Damga vurulması. */
+  thud: () => {
+    tone(95, 0, 0.28, { type: "sine", gain: 0.3, to: 48 });
+    noise(0, 0.08, { freq: 1800, q: 0.7, gain: 0.18 });
+  },
+  snap: () => {
+    noise(0, 0.12, { freq: 3000, q: 0.5, gain: 0.3, type: "highpass" });
+    tone(80, 0.02, 0.35, { type: "sine", gain: 0.18, to: 45 });
+  },
+  /** Kalabalık sevinci: yükselip alçalan gürültü. */
+  cheer: () => {
+    noise(0, 2.2, { freq: 1200, q: 0.6, gain: 0.12, attack: 0.4 });
+    noise(0.1, 2, { freq: 2400, q: 0.8, gain: 0.06, attack: 0.5 });
+  },
+
   tap: () => tone(660, 0, 0.06, { type: "triangle", gain: 0.08 }),
   tick: () => tone(1046, 0, 0.05, { type: "square", gain: 0.035 }),
   correct: () => {
