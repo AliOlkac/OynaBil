@@ -103,7 +103,47 @@ export const halatCekme: GameDefinition = {
   questionsNeeded: () => 8,
 };
 
-export const GAMES: GameDefinition[] = [bilgiYarismasi, halatCekme];
+export const kuleYikmaca: GameDefinition = {
+  id: "kule-yikmaca",
+  name: "Kule Yıkmaca",
+  tagline: "Bilen takım mancınığı kurar; nişangâhı doğru anda durduran karşı kuleyi yıkar.",
+  howTo: [
+    "Takımlar sırayla soru alır. Doğru cevap atış hakkı kazandırır; zor soruyu bilen takım ateşli gülle atar.",
+    "Karşı kulenin önünde nişangâh inip çıkar. Pencere hizasında ATEŞ'e dokunan en çok hasarı verir, temel en azını.",
+    "Rüzgâr her turda değişir: arkadan eserse taş daha yükseğe, önden eserse daha alçağa çarpar.",
+    "Bilemeyen takımın sorusunu karşı takım bilirse atış onun olur. Kulesi önce yıkılan kaybeder.",
+  ],
+  teamCount: { min: 2, max: 2, default: 2 },
+  questionTypes: ["multiple-choice", "true-false"],
+  settings: [
+    {
+      key: "rounds",
+      label: "Tur",
+      kind: "choice",
+      options: [
+        { value: 3, label: "3" },
+        { value: 5, label: "5" },
+        { value: 8, label: "8" },
+      ],
+    },
+    {
+      key: "seconds",
+      label: "Soru süresi",
+      kind: "choice",
+      options: [
+        { value: 20, label: "20 sn" },
+        { value: 30, label: "30 sn" },
+        { value: 45, label: "45 sn" },
+        { value: 0, label: "Süresiz" },
+      ],
+    },
+    { key: "steal", label: "Soru çalma", kind: "toggle", hint: "Bilemeyen takımın sorusunu karşı takım bilirse atış onun olur" },
+  ],
+  defaultSettings: { rounds: 5, seconds: 30, steal: true },
+  questionsNeeded: (s) => Number(s.rounds) * 2,
+};
+
+export const GAMES: GameDefinition[] = [bilgiYarismasi, halatCekme, kuleYikmaca];
 
 export function getGame(id: string): GameDefinition | undefined {
   return GAMES.find((g) => g.id === id);

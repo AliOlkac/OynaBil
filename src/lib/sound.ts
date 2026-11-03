@@ -108,6 +108,64 @@ export const sfx = {
     noise(0.1, 2, { freq: 2400, q: 0.8, gain: 0.06, attack: 0.5 });
   },
 
+  // ---- Kule Yıkmaca ----
+  /** Vinç kurulurken cırcır tıkırtısı. */
+  crank: () => {
+    for (let i = 0; i < 7; i++) {
+      tone(1250 - i * 40, i * 0.085, 0.03, { type: "square", gain: 0.035 });
+      noise(i * 0.085, 0.03, { freq: 3500, q: 2, gain: 0.05 });
+    }
+  },
+  /** Taş kepçeye oturur. */
+  load: () => {
+    tone(150, 0, 0.14, { type: "sine", gain: 0.22, to: 90 });
+    noise(0, 0.06, { freq: 1200, q: 0.8, gain: 0.1 });
+  },
+  /** Ateşli gülle tutuşur. */
+  ignite: () => noise(0, 0.5, { freq: 1500, q: 0.6, gain: 0.09, attack: 0.08, sweepTo: 700 }),
+  /** Kol kasnağa çarpar, taş fırlar. */
+  launch: () => {
+    noise(0, 0.07, { freq: 900, q: 1, gain: 0.32 });
+    tone(170, 0, 0.18, { type: "triangle", gain: 0.18, to: 60 });
+    tone(90, 0.02, 0.25, { type: "sine", gain: 0.2, to: 50 });
+  },
+  /** Taş havada ıslık çalar. */
+  whoosh: (duration: number) => noise(0, Math.max(0.4, duration), { freq: 2200, q: 2.5, gain: 0.07, attack: Math.max(0.1, duration * 0.4), sweepTo: 500 }),
+  /** Kuleye isabet: gümbürtü ve dökülen taşlar; hasar büyüdükçe daha güçlü. */
+  hit: (damage: number) => {
+    const g = Math.min(0.42, 0.22 + damage / 120);
+    tone(78, 0, 0.55, { type: "sine", gain: g, to: 38 });
+    noise(0, 0.12, { freq: 1600, q: 0.7, gain: g * 0.8 });
+    for (let i = 0; i < 5; i++) noise(0.08 + i * 0.07 + Math.random() * 0.04, 0.09, { freq: 700 - i * 80, q: 1.2, gain: 0.08, type: "lowpass" });
+  },
+  /** Pencereye isabet: cam ve tahta kırılır, ardından bir çan. */
+  crit: () => {
+    tone(70, 0, 0.6, { type: "sine", gain: 0.42, to: 36 });
+    noise(0, 0.32, { freq: 5200, q: 0.8, gain: 0.16, type: "highpass" });
+    noise(0.02, 0.18, { freq: 1100, q: 1.4, gain: 0.22 });
+    tone(1318.5, 0.08, 0.6, { type: "triangle", gain: 0.09 });
+    tone(1760, 0.16, 0.7, { type: "triangle", gain: 0.08 });
+  },
+  /** Iska: taş toprağa gömülür. */
+  miss: () => {
+    noise(0, 0.28, { freq: 380, q: 0.7, gain: 0.3, type: "lowpass" });
+    tone(95, 0, 0.22, { type: "sine", gain: 0.14, to: 60 });
+  },
+  /** Düşen blok yere vurur. */
+  thump: () => tone(110, 0, 0.12, { type: "sine", gain: 0.12, to: 70 }),
+  /** Mancınık tutukluk yapar: tok bir ses, gevşek bir yay. */
+  misfire: () => {
+    noise(0, 0.08, { freq: 700, q: 1, gain: 0.2 });
+    tone(320, 0.04, 0.4, { type: "triangle", gain: 0.12, to: 110 });
+    tone(140, 0.42, 0.2, { type: "sine", gain: 0.12, to: 90 });
+  },
+  /** Kule yıkılır: uzun gürleme, dökülen taşlar, son büyük gümbürtü. */
+  collapse: () => {
+    noise(0, 2.6, { freq: 320, q: 0.6, gain: 0.42, attack: 0.25, type: "lowpass", sweepTo: 140 });
+    for (let i = 0; i < 9; i++) noise(0.2 + i * 0.18 + Math.random() * 0.08, 0.14, { freq: 900 - i * 60, q: 1, gain: 0.12 });
+    tone(60, 0.9, 0.9, { type: "sine", gain: 0.36, to: 32 });
+  },
+
   tap: () => tone(660, 0, 0.06, { type: "triangle", gain: 0.08 }),
   tick: () => tone(1046, 0, 0.05, { type: "square", gain: 0.035 }),
   correct: () => {

@@ -70,6 +70,14 @@ Testler: `src/games/*/logic.test.ts`.
 
 `Game.tsx`, reducer'ı `usePersistentReducer` ile çalıştırır. Bu hook her değişiklikte durumu tarayıcıya yazar; tahta uyku moduna geçse ya da sayfa yenilense oyun kaldığı yerden devam eder. Yeniden yüklenen bir Bilgi Yarışması'nda süre kendiliğinden akmaz, öğretmen "Devam" diyene kadar duraklatılmış bekler.
 
+Sahneli oyunlar (Halat Çekme, Kule Yıkmaca) çizimi SVG olarak bir kez kurar. Hareketi tek bir `requestAnimationFrame` döngüsü yönetir ve `data-part` ile işaretli öğelerin özniteliklerini doğrudan günceller; React her karede yeniden çizmez. İki sahnenin çocukları aynı iskelet ve çizimi kullanır (`src/games/shared/skeleton.ts`, `src/games/shared/kid.tsx`).
+
+Kule Yıkmaca'da atışın sonucu (bölge, hasar) reducer'da, ATEŞ anında hesaplanır:
+- Nişangâhın konumu `aimStart` ile eylemin zamanından bulunur.
+- Rüzgâr oyun tohumundan türetilir.
+
+Sahne yalnızca bu sonucu oynatır. Kulenin bölgeleri `logic.ts` içindeki `BANDS` sınırlarından çizilir (`scene/geometry.ts`), yani pencereye isabet gerçekten pencereye çarpar. Taş kuleye değdiği anda sahne `onImpact` ile ekrana haber verir; sağlamlık çubuğu ancak o zaman düşer.
+
 Halat Çekme'de iki öğrenci aynı anda dokunur. Tarayıcılar çoklu dokunuşta `click` olayını yalnızca birine gönderdiği için cevaplar `pointerdown` ile alınır.
 
 ## 7. Çok cihazlı sürüme geçiş planı

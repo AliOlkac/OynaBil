@@ -23,8 +23,9 @@ Ortaokul öğretmenlerinin akıllı tahtada sınıfı takımlara ayırıp **yar�
 |---|---|---|
 | **Bilgi Yarışması** | 2-4 | Takımlar sırayla soru alır. Bilemeyen takımın sorusunu başka takım çalabilir. Her takımın birer kez yarı yarıya, +15 saniye ve pas jokeri vardır. Doğru cevapta puan şıktan skor kutusuna uçar; önde olan takımda taç, üst üste bilen takımda alev rozeti çıkar. 8. sınıfta LGS tarzı paragraf soruları karışık ya da tek başına seçilebilir: metin solda okunur, okumak için 20 saniye ek süre verilir, olumsuz soru kökü ("çıkarılamaz", "değildir") altı çizili gösterilir. |
 | **Halat Çekme** | 2 | Tahta ikiye bölünür, iki öğrenci aynı anda kendi sorusunu çözer. Tahtanın üst yarısında çizimli bir halat çekme sahnesi vardır: doğru cevapta takım ipe asılır, yanlış cevapta buz kesilir. Kurdele bayrağa ulaşınca kaybeden takım çamura düşer, kazananlar sevinir. |
+| **Kule Yıkmaca** | 2 | Her takımın bir kulesi ve önünde bir mancınığı vardır. Takımlar sırayla soru alır; bilen takım atış hakkı kazanır. Karşı kulenin önünde inip çıkan nişangâhı doğru anda durdurmak gerekir: pencere en çok, temel en az hasar verir. Her turda değişen rüzgâr taşı yükseltir ya da alçaltır, zor soruyu bilen ateşli gülle atar. Kulesi yıkılan kaybeder; turlar biterse kazanan şeref atışıyla karşı kuleyi yıkar. |
 
-Bilgi Yarışması'nı dizüstü bilgisayardan da yönetebilirsiniz: `A-D` ya da `1-4` cevap verir, `Enter` sonraki soruya geçer, `P` süreyi duraklatır.
+Bilgi Yarışması ve Kule Yıkmaca'yı dizüstü bilgisayardan da yönetebilirsiniz: `A-D` ya da `1-4` cevap verir, `Enter` sonraki soruya geçer, `P` süreyi duraklatır. Kule Yıkmaca'da `Boşluk` ya da `Enter` mancınığı ateşler; tahtada sahneye dokunmak da yeterlidir.
 
 ## Çalıştırma
 

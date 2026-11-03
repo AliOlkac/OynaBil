@@ -1,7 +1,8 @@
 import { TEAM_STYLES } from "@/games/teams";
 import type { TeamColor } from "@/games/types";
 
-const SHAPES = {
+/** Amblem şekilleri (24x24 kutu). Oyun sahneleri de bayraklarda kullanır. */
+export const EMBLEM_SHAPES = {
   yildiz: (() => {
     const pts: string[] = [];
     for (let k = 0; k < 16; k++) {
@@ -36,7 +37,7 @@ export function TeamEmblem({
       strokeWidth={filled ? 0 : 2}
       strokeLinejoin="round"
     >
-      {SHAPES[style.emblem]}
+      {EMBLEM_SHAPES[style.emblem]}
     </svg>
   );
 }

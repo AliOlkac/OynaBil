@@ -30,6 +30,17 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
 - **Hata bildir:** Açıklama çubuğunda sessiz bir düğmedir, oyunun akışını bölmez. Pencerede altı hata türü büyük dokunma alanlarıyla sunulur; not isteğe bağlıdır.
 - **Halat Çekme sahnesi:** Okul şenliği akşamı. Gökyüzü, yıldızlar ve tepeler sahne dekorudur. Takım renklerinde bayrak dizisi takım yanlarını gösterir. Saha, çamur havuzu ve kazanma bayrakları kuralı görünür kılar.
 - **Sahnedeki sürekli hareket:** Çekişme sürerken çocukların hafif zorlanma salınımı vardır. Bu, canlı bir durumu gösterdiği için sonsuz döngü yasağının tek istisnasıdır ve oyun bitince durur. Kamera ipi hafifçe izler, tepeler daha yavaş kayar.
+- **Kule Yıkmaca sahnesi:**
+  - Gün batımında iki taş kule. Gövde taş örgüdür, üst gövdede İznik çinisinden bir kuşak geçer, burç mazgallıdır, külah takım renginde kiremitlidir.
+  - Pencere içeriden kandille aydınlanır. En değerli hedef olduğu için uzaktan seçilir.
+  - Ahşap mancınıkların başında iki çocuk durur: biri vinci çevirip taşı yükler, öteki karşı kuleyi gösterir. Çocuklar Halat Çekme'dekilerle aynı karakter tasarımını paylaşır (`src/games/shared/kid.tsx`).
+- **Nişangâh ve hasar cetveli:** Nişan anında hedef kulenin önünde takım renginde bir nişangâh inip çıkar. Kesikli çizgi kuleyi boydan boya geçer ve kulenin dış yanındaki cetvele ulaşır. Cetvel her yüksekliğin kaç hasar verdiğini yazar; pencere bandı kehribar renkle işaretlidir. Kural ekranda görünür, öğrenci ezberlemek zorunda kalmaz.
+- **Kule sağlamlık çubukları:**
+  - Hasar önce takım rengindeki çubuktan düşer. Arkasındaki krem iz yarım saniye sonra yetişir, böylece kaybedilen parça bir an görünür kalır.
+  - Can 30'un altına inince çubuk mercana döner.
+  - Soru sırasında çubuklar küçülür ki kuleleri örtmesin.
+- **Kamera:** Soru sırasında iki kule geniş çerçevede durur. Nişan ve atışta sahne büyür (`--dur-scene`). Kamera isabet anında vurulan kuleye yaklaşır ve sarsılır, yıkılışta yıkılan kuleyi izler.
+- **Rüzgâr:** Bulutlar ve bayraklar rüzgârın yönünde ve şiddetinde hareket eder. Bu sürekli hareket oyun bilgisi taşıdığı için sonsuz döngü yasağının ikinci istisnasıdır.
 - **Oyun anı efektleri:**
   - Toz, ter damlası ve çamur sıçraması parçacıkları.
   - Yanlış cevapta buz kalıbı ve titreme.
@@ -38,6 +49,14 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
   - "ÇALDI!" damgası.
   - Önde olan takımda taç, üst üste doğrularda alev rozeti.
   - Sonuç ekranında yükselen kürsü.
+  - Kule Yıkmaca'da:
+    - Mancınık kurulur ve vinç döner. Taş yığından alınıp kepçeye konur. Kol kasnağa çarpıp sekerken mancınık geri teper.
+    - Taş iz bırakarak uçar, yerde gölgesi gezer. Ateşli güllenin alev kuyruğu vardır.
+    - Karşı ekip taş üstünden geçerken başını korur.
+    - İsabette taş kırıkları saçılır, toz kalkar, çatlaklar belirir. Mazgallar düşer, külah eğilir, pencere kırılır.
+    - Kritik vuruşta kehribar bir halka açılır ve hasar yazısı yaylanarak yükselir.
+    - Yanlış cevapta mancınık tutukluk yapar: kol boşa çıkar, taş mancınığın önüne düşer, vinçten duman çıkar.
+    - Yıkılışta kule katları sırayla çöker. Toz bulutunun içinden kırık bayraklı bir moloz yığını çıkar. Kazananlar zıplayıp sevinir, kaybedenler çöker.
 
 ## Renkler
 
@@ -65,7 +84,19 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
 | `camur` / `camur-koyu` / `camur-parlak` | `#6b4527` / `#3f2715` / `#9a6a3f` | Çamur havuzu, kenarı, parlaması |
 | `ip` / `ip-koyu` | `#d6ab66` / `#a67a3a` | İp ve örgü deseni |
 
-Çocukların ten, saç ve kıyafet renkleri sahne dosyasında sabit bir listedir (`src/games/halat-cekme/scene/TugScene.tsx`).
+**Kule Yıkmaca sahnesi:**
+
+| Belirteç | Değer | Kullanım |
+|---|---|---|
+| `ufuk` / `ufuk-acik` | `#f0a35e` / `#ffd9a3` | Gün batımı ufku, güneş, kandil ışığı |
+| `tas` / `tas-acik` / `tas-koyu` | `#a3937c` / `#cdbb9b` / `#6f6353` | Kule taşları; ışık sahnenin ortasından vurur |
+| `tas-derz` | `#4d4438` | Taş derzleri, çatlaklar |
+| `ahsap` / `ahsap-acik` / `ahsap-koyu` | `#8f5c33` / `#b97d47` / `#5a381d` | Mancınık, kapı, kepenk çerçevesi |
+| `ates` | `#ff8a2a` | Ateşli gülle, alev, "Zor soru" işareti |
+| `toz` | `#d9c7a5` | Toz bulutu |
+| `servi` | `#173a2c` | Tepelerdeki serviler |
+
+Çocukların ten, saç ve kıyafet renkleri iki sahnenin paylaştığı sabit bir listedir (`src/games/shared/kid.tsx`).
 
 Her rengin `-deep` tonu, basılabilir düğmenin alt kenarıdır.
 
@@ -110,8 +141,14 @@ Kök boyut ekrana göre ölçeklenir: 1920x1080 tahtada 20 px, 1366x768 tahtada 
 | `spring.enter` | 320 / 30 | Takım ve sıralama satırları |
 | `spring.celebrate` | 400 / 18 | Puan, doğru rozeti, geri sayım |
 | `spring.rope` | 160 / 16 | İp |
+| `spring.impact` | 520 / 22 | Kule sağlamlık çubuğunun düşmesi |
+| `dur.scene` / `--dur-scene` | 600 ms | Kule Yıkmaca'da sahnenin büyüyüp küçülmesi |
 
 `prefers-reduced-motion` açıkken:
 - bütün geçişler 1 ms'ye iner,
 - konfeti, puan uçuşu ve parçacıklar kapanır,
-- halat sahnesinde salınım ve titreme durur, ama ipin konumu ve bitiş pozları yine gösterilir.
+- halat sahnesinde salınım ve titreme durur, ama ipin konumu ve bitiş pozları yine gösterilir,
+- Kule Yıkmaca'da:
+  - Parçacıklar, kamera sarsıntısı ve bulut kayması kapanır. Kamera kaymadan doğrudan yerine geçer.
+  - Kule katlar hâlinde çökmez, solup moloza dönüşür.
+  - Nişangâh oyunun parçası olduğu için hareket etmeye devam eder.

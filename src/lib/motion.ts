@@ -4,7 +4,8 @@
  */
 export const ease = [0.22, 1, 0.36, 1] as const;
 
-export const dur = { fast: 0.15, base: 0.25, slow: 0.4 } as const;
+/** `scene`: oyun sahnesinin büyüyüp küçülmesi ve kamera geçişi (Kule Yıkmaca). */
+export const dur = { fast: 0.15, base: 0.25, slow: 0.4, scene: 0.6 } as const;
 
 /** Sıralı girişlerde öğeler arası gecikme. */
 export const stagger = 0.06;
@@ -18,4 +19,6 @@ export const spring = {
   celebrate: { type: "spring", stiffness: 400, damping: 18 },
   /** İpin çekilmesi: ağır ve yaylı, sınıfın görmesi için. */
   rope: { type: "spring", stiffness: 160, damping: 16 },
+  /** Hasar yazısı ve kule sağlamlık çubuğu: ağır bir darbe gibi oturur. */
+  impact: { type: "spring", stiffness: 520, damping: 22 },
 } as const;
