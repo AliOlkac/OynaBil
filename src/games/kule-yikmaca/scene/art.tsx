@@ -5,6 +5,7 @@ import {
   BASE_HALF,
   BODY_HALF,
   CATAPULT_X,
+  CENTER,
   CRANK_R,
   DRUM,
   GROUND,
@@ -20,6 +21,8 @@ import {
   Y_ROOF_BASE,
   Y_WINDOW_BOTTOM,
   Y_WINDOW_TOP,
+  WORLD_LEFT,
+  WORLD_RIGHT,
   dirOf,
 } from "./geometry";
 
@@ -38,11 +41,12 @@ export const CHIP_COUNT = 44;
 export const BLOCK_COUNT = 14;
 export const TRAIL_COUNT = 8;
 export const CLOUDS: { x: number; y: number; s: number }[] = [
-  { x: -260, y: 120, s: 1.3 },
-  { x: 380, y: 40, s: 0.9 },
-  { x: 900, y: 170, s: 1.15 },
-  { x: 1500, y: 70, s: 1 },
-  { x: 2050, y: 150, s: 0.8 },
+  { x: -560, y: 120, s: 1.3 },
+  { x: 260, y: 40, s: 0.9 },
+  { x: 1000, y: 170, s: 1.15 },
+  { x: 1760, y: 70, s: 1 },
+  { x: 2560, y: 150, s: 0.85 },
+  { x: 3240, y: 90, s: 1.1 },
 ];
 
 /** Ekip: her mancınıkta kurucu (arkada, vinçte) ve gözcü (önde). */
@@ -84,9 +88,9 @@ export function SceneArt({ teams }: { teams: [ArtTeam, ArtTeam] }) {
       </defs>
 
       {/* Gökyüzü, güneş, bulutlar */}
-      <rect x={-1500} y={-800} width={4600} height={1520} fill="url(#ky-sky)" />
-      <circle cx={800} cy={640} r={150} fill="var(--color-ufuk-acik)" opacity={0.22} />
-      <circle cx={800} cy={640} r={86} fill="var(--color-ufuk-acik)" opacity={0.9} />
+      <rect x={WORLD_LEFT} y={-900} width={WORLD_RIGHT - WORLD_LEFT} height={1620} fill="url(#ky-sky)" />
+      <circle cx={CENTER} cy={640} r={150} fill="var(--color-ufuk-acik)" opacity={0.22} />
+      <circle cx={CENTER} cy={640} r={86} fill="var(--color-ufuk-acik)" opacity={0.9} />
       <g data-part="clouds">
         {CLOUDS.map((c, i) => (
           <g key={i} data-cloud={i} transform={`translate(${c.x} ${c.y}) scale(${c.s})`}>
@@ -96,16 +100,16 @@ export function SceneArt({ teams }: { teams: [ArtTeam, ArtTeam] }) {
       </g>
 
       {/* Uzak tepeler ve serviler */}
-      <path d="M-1500 650 L -900 640 C -600 590 -380 600 -150 620 S 250 560 520 600 S 900 640 1120 590 S 1500 560 1760 610 S 2200 600 2500 580 L 3100 600 V 720 H -1500 Z" fill="var(--color-ink-800)" />
-      <path d="M-1500 676 L -900 680 C -500 650 -250 690 60 668 S 520 640 760 676 S 1180 650 1420 672 S 1900 650 2500 666 L 3100 670 V 730 H -1500 Z" fill="var(--color-ink-850)" />
-      {[-420, -360, 30, 1010, 1060, 1640, 1700, 2020].map((x, i) => (
-        <Cypress key={i} x={x} y={i % 2 ? 676 : 670} h={i % 3 === 0 ? 74 : 58} />
+      <path d={FAR_RIDGE} fill="var(--color-ink-800)" />
+      <path d={NEAR_RIDGE} fill="var(--color-ink-850)" />
+      {CYPRESSES.map(([x, h], i) => (
+        <Cypress key={i} x={x} y={i % 2 ? 678 : 672} h={h} />
       ))}
 
       {/* Çayır, yol, kulelerin önündeki toprak */}
-      <rect x={-1500} y={690} width={4600} height={400} fill="url(#ky-field)" />
-      <rect x={-1500} y={690} width={4600} height={8} fill="rgb(0 0 0 / 0.16)" />
-      <path d="M-1500 806 L -900 800 C -300 780 300 820 800 800 S 1900 780 2500 806 L 3100 810 L 3100 840 L 2500 836 C 1900 812 1300 834 800 828 S -300 812 -900 830 L -1500 834 Z" fill="var(--color-camur)" opacity={0.35} />
+      <rect x={WORLD_LEFT} y={690} width={WORLD_RIGHT - WORLD_LEFT} height={400} fill="url(#ky-field)" />
+      <rect x={WORLD_LEFT} y={690} width={WORLD_RIGHT - WORLD_LEFT} height={8} fill="rgb(0 0 0 / 0.16)" />
+      <path d={PATH_BAND} fill="var(--color-camur)" opacity={0.35} />
       {[0, 1].map((side) => (
         <ellipse key={side} cx={TOWER_X[side] + dirOf(side as 0 | 1) * 170} cy={GROUND + 14} rx={150} ry={16} fill="var(--color-camur)" opacity={0.55} />
       ))}
@@ -195,9 +199,41 @@ export function SceneArt({ teams }: { teams: [ArtTeam, ArtTeam] }) {
   );
 }
 
-const GRASS: [number, number][] = [
-  [-120, 740], [60, 800], [340, 776], [460, 850], [690, 770], [760, 880], [930, 790], [1180, 860], [1260, 772], [1540, 820], [1720, 760], [1880, 860],
+/** Noktalardan geçen yumuşak eğri (Catmull-Rom'dan kübik Bézier'e). */
+function smooth(points: [number, number][]): string {
+  let d = `M${points[0][0]} ${points[0][1].toFixed(1)}`;
+  for (let i = 0; i < points.length - 1; i++) {
+    const p0 = points[Math.max(0, i - 1)];
+    const p1 = points[i];
+    const p2 = points[i + 1];
+    const p3 = points[Math.min(points.length - 1, i + 2)];
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += ` C ${c1[0].toFixed(1)} ${c1[1].toFixed(1)} ${c2[0].toFixed(1)} ${c2[1].toFixed(1)} ${p2[0]} ${p2[1].toFixed(1)}`;
+  }
+  return d;
+}
+
+/** Ufuk çizgisi: iki dalganın toplamı; her açılışta aynı. */
+function wave(base: number, amp: number, seed: number, step = 240): [number, number][] {
+  const points: [number, number][] = [];
+  for (let x = WORLD_LEFT; x <= WORLD_RIGHT; x += step) {
+    points.push([x, base + amp * Math.sin(x * 0.0043 + seed) + amp * 0.45 * Math.sin(x * 0.011 + seed * 2.3)]);
+  }
+  return points;
+}
+
+const FAR_RIDGE = `${smooth(wave(608, 28, 0.7))} V 730 H ${WORLD_LEFT} Z`;
+const NEAR_RIDGE = `${smooth(wave(672, 12, 2.1))} V 735 H ${WORLD_LEFT} Z`;
+const PATH_BAND = (() => {
+  const top = wave(806, 9, 4.2, 300);
+  const bottom = wave(834, 7, 1.3, 300).reverse();
+  return `${smooth(top)} L ${smooth(bottom).slice(1)} Z`;
+})();
+const CYPRESSES: [number, number][] = [
+  [-620, 74], [-560, 58], [60, 58], [700, 74], [760, 58], [1440, 58], [1500, 74], [2240, 58], [2300, 74], [2960, 58],
 ];
+const GRASS: [number, number][] = Array.from({ length: 26 }, (_, i) => [WORLD_LEFT + 700 + i * 170 + ((i * 53) % 70), 738 + ((i * 37) % 140)]);
 
 function Cloud() {
   return (

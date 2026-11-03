@@ -111,7 +111,7 @@ export const kuleYikmaca: GameDefinition = {
     "Takımlar sırayla soru alır. Doğru cevap atış hakkı kazandırır; zor soruyu bilen takım ateşli gülle atar.",
     "Karşı kulenin önünde nişangâh inip çıkar. Pencere hizasında ATEŞ'e dokunan en çok hasarı verir, temel en azını.",
     "Rüzgâr her turda değişir: arkadan eserse taş daha yükseğe, önden eserse daha alçağa çarpar.",
-    "Bilemeyen takımın sorusunu karşı takım bilirse atış onun olur. Kulesi önce yıkılan kaybeder.",
+    "Yanlış cevapta mancınık tutukluk yapar, sıra karşı takıma geçer. Kulesi önce yıkılan kaybeder.",
   ],
   teamCount: { min: 2, max: 2, default: 2 },
   questionTypes: ["multiple-choice", "true-false"],
@@ -137,9 +137,8 @@ export const kuleYikmaca: GameDefinition = {
         { value: 0, label: "Süresiz" },
       ],
     },
-    { key: "steal", label: "Soru çalma", kind: "toggle", hint: "Bilemeyen takımın sorusunu karşı takım bilirse atış onun olur" },
   ],
-  defaultSettings: { rounds: 5, seconds: 30, steal: true },
+  defaultSettings: { rounds: 5, seconds: 30 },
   questionsNeeded: (s) => Number(s.rounds) * 2,
 };
 

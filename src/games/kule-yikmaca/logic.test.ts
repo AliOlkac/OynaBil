@@ -44,7 +44,7 @@ function calmSeed(turns: number) {
 }
 
 const start = (over: Partial<SiegeSettings> = {}, seed = calmSeed(2)) =>
-  reduce(createSiege(teams, { rounds: 3, seconds: 30, steal: true, ...over }, seed), { type: "start", now: 0 });
+  reduce(createSiege(teams, { rounds: 3, seconds: 30, ...over }, seed), { type: "start", now: 0 });
 
 /** Nişangâhın verilen yüksekliğe ilk ulaştığı an (çıkışta). */
 const timeFor = (aim: number) => AIM_LOCK_MS + (aim * SWEEP_MS) / 2;
@@ -116,7 +116,7 @@ describe("Kule Yıkmaca: oyun akışı", () => {
   });
 
   it("zor soruyu bilen takım ateşli gülle atar", () => {
-    let s = start({ steal: false });
+    let s = start();
     s = reduce(s, { type: "answer", option: (deck[0].correctIndex + 1) % 4, now: 0 });
     expect(s.phase).toBe("reveal");
     expect(s.misfireAt).toBe(0);
@@ -128,38 +128,22 @@ describe("Kule Yıkmaca: oyun akışı", () => {
     expect(s.hp[0]).toBe(TOWER_HP - damageFor("govde", "ates", 3));
   });
 
-  it("bilemeyen takımın sorusunu karşı takım çalarsa atış onundur", () => {
+  it("yanlış cevapta mancınık tutukluk yapar, kimse atış yapmaz ve sıra karşı takıma geçer", () => {
     let s = start();
-    const wrong = (deck[0].correctIndex + 1) % 4;
-    s = reduce(s, { type: "answer", option: wrong, now: 0 });
-    expect(s.phase).toBe("steal");
-    // Yanlış şık ikinci kez seçilemez.
-    expect(reduce(s, { type: "steal-answer", option: wrong, now: 1 }).phase).toBe("steal");
-    s = reduce(s, { type: "steal-answer", option: deck[0].correctIndex, now: 10 });
-    expect(s.phase).toBe("aim");
-    expect(s.shooter).toBe(1);
-    expect(s.log.map((l) => [l.teamId, l.correct, Boolean(l.stolen)])).toEqual([
-      [teams[0].id, false, false],
-      [teams[1].id, true, true],
-    ]);
-    s = fireAt(s, 0.05);
-    expect(s.shots[0].zone).toBe("kisa");
-    expect(s.hp).toEqual([TOWER_HP, TOWER_HP]);
-  });
-
-  it("çalma da bilinmezse mancınık tutukluk yapar ve sıra geçer", () => {
-    let s = start();
-    s = reduce(s, { type: "answer", option: (deck[0].correctIndex + 1) % 4, now: 0 });
-    s = reduce(s, { type: "skip-steal", now: 50 });
+    s = reduce(s, { type: "answer", option: (deck[0].correctIndex + 1) % 4, now: 50 });
     expect(s.phase).toBe("reveal");
     expect(s.misfireAt).toBe(50);
+    expect(s.shooter).toBeNull();
+    // Açıklama ekranında atış alınmaz.
+    expect(reduce(s, { type: "fire", now: 10_000 }).shots).toHaveLength(0);
     s = reduce(s, { type: "next", now: 100 });
     expect(s.phase).toBe("question");
     expect(turnSide(s)).toBe(1);
+    expect(s.log).toEqual([{ questionId: deck[0].id, unit: deck[0].unit, teamId: teams[0].id, correct: false }]);
   });
 
   it("süre dolunca soru yanlış sayılır", () => {
-    let s = start({ steal: false });
+    let s = start();
     expect(reduce(s, { type: "timeout", now: 29_999 }).phase).toBe("question");
     s = reduce(s, { type: "timeout", now: 30_000 });
     expect(s.outcome).toBe("timeout");
@@ -178,7 +162,7 @@ describe("Kule Yıkmaca: oyun akışı", () => {
   });
 
   it("turlar bitince kulesi daha sağlam olan kazanır; eşitse berabere", () => {
-    let s = start({ rounds: 1, steal: false });
+    let s = start({ rounds: 1 });
     s = reduce(s, { type: "answer", option: deck[0].correctIndex, now: 0 });
     s = fireAt(s, 0.2);
     s = reduce(s, { type: "next", now: 5000 });
@@ -188,7 +172,7 @@ describe("Kule Yıkmaca: oyun akışı", () => {
     expect(s.endReason).toBe("rounds");
     expect(s.winner).toBe(teams[0].id);
 
-    let d = start({ rounds: 1, steal: false });
+    let d = start({ rounds: 1 });
     d = reduce(d, { type: "answer", option: (deck[0].correctIndex + 1) % 4, now: 0 });
     d = reduce(d, { type: "next", now: 1 });
     d = reduce(d, { type: "answer", option: (deck[1].correctIndex + 1) % 4, now: 2 });

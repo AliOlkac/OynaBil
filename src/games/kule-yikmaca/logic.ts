@@ -10,14 +10,19 @@ import type { AnswerLog, Team } from "../types";
  * - Beceri: karşı kulenin önünde inip çıkan nişangâhı doğru anda durdurmak.
  * - Şans: her turda değişen rüzgâr. Arkadan esen rüzgâr taşı yükseğe, önden esen alçağa taşır.
  * Kulenin neresine isabet ettiği hasarı belirler: pencere en çok, temel en az.
+ * Yanlış cevapta mancınık tutukluk yapar, sıra karşı takıma geçer. Soru çalma yoktur:
+ * doğru/yanlış sorularında yanlış şık görülünce doğrusu kendiliğinden belli olurdu.
  *
  * Saf reducer: zaman eylemle gelir, rüzgâr oyun tohumundan türetilir.
  * Çok cihazlı sürümde aynı mantık öğretmen cihazında çalışır.
  */
 
 export const TOWER_HP = 100;
-/** Doğru cevaptan sonra mancınık kurulup taş yüklenirken nişangâh bekler; çift dokunuşla yanlışlıkla atış olmaz. */
-export const AIM_LOCK_MS = 1_200;
+/**
+ * Doğru cevaptan sonra mancınık kurulup taş yüklenir, kamera hedef kuleye döner; bu sürede nişangâh bekler.
+ * Çift dokunuşla yanlışlıkla atış da olmaz.
+ */
+export const AIM_LOCK_MS = 1_600;
 /** Nişangâhın aşağıdan yukarı çıkıp geri inme süresi. */
 export const SWEEP_MS = 2_400;
 /** Rüzgârın her kademesi isabet yüksekliğini bu kadar kaydırır (nişangâh ölçeğinde). */
@@ -61,8 +66,6 @@ export type SiegeSettings = {
   rounds: number;
   /** Soru süresi (saniye); 0 süresiz. */
   seconds: number;
-  /** Bilemeyen takımın sorusunu karşı takım cevaplarsa atış onun olur. */
-  steal: boolean;
 };
 
 export type Shot = {
@@ -80,10 +83,10 @@ export type Shot = {
   questionId: string;
 };
 
-export type Outcome = "correct" | "wrong" | "timeout" | "stolen" | "steal-failed";
+export type Outcome = "correct" | "wrong" | "timeout";
 
 export type SiegeState = {
-  phase: "ready" | "question" | "steal" | "aim" | "shot" | "reveal" | "finished";
+  phase: "ready" | "question" | "aim" | "shot" | "reveal" | "finished";
   teams: [Team, Team];
   settings: SiegeSettings;
   seed: number;
@@ -95,7 +98,6 @@ export type SiegeState = {
   asked: number;
   hp: [number, number];
   picked: number | null;
-  stealPicked: number | null;
   outcome: Outcome | null;
   /** Atış hakkı olan taraf. */
   shooter: 0 | 1 | null;
@@ -114,8 +116,6 @@ export type SiegeAction =
   | { type: "start"; now: number }
   | { type: "answer"; option: number; now: number }
   | { type: "timeout"; now: number }
-  | { type: "steal-answer"; option: number; now: number }
-  | { type: "skip-steal"; now: number }
   | { type: "fire"; now: number }
   | { type: "next"; now: number }
   | { type: "pause"; now: number }
@@ -184,7 +184,6 @@ export function createSiege(teams: [Team, Team], settings: SiegeSettings, seed: 
     asked: 0,
     hp: [TOWER_HP, TOWER_HP],
     picked: null,
-    stealPicked: null,
     outcome: null,
     shooter: null,
     aimStart: null,
@@ -207,7 +206,6 @@ function openQuestion(s: SiegeState, deck: PlayableQuestion[], now: number, turn
     current: s.cursor,
     cursor: s.cursor + 1,
     picked: null,
-    stealPicked: null,
     outcome: null,
     shooter: null,
     aimStart: null,
@@ -227,7 +225,6 @@ function toAim(s: SiegeState, shooter: 0 | 1, now: number): SiegeState {
 }
 
 function miss(s: SiegeState, outcome: "wrong" | "timeout", now: number): SiegeState {
-  if (s.settings.steal) return { ...s, phase: "steal", outcome, deadline: null, remaining: null };
   return { ...s, phase: "reveal", outcome, misfireAt: now, deadline: null, remaining: null };
 }
 
@@ -236,7 +233,6 @@ export function siegeReducer(deck: PlayableQuestion[]) {
     const q = deck[s.current];
     const side = turnSide(s);
     const team = s.teams[side];
-    const other = (1 - side) as 0 | 1;
 
     switch (a.type) {
       case "start":
@@ -260,21 +256,6 @@ export function siegeReducer(deck: PlayableQuestion[]) {
         if (s.phase !== "question" || s.deadline === null || a.now < s.deadline || !q) return s;
         return miss({ ...s, asked: s.asked + 1, log: [...s.log, { questionId: q.id, unit: q.unit, teamId: team.id, correct: false }] }, "timeout", a.now);
       }
-
-      case "steal-answer": {
-        if (s.phase !== "steal" || !q || a.option === s.picked) return s;
-        if (a.option < 0 || a.option >= q.options.length) return s;
-        const correct = a.option === q.correctIndex;
-        const logged: SiegeState = {
-          ...s,
-          stealPicked: a.option,
-          log: [...s.log, { questionId: q.id, unit: q.unit, teamId: s.teams[other].id, correct, stolen: true }],
-        };
-        return correct ? toAim({ ...logged, outcome: "stolen" }, other, a.now) : { ...logged, phase: "reveal", outcome: "steal-failed", misfireAt: a.now };
-      }
-
-      case "skip-steal":
-        return s.phase === "steal" ? { ...s, phase: "reveal", misfireAt: a.now } : s;
 
       case "fire": {
         if (s.phase !== "aim" || s.shooter === null || s.aimStart === null) return s;

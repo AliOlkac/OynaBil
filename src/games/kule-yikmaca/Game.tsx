@@ -42,6 +42,8 @@ const LETTERS = ["A", "B", "C", "D"];
 
 /** Yeniden yüklenen oyunda soru süresi kendiliğinden akmaz; öğretmen "Devam" der. */
 function hydrate(s: SiegeState): SiegeState {
+  // Soru çalmanın olduğu eski sürümden kalmış bir oyun açıklama ekranından sürer.
+  if ((s.phase as string) === "steal") return { ...s, phase: "reveal", outcome: "wrong" };
   if (s.phase === "question" && s.deadline !== null) return { ...s, deadline: null, remaining: Math.max(1000, s.deadline - Date.now()) };
   return s;
 }
@@ -62,7 +64,6 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
   const q = deck[s.current];
   const side = turnSide(s);
   const team = teams[side];
-  const other = teams[1 - side];
   const aiming = s.phase === "aim" && s.aimStart !== null;
   const ticking = (s.phase === "question" && s.deadline !== null) || aiming;
   const now = useNow(ticking, aiming ? 100 : 200);
@@ -90,8 +91,8 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
   useEffect(() => {
     if (s.outcome === lastOutcome.current) return;
     lastOutcome.current = s.outcome;
-    if (s.outcome === "correct" || s.outcome === "stolen") sfx.correct();
-    else if (s.outcome === "wrong" || s.outcome === "timeout" || s.outcome === "steal-failed") sfx.wrong();
+    if (s.outcome === "correct") sfx.correct();
+    else if (s.outcome === "wrong" || s.outcome === "timeout") sfx.wrong();
   }, [s.outcome]);
 
   const fire = useCallback(() => {
@@ -106,7 +107,6 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
 
   const pick = (option: number) => {
     if (s.phase === "question" && !paused) dispatch({ type: "answer", option, now: clock() });
-    else if (s.phase === "steal") dispatch({ type: "steal-answer", option, now: clock() });
   };
 
   // Klavye: A-D cevap, boşluk/Enter ateş ya da sonraki, P duraklat.
@@ -117,7 +117,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
       const letter = ["a", "b", "c", "d"].indexOf(key);
       const digit = ["1", "2", "3", "4"].indexOf(key);
       const index = letter !== -1 ? letter : digit;
-      if (index !== -1 && (s.phase === "question" || s.phase === "steal")) pick(index);
+      if (index !== -1 && s.phase === "question") pick(index);
       else if (key === " " || key === "enter") {
         if (s.phase === "aim") {
           e.preventDefault();
@@ -242,7 +242,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
 
       <div className="relative min-h-0 flex-1 overflow-y-auto">
         <AnimatePresence mode="wait" initial={false}>
-          {(s.phase === "question" || s.phase === "steal" || s.phase === "reveal") && q && (
+          {(s.phase === "question" || s.phase === "reveal") && q && (
             <motion.section
               key={`q-${s.turn}`}
               className="flex min-h-full flex-col px-4 pt-4 pb-4 sm:h-full sm:min-h-0 sm:px-8"
@@ -287,10 +287,8 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
               >
                 {q.options.map((option, i) => {
                   const revealing = s.phase === "reveal";
-                  const picked = s.picked === i || s.stealPicked === i;
-                  const tone = revealing ? (i === q.correctIndex ? "correct" : picked ? "wrong" : "dim") : s.phase === "steal" && s.picked === i ? "wrong" : "idle";
-                  const disabled = revealing || paused || (s.phase === "steal" && s.picked === i);
-                  return <Tile key={`${q.id}-${i}`} index={i} text={option} tone={tone} disabled={disabled} accent={TEAM_STYLES[(s.phase === "steal" ? other : team).color].base} onPick={() => pick(i)} />;
+                  const tone = revealing ? (i === q.correctIndex ? "correct" : s.picked === i ? "wrong" : "dim") : "idle";
+                  return <Tile key={`${q.id}-${i}`} index={i} text={option} tone={tone} disabled={revealing || paused} accent={TEAM_STYLES[team.color].base} onPick={() => pick(i)} />;
                 })}
               </div>
 
@@ -301,21 +299,10 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
                     <p className="text-lg text-ink-300 sm:text-xl">Bilirse mancınık kurulur, atış hakkı kazanır.</p>
                   </>
                 )}
-                {s.phase === "steal" && (
-                  <>
-                    <p className="text-xl font-bold sm:text-2xl">
-                      <span className="text-mercan">{s.outcome === "timeout" ? "Süre doldu!" : "Yanlış!"}</span>{" "}
-                      <span style={{ color: TEAM_STYLES[other.color].base }}>{other.name}</span> çalabilir: doğru şıkka dokunun.
-                    </p>
-                    <Button size="lg" variant="quiet" className="ml-auto" onClick={() => dispatch({ type: "skip-steal", now: clock() })}>
-                      Geç
-                    </Button>
-                  </>
-                )}
                 {s.phase === "reveal" && (
                   <>
                     <p className="flex items-center gap-2 text-xl font-bold text-mercan">
-                      <X className="size-6" strokeWidth={3} /> Mancınık tutukluk yaptı!
+                      <X className="size-6" strokeWidth={3} /> {s.outcome === "timeout" ? "Süre doldu!" : "Yanlış!"} Mancınık tutukluk yaptı.
                     </p>
                     <p className="min-w-0 flex-1 basis-72 text-lg leading-snug text-cream-dim">{q.explanation}</p>
                     <Button variant="quiet" size="lg" className="!px-4" icon={<Flag className="size-5" />} onClick={() => setReporting(true)} aria-label="Bu soruda hata bildir">
@@ -339,7 +326,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
               exit={{ opacity: 0, y: 24 }}
               transition={{ duration: dur.base, ease }}
             >
-              <TurnBadge team={teams[shooter]} label={s.outcome === "stolen" ? "Soruyu çaldı, atışta" : "Atışta"} />
+              <TurnBadge team={teams[shooter]} label="Atışta" />
               <div className="min-w-[14rem] flex-1">
                 <p className="text-lg font-bold sm:text-2xl">{armed ? "Nişangâh pencereye gelince ATEŞ!" : "Mancınık kuruluyor, taş yükleniyor…"}</p>
                 <p className="mt-0.5 hidden text-base text-ink-300 sm:block sm:text-lg">

@@ -39,7 +39,11 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
   - Hasar önce takım rengindeki çubuktan düşer. Arkasındaki krem iz yarım saniye sonra yetişir, böylece kaybedilen parça bir an görünür kalır.
   - Can 30'un altına inince çubuk mercana döner.
   - Soru sırasında çubuklar küçülür ki kuleleri örtmesin.
-- **Kamera:** Soru sırasında iki kule geniş çerçevede durur. Nişan ve atışta sahne büyür (`--dur-scene`). Kamera isabet anında vurulan kuleye yaklaşır ve sarsılır, yıkılışta yıkılan kuleyi izler.
+- **Kamera:** Kuleler sahanın iki ucundadır, taş uzun bir yay çizer.
+  - Soru sırasında iki kule geniş çerçevede durur.
+  - Doğru cevapta sahne büyür (`--dur-scene`). Kamera önce mancınığını kuran takıma, sonra hedef kuleye yaklaşır; nişangâh ve cetvel büyük görünür.
+  - ATEŞ'te kamera bütün sahayı gösterir. İsabet anında vurulan kuleye yaklaşıp sarsılır, yıkılışta yıkılan kuleyi izler.
+  - Telefonda yakın planlar daha da daralır.
 - **Rüzgâr:** Bulutlar ve bayraklar rüzgârın yönünde ve şiddetinde hareket eder. Bu sürekli hareket oyun bilgisi taşıdığı için sonsuz döngü yasağının ikinci istisnasıdır.
 - **Oyun anı efektleri:**
   - Toz, ter damlası ve çamur sıçraması parçacıkları.

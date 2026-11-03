@@ -31,6 +31,8 @@ import {
   Y_ROOF_BASE,
   Y_WINDOW_BOTTOM,
   Y_WINDOW_TOP,
+  WORLD_LEFT,
+  WORLD_RIGHT,
   yOf,
   type Flight,
 } from "./geometry";
@@ -83,8 +85,12 @@ const mixV = (a: Vec, b: Vec, t: number): Vec => ({ x: lerp(a.x, b.x, t), y: ler
 const rnd = (a: number, b: number) => a + Math.random() * (b - a);
 
 type Rect = { x: number; y: number; w: number; h: number };
-const OVERVIEW: Rect = { x: -30, y: 130, w: 1660, h: 690 };
-const WIDE: Rect = { x: -30, y: 10, w: 1660, h: 810 };
+/** Soru sırasında iki kule; atışta taşın bütün yolu. */
+const OVERVIEW: Rect = { x: -60, y: 96, w: 2320, h: 724 };
+const WIDE: Rect = { x: -60, y: -40, w: 2320, h: 870 };
+/** Kurulurken atan mancınık, nişan alırken hedef kule yakından görünür. */
+const cockRect = (side: 0 | 1): Rect => ({ x: CATAPULT_X[side] + dirOf(side) * 120 - 720, y: 150, w: 1440, h: 680 });
+const aimRect = (side: 0 | 1): Rect => ({ x: TOWER_X[(1 - side) as 0 | 1] - dirOf(side) * 320 - 720, y: 150, w: 1440, h: 680 });
 
 type Particle = {
   kind: "dust" | "chip";
@@ -787,9 +793,8 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
           target = { lean: 0.08, crouch: 0, near: { x: 62, y: -150 }, far: { x: -4, y: -44 }, armsUp: 0, cover: 0 };
           mouth = "grit";
         }
-        // Soru sırasında sırası gelen (ya da çalma hakkı olan) takımın gözcüsü elini kaldırır.
-        const asking = inp.phase === "question" ? inp.turn : inp.phase === "steal" ? ((1 - inp.turn) as 0 | 1) : null;
-        if (member.role === "gozcu" && asking === side && c.mode === "rest") {
+        // Soru sırasında sırası gelen takımın gözcüsü elini kaldırır.
+        if (member.role === "gozcu" && inp.phase === "question" && inp.turn === side && c.mode === "rest") {
           target = { ...target, near: { x: 24, y: -150 } };
           mouth = "smile";
         }
@@ -887,8 +892,8 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
       if (!quiet) {
         st.cloudX = st.cloudX.map((x) => {
           let nx = x + (8 + strength * 18) * wsign * dt;
-          if (nx > 2400) nx -= 3200;
-          if (nx < -800) nx += 3200;
+          if (nx > WORLD_RIGHT - 500) nx -= WORLD_RIGHT - WORLD_LEFT - 1000;
+          if (nx < WORLD_LEFT + 500) nx += WORLD_RIGHT - WORLD_LEFT - 1000;
           return nx;
         });
       }
@@ -1010,15 +1015,34 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
       ([0, 1] as const).forEach(paintTower);
 
       // -- kamera --
-      let focus: Rect = inp.phase === "aim" || inp.phase === "shot" || inp.phase === "finished" || st.flight ? WIDE : OVERVIEW;
+      // Kurulurken atan mancınık, nişan alırken hedef kule; atışta taşın bütün yolu görünür.
+      let focus: Rect = OVERVIEW;
       let rate = 3.2;
+      if (st.flight && !st.flight.impacted) {
+        focus = WIDE;
+        rate = 4.5;
+      } else if (inp.phase === "aim" && inp.shooter !== null && inp.aimStart !== null) {
+        focus = wallNow - inp.aimStart < 1050 ? cockRect(inp.shooter) : aimRect(inp.shooter);
+      } else if (fin?.honor && !fin.fired && (inp.winner === 0 || inp.winner === 1)) {
+        focus = cockRect(inp.winner);
+      } else if (st.flight || inp.phase === "shot" || inp.phase === "finished") {
+        focus = WIDE;
+      }
       const collapsing = ([0, 1] as const).find((s) => vis[s].collapse && !vis[s].collapse!.done && t >= vis[s].collapse!.start);
       if (collapsing !== undefined) {
-        focus = { x: TOWER_X[collapsing] - 520, y: 160, w: 1040, h: 660 };
+        focus = { x: TOWER_X[collapsing] - 620, y: 160, w: 1240, h: 660 };
         rate = 2.4;
       } else if (st.punch && t < st.punch.until) {
         focus = { x: st.punch.x - 560, y: st.punch.y - 330, w: 1120, h: 660 };
         rate = 6;
+      }
+      // Dikey ekranda (telefon) yakın planlar daha da daralır ki hedef kule küçük kalmasın.
+      if (st.aspect < 1.3 && focus !== OVERVIEW && focus !== WIDE) {
+        const cxF = focus.x + focus.w / 2;
+        const w = Math.max(640, focus.w * 0.55);
+        const tx = inp.phase === "aim" && inp.shooter !== null ? TOWER_X[(1 - inp.shooter) as 0 | 1] : cxF;
+        const center = inp.phase === "aim" && wallNow - (inp.aimStart ?? 0) >= 1050 ? tx - (inp.shooter === 0 ? 1 : -1) * 120 : cxF;
+        focus = { x: center - w / 2, y: focus.y, w, h: focus.h };
       }
       const k = quiet ? 1 : 1 - Math.exp(-dt * rate);
       st.cam = { x: lerp(st.cam.x, focus.x, k), y: lerp(st.cam.y, focus.y, k), w: lerp(st.cam.w, focus.w, k), h: lerp(st.cam.h, focus.h, k) };
@@ -1028,15 +1052,15 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
       if (vw / vh > A) vh = vw / A;
       else vw = vh * A;
       // Sahne kısalırken (soru paneline dönüş) görünüm çizilen dünyanın dışına taşmasın.
-      if (vw > 3400) {
-        vw = 3400;
+      if (vw > WORLD_RIGHT - WORLD_LEFT - 400) {
+        vw = WORLD_RIGHT - WORLD_LEFT - 400;
         vh = vw / A;
       }
       let cx = st.cam.x + st.cam.w / 2;
       let cy = st.cam.y + st.cam.h / 2;
       if (cy + vh / 2 > 900) cy = 900 - vh / 2;
       if (cy - vh / 2 < -700) cy = -700 + vh / 2;
-      cx = Math.max(-1400 + vw / 2, Math.min(3000 - vw / 2, cx));
+      cx = Math.max(WORLD_LEFT + 200 + vw / 2, Math.min(WORLD_RIGHT - 200 - vw / 2, cx));
       st.shake *= Math.exp(-dt * 6);
       const sx = quiet ? 0 : Math.sin(time * 61) * st.shake;
       const sy = quiet ? 0 : Math.cos(time * 47) * st.shake * 0.7;
@@ -1065,7 +1089,7 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
     [left.base, left.deep, left.emblem, right.base, right.deep, right.emblem],
   );
   return (
-    <svg ref={svgRef} viewBox="-30 130 1660 690" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full font-sans" aria-hidden>
+    <svg ref={svgRef} viewBox={`${OVERVIEW.x} ${OVERVIEW.y} ${OVERVIEW.w} ${OVERVIEW.h}`} preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full font-sans" aria-hidden>
       {art}
       <DamageRuler target={ruler.target} values={ruler.values} />
     </svg>

@@ -7,7 +7,6 @@ import { BANDS, type Shot } from "../logic";
  * hizasındaysa taş da gerçekten pencereye çarpar.
  */
 
-export const W = 1600;
 export const GROUND = 760;
 /** Nişangâhın taradığı yükseklik (dünya birimi). */
 export const RANGE = 600;
@@ -31,8 +30,13 @@ export const BODY_HALF = 74;
 export const PARAPET_HALF = 90;
 export const ROOF_HALF = 88;
 
-export const TOWER_X: [number, number] = [220, 1380];
-export const CATAPULT_X: [number, number] = [520, 1080];
+/** Kuleler sahanın iki ucunda; mancınıklar kendi kulelerinin önünde, karşı kuleden uzakta. */
+export const TOWER_X: [number, number] = [180, 2020];
+export const CATAPULT_X: [number, number] = [480, 1720];
+export const CENTER = (TOWER_X[0] + TOWER_X[1]) / 2;
+/** Çizilen dünyanın yatay sınırları; kamera bunların dışına çıkmaz. */
+export const WORLD_LEFT = -1600;
+export const WORLD_RIGHT = 3800;
 /** Soldaki takımın ileri yönü +x, sağdakinin -x. */
 export const dirOf = (side: 0 | 1) => (side === 0 ? 1 : -1);
 
@@ -104,9 +108,9 @@ export function flightFor(shot: Pick<Shot, "side" | "hit" | "zone">): Flight {
   }
   if (!via) {
     const dx = Math.abs(to.x - from.x);
-    via = { x: (from.x + to.x) / 2, y: Math.min(from.y, to.y) - 190 - dx * 0.1 };
+    via = { x: (from.x + to.x) / 2, y: Math.min(from.y, to.y) - 200 - dx * 0.12 };
   }
-  const duration = 1.05 + Math.abs(to.x - from.x) / 4000 + (end === "long" ? 0.15 : 0);
+  const duration = 1.1 + Math.abs(to.x - from.x) / 3500 + (end === "long" ? 0.15 : 0);
   return { from, to, via, duration, end };
 }
 
