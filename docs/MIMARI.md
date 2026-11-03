@@ -3,35 +3,60 @@
 OynaBil üç katmandan oluşur: **veri havuzu**, **oyun mantığı** ve **tahta ekranları**. Katmanlar birbirini yalnızca tiplerle tanır. Bu yüzden yeni bir ders, yeni bir soru tipi ya da yeni bir oyun eklemek diğer katmanlara dokunmayı gerektirmez.
 
 ```
- content/ (JSON)  ──►  core/repository  ──►  core/deck.buildDeck  ──►  games/<oyun>/logic (saf reducer)
- öğretmen soruları ─┘   (havuz)              (PlayableQuestion[])           ▲             │
-                                                                           eylemler       durum
-                                                                            │             ▼
-                                                                    games/<oyun>/Game.tsx (tahta)
+ content/<ders>/sorular, kartlar ──► content/index.loadBuiltIn ──► core/repository ──► core/deck ──► games/<oyun>/logic
+   (sınıf başına ayrı dosya)          (kartları soruya çevirir)     (+ öğretmen soruları,  (deste kimlikleri)   (saf reducer)
+                                                                    − gizlenen sorular)          ▲                │
+                                                       lib/memory (sorulanlar) ──────────────────┘     eylemler ▲ │ durum
+                                                                                                                 │ ▼
+                                                                                          games/<oyun>/Game.tsx (tahta)
 ```
 
 ## 1. Veri havuzu
 
 - **Model:** `src/core/model.ts`. Zinciri Ders → Sınıf → Ünite → Soru şeklindedir. Her soru bir üniteye bağlıdır; sınıf ve ders bilgisi üniteden çıkar.
-- **Soru tipleri:** `multiple-choice` (2-4 şık) ve `true-false`. Yeni bir tip (boşluk doldurma, eşleştirme, sıralama) eklemek için:
+- **Soru tipleri:** `multiple-choice` (2-4 şık), `true-false` ve `passage` (LGS tarzı paragraf: metin, soru kökü, dört şık). Yeni bir tip (boşluk doldurma, eşleştirme, sıralama) eklemek için:
   1. `questionSchema` birleşimine yeni şemayı ekleyin.
   2. `toPlayable` içinde oyunların anlayacağı biçime çevirin.
   3. Tipi destekleyen oyunlar bunu `questionTypes` alanında bildirir. Desteklemeyen oyunlar o soruları görmez.
-- **Doğrulama:** Bütün soru dosyaları `src/content/content.test.ts` ile şemaya, ünite eşleşmesine ve benzersiz kimliğe karşı test edilir.
+- **Bilgi kartları:** `src/core/cards.ts`. Bir kart kümesi doğrulanmış bilgileri tablo gibi tutar; `questionsFromCards` her satırdan çoktan seçmeli sorular ve doğru/yanlış önermeler üretir.
+  - `pairs` kümesinde soru kalıpları (`"{kitap} hangi peygambere indirilmiştir?"`) satırların alanlarıyla doldurulur. Çeldiriciler diğer satırlardan seçilir. Yanlış önerme, bir alanın komşu satırdakiyle değiştirilmesiyle kurulur.
+  - `list` kümesinde bir grubun üyeleri ve üye olmayanları vardır ("Hangisi namazın farzlarından biridir?" / "biri değildir?").
+  - Seçimler kümenin kimliğinden türetilen tohumla yapılır (`hashSeed`). Aynı kart her derlemede aynı kimlikli, aynı soruları üretir; böylece hafıza ve hata bildirimleri kart sorularında da çalışır.
+  - Aynı satırdan üretilen soruların `group` alanı ortaktır. Deste kurucu bir gruptan yalnızca bir soru alır.
+- **Sınıf bazında yükleme:** `src/content/index.ts` içindeki `CONTENT_FILES` her ders ve sınıf için soru, kart ve paragraf dosyalarını `import()` ile tanımlar. Tahta yalnızca seçilen sınıfın dosyalarını indirir; kartlar o anda soruya çevrilir. Ana sayfadaki sayılar `countBuiltIn` ile hesaplanır.
+- **Doğrulama:** Bütün soru, kart ve paragraf dosyaları `src/content/content.test.ts` ile şemaya, ünite eşleşmesine ve benzersiz kimliğe karşı test edilir. Kartlar için ayrıca aynı kümede iki satırın aynı soruyu üretmediği ve önermelerin tekrarlanmadığı denetlenir.
 - **Öğretmen soruları:** `src/core/repository.ts` bu soruları tarayıcıda (`localStorage`) tutar ve yerleşik sorularla birleştirir. Hesaplar geldiğinde yalnızca bu dosyadaki okuma/yazma fonksiyonları bir API'ye bağlanır; ekranlar ve oyunlar değişmez.
 
 ## 2. Deste
 
-`buildDeck(havuz, { unitIds, types, seed })`:
+`buildDeckIds(havuz, { unitIds, types, seed, seen })`:
 
 - seçilen ünitelerden uygun tipteki soruları alır,
+- aynı bilgi grubundan (`group`) yalnızca bir soru alır,
+- `seen` verilirse hiç sorulmamış sorular önce, en eski sorulanlar sonra gelir,
 - üniteleri sırayla harmanlar ki tek bir ünite destenin başını doldurmasın,
-- her ünite içinde kolaydan zora sıralar,
-- şıkları karıştırır (`keepOrder` işaretli sorular hariç).
+- her ünite içinde kolaydan zora sıralar.
 
-Tohum (`seed`) aynı kaldığı sürece deste de aynı kalır. Bu sayede sayfa yenilense bile oyun aynı sorularla devam eder. Çok cihazlı sürümde bu, bütün cihazların aynı desteyi görmesini sağlar.
+Sonuç soru kimliklerinin listesidir ve oyun ayarıyla (`GameConfig.deckIds`) birlikte saklanır. Ekran bu kimlikleri `deckFromIds` ile oynanabilir sorulara çevirir. Şıklar her soru için tohum ve soru kimliğinden türetilen sırayla karıştırılır (`keepOrder` işaretli sorular hariç). Bu sayede sayfa yenilense ya da havuza yeni sorular eklense bile süren oyun aynı sorularla, aynı şık sırasıyla devam eder. Çok cihazlı sürümde bu, bütün cihazların aynı desteyi görmesini sağlar.
 
-## 3. Oyun mantığı: saf reducer
+## 3. Sorulanlar hafızası ve hata bildirimleri
+
+- **Hafıza:** `src/lib/memory.ts`. Oyun bitince sorulan soruların kimlikleri ve zamanı kaydedilir. Kapsam ders, sınıf ve isteğe bağlı şubedir (`din-kulturu-8-B`); şube seçilmezse sınıf geneli kullanılır. Kurulum ekranı kaç sorunun daha önce sorulduğunu gösterir ve hafızayı silmeye izin verir.
+- **Bildirimler ve gizleme:** `src/lib/reports.ts`. Bildirim soru kimliği, hata türü ve kısa nottan oluşur. Gizlenen sorular `useGradePool` tarafından oyun havuzundan çıkarılır, soru bankasında görünmeye devam eder. Bildirimler JSON olarak dışa aktarılır.
+- Bu kayıtlar `src/lib/store.ts` ile `localStorage`da tutulur. `useSyncExternalStore` sayesinde aynı tahtada açık sekmeler birbirini günceller. Hesaplar geldiğinde yalnızca bu dosyalar bir API'ye bağlanır.
+
+## 4. LGS soru üretim hattı
+
+`scripts/lgs-uret.ts` paragraf sorularını Claude API ile üretir (kullanım: README). Hat dört adımdan oluşur:
+
+1. **Üret:** Ünite adı, mevcut sorular ve biçim örnekleriyle yapılandırılmış çıktı istenir (zod şeması).
+2. **Denetle:** OynaBil şeması ve mevcut sorulara benzerlik denetlenir.
+3. **Körlemesine çöz:** İkinci bir çağrı, soruları cevap anahtarını görmeden çözer.
+4. **Yaz:** Cevabı tutan ve sorunsuz bulunan sorular eklenir, kalanlar gerekçesiyle `icerik-inceleme/` klasörüne yazılır.
+
+Betik oyun koduna dokunmaz; yalnızca içerik dosyası üretir. Sonra `npm test` ile doğrulanır ve insan gözüyle okunur.
+
+## 5. Oyun mantığı: saf reducer
 
 Her oyunun mantığı `(durum, eylem) => yeni durum` şeklinde saf bir fonksiyondur:
 
@@ -41,13 +66,13 @@ Her oyunun mantığı `(durum, eylem) => yeni durum` şeklinde saf bir fonksiyon
 
 Testler: `src/games/*/logic.test.ts`.
 
-## 4. Tahta ekranı
+## 6. Tahta ekranı
 
 `Game.tsx`, reducer'ı `usePersistentReducer` ile çalıştırır. Bu hook her değişiklikte durumu tarayıcıya yazar; tahta uyku moduna geçse ya da sayfa yenilense oyun kaldığı yerden devam eder. Yeniden yüklenen bir Bilgi Yarışması'nda süre kendiliğinden akmaz, öğretmen "Devam" diyene kadar duraklatılmış bekler.
 
 Halat Çekme'de iki öğrenci aynı anda dokunur. Tarayıcılar çoklu dokunuşta `click` olayını yalnızca birine gönderdiği için cevaplar `pointerdown` ile alınır.
 
-## 5. Çok cihazlı sürüme geçiş planı
+## 7. Çok cihazlı sürüme geçiş planı
 
 Bugünkü yapı bu geçiş düşünülerek kuruldu. Önerilen yol:
 
@@ -59,7 +84,7 @@ Bugünkü yapı bu geçiş düşünülerek kuruldu. Önerilen yol:
 
 Reducer'lar, deste ve soru havuzu bu geçişte değişmeden kalır.
 
-## 6. Çevrimdışı çalışma
+## 8. Çevrimdışı çalışma
 
 `npm run build` sonrasında `scripts/build-sw.mjs`, `out/` altındaki bütün dosyaları listeleyip `out/sw.js` dosyasını yazar. Service worker ilk ziyarette her şeyi önbelleğe alır:
 

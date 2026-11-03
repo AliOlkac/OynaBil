@@ -23,6 +23,11 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
 - **Sayaç halkası:** Gerçek bir süreyi gösterir.
 - **Konfeti:** Yalnızca kazanan ekranında, kazanan takımın rengiyle atılır.
 - **Ünite doğruluk çubukları:** Sonuç ekranında ölçülen doğru/toplam oranını gösterir.
+- **LGS paragraf ekranı:** Metin solda kendi kutusunda okunur. Soru kökü, sayaç ve şıklar sağda birlikte durur, böylece göz kökten şıklara kısa yoldan gider. Metin 320 karakteri geçince yazı bir kademe küçülür (40 px'ten 30 px'e). Tahtaya yine sığmazsa yalnızca metin kutusu kayar, ekran kaymaz. Telefonda metin, kök ve şıklar alt alta dizilir.
+- **LGS işaretleri:**
+  - Paragraf sorusunun kehribar renkli "LGS tarzı" rozeti vardır.
+  - Olumsuz soru kökü ("değildir", "çıkarılamaz") mercan renkte ve altı çizili gösterilir. LGS'deki altı çizili yazımın tahtadaki karşılığıdır.
+- **Hata bildir:** Açıklama çubuğunda sessiz bir düğmedir, oyunun akışını bölmez. Pencerede altı hata türü büyük dokunma alanlarıyla sunulur; not isteğe bağlıdır.
 - **Halat Çekme sahnesi:** Okul şenliği akşamı. Gökyüzü, yıldızlar ve tepeler sahne dekorudur. Takım renklerinde bayrak dizisi takım yanlarını gösterir. Saha, çamur havuzu ve kazanma bayrakları kuralı görünür kılar.
 - **Sahnedeki sürekli hareket:** Çekişme sürerken çocukların hafif zorlanma salınımı vardır. Bu, canlı bir durumu gösterdiği için sonsuz döngü yasağının tek istisnasıdır ve oyun bitince durur. Kamera ipi hafifçe izler, tepeler daha yavaş kayar.
 - **Oyun anı efektleri:**
