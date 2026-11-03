@@ -22,6 +22,8 @@ export type SettingField =
       label: string;
       kind: "choice";
       options: { value: number; label: string }[];
+      /** Yalnızca seçili ünitelerde bu tipte soru varsa gösterilir (ör. LGS paragraf soruları). */
+      requiresType?: QuestionType;
     }
   | {
       key: string;
@@ -35,9 +37,16 @@ export type GameConfig = {
   subjectId: string;
   grade: Grade;
   unitIds: string[];
+  /** Şube (ör. "C"). Sorulanlar hafızası şube bazında tutulur. */
+  section?: string;
   teams: Team[];
   settings: GameSettings;
   seed: number;
+  /**
+   * Oyun başlarken kurulan deste sırası (soru kimlikleri). Sayfa yenilense, öğretmen yeni soru
+   * eklese ya da bir soruyu gizlese bile süren oyunun soruları ve sırası değişmez.
+   */
+  deckIds: string[];
   /** Aynı oyunun yeniden yüklenince kaldığı yerden devam etmesi için. */
   sessionId: string;
 };
@@ -49,6 +58,8 @@ export type GameDefinition = {
   howTo: string[];
   teamCount: { min: number; max: number; default: number };
   questionTypes: QuestionType[];
+  /** Ayarlara göre kullanılan soru tipleri; yoksa `questionTypes`. */
+  typesFor?: (settings: GameSettings) => QuestionType[];
   settings: SettingField[];
   defaultSettings: GameSettings;
   /** Bu ayarlarla oyunun ihtiyaç duyduğu en az soru sayısı. */

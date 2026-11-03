@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { PlayableQuestion } from "@/core/deck";
 import { defaultTeams } from "../teams";
-import { createQuiz, currentTeam, EXTRA_TIME_MS, POINTS_CORRECT, POINTS_STEAL, quizReducer, standings, type QuizState } from "./logic";
+import { createQuiz, currentTeam, EXTRA_TIME_MS, PASSAGE_BONUS_MS, POINTS_CORRECT, POINTS_STEAL, quizReducer, standings, type QuizState } from "./logic";
 
 const deck: PlayableQuestion[] = Array.from({ length: 10 }, (_, i) => ({
   id: `dkab-8-1-${String(i + 1).padStart(2, "0")}`,
@@ -95,5 +95,20 @@ describe("Bilgi Yarışması", () => {
     expect(reduce(s, { type: "answer", option: 0, now: 11_000 }).phase).toBe("question");
     s = reduce(s, { type: "resume", now: 50_000 });
     expect(s.deadline).toBe(70_000);
+  });
+});
+
+describe("Bilgi Yarışması paragraf soruları", () => {
+  it("paragraf sorusunda okuma için ek süre verilir", () => {
+    const passageDeck: PlayableQuestion[] = [
+      { ...deck[0], id: "dkab-8-1-lgs-01", type: "passage", context: "Kısa bir metin." },
+      deck[1],
+    ];
+    const r = quizReducer(passageDeck);
+    let s = r(createQuiz(teams, { rounds: 1, seconds: 30, jokers: false, steal: false }), { type: "start", now: 0 });
+    expect(s.deadline).toBe(30_000 + PASSAGE_BONUS_MS);
+    s = r(s, { type: "answer", option: 0, now: 1 });
+    s = r(s, { type: "next", now: 100_000 });
+    expect(s.deadline).toBe(130_000);
   });
 });

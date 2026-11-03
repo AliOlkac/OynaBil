@@ -1,4 +1,4 @@
-import type { GameDefinition } from "./types";
+import type { GameDefinition, GameSettings } from "./types";
 
 /**
  * Oyun kaydı. Yeni oyun eklemek için:
@@ -19,7 +19,9 @@ export const bilgiYarismasi: GameDefinition = {
     "Her sorudan sonra açıklama gelir; konuyu orada anlatabilirsiniz.",
   ],
   teamCount: { min: 2, max: 4, default: 2 },
-  questionTypes: ["multiple-choice", "true-false"],
+  questionTypes: ["multiple-choice", "true-false", "passage"],
+  // lgs: 0 kapalı, 1 karışık, 2 yalnızca LGS tarzı paragraf soruları.
+  typesFor: (s) => (s.lgs === 0 ? ["multiple-choice", "true-false"] : s.lgs === 2 ? ["passage"] : ["multiple-choice", "true-false", "passage"]),
   settings: [
     {
       key: "rounds",
@@ -43,10 +45,21 @@ export const bilgiYarismasi: GameDefinition = {
         { value: 0, label: "Süresiz" },
       ],
     },
+    {
+      key: "lgs",
+      label: "LGS tarzı paragraf soruları",
+      kind: "choice",
+      requiresType: "passage",
+      options: [
+        { value: 1, label: "Karışık" },
+        { value: 2, label: "Yalnızca" },
+        { value: 0, label: "Kapalı" },
+      ],
+    },
     { key: "jokers", label: "Jokerler", kind: "toggle", hint: "Yarı yarıya, ek süre, pas" },
     { key: "steal", label: "Soru çalma", kind: "toggle", hint: "Bilemeyen takımın sorusu çalınır" },
   ],
-  defaultSettings: { rounds: 5, seconds: 30, jokers: true, steal: true },
+  defaultSettings: { rounds: 5, seconds: 30, lgs: 1, jokers: true, steal: true },
   // Her takım için tur sayısı kadar soru, pas jokerleri için de takım başına bir yedek.
   questionsNeeded: (s, teams) => Number(s.rounds) * teams + (s.jokers ? teams : 0),
 };
@@ -94,4 +107,8 @@ export const GAMES: GameDefinition[] = [bilgiYarismasi, halatCekme];
 
 export function getGame(id: string): GameDefinition | undefined {
   return GAMES.find((g) => g.id === id);
+}
+
+export function gameTypes(game: GameDefinition, settings: GameSettings) {
+  return game.typesFor ? game.typesFor({ ...game.defaultSettings, ...settings }) : game.questionTypes;
 }

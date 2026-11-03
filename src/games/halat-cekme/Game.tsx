@@ -10,6 +10,7 @@ import { TeamEmblem } from "@/components/ui/TeamEmblem";
 import type { PlayableQuestion } from "@/core/deck";
 import { clock, usePersistentReducer, useNow } from "@/lib/hooks";
 import { dur, ease, spring } from "@/lib/motion";
+import { memoryScope } from "@/lib/memory";
 import { sfx } from "@/lib/sound";
 import { halatCekme } from "../registry";
 import { TEAM_STYLES } from "../teams";
@@ -112,6 +113,7 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
         deck={deck}
         onRestart={onRestart}
         setupHref={`/kurulum?oyun=${config.gameId}`}
+        seenScope={memoryScope(config.subjectId, config.grade, config.section)}
       />
     );
   }

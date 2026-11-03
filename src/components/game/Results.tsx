@@ -1,9 +1,9 @@
 "use client";
 
 import confetti from "canvas-confetti";
-import { animate, motion, useMotionValue, useReducedMotion, useTransform } from "motion/react";
-import { Check, Crown, Home, RotateCcw, Settings2, X } from "lucide-react";
-import { useEffect, useMemo } from "react";
+import { animate, AnimatePresence, motion, useMotionValue, useReducedMotion, useTransform } from "motion/react";
+import { Check, Crown, Flag, Home, RotateCcw, Settings2, X } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { TeamEmblem } from "@/components/ui/TeamEmblem";
 import type { PlayableQuestion } from "@/core/deck";
@@ -11,6 +11,10 @@ import { findUnit } from "@/core/repository";
 import { TEAM_STYLES } from "@/games/teams";
 import type { AnswerLog, Team } from "@/games/types";
 import { cssColor } from "@/lib/color";
+import { clock } from "@/lib/hooks";
+import { markSeen } from "@/lib/memory";
+import { useReports } from "@/lib/reports";
+import { ReportDialog } from "./ReportDialog";
 import { sfx } from "@/lib/sound";
 import { dur, ease, spring } from "@/lib/motion";
 
@@ -27,9 +31,12 @@ export function Results({
   deck,
   onRestart,
   setupHref,
+  seenScope,
   scoreLabel = "puan",
 }: {
   standings: Standing[];
+  /** Sorulanlar hafızasının kapsamı (ders + sınıf + şube). */
+  seenScope: string;
   scoreLabel?: string;
   winnerId: string | "draw" | null;
   log: AnswerLog[];
@@ -39,6 +46,14 @@ export function Results({
 }) {
   const reduceMotion = useReducedMotion();
   const winner = standings.find((s) => s.team.id === winnerId)?.team;
+  const [reporting, setReporting] = useState<PlayableQuestion | null>(null);
+  const reports = useReports();
+  const reported = new Set(reports.map((r) => r.questionId));
+
+  // Bu oyunda sorulan sorular şubenin hafızasına yazılır; bir sonraki oyunda sona bırakılır.
+  useEffect(() => {
+    markSeen(seenScope, [...new Set(log.map((l) => l.questionId))], clock());
+  }, [seenScope, log]);
 
   useEffect(() => {
     sfx.win();
@@ -142,7 +157,22 @@ export function Results({
           <ul className="mt-3 flex min-h-0 flex-col gap-3 overflow-y-auto pr-2">
             {review.missed.map((q) => (
               <li key={q.id} className="rounded-lg bg-ink-800 p-4">
-                <p className="font-semibold">{q.prompt}</p>
+                <div className="flex items-start gap-3">
+                  <p className="min-w-0 flex-1 font-semibold">{q.prompt}</p>
+                  {reported.has(q.id) ? (
+                    <span className="flex shrink-0 items-center gap-1 text-sm font-semibold text-mercan">
+                      <Flag className="size-4" /> Bildirildi
+                    </span>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setReporting(q)}
+                      className="flex shrink-0 items-center gap-1 rounded-md px-2 py-1 text-sm font-semibold text-ink-400 hover:bg-ink-700 hover:text-cream"
+                    >
+                      <Flag className="size-4" /> Hata bildir
+                    </button>
+                  )}
+                </div>
                 <p className="mt-2 flex items-start gap-2 text-zumrut">
                   <Check className="mt-0.5 size-5 shrink-0" />
                   {q.options[q.correctIndex]}
@@ -153,6 +183,10 @@ export function Results({
           </ul>
         )}
       </section>
+
+      <AnimatePresence>
+        {reporting && <ReportDialog key={reporting.id} questionId={reporting.id} prompt={reporting.prompt} onClose={() => setReporting(null)} />}
+      </AnimatePresence>
     </div>
   );
 }

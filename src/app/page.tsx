@@ -4,13 +4,14 @@ import { ClientOnly } from "@/components/ClientOnly";
 import { ButtonLink } from "@/components/ui/Button";
 import { Girih } from "@/components/ui/Girih";
 import { Logo } from "@/components/ui/Logo";
-import { BUILT_IN_QUESTIONS, SUBJECTS } from "@/content";
+import { countBuiltIn } from "@/content";
 import { GAMES } from "@/games/registry";
 import { GameGlyph } from "@/components/game/GameGlyph";
 import { ResumeCard } from "./ResumeCard";
 
-export default function Home() {
-  const subject = SUBJECTS[0];
+export default async function Home() {
+  // Derleme sırasında sayılır: kartlardan üretilenler dahil, uygulamayla gelen bütün sorular.
+  const [{ subject, total }] = await countBuiltIn();
   return (
     <div className="relative flex min-h-dvh flex-col overflow-hidden bg-ink-900">
       <Girih className="text-cream opacity-[0.07]" scale={1.4} />
@@ -41,7 +42,7 @@ export default function Home() {
           </div>
           <p className="mt-12 text-ink-400">
             {subject.name}: {subject.grades[0]}-{subject.grades[subject.grades.length - 1]}. sınıf, {subject.units.length} ünite,{" "}
-            {BUILT_IN_QUESTIONS.length} soru.
+            {total} soru.
           </p>
         </section>
 

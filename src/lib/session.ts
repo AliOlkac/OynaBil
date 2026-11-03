@@ -18,6 +18,7 @@ export type SavedSetup = {
   subjectId: string;
   grade: Grade;
   unitIds: string[];
+  section?: string;
   teams: Team[];
   teamCountByGame: Record<string, number>;
   settingsByGame: Record<string, GameSettings>;

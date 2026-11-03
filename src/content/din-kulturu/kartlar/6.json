@@ -1,0 +1,377 @@
+[
+  {
+    "kind": "pairs",
+    "id": "dkab-6-1-kitaplar",
+    "unit": "dkab-6-1",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{kitap} hangi peygambere indirilmiştir?", "answer": "peygamber" },
+      { "prompt": "{peygambereYonelme} indirilen ilahi kitap hangisidir?", "answer": "kitap" }
+    ],
+    "statement": { "text": "{kitap}, {peygambereYonelme} indirilmiştir.", "swap": "peygambereYonelme" },
+    "explanation": "{kitap}, {peygambereYonelme} indirilmiştir.",
+    "items": [
+      { "id": "tevrat", "kitap": "Tevrat", "peygamber": "Hz. Musa", "peygambereYonelme": "Hz. Musa'ya" },
+      { "id": "zebur", "kitap": "Zebur", "peygamber": "Hz. Davud", "peygambereYonelme": "Hz. Davud'a", "not": "Zebur'da daha çok dualar ve öğütler yer alır." },
+      { "id": "incil", "kitap": "İncil", "peygamber": "Hz. İsa", "peygambereYonelme": "Hz. İsa'ya" },
+      { "id": "kuran", "kitap": "Kur'an-ı Kerim", "peygamber": "Hz. Muhammed (sav)", "peygambereYonelme": "Hz. Muhammed'e (sav)", "not": "Kur'an-ı Kerim, son ilahi kitaptır." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-6-1-sifatlar",
+    "unit": "dkab-6-1",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Peygamberlerin {sifatKucuk} sıfatı ne anlama gelir?", "answer": "anlam" },
+      { "prompt": "Peygamberlerin {ozellik} ifade eden sıfat hangisidir?", "answer": "sifat" }
+    ],
+    "statement": { "text": "{sifat} sıfatı, peygamberlerin {ozellik} ifade eder.", "swap": "ozellik" },
+    "explanation": "{sifat} sıfatı, peygamberlerin {ozellik} ifade eder.",
+    "items": [
+      { "id": "sidk", "sifat": "Sıdk", "sifatKucuk": "sıdk", "anlam": "Doğru sözlü olmak", "ozellik": "her zaman doğru sözlü olmasını", "not": "Peygamberler hiçbir zaman yalan söylememiştir." },
+      { "id": "fetanet", "sifat": "Fetanet", "sifatKucuk": "fetanet", "anlam": "Akıllı ve zeki olmak", "ozellik": "akıllı, zeki ve anlayışlı olmasını" },
+      { "id": "emanet", "sifat": "Emanet", "sifatKucuk": "emanet", "anlam": "Güvenilir olmak", "ozellik": "güvenilir olmasını", "not": "Mekkeliler bu yüzden Hz. Muhammed'e (sav) 'Muhammedü'l-Emin' demiştir." },
+      { "id": "ismet", "sifat": "İsmet", "sifatKucuk": "ismet", "anlam": "Günah işlemekten korunmuş olmak", "ozellik": "günah işlemekten korunmuş olmasını" },
+      { "id": "teblig", "sifat": "Tebliğ", "sifatKucuk": "tebliğ", "anlam": "Vahyi insanlara eksiksiz iletmek", "ozellik": "Allah'tan aldıkları mesajları insanlara eksiksiz iletmesini", "not": "Peygamberler vahye hiçbir şey eklemez, ondan hiçbir şey çıkarmaz." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-6-1-peygamberler",
+    "unit": "dkab-6-1",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi Kur'an-ı Kerim'de adı geçen peygamberlerden biridir?",
+    "negative": "Aşağıdakilerden hangisi Kur'an-ı Kerim'de adı geçen peygamberlerden biri değildir?",
+    "statement": "{item}, Kur'an-ı Kerim'de adı geçen peygamberlerdendir.",
+    "explanation": "Kur'an-ı Kerim'de 25 peygamberin adı geçer. Bunlardan bazıları: {members}. Hz. Ebu Bekir, Hz. Ömer, Hz. Osman, Hz. Ali, Hz. Hamza ve Hz. Bilal ise sahabedir.",
+    "members": ["Hz. Hud", "Hz. Salih", "Hz. Yakub", "Hz. Şuayb", "Hz. Eyyub", "Hz. Yunus"],
+    "nonMembers": ["Hz. Ebu Bekir", "Hz. Ömer", "Hz. Osman", "Hz. Ali", "Hz. Hamza", "Hz. Bilal"]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-6-1-gorevler",
+    "unit": "dkab-6-1",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi peygamberlerin görevlerinden biridir?",
+    "negative": "Aşağıdakilerden hangisi peygamberlerin görevlerinden biri değildir?",
+    "statement": "{item}, peygamberlerin görevlerindendir.",
+    "explanation": "Peygamberler Allah'ın mesajını insanlara bildirir ve açıklar, insanları tevhide çağırır, müjdeler ve uyarır, güzel ahlakıyla örnek olur. Tebliğ için ücret istemezler; dinde zorlama da yoktur.",
+    "members": [
+      "Allah'ın mesajlarını insanlara bildirmek",
+      "İnsanları Allah'ın birliğine çağırmak",
+      "Vahyi insanlara açıklamak",
+      "Güzel ahlakıyla insanlara örnek olmak",
+      "İnsanları müjdeleyip uyarmak"
+    ],
+    "nonMembers": [
+      "İnsanları zorla dine sokmak",
+      "Vahye kendi sözlerini eklemek",
+      "Tebliğ karşılığında ücret istemek",
+      "Atalardan kalan putları korumak",
+      "Yalnızca zenginlere öğüt vermek"
+    ]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-6-2-kavramlar",
+    "unit": "dkab-6-2",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "Ramazan ayıyla ilgili '{kavram}' kavramı ne anlama gelir?", "answer": "tanim" },
+      { "prompt": "{tanimYonelme} ne ad verilir?", "answer": "kavram" }
+    ],
+    "statement": { "text": "{tanimYonelme} {kavramKucuk} denir.", "swap": "kavramKucuk" },
+    "explanation": "{tanimYonelme} {kavramKucuk} denir.",
+    "items": [
+      { "id": "sahur", "kavram": "Sahur", "kavramKucuk": "sahur", "tanim": "İmsaktan önce yenen yemek", "tanimYonelme": "Oruç tutmak için imsak vaktinden önce yenen yemeğe", "not": "Sahur sünnettir. Hz. Muhammed (sav), sahurda bereket olduğunu bildirmiştir." },
+      { "id": "iftar", "kavram": "İftar", "kavramKucuk": "iftar", "tanim": "Güneş batınca orucu açmak", "tanimYonelme": "Akşam ezanı okununca yiyip içerek orucu açmaya", "not": "Oruçluya iftar ettirmek de sevaplı bir iştir." },
+      { "id": "imsak", "kavram": "İmsak", "kavramKucuk": "imsak", "tanim": "Yeme içmenin sona erdiği vakit", "tanimYonelme": "Oruçta yeme ve içmenin sona erdiği vakte", "not": "İmsak, tan yerinin ağarmaya başladığı vakittir; oruç bu vakitte başlar." },
+      { "id": "teravih", "kavram": "Teravih", "kavramKucuk": "teravih namazı", "tanim": "Ramazan'da yatsıdan sonra kılınan namaz", "tanimYonelme": "Ramazan gecelerinde yatsı namazından sonra kılınan namaza", "not": "Teravih namazı sünnettir ve genellikle camilerde cemaatle kılınır." },
+      { "id": "mukabele", "kavram": "Mukabele", "kavramKucuk": "mukabele", "tanim": "Okunan Kur'an'ı cemaatin takip etmesi", "tanimYonelme": "Ramazan'da okunan Kur'an-ı Kerim'i cemaatin sessizce takip etmesine", "not": "Genellikle her gün bir cüz okunur ve Ramazan sonunda hatim tamamlanır." },
+      { "id": "itikaf", "kavram": "İtikâf", "kavramKucuk": "itikâf", "tanim": "İbadet için camide bir süre kalmak", "tanimYonelme": "İbadet etmek amacıyla bir süre camide kalmaya", "not": "Ramazan'ın son on gününde itikâfa girmek sünnettir." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-6-2-hukumler",
+    "unit": "dkab-6-2",
+    "difficulty": 3,
+    "questions": [
+      { "prompt": "Oruçla ilgili '{kavram}' kavramı ne anlama gelir?", "answer": "tanim" },
+      { "prompt": "{tanimYonelme} ne ad verilir?", "answer": "kavram" }
+    ],
+    "statement": { "text": "{tanimYonelme} {kavramKucuk} denir.", "swap": "kavramKucuk" },
+    "explanation": "{tanimYonelme} {kavramKucuk} denir.",
+    "items": [
+      { "id": "kaza", "kavram": "Kaza", "kavramKucuk": "kaza", "tanim": "Tutulamayan orucu sonradan tutmak", "tanimYonelme": "Hastalık ya da yolculuk gibi bir mazeretle tutulamayan orucun sonradan tutulmasına", "not": "Kaza orucu, tutulamayan gün sayısı kadar tutulur." },
+      { "id": "fidye", "kavram": "Fidye", "kavramKucuk": "fidye", "tanim": "Tutamadığı her gün için yoksulu doyurmak", "tanimYonelme": "Çok yaşlı ya da iyileşme umudu olmayan hasta kişinin, tutamadığı her gün için bir yoksulu doyuracak kadar yardımda bulunmasına", "not": "Fidye, sonradan da oruç tutamayacak durumdaki kişiler içindir." },
+      { "id": "keffaret", "kavram": "Keffaret orucu", "kavramKucuk": "keffaret orucu", "tanim": "Bilerek bozulan oruç için 60 gün oruç tutmak", "tanimYonelme": "Ramazan orucunu mazeretsiz ve bilerek bozan kişinin altmış gün aralıksız oruç tutmasına", "not": "Hanefi mezhebine göre bu kişi, bozduğu günün orucunu ayrıca kaza eder." },
+      { "id": "fitre", "kavram": "Fitre", "kavramKucuk": "fitre", "tanim": "Bayramdan önce verilen fıtır sadakası", "tanimYonelme": "Ramazan ayı içinde ya da bayram namazından önce ihtiyaç sahiplerine verilen sadakaya", "not": "Hanefi mezhebine göre fitre vermek vaciptir." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-6-2-orucu-bozanlar",
+    "unit": "dkab-6-2",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi orucu bozar?",
+    "negative": "Aşağıdakilerden hangisi orucu bozmaz?",
+    "statement": "{item} orucu bozar.",
+    "explanation": "Hanefi mezhebine göre bilerek yemek ve içmek, ağızdan ilaç almak ve sigara içmek orucu bozar. Unutarak yiyip içmek, uyumak, duş almak ve misvak kullanmak ise orucu bozmaz.",
+    "members": ["Bilerek yemek yemek", "Bilerek su içmek", "Ağızdan ilaç almak", "Sigara içmek"],
+    "nonMembers": ["Unutarak yemek yemek", "Uyumak", "Duş almak", "Misvak kullanmak"]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-6-2-farz-sartlari",
+    "unit": "dkab-6-2",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi orucun farz olmasının şartlarından biridir?",
+    "negative": "Aşağıdakilerden hangisi orucun farz olmasının şartlarından biri değildir?",
+    "statement": "{item}, orucun farz olmasının şartlarındandır.",
+    "explanation": "Ramazan orucu; Müslüman, akıllı ve ergenlik çağına girmiş kişilere farzdır. Hasta ve yolcu olanlar tutamadıkları oruçları daha sonra kaza eder.",
+    "members": ["Müslüman olmak", "Akıllı olmak", "Ergenlik çağına girmiş olmak"],
+    "nonMembers": ["Zengin olmak", "Evli olmak", "Hacca gitmiş olmak", "Kur'an'ı ezbere bilmek", "Erkek olmak"]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-6-2-ramazan-gelenekleri",
+    "unit": "dkab-6-2",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi Ramazan ayında yaşatılan ibadet ve geleneklerden biridir?",
+    "negative": "Aşağıdakilerden hangisi Ramazan ayında yaşatılan ibadet ve geleneklerden biri değildir?",
+    "statement": "{item}, Ramazan ayında yaşatılan ibadet ve geleneklerdendir.",
+    "explanation": "Ramazan'da teravih namazı kılınır, mukabele okunur, fitre verilir ve minarelere mahya asılır. Kurban, aşure, hac ve Regaip Kandili ise başka aylardadır.",
+    "members": ["Teravih namazı kılmak", "Mukabele okumak", "Fitre vermek", "Minarelere mahya asmak"],
+    "nonMembers": ["Kurban Bayramı'nda kurban kesmek", "Muharrem ayında aşure dağıtmak", "Zilhicce ayında hacca gitmek", "Recep ayında Regaip Kandili'ni ihya etmek"]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-6-3-degerler",
+    "unit": "dkab-6-3",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{ornek} Bu davranış hangi değere örnektir?", "answer": "deger" },
+      { "prompt": "Aşağıdakilerden hangisi {degerYonelme} örnek bir davranıştır?", "answer": "davranis" }
+    ],
+    "statement": { "text": "{davranis}, {degerYonelme} örnek bir davranıştır.", "swap": "degerYonelme" },
+    "explanation": "{davranis}, {degerYonelme} örnek bir davranıştır.",
+    "items": [
+      { "id": "durustluk", "ornek": "Elif, öğretmeni sınıftan çıktığında da sınavda kopya çekmedi.", "deger": "Dürüstlük", "degerYonelme": "dürüstlüğe", "davranis": "Kimse görmese de kopya çekmemek", "not": "Dürüstlük, sözde ve davranışta doğru olmaktır." },
+      { "id": "merhamet", "ornek": "Kerem, sokakta bulduğu yaralı kediyi veterinere götürdü.", "deger": "Merhamet", "degerYonelme": "merhamete", "davranis": "Yaralı bir hayvanı tedavi ettirmek", "not": "Merhamet, canlıların acısını paylaşıp onlara şefkat göstermektir." },
+      { "id": "tevazu", "ornek": "Bilgi yarışmasını kazanan Zehra, kendini arkadaşlarından üstün görmedi.", "deger": "Tevazu", "degerYonelme": "tevazuya", "davranis": "Başarısıyla böbürlenmemek", "not": "Tevazu, alçakgönüllülük demektir; zıddı kibirdir." },
+      { "id": "sorumluluk", "ornek": "Burak, ödevlerini her gün zamanında ve özenle yapar.", "deger": "Sorumluluk", "degerYonelme": "sorumluluğa", "davranis": "Ödevlerini zamanında yapmak", "not": "Sorumluluk, kendimize ve çevremize karşı görevlerimizi yerine getirmektir." },
+      { "id": "adalet", "ornek": "Takım kaptanı Emir, oyuncuları seçerken yakın arkadaşlarını kayırmadı.", "deger": "Adalet", "degerYonelme": "adalete", "davranis": "Kimseyi kayırmadan karar vermek", "not": "Adalet, herkese hakkını vermektir." },
+      { "id": "vefa", "ornek": "Selin, başka şehre taşınan eski komşusunu sık sık arayıp hâlini sorar.", "deger": "Vefa", "degerYonelme": "vefaya", "davranis": "Eski dostlarını unutmamak", "not": "Vefa, sevgi ve dostluğu zaman geçse de sürdürmektir." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-6-3-kavramlar",
+    "unit": "dkab-6-3",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Ahlakla ilgili '{kavram}' kavramı ne anlama gelir?", "answer": "tanim" },
+      { "prompt": "{tanimYonelme} ne ad verilir?", "answer": "kavram" }
+    ],
+    "statement": { "text": "{tanimYonelme} {kavramKucuk} denir.", "swap": "kavramKucuk" },
+    "explanation": "{tanimYonelme} {kavramKucuk} denir.",
+    "items": [
+      { "id": "giybet", "kavram": "Gıybet", "kavramKucuk": "gıybet", "tanim": "Birini arkasından çekiştirmek", "tanimYonelme": "Bir kişinin arkasından, onda gerçekten bulunan ama hoşlanmayacağı şeyleri konuşmaya", "not": "Söylenen şey o kişide yoksa bu iftira olur." },
+      { "id": "kibir", "kavram": "Kibir", "kavramKucuk": "kibir", "tanim": "Kendini başkalarından üstün görmek", "tanimYonelme": "Kişinin kendini başkalarından üstün görmesine", "not": "Kibrin zıddı, alçakgönüllülük demek olan tevazudur." },
+      { "id": "iftira", "kavram": "İftira", "kavramKucuk": "iftira", "tanim": "Birini yapmadığı bir şeyle suçlamak", "tanimYonelme": "Bir kişiyi yapmadığı bir şeyle suçlamaya", "not": "İftira, kul hakkını çiğneyen büyük bir haksızlıktır." },
+      { "id": "gipta", "kavram": "Gıpta", "kavramKucuk": "gıpta", "tanim": "Başkasındaki iyiliğe özenmek", "tanimYonelme": "Başkasındaki bir güzelliğin, ondan gitmesini istemeden kendisinde de olmasını dilemeye", "not": "Gıpta, insanı iyiliğe ve çalışmaya özendirir." },
+      { "id": "israf", "kavram": "İsraf", "kavramKucuk": "israf", "tanim": "Nimetleri gereksiz yere harcamak", "tanimYonelme": "Nimetleri gereksiz yere ve ölçüsüzce harcamaya", "not": "Kur'an-ı Kerim israf etmeyi yasaklar." },
+      { "id": "haset", "kavram": "Haset", "kavramKucuk": "haset", "tanim": "Başkasındaki nimetin yok olmasını istemek", "tanimYonelme": "Başkasındaki bir nimetin ondan gitmesini istemeye", "not": "Haset kötü bir duygudur; gıpta ile karıştırılmamalıdır." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-6-3-kul-hakki",
+    "unit": "dkab-6-3",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi kul hakkını çiğneyen bir davranıştır?",
+    "negative": "Aşağıdakilerden hangisi kul hakkını çiğneyen bir davranış değildir?",
+    "statement": "{item}, kul hakkını çiğneyen bir davranıştır.",
+    "explanation": "Kul hakkı, başkalarının maddi ve manevi haklarıdır. İzinsiz almak, emaneti geri vermemek, sıra kapmak, gıybet etmek ve ortak eşyaya zarar vermek bu hakkı çiğner.",
+    "members": [
+      "Arkadaşının silgisini izinsiz almak",
+      "Ödünç aldığı kitabı geri vermemek",
+      "Sırası gelmeden öne geçmek",
+      "Arkadaşının arkasından gıybet etmek",
+      "Parktaki banklara zarar vermek"
+    ],
+    "nonMembers": [
+      "Ödünç aldığı kitabı zamanında geri vermek",
+      "Kuyrukta sırasını beklemek",
+      "Arkadaşının eşyasını izin alarak kullanmak",
+      "Bulduğu cüzdanı sahibine ulaştırmak",
+      "Ortak kullanılan eşyaları korumak"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-6-3-zitlar",
+    "unit": "dkab-6-3",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Aşağıdakilerden hangisi {erdemTamlayan} zıddıdır?", "answer": "kotu" },
+      { "prompt": "Aşağıdakilerden hangisi {kotuTamlayan} zıddıdır?", "answer": "erdem" }
+    ],
+    "statement": { "text": "{erdem}, {kotuTamlayan} zıddıdır.", "swap": "kotuTamlayan" },
+    "explanation": "{erdem}, {kotuTamlayan} zıddıdır.",
+    "items": [
+      { "id": "tevazu", "erdem": "Tevazu", "erdemTamlayan": "tevazunun", "kotu": "Kibir", "kotuTamlayan": "kibrin", "not": "Tevazu alçakgönüllülük, kibir ise kendini başkalarından üstün görmektir." },
+      { "id": "comertlik", "erdem": "Cömertlik", "erdemTamlayan": "cömertliğin", "kotu": "Cimrilik", "kotuTamlayan": "cimriliğin", "not": "Cömert kişi, sahip olduklarını ihtiyaç sahipleriyle seve seve paylaşır." },
+      { "id": "adalet", "erdem": "Adalet", "erdemTamlayan": "adaletin", "kotu": "Zulüm", "kotuTamlayan": "zulmün", "not": "Adalet herkese hakkını vermek, zulüm ise başkasının hakkını çiğnemektir." },
+      { "id": "durustluk", "erdem": "Dürüstlük", "erdemTamlayan": "dürüstlüğün", "kotu": "Yalancılık", "kotuTamlayan": "yalancılığın", "not": "Doğruluk, Hz. Muhammed'in (sav) en belirgin özelliklerinden biridir." }
+    ]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-6-4-ailesi",
+    "unit": "dkab-6-4",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{kisi}, Hz. Muhammed'in (sav) nesidir?", "answer": "yakinlik" },
+      { "prompt": "Hz. Muhammed'in (sav) {yakinlikTanim} kimdir?", "answer": "kisi" }
+    ],
+    "statement": { "text": "{kisi}, {bilgi}.", "swap": "bilgi" },
+    "explanation": "{kisi}, Hz. Muhammed'in (sav) {yakinlikCumle}.",
+    "items": [
+      { "id": "amine", "kisi": "Âmine", "yakinlik": "Annesi", "yakinlikTanim": "annesi", "yakinlikCumle": "annesidir", "bilgi": "Hz. Muhammed (sav) altı yaşındayken vefat etmiştir", "not": "Oğlunu Medine'deki akrabalarına götürüp dönerken Ebva'da vefat etmiştir." },
+      { "id": "halime", "kisi": "Halime", "yakinlik": "Süt annesi", "yakinlikTanim": "süt annesi", "yakinlikCumle": "süt annesidir", "bilgi": "Hz. Muhammed'i (sav) çocukluğunun ilk yıllarında çölde büyütmüştür", "not": "Mekkeliler çocuklarını sağlıklı büyümeleri için çöldeki süt annelere verirdi." },
+      { "id": "hatice", "kisi": "Hz. Hatice", "yakinlik": "İlk eşi", "yakinlikTanim": "ilk eşi", "yakinlikCumle": "ilk eşidir", "bilgi": "Hz. Muhammed'in (sav) dürüstlüğüne güvenip ticaret mallarını ona emanet etmiştir", "not": "Evlendiklerinde Hz. Muhammed (sav) 25 yaşındaydı." },
+      { "id": "abdullah", "kisi": "Abdullah", "yakinlik": "Babası", "yakinlikTanim": "babası", "yakinlikCumle": "babasıdır", "bilgi": "Hz. Muhammed (sav) doğmadan önce vefat etmiştir", "not": "Oğlu doğmadan vefat ettiği için Hz. Muhammed (sav) babasını hiç görmemiştir." },
+      { "id": "ebu-talip", "kisi": "Ebu Talip", "yakinlik": "Amcası", "yakinlikTanim": "dedesinin vefatından sonra onu yanına alan amcası", "yakinlikCumle": "amcasıdır", "bilgi": "sekiz yaşındaki Hz. Muhammed'i (sav) yanına almıştır", "not": "Sekiz yaşındaki yeğenini yanına almış ve hayatı boyunca onu korumuştur." },
+      { "id": "abdulmuttalip", "kisi": "Abdülmuttalip", "yakinlik": "Dedesi", "yakinlikTanim": "annesinin vefatından sonra onu yanına alan dedesi", "yakinlikCumle": "dedesidir", "bilgi": "altı yaşındaki Hz. Muhammed'i (sav) yanına almıştır", "not": "Altı yaşındaki torununu yanına almış, o sekiz yaşındayken vefat etmiştir." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-6-4-yaslar",
+    "unit": "dkab-6-4",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Hz. Muhammed (sav), {olayZaman} kaç yaşındaydı?", "answer": "yas" },
+      { "prompt": "Hz. Muhammed'in (sav) {yas} yaşındayken yaşadığı olay hangisidir?", "answer": "olay" }
+    ],
+    "statement": { "text": "Hz. Muhammed (sav), {olayZaman} {yas} yaşındaydı.", "swap": "yas" },
+    "explanation": "Hz. Muhammed (sav), {olayZaman} {yas} yaşındaydı.",
+    "items": [
+      { "id": "anne", "olayZaman": "annesi Âmine vefat ettiğinde", "olay": "Annesi Âmine'nin vefatı", "yas": "6", "not": "Bunun üzerine dedesi Abdülmuttalip onu yanına aldı." },
+      { "id": "dede", "olayZaman": "dedesi Abdülmuttalip vefat ettiğinde", "olay": "Dedesi Abdülmuttalip'in vefatı", "yas": "8", "not": "Bundan sonra amcası Ebu Talip'in yanında büyüdü." },
+      { "id": "evlilik", "olayZaman": "Hz. Hatice ile evlendiğinde", "olay": "Hz. Hatice ile evlenmesi", "yas": "25", "not": "Hz. Hatice, onun dürüstlüğünü ticarette yakından tanımıştı." },
+      { "id": "hakemlik", "olayZaman": "Kâbe onarılırken Hacerü'l-Esved'i yerine koyduğunda", "olay": "Hacerü'l-Esved'i yerine koyması", "yas": "35", "not": "Taşı bir örtüye koyup kabilelere birlikte kaldırttı ve büyük bir kavgayı önledi." },
+      { "id": "vahiy", "olayZaman": "Hira Mağarası'nda ilk vahiy geldiğinde", "olay": "İlk vahyin gelmesi", "yas": "40", "not": "İlk vahiyle birlikte peygamberliği başladı." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-6-4-cahiliye",
+    "unit": "dkab-6-4",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi Cahiliye Dönemi'nde Mekke'de yaygın olan kötü alışkanlıklardan biridir?",
+    "negative": "Aşağıdakilerden hangisi Cahiliye Dönemi'nde Mekke'de yaygın olan kötü alışkanlıklardan biri değildir?",
+    "statement": "{item}, Cahiliye Dönemi'nde Mekke'de yaygın olan kötü alışkanlıklardandı.",
+    "explanation": "Cahiliye Dönemi'nde Mekke'de putperestlik, kumar, içki, kan davası ve güçlünün zayıfı ezmesi yaygındı. Hz. Muhammed (sav) bu kötülüklerden hep uzak durdu.",
+    "members": ["Putlara tapmak", "Kumar oynamak", "İçki içmek", "Kan davası gütmek", "Güçsüzlerin hakkını çiğnemek"],
+    "nonMembers": ["Misafiri ağırlamak", "Verilen sözü tutmak", "Zayıfların hakkını korumak", "Yetimleri koruyup gözetmek"]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-6-4-hayati",
+    "unit": "dkab-6-4",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi Hz. Muhammed'in (sav) peygamberliğinden önceki hayatına ait doğru bir bilgidir?",
+    "negative": "Aşağıdakilerden hangisi Hz. Muhammed'in (sav) peygamberliğinden önceki hayatına ait doğru bir bilgi değildir?",
+    "statement": "{item}, Hz. Muhammed'in (sav) peygamberliğinden önceki hayatına ait doğru bir bilgidir.",
+    "explanation": "Hz. Muhammed (sav) Mekke'de doğdu, babasını hiç görmedi ve okuma yazma bilmezdi. Gençliğinde çobanlık ve ticaret yaptı, Hılfu'l-Fudul'a katıldı, 25 yaşında Hz. Hatice ile evlendi ve Hira'da tefekküre çekildi.",
+    "members": ["Mekke'de doğması", "Gençliğinde çobanlık yapması", "Ticaretle uğraşması", "Hılfu'l-Fudul'a katılması", "Hira Mağarası'nda tefekkür etmesi"],
+    "nonMembers": ["Medine'de doğması", "Babasının yanında büyümesi", "Okuma yazma öğrenip kâtiplik yapması", "Hz. Hatice ile 40 yaşında evlenmesi"]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-6-5-sanatlar",
+    "unit": "dkab-6-5",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Aşağıdakilerden hangisi {tanim} sanatıdır?", "answer": "sanat" },
+      { "prompt": "Geleneksel sanatlarımızdan {sanatKucuk} nedir?", "answer": "kisa" }
+    ],
+    "statement": { "text": "{sanat}, {tanim} sanatıdır.", "swap": "tanim" },
+    "explanation": "{sanat}, {tanim} sanatıdır.",
+    "items": [
+      { "id": "hat", "sanat": "Hat", "sanatKucuk": "hat", "tanim": "Arap harfleriyle güzel yazı yazma", "kisa": "Güzel yazı yazma sanatı", "not": "Bu sanatın ustasına hattat denir." },
+      { "id": "tezhip", "sanat": "Tezhip", "sanatKucuk": "tezhip", "tanim": "kitap sayfalarını ve levhaları altın ve renkli boyalarla süsleme", "kisa": "Altın ve boyayla süsleme sanatı", "not": "Bu sanatın ustasına müzehhip denir." },
+      { "id": "ebru", "sanat": "Ebru", "sanatKucuk": "ebru", "tanim": "su üzerine serpilen boyalarla oluşan desenleri kâğıda aktarma", "kisa": "Su üzerinde desen yapma sanatı", "not": "Türk ebru sanatı, UNESCO'nun Somut Olmayan Kültürel Miras listesindedir." },
+      { "id": "cini", "sanat": "Çini", "sanatKucuk": "çini", "tanim": "desenlerle süslenip sırlanan ve fırında pişirilen karo ve kaplar yapma", "kisa": "Sırlı ve desenli karo yapma sanatı", "not": "İznik ve Kütahya çinileri pek çok camimizi süsler." },
+      { "id": "kundekari", "sanat": "Kündekâri", "sanatKucuk": "kündekâri", "tanim": "çivi ve tutkal kullanmadan ahşap parçalarını birbirine geçirme", "kisa": "Çivisiz ahşap birleştirme sanatı", "not": "Bu teknik özellikle cami kapılarında ve minberlerde kullanılır." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-6-5-ifadeler",
+    "unit": "dkab-6-5",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{durum} hangi ifade kullanılır?", "answer": "ifade" },
+      { "prompt": "'{ifade}' ifadesi hangi durumda kullanılır?", "answer": "durum" }
+    ],
+    "statement": { "text": "'{ifade}' ifadesi, {durumKucuk} kullanılır.", "swap": "durumKucuk" },
+    "explanation": "'{ifade}' ifadesi, {durumKucuk} kullanılır.",
+    "items": [
+      { "id": "bismillah", "ifade": "Bismillah", "durum": "Bir işe başlarken", "durumKucuk": "bir işe başlarken", "not": "'Allah'ın adıyla' anlamına gelir." },
+      { "id": "elhamdulillah", "ifade": "Elhamdülillah", "durum": "Bir nimet için Allah'a şükrederken", "durumKucuk": "bir nimet için Allah'a şükrederken", "not": "'Allah'a hamdolsun' anlamına gelir." },
+      { "id": "insallah", "ifade": "İnşallah", "durum": "Gelecekteki bir işten söz ederken", "durumKucuk": "gelecekteki bir işten söz ederken", "not": "'Allah dilerse' anlamına gelir." },
+      { "id": "masallah", "ifade": "Maşallah", "durum": "Güzel bir şeyi beğendiğimizde", "durumKucuk": "güzel bir şeyi beğendiğimizde", "not": "Bu söz, güzelliği yaratanın Allah olduğunu hatırlatır." },
+      { "id": "rahmet", "ifade": "Allah rahmet eylesin", "durum": "Vefat eden birinin ardından", "durumKucuk": "vefat eden birinin ardından", "not": "Yakınlarına 'Başınız sağ olsun' denerek acıları paylaşılır." },
+      { "id": "kabul", "ifade": "Allah kabul etsin", "durum": "İbadet eden birine dua ederken", "durumKucuk": "ibadet eden birine dua ederken", "not": "Namaz kılan ya da oruç tutan birine söylenen bir duadır." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-6-5-dini-gunler",
+    "unit": "dkab-6-5",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanim} hangi adla bilinir?", "answer": "gun" },
+      { "prompt": "{gun} ile ilgili hangisi doğrudur?", "answer": "bilgi" }
+    ],
+    "statement": { "text": "{tanim} {gun} olarak bilinir.", "swap": "gun" },
+    "explanation": "{tanim} {gun} olarak bilinir.",
+    "items": [
+      { "id": "mevlit", "gun": "Mevlit Kandili", "tanim": "Hz. Muhammed'in (sav) doğumunun anıldığı gece", "bilgi": "Hz. Muhammed'in (sav) doğumu anılır", "not": "Rebiülevvel ayının 12. gecesidir." },
+      { "id": "regaip", "gun": "Regaip Kandili", "tanim": "Recep ayının ilk cuma gecesi", "bilgi": "Recep ayının ilk cuma gecesidir", "not": "Recep, Şaban ve Ramazan aylarına üç aylar denir." },
+      { "id": "mirac", "gun": "Miraç Kandili", "tanim": "Hz. Muhammed'in (sav) göğe yükselişinin anıldığı gece", "bilgi": "Hz. Muhammed'in (sav) göğe yükselişi anılır", "not": "Recep ayının 27. gecesidir." },
+      { "id": "berat", "gun": "Berat Kandili", "tanim": "Şaban ayının 15. gecesi", "bilgi": "Şaban ayının 15. gecesidir", "not": "Ramazan ayına yaklaşık iki hafta kala gelir." },
+      { "id": "kadir", "gun": "Kadir Gecesi", "tanim": "Kur'an-ı Kerim'in indirilmeye başlandığı ve bin aydan hayırlı olan gece", "bilgi": "Kur'an'ın indirilmeye başlandığı gecedir", "not": "Ramazan ayındadır; ülkemizde Ramazan'ın 27. gecesi ihya edilir." },
+      { "id": "asure", "gun": "Aşure Günü", "tanim": "Muharrem ayının 10. günü", "bilgi": "Muharrem ayının 10. günüdür", "not": "Bu günde aşure pişirip komşulara dağıtmak güzel bir gelenektir." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-6-5-edebi-turler",
+    "unit": "dkab-6-5",
+    "difficulty": 3,
+    "questions": [
+      { "prompt": "{tanimYonelme} ne ad verilir?", "answer": "tur" },
+      { "prompt": "Dinî edebiyatta '{tur}' ne demektir?", "answer": "tanim" }
+    ],
+    "statement": { "text": "{tanimYonelme} {turKucuk} denir.", "swap": "turKucuk" },
+    "explanation": "{tanimYonelme} {turKucuk} denir.",
+    "items": [
+      { "id": "tevhid", "tur": "Tevhid", "turKucuk": "tevhid", "tanim": "Allah'ın birliğini anlatan şiir", "tanimYonelme": "Allah'ın birliğini ve yüceliğini anlatan şiirlere", "not": "Divan şairleri eserlerine genellikle bir tevhid ile başlardı." },
+      { "id": "naat", "tur": "Naat", "turKucuk": "naat", "tanim": "Hz. Muhammed'i (sav) öven şiir", "tanimYonelme": "Hz. Muhammed'i (sav) övmek için yazılan şiirlere", "not": "Fuzuli'nin Su Kasidesi, en ünlü naatlardan biridir." },
+      { "id": "munacat", "tur": "Münacat", "turKucuk": "münacat", "tanim": "Allah'a yalvarıp dua eden şiir", "tanimYonelme": "Allah'a yalvarmak ve dua etmek için yazılan şiirlere" },
+      { "id": "mevlit", "tur": "Mevlit", "turKucuk": "mevlit", "tanim": "Hz. Muhammed'in (sav) doğumunu anlatan eser", "tanimYonelme": "Hz. Muhammed'in (sav) doğumunu anlatan eserlere", "not": "En bilineni, Süleyman Çelebi'nin Vesîletü'n-Necât adlı eseridir." },
+      { "id": "ilahi", "tur": "İlahi", "turKucuk": "ilahi", "tanim": "Ezgiyle okunan dinî şiir", "tanimYonelme": "Allah sevgisini ve dinî duyguları anlatan, ezgiyle okunan şiirlere", "not": "Yunus Emre'nin pek çok şiiri bugün de ilahi olarak okunur." },
+      { "id": "hilye", "tur": "Hilye", "turKucuk": "hilye", "tanim": "Hz. Muhammed'in (sav) görünüşünü anlatan eser", "tanimYonelme": "Hz. Muhammed'in (sav) dış görünüşünü ve güzel ahlakını anlatan eserlere", "not": "Hattat Hafız Osman'ın hilye levhaları çok ünlüdür." }
+    ]
+  }
+]

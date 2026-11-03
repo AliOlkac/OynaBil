@@ -31,8 +31,9 @@ export function QuestionEditor({
   const [type, setType] = useState<QuestionType>(question?.type ?? "multiple-choice");
   const [difficulty, setDifficulty] = useState<Difficulty>(question?.difficulty ?? 2);
   const [prompt, setPrompt] = useState(question?.prompt ?? "");
-  const [choices, setChoices] = useState<string[]>(question?.type === "multiple-choice" ? [...question.choices, "", "", ""].slice(0, 4) : ["", "", "", ""]);
-  const [answerIndex, setAnswerIndex] = useState(question?.type === "multiple-choice" ? question.answer : 0);
+  const [context, setContext] = useState(question?.type === "passage" ? question.context : "");
+  const [choices, setChoices] = useState<string[]>(question && question.type !== "true-false" ? [...question.choices, "", "", ""].slice(0, 4) : ["", "", "", ""]);
+  const [answerIndex, setAnswerIndex] = useState(question && question.type !== "true-false" ? question.answer : 0);
   const [answerBool, setAnswerBool] = useState(question?.type === "true-false" ? question.answer : true);
   const [explanation, setExplanation] = useState(question?.explanation ?? "");
   const [error, setError] = useState<string | null>(null);
@@ -42,11 +43,13 @@ export function QuestionEditor({
   const save = () => {
     const id = question?.id ?? newCustomQuestionId(unit);
     let candidate: unknown;
-    if (type === "multiple-choice") {
+    if (type === "multiple-choice" || type === "passage") {
       const filled = choices.map((c, i) => ({ c: c.trim(), i })).filter((x) => x.c);
       const answer = filled.findIndex((x) => x.i === answerIndex);
       if (answer === -1) return setError("Doğru cevap olarak işaretlenen şık boş olamaz.");
+      if (type === "passage" && filled.length !== 4) return setError("Paragraf sorusunda dört şıkkın hepsi dolu olmalı.");
       candidate = { id, unit, type, difficulty, prompt: prompt.trim(), explanation: explanation.trim(), choices: filled.map((x) => x.c), answer };
+      if (type === "passage") candidate = { ...(candidate as object), context: context.trim() };
     } else {
       candidate = { id, unit, type, difficulty, prompt: prompt.trim(), explanation: explanation.trim(), answer: answerBool };
     }
@@ -58,6 +61,7 @@ export function QuestionEditor({
         prompt: "Soru metni 5 ile 220 karakter arasında olmalı.",
         explanation: "Açıklama 5 ile 320 karakter arasında olmalı. Cevaptan sonra tahtada gösterilir.",
         choices: "En az iki dolu şık gerekli.",
+        context: "Paragraf 40 ile 700 karakter arasında olmalı.",
       };
       return setError(messages[field] ?? issue.message);
     }
@@ -119,7 +123,7 @@ export function QuestionEditor({
               ))}
             </select>
           </Field>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-x-4 sm:grid-cols-[1.4fr_1fr]">
             <Field label="Soru tipi">
               <Segmented
                 label="Soru tipi"
@@ -127,6 +131,7 @@ export function QuestionEditor({
                 options={[
                   { value: "multiple-choice", label: "Çoktan seçmeli" },
                   { value: "true-false", label: "Doğru/Yanlış" },
+                  { value: "passage", label: "Paragraf" },
                 ]}
                 onChange={setType}
               />
@@ -145,7 +150,20 @@ export function QuestionEditor({
             </Field>
           </div>
 
-          <Field label={type === "true-false" ? "İfade" : "Soru"} hint={`${prompt.length}/220`}>
+          {type === "passage" && (
+            <Field label="Paragraf" hint={`${context.length}/700. LGS tarzı: kısa metin, durum ya da diyalog.`}>
+              <textarea
+                value={context}
+                onChange={(e) => setContext(e.target.value)}
+                rows={5}
+                maxLength={700}
+                placeholder="Ör. Elif, harçlığının bir kısmını her ay biriktirip mahallesindeki yaşlı komşusunun ihtiyaçları için harcıyor…"
+                className="w-full resize-none rounded-lg bg-ink-950/60 p-4 text-lg outline-none placeholder:text-ink-400 focus-visible:outline-2 focus-visible:outline-firuze"
+              />
+            </Field>
+          )}
+
+          <Field label={type === "true-false" ? "İfade" : type === "passage" ? "Soru kökü" : "Soru"} hint={`${prompt.length}/220`}>
             <textarea
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
@@ -156,7 +174,7 @@ export function QuestionEditor({
             />
           </Field>
 
-          {type === "multiple-choice" ? (
+          {type !== "true-false" ? (
             <Field label="Şıklar" hint="Doğru cevabın yanındaki daireye dokunun. Şıklar oyunda karıştırılır.">
               <div className="flex flex-col gap-2">
                 {choices.map((c, i) => (
@@ -175,9 +193,9 @@ export function QuestionEditor({
                     </button>
                     <input
                       value={c}
-                      maxLength={80}
+                      maxLength={type === "passage" ? 140 : 80}
                       onChange={(e) => setChoices((list) => list.map((x, j) => (j === i ? e.target.value : x)))}
-                      placeholder={i < 2 ? `${LETTERS[i]} şıkkı` : `${LETTERS[i]} şıkkı (isteğe bağlı)`}
+                      placeholder={i < 2 || type === "passage" ? `${LETTERS[i]} şıkkı` : `${LETTERS[i]} şıkkı (isteğe bağlı)`}
                       className="h-12 flex-1 rounded-lg bg-ink-950/60 px-4 text-lg outline-none placeholder:text-ink-400 focus-visible:outline-2 focus-visible:outline-firuze"
                     />
                   </div>

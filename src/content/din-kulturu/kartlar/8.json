@@ -1,0 +1,922 @@
+[
+  {
+    "kind": "pairs",
+    "id": "dkab-8-1-kavramlar",
+    "unit": "dkab-8-1",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanim} ne denir?", "answer": "kavram" },
+      { "prompt": "“{kavram}” kavramının anlamı hangisidir?", "answer": "anlam" }
+    ],
+    "statement": { "text": "{tanim} {ad} denir.", "swap": "ad" },
+    "explanation": "{tanim} {ad} denir.",
+    "items": [
+      {
+        "id": "kader",
+        "kavram": "Kader",
+        "ad": "kader",
+        "tanim": "Allah'ın olacak her şeyi önceden bilip belirlemesine",
+        "anlam": "Allah'ın her şeyi önceden bilip belirlemesi",
+        "not": "Kadere iman, iman esaslarından biridir."
+      },
+      {
+        "id": "kaza",
+        "kavram": "Kaza",
+        "ad": "kaza",
+        "tanim": "Kaderde belirlenen şeylerin zamanı gelince gerçekleşmesine",
+        "anlam": "Takdir edilenin zamanı gelince gerçekleşmesi",
+        "not": "Kader Allah'ın takdiri, kaza ise bu takdirin zamanı gelince gerçekleşmesidir."
+      },
+      {
+        "id": "ecel",
+        "kavram": "Ecel",
+        "ad": "ecel",
+        "tanim": "Allah'ın takdir ettiği ömrün sona erme vaktine",
+        "anlam": "Ömrün sona erme vakti",
+        "not": "Ecelin ne zaman geleceğini yalnızca Allah bilir."
+      },
+      {
+        "id": "omur",
+        "kavram": "Ömür",
+        "ad": "ömür",
+        "tanim": "Bir canlının doğumundan ölümüne kadar geçen süreye",
+        "anlam": "Doğumdan ölüme kadar geçen süre",
+        "not": "İnsan, ömrünü sağlığını koruyarak ve faydalı işlerle değerlendirmekle sorumludur."
+      },
+      {
+        "id": "sunnetullah",
+        "kavram": "Sünnetullah",
+        "ad": "sünnetullah",
+        "tanim": "Allah'ın evrene koyduğu ve değişmeden işleyen yasalara",
+        "anlam": "Allah'ın evrene koyduğu değişmez yasalar",
+        "not": "Fiziki, biyolojik, toplumsal ve ahlaki yasalar buna örnektir."
+      },
+      {
+        "id": "rizik",
+        "kavram": "Rızık",
+        "ad": "rızık",
+        "tanim": "Allah'ın canlılara verdiği ve onların yararlandığı her türlü nimete",
+        "anlam": "Canlıların yararlandığı her türlü nimet",
+        "not": "Sağlık ve bilgi de rızıktır; insan rızkını helal yoldan çalışarak kazanmalıdır."
+      },
+      {
+        "id": "tevekkul",
+        "kavram": "Tevekkül",
+        "ad": "tevekkül",
+        "tanim": "Gereken bütün çabayı gösterdikten sonra sonucu Allah'a bırakmaya",
+        "anlam": "Çalışıp sonucu Allah'a bırakmak",
+        "not": "Hz. Muhammed (sav), “Deveni bağla, sonra tevekkül et.” buyurmuştur."
+      },
+      {
+        "id": "irade",
+        "kavram": "İrade",
+        "ad": "irade",
+        "tanim": "İnsanın yapacağı işleri seçme ve bunlara karar verme gücüne",
+        "anlam": "Seçme ve karar verme gücü",
+        "not": "İnsan, iradesiyle yaptığı davranışlardan sorumludur."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-8-1-evrendeki-yasalar",
+    "unit": "dkab-8-1",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{ornek} evrendeki hangi yasalara örnektir?", "answer": "tur" },
+      { "prompt": "Aşağıdakilerden hangisi evrendeki {turA} bir örnektir?", "answer": "ornek" }
+    ],
+    "statement": { "text": "{ornek}, {turA} örnektir.", "swap": "turA" },
+    "explanation": "{ornek}, {turA} örnektir.",
+    "items": [
+      {
+        "id": "fiziki",
+        "ornek": "Mıknatısın demiri çekmesi",
+        "tur": "Fiziki yasalar",
+        "turA": "fiziki yasalara",
+        "not": "Fiziki yasalar maddenin, hareketin ve gök cisimlerinin düzenini belirler."
+      },
+      {
+        "id": "biyolojik",
+        "ornek": "Tohumun uygun ortamda filizlenmesi",
+        "tur": "Biyolojik yasalar",
+        "turA": "biyolojik yasalara",
+        "not": "Biyolojik yasalar canlıların doğmasını, büyümesini ve yaşamını düzenler."
+      },
+      {
+        "id": "toplumsal",
+        "ornek": "Birlik içindeki toplumların güçlenmesi",
+        "tur": "Toplumsal yasalar",
+        "turA": "toplumsal yasalara",
+        "not": "Toplumsal yasalar toplumların yükselişini ve çöküşünü belirleyen kurallardır."
+      },
+      {
+        "id": "ahlaki",
+        "ornek": "Doğruluğun iyi, yalanın kötü olması",
+        "tur": "Ahlaki yasalar",
+        "turA": "ahlaki yasalara",
+        "not": "Ahlaki yasalar iyi ve kötü davranışları ve bunların sonuçlarını belirler."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-8-1-fiziki-yasalar",
+    "unit": "dkab-8-1",
+    "difficulty": 2,
+    "positive": "Aşağıdaki olaylardan hangisi fiziki bir yasaya göre gerçekleşir?",
+    "negative": "Aşağıdaki olaylardan hangisi fiziki bir yasaya örnek değildir?",
+    "statement": "{item}, fiziki bir yasaya örnektir.",
+    "explanation": "Fiziki yasalar maddenin, hareketin ve gök cisimlerinin düzenini belirler. Canlılarla ilgili olaylar biyolojik, toplumla ilgili olanlar toplumsal, iyilik ve kötülükle ilgili olanlar ahlaki yasalara örnektir.",
+    "members": [
+      "Dünya'nın kendi ekseni etrafında dönmesi",
+      "Elden bırakılan cismin yere düşmesi",
+      "Isınan metallerin genleşmesi",
+      "Suyun belirli bir sıcaklıkta donması",
+      "Ay'ın Dünya etrafında dönmesi"
+    ],
+    "nonMembers": [
+      "Tohumun toprakta filizlenmesi",
+      "Canlıların büyüyüp yaşlanması",
+      "Yavruların anne babasına benzemesi",
+      "Adaletli toplumların güçlenmesi",
+      "İyiliğin her zaman güzel olması"
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-8-1-tevekkul",
+    "unit": "dkab-8-1",
+    "difficulty": 2,
+    "positive": "Aşağıdaki davranışlardan hangisi doğru bir tevekkül anlayışına uygundur?",
+    "negative": "Aşağıdaki davranışlardan hangisi doğru bir tevekkül anlayışına uygun değildir?",
+    "statement": "{item}, doğru bir tevekkül anlayışına uygundur.",
+    "explanation": "Tevekkül, önce gereken çabayı gösterip tedbir almak, sonra sonucu Allah'a bırakmaktır. Çaba göstermeden sonuç beklemek ya da hatayı kadere yüklemek tevekkül değildir.",
+    "members": [
+      "Sınava çalışıp sonucu Allah'a bırakmak",
+      "Hastalanınca doktora gidip tedaviye uymak",
+      "Yola çıkmadan aracın bakımını yaptırmak",
+      "Tarlasını ekip sonra bereket için dua etmek",
+      "Depreme karşı evini sağlam yaptırmak"
+    ],
+    "nonMembers": [
+      "Hiç çalışmadan sınavı geçmeyi beklemek",
+      "Tedavi olmadan hastalığın geçmesini beklemek",
+      "Hatasını “Kaderimde varmış” diye geçiştirmek",
+      "Tedbir almadan tehlikeli işlere girişmek",
+      "Ders çalışmayıp yalnızca dua etmek"
+    ]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-8-2-kavramlar",
+    "unit": "dkab-8-2",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanim} ne denir?", "answer": "kavram" },
+      { "prompt": "“{kavram}” kavramının anlamı hangisidir?", "answer": "anlam" }
+    ],
+    "statement": { "text": "{tanim} {ad} denir.", "swap": "ad" },
+    "explanation": "{tanim} {ad} denir.",
+    "items": [
+      {
+        "id": "nisap",
+        "kavram": "Nisap",
+        "ad": "nisap",
+        "tanim": "Dinen zengin sayılmak için sahip olunması gereken en az mal miktarına",
+        "anlam": "Zenginliğin en az ölçüsü",
+        "not": "Hanefi mezhebine göre altında nisap 80,18 gramdır."
+      },
+      {
+        "id": "osur",
+        "kavram": "Öşür",
+        "ad": "öşür",
+        "tanim": "Tarım ürünlerinden hasat zamanı verilen zekâta",
+        "anlam": "Toprak ürünlerinin zekâtı",
+        "not": "Hanefi mezhebine göre yağmurla sulanan üründen onda bir, masraflı sulanandan yirmide bir verilir."
+      },
+      {
+        "id": "fitre",
+        "kavram": "Fitre",
+        "ad": "fitre",
+        "tanim": "Ramazan ayında ihtiyaç sahiplerine verilen ve bayram sevincini paylaştıran sadakaya",
+        "anlam": "Ramazan ayında verilen vacip sadaka",
+        "not": "Sadaka-i fıtr da denir; Hanefi mezhebine göre vaciptir."
+      },
+      {
+        "id": "sadaka-i-cariye",
+        "kavram": "Sadaka-i câriye",
+        "ad": "sadaka-i câriye",
+        "tanim": "Kişi öldükten sonra da faydası ve sevabı süren kalıcı hayırlara",
+        "anlam": "Sevabı sürekli devam eden hayır",
+        "not": "Okul, çeşme, kütüphane ve köprü yaptırmak buna örnektir."
+      },
+      {
+        "id": "ibnus-sebil",
+        "kavram": "İbnü's-sebîl",
+        "ad": "ibnü's-sebîl",
+        "tanim": "Memleketinde zengin olsa bile yolculukta parasız kalan kişiye",
+        "anlam": "Yolda kalmış yolcu",
+        "not": "Tevbe suresinde zekât verilebilecekler arasında sayılır."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-8-2-zekat-sartlari",
+    "unit": "dkab-8-2",
+    "difficulty": 2,
+    "positive": "Hanefi mezhebine göre aşağıdakilerden hangisi zekâtla yükümlü olmanın şartlarından biridir?",
+    "negative": "Hanefi mezhebine göre aşağıdakilerden hangisi zekâtla yükümlü olmanın şartlarından biri değildir?",
+    "statement": "{item}, Hanefi mezhebine göre zekâtla yükümlü olmanın şartlarındandır.",
+    "explanation": "Hanefi mezhebine göre zekâtla yükümlü olmak için Müslüman, akıllı ve ergenlik çağına girmiş olmak; borç ve temel ihtiyaçlar dışında nisap miktarı mala sahip olmak ve bu malın üzerinden bir yıl geçmesi gerekir.",
+    "members": [
+      "Müslüman olmak",
+      "Akıllı olmak",
+      "Ergenlik çağına girmiş olmak",
+      "Nisap miktarı mala sahip olmak",
+      "Malın üzerinden bir yıl geçmesi"
+    ],
+    "nonMembers": [
+      "Evli olmak",
+      "Erkek olmak",
+      "Hacca gitmiş olmak",
+      "Kırk yaşını doldurmuş olmak",
+      "Düzenli bir işte çalışıyor olmak"
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-8-2-zekat-verilenler",
+    "unit": "dkab-8-2",
+    "difficulty": 3,
+    "positive": "Hanefi mezhebine göre kişi, zekâtını aşağıdakilerden hangisine verebilir?",
+    "negative": "Hanefi mezhebine göre kişi, zekâtını aşağıdakilerden hangisine veremez?",
+    "statement": "{item} zekât vermek, Hanefi mezhebine göre caizdir.",
+    "explanation": "Hanefi mezhebine göre kişi zekâtını anne babasına, dede ve ninesine, çocuk ve torunlarına ve eşine veremez. İhtiyaç sahibi kardeş, amca, dayı ve teyze gibi yakınlara ve diğer muhtaçlara verebilir.",
+    "members": [
+      "İhtiyaç sahibi kardeşine",
+      "Borcunu ödeyemeyen komşusuna",
+      "Yolda kalmış bir yolcuya",
+      "Muhtaç durumdaki amcasına",
+      "Geçim sıkıntısı çeken teyzesine"
+    ],
+    "nonMembers": [
+      "Annesine",
+      "Babasına",
+      "Dedesine",
+      "Ninesine",
+      "Kendi çocuğuna",
+      "Torununa"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-8-2-zekat-oranlari",
+    "unit": "dkab-8-2",
+    "difficulty": 3,
+    "questions": [
+      { "prompt": "Hanefi mezhebine göre {malin} zekâtı hangi oranda verilir?", "answer": "oran" },
+      { "prompt": "Hanefi mezhebine göre zekâtı {oranK} oranında verilen hangisidir?", "answer": "mal" }
+    ],
+    "statement": { "text": "Hanefi mezhebine göre {malin} zekâtı {oranK} oranında verilir.", "swap": "oranK" },
+    "explanation": "Hanefi mezhebine göre {malin} zekâtı {oranK} oranında verilir.",
+    "items": [
+      {
+        "id": "para",
+        "mal": "Para, altın ve ticaret malı",
+        "malin": "para, altın ve ticaret mallarının",
+        "oran": "Kırkta bir",
+        "oranK": "kırkta bir",
+        "not": "Bu oran yüzde 2,5'e eşittir."
+      },
+      {
+        "id": "yagmur",
+        "mal": "Yağmurla sulanan toprak ürünü",
+        "malin": "yağmurla sulanan toprak ürünlerinin",
+        "oran": "Onda bir",
+        "oranK": "onda bir",
+        "not": "Toprak ürünlerinden verilen zekâta öşür denir."
+      },
+      {
+        "id": "masrafli",
+        "mal": "Masraflı sulanan toprak ürünü",
+        "malin": "masraflı sulanan toprak ürünlerinin",
+        "oran": "Yirmide bir",
+        "oranK": "yirmide bir",
+        "not": "Sulama emek ve masraf gerektirdiği için oran onda birden yirmide bire iner."
+      }
+    ],
+    "distractors": {
+      "oran": ["Beşte bir", "Yüzde bir"],
+      "mal": ["Kişinin oturduğu ev", "Günlük kullanılan eşyalar"]
+    }
+  },
+  {
+    "kind": "list",
+    "id": "dkab-8-2-sadaka-i-cariye",
+    "unit": "dkab-8-2",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi sadaka-i câriyeye örnektir?",
+    "negative": "Aşağıdakilerden hangisi sadaka-i câriyeye örnek değildir?",
+    "statement": "{item}, sadaka-i câriyeye örnektir.",
+    "explanation": "Sadaka-i câriye, faydası ve sevabı uzun süre devam eden hayırdır. Okul, çeşme, köprü, hastane ve kütüphane yaptırmak buna örnektir. Faydası bir defalık olan iyilikler de sadakadır ama câriye değildir.",
+    "members": [
+      "Okul yaptırmak",
+      "Çeşme yaptırmak",
+      "Köprü yaptırmak",
+      "Hastane yaptırmak",
+      "Kütüphane kurmak"
+    ],
+    "nonMembers": [
+      "Bir yoksula yemek ısmarlamak",
+      "Fitre vermek",
+      "Hasta bir komşuyu ziyaret etmek",
+      "Birine gülümsemek",
+      "Yaşlı birinin çantasını taşımak"
+    ]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-8-3-temel-degerler",
+    "unit": "dkab-8-3",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{ornek}, dinin korumayı amaçladığı temel değerlerden öncelikle hangisiyle ilgilidir?", "answer": "deger" },
+      { "prompt": "Aşağıdakilerden hangisi {degerK} emniyetini korumaya yönelik bir kuraldır?", "answer": "ornek" }
+    ],
+    "statement": { "text": "{ornek}, {degerK} emniyetini korumaya yöneliktir.", "swap": "degerK" },
+    "explanation": "{ornek}, {degerK} emniyetini korumaya yöneliktir.",
+    "items": [
+      {
+        "id": "can",
+        "ornek": "Haksız yere cana kıymanın yasaklanması",
+        "deger": "Can emniyeti",
+        "degerK": "can",
+        "not": "İslam'a göre insanın kendi canı da Allah'ın bir emanetidir."
+      },
+      {
+        "id": "akil",
+        "ornek": "Sarhoş eden içkilerin yasaklanması",
+        "deger": "Akıl emniyeti",
+        "degerK": "akıl",
+        "not": "Aklı bozan her şeyden uzak durmak bu değerin gereğidir."
+      },
+      {
+        "id": "nesil",
+        "ornek": "Evlenip aile kurmanın teşvik edilmesi",
+        "deger": "Nesil emniyeti",
+        "degerK": "nesil",
+        "not": "Nesil emniyeti, ailenin ve çocukların korunmasını amaçlar."
+      },
+      {
+        "id": "mal",
+        "ornek": "Hırsızlığın yasaklanması",
+        "deger": "Mal emniyeti",
+        "degerK": "mal",
+        "not": "Kamu malına zarar vermemek de bu değerin gereğidir."
+      },
+      {
+        "id": "din",
+        "ornek": "Dinde zorlamanın olmaması",
+        "deger": "Din emniyeti",
+        "degerK": "din",
+        "not": "Kur'an'da “Dinde zorlama yoktur.” buyrulur."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-8-3-degerler-gunluk-hayat",
+    "unit": "dkab-8-3",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{ornek}, dinin korumayı amaçladığı temel değerlerden en çok hangisiyle ilgilidir?", "answer": "deger" },
+      { "prompt": "Aşağıdaki davranışlardan hangisi öncelikle {degerK} emniyetiyle ilgilidir?", "answer": "ornek" }
+    ],
+    "statement": { "text": "{ornek}, öncelikle {degerK} emniyetiyle ilgilidir.", "swap": "degerK" },
+    "explanation": "{ornek}, öncelikle {degerK} emniyetiyle ilgilidir.",
+    "items": [
+      {
+        "id": "can",
+        "ornek": "Arabada emniyet kemeri takmak",
+        "deger": "Can emniyeti",
+        "degerK": "can",
+        "not": "Sağlığı korumak ve kendini tehlikeye atmamak da can emniyetinin gereğidir."
+      },
+      {
+        "id": "akil",
+        "ornek": "Aklı bozan maddelerden uzak durmak",
+        "deger": "Akıl emniyeti",
+        "degerK": "akıl",
+        "not": "İslam, sarhoşluk veren ve bağımlılık yapan maddeleri yasaklamıştır."
+      },
+      {
+        "id": "nesil",
+        "ornek": "Çocukları sevgiyle yetiştirmek",
+        "deger": "Nesil emniyeti",
+        "degerK": "nesil",
+        "not": "Huzurlu bir aile, sağlıklı nesillerin yetişmesini sağlar."
+      },
+      {
+        "id": "mal",
+        "ornek": "Bulduğu cüzdanı sahibine ulaştırmak",
+        "deger": "Mal emniyeti",
+        "degerK": "mal",
+        "not": "Başkasının malına el uzatmamak ve kul hakkı yememek bu değerin gereğidir."
+      },
+      {
+        "id": "din",
+        "ornek": "Başkalarının ibadetine saygı duymak",
+        "deger": "Din emniyeti",
+        "degerK": "din",
+        "not": "Din emniyeti, herkesin inancını özgürce yaşayabilmesini kapsar."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-8-3-din-ve-kultur",
+    "unit": "dkab-8-3",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi dinin kültürümüze etkisine bir örnektir?",
+    "negative": "Aşağıdakilerden hangisi dinin kültürümüze etkisine bir örnek değildir?",
+    "statement": "{item}, dinin kültürümüze etkisine bir örnektir.",
+    "explanation": "Din; dili, sanatı, mimariyi ve gelenekleri etkileyerek kültürü şekillendirir. Dinî ifadeler, bayramlaşma, cami mimarisi ve hat sanatı bu etkinin örnekleridir. Ulusal bayramlar, spor ve teknoloji dinî kaynaklı değildir.",
+    "members": [
+      "Yemeğe “Bismillah” diyerek başlamak",
+      "Ramazan Bayramı'nda bayramlaşmak",
+      "Camilerde kubbe ve minare yapılması",
+      "Hat sanatıyla ayet ve hadislerin yazılması",
+      "Selamlaşırken “Selamün aleyküm” demek"
+    ],
+    "nonMembers": [
+      "Cumhuriyet Bayramı'nı kutlamak",
+      "Ulusal Egemenlik ve Çocuk Bayramı'nı kutlamak",
+      "Futbol maçı izlemek",
+      "Satranç oynamak",
+      "Akıllı telefon kullanmak"
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-8-3-hz-yusuf",
+    "unit": "dkab-8-3",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi Hz. Yusuf'un hayatında yaşanan olaylardan biridir?",
+    "negative": "Aşağıdakilerden hangisi Hz. Yusuf'un hayatında yaşanan olaylardan biri değildir?",
+    "statement": "{item}, Hz. Yusuf'un hayatında yaşanan olaylardandır.",
+    "explanation": "Hz. Yusuf'un kıssası Yusuf suresinde anlatılır. Kardeşleri onu kuyuya atmış, Mısır'da haksız yere zindana atılmış, hükümdarın rüyasını yorumlamış, hazinelerden sorumlu olmuş ve kardeşlerini affetmiştir.",
+    "members": [
+      "Kardeşlerinin onu kuyuya atması",
+      "Haksız yere zindana atılması",
+      "Hükümdarın rüyasını yorumlaması",
+      "Mısır'ın hazinelerinden sorumlu olması",
+      "Kardeşlerini affetmesi"
+    ],
+    "nonMembers": [
+      "Tufandan önce gemi yapması",
+      "Ateşe atılıp kurtulması",
+      "Balığın karnında kalması",
+      "Asasını vurunca denizin yarılması",
+      "Medyen halkını uyarması"
+    ]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-8-4-ornek-davranislar",
+    "unit": "dkab-8-4",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Hz. Muhammed'in (sav) {olayK}, onun hangi özelliğini gösterir?", "answer": "ozellik" },
+      { "prompt": "Aşağıdakilerden hangisi Hz. Muhammed'in (sav) {ozellikA} örnektir?", "answer": "olay" }
+    ],
+    "statement": { "text": "Hz. Muhammed'in (sav) {olayK}, onun {ozellikA} örnektir.", "swap": "ozellikA" },
+    "explanation": "Hz. Muhammed'in (sav) {olayK}, onun {ozellikA} örnektir.",
+    "items": [
+      {
+        "id": "guvenilirlik",
+        "olay": "Mekkeliler arasında “el-Emîn” diye anılması",
+        "olayK": "Mekkeliler arasında “el-Emîn” diye anılması",
+        "ozellik": "Güvenilirlik",
+        "ozellikA": "güvenilirliğine",
+        "not": "Doğruluğu nedeniyle peygamberlikten önce de “güvenilir kişi” anlamında el-Emîn denirdi."
+      },
+      {
+        "id": "istisare",
+        "olay": "Hendek Savaşı öncesinde ashabına danışması",
+        "olayK": "Hendek Savaşı öncesinde ashabına danışması",
+        "ozellik": "İstişareye önem verme",
+        "ozellikA": "istişareye verdiği öneme",
+        "not": "Selman-ı Fârisî'nin hendek kazma önerisini kabul ederek isabetli görüşe uymuştur."
+      },
+      {
+        "id": "sefkat",
+        "olay": "Kuş yavrularını yuvalarına geri bıraktırması",
+        "olayK": "kuş yavrularını yuvalarına geri bıraktırması",
+        "ozellik": "Hayvanlara şefkat",
+        "ozellikA": "hayvanlara şefkatine",
+        "not": "Yavruları alınan anne kuşun çırpındığını görünce yavruların geri verilmesini istemiştir."
+      },
+      {
+        "id": "comertlik",
+        "olay": "Kendisinden bir şey isteyeni geri çevirmemesi",
+        "olayK": "kendisinden bir şey isteyeni geri çevirmemesi",
+        "ozellik": "Cömertlik",
+        "ozellikA": "cömertliğine",
+        "not": "Sahabeler, ondan bir şey istendiğinde “hayır” dediğini hiç duymadıklarını anlatır."
+      },
+      {
+        "id": "adalet",
+        "olay": "Suç işleyen soylu bir kadına ayrıcalık tanımaması",
+        "olayK": "suç işleyen soylu bir kadına ayrıcalık tanımaması",
+        "ozellik": "Adalet",
+        "ozellikA": "adaletine",
+        "not": "Kurallar karşısında soylu ile sıradan insanın eşit olduğunu öğretmiştir."
+      },
+      {
+        "id": "sabir",
+        "olay": "Mekke'deki boykotun sıkıntılarına katlanması",
+        "olayK": "Mekke'deki boykotun sıkıntılarına katlanması",
+        "ozellik": "Sabır",
+        "ozellikA": "sabrına",
+        "not": "Üç yıl süren boykotta Müslümanlarla ilişki kesilmiş, yiyecek bulmak bile zorlaşmıştı."
+      },
+      {
+        "id": "caliskanlik",
+        "olay": "Mescid-i Nebevi yapılırken kerpiç taşıması",
+        "olayK": "Mescid-i Nebevi yapılırken kerpiç taşıması",
+        "ozellik": "Çalışkanlık",
+        "ozellikA": "çalışkanlığına",
+        "not": "Toplumun önderi olduğu hâlde işlere bizzat katılarak örnek olmuştur."
+      },
+      {
+        "id": "affedicilik",
+        "olay": "Mekke'nin fethinde eski düşmanlarını bağışlaması",
+        "olayK": "Mekke'nin fethinde eski düşmanlarını bağışlaması",
+        "ozellik": "Affedicilik",
+        "ozellikA": "affediciliğine",
+        "not": "Yıllarca kendisine eziyet edenlere genel af ilan ederek intikam yerine bağışlamayı seçmiştir."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-8-4-hadisler",
+    "unit": "dkab-8-4",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Hz. Muhammed'in (sav) “{hadis}” sözü en çok hangi konuyu vurgular?", "answer": "konu" },
+      { "prompt": "Hz. Muhammed'in (sav) aşağıdaki sözlerinden hangisi {konuA} vurgular?", "answer": "hadis" }
+    ],
+    "statement": { "text": "Hz. Muhammed'in (sav) “{hadis}” sözü {konuA} vurgular.", "swap": "konuA" },
+    "explanation": "Hz. Muhammed (sav), “{hadis}.” buyurarak {konuA} vurgulamıştır.",
+    "items": [
+      {
+        "id": "aile",
+        "hadis": "Sizin en hayırlınız, ailesine karşı en hayırlı olanınızdır",
+        "konu": "Aileye iyi davranmak",
+        "konuA": "aileye iyi davranmayı",
+        "not": "Kendisi de evinde ailesine yardım ederdi."
+      },
+      {
+        "id": "temizlik",
+        "hadis": "Temizlik imanın yarısıdır",
+        "konu": "Temizlik",
+        "konuA": "temizliği",
+        "not": "Temizlik; bedenin, giysilerin ve çevrenin temiz tutulmasını kapsar."
+      },
+      {
+        "id": "merhamet",
+        "hadis": "Merhamet etmeyene merhamet edilmez",
+        "konu": "Merhamet",
+        "konuA": "merhameti",
+        "not": "Bu sözü, çocuklarını hiç öpmediğini söyleyen birine söylemiştir."
+      },
+      {
+        "id": "niyet",
+        "hadis": "Ameller niyetlere göredir",
+        "konu": "Niyetin önemi",
+        "konuA": "niyetin önemini",
+        "not": "Bir işin değeri, onu yaparken taşınan niyete göre belirlenir."
+      },
+      {
+        "id": "kolaylik",
+        "hadis": "Kolaylaştırınız, zorlaştırmayınız; müjdeleyiniz, nefret ettirmeyiniz",
+        "konu": "Kolaylaştırıcı olmak",
+        "konuA": "kolaylaştırıcı olmayı",
+        "not": "Dinin kolaylık olduğunu da bildirmiştir."
+      },
+      {
+        "id": "emek",
+        "hadis": "Hiç kimse elinin emeğinden daha hayırlı bir lokma yememiştir",
+        "konu": "Emeğiyle kazanmak",
+        "konuA": "emeğiyle kazanmayı",
+        "not": "Aynı sözde Hz. Davud'un da elinin emeğiyle geçindiğini bildirmiştir."
+      },
+      {
+        "id": "zarar",
+        "hadis": "Müslüman, elinden ve dilinden Müslümanların emin olduğu kimsedir",
+        "konu": "Başkalarına zarar vermemek",
+        "konuA": "başkalarına zarar vermemeyi",
+        "not": "Sözüyle ya da davranışıyla kimseyi incitmemek gerekir."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-8-4-gunluk-hayat",
+    "unit": "dkab-8-4",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi Hz. Muhammed'in (sav) günlük hayatındaki davranışlarından biridir?",
+    "negative": "Aşağıdakilerden hangisi Hz. Muhammed'in (sav) günlük hayatındaki davranışlarından biri değildir?",
+    "statement": "{item}, Hz. Muhammed'in (sav) günlük hayatındaki davranışlarındandır.",
+    "explanation": "Hz. Muhammed (sav) evde ailesine yardım eder, çocuklara selam verir, hastaları ziyaret eder, yemeği kötülemez ve kendisine hizmet edeni azarlamazdı. Sade ve alçak gönüllü bir hayat yaşardı.",
+    "members": [
+      "Evde ailesine yardım etmek",
+      "Çocuklara selam vermek",
+      "Hastaları ziyaret etmek",
+      "Beğenmediği yemeği kötülememek",
+      "Kendisine hizmet edeni azarlamamak"
+    ],
+    "nonMembers": [
+      "Yemeklerin kusurunu söylemek",
+      "Ev işlerini tümüyle başkalarına bırakmak",
+      "Kendine gösterişli bir saray yaptırmak",
+      "Ashabının görüşlerini önemsememek",
+      "Çocuklarla ilgilenmeyi gereksiz görmek"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-8-4-roller",
+    "unit": "dkab-8-4",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Hz. Muhammed'in (sav) {ornekK}, onun hangi rolüne örnektir?", "answer": "rol" },
+      { "prompt": "Aşağıdakilerden hangisi Hz. Muhammed'in (sav) {rolA} örnektir?", "answer": "ornek" }
+    ],
+    "statement": { "text": "Hz. Muhammed'in (sav) {ornekK}, onun {rolA} örnektir.", "swap": "rolA" },
+    "explanation": "Hz. Muhammed'in (sav) {ornekK}, onun {rolA} örnektir.",
+    "items": [
+      {
+        "id": "ogretmen",
+        "ornek": "Suffe'de ashabına din öğretmesi",
+        "ornekK": "Suffe'de ashabına din öğretmesi",
+        "rol": "Öğretmenlik",
+        "rolA": "öğretmenliğine",
+        "not": "Suffe, Mescid-i Nebevi'nin yanında eğitim yapılan bir bölümdü."
+      },
+      {
+        "id": "devlet-baskani",
+        "ornek": "Medine Sözleşmesi'ni hazırlatması",
+        "ornekK": "Medine Sözleşmesi'ni hazırlatması",
+        "rol": "Devlet başkanlığı",
+        "rolA": "devlet başkanlığına",
+        "not": "Bu sözleşme, Medine'deki farklı toplulukların bir arada yaşama kurallarını belirlemiştir."
+      },
+      {
+        "id": "komutan",
+        "ornek": "Uhud'da okçuları bir tepeye yerleştirmesi",
+        "ornekK": "Uhud Savaşı'nda okçuları bir tepeye yerleştirmesi",
+        "rol": "Komutanlık",
+        "rolA": "komutanlığına",
+        "not": "Okçulara, ne olursa olsun yerlerini bırakmamalarını emretmişti."
+      },
+      {
+        "id": "tuccar",
+        "ornek": "Gençliğinde ticaret kervanıyla Şam'a gitmesi",
+        "ornekK": "gençliğinde ticaret kervanıyla Şam'a gitmesi",
+        "rol": "Tüccarlık",
+        "rolA": "tüccarlığına",
+        "not": "Hz. Hatice'nin ticaret kervanını Şam'a götürmüş, ticarette dürüstlüğüyle tanınmıştı."
+      },
+      {
+        "id": "baba",
+        "ornek": "Kızı Hz. Fatıma'yı ayağa kalkarak karşılaması",
+        "ornekK": "kızı Hz. Fatıma'yı ayağa kalkarak karşılaması",
+        "rol": "Babalık",
+        "rolA": "babalığına",
+        "not": "Hz. Fatıma geldiğinde onu sevgiyle karşılar, kendi yerine oturturdu."
+      }
+    ]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-8-5-kavramlar",
+    "unit": "dkab-8-5",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{tanim} ne denir?", "answer": "kavram" },
+      { "prompt": "“{kavram}” kavramının anlamı hangisidir?", "answer": "anlam" }
+    ],
+    "statement": { "text": "{tanim} {ad} denir.", "swap": "ad" },
+    "explanation": "{tanim} {ad} denir.",
+    "items": [
+      {
+        "id": "vahiy",
+        "kavram": "Vahiy",
+        "ad": "vahiy",
+        "tanim": "Allah'ın bildirmek istediklerini peygamberlerine özel bir yolla iletmesine",
+        "anlam": "Allah'ın peygamberlerine bilgi iletmesi",
+        "not": "İlk vahiy, Hira mağarasında Cebrail aracılığıyla gelmiştir."
+      },
+      {
+        "id": "ayet",
+        "kavram": "Ayet",
+        "ad": "ayet",
+        "tanim": "Surelerin içinde yer alan ve başı sonu belli olan bölümlerden her birine",
+        "anlam": "Surelerdeki her bir bölüm",
+        "not": "Ayet kelimesi “işaret, delil” anlamına da gelir."
+      },
+      {
+        "id": "sure",
+        "kavram": "Sure",
+        "ad": "sure",
+        "tanim": "Kendine özgü bir adı olan ve ayetlerden oluşan Kur'an bölümüne",
+        "anlam": "Adı olan, ayetlerden oluşan bölüm",
+        "not": "Kur'an'da 114 sure vardır; ilki Fâtiha, sonuncusu Nâs suresidir."
+      },
+      {
+        "id": "cuz",
+        "kavram": "Cüz",
+        "ad": "cüz",
+        "tanim": "Kur'an'ın yaklaşık yirmi sayfalık otuz bölümünden her birine",
+        "anlam": "Yaklaşık yirmi sayfalık bölüm",
+        "not": "Kur'an-ı Kerim otuz cüzden oluşur."
+      },
+      {
+        "id": "hatim",
+        "kavram": "Hatim",
+        "ad": "hatim",
+        "tanim": "Kur'an-ı Kerim'i baştan sona okuyup bitirmeye",
+        "anlam": "Kur'an'ı baştan sona okumak",
+        "not": "Ramazan ayında mukabele ile hatim yapmak yaygın bir gelenektir."
+      },
+      {
+        "id": "mushaf",
+        "kavram": "Mushaf",
+        "ad": "mushaf",
+        "tanim": "Kur'an'ın iki kapak arasında kitap hâlinde toplanmış şekline",
+        "anlam": "Kitap hâlindeki Kur'an",
+        "not": "Kur'an ilk kez Hz. Ebû Bekir döneminde mushaf hâline getirilmiştir."
+      },
+      {
+        "id": "hafiz",
+        "kavram": "Hafız",
+        "ad": "hafız",
+        "tanim": "Kur'an-ı Kerim'in tamamını ezberleyen kişiye",
+        "anlam": "Kur'an'ı ezbere bilen kişi",
+        "not": "Kur'an, yazılmanın yanında ezberlenerek de korunmuştur."
+      },
+      {
+        "id": "mukabele",
+        "kavram": "Mukabele",
+        "ad": "mukabele",
+        "tanim": "Bir kişinin okuduğu Kur'an'ı diğerlerinin ellerindeki mushaftan takip etmesine",
+        "anlam": "Okunan Kur'an'ı takip ederek dinlemek",
+        "not": "Özellikle Ramazan ayında camilerde mukabele okunur."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-8-5-anlatim-yollari",
+    "unit": "dkab-8-5",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{ornek} Kur'an'ın hangi anlatım yoluna örnektir?", "answer": "uslup" },
+      { "prompt": "Aşağıdakilerden hangisi Kur'an'da {uslupY} anlatıma örnektir?", "answer": "ornek" }
+    ],
+    "statement": { "text": "{ornek}, Kur'an'da {uslupY} anlatıma örnektir.", "swap": "uslupY" },
+    "explanation": "{ornek}, Kur'an'da {uslupY} anlatıma örnektir.",
+    "items": [
+      {
+        "id": "temsil",
+        "ornek": "Güzel sözün köklü bir ağaca benzetilmesi",
+        "uslup": "Temsil (benzetme)",
+        "uslupY": "temsil (benzetme) yoluyla",
+        "not": "Bu benzetme İbrahim suresinde geçer. Temsil, soyut bir konuyu somut bir örnekle açıklamaktır."
+      },
+      {
+        "id": "yemin",
+        "ornek": "Asr suresinin zamana ant içilerek başlaması",
+        "uslup": "Yemin",
+        "uslupY": "yemin yoluyla",
+        "not": "Yemin, anlatılan konunun önemine dikkat çeker."
+      },
+      {
+        "id": "kissa",
+        "ornek": "Hz. Yusuf'un hayatının anlatılması",
+        "uslup": "Kıssa",
+        "uslupY": "kıssa yoluyla",
+        "not": "Bu kıssa Yusuf suresinde yer alır. Kıssalardan ders ve ibret alınır."
+      },
+      {
+        "id": "dua",
+        "ornek": "Fâtiha'da doğru yola iletilmenin istenmesi",
+        "uslup": "Dua",
+        "uslupY": "dua yoluyla",
+        "not": "Kur'an, Allah'a nasıl dua edileceğini de öğretir."
+      },
+      {
+        "id": "ogut",
+        "ornek": "Anne babaya “öf” bile denmemesinin istenmesi",
+        "uslup": "Öğüt (nasihat)",
+        "uslupY": "öğüt yoluyla",
+        "not": "İsra suresinde anne babaya güzel söz söylenmesi öğütlenir."
+      },
+      {
+        "id": "soru-cevap",
+        "ornek": "“Sana soruyorlar…” sorularının cevaplanması",
+        "uslup": "Soru-cevap",
+        "uslupY": "soru-cevap yoluyla",
+        "not": "Sorulan konular “De ki…” diye başlayan ayetlerle cevaplanır."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-8-5-korunma",
+    "unit": "dkab-8-5",
+    "difficulty": 3,
+    "questions": [
+      { "prompt": "{is} hangi dönemde gerçekleşmiştir?", "answer": "donem" },
+      { "prompt": "{donemDe} Kur'an'ın korunması için hangisi yapılmıştır?", "answer": "isK" }
+    ],
+    "statement": { "text": "{is}, {donemDe} gerçekleşmiştir.", "swap": "donemDe" },
+    "explanation": "{is}, {donemDe} gerçekleşmiştir.",
+    "items": [
+      {
+        "id": "peygamber",
+        "is": "Ayetlerin vahiy kâtiplerine yazdırılması",
+        "isK": "Ayetler vahiy kâtiplerine yazdırıldı",
+        "donem": "Hz. Muhammed (sav) dönemi",
+        "donemDe": "Hz. Muhammed (sav) döneminde",
+        "not": "Sahabeler inen ayetleri ayrıca ezberleyerek korumuştur."
+      },
+      {
+        "id": "ebu-bekir",
+        "is": "Kur'an'ın tek bir mushafta toplanması",
+        "isK": "Kur'an tek bir mushafta toplandı",
+        "donem": "Hz. Ebû Bekir dönemi",
+        "donemDe": "Hz. Ebû Bekir döneminde",
+        "not": "Yemame Savaşı'nda birçok hafızın şehit olması üzerine bu iş yapılmıştır."
+      },
+      {
+        "id": "osman",
+        "is": "Mushafın çoğaltılıp İslam merkezlerine gönderilmesi",
+        "isK": "Mushaf çoğaltılıp merkezlere gönderildi",
+        "donem": "Hz. Osman dönemi",
+        "donemDe": "Hz. Osman döneminde",
+        "not": "Kur'an'ın çoğaltılmasına istinsah denir."
+      }
+    ],
+    "distractors": {
+      "donem": ["Hz. Ömer dönemi", "Hz. Ali dönemi"],
+      "isK": ["Kur'an'a harekeler eklendi"]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-8-5-ana-konular",
+    "unit": "dkab-8-5",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{ornek} Kur'an'ın hangi ana konusuna girer?", "answer": "konu" },
+      { "prompt": "Aşağıdakilerden hangisi Kur'an'ın {konuA} konusuna örnektir?", "answer": "ornek" }
+    ],
+    "statement": { "text": "{ornek}, Kur'an'ın {konuA} konusuna örnektir.", "swap": "konuA" },
+    "explanation": "{ornek}, Kur'an'ın {konuA} konusuna örnektir. Kur'an'ın ana konuları inanç, ibadet, ahlak ve kıssalardır.",
+    "items": [
+      {
+        "id": "inanc",
+        "ornek": "Allah'ın birliğini anlatan ayetler",
+        "konu": "İnanç",
+        "konuA": "inanç"
+      },
+      {
+        "id": "ibadet",
+        "ornek": "Namazı ve orucu emreden ayetler",
+        "konu": "İbadet",
+        "konuA": "ibadet"
+      },
+      {
+        "id": "ahlak",
+        "ornek": "Yalanı ve kibri yasaklayan ayetler",
+        "konu": "Ahlak",
+        "konuA": "ahlak"
+      },
+      {
+        "id": "kissa",
+        "ornek": "Hz. Musa ile Firavun'u anlatan ayetler",
+        "konu": "Kıssa",
+        "konuA": "kıssa"
+      }
+    ]
+  }
+]

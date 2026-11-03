@@ -1,16 +1,74 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
-import { BUILT_IN_QUESTIONS, SUBJECTS } from "@/content";
+import { useEffect, useMemo, useSyncExternalStore } from "react";
+import { loadBuiltIn, SUBJECTS } from "@/content";
+import { useHidden } from "@/lib/reports";
 import { readJson, writeJson } from "@/lib/storage";
 import { questionSchema, type Grade, type Question, type Subject, type Unit } from "./model";
 
 /**
- * Soru havuzu = uygulamayla gelen sorular + öğretmenin bu cihazda eklediği sorular.
+ * Soru havuzu = uygulamayla gelen sorular + öğretmenin bu cihazda eklediği sorular − gizlenenler.
  *
- * Bugün öğretmen soruları tarayıcıda tutuluyor. Hesaplar geldiğinde bu dosyadaki
- * okuma/yazma fonksiyonları bir API'ye bağlanır; oyunlar ve ekranlar değişmez.
+ * Uygulamayla gelen sorular ders ve sınıf bazında, gerektiğinde yüklenir. Öğretmen soruları
+ * bugün tarayıcıda tutuluyor; hesaplar geldiğinde bu dosyadaki okuma/yazma fonksiyonları bir
+ * API'ye bağlanır, oyunlar ve ekranlar değişmez.
  */
+
+// ---- uygulamayla gelen sorular: sınıf bazında önbellek ----
+const poolCache = new Map<string, Question[]>();
+const pending = new Map<string, Promise<Question[]>>();
+const poolListeners = new Set<() => void>();
+const poolKey = (subjectId: string, grade: Grade) => `${subjectId}-${grade}`;
+
+export function loadPool(subjectId: string, grade: Grade): Promise<Question[]> {
+  const key = poolKey(subjectId, grade);
+  const cached = poolCache.get(key);
+  if (cached) return Promise.resolve(cached);
+  let job = pending.get(key);
+  if (!job) {
+    job = loadBuiltIn(subjectId, grade).then((questions) => {
+      poolCache.set(key, questions);
+      poolListeners.forEach((l) => l());
+      return questions;
+    });
+    pending.set(key, job);
+  }
+  return job;
+}
+
+function subscribePools(listener: () => void) {
+  poolListeners.add(listener);
+  return () => poolListeners.delete(listener);
+}
+
+/**
+ * Bir sınıfın oynanabilir havuzu. Yüklenirken null döner.
+ * `includeHidden`: soru bankası gizlenenleri de gösterir; oyunlar göstermez.
+ */
+export function useGradePool(subjectId: string, grade: Grade, { includeHidden = false } = {}): Question[] | null {
+  const key = poolKey(subjectId, grade);
+  const builtIn = useSyncExternalStore(
+    subscribePools,
+    () => poolCache.get(key) ?? null,
+    () => null,
+  );
+  useEffect(() => {
+    void loadPool(subjectId, grade);
+  }, [subjectId, grade]);
+  const custom = useCustomQuestions();
+  const hidden = useHidden();
+  return useMemo(() => {
+    if (!builtIn) return null;
+    const mine = custom.filter((q) => {
+      const unit = findUnit(q.unit);
+      return unit?.subject.id === subjectId && unit.grade === grade;
+    });
+    const all = mine.length ? [...builtIn, ...mine] : builtIn;
+    if (includeHidden || hidden.length === 0) return all;
+    const hide = new Set(hidden);
+    return all.filter((q) => !hide.has(q.id));
+  }, [builtIn, custom, hidden, includeHidden, subjectId, grade]);
+}
 
 const CUSTOM_KEY = "oynabil.ogretmen-sorulari.v1";
 const listeners = new Set<() => void>();
@@ -53,10 +111,6 @@ export function useCustomQuestions(): Question[] {
   return useSyncExternalStore(subscribe, loadCustom, () => EMPTY);
 }
 
-export function useQuestionPool(): Question[] {
-  const custom = useCustomQuestions();
-  return custom.length ? [...BUILT_IN_QUESTIONS, ...custom] : BUILT_IN_QUESTIONS;
-}
 
 export function isCustomQuestion(id: string): boolean {
   return id.includes("-ogr-");

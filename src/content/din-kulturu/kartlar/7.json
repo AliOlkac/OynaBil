@@ -1,0 +1,982 @@
+[
+  {
+    "kind": "pairs",
+    "id": "dkab-7-1-melekler",
+    "unit": "dkab-7-1",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{melekIn} görevi hangisidir?", "answer": "gorev" },
+      { "prompt": "Hangisi {goreviyle} görevlidir?", "answer": "melek" }
+    ],
+    "statement": { "text": "{melek}, {goreviyle} görevlidir.", "swap": "goreviyle" },
+    "explanation": "{melek}, {goreviyle} görevlidir.",
+    "items": [
+      {
+        "id": "cebrail",
+        "melek": "Cebrail",
+        "melekIn": "Cebrail'in",
+        "gorev": "Vahyi peygamberlere iletmek",
+        "goreviyle": "vahyi peygamberlere iletmekle",
+        "not": "Hz. Muhammed'e (sav) ilk vahyi Hira mağarasında Cebrail getirmiştir."
+      },
+      {
+        "id": "mikail",
+        "melek": "Mikail",
+        "melekIn": "Mikail'in",
+        "gorev": "Doğa olaylarını düzenlemek",
+        "goreviyle": "yağmur ve rüzgâr gibi doğa olaylarını düzenlemekle",
+        "not": "Cebrail, Mikail, İsrafil ve Azrail dört büyük melek olarak bilinir."
+      },
+      {
+        "id": "israfil",
+        "melek": "İsrafil",
+        "melekIn": "İsrafil'in",
+        "gorev": "Sûra üflemek",
+        "goreviyle": "kıyametin kopması ve yeniden diriliş için sûra üflemekle",
+        "not": "Sûr, boruya benzeyen bir alettir."
+      },
+      {
+        "id": "azrail",
+        "melek": "Azrail",
+        "melekIn": "Azrail'in",
+        "gorev": "Ölüm vakti gelenlerin canını almak",
+        "goreviyle": "ölüm vakti gelen canlıların canını almakla",
+        "not": "Kur'an'da \"ölüm meleği\" olarak anılır."
+      },
+      {
+        "id": "kiramen-katibin",
+        "melek": "Kirâmen Kâtibîn",
+        "melekIn": "Kirâmen Kâtibîn'in",
+        "gorev": "İnsanların yaptıklarını yazmak",
+        "goreviyle": "insanların iyi ve kötü bütün davranışlarını yazmakla",
+        "not": "Kirâmen Kâtibîn \"değerli yazıcılar\" demektir."
+      },
+      {
+        "id": "munker-nekir",
+        "melek": "Münker ve Nekir",
+        "melekIn": "Münker ve Nekir'in",
+        "gorev": "Kabirde ölüleri sorguya çekmek",
+        "goreviyle": "kabirde ölüleri sorguya çekmekle",
+        "not": "Hadislere göre kabirde kişiye Rabbi, dini ve peygamberi sorulur."
+      },
+      {
+        "id": "hamele-i-ars",
+        "melek": "Hamele-i Arş",
+        "melekIn": "Hamele-i Arş'ın",
+        "gorev": "Arş'ı taşımak",
+        "goreviyle": "Arş'ı taşımakla",
+        "not": "Hamele-i Arş \"Arş'ı taşıyanlar\" demektir."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-7-1-ahiret-asamalari",
+    "unit": "dkab-7-1",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanim} hangi kavramla ifade edilir?", "answer": "kavram" },
+      { "prompt": "{kavram} kavramı ahiret inancında neyi ifade eder?", "answer": "tanim" }
+    ],
+    "statement": { "text": "{kavram}, {tanimKucuk} demektir.", "swap": "tanimKucuk" },
+    "explanation": "{kavram}, {tanimKucuk} demektir.",
+    "items": [
+      {
+        "id": "kiyamet",
+        "kavram": "Kıyamet",
+        "tanim": "Evrenin düzeninin bozulup dünyanın sona ermesi",
+        "tanimKucuk": "evrenin düzeninin bozulup dünyanın sona ermesi",
+        "not": "Kıyametin ne zaman kopacağını yalnızca Allah bilir."
+      },
+      {
+        "id": "berzah",
+        "kavram": "Berzah",
+        "tanim": "Ölümden dirilişe kadar süren kabir hayatı",
+        "tanimKucuk": "ölümden dirilişe kadar süren kabir hayatı",
+        "not": "Berzah, dünya hayatı ile ahiret hayatı arasındaki geçiş dönemidir."
+      },
+      {
+        "id": "bas",
+        "kavram": "Ba's",
+        "tanim": "Ölülerin yeniden diriltilmesi",
+        "tanimKucuk": "ölülerin yeniden diriltilmesi",
+        "not": "İsrafil sûra ikinci kez üflediğinde bütün insanlar yeniden dirilir."
+      },
+      {
+        "id": "hasir",
+        "kavram": "Haşir",
+        "tanim": "Dirilen insanların hesap için toplanması",
+        "tanimKucuk": "dirilen insanların hesap için toplanması",
+        "not": "İnsanların toplanacağı yere mahşer denir."
+      },
+      {
+        "id": "mizan",
+        "kavram": "Mizan",
+        "tanim": "Amellerin adaletle tartılması",
+        "tanimKucuk": "amellerin adaletle tartılması",
+        "not": "Mizan sözlükte \"terazi\" demektir."
+      },
+      {
+        "id": "sirat",
+        "kavram": "Sırat",
+        "tanim": "Cehennemin üzerine kurulan köprü",
+        "tanimKucuk": "cehennemin üzerine kurulan köprü",
+        "not": "Hadislere göre herkes bu köprünün üzerinden geçecektir."
+      },
+      {
+        "id": "hesap",
+        "kavram": "Hesap",
+        "tanim": "İnsanların yaptıklarından sorguya çekilmesi",
+        "tanimKucuk": "insanların yaptıklarından sorguya çekilmesi",
+        "not": "Ahirette hiç kimseye haksızlık yapılmaz."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-7-1-meleklerin-ozellikleri",
+    "unit": "dkab-7-1",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi meleklerin özelliklerinden biridir?",
+    "negative": "Aşağıdakilerden hangisi meleklerin özelliklerinden biri değildir?",
+    "statement": "{item}, meleklerin özelliklerindendir.",
+    "explanation": "Melekler nurdan yaratılmış, gözle görülmeyen varlıklardır. Yemez, içmez, uyumazlar; erkek ya da dişi değildirler ve Allah'ın emirlerine karşı gelmezler. Ateşten yaratılanlar ise cinlerdir.",
+    "members": [
+      "Nurdan yaratılmış olmak",
+      "Gözle görülmemek",
+      "Yemeye, içmeye ve uyumaya ihtiyaç duymamak",
+      "Allah'ın emirlerine karşı gelmemek",
+      "Erkek ya da dişi olmamak"
+    ],
+    "nonMembers": [
+      "Ateşten yaratılmış olmak",
+      "Topraktan yaratılmış olmak",
+      "Yemeye ve içmeye ihtiyaç duymak",
+      "Allah'ın emirlerine karşı gelebilmek",
+      "Erkek ve dişi olarak yaratılmış olmak"
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-7-1-ahiret-inancinin-etkileri",
+    "unit": "dkab-7-1",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi ahiret inancının insana kazandırdığı tutumlardan biridir?",
+    "negative": "Aşağıdakilerden hangisi ahiret inancının insana kazandırdığı tutumlardan biri değildir?",
+    "statement": "{item}, ahiret inancının insana kazandırdığı bir tutumdur.",
+    "explanation": "Ahiret inancı, insana yaptıklarından sorumlu olduğunu hatırlatır. Ahirete inanan kişi iyilik yapmaya özen gösterir, kötülükten uzak durur ve adaletin mutlaka yerini bulacağına güvenir.",
+    "members": [
+      "Davranışlarından sorumlu olduğunu bilmek",
+      "Kötülüklerden uzak durmaya çalışmak",
+      "İyilik yapmaya istekli olmak",
+      "Adaletin mutlaka yerini bulacağına güvenmek",
+      "Başkalarının hakkına özen göstermek"
+    ],
+    "nonMembers": [
+      "Yaptıklarının karşılıksız kalacağını düşünmek",
+      "Başkalarının hakkını önemsememek",
+      "Sorumluluklarından kaçmak",
+      "Hayatı amaçsız ve anlamsız görmek",
+      "Kötülük yapmayı önemsiz saymak"
+    ]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-7-2-hac-kavramlari",
+    "unit": "dkab-7-2",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanim} hangi kavramla ifade edilir?", "answer": "kavram" },
+      { "prompt": "{kavram} kavramı hac ibadetinde neyi ifade eder?", "answer": "tanim" }
+    ],
+    "statement": { "text": "{kavram}, {tanimKucuk} demektir.", "swap": "tanimKucuk" },
+    "explanation": "{kavram}, {tanimKucuk} demektir.",
+    "items": [
+      {
+        "id": "ihram",
+        "kavram": "İhram",
+        "tanim": "Bazı helalleri geçici olarak kendine yasaklamak",
+        "tanimKucuk": "bazı helalleri geçici olarak kendine yasaklamak",
+        "not": "Erkeklerin giydiği dikişsiz iki parça örtüye de ihram denir."
+      },
+      {
+        "id": "tavaf",
+        "kavram": "Tavaf",
+        "tanim": "Kâbe'nin etrafında yedi kez dönmek",
+        "tanimKucuk": "Kâbe'nin etrafında yedi kez dönmek",
+        "not": "Tavafa Hacerü'l-esved'in bulunduğu köşeden başlanır."
+      },
+      {
+        "id": "mikat",
+        "kavram": "Mikat",
+        "tanim": "İhrama girmeden geçilmemesi gereken sınır",
+        "tanimKucuk": "ihrama girmeden geçilmemesi gereken sınır"
+      },
+      {
+        "id": "say",
+        "kavram": "Sa'y",
+        "tanim": "Safa ile Merve arasında yedi kez gidip gelmek",
+        "tanimKucuk": "Safa ile Merve arasında yedi kez gidip gelmek",
+        "not": "Sa'y, Hz. Hacer'in oğlu İsmail için su arayışını hatırlatır."
+      },
+      {
+        "id": "telbiye",
+        "kavram": "Telbiye",
+        "tanim": "\"Lebbeyk Allahümme lebbeyk\" diye başlayan duayı okumak",
+        "tanimKucuk": "\"Lebbeyk Allahümme lebbeyk\" diye başlayan duayı okumak",
+        "not": "Lebbeyk, \"Buyur, emrindeyim\" anlamına gelir."
+      },
+      {
+        "id": "arafat-vakfesi",
+        "kavram": "Arafat vakfesi",
+        "tanim": "Arefe günü Arafat'ta bir süre bulunmak",
+        "tanimKucuk": "Arefe günü Arafat'ta bir süre bulunmak",
+        "not": "Arafat vakfesine katılmayan kişinin haccı geçerli olmaz."
+      },
+      {
+        "id": "seytan-taslama",
+        "kavram": "Şeytan taşlama",
+        "tanim": "Mina'daki cemrelere taş atmak",
+        "tanimKucuk": "Mina'daki cemrelere taş atmak",
+        "not": "Hanefîlere göre haccın vaciplerindendir."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-7-2-hac-yerleri",
+    "unit": "dkab-7-2",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{uygulama} nerede yapılır?", "answer": "yer" },
+      { "prompt": "Hac sırasında {yerde} hangisi yapılır?", "answer": "uygulama" }
+    ],
+    "statement": { "text": "{uygulama} {yerde} yapılır.", "swap": "yerde" },
+    "explanation": "{uygulama} {yerde} yapılır.",
+    "items": [
+      {
+        "id": "arafat",
+        "uygulama": "Arefe günü vakfe",
+        "yer": "Arafat",
+        "yerde": "Arafat'ta",
+        "not": "Hz. Muhammed (sav) Veda Hutbesi'ni de Arafat'ta irat etmiştir."
+      },
+      {
+        "id": "muzdelife",
+        "uygulama": "Bayramın ilk sabahı vakfe",
+        "yer": "Müzdelife",
+        "yerde": "Müzdelife'de",
+        "not": "Hacılar Arafat'tan sonra geceyi Müzdelife'de geçirir."
+      },
+      {
+        "id": "mina",
+        "uygulama": "Şeytan taşlama",
+        "yer": "Mina",
+        "yerde": "Mina'da",
+        "not": "Taşlanan yerlere cemre denir."
+      },
+      {
+        "id": "safa-merve",
+        "uygulama": "Sa'y",
+        "yer": "Safa ile Merve arası",
+        "yerde": "Safa ile Merve arasında",
+        "not": "Safa ile Merve, Kâbe'nin yakınındaki iki tepedir."
+      },
+      {
+        "id": "kabe",
+        "uygulama": "Tavaf",
+        "yer": "Kâbe'nin etrafı",
+        "yerde": "Kâbe'nin etrafında",
+        "not": "Kâbe, Mekke'deki Mescid-i Haram'dadır."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-7-2-haccin-farzlari",
+    "unit": "dkab-7-2",
+    "difficulty": 3,
+    "positive": "Hanefî mezhebine göre aşağıdakilerden hangisi haccın farzlarından biridir?",
+    "negative": "Hanefî mezhebine göre aşağıdakilerden hangisi haccın farzlarından biri değildir?",
+    "statement": "{item}, Hanefî mezhebine göre haccın farzlarındandır.",
+    "explanation": "Hanefîlere göre haccın farzları üçtür: ihram, Arafat vakfesi ve ziyaret tavafı. Sa'y, Müzdelife vakfesi, şeytan taşlama, tıraş olmak ve veda tavafı ise haccın vaciplerindendir.",
+    "members": ["İhram", "Arafat vakfesi", "Ziyaret tavafı"],
+    "nonMembers": ["Sa'y", "Müzdelife vakfesi", "Şeytan taşlama", "Veda tavafı", "Tıraş olmak"]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-7-2-umre",
+    "unit": "dkab-7-2",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi umrede yapılan uygulamalardan biridir?",
+    "negative": "Aşağıdakilerden hangisi umrede yapılan uygulamalardan biri değildir?",
+    "statement": "{item}, umrede yapılan uygulamalardandır.",
+    "explanation": "Umrede ihrama girilir, Kâbe tavaf edilir, Safa ile Merve arasında sa'y yapılır ve tıraş olunarak ihramdan çıkılır. Arafat ve Müzdelife vakfeleri ile şeytan taşlama yalnızca hacda yapılır.",
+    "members": ["İhram", "Tavaf", "Sa'y", "Tıraş olmak"],
+    "nonMembers": ["Arafat vakfesi", "Müzdelife vakfesi", "Şeytan taşlama"]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-7-2-kurbanlik-hayvanlar",
+    "unit": "dkab-7-2",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi kurban olarak kesilebilen hayvanlardan biridir?",
+    "negative": "Aşağıdakilerden hangisi kurban olarak kesilebilen hayvanlardan biri değildir?",
+    "statement": "{item}, kurban olarak kesilebilen hayvanlardandır.",
+    "explanation": "Kurban yalnızca koyun, keçi, sığır, manda ve deveden olur. Tavuk ve hindi gibi kanatlı hayvanlar ile av hayvanları kurban edilmez.",
+    "members": ["Koyun", "Keçi", "Sığır", "Manda", "Deve"],
+    "nonMembers": ["Tavuk", "Hindi", "Kaz", "Tavşan", "Geyik"]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-7-2-kurbanlik-yaslari",
+    "unit": "dkab-7-2",
+    "difficulty": 3,
+    "questions": [
+      { "prompt": "Hanefî mezhebine göre kurban edilecek bir {hayvanKucuk} en az kaç yaşını doldurmuş olmalıdır?", "answer": "yas" }
+    ],
+    "statement": {
+      "text": "Hanefî mezhebine göre kurban edilecek bir {hayvanIn} doldurması gereken en küçük yaş {yasTir}.",
+      "swap": "yasTir"
+    },
+    "explanation": "Hanefî mezhebine göre kurbanlık deve 5, sığır ve manda 2, koyun ve keçi 1 yaşını doldurmuş olmalıdır.",
+    "items": [
+      { "id": "deve", "hayvanKucuk": "deve", "hayvanIn": "devenin", "yas": "5 yaş", "yasTir": "5'tir" },
+      { "id": "sigir", "hayvanKucuk": "sığır", "hayvanIn": "sığırın", "yas": "2 yaş", "yasTir": "2'dir" },
+      {
+        "id": "keci",
+        "hayvanKucuk": "keçi",
+        "hayvanIn": "keçinin",
+        "yas": "1 yaş",
+        "yasTir": "1'dir",
+        "not": "6 ayını doldurmuş, iri ve gösterişli bir koyun da kurban edilebilir."
+      }
+    ],
+    "distractors": { "yas": ["3 yaş", "4 yaş"] }
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-7-3-fikhi-mezhepler",
+    "unit": "dkab-7-3",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{mezhep} hangi âlimin görüşleri etrafında oluşmuştur?", "answer": "imam" },
+      { "prompt": "{imamIn} görüşleri etrafında oluşan fıkhi mezhep hangisidir?", "answer": "mezhep" }
+    ],
+    "statement": { "text": "{mezhep}, {imamIn} görüşleri etrafında oluşmuş fıkhi bir mezheptir.", "swap": "imamIn" },
+    "explanation": "{mezhep}, {imamIn} görüşleri etrafında oluşmuş fıkhi bir mezheptir.",
+    "items": [
+      {
+        "id": "hanefilik",
+        "mezhep": "Hanefîlik",
+        "imam": "Ebû Hanîfe",
+        "imamIn": "Ebû Hanîfe'nin",
+        "not": "Türkiye'de en yaygın fıkhi mezheptir."
+      },
+      {
+        "id": "malikilik",
+        "mezhep": "Mâlikîlik",
+        "imam": "İmam Mâlik",
+        "imamIn": "İmam Mâlik'in",
+        "not": "Bugün özellikle Kuzey ve Batı Afrika'da yaygındır."
+      },
+      {
+        "id": "safiilik",
+        "mezhep": "Şâfiîlik",
+        "imam": "İmam Şâfiî",
+        "imamIn": "İmam Şâfiî'nin",
+        "not": "Türkiye'de özellikle Doğu ve Güneydoğu Anadolu'da yaygındır."
+      },
+      {
+        "id": "hanbelilik",
+        "mezhep": "Hanbelîlik",
+        "imam": "Ahmed bin Hanbel",
+        "imamIn": "Ahmed bin Hanbel'in",
+        "not": "Bugün özellikle Arap Yarımadası'nda yaygındır."
+      },
+      {
+        "id": "caferilik",
+        "mezhep": "Caferîlik",
+        "imam": "Cafer es-Sâdık",
+        "imamIn": "Cafer es-Sâdık'ın",
+        "not": "Bugün özellikle İran, Irak ve Azerbaycan'da yaygındır."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-7-3-tasavvufi-yorumlar",
+    "unit": "dkab-7-3",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{yol} hangi mutasavvıfın görüşleri etrafında oluşmuştur?", "answer": "kisi" },
+      { "prompt": "{kisiIn} görüşleri etrafında oluşan tasavvufi yorum hangisidir?", "answer": "yol" }
+    ],
+    "statement": { "text": "{yol}, {kisiIn} görüşleri etrafında oluşmuş tasavvufi bir yorumdur.", "swap": "kisiIn" },
+    "explanation": "{yol}, {kisiIn} görüşleri etrafında oluşmuş tasavvufi bir yorumdur.",
+    "items": [
+      {
+        "id": "yesevilik",
+        "yol": "Yesevîlik",
+        "kisi": "Ahmed Yesevî",
+        "kisiIn": "Ahmed Yesevî'nin",
+        "not": "Ahmed Yesevî \"Pîr-i Türkistan\" olarak anılır; hikmetleri Divân-ı Hikmet'te toplanmıştır."
+      },
+      {
+        "id": "kadirilik",
+        "yol": "Kadirîlik",
+        "kisi": "Abdülkadir Geylânî",
+        "kisiIn": "Abdülkadir Geylânî'nin",
+        "not": "Abdülkadir Geylânî Bağdat'ta yaşamıştır."
+      },
+      {
+        "id": "mevlevilik",
+        "yol": "Mevlevîlik",
+        "kisi": "Mevlânâ Celâleddîn-i Rûmî",
+        "kisiIn": "Mevlânâ Celâleddîn-i Rûmî'nin",
+        "not": "Mevlânâ Konya'da yaşamış, Mesnevî adlı eseriyle tanınmıştır."
+      },
+      {
+        "id": "naksibendilik",
+        "yol": "Nakşibendîlik",
+        "kisi": "Bahâeddin Nakşibend",
+        "kisiIn": "Bahâeddin Nakşibend'in",
+        "not": "Bahâeddin Nakşibend Buhara'da yaşamıştır."
+      },
+      {
+        "id": "bektasilik",
+        "yol": "Bektaşîlik",
+        "kisi": "Hacı Bektaş-ı Velî",
+        "kisiIn": "Hacı Bektaş-ı Velî'nin",
+        "not": "Hacı Bektaş-ı Velî'nin görüşleri Makâlât adlı eserinde yer alır."
+      },
+      {
+        "id": "bayramilik",
+        "yol": "Bayramîlik",
+        "kisi": "Hacı Bayram-ı Velî",
+        "kisiIn": "Hacı Bayram-ı Velî'nin",
+        "not": "Hacı Bayram-ı Velî Ankara'da yaşamıştır."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-7-3-fikhi-mezhep-listesi",
+    "unit": "dkab-7-3",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi fıkhi (amelî) mezheplerden biridir?",
+    "negative": "Aşağıdakilerden hangisi fıkhi (amelî) mezheplerden biri değildir?",
+    "statement": "{item}, fıkhi mezheplerdendir.",
+    "explanation": "Günümüzde yaşayan fıkhi mezheplerden bazıları: {members}. Mâtürîdîlik ve Eş'arîlik itikadi mezheplerdir; Yesevîlik, Mevlevîlik ve Kadirîlik ise tasavvufi yorumlardır.",
+    "members": ["Hanefîlik", "Şâfiîlik", "Mâlikîlik", "Hanbelîlik", "Caferîlik"],
+    "nonMembers": ["Mâtürîdîlik", "Eş'arîlik", "Yesevîlik", "Mevlevîlik", "Kadirîlik"]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-7-3-yorum-farkliliklari",
+    "unit": "dkab-7-3",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi dinî konulardaki yorum farklılıklarının sebeplerinden biridir?",
+    "negative": "Aşağıdakilerden hangisi dinî konulardaki yorum farklılıklarının sebeplerinden biri değildir?",
+    "statement": "{item}, dinî konulardaki yorum farklılıklarının sebeplerindendir.",
+    "explanation": "Kelimelerin birden çok anlama gelebilmesi, anlayış farklılıkları, yaşanılan coğrafya ve kültür, hadislere ulaşma imkânı yorum farklılığına yol açabilir. Kur'an'ın metni tektir; iman esasları ve farz ibadetler değişmez.",
+    "members": [
+      "Kelimelerin birden çok anlama gelebilmesi",
+      "İnsanların anlayış farklılıkları",
+      "Yaşanılan coğrafya ve kültürün farklı olması",
+      "Hadislere ulaşma imkânlarının farklı olması"
+    ],
+    "nonMembers": [
+      "Kur'an'ın farklı metinlerinin bulunması",
+      "İman esaslarının zamanla değişmesi",
+      "Temel ibadetlerin farz olup olmadığının bilinmemesi"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-7-3-alevi-bektasi-kavramlar",
+    "unit": "dkab-7-3",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Alevî-Bektaşî geleneğinde {tanimA} ne ad verilir?", "answer": "kavram" },
+      { "prompt": "{kavram} kavramı Alevî-Bektaşî geleneğinde neyi ifade eder?", "answer": "tanim" }
+    ],
+    "statement": { "text": "Alevî-Bektaşî geleneğinde {tanimA} {kavramKucuk} denir.", "swap": "kavramKucuk" },
+    "explanation": "Alevî-Bektaşî geleneğinde {tanimA} {kavramKucuk} denir.",
+    "items": [
+      {
+        "id": "cem",
+        "kavram": "Cem",
+        "kavramKucuk": "cem",
+        "tanim": "Dede önderliğinde yapılan toplu ibadet",
+        "tanimA": "dede önderliğinde yapılan toplu ibadete",
+        "not": "Cemler cemevinde yapılır; cemde birlik ve kardeşlik yaşanır."
+      },
+      {
+        "id": "semah",
+        "kavram": "Semah",
+        "kavramKucuk": "semah",
+        "tanim": "Cemde saz eşliğinde dönülerek yapılan ritüel",
+        "tanimA": "cemde saz eşliğinde dönülerek yapılan ritüele"
+      },
+      {
+        "id": "dede",
+        "kavram": "Dede",
+        "kavramKucuk": "dede",
+        "tanim": "Cemi yöneten ve topluluğa yol gösteren kişi",
+        "tanimA": "cemi yöneten ve topluluğa yol gösteren kişiye"
+      },
+      {
+        "id": "deyis",
+        "kavram": "Deyiş",
+        "kavramKucuk": "deyiş",
+        "tanim": "Saz eşliğinde söylenen dinî ve tasavvufi şiir",
+        "tanimA": "saz eşliğinde söylenen dinî ve tasavvufi şiire",
+        "not": "Pir Sultan Abdal ve Kaygusuz Abdal, deyişleriyle tanınan ozanlardandır."
+      },
+      {
+        "id": "musahiplik",
+        "kavram": "Musahiplik",
+        "kavramKucuk": "musahiplik",
+        "tanim": "İki ailenin ömür boyu birbirine yol kardeşi olması",
+        "tanimA": "iki ailenin ömür boyu birbirine yol kardeşi olmasına"
+      }
+    ]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-7-4-mekke-donemi-yillari",
+    "unit": "dkab-7-4",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{olay} hangi yılda gerçekleşmiştir?", "answer": "yil" },
+      { "prompt": "{yil} yılında yaşanan olay hangisidir?", "answer": "olay" }
+    ],
+    "statement": { "text": "{olay}, {yil} yılında gerçekleşmiştir.", "swap": "yil" },
+    "explanation": "{olay}, {yil} yılında gerçekleşmiştir.",
+    "items": [
+      {
+        "id": "ilk-vahiy",
+        "olay": "İlk vahyin gelişi",
+        "yil": "610",
+        "not": "İlk vahiy Nur dağındaki Hira mağarasında gelmiştir."
+      },
+      {
+        "id": "acik-davet",
+        "olay": "İslam'a açık davetin başlaması",
+        "yil": "613",
+        "not": "Davet, ilk üç yıl gizli olarak yürütülmüştü."
+      },
+      {
+        "id": "habesistan",
+        "olay": "Habeşistan'a ilk hicret",
+        "yil": "615",
+        "not": "Müslümanlar, adaletiyle tanınan Kral Necâşî'nin ülkesine sığınmıştır."
+      },
+      {
+        "id": "huzun-yili",
+        "olay": "Hz. Hatice ile Ebû Tâlib'in vefatı",
+        "yil": "619",
+        "not": "Bu acı kayıplar nedeniyle bu yıla hüzün yılı denir."
+      },
+      {
+        "id": "hicret",
+        "olay": "Medine'ye hicret",
+        "yil": "622",
+        "not": "Hicret, hicri takvimin başlangıcı kabul edilmiştir."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-7-4-medine-donemi-yillari",
+    "unit": "dkab-7-4",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{olay} hangi yılda gerçekleşmiştir?", "answer": "yil" },
+      { "prompt": "{yil} yılında yaşanan olay hangisidir?", "answer": "olay" }
+    ],
+    "statement": { "text": "{olay}, {yil} yılında gerçekleşmiştir.", "swap": "yil" },
+    "explanation": "{olay}, {yil} yılında gerçekleşmiştir.",
+    "items": [
+      {
+        "id": "bedir",
+        "olay": "Bedir Savaşı",
+        "yil": "624",
+        "not": "Müslümanların Mekkeli müşriklere karşı kazandığı ilk büyük zaferdir."
+      },
+      {
+        "id": "uhud",
+        "olay": "Uhud Savaşı",
+        "yil": "625",
+        "not": "Okçuların yerlerini terk etmesi Müslümanları zor durumda bırakmıştır."
+      },
+      {
+        "id": "hendek",
+        "olay": "Hendek Savaşı",
+        "yil": "627",
+        "not": "Medine'yi korumak için şehrin çevresine hendek kazılmıştır."
+      },
+      {
+        "id": "hudeybiye",
+        "olay": "Hudeybiye Antlaşması",
+        "yil": "628",
+        "not": "Mekkeli müşriklerle on yıl savaşmamak üzere yapılan bir barış antlaşmasıdır."
+      },
+      {
+        "id": "mekke-fethi",
+        "olay": "Mekke'nin fethi",
+        "yil": "630",
+        "not": "Hz. Muhammed (sav) genel af ilan etmiş, Kâbe putlardan temizlenmiştir."
+      },
+      {
+        "id": "veda-hacci",
+        "olay": "Veda Haccı",
+        "yil": "632",
+        "not": "Hz. Muhammed (sav) bu hacda Veda Hutbesi'ni irat etmiştir."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-7-4-onemli-yerler",
+    "unit": "dkab-7-4",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanim} hangisidir?", "answer": "yer" },
+      { "prompt": "{yer} için aşağıdakilerden hangisi doğrudur?", "answer": "tanim" }
+    ],
+    "statement": { "text": "{yer}, {tanimKucuk} olarak bilinir.", "swap": "tanimKucuk" },
+    "explanation": "{yer}, {tanimKucuk} olarak bilinir.",
+    "items": [
+      {
+        "id": "hira",
+        "yer": "Hira mağarası",
+        "tanim": "İlk vahyin geldiği mağara",
+        "tanimKucuk": "ilk vahyin geldiği mağara",
+        "not": "Hira mağarası, Mekke yakınlarındaki Nur dağındadır."
+      },
+      {
+        "id": "sevr",
+        "yer": "Sevr mağarası",
+        "tanim": "Hicret yolunda saklanılan mağara",
+        "tanimKucuk": "hicret yolunda saklanılan mağara",
+        "not": "Hz. Muhammed (sav) ve Hz. Ebû Bekir burada üç gün saklanmıştır."
+      },
+      {
+        "id": "darulerkam",
+        "yer": "Dârülerkam",
+        "tanim": "Mekke'deki ilk eğitim merkezi",
+        "tanimKucuk": "Mekke'deki ilk eğitim merkezi",
+        "not": "Dârülerkam, Erkam adlı sahabinin evidir."
+      },
+      {
+        "id": "suffe",
+        "yer": "Suffe",
+        "tanim": "Mescid-i Nebevi'deki eğitim yeri",
+        "tanimKucuk": "Mescid-i Nebevi'deki eğitim yeri",
+        "not": "Burada kalıp eğitim alan sahabilere Ashab-ı Suffe denir."
+      },
+      {
+        "id": "kuba",
+        "yer": "Kuba Mescidi",
+        "tanim": "İslam tarihinde inşa edilen ilk mescit",
+        "tanimKucuk": "İslam tarihinde inşa edilen ilk mescit",
+        "not": "Hicret sırasında, Medine'ye varmadan önce Kuba'da inşa edilmiştir."
+      },
+      {
+        "id": "taif",
+        "yer": "Taif",
+        "tanim": "Hz. Peygamber'in davet için gidip taşlandığı şehir",
+        "tanimKucuk": "Hz. Peygamber'in davet için gidip taşlandığı şehir",
+        "not": "Hz. Muhammed (sav), kendisini taşlayanlara beddua etmemiştir."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-7-4-peygamberlik-gorevleri",
+    "unit": "dkab-7-4",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Hz. Muhammed'in (sav) {tanimSi} hangi peygamberlik görevidir?", "answer": "gorev" },
+      { "prompt": "Hz. Muhammed'in (sav) {gorevKucuk} görevi ne demektir?", "answer": "tanim" }
+    ],
+    "statement": { "text": "Hz. Muhammed'in (sav) {tanimSi}, {gorevKucuk} görevidir.", "swap": "gorevKucuk" },
+    "explanation": "Hz. Muhammed'in (sav) {tanimSi}, {gorevKucuk} görevidir.",
+    "items": [
+      {
+        "id": "teblig",
+        "gorev": "Tebliğ",
+        "gorevKucuk": "tebliğ",
+        "tanim": "Vahyi insanlara eksiksiz iletmek",
+        "tanimSi": "vahyi insanlara eksiksiz iletmesi",
+        "not": "Tebliğ \"bildirmek, ulaştırmak\" demektir."
+      },
+      {
+        "id": "tebyin",
+        "gorev": "Tebyin",
+        "gorevKucuk": "tebyin",
+        "tanim": "Vahyi açıklamak",
+        "tanimSi": "vahyi açıklaması",
+        "not": "Örneğin Kur'an'da emredilen namazın nasıl kılınacağını Hz. Peygamber açıklamıştır."
+      },
+      {
+        "id": "tesri",
+        "gorev": "Teşri",
+        "gorevKucuk": "teşri",
+        "tanim": "Allah'ın izniyle dinî hüküm koymak",
+        "tanimSi": "Allah'ın izniyle dinî hüküm koyması",
+        "not": "Teşri \"kural koyma\" demektir."
+      },
+      {
+        "id": "temsil",
+        "gorev": "Temsil",
+        "gorevKucuk": "temsil",
+        "tanim": "Dini en güzel şekilde yaşayarak örnek olmak",
+        "tanimSi": "dini en güzel şekilde yaşayarak örnek olması",
+        "not": "Kur'an'da Hz. Peygamber'in inananlar için güzel bir örnek olduğu bildirilir."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-7-4-mekke-donemi-olaylari",
+    "unit": "dkab-7-4",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi Mekke döneminde (610-622) yaşanan olaylardan biridir?",
+    "negative": "Aşağıdakilerden hangisi Mekke döneminde (610-622) yaşanan olaylardan biri değildir?",
+    "statement": "{item}, Mekke döneminde yaşanmıştır.",
+    "explanation": "Mekke dönemi 610'da ilk vahiyle başlar, 622'de hicretle biter. Bu dönemin olaylarından bazıları: {members}.",
+    "members": [
+      "Habeşistan'a hicret",
+      "Müslümanlara uygulanan boykot",
+      "Taif yolculuğu",
+      "İsra ve Miraç",
+      "Akabe biatları"
+    ],
+    "nonMembers": [
+      "Bedir Savaşı",
+      "Hendek Savaşı",
+      "Hudeybiye Antlaşması",
+      "Mekke'nin fethi",
+      "Ensar ile muhacirlerin kardeş ilan edilmesi"
+    ]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-7-5-kurucular",
+    "unit": "dkab-7-5",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{din} hangi kişinin öğretilerine dayanır?", "answer": "kisi" },
+      { "prompt": "{kisiIn} öğretilerine dayanan din hangisidir?", "answer": "din" }
+    ],
+    "statement": { "text": "{din}, {kisiIn} öğretilerine dayanır.", "swap": "kisiIn" },
+    "explanation": "{din}, {kisiIn} öğretilerine dayanır.",
+    "items": [
+      {
+        "id": "budizm",
+        "din": "Budizm",
+        "kisi": "Buda",
+        "kisiIn": "Buda'nın",
+        "not": "Buda'nın asıl adı Siddhartha Gautama'dır; Budizm Hindistan'da ortaya çıkmıştır."
+      },
+      {
+        "id": "konfucyusculuk",
+        "din": "Konfüçyüsçülük",
+        "kisi": "Konfüçyüs",
+        "kisiIn": "Konfüçyüs'ün",
+        "not": "Çin'de ortaya çıkmıştır; aileye ve büyüklere saygıya önem verir."
+      },
+      {
+        "id": "taoizm",
+        "din": "Taoizm",
+        "kisi": "Lao Tzu",
+        "kisiIn": "Lao Tzu'nun",
+        "not": "Çin'de ortaya çıkmıştır; temel metni Tao Te Ching'dir."
+      },
+      {
+        "id": "sihizm",
+        "din": "Sihizm",
+        "kisi": "Guru Nanak",
+        "kisiIn": "Guru Nanak'ın",
+        "not": "Hindistan'ın Pencap bölgesinde ortaya çıkmıştır."
+      },
+      {
+        "id": "zerdustluk",
+        "din": "Zerdüştlük",
+        "kisi": "Zerdüşt",
+        "kisiIn": "Zerdüşt'ün",
+        "not": "Eski İran'da ortaya çıkmıştır; kutsal metni Avesta'dır."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-7-5-kutsal-metinler",
+    "unit": "dkab-7-5",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{dinde} kutsal kabul edilen metin hangisidir?", "answer": "metin" },
+      { "prompt": "{metin} hangi dinde kutsal kabul edilir?", "answer": "din" }
+    ],
+    "statement": { "text": "{metin}, {dinde} kutsal kabul edilir.", "swap": "dinde" },
+    "explanation": "{metin}, {dinde} kutsal kabul edilir.",
+    "items": [
+      {
+        "id": "hristiyanlik",
+        "din": "Hristiyanlık",
+        "dinde": "Hristiyanlıkta",
+        "metin": "Kitab-ı Mukaddes",
+        "not": "Kitab-ı Mukaddes, Eski Ahit ve Yeni Ahit'ten oluşur."
+      },
+      {
+        "id": "hinduizm",
+        "din": "Hinduizm",
+        "dinde": "Hinduizmde",
+        "metin": "Vedalar",
+        "not": "Vedalar, Hinduizmin en eski kutsal metinleridir."
+      },
+      {
+        "id": "budizm",
+        "din": "Budizm",
+        "dinde": "Budizmde",
+        "metin": "Tripitaka",
+        "not": "Tripitaka \"Üç Sepet\" anlamına gelir."
+      },
+      {
+        "id": "taoizm",
+        "din": "Taoizm",
+        "dinde": "Taoizmde",
+        "metin": "Tao Te Ching",
+        "not": "Tao Te Ching, Lao Tzu'ya atfedilir."
+      },
+      {
+        "id": "zerdustluk",
+        "din": "Zerdüştlük",
+        "dinde": "Zerdüştlükte",
+        "metin": "Avesta"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-7-5-ibadet-yerleri",
+    "unit": "dkab-7-5",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{dinde} ibadet yerine verilen ad hangisidir?", "answer": "yer" },
+      { "prompt": "{yer} hangi dinin ibadet yeridir?", "answer": "din" }
+    ],
+    "statement": { "text": "{yer}, {dinIn} ibadet yeridir.", "swap": "dinIn" },
+    "explanation": "{yer}, {dinIn} ibadet yeridir.",
+    "items": [
+      {
+        "id": "yahudilik",
+        "din": "Yahudilik",
+        "dinIn": "Yahudiliğin",
+        "dinde": "Yahudilikte",
+        "yer": "Sinagog",
+        "not": "Sinagoga havra da denir."
+      },
+      {
+        "id": "hristiyanlik",
+        "din": "Hristiyanlık",
+        "dinIn": "Hristiyanlığın",
+        "dinde": "Hristiyanlıkta",
+        "yer": "Kilise",
+        "not": "Hristiyanlar için pazar günkü ayin önemlidir."
+      },
+      {
+        "id": "islam",
+        "din": "İslam",
+        "dinIn": "İslam'ın",
+        "dinde": "İslam'da",
+        "yer": "Cami",
+        "not": "Cuma namazı camide cemaatle kılınır."
+      },
+      {
+        "id": "sihizm",
+        "din": "Sihizm",
+        "dinIn": "Sihizmin",
+        "dinde": "Sihizmde",
+        "yer": "Gurdvara",
+        "not": "Gurdvaraların en ünlüsü, Hindistan'daki Altın Tapınak'tır."
+      },
+      {
+        "id": "zerdustluk",
+        "din": "Zerdüştlük",
+        "dinIn": "Zerdüştlüğün",
+        "dinde": "Zerdüştlükte",
+        "yer": "Ateşgede",
+        "not": "Zerdüştlükte ateş, temizliğin simgesi olarak saygı görür."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-7-5-kavramlar",
+    "unit": "dkab-7-5",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{kavram} hangi dine ait bir kavramdır?", "answer": "din" },
+      { "prompt": "Hangisi {dineAit} ait bir kavramdır?", "answer": "kavram" }
+    ],
+    "statement": { "text": "{kavram}, {dineAit} ait bir kavramdır.", "swap": "dineAit" },
+    "explanation": "{kavram}, {dineAit} ait bir kavramdır.",
+    "items": [
+      {
+        "id": "sabat",
+        "kavram": "Şabat",
+        "din": "Yahudilik",
+        "dineAit": "Yahudiliğe",
+        "not": "Şabat, cuma gün batımından cumartesi gün batımına kadar süren dinlenme günüdür."
+      },
+      {
+        "id": "kast",
+        "kavram": "Kast sistemi",
+        "din": "Hinduizm",
+        "dineAit": "Hinduizme",
+        "not": "Kast sistemi, toplumun doğuştan belirlenen sınıflara ayrılmasıdır."
+      },
+      {
+        "id": "vaftiz",
+        "kavram": "Vaftiz",
+        "din": "Hristiyanlık",
+        "dineAit": "Hristiyanlığa",
+        "not": "Vaftiz, Hristiyanlığa giriş sayılan ve suyla yapılan bir törendir."
+      },
+      {
+        "id": "dort-yuce-gercek",
+        "kavram": "Dört Yüce Gerçek",
+        "din": "Budizm",
+        "dineAit": "Budizme",
+        "not": "Budizme göre hayatta acı vardır ve acının kaynağı arzulardır."
+      },
+      {
+        "id": "yin-yang",
+        "kavram": "Yin ve yang",
+        "din": "Taoizm",
+        "dineAit": "Taoizme",
+        "not": "Yin ve yang, evrende birbirini tamamlayan karşıt güçleri ifade eder."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-7-5-vahye-dayanmayan-dinler",
+    "unit": "dkab-7-5",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi vahye dayanmayan dinlerden biridir?",
+    "negative": "Aşağıdakilerden hangisi vahye dayanmayan dinlerden biri değildir?",
+    "statement": "{item}, vahye dayanmayan dinlerdendir.",
+    "explanation": "Yahudilik, Hristiyanlık ve İslam vahye dayanan dinlerdir. Vahye dayanmayan dinlerden bazıları: {members}.",
+    "members": ["Hinduizm", "Budizm", "Konfüçyüsçülük", "Taoizm", "Şintoizm"],
+    "nonMembers": ["Yahudilik", "Hristiyanlık", "İslam"]
+  }
+]

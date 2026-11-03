@@ -1,3 +1,4 @@
+import { hashSeed } from "./cards";
 import type { Question, QuestionType } from "./model";
 import { createRng, shuffle } from "./random";
 
@@ -10,13 +11,16 @@ export type PlayableQuestion = {
   unit: string;
   type: QuestionType;
   difficulty: Question["difficulty"];
+  /** Paragraf sorularında soru kökünden önce okunan metin. */
+  context?: string;
   prompt: string;
   options: string[];
   correctIndex: number;
   explanation: string;
 };
 
-export function toPlayable(q: Question, rng: () => number): PlayableQuestion {
+/** Şık sırası soru kimliği ve oyun tohumundan türetilir: sayfa yenilense de aynı kalır. */
+export function toPlayable(q: Question, seed: number): PlayableQuestion {
   if (q.type === "true-false") {
     return {
       id: q.id,
@@ -29,12 +33,14 @@ export function toPlayable(q: Question, rng: () => number): PlayableQuestion {
       explanation: q.explanation,
     };
   }
+  const rng = createRng(hashSeed(q.id) ^ seed);
   const order = q.keepOrder ? q.choices.map((_, i) => i) : shuffle(q.choices.map((_, i) => i), rng);
   return {
     id: q.id,
     unit: q.unit,
     type: q.type,
     difficulty: q.difficulty,
+    context: q.type === "passage" ? q.context : undefined,
     prompt: q.prompt,
     options: order.map((i) => q.choices[i]),
     correctIndex: order.indexOf(q.answer),
@@ -46,17 +52,23 @@ export type DeckOptions = {
   unitIds: readonly string[];
   types: readonly QuestionType[];
   seed: number;
+  /** Bu sınıfa daha önce sorulan sorular: kimlik -> son sorulma anı. */
+  seen?: Readonly<Record<string, number>>;
 };
 
 /**
- * Seçilen ünitelerden, oyunun desteklediği tiplerde karışık bir deste kurar.
- * Üniteler sırayla harmanlanır ki tek bir ünite destenin başını doldurmasın;
- * zorluk her turda kolaydan zora doğru hafifçe artar.
+ * Seçilen ünitelerden, oyunun desteklediği tiplerde bir deste sırası kurar ve soru kimliklerini döner.
+ *
+ * - Daha önce sorulmamış sorular önce gelir; sorulmuş olanlar en eski sorulandan başlayarak sona dizilir.
+ * - Üniteler sırayla harmanlanır ki tek bir ünite destenin başını doldurmasın.
+ * - Her ünitede yeni sorular kolaydan zora doğru ilerler.
+ * - Aynı bilgiyi soran sorular (aynı `group`) bir oyunda yan yana gelmez: ikincisi destenin sonuna kalır.
  */
-export function buildDeck(pool: readonly Question[], options: DeckOptions): PlayableQuestion[] {
+export function buildDeckIds(pool: readonly Question[], options: DeckOptions): string[] {
   const rng = createRng(options.seed);
   const units = new Set(options.unitIds);
   const types = new Set(options.types);
+  const seen = options.seen ?? {};
   const eligible = pool.filter((q) => units.has(q.unit) && types.has(q.type));
 
   const byUnit = new Map<string, Question[]>();
@@ -65,25 +77,40 @@ export function buildDeck(pool: readonly Question[], options: DeckOptions): Play
     list.push(q);
     byUnit.set(q.unit, list);
   }
-  for (const list of byUnit.values()) list.sort((a, b) => a.difficulty - b.difficulty);
+  const queues = shuffle([...byUnit.values()], rng).map((list) => {
+    const fresh = list.filter((q) => !seen[q.id]).sort((a, b) => a.difficulty - b.difficulty);
+    const old = list.filter((q) => seen[q.id]).sort((a, b) => seen[a.id] - seen[b.id]);
+    return [...fresh, ...old];
+  });
 
-  const queues = shuffle([...byUnit.values()], rng);
-  const ordered: Question[] = [];
+  const primary: Question[] = [];
+  const later: Question[] = [];
+  const usedGroups = new Set<string>();
   while (queues.some((qs) => qs.length > 0)) {
     for (const qs of queues) {
       const next = qs.shift();
-      if (next) ordered.push(next);
+      if (!next) continue;
+      if (next.group && usedGroups.has(next.group)) later.push(next);
+      else {
+        if (next.group) usedGroups.add(next.group);
+        primary.push(next);
+      }
     }
   }
-  return ordered.map((q) => toPlayable(q, rng));
+  return [...primary, ...later].map((q) => q.id);
+}
+
+/** Kayıtlı deste sırasından oynanabilir sorular. Havuzdan silinmiş bir soru atlanır. */
+export function deckFromIds(pool: readonly Question[], ids: readonly string[], seed: number): PlayableQuestion[] {
+  const byId = new Map(pool.map((q) => [q.id, q]));
+  return ids.flatMap((id) => {
+    const q = byId.get(id);
+    return q ? [toPlayable(q, seed)] : [];
+  });
 }
 
 /** Seçilen ünitelerde bir oyunun kullanabileceği soru sayısı. */
-export function countEligible(
-  pool: readonly Question[],
-  unitIds: readonly string[],
-  types: readonly QuestionType[],
-): number {
+export function countEligible(pool: readonly Question[], unitIds: readonly string[], types: readonly QuestionType[]): number {
   const units = new Set(unitIds);
   const t = new Set(types);
   return pool.filter((q) => units.has(q.unit) && t.has(q.type)).length;

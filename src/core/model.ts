@@ -15,7 +15,7 @@ export type Grade = z.infer<typeof gradeSchema>;
 export const difficultySchema = z.union([z.literal(1), z.literal(2), z.literal(3)]);
 export type Difficulty = z.infer<typeof difficultySchema>;
 
-const idSchema = z
+export const idSchema = z
   .string()
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "id küçük harf, rakam ve tire içermeli");
 
@@ -28,6 +28,12 @@ const questionBase = z.object({
   /** Cevaptan sonra tahtada gösterilen kısa açıklama. Öğretme kısmı burası. */
   explanation: z.string().min(5).max(320),
   tags: z.array(z.string()).optional(),
+  /**
+   * Aynı bilgiyi soran soruların ortak kimliği. Bilgi kartından üretilen sorular
+   * (ör. "Tevrat hangi peygambere...?" ve "Hz. Musa'ya indirilen kitap...?") aynı gruptadır;
+   * deste bir oyunda aynı gruptan ikinci soruyu sona bırakır.
+   */
+  group: z.string().optional(),
 });
 
 export const multipleChoiceSchema = questionBase.extend({
@@ -44,9 +50,22 @@ export const trueFalseSchema = questionBase.extend({
   answer: z.boolean(),
 });
 
+/**
+ * Paragraf sorusu (LGS tarzı): kısa bir metin ya da durum, ardından metne dayalı soru.
+ * Okuma süresi gerektirdiği için oyunlar bu tipe ek süre verir; uzun metni sığdıramayan
+ * oyunlar (ör. Halat Çekme) bu tipi desteklemez.
+ */
+export const passageSchema = questionBase.extend({
+  type: z.literal("passage"),
+  context: z.string().min(40).max(700),
+  choices: z.array(z.string().min(1).max(140)).length(4),
+  answer: z.number().int().min(0).max(3),
+  keepOrder: z.boolean().optional(),
+});
+
 export const questionSchema = z
-  .discriminatedUnion("type", [multipleChoiceSchema, trueFalseSchema])
-  .refine((q) => q.type !== "multiple-choice" || q.answer < q.choices.length, {
+  .discriminatedUnion("type", [multipleChoiceSchema, trueFalseSchema, passageSchema])
+  .refine((q) => q.type === "true-false" || q.answer < q.choices.length, {
     message: "answer, şık sayısından küçük olmalı",
   });
 
@@ -56,6 +75,7 @@ export type QuestionType = Question["type"];
 export const QUESTION_TYPE_LABELS: Record<QuestionType, string> = {
   "multiple-choice": "Çoktan seçmeli",
   "true-false": "Doğru / Yanlış",
+  passage: "Paragraf (LGS)",
 };
 
 export type Unit = {

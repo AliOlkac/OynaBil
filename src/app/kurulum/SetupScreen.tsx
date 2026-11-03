@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowLeft, Check, Library, Play, TriangleAlert } from "lucide-react";
+import { ArrowLeft, Check, History, Library, Play, TriangleAlert } from "lucide-react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, type ReactNode } from "react";
@@ -12,21 +12,22 @@ import { Segmented, Toggle } from "@/components/ui/Segmented";
 import { TeamEmblem } from "@/components/ui/TeamEmblem";
 import { GameGlyph } from "@/components/game/GameGlyph";
 import { SUBJECTS } from "@/content";
-import { countEligible } from "@/core/deck";
+import { buildDeckIds, countEligible } from "@/core/deck";
 import type { Grade } from "@/core/model";
-import { unitsFor, useQuestionPool } from "@/core/repository";
+import { unitsFor, useGradePool } from "@/core/repository";
 import { randomSeed } from "@/core/random";
-import { GAMES, getGame } from "@/games/registry";
+import { GAMES, gameTypes, getGame } from "@/games/registry";
 import { defaultTeams, TEAM_STYLES } from "@/games/teams";
 import type { GameSettings, Team } from "@/games/types";
+import { forgetSeen, memoryScope, useSeen } from "@/lib/memory";
 import { loadSetup, newSessionId, saveSetup, startGame } from "@/lib/session";
 import { dur, ease } from "@/lib/motion";
 
+const SECTIONS = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
 export function SetupScreen() {
   const router = useRouter();
   const params = useSearchParams();
-  const pool = useQuestionPool();
 
   const [initial] = useState(() => {
     const saved = loadSetup();
@@ -39,6 +40,7 @@ export function SetupScreen() {
       subjectId: subject.id,
       grade,
       unitIds: saved?.unitIds?.length ? saved.unitIds : unitsFor(subject, grade).slice(0, 1).map((u) => u.id),
+      section: saved?.section,
       teams: saved?.teams?.length === 4 ? saved.teams : defaultTeams(4),
       teamCountByGame: saved?.teamCountByGame ?? {},
       settingsByGame: saved?.settingsByGame ?? {},
@@ -49,6 +51,7 @@ export function SetupScreen() {
   const [subjectId] = useState(initial.subjectId);
   const [grade, setGrade] = useState<Grade>(initial.grade);
   const [unitIds, setUnitIds] = useState<string[]>(initial.unitIds);
+  const [section, setSection] = useState<string | undefined>(initial.section);
   const [teams, setTeams] = useState<Team[]>(initial.teams);
   const [teamCountByGame, setTeamCountByGame] = useState<Record<string, number>>(initial.teamCountByGame);
   const [settingsByGame, setSettingsByGame] = useState<Record<string, GameSettings>>(initial.settingsByGame);
@@ -56,17 +59,31 @@ export function SetupScreen() {
   const game = getGame(gameId)!;
   const subject = SUBJECTS.find((s) => s.id === subjectId)!;
   const units = unitsFor(subject, grade);
+  const loadedPool = useGradePool(subjectId, grade);
+  const pool = loadedPool ?? [];
+  const scope = memoryScope(subjectId, grade, section);
+  const seen = useSeen(scope);
+
+  const selectedUnits = unitIds.filter((id) => units.some((u) => u.id === id));
+  // Seçili ünitelerde karşılığı olmayan ayar (ör. LGS soruları yoksa LGS ayarı) gösterilmez ve varsayılanda kalır.
+  const shownFields = game.settings.filter(
+    (f) => f.kind !== "choice" || !f.requiresType || pool.some((q) => q.type === f.requiresType && selectedUnits.includes(q.unit)),
+  );
   const settings: GameSettings = { ...game.defaultSettings, ...settingsByGame[gameId] };
+  for (const f of game.settings) if (!shownFields.includes(f)) settings[f.key] = game.defaultSettings[f.key];
+  const types = gameTypes(game, settings);
   const teamCount = Math.max(game.teamCount.min, Math.min(game.teamCount.max, teamCountByGame[gameId] ?? game.teamCount.default));
   const activeTeams = teams.slice(0, teamCount);
 
-  const selectedUnits = unitIds.filter((id) => units.some((u) => u.id === id));
-  const available = countEligible(pool, selectedUnits, game.questionTypes);
+  const available = countEligible(pool, selectedUnits, types);
+  const seenHere = pool.filter((q) => seen[q.id] && selectedUnits.includes(q.unit) && types.includes(q.type)).length;
   const needed = game.questionsNeeded(settings, teamCount);
   const problem =
     selectedUnits.length === 0
       ? "En az bir ünite seçin."
-      : available < needed
+      : !loadedPool
+        ? "Sorular yükleniyor."
+        : available < needed
         ? `Seçili ünitelerde ${available} soru var, bu ayarlarla ${needed} soru gerekiyor. Ünite ekleyin${game.id === "bilgi-yarismasi" ? " ya da tur sayısını azaltın" : ""}.`
         : null;
 
@@ -81,15 +98,18 @@ export function SetupScreen() {
   const start = () => {
     if (problem) return;
     const finalTeams = activeTeams.map((t, i) => ({ ...t, name: t.name.trim() || defaultTeams(4)[i].name }));
-    saveSetup({ gameId, subjectId, grade, unitIds: selectedUnits, teams, teamCountByGame, settingsByGame });
+    saveSetup({ gameId, subjectId, grade, unitIds: selectedUnits, section, teams, teamCountByGame, settingsByGame });
+    const seed = randomSeed();
     startGame({
       gameId,
       subjectId,
       grade,
       unitIds: selectedUnits,
+      section,
       teams: finalTeams,
       settings,
-      seed: randomSeed(),
+      seed,
+      deckIds: buildDeckIds(pool, { unitIds: selectedUnits, types, seed, seen }),
       sessionId: newSessionId(),
     });
     router.push(`/oyun/${gameId}`);
@@ -141,7 +161,7 @@ export function SetupScreen() {
             <>
               <p className="mt-6 text-sm font-semibold tracking-wide text-ink-400">KURALLAR</p>
               <div className="mt-2 flex flex-col gap-3">
-                {game.settings.map((field) =>
+                {shownFields.map((field) =>
                   field.kind === "toggle" ? (
                     <Toggle
                       key={field.key}
@@ -165,7 +185,27 @@ export function SetupScreen() {
             options={subject.grades.map((g) => ({ value: g, label: `${g}. sınıf` }))}
             onChange={changeGrade}
           />
-          <div className="mt-5 flex items-center justify-between">
+          <div className="mt-3 flex flex-wrap items-center gap-2" role="group" aria-label="Şube">
+            <span className="mr-1 text-sm font-semibold tracking-wide text-ink-400">ŞUBE</span>
+            {SECTIONS.map((sec) => {
+              const on = section === sec;
+              return (
+                <button
+                  key={sec}
+                  type="button"
+                  aria-pressed={on}
+                  onClick={() => setSection(on ? undefined : sec)}
+                  title="Şube seçmek isteğe bağlıdır; sorulanlar şube bazında hatırlanır."
+                  className={`size-10 rounded-md text-lg font-bold transition-colors duration-(--dur-base) ${
+                    on ? "bg-firuze text-ink-950" : "bg-ink-950/50 text-ink-300 hover:text-cream"
+                  }`}
+                >
+                  {sec}
+                </button>
+              );
+            })}
+          </div>
+          <div className="mt-4 flex items-center justify-between">
             <p className="text-sm font-semibold tracking-wide text-ink-400">ÜNİTELER</p>
             <button
               type="button"
@@ -175,10 +215,10 @@ export function SetupScreen() {
               {allSelected ? "Seçimi kaldır" : "Tümünü seç"}
             </button>
           </div>
-          <ul className="mt-2 flex min-h-0 flex-col gap-2 overflow-y-auto">
+          <ul className="mt-2 flex min-h-0 flex-col gap-1.5 overflow-y-auto">
             {units.map((u) => {
               const checked = selectedUnits.includes(u.id);
-              const count = countEligible(pool, [u.id], game.questionTypes);
+              const count = countEligible(pool, [u.id], types);
               return (
                 <li key={u.id}>
                   <button
@@ -186,7 +226,7 @@ export function SetupScreen() {
                     role="checkbox"
                     aria-checked={checked}
                     onClick={() => toggleUnit(u.id)}
-                    className={`flex w-full items-center gap-4 rounded-lg px-4 py-3 text-left transition-colors duration-(--dur-base) ${
+                    className={`flex w-full items-center gap-4 rounded-lg px-4 py-2.5 text-left transition-colors duration-(--dur-base) ${
                       checked ? "bg-ink-700" : "bg-ink-800/60 hover:bg-ink-800"
                     }`}
                   >
@@ -199,7 +239,7 @@ export function SetupScreen() {
                       <span className="block text-sm text-ink-400">{u.order}. ünite</span>
                       <span className="block text-lg leading-tight font-semibold">{u.title}</span>
                     </span>
-                    <span className="tabular shrink-0 text-ink-400">{count} soru</span>
+                    <span className="tabular shrink-0 text-ink-400">{loadedPool ? `${count} soru` : "…"}</span>
                   </button>
                 </li>
               );
@@ -237,7 +277,7 @@ export function SetupScreen() {
           </div>
           <p className="mt-6 text-sm font-semibold tracking-wide text-ink-400">AYARLAR</p>
           <div className="mt-2 flex flex-col gap-4">
-            {game.settings
+            {shownFields
               .filter((f) => f.kind === "choice")
               .map((field) =>
                 field.kind === "choice" ? (
@@ -265,8 +305,21 @@ export function SetupScreen() {
             </p>
           ) : (
             <p className="text-base text-ink-300 sm:text-lg">
-              <span className="font-semibold text-cream">{game.name}</span>, {grade}. sınıf, {selectedUnits.length} ünite,{" "}
+              <span className="font-semibold text-cream">{game.name}</span>, {grade}
+              {section ? `-${section}` : ". sınıf"}, {selectedUnits.length} ünite,{" "}
               <span className="tabular">{available}</span> soru hazır.
+            </p>
+          )}
+          {seenHere > 0 && (
+            // Bu sınıfta (ya da şubede) daha önce sorulanlar destenin sonuna bırakılır; öğretmen isterse sıfırlar.
+            <p className="mt-1 flex flex-wrap items-center gap-x-2 text-sm text-ink-400 sm:text-base">
+              <History className="size-4 shrink-0" />
+              <span>
+                <span className="tabular">{seenHere}</span> soru daha önce soruldu, yeni oyunda sona bırakılır.
+              </span>
+              <button type="button" onClick={() => forgetSeen(scope)} className="rounded-md px-2 py-0.5 font-semibold text-firuze hover:bg-ink-800">
+                Hafızayı sil
+              </button>
             </p>
           )}
         </div>

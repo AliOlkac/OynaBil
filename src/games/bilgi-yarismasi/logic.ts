@@ -12,6 +12,8 @@ import type { AnswerLog, Team } from "../types";
 export const POINTS_CORRECT = 100;
 export const POINTS_STEAL = 50;
 export const EXTRA_TIME_MS = 15_000;
+/** Paragraf (LGS) sorularında metni okumak için verilen ek süre. */
+export const PASSAGE_BONUS_MS = 20_000;
 
 export type JokerKind = "half" | "time" | "pass";
 
@@ -90,8 +92,12 @@ export function currentTeam(s: QuizState): Team {
   return s.teams[s.turn % s.teams.length];
 }
 
-function timerFrom(s: QuizState, now: number): Pick<QuizState, "deadline" | "remaining"> {
-  return s.settings.seconds > 0 ? { deadline: now + s.settings.seconds * 1000, remaining: null } : { deadline: null, remaining: null };
+export function questionTimeMs(s: QuizState, q: PlayableQuestion | undefined): number {
+  return s.settings.seconds * 1000 + (q?.type === "passage" ? PASSAGE_BONUS_MS : 0);
+}
+
+function timerFrom(s: QuizState, now: number, q: PlayableQuestion | undefined): Pick<QuizState, "deadline" | "remaining"> {
+  return s.settings.seconds > 0 ? { deadline: now + questionTimeMs(s, q), remaining: null } : { deadline: null, remaining: null };
 }
 
 function openQuestion(s: QuizState, deck: PlayableQuestion[], now: number): QuizState {
@@ -106,7 +112,7 @@ function openQuestion(s: QuizState, deck: PlayableQuestion[], now: number): Quiz
     stealTeam: null,
     stealPicked: null,
     outcome: null,
-    ...timerFrom(s, now),
+    ...timerFrom(s, now, deck[s.cursor]),
   };
 }
 

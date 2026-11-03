@@ -1,0 +1,338 @@
+[
+  {
+    "kind": "pairs",
+    "id": "dkab-5-1-esma-i-husna-1",
+    "unit": "dkab-5-1",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "Allah'ın {isim} ismi ne anlama gelir?", "answer": "anlamSik" },
+      { "prompt": "Allah'ın \"{anlam}\" anlamına gelen ismi hangisidir?", "answer": "isim" }
+    ],
+    "statement": { "text": "Allah'ın {isim} ismi \"{anlam}\" anlamına gelir.", "swap": "anlam" },
+    "explanation": "{isim}, \"{anlam}\" demektir. Esmâ-i Hüsnâ, Allah'ın en güzel isimleridir.",
+    "items": [
+      { "id": "halik", "isim": "Hâlık", "anlam": "her şeyi yoktan yaratan", "anlamSik": "Her şeyi yoktan yaratan", "not": "Evrendeki her şey O'nun yaratmasıyla var olmuştur." },
+      { "id": "rezzak", "isim": "Rezzâk", "anlam": "bütün canlılara rızık veren", "anlamSik": "Bütün canlılara rızık veren", "not": "Rızık; yiyecek, içecek ve bütün nimetleri kapsar." },
+      { "id": "alim", "isim": "Alîm", "anlam": "her şeyi bilen", "anlamSik": "Her şeyi bilen", "not": "Allah, insanın içinden geçirdiklerini de bilir." },
+      { "id": "semi", "isim": "Semî", "anlam": "her şeyi işiten", "anlamSik": "Her şeyi işiten", "not": "Allah, içimizden yaptığımız duaları da işitir." },
+      { "id": "basir", "isim": "Basîr", "anlam": "her şeyi gören", "anlamSik": "Her şeyi gören", "not": "Allah, gizli ya da açık yapılan her şeyi görür." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-5-1-esma-i-husna-2",
+    "unit": "dkab-5-1",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Allah'ın {isim} ismi ne anlama gelir?", "answer": "anlamSik" },
+      { "prompt": "Allah'ın \"{anlam}\" anlamına gelen ismi hangisidir?", "answer": "isim" }
+    ],
+    "statement": { "text": "Allah'ın {isim} ismi \"{anlam}\" anlamına gelir.", "swap": "anlam" },
+    "explanation": "{isim}, \"{anlam}\" demektir. Esmâ-i Hüsnâ, Allah'ın en güzel isimleridir.",
+    "items": [
+      { "id": "kadir", "isim": "Kâdir", "anlam": "her şeye gücü yeten", "anlamSik": "Her şeye gücü yeten", "not": "Allah'ın gücü hiçbir şeyle sınırlı değildir." },
+      { "id": "gafur", "isim": "Gafûr", "anlam": "günahları çokça bağışlayan", "anlamSik": "Günahları çokça bağışlayan", "not": "Allah, hatasından pişman olup tövbe edenleri bağışlar." },
+      { "id": "vedud", "isim": "Vedûd", "anlam": "kullarını çok seven", "anlamSik": "Kullarını çok seven" },
+      { "id": "adl", "isim": "Adl", "anlam": "her işinde tam adaletli olan", "anlamSik": "Her işinde tam adaletli olan", "not": "Allah hiç kimseye haksızlık etmez." },
+      { "id": "hakim", "isim": "Hakîm", "anlam": "her işi hikmetli ve yerinde olan", "anlamSik": "Her işi hikmetli ve yerinde olan", "not": "Allah hiçbir şeyi boş ve anlamsız yaratmamıştır." },
+      { "id": "hafiz", "isim": "Hafîz", "anlam": "her şeyi koruyup gözeten", "anlamSik": "Her şeyi koruyup gözeten" }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-5-1-anma-sozleri",
+    "unit": "dkab-5-1",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "\"{soz}\" sözünün anlamı nedir?", "answer": "anlam" },
+      { "prompt": "\"{anlam}\" anlamına gelen söz hangisidir?", "answer": "soz" }
+    ],
+    "statement": { "text": "\"{soz}\" sözü \"{anlam}\" anlamına gelir.", "swap": "anlam" },
+    "explanation": "\"{soz}\", \"{anlam}\" demektir.",
+    "items": [
+      { "id": "besmele", "soz": "Bismillâhirrahmânirrahîm", "anlam": "Rahmân ve Rahîm olan Allah'ın adıyla", "not": "Bu söze besmele denir; bir işe başlarken söylenir." },
+      { "id": "elhamdulillah", "soz": "Elhamdülillah", "anlam": "Hamd Allah'a mahsustur", "not": "Nimetler için Allah'a şükrederken söylenir." },
+      { "id": "subhanallah", "soz": "Sübhânallah", "anlam": "Allah her türlü eksiklikten uzaktır", "not": "Namazdan sonra tesbih çekerken de söylenir." },
+      { "id": "masallah", "soz": "Mâşallah", "anlam": "Allah dilemiş", "not": "Beğenilen güzel bir şey karşısında söylenir." },
+      { "id": "insallah", "soz": "İnşallah", "anlam": "Allah dilerse", "not": "Gelecekte yapılması düşünülen işler için söylenir." },
+      { "id": "tekbir", "soz": "Allâhu ekber", "anlam": "Allah en büyüktür", "not": "Bu söze tekbir denir; ezanda ve namazda söylenir." },
+      { "id": "estagfirullah", "soz": "Estağfirullah", "anlam": "Allah'tan bağışlanma dilerim", "not": "Bir hata yapıldığında Allah'tan af dilemek için söylenir." },
+      { "id": "tevhid", "soz": "Lâ ilâhe illallah", "anlam": "Allah'tan başka ilah yoktur", "not": "Allah'ın birliğini dile getiren bu söz, Kelime-i Tevhid'de yer alır." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-5-1-ihlas-suresi",
+    "unit": "dkab-5-1",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi İhlas Suresi'nde bildirilir?",
+    "negative": "Aşağıdakilerden hangisi İhlas Suresi'nde bildirilmez?",
+    "statement": "{item}, İhlas Suresi'nde bildirilir.",
+    "explanation": "İhlas Suresi'nde Allah'ın bir olduğu, hiçbir şeye muhtaç olmadığı (Samed), doğurmadığı, doğurulmadığı ve hiçbir şeyin O'na denk olmadığı bildirilir.",
+    "members": ["Allah'ın bir olduğu", "Allah'ın hiçbir şeye muhtaç olmadığı", "Allah'ın doğurmadığı", "Allah'ın doğurulmadığı", "Hiçbir şeyin Allah'a denk olmadığı"],
+    "nonMembers": ["Allah'ın rızık verdiği", "Allah'ın günahları bağışladığı", "Allah'ın her şeyi işittiği", "Allah'ın gökleri ve yeri yarattığı"]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-5-2-namazin-farzlari",
+    "unit": "dkab-5-2",
+    "difficulty": 3,
+    "questions": [{ "prompt": "{tanimYonelme} ne ad verilir?", "answer": "farz" }],
+    "statement": { "text": "{tanimYonelme} {farzKucuk} denir.", "swap": "farzKucuk" },
+    "explanation": "{tanimYonelme} {farzKucuk} denir. Hanefi mezhebine göre namazın {yer} farzlardan biridir.",
+    "items": [
+      { "id": "hadesten-taharet", "farz": "Hadesten taharet", "farzKucuk": "hadesten taharet", "tanimYonelme": "Namaz için abdest almaya, gerekiyorsa gusletmeye", "yer": "dışındaki" },
+      { "id": "necasetten-taharet", "farz": "Necasetten taharet", "farzKucuk": "necasetten taharet", "tanimYonelme": "Beden, elbise ve namaz kılınacak yeri pislikten temizlemeye", "yer": "dışındaki" },
+      { "id": "setr-i-avret", "farz": "Setr-i avret", "farzKucuk": "setr-i avret", "tanimYonelme": "Namazda vücudun örtülmesi gereken yerlerini örtmeye", "yer": "dışındaki" },
+      { "id": "istikbal-i-kible", "farz": "İstikbal-i kıble", "farzKucuk": "istikbal-i kıble", "tanimYonelme": "Namazda kıbleye yönelmeye", "yer": "dışındaki" },
+      { "id": "niyet", "farz": "Niyet", "farzKucuk": "niyet", "tanimYonelme": "Kılınacak namazı kalpten belirlemeye", "yer": "dışındaki" },
+      { "id": "iftitah-tekbiri", "farz": "İftitah tekbiri", "farzKucuk": "iftitah tekbiri", "tanimYonelme": "Namaza tekbir getirerek başlamaya", "yer": "içindeki" },
+      { "id": "kiyam", "farz": "Kıyam", "farzKucuk": "kıyam", "tanimYonelme": "Namazda ayakta durmaya", "yer": "içindeki" },
+      { "id": "kiraat", "farz": "Kıraat", "farzKucuk": "kıraat", "tanimYonelme": "Namazda ayakta Kur'an'dan bir miktar okumaya", "yer": "içindeki" },
+      { "id": "ruku", "farz": "Rükû", "farzKucuk": "rükû", "tanimYonelme": "Namazda elleri dizlere koyarak eğilmeye", "yer": "içindeki" },
+      { "id": "secde", "farz": "Secde", "farzKucuk": "secde", "tanimYonelme": "Namazda alnı ve burnu yere koyarak kapanmaya", "yer": "içindeki" },
+      { "id": "kade-i-ahire", "farz": "Ka'de-i ahîre", "farzKucuk": "ka'de-i ahîre", "tanimYonelme": "Namazın son rekâtında Ettehiyyâtü okuyacak kadar oturmaya", "yer": "içindeki" }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-5-2-namazin-icindeki-farzlar",
+    "unit": "dkab-5-2",
+    "difficulty": 2,
+    "positive": "Hanefi mezhebine göre aşağıdakilerden hangisi namazın içindeki farzlardandır?",
+    "negative": "Hanefi mezhebine göre aşağıdakilerden hangisi namazın içindeki farzlardan değildir?",
+    "statement": "{item}, Hanefi mezhebine göre namazın içindeki farzlardandır.",
+    "explanation": "Hanefi mezhebine göre namazın içindeki farzlar: {members}. Hadesten ve necasetten taharet, setr-i avret, istikbal-i kıble, vakit ve niyet ise namazın dışındaki farzlardır.",
+    "members": ["İftitah tekbiri", "Kıyam", "Kıraat", "Rükû", "Secde", "Ka'de-i ahîre"],
+    "nonMembers": ["Hadesten taharet", "Necasetten taharet", "Setr-i avret", "İstikbal-i kıble", "Vakit", "Niyet"]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-5-2-abdesti-bozanlar",
+    "unit": "dkab-5-2",
+    "difficulty": 2,
+    "positive": "Hanefi mezhebine göre aşağıdakilerden hangisi abdesti bozar?",
+    "negative": "Hanefi mezhebine göre aşağıdakilerden hangisi abdesti bozmaz?",
+    "statement": "{item}, Hanefi mezhebine göre abdesti bozar.",
+    "explanation": "Hanefi mezhebine göre tuvalet ihtiyacını gidermek, yatarak uyumak, bayılmak, ağız dolusu kusmak ve yaradan kan çıkıp akması abdesti bozar. Tırnak kesmek, konuşmak ya da su içmek abdesti bozmaz.",
+    "members": ["Tuvalet ihtiyacını gidermek", "Yatarak uyumak", "Bayılmak", "Ağız dolusu kusmak", "Yaradan kan çıkıp akması"],
+    "nonMembers": ["Tırnak kesmek", "Su içmek", "Saçı taramak", "Konuşmak", "Yemek yemek"]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-5-2-dort-rekatli-farzlar",
+    "unit": "dkab-5-2",
+    "difficulty": 2,
+    "positive": "Aşağıdaki namazlardan hangisinin farzı dört rekâttır?",
+    "negative": "Aşağıdaki namazlardan hangisinin farzı dört rekât değildir?",
+    "statement": "{item}, farzı dört rekât olan namazlardandır.",
+    "explanation": "Öğle, ikindi ve yatsı namazlarının farzı dörder rekâttır. Sabah namazının farzı iki, akşam namazının farzı üç, cuma namazının farzı ise iki rekâttır.",
+    "members": ["Öğle namazı", "İkindi namazı", "Yatsı namazı"],
+    "nonMembers": ["Sabah namazı", "Akşam namazı", "Cuma namazı"]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-5-3-kavramlar",
+    "unit": "dkab-5-3",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanimYonelme} ne ad verilir?", "answer": "kavram" },
+      { "prompt": "{kavram} kavramı ne anlama gelir?", "answer": "tanim" }
+    ],
+    "statement": { "text": "{tanimYonelme} {kavramKucuk} denir.", "swap": "kavramKucuk" },
+    "explanation": "{tanimYonelme} {kavramKucuk} denir.",
+    "items": [
+      { "id": "sure", "kavram": "Sure", "kavramKucuk": "sure", "tanim": "En az üç ayetten oluşan bölüm", "tanimYonelme": "Kur'an-ı Kerim'in en az üç ayetten oluşan bölümlerinin her birine", "not": "Kur'an-ı Kerim 114 sureden oluşur." },
+      { "id": "ayet", "kavram": "Ayet", "kavramKucuk": "ayet", "tanim": "Surelerdeki başı ve sonu belli ifade", "tanimYonelme": "Surelerin içinde yer alan, başı ve sonu belli ifadelerin her birine", "not": "Ayet kelimesi işaret ve delil anlamına da gelir." },
+      { "id": "cuz", "kavram": "Cüz", "kavramKucuk": "cüz", "tanim": "Kur'an'ın otuz bölümünden her biri", "tanimYonelme": "Kur'an-ı Kerim'in yaklaşık yirmişer sayfalık otuz bölümünden her birine" },
+      { "id": "mushaf", "kavram": "Mushaf", "kavramKucuk": "mushaf", "tanim": "Kur'an'ın kitap hâli", "tanimYonelme": "Kur'an-ı Kerim'in sayfaları bir araya getirilmiş kitap hâline", "not": "Kur'an, Hz. Ebu Bekir döneminde mushaf hâlinde toplanmıştır." },
+      { "id": "hatim", "kavram": "Hatim", "kavramKucuk": "hatim", "tanim": "Kur'an'ı baştan sona okumak", "tanimYonelme": "Kur'an-ı Kerim'i baştan sona okuyup bitirmeye" },
+      { "id": "meal", "kavram": "Meal", "kavramKucuk": "meal", "tanim": "Kur'an'ın anlamını başka dile aktarmak", "tanimYonelme": "Kur'an-ı Kerim'in anlamının başka bir dile aktarılmasına", "not": "Meal okumak, Kur'an'ın ne anlattığını anlamamıza yardımcı olur." },
+      { "id": "hafiz", "kavram": "Hafız", "kavramKucuk": "hafız", "tanim": "Kur'an'ı ezbere bilen kişi", "tanimYonelme": "Kur'an-ı Kerim'in tamamını ezberleyen kişiye" },
+      { "id": "tefsir", "kavram": "Tefsir", "kavramKucuk": "tefsir", "tanim": "Ayetleri ayrıntılı açıklayıp yorumlamak", "tanimYonelme": "Kur'an ayetlerinin ayrıntılı olarak açıklanıp yorumlanmasına", "not": "Tefsir yapan âlime müfessir denir." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-5-3-sureler",
+    "unit": "dkab-5-3",
+    "difficulty": 2,
+    "questions": [{ "prompt": "{tarif} hangisidir?", "answer": "sure" }],
+    "statement": { "text": "{tarif} {sure}'dir.", "swap": "sure" },
+    "explanation": "{tarif} {sure}'dir.",
+    "items": [
+      { "id": "fatiha", "sure": "Fatiha Suresi", "tarif": "Mushafın ilk suresi olan ve namazda her rekâtta okunan sure", "not": "Fatiha, açış ve başlangıç anlamına gelir." },
+      { "id": "bakara", "sure": "Bakara Suresi", "tarif": "Kur'an-ı Kerim'in en uzun suresi", "not": "Âyetü'l-Kürsî bu surede yer alır." },
+      { "id": "alak", "sure": "Alak Suresi", "tarif": "İlk inen ayetlerin yer aldığı sure", "not": "İlk inen ayetler \"Oku!\" emriyle başlar." },
+      { "id": "nas", "sure": "Nas Suresi", "tarif": "Mushafın son suresi", "not": "Bu surede insanların Rabbine sığınmak öğretilir." },
+      { "id": "ihlas", "sure": "İhlas Suresi", "tarif": "Allah'ın bir olduğunu ve hiçbir şeyin O'na denk olmadığını bildiren sure", "not": "Dört ayetlik bu sure, tevhid inancını özetler." },
+      { "id": "kadir", "sure": "Kadir Suresi", "tarif": "Kur'an'ın indirildiği gecenin bin aydan daha hayırlı olduğunu bildiren sure", "not": "Kadir Gecesi Ramazan ayındadır." },
+      { "id": "fil", "sure": "Fil Suresi", "tarif": "Kâbe'yi yıkmaya gelen orduya kuşların taş attığını anlatan sure", "not": "Bu olay, Hz. Muhammed'in (sav) doğduğu yıl yaşanmıştır." },
+      { "id": "maun", "sure": "Mâûn Suresi", "tarif": "Yetimi itip kakanları ve yoksulu doyurmaya özendirmeyenleri kınayan sure", "not": "Sure, yardımlaşmanın önemini öğretir." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-5-3-okuma-adabi",
+    "unit": "dkab-5-3",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi Kur'an-ı Kerim'i okuma ve dinleme adabına uygundur?",
+    "negative": "Aşağıdakilerden hangisi Kur'an-ı Kerim'i okuma ve dinleme adabına uygun değildir?",
+    "statement": "{item}, Kur'an-ı Kerim'i okuma ve dinleme adabına uygundur.",
+    "explanation": "Kur'an-ı Kerim abdestli olarak, temiz bir yerde, eûzü besmele ile başlanıp acele etmeden okunur. Okunan Kur'an sessizce ve saygıyla dinlenir; mushafa özen gösterilir.",
+    "members": ["Okumadan önce abdest almak", "Okumaya eûzü besmele ile başlamak", "Temiz ve sessiz bir yerde okumak", "Acele etmeden tane tane okumak", "Okunan Kur'an'ı saygıyla dinlemek"],
+    "nonMembers": ["Mushafı yere gelişigüzel bırakmak", "Okurken başka işlerle uğraşmak", "Kur'an okunurken yüksek sesle konuşmak", "Mushafın üzerine eşya koymak", "Anlaşılmayacak kadar hızlı okumak"]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-5-3-temel-bilgiler",
+    "unit": "dkab-5-3",
+    "difficulty": 2,
+    "positive": "Kur'an-ı Kerim ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "negative": "Kur'an-ı Kerim ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "statement": "Kur'an-ı Kerim {item}.",
+    "explanation": "Kur'an-ı Kerim, Hz. Muhammed'e (sav) Ramazan ayında Hira Mağarası'nda inmeye başladı ve 23 yıla yakın bir sürede tamamlandı. 114 sure ve 30 cüzden oluşur.",
+    "members": ["114 sureden oluşur", "30 cüzden oluşur", "Hz. Muhammed'e (sav) indirilmiştir", "Ramazan ayında inmeye başlamıştır", "Hira Mağarası'nda inmeye başlamıştır", "23 yıla yakın bir sürede indirilmiştir"],
+    "nonMembers": ["114 ayetten oluşur", "30 sureden oluşur", "Hz. Musa'ya indirilmiştir", "Medine'de inmeye başlamıştır"]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-5-4-kissalar-1",
+    "unit": "dkab-5-4",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{tarif} peygamber kimdir?", "answer": "peygamber" },
+      { "prompt": "Aşağıdakilerden hangisi {peygamberIn} kıssasında anlatılır?", "answer": "ozet" }
+    ],
+    "statement": { "text": "{peygamber}, {ifade}.", "swap": "peygamber" },
+    "explanation": "{peygamber}, {ifade}.",
+    "items": [
+      { "id": "adem", "peygamber": "Hz. Âdem", "peygamberIn": "Hz. Âdem'in", "tarif": "Yasak ağaçtan yedikten sonra pişman olup tövbe eden ve tövbesi kabul edilen", "ifade": "yasak ağaçtan yedikten sonra tövbe etmiş, Allah da onun tövbesini kabul etmiştir", "ozet": "Yasak ağaçtan yiyip tövbe etmesi", "not": "Hz. Âdem ilk insan ve ilk peygamberdir." },
+      { "id": "nuh", "peygamber": "Hz. Nuh", "peygamberIn": "Hz. Nuh'un", "tarif": "Kavmini uzun yıllar Allah'a inanmaya çağıran ve Allah'ın emriyle gemi yapan", "ifade": "Allah'ın emriyle gemi yapmış ve inananlarla birlikte tufandan kurtulmuştur", "ozet": "Gemi yapıp tufandan kurtulması", "not": "Kıssası sabrı ve Allah'a güvenmeyi öğretir." },
+      { "id": "ibrahim", "peygamber": "Hz. İbrahim", "peygamberIn": "Hz. İbrahim'in", "tarif": "Putları kırdığı için ateşe atılan ve Allah'ın izniyle yanmayan", "ifade": "ateşe atıldığında Allah'ın izniyle yanmamıştır", "ozet": "Ateşe atılıp yanmaması", "not": "Allah, ateşi onun için serin ve esenlikli kılmıştır." },
+      { "id": "yusuf", "peygamber": "Hz. Yusuf", "peygamberIn": "Hz. Yusuf'un", "tarif": "Kardeşleri tarafından kuyuya atılan ve yıllar sonra Mısır'da yönetici olan", "ifade": "kardeşleri tarafından kuyuya atılmış, yıllar sonra Mısır'da yönetici olmuştur", "ozet": "Kardeşlerince kuyuya atılması", "not": "Hayatı Yusuf Suresi'nde anlatılır; kıssası sabrı ve affetmeyi öğretir." },
+      { "id": "musa", "peygamber": "Hz. Musa", "peygamberIn": "Hz. Musa'nın", "tarif": "Firavun'u Allah'a inanmaya çağıran ve asası Allah'ın izniyle yılana dönüşen", "ifade": "Firavun'u Allah'a inanmaya çağırmış, asası Allah'ın izniyle yılana dönüşmüştür", "ozet": "Asasının yılana dönüşmesi", "not": "Kardeşi Hz. Harun da onunla birlikte görevlendirilmiştir." },
+      { "id": "yunus", "peygamber": "Hz. Yunus", "peygamberIn": "Hz. Yunus'un", "tarif": "Balığın karnında Allah'a dua ederek hatasını kabul eden", "ifade": "balığın karnında Allah'a dua etmiş, Allah da onu kurtarmıştır", "ozet": "Balığın karnında dua etmesi", "not": "Kıssası, zor durumda ümitsizliğe düşmemeyi öğretir." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-5-4-kissalar-2",
+    "unit": "dkab-5-4",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tarif} peygamber kimdir?", "answer": "peygamber" },
+      { "prompt": "Aşağıdakilerden hangisi {peygamberIn} kıssasında anlatılır?", "answer": "ozet" }
+    ],
+    "statement": { "text": "{peygamber}, {ifade}.", "swap": "peygamber" },
+    "explanation": "{peygamber}, {ifade}.",
+    "items": [
+      { "id": "eyyub", "peygamber": "Hz. Eyyub", "peygamberIn": "Hz. Eyyub'un", "tarif": "Ağır hastalık ve sıkıntılar karşısında sabrını ve Allah'a güvenini kaybetmeyen", "ifade": "ağır hastalık ve sıkıntılar karşısında sabretmiş, Allah'a olan güvenini kaybetmemiştir", "ozet": "Hastalık karşısında sabretmesi", "not": "Kur'an onu sabırlı bir kul olarak över." },
+      { "id": "suleyman", "peygamber": "Hz. Süleyman", "peygamberIn": "Hz. Süleyman'ın", "tarif": "Karıncaların konuşmasını duyunca gülümseyip Allah'a şükreden", "ifade": "karıncaların konuşmasını duyunca gülümsemiş ve Allah'a şükretmiştir", "ozet": "Karıncaların konuşmasını duyması", "not": "Bu kıssa Neml Suresi'nde anlatılır; neml karınca demektir." },
+      { "id": "suayb", "peygamber": "Hz. Şuayb", "peygamberIn": "Hz. Şuayb'ın", "tarif": "Medyen halkını ölçü ve tartıda hile yapmamaya çağıran", "ifade": "Medyen halkını ölçü ve tartıda hile yapmamaya çağırmıştır", "ozet": "Ölçü ve tartıda dürüstlüğe çağırması", "not": "Kıssası ticarette dürüstlüğün önemini öğretir." },
+      { "id": "salih", "peygamber": "Hz. Salih", "peygamberIn": "Hz. Salih'in", "tarif": "Semud kavmine gönderilen ve onlardan Allah'ın devesine zarar vermemelerini isteyen", "ifade": "Semud kavmine gönderilmiş, onlardan Allah'ın devesine zarar vermemelerini istemiştir", "ozet": "Semud kavmine gönderilmesi", "not": "Kavmi uyarıyı dinlemeyip deveye zarar verdiği için cezalandırılmıştır." },
+      { "id": "davud", "peygamber": "Hz. Davud", "peygamberIn": "Hz. Davud'un", "tarif": "Kendisine Zebur verilen ve Allah'ın izniyle demirden zırh yapan", "ifade": "kendisine Zebur verilmiş, Allah'ın izniyle demirden zırh yapmıştır", "ozet": "Kendisine Zebur verilmesi", "not": "Hz. Davud hem peygamber hem hükümdardır." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-5-4-akrabalik",
+    "unit": "dkab-5-4",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tarif} peygamber kimdir?", "answer": "kisi" },
+      { "prompt": "{soru}", "answer": "akraba" }
+    ],
+    "statement": { "text": "{kisi}, {ifade}.", "swap": "kisi" },
+    "explanation": "{kisi}, {ifade}.",
+    "items": [
+      { "id": "harun", "kisi": "Hz. Harun", "tarif": "Hz. Musa'nın kardeşi olan", "ifade": "Hz. Musa'nın kardeşidir", "soru": "Hz. Harun hangi peygamberin kardeşidir?", "akraba": "Hz. Musa", "not": "Hz. Musa'nın duası üzerine Allah, Hz. Harun'u ona yardımcı olarak görevlendirmiştir." },
+      { "id": "yakub", "kisi": "Hz. Yakub", "tarif": "Hz. Yusuf'un babası olan", "ifade": "Hz. Yusuf'un babasıdır", "soru": "Hz. Yakub hangi peygamberin babasıdır?", "akraba": "Hz. Yusuf", "not": "Oğlundan ayrı kaldığı yıllarda sabrıyla örnek olmuştur." },
+      { "id": "ismail", "kisi": "Hz. İsmail", "tarif": "Babası Hz. İbrahim ile birlikte Kâbe'yi inşa eden", "ifade": "Hz. İbrahim'in oğludur", "soru": "Hz. İsmail hangi peygamberin oğludur?", "akraba": "Hz. İbrahim", "not": "Babasıyla birlikte Kâbe'yi inşa etmiştir." },
+      { "id": "suleyman", "kisi": "Hz. Süleyman", "tarif": "Hz. Davud'un oğlu olan", "ifade": "Hz. Davud'un oğludur", "soru": "Hz. Süleyman hangi peygamberin oğludur?", "akraba": "Hz. Davud", "not": "Babası gibi o da hem peygamber hem hükümdardır." },
+      { "id": "yahya", "kisi": "Hz. Yahya", "tarif": "Hz. Zekeriya'nın oğlu olan", "ifade": "Hz. Zekeriya'nın oğludur", "soru": "Hz. Yahya hangi peygamberin oğludur?", "akraba": "Hz. Zekeriya", "not": "Hz. Zekeriya'nın yaşlılığında yaptığı dua üzerine doğmuştur." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-5-4-hz-yusuf",
+    "unit": "dkab-5-4",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi Hz. Yusuf'un hayatında yaşanan olaylardan biridir?",
+    "negative": "Aşağıdakilerden hangisi Hz. Yusuf'un hayatında yaşanan olaylardan biri değildir?",
+    "statement": "{item}, Hz. Yusuf'un kıssasında anlatılır.",
+    "explanation": "Yusuf Suresi'nde anlatıldığına göre kardeşleri Hz. Yusuf'u kuyuya attı. O haksız yere zindana girdi, rüyaları yorumladı, Mısır'da yönetici oldu, kardeşlerini affetti ve babasına kavuştu.",
+    "members": ["Kardeşleri tarafından kuyuya atılması", "Haksız yere zindana atılması", "Rüyaları yorumlaması", "Mısır'da yönetici olması", "Kardeşlerini affetmesi", "Babası Hz. Yakub'a kavuşması"],
+    "nonMembers": ["Balığın karnında kalması", "Ateşe atılıp yanmaması", "Tufandan önce gemi yapması", "Asasının yılana dönüşmesi", "Karıncaların konuşmasını duyması"]
+  },
+
+  {
+    "kind": "pairs",
+    "id": "dkab-5-5-caminin-bolumleri",
+    "unit": "dkab-5-5",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{tanimYonelme} ne ad verilir?", "answer": "bolum" },
+      { "prompt": "{bolum} nedir?", "answer": "tanim" }
+    ],
+    "statement": { "text": "{tanimYonelme} {bolumKucuk} denir.", "swap": "bolumKucuk" },
+    "explanation": "{tanimYonelme} {bolumKucuk} denir.",
+    "items": [
+      { "id": "mihrap", "bolum": "Mihrap", "bolumKucuk": "mihrap", "tanim": "Kıble yönünü gösteren girintili bölüm", "tanimYonelme": "Camide kıble yönünü gösteren ve imamın namaz kıldırdığı girintili bölüme", "not": "Mihraplar çoğunlukla taş, mermer ya da çiniyle süslenir." },
+      { "id": "minber", "bolum": "Minber", "bolumKucuk": "minber", "tanim": "Hutbe okunan merdivenli yüksek yer", "tanimYonelme": "Camide cuma ve bayram hutbelerinin okunduğu merdivenli yüksek yere", "not": "Hutbe okuyan kişiye hatip denir." },
+      { "id": "kursu", "bolum": "Kürsü", "bolumKucuk": "kürsü", "tanim": "Vaaz verilen yüksekçe yer", "tanimYonelme": "Camide vaizin oturarak vaaz verdiği yüksekçe yere", "not": "Vaaz, dinî konularda yapılan öğüt verici konuşmadır." },
+      { "id": "minare", "bolum": "Minare", "bolumKucuk": "minare", "tanim": "Ezan okunan yüksek kule", "tanimYonelme": "Ezan okunması için yapılan yüksek kuleye", "not": "Minarenin tepesindeki süse alem denir." },
+      { "id": "serefe", "bolum": "Şerefe", "bolumKucuk": "şerefe", "tanim": "Minaredeki ezan okunan balkon", "tanimYonelme": "Minarede müezzinin ezan okuduğu balkona", "not": "Edirne'deki Üç Şerefeli Camii, adını minaresindeki üç şerefeden alır." },
+      { "id": "sadirvan", "bolum": "Şadırvan", "bolumKucuk": "şadırvan", "tanim": "Abdest alınan çeşmeli yapı", "tanimYonelme": "Abdest almak için yapılan çeşmeli yapıya", "not": "Şadırvanlar genellikle cami avlusunda bulunur." },
+      { "id": "kubbe", "bolum": "Kubbe", "bolumKucuk": "kubbe", "tanim": "Yarım küre biçimli çatı örtüsü", "tanimYonelme": "Caminin üstünü örten yarım küre biçimindeki örtüye", "not": "Kubbelerin iç yüzü çoğunlukla hat ve kalem işiyle süslenir." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "dkab-5-5-susleme-sanatlari",
+    "unit": "dkab-5-5",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanimYonelme} ne ad verilir?", "answer": "sanat" },
+      { "prompt": "{sanat} nedir?", "answer": "tanim" }
+    ],
+    "statement": { "text": "{tanimYonelme} {sanatKucuk} denir.", "swap": "sanatKucuk" },
+    "explanation": "{tanimYonelme} {sanatKucuk} denir.",
+    "items": [
+      { "id": "hat", "sanat": "Hat", "sanatKucuk": "hat", "tanim": "Yazıyı güzel yazma sanatı", "tanimYonelme": "Yazıyı kurallarına uygun olarak güzel ve estetik biçimde yazma sanatına", "not": "Hat sanatçısına hattat denir." },
+      { "id": "tezhip", "sanat": "Tezhip", "sanatKucuk": "tezhip", "tanim": "Altın ve boyayla kitap süsleme", "tanimYonelme": "Mushaf sayfalarını ve levhaları altın ve boyalarla süsleme sanatına", "not": "Tezhip sanatçısına müzehhip denir." },
+      { "id": "cini", "sanat": "Çini", "sanatKucuk": "çini", "tanim": "Sırlanıp fırınlanan desenli seramik", "tanimYonelme": "Üzerine desen işlenip sırlanan ve fırında pişirilen seramik süslemeye", "not": "Ülkemizde İznik ve Kütahya, çinileriyle ünlüdür." },
+      { "id": "kundekari", "sanat": "Kündekâri", "sanatKucuk": "kündekâri", "tanim": "Ahşabı çivisiz, tutkalsız birleştirme", "tanimYonelme": "Ahşap parçaların çivi ve tutkal kullanılmadan birbirine geçirilmesiyle yapılan süslemeye", "not": "Bu teknik özellikle ahşap minber ve kapılarda kullanılır." },
+      { "id": "kalem-isi", "sanat": "Kalem işi", "sanatKucuk": "kalem işi", "tanim": "Duvar ve tavanlara fırçayla süsleme", "tanimYonelme": "Cami duvarlarına, kubbe ve tavanlara fırça ve boyayla yapılan süslemeye", "not": "Kalem işinde bitkisel ve geometrik motifler kullanılır." },
+      { "id": "sedef-kakma", "sanat": "Sedef kakma", "sanatKucuk": "sedef kakma", "tanim": "Ahşaba sedef parçaları yerleştirme", "tanimYonelme": "Ahşap yüzeylere oyuklar açılıp sedef parçaları yerleştirilerek yapılan süslemeye", "not": "Sedef, bazı deniz kabuklarının parlak iç yüzüdür." },
+      { "id": "tas-isciligi", "sanat": "Taş işçiliği", "sanatKucuk": "taş işçiliği", "tanim": "Taşa oyarak motif işleme", "tanimYonelme": "Taş yüzeylere oyarak motif işleme sanatına", "not": "Divriği Ulu Camii'nin taş kapıları bu sanatın ünlü örnekleridir." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-5-5-mimar-sinan",
+    "unit": "dkab-5-5",
+    "difficulty": 3,
+    "positive": "Aşağıdaki camilerden hangisi Mimar Sinan'ın eserlerindendir?",
+    "negative": "Aşağıdaki camilerden hangisi Mimar Sinan'ın eserlerinden değildir?",
+    "statement": "{item}, Mimar Sinan'ın eserlerindendir.",
+    "explanation": "Mimar Sinan'ın eserlerinden bazıları: {members}. Sultanahmet Camii'nin mimarı ise Sedefkâr Mehmed Ağa'dır.",
+    "members": ["Süleymaniye Camii", "Edirne Selimiye Camii", "Şehzade Camii", "Mihrimah Sultan Camii", "Rüstem Paşa Camii"],
+    "nonMembers": ["Sultanahmet Camii", "Bursa Ulu Camii", "Divriği Ulu Camii", "Konya Alaaddin Camii", "Edirne Üç Şerefeli Camii"]
+  },
+  {
+    "kind": "list",
+    "id": "dkab-5-5-bitkisel-motifler",
+    "unit": "dkab-5-5",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi bitkisel motiflere örnektir?",
+    "negative": "Aşağıdakilerden hangisi bitkisel motiflere örnek değildir?",
+    "statement": "{item}, bitkisel motiflere örnektir.",
+    "explanation": "Bitkisel motiflerde lale, karanfil, sümbül, gül ve servi gibi bitkiler kullanılır. Yıldız, altıgen ve üçgen gibi şekillerin tekrarıyla yapılan süslemeler ise geometrik motiftir.",
+    "members": ["Lale", "Karanfil", "Sümbül", "Gül", "Servi"],
+    "nonMembers": ["Sekiz köşeli yıldız", "Altıgen", "Çokgen", "Üçgen", "Kare"]
+  }
+]

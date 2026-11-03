@@ -2,9 +2,10 @@
 
 import confetti from "canvas-confetti";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { ArrowRight, Check, Clock, Crown, Divide, Flame, Pause, Play, SkipForward, X } from "lucide-react";
+import { ArrowRight, Check, Clock, Crown, Divide, Flag, Flame, Pause, Play, SkipForward, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { GameIntro } from "@/components/game/GameIntro";
+import { ReportDialog } from "@/components/game/ReportDialog";
 import { Results } from "@/components/game/Results";
 import { TimerRing } from "@/components/game/TimerRing";
 import { Button } from "@/components/ui/Button";
@@ -13,6 +14,7 @@ import { findUnit } from "@/core/repository";
 import { clock, usePersistentReducer, useNow } from "@/lib/hooks";
 import { dur, ease, spring, stagger } from "@/lib/motion";
 import { cssColor } from "@/lib/color";
+import { memoryScope } from "@/lib/memory";
 import { sfx } from "@/lib/sound";
 import { bilgiYarismasi } from "../registry";
 import { TEAM_STYLES } from "../teams";
@@ -22,6 +24,7 @@ import {
   currentTeam,
   POINTS_CORRECT,
   POINTS_STEAL,
+  questionTimeMs,
   quizReducer,
   standings,
   totalQuestions,
@@ -31,6 +34,29 @@ import {
 } from "./logic";
 
 const LETTERS = ["A", "B", "C", "D"];
+
+/** LGS'de olumsuz soru kökü vurgulanır: "değildir", "çıkarılamaz" gibi sözcükler altı çizili ve mercan renginde. */
+const NEGATIVE = /(değildir|çıkarılamaz|ulaşılamaz|söylenemez|yoktur|olamaz|gösterilemez|verilemez)/giu;
+function emphasize(text: string) {
+  const parts = text.split(NEGATIVE);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) =>
+    i % 2 === 1 ? (
+      <span key={i} className="text-mercan underline decoration-[0.12em] underline-offset-[0.18em]">
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  );
+}
+
+/** Paragraf uzadıkça yazı bir kademe küçülür; tahtada metin kutusu yine de sığmazsa kendi içinde kayar. */
+function contextSize(text: string) {
+  if (text.length <= 320) return "text-xl leading-relaxed sm:text-2xl sm:leading-relaxed";
+  if (text.length <= 520) return "text-lg leading-relaxed sm:text-xl sm:leading-relaxed";
+  return "text-lg leading-relaxed";
+}
 
 function promptSize(text: string) {
   if (text.length <= 70) return "text-3xl sm:text-5xl";
@@ -85,28 +111,11 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
     else if (s.outcome === "wrong" || s.outcome === "timeout" || s.outcome === "steal-failed") sfx.wrong();
   }, [s.outcome]);
 
-  // Klavye: A-D / 1-4 cevap, Enter sonraki, P duraklat. Dizüstünden yöneten öğretmen için.
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement || e.metaKey || e.ctrlKey) return;
-      const key = e.key.toLowerCase();
-      const index = ["a", "b", "c", "d"].indexOf(key) !== -1 ? ["a", "b", "c", "d"].indexOf(key) : ["1", "2", "3", "4"].indexOf(key);
-      if (index !== -1) {
-        pick(index);
-      } else if ((key === "enter" || key === " ") && s.phase === "reveal") {
-        e.preventDefault();
-        dispatch({ type: "next", now: Date.now() });
-      } else if (key === "p" && s.phase === "question") {
-        dispatch({ type: paused ? "resume" : "pause", now: Date.now() });
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  });
 
   const unitTitle = q ? findUnit(q.unit)?.title : undefined;
   const reducedMotion = useReducedMotion();
   const [flights, setFlights] = useState<Flight[]>([]);
+  const [reporting, setReporting] = useState(false);
   const flightId = useRef(0);
   /** Doğru şıktan takımın skor kutusuna uçan puan ve şıktan çıkan konfeti. */
   function celebrate(option: number, scorer: Team, points: number) {
@@ -133,6 +142,45 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
     setFlights((list) => [...list, { id, from, to, text: `+${points}`, color }]);
   }
 
+  const questionMeta = (
+    <div className="flex items-center gap-3 text-lg text-ink-300">
+      <span className="tabular font-semibold text-cream">
+        Soru {Math.min(s.asked + (s.phase === "reveal" || s.phase === "steal" ? 0 : 1), totalQuestions(s))}/{totalQuestions(s)}
+      </span>
+      {q?.type === "passage" && <span className="rounded-md bg-kehribar px-2 py-0.5 text-sm font-bold text-ink-950">LGS tarzı</span>}
+      {unitTitle && <span className="truncate">{unitTitle}</span>}
+    </div>
+  );
+
+  const timer =
+    settings.seconds > 0 && s.phase === "question" ? (
+      <button
+        type="button"
+        onClick={() => dispatch({ type: paused ? "resume" : "pause", now: clock() })}
+        className="group relative shrink-0 rounded-full"
+        aria-label={paused ? "Süreyi devam ettir" : "Süreyi duraklat"}
+      >
+        <TimerRing remainingMs={remaining} totalMs={questionTimeMs(s, q)} paused={paused} className="size-28 text-base" />
+        <span className="absolute -bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-ink-800 px-2.5 py-0.5 text-xs font-semibold text-ink-300">
+          {paused ? <Play className="size-3 fill-current" /> : <Pause className="size-3 fill-current" />}
+          {paused ? "Devam" : "Duraklat"}
+        </span>
+      </button>
+    ) : null;
+
+  function tiles(size: TileSize) {
+    return q.options.map((option, i) => {
+      const hidden = s.hidden.includes(i);
+      const isCorrect = i === q.correctIndex;
+      const wasPicked = s.picked === i || s.stealPicked === i;
+      const blocked = hidden || (s.phase === "steal" && s.picked === i);
+      const revealing = s.phase === "reveal";
+      const answering = s.phase === "question" || (s.phase === "steal" && s.stealTeam !== null);
+      const state: TileState = revealing ? (isCorrect ? "correct" : wasPicked ? "wrong" : "dim") : blocked ? "blocked" : wasPicked && s.phase === "steal" ? "wrong" : "idle";
+      return <AnswerTile key={`${q.id}-${i}`} index={i} text={option} state={state} disabled={!answering || blocked} onPick={() => pick(i)} size={size} />;
+    });
+  }
+
   function pick(option: number) {
     if (s.phase === "question" && !paused) {
       if (option === q.correctIndex && !s.hidden.includes(option)) celebrate(option, team, POINTS_CORRECT);
@@ -143,6 +191,25 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
       dispatch({ type: "steal-answer", option });
     }
   }
+
+  // Klavye: A-D / 1-4 cevap, Enter sonraki, P duraklat. Dizüstünden yöneten öğretmen için.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement || e.metaKey || e.ctrlKey) return;
+      const key = e.key.toLowerCase();
+      const index = ["a", "b", "c", "d"].indexOf(key) !== -1 ? ["a", "b", "c", "d"].indexOf(key) : ["1", "2", "3", "4"].indexOf(key);
+      if (index !== -1) {
+        pick(index);
+      } else if ((key === "enter" || key === " ") && s.phase === "reveal") {
+        e.preventDefault();
+        dispatch({ type: "next", now: Date.now() });
+      } else if (key === "p" && s.phase === "question") {
+        dispatch({ type: paused ? "resume" : "pause", now: Date.now() });
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  });
 
   if (s.phase === "ready") {
     return (
@@ -175,12 +242,12 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
         deck={deck}
         onRestart={onRestart}
         setupHref={`/kurulum?oyun=${config.gameId}`}
+        seenScope={memoryScope(config.subjectId, config.grade, config.section)}
       />
     );
   }
 
   const revealing = s.phase === "reveal";
-  const answering = s.phase === "question" || (s.phase === "steal" && s.stealTeam !== null);
   const stealTeam = s.teams.find((t) => t.id === s.stealTeam);
   const stealer = stealTeam;
   const activeTeam = s.phase === "steal" && stealTeam ? stealTeam : team;
@@ -211,67 +278,73 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="flex items-start gap-6">
-          <div className="min-w-0 flex-1">
-            <div className="flex items-center gap-3 text-lg text-ink-300">
-              <span className="tabular font-semibold text-cream">
-                Soru {Math.min(s.asked + (revealing || s.phase === "steal" ? 0 : 1), totalQuestions(s))}/{totalQuestions(s)}
-              </span>
-              {unitTitle && <span className="truncate">{unitTitle}</span>}
+        {q.type === "passage" ? (
+          // Paragraf (LGS) sorusu: metin solda okunur; soru kökü, süre ve şıklar sağda birlikte durur.
+          <div className="grid flex-1 grid-cols-1 gap-6 pb-5 lg:min-h-0 lg:grid-cols-[1.25fr_1fr] lg:grid-rows-[minmax(0,1fr)] lg:gap-8">
+            <div className="flex flex-col lg:min-h-0">
+              {questionMeta}
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={q.id}
+                  className={`mt-3 rounded-xl lg:min-h-0 lg:overflow-y-auto bg-ink-850 p-6 text-cream-dim shadow-[var(--surface-light)] ${contextSize(q.context ?? "")}`}
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: dur.base, ease }}
+                >
+                  {q.context}
+                </motion.p>
+              </AnimatePresence>
             </div>
-            <AnimatePresence mode="wait">
-              <motion.h2
-                key={q.id}
-                className={`mt-3 leading-[1.15] font-bold text-balance ${promptSize(q.prompt)}`}
-                initial={{ opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: dur.base, ease }}
-              >
-                {q.prompt}
-              </motion.h2>
-            </AnimatePresence>
+            <div className="flex flex-col gap-4 lg:min-h-0">
+              <div className="flex items-start gap-6">
+                <AnimatePresence mode="wait">
+                  <motion.h2
+                    key={q.id}
+                    className={`min-w-0 flex-1 leading-tight font-bold text-balance ${q.prompt.length <= 60 ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl"}`}
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: dur.base, ease, delay: stagger }}
+                  >
+                    {emphasize(q.prompt)}
+                  </motion.h2>
+                </AnimatePresence>
+                {timer}
+              </div>
+              <div className="grid min-h-0 flex-1 auto-rows-[minmax(4.5rem,auto)] gap-3 sm:grid-rows-4">{tiles("compact")}</div>
+            </div>
           </div>
-          {settings.seconds > 0 && s.phase === "question" && (
-            <button
-              type="button"
-              onClick={() => dispatch({ type: paused ? "resume" : "pause", now: Date.now() })}
-              className="group relative shrink-0 rounded-full"
-              aria-label={paused ? "Süreyi devam ettir" : "Süreyi duraklat"}
-            >
-              <TimerRing remainingMs={remaining} totalMs={settings.seconds * 1000} paused={paused} className="size-28 text-base" />
-              <span className="absolute -bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-ink-800 px-2.5 py-0.5 text-xs font-semibold text-ink-300">
-                {paused ? <Play className="size-3 fill-current" /> : <Pause className="size-3 fill-current" />}
-                {paused ? "Devam" : "Duraklat"}
-              </span>
-            </button>
-          )}
-        </div>
+        ) : (
+          <>
+            <div className="flex items-start gap-6">
+              <div className="min-w-0 flex-1">
+                {questionMeta}
+                <AnimatePresence mode="wait">
+                  <motion.h2
+                    key={q.id}
+                    className={`mt-3 leading-[1.15] font-bold text-balance ${promptSize(q.prompt)}`}
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: dur.base, ease }}
+                  >
+                    {emphasize(q.prompt)}
+                  </motion.h2>
+                </AnimatePresence>
+              </div>
+              {timer}
+            </div>
 
-        <div
-          className={`mt-6 grid flex-1 auto-rows-[minmax(4.5rem,auto)] grid-cols-1 gap-3 pb-5 sm:min-h-0 sm:grid-cols-2 sm:gap-4 ${
-            q.options.length > 2 ? "sm:grid-rows-2" : "sm:grid-rows-[minmax(0,15rem)] sm:content-center"
-          }`}
-        >
-          {q.options.map((option, i) => {
-            const hidden = s.hidden.includes(i);
-            const isCorrect = i === q.correctIndex;
-            const wasPicked = s.picked === i || s.stealPicked === i;
-            const blocked = hidden || (s.phase === "steal" && s.picked === i);
-            const state = revealing ? (isCorrect ? "correct" : wasPicked ? "wrong" : "dim") : blocked ? "blocked" : wasPicked && s.phase === "steal" ? "wrong" : "idle";
-            return (
-              <AnswerTile
-                key={`${q.id}-${i}`}
-                index={i}
-                text={option}
-                state={state}
-                disabled={!answering || blocked}
-                onPick={() => pick(i)}
-                long={q.options.some((o) => o.length > 24)}
-              />
-            );
-          })}
-        </div>
+            <div
+              className={`mt-6 grid flex-1 auto-rows-[minmax(4.5rem,auto)] grid-cols-1 gap-3 pb-5 sm:min-h-0 sm:grid-cols-2 sm:gap-4 ${
+                q.options.length > 2 ? "sm:grid-rows-2" : "sm:grid-rows-[minmax(0,15rem)] sm:content-center"
+              }`}
+            >
+              {tiles(q.options.some((o) => o.length > 24) ? "long" : "normal")}
+            </div>
+          </>
+        )}
       </div>
 
       <div className="relative min-h-[6.5rem] shrink-0">
@@ -353,6 +426,9 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
             >
               <OutcomeBanner state={s} />
               <p className="min-w-0 flex-1 basis-64 text-lg leading-snug text-cream-dim sm:text-xl">{q.explanation}</p>
+              <Button variant="quiet" size="lg" className="!px-4" icon={<Flag className="size-5" />} onClick={() => setReporting(true)} aria-label="Bu soruda hata bildir">
+                <span className="hidden xl:inline">Hata bildir</span>
+              </Button>
               <Button variant="primary" size="xl" icon={<ArrowRight className="size-7" />} iconAfter onClick={() => dispatch({ type: "next", now: Date.now() })} autoFocus>
                 {s.asked >= totalQuestions(s) ? "Sonuçlar" : "Sonraki"}
               </Button>
@@ -360,6 +436,10 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
           )}
         </AnimatePresence>
       </div>
+
+      <AnimatePresence>
+        {reporting && <ReportDialog questionId={q.id} prompt={q.prompt} onClose={() => setReporting(false)} />}
+      </AnimatePresence>
 
       {/* Sırası gelen takımın rengi ekranın alt kenarında: arka sıralardan bile görülür. */}
       <motion.div className="h-2 shrink-0" animate={{ backgroundColor: activeStyle.base }} transition={{ duration: dur.base }} aria-hidden />
@@ -495,20 +575,28 @@ function PointsFlight({ flight, onDone }: { flight: Flight; onDone: () => void }
 
 type TileState = "idle" | "blocked" | "correct" | "wrong" | "dim";
 
+type TileSize = "normal" | "long" | "compact";
+
+const TILE_TEXT: Record<TileSize, string> = {
+  normal: "text-xl sm:text-3xl",
+  long: "text-xl sm:text-2xl",
+  compact: "text-lg leading-snug sm:text-xl",
+};
+
 function AnswerTile({
   index,
   text,
   state,
   disabled,
   onPick,
-  long,
+  size,
 }: {
   index: number;
   text: string;
   state: TileState;
   disabled: boolean;
   onPick: () => void;
-  long: boolean;
+  size: TileSize;
 }) {
   const palette: Record<TileState, { bg: string; edge: string; fg: string; badge: string; badgeFg: string }> = {
     idle: { bg: "var(--color-ink-800)", edge: "var(--color-ink-950)", fg: "var(--color-cream)", badge: "var(--color-ink-700)", badgeFg: "var(--color-firuze)" },
@@ -539,7 +627,7 @@ function AnswerTile({
       <span className="grid size-[3.25rem] shrink-0 place-items-center rounded-lg text-2xl font-bold" style={{ background: p.badge, color: p.badgeFg }}>
         {state === "correct" ? <Check className="size-8" strokeWidth={3} /> : state === "wrong" ? <X className="size-8" strokeWidth={3} /> : LETTERS[index]}
       </span>
-      <span className={`leading-tight font-semibold ${long ? "text-xl sm:text-2xl" : "text-xl sm:text-3xl"} ${state === "blocked" ? "line-through" : ""}`}>{text}</span>
+      <span className={`leading-tight font-semibold ${TILE_TEXT[size]} ${state === "blocked" ? "line-through" : ""}`}>{text}</span>
     </motion.button>
   );
 }

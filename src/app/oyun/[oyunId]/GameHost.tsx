@@ -6,12 +6,13 @@ import { ClientOnly } from "@/components/ClientOnly";
 import { GameShell } from "@/components/game/GameShell";
 import { ButtonLink } from "@/components/ui/Button";
 import { Girih } from "@/components/ui/Girih";
-import { buildDeck } from "@/core/deck";
-import { findUnit, getSubject, useQuestionPool } from "@/core/repository";
+import { buildDeckIds, deckFromIds } from "@/core/deck";
+import { findUnit, getSubject, useGradePool } from "@/core/repository";
 import { randomSeed } from "@/core/random";
-import { getGame } from "@/games/registry";
+import { gameTypes, getGame } from "@/games/registry";
 import { GAME_SCREENS } from "@/games/screens";
 import type { GameConfig } from "@/games/types";
+import { getSeen, memoryScope } from "@/lib/memory";
 import { endActiveGame, loadActiveGame, newSessionId, startGame } from "@/lib/session";
 
 export function GameHost({ gameId }: { gameId: string }) {
@@ -29,15 +30,20 @@ function ActiveGame({ gameId }: { gameId: string }) {
     const active = loadActiveGame();
     return active?.gameId === gameId ? active : null;
   });
-  const pool = useQuestionPool();
-  const deck = useMemo(
-    () => (config ? buildDeck(pool, { unitIds: config.unitIds, types: game.questionTypes, seed: config.seed }) : []),
-    // Oyun sırasında öğretmen yeni soru eklese bile deste değişmemeli; yalnızca oturum değişince kurulur.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [config?.sessionId],
-  );
+  const subjectId = config?.subjectId ?? "din-kulturu";
+  const grade = config?.grade ?? 5;
+  // Süren oyunun destesi gizlenen sorular dahil havuzdan, kayıtlı sırayla kurulur; yeni deste gizlenenleri almaz.
+  const fullPool = useGradePool(subjectId, grade, { includeHidden: true });
+  const playablePool = useGradePool(subjectId, grade);
+  const deck = useMemo(() => {
+    if (!config || !fullPool) return null;
+    const ids = config.deckIds ?? buildDeckIds(fullPool, { unitIds: config.unitIds, types: gameTypes(game, config.settings), seed: config.seed });
+    return deckFromIds(fullPool, ids, config.seed);
+  }, [config, fullPool, game]);
 
-  if (!config || deck.length === 0) {
+  if (config && !deck) return <div className="h-dvh bg-ink-900" />;
+
+  if (!config || !deck || deck.length === 0) {
     return (
       <div className="relative grid h-dvh place-items-center bg-ink-900 p-8 text-center">
         <Girih className="text-cream opacity-[0.05]" />
@@ -57,7 +63,10 @@ function ActiveGame({ gameId }: { gameId: string }) {
   const Screen = GAME_SCREENS[gameId];
 
   const restart = () => {
-    const next: GameConfig = { ...config, seed: randomSeed(), sessionId: newSessionId() };
+    const seed = randomSeed();
+    const seen = getSeen(memoryScope(config.subjectId, config.grade, config.section));
+    const deckIds = buildDeckIds(playablePool ?? fullPool ?? [], { unitIds: config.unitIds, types: gameTypes(game, config.settings), seed, seen });
+    const next: GameConfig = { ...config, seed, deckIds, sessionId: newSessionId() };
     startGame(next);
     setConfig(next);
   };
@@ -65,7 +74,7 @@ function ActiveGame({ gameId }: { gameId: string }) {
   return (
     <GameShell
       title={game.name}
-      context={`${config.grade}. sınıf ${subject?.shortName ?? ""}, ${unitLabel}`}
+      context={`${config.grade}${config.section ? `-${config.section}` : ". sınıf"} ${subject?.shortName ?? ""}, ${unitLabel}`}
       onExit={() => {
         endActiveGame();
         router.push(`/kurulum?oyun=${gameId}`);
