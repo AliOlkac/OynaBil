@@ -45,6 +45,23 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
   - ATEŞ'te kamera bütün sahayı gösterir. İsabet anında vurulan kuleye yaklaşıp sarsılır, yıkılışta yıkılan kuleyi izler.
   - Telefonda yakın planlar daha da daralır.
 - **Rüzgâr:** Bulutlar ve bayraklar rüzgârın yönünde ve şiddetinde hareket eder. Bu sürekli hareket oyun bilgisi taşıdığı için sonsuz döngü yasağının ikinci istisnasıdır.
+- **Penaltı'da sürekli hareket:** Kaleci şut beklerken parmak uçlarında yaylanır, taraftarlar golden sonra birkaç saniye zıplar. İkisi de canlı bir durumu gösterir ve durum bitince durur.
+- **Düello sorusu:**
+  - Soru bir kez, ortada yazılır. İki takımın şıkları kendi yarısında, kendi renginde ve farklı sırayla durur.
+  - Yanlış cevap veren tarafın şıkları kum saatiyle kapanır ("Rakibini bekle"). Hangi şıkkı seçtiği karar anına kadar gösterilmez.
+  - İlk bilen tarafın paneli takım rengiyle çerçevelenir.
+- **Otomatik geçiş:**
+  - Atıştan ya da açıklamadan sonra devam düğmesi yerine dolan bir çubuk gelir (Kule Yıkmaca, Penaltı).
+  - Çubuğun yanında iki düğme vardır: "Bekle" geçişi durdurur, "Geç" hemen geçer.
+- **Penaltı sahnesi:**
+  - Gece maçı. Işık kuleleri, iki takımın renklerinde taraftarlar ve "OYNABİL" yazılı reklam panoları vardır.
+  - Kamera topun arkasından kaleye bakar; ağın arka yüzü derinlik için biraz küçüktür.
+  - Kaleci önden çizilir. Şutçular sahanın ön köşelerinde, sırtları kameraya dönük bekler; hak kazanan topun başına koşar.
+  - Şutçu parmağını sürüklerken toptan parmağa kesikli bir yay ve takım renginde bir hedef çizilir. Hedef kalenin dışındaysa gri olur.
+  - Kurtarışta kaleci topun gittiği yere uçar. Zaman yavaşlar ve kamera eldivenlere yaklaşır, eldivenlerde altın bir yıldız ve beyaz bir halka açılır. Ortaya gelen topu kaleci göğsünde tutar.
+  - Golde ağ topun çarptığı yerde esner, takım renginde konfeti atılır. O takımın tribünü zıplar, reklam panoları takım renginde yanıp söner.
+  - Direkte direk titrer ve top geri seker.
+  - Sonuç sahada büyük harflerle yazılır: GOL!, KURTARDI!, DİREK!, AUT!.
 - **Oyun anı efektleri:**
   - Toz, ter damlası ve çamur sıçraması parçacıkları.
   - Yanlış cevapta buz kalıbı ve titreme.
@@ -156,3 +173,6 @@ Kök boyut ekrana göre ölçeklenir: 1920x1080 tahtada 20 px, 1366x768 tahtada 
   - Parçacıklar, kamera sarsıntısı ve bulut kayması kapanır. Kamera kaymadan doğrudan yerine geçer.
   - Kule katlar hâlinde çökmez, solup moloza dönüşür.
   - Nişangâh oyunun parçası olduğu için hareket etmeye devam eder.
+- Penaltı'da:
+  - Ağır çekim, kamera yaklaşması, sarsıntı ve konfeti kapanır. Tribün zıplamaz, ağ esnemez.
+  - Kalecinin uçuşu ve topun yolu yine gösterilir.

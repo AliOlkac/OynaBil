@@ -166,6 +166,43 @@ export const sfx = {
     tone(60, 0.9, 0.9, { type: "sine", gain: 0.36, to: 32 });
   },
 
+  // ---- Penaltı ----
+  /** Hakem düdüğü: kısa, titreşimli iki öten. */
+  whistle: () => {
+    tone(2900, 0, 0.18, { type: "sine", gain: 0.09, to: 3100 });
+    tone(2950, 0.22, 0.32, { type: "sine", gain: 0.1, to: 2750 });
+    noise(0, 0.5, { freq: 3000, q: 6, gain: 0.03 });
+  },
+  /** Topa vuruş. */
+  kick: () => {
+    tone(130, 0, 0.12, { type: "sine", gain: 0.3, to: 70 });
+    noise(0, 0.05, { freq: 1500, q: 0.8, gain: 0.22 });
+  },
+  /** Top ağa gömülür. */
+  net: () => noise(0, 0.45, { freq: 2400, q: 0.7, gain: 0.16, sweepTo: 900 }),
+  /** Gol: tribün coşar. */
+  roar: () => {
+    noise(0, 2.6, { freq: 900, q: 0.5, gain: 0.2, attack: 0.15 });
+    noise(0.05, 2.4, { freq: 1800, q: 0.7, gain: 0.1, attack: 0.2 });
+    [523.25, 659.25, 783.99].forEach((f, i) => tone(f, 0.1 + i * 0.1, 0.4, { type: "triangle", gain: 0.1 }));
+  },
+  /** Kurtarış: eldivene çarpan topun tok sesi. */
+  save: () => {
+    tone(160, 0, 0.18, { type: "sine", gain: 0.3, to: 80 });
+    noise(0, 0.08, { freq: 900, q: 0.8, gain: 0.25 });
+  },
+  /** Tribünün "ooo" sesi. */
+  ooh: () => noise(0.05, 1.3, { freq: 500, q: 1.4, gain: 0.16, attack: 0.25, sweepTo: 900 }),
+  /** Direk: metal çınlaması. */
+  clang: () => {
+    tone(1180, 0, 0.9, { type: "triangle", gain: 0.12 });
+    tone(1770, 0, 0.7, { type: "sine", gain: 0.08 });
+    tone(2650, 0, 0.4, { type: "sine", gain: 0.05 });
+    noise(0, 0.05, { freq: 4000, q: 1, gain: 0.12, type: "highpass" });
+  },
+  /** Tribünün hayal kırıklığı. */
+  aww: () => noise(0.05, 1.2, { freq: 800, q: 1.1, gain: 0.13, attack: 0.2, sweepTo: 350 }),
+
   tap: () => tone(660, 0, 0.06, { type: "triangle", gain: 0.08 }),
   tick: () => tone(1046, 0, 0.05, { type: "square", gain: 0.035 }),
   correct: () => {

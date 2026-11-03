@@ -106,24 +106,25 @@ export const halatCekme: GameDefinition = {
 export const kuleYikmaca: GameDefinition = {
   id: "kule-yikmaca",
   name: "Kule Yıkmaca",
-  tagline: "Bilen takım mancınığı kurar; nişangâhı doğru anda durduran karşı kuleyi yıkar.",
+  tagline: "İki takıma aynı soru. İlk bilen mancınığı kurar, nişangâhı doğru anda durdurup karşı kuleyi yıkar.",
   howTo: [
-    "Takımlar sırayla soru alır. Doğru cevap atış hakkı kazandırır; zor soruyu bilen takım ateşli gülle atar.",
-    "Karşı kulenin önünde nişangâh inip çıkar. Pencere hizasında ATEŞ'e dokunan en çok hasarı verir, temel en azını.",
-    "Rüzgâr her turda değişir: arkadan eserse taş daha yükseğe, önden eserse daha alçağa çarpar.",
-    "Yanlış cevapta mancınık tutukluk yapar, sıra karşı takıma geçer. Kulesi önce yıkılan kaybeder.",
+    "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
+    "İlk doğru cevaplayan takım atış hakkı kazanır. Yanlış cevap veren takımın mancınığı tutukluk yapar ve takım bekler; iki takım da bilemezse kimse atmaz.",
+    "Karşı kulenin önünde nişangâh inip çıkar. Pencere hizasında ATEŞ'e dokunan en çok hasarı verir, temel en azını. Zor soruyu bilen ateşli gülle atar.",
+    "Rüzgâr her soruda değişir: arkadan eserse taş daha yükseğe, önden eserse daha alçağa çarpar. Kulesi önce yıkılan kaybeder.",
   ],
   teamCount: { min: 2, max: 2, default: 2 },
-  questionTypes: ["multiple-choice", "true-false"],
+  // Doğru/yanlış soruları kullanılmaz: bir takımın yanlış cevabı görülünce doğrusu belli olurdu.
+  questionTypes: ["multiple-choice"],
   settings: [
     {
-      key: "rounds",
-      label: "Tur",
+      key: "questions",
+      label: "Soru sayısı",
       kind: "choice",
       options: [
-        { value: 3, label: "3" },
-        { value: 5, label: "5" },
-        { value: 8, label: "8" },
+        { value: 6, label: "6" },
+        { value: 10, label: "10" },
+        { value: 16, label: "16" },
       ],
     },
     {
@@ -138,11 +139,52 @@ export const kuleYikmaca: GameDefinition = {
       ],
     },
   ],
-  defaultSettings: { rounds: 5, seconds: 30 },
-  questionsNeeded: (s) => Number(s.rounds) * 2,
+  defaultSettings: { questions: 10, seconds: 30 },
+  questionsNeeded: (s) => Number(s.questions),
 };
 
-export const GAMES: GameDefinition[] = [bilgiYarismasi, halatCekme, kuleYikmaca];
+export const penalti: GameDefinition = {
+  id: "penalti",
+  name: "Penaltı",
+  tagline: "İki takıma aynı soru. İlk bilen penaltıyı çeker, topu parmağıyla kalede istediği yere gönderir.",
+  howTo: [
+    "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
+    "İlk doğru cevaplayan takımın oyuncusu topun başına geçer. Yanlış cevap veren takım bekler; iki takım da bilemezse kimse çekmez.",
+    "Şutçu topa dokunur, parmağını kalede istediği yere sürükleyip bırakır. Kaleci sola, ortaya ya da sağa atlar; köşeyi tutturursa kurtarır.",
+    "Sorular bitince çok gol atan kazanır. Eşitlikte seri penaltıya geçilir: ilk golü atan kazanır.",
+  ],
+  teamCount: { min: 2, max: 2, default: 2 },
+  // Doğru/yanlış soruları kullanılmaz: bir takımın yanlış cevabı görülünce doğrusu belli olurdu.
+  questionTypes: ["multiple-choice"],
+  settings: [
+    {
+      key: "questions",
+      label: "Soru sayısı",
+      kind: "choice",
+      options: [
+        { value: 6, label: "6" },
+        { value: 10, label: "10" },
+        { value: 16, label: "16" },
+      ],
+    },
+    {
+      key: "seconds",
+      label: "Soru süresi",
+      kind: "choice",
+      options: [
+        { value: 20, label: "20 sn" },
+        { value: 30, label: "30 sn" },
+        { value: 45, label: "45 sn" },
+        { value: 0, label: "Süresiz" },
+      ],
+    },
+  ],
+  defaultSettings: { questions: 10, seconds: 30 },
+  // Seri penaltı için yedek sorular da gerekir.
+  questionsNeeded: (s) => Number(s.questions) + 6,
+};
+
+export const GAMES: GameDefinition[] = [bilgiYarismasi, halatCekme, kuleYikmaca, penalti];
 
 export function getGame(id: string): GameDefinition | undefined {
   return GAMES.find((g) => g.id === id);

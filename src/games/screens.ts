@@ -6,4 +6,5 @@ export const GAME_SCREENS: Record<string, LazyExoticComponent<ComponentType<Game
   "bilgi-yarismasi": lazy(() => import("./bilgi-yarismasi/Game")),
   "halat-cekme": lazy(() => import("./halat-cekme/Game")),
   "kule-yikmaca": lazy(() => import("./kule-yikmaca/Game")),
+  penalti: lazy(() => import("./penalti/Game")),
 };

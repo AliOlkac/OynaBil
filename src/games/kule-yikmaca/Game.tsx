@@ -2,6 +2,8 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowRight, Check, Crosshair, Flag, Flame, Pause, Play, X } from "lucide-react";
+import { AutoAdvance } from "@/components/game/AutoAdvance";
+import { DuelQuestion } from "@/components/game/DuelQuestion";
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { GameIntro } from "@/components/game/GameIntro";
 import { ReportDialog } from "@/components/game/ReportDialog";
@@ -15,6 +17,7 @@ import { memoryScope } from "@/lib/memory";
 import { dur, ease, spring } from "@/lib/motion";
 import { sfx } from "@/lib/sound";
 import { kuleYikmaca } from "../registry";
+import { optionOrder } from "../shared/duel";
 import { TEAM_STYLES } from "../teams";
 import type { GameProps, Team } from "../types";
 import {
@@ -24,10 +27,11 @@ import {
   createSiege,
   damageFor,
   dealt,
+  roundOf,
+  shotsPerTeam,
   siegeReducer,
   totalQuestions,
   TOWER_HP,
-  turnSide,
   windFor,
   ZONE_LABEL,
   type SiegeAction,
@@ -38,12 +42,17 @@ import type { ArtTeam } from "./scene/art";
 import { yOf } from "./scene/geometry";
 import { SiegeScene, type RulerSpec, type SceneInput } from "./scene/SiegeScene";
 
-const LETTERS = ["A", "B", "C", "D"];
+/** İsabetten sonra sıradaki soruya kendiliğinden geçiş; açıklama okunur. */
+const AFTER_SHOT_MS = 5_000;
+/** İki takım da bilemediğinde açıklama daha uzun kalır. */
+const AFTER_MISS_MS = 7_000;
 
-/** Yeniden yüklenen oyunda soru süresi kendiliğinden akmaz; öğretmen "Devam" der. */
-function hydrate(s: SiegeState): SiegeState {
-  // Soru çalmanın olduğu eski sürümden kalmış bir oyun açıklama ekranından sürer.
-  if ((s.phase as string) === "steal") return { ...s, phase: "reveal", outcome: "wrong" };
+/**
+ * Yeniden yüklenen oyunda soru süresi kendiliğinden akmaz; öğretmen "Devam" der.
+ * Sıralı turların olduğu eski sürümden kalmış bir kayıt yeni oyunla değiştirilir.
+ */
+function hydrate(s: SiegeState, fresh: () => SiegeState): SiegeState {
+  if (!s.duel || !Array.isArray(s.misfireAt)) return fresh();
   if (s.phase === "question" && s.deadline !== null) return { ...s, deadline: null, remaining: Math.max(1000, s.deadline - Date.now()) };
   return s;
 }
@@ -52,7 +61,8 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
   const settings = config.settings as unknown as SiegeSettings;
   const teams = config.teams.slice(0, 2) as [Team, Team];
   const reducer = useMemo(() => siegeReducer(deck), [deck]);
-  const [s, dispatch] = usePersistentReducer<SiegeState, SiegeAction>(config.sessionId, reducer, () => createSiege(teams, settings, config.seed), hydrate);
+  const fresh = () => createSiege(teams, settings, config.seed);
+  const [s, dispatch] = usePersistentReducer<SiegeState, SiegeAction>(config.sessionId, reducer, fresh, (saved) => hydrate(saved, fresh));
   const reducedMotion = Boolean(useReducedMotion());
 
   // Sahne isabet anını bildirene kadar hasar çubuklara yansımaz.
@@ -62,8 +72,6 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
   const [reporting, setReporting] = useState(false);
 
   const q = deck[s.current];
-  const side = turnSide(s);
-  const team = teams[side];
   const aiming = s.phase === "aim" && s.aimStart !== null;
   const ticking = (s.phase === "question" && s.deadline !== null) || aiming;
   const now = useNow(ticking, aiming ? 100 : 200);
@@ -72,7 +80,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
   const armed = aiming && now - s.aimStart! >= AIM_LOCK_MS;
   const lastShot = s.shots[s.shots.length - 1];
   const impactShown = impacted >= s.shots.length;
-  const wind = windFor(s.seed, s.turn);
+  const wind = windFor(s.seed, roundOf(s));
   const ammo = ammoFor(q);
 
   const shownHp = [...s.hp] as [number, number];
@@ -92,8 +100,16 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
     if (s.outcome === lastOutcome.current) return;
     lastOutcome.current = s.outcome;
     if (s.outcome === "correct") sfx.correct();
-    else if (s.outcome === "wrong" || s.outcome === "timeout") sfx.wrong();
+    else if (s.outcome === "timeout") sfx.wrong();
   }, [s.outcome]);
+
+  // Bir takım yanlış cevap verince (öteki hâlâ cevaplayabilir) kısa bir uyarı sesi.
+  const lockedCount = s.duel.locked.filter(Boolean).length;
+  const lastLocked = useRef(lockedCount);
+  useEffect(() => {
+    if (lockedCount > lastLocked.current) sfx.wrong();
+    lastLocked.current = lockedCount;
+  }, [lockedCount]);
 
   const fire = useCallback(() => {
     if (!aiming) return;
@@ -105,20 +121,12 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
     dispatch({ type: "next", now: clock() });
   }, [dispatch]);
 
-  const pick = (option: number) => {
-    if (s.phase === "question" && !paused) dispatch({ type: "answer", option, now: clock() });
-  };
-
-  // Klavye: A-D cevap, boşluk/Enter ateş ya da sonraki, P duraklat.
+  // Klavye: boşluk/Enter ateş ya da hemen sonraki soru, P duraklat.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement || e.metaKey || e.ctrlKey) return;
       const key = e.key.toLowerCase();
-      const letter = ["a", "b", "c", "d"].indexOf(key);
-      const digit = ["1", "2", "3", "4"].indexOf(key);
-      const index = letter !== -1 ? letter : digit;
-      if (index !== -1 && s.phase === "question") pick(index);
-      else if (key === " " || key === "enter") {
+      if (key === " " || key === "enter") {
         if (s.phase === "aim") {
           e.preventDefault();
           fire();
@@ -140,7 +148,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
       <GameIntro
         game={kuleYikmaca}
         teams={teams}
-        questionInfo={`Her takıma ${settings.rounds} soru${settings.seconds ? `, soru başına ${settings.seconds} saniye` : ""}. Bilen takım mancınıkla karşı kuleye atış yapar.`}
+        questionInfo={`${settings.questions} soru${settings.seconds ? `, soru başına ${settings.seconds} saniye` : ""}. İki takıma aynı soru sorulur; ilk bilen takım mancınıkla karşı kuleye atış yapar.`}
         onStart={() => {
           sfx.go();
           dispatch({ type: "start", now: clock() });
@@ -175,7 +183,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
   const winnerSide = s.winner === null ? null : s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1;
   const sceneInput: SceneInput = {
     phase: s.phase,
-    turn: side,
+    locked: s.duel.locked,
     shooter: s.shooter,
     aimStart: s.aimStart,
     wind,
@@ -183,17 +191,16 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
     shots: s.shots,
     hp: s.hp,
     misfireAt: s.misfireAt,
-    misfireSide: side,
     winner: winnerSide,
     endReason: s.endReason,
   };
-  const shooter = s.shooter ?? side;
+  const shooter = s.shooter ?? 0;
   const ruler: RulerSpec = {
     target: (1 - shooter) as 0 | 1,
     values: BANDS.map((b) => ({
       from: yOf(Math.max(0, b.from)),
       to: yOf(Math.min(1, b.to)),
-      damage: damageFor(b.zone, ammo, settings.rounds),
+      damage: damageFor(b.zone, ammo, shotsPerTeam(s)),
       crit: b.zone === "pencere",
     })),
   };
@@ -243,19 +250,26 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
       <div className="relative min-h-0 flex-1 overflow-y-auto">
         <AnimatePresence mode="wait" initial={false}>
           {(s.phase === "question" || s.phase === "reveal") && q && (
-            <motion.section
-              key={`q-${s.turn}`}
-              className="flex min-h-full flex-col px-4 pt-4 pb-4 sm:h-full sm:min-h-0 sm:px-8"
+            <motion.div
+              key={`q-${s.asked}`}
+              className="flex min-h-full flex-col sm:h-full"
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 24 }}
               transition={{ duration: dur.base, ease }}
             >
-              <div className="flex items-start gap-6">
-                <div className="min-w-0 flex-1">
+              <DuelQuestion
+                question={q}
+                teams={teams}
+                duel={s.duel}
+                orders={[optionOrder(q.id, s.seed, 0, q.options.length), optionOrder(q.id, s.seed, 1, q.options.length)]}
+                revealed={s.phase === "reveal"}
+                disabled={paused}
+                onAnswer={(side, option) => dispatch({ type: "answer", side, option, now: clock() })}
+                meta={
                   <div className="flex flex-wrap items-center gap-3 text-lg text-ink-300">
                     <span className="tabular font-semibold text-cream">
-                      Soru {Math.min(s.asked + (s.phase === "question" ? 1 : 0), totalQuestions(s))}/{totalQuestions(s)}
+                      Soru {s.asked}/{totalQuestions(s)}
                     </span>
                     {findUnit(q.unit) && <span className="truncate">{findUnit(q.unit)!.title}</span>}
                     {ammo === "ates" && (
@@ -263,63 +277,45 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
                         <Flame className="size-4 fill-current" /> Zor soru: bilen ateşli gülle atar
                       </span>
                     )}
+                    {s.phase === "question" && <span className="hidden text-base lg:inline">İlk bilen takım atar; yanlış cevap veren bekler.</span>}
                   </div>
-                  <h2 className={`mt-2 leading-tight font-bold text-balance ${q.prompt.length > 90 ? "text-2xl sm:text-3xl" : "text-2xl sm:text-4xl"}`}>{q.prompt}</h2>
+                }
+                timer={
+                  settings.seconds > 0 &&
+                  s.phase === "question" && (
+                    <button
+                      type="button"
+                      onClick={() => dispatch({ type: paused ? "resume" : "pause", now: clock() })}
+                      className="group relative shrink-0 rounded-full"
+                      aria-label={paused ? "Süreyi devam ettir" : "Süreyi duraklat"}
+                    >
+                      <TimerRing remainingMs={remaining} totalMs={settings.seconds * 1000} paused={paused} className="size-20 text-base sm:size-24" />
+                      <span className="absolute -bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-ink-800 px-2.5 py-0.5 text-xs font-semibold text-ink-300">
+                        {paused ? <Play className="size-3 fill-current" /> : <Pause className="size-3 fill-current" />}
+                        {paused ? "Devam" : "Duraklat"}
+                      </span>
+                    </button>
+                  )
+                }
+              />
+              {s.phase === "reveal" && (
+                <div className="flex flex-wrap items-center gap-3 px-3 pb-3 sm:flex-nowrap sm:gap-5 sm:px-8">
+                  <p className="flex shrink-0 items-center gap-2 text-xl font-bold text-mercan">
+                    <X className="size-6" strokeWidth={3} /> {s.outcome === "timeout" ? "Süre doldu!" : "İki takım da bilemedi."}
+                  </p>
+                  <p className="min-w-0 flex-1 basis-72 text-lg leading-snug text-cream-dim">{q.explanation}</p>
+                  <Button variant="quiet" size="lg" className="!px-4" icon={<Flag className="size-5" />} onClick={() => setReporting(true)} aria-label="Bu soruda hata bildir">
+                    <span className="hidden xl:inline">Hata bildir</span>
+                  </Button>
+                  <AutoAdvance key={`miss-${s.asked}`} duration={AFTER_MISS_MS} onDone={next} label={s.asked >= totalQuestions(s) ? "Sonuç" : "Sıradaki soru"} />
                 </div>
-                {settings.seconds > 0 && s.phase === "question" && (
-                  <button
-                    type="button"
-                    onClick={() => dispatch({ type: paused ? "resume" : "pause", now: clock() })}
-                    className="group relative shrink-0 rounded-full"
-                    aria-label={paused ? "Süreyi devam ettir" : "Süreyi duraklat"}
-                  >
-                    <TimerRing remainingMs={remaining} totalMs={settings.seconds * 1000} paused={paused} className="size-24 text-base" />
-                    <span className="absolute -bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-ink-800 px-2.5 py-0.5 text-xs font-semibold text-ink-300">
-                      {paused ? <Play className="size-3 fill-current" /> : <Pause className="size-3 fill-current" />}
-                      {paused ? "Devam" : "Duraklat"}
-                    </span>
-                  </button>
-                )}
-              </div>
-
-              <div
-                className={`mt-4 grid auto-rows-[minmax(3.5rem,auto)] grid-cols-1 gap-3 sm:min-h-0 sm:flex-1 sm:grid-cols-2 ${q.options.length > 2 ? "sm:grid-rows-2" : "sm:grid-rows-1"}`}
-              >
-                {q.options.map((option, i) => {
-                  const revealing = s.phase === "reveal";
-                  const tone = revealing ? (i === q.correctIndex ? "correct" : s.picked === i ? "wrong" : "dim") : "idle";
-                  return <Tile key={`${q.id}-${i}`} index={i} text={option} tone={tone} disabled={revealing || paused} accent={TEAM_STYLES[team.color].base} onPick={() => pick(i)} />;
-                })}
-              </div>
-
-              <div className="mt-3 flex min-h-[4.5rem] flex-wrap items-center gap-4">
-                {s.phase === "question" && (
-                  <>
-                    <TurnBadge team={team} label="Sıra" />
-                    <p className="text-lg text-ink-300 sm:text-xl">Bilirse mancınık kurulur, atış hakkı kazanır.</p>
-                  </>
-                )}
-                {s.phase === "reveal" && (
-                  <>
-                    <p className="flex items-center gap-2 text-xl font-bold text-mercan">
-                      <X className="size-6" strokeWidth={3} /> {s.outcome === "timeout" ? "Süre doldu!" : "Yanlış!"} Mancınık tutukluk yaptı.
-                    </p>
-                    <p className="min-w-0 flex-1 basis-72 text-lg leading-snug text-cream-dim">{q.explanation}</p>
-                    <Button variant="quiet" size="lg" className="!px-4" icon={<Flag className="size-5" />} onClick={() => setReporting(true)} aria-label="Bu soruda hata bildir">
-                      <span className="hidden xl:inline">Hata bildir</span>
-                    </Button>
-                    <Button variant="primary" size="xl" icon={<ArrowRight className="size-7" />} iconAfter onClick={next} autoFocus>
-                      {s.asked >= totalQuestions(s) ? "Sonuç" : "Sonraki"}
-                    </Button>
-                  </>
-                )}
-              </div>
-            </motion.section>
+              )}
+            </motion.div>
           )}
 
           {s.phase === "aim" && (
             <motion.section
-              key={`aim-${s.turn}`}
+              key={`aim-${s.asked}`}
               className="flex min-h-full flex-wrap items-center gap-3 px-4 py-3 sm:flex-nowrap sm:gap-6 sm:px-8"
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -381,9 +377,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
                       <Button variant="quiet" size="lg" className="!px-4" icon={<Flag className="size-5" />} onClick={() => setReporting(true)} aria-label="Bu soruda hata bildir">
                         <span className="hidden xl:inline">Hata bildir</span>
                       </Button>
-                      <Button variant="primary" size="xl" icon={<ArrowRight className="size-7" />} iconAfter onClick={next} autoFocus>
-                        {s.asked >= totalQuestions(s) ? "Sonuç" : "Sonraki"}
-                      </Button>
+                      <AutoAdvance key={`shot-${s.shots.length}`} duration={AFTER_SHOT_MS} onDone={next} label={s.asked >= totalQuestions(s) ? "Sonuç" : "Sıradaki soru"} />
                     </>
                   )}
                   {s.phase === "finished" && finaleDone && (
@@ -407,9 +401,9 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
               <p className="text-xl text-ink-300 sm:text-2xl">
                 {winnerTeam
                   ? finaleDone
-                    ? `Turlar bitti. ${winnerTeam.name} kulesi daha sağlam kaldı, şeref atışıyla karşı kuleyi yıktı!`
-                    : `Turlar bitti. ${winnerTeam.name} şeref atışını yapıyor!`
-                  : "Turlar bitti, iki kule de aynı sağlamlıkta."}
+                    ? `Sorular bitti. ${winnerTeam.name} kulesi daha sağlam kaldı, şeref atışıyla karşı kuleyi yıktı!`
+                    : `Sorular bitti. ${winnerTeam.name} şeref atışını yapıyor!`
+                  : "Sorular bitti, iki kule de aynı sağlamlıkta."}
               </p>
               {finaleDone && (
                 <Button variant="primary" size="xl" icon={<ArrowRight className="size-7" />} iconAfter onClick={() => setShowResults(true)} autoFocus>
@@ -549,45 +543,5 @@ function ShotBadge({ damage, zone, ammo, team }: { damage: number; zone: keyof t
         </span>
       </span>
     </motion.div>
-  );
-}
-
-function Tile({
-  index,
-  text,
-  tone,
-  disabled,
-  accent,
-  onPick,
-}: {
-  index: number;
-  text: string;
-  tone: "idle" | "correct" | "wrong" | "dim";
-  disabled: boolean;
-  accent: string;
-  onPick: () => void;
-}) {
-  const colors = {
-    idle: { bg: "var(--color-ink-800)", fg: "var(--color-cream)", edge: "var(--color-ink-950)" },
-    correct: { bg: "var(--color-zumrut)", fg: "var(--color-ink-950)", edge: "var(--color-zumrut-deep)" },
-    wrong: { bg: "var(--color-mercan)", fg: "var(--color-ink-950)", edge: "var(--color-mercan-deep)" },
-    dim: { bg: "var(--color-ink-850)", fg: "var(--color-ink-400)", edge: "var(--color-ink-900)" },
-  }[tone];
-  return (
-    <button
-      type="button"
-      disabled={disabled}
-      onClick={onPick}
-      className="pressable flex min-h-0 items-center gap-4 rounded-lg px-4 text-left disabled:cursor-default"
-      style={{ background: colors.bg, color: colors.fg, "--edge": colors.edge } as CSSProperties}
-    >
-      <span
-        className="grid size-11 shrink-0 place-items-center rounded-md text-xl font-bold"
-        style={{ background: tone === "idle" ? "var(--color-ink-700)" : "rgb(7 18 40 / 0.18)", color: tone === "idle" ? accent : "inherit" }}
-      >
-        {tone === "correct" ? <Check className="size-7" strokeWidth={3} /> : tone === "wrong" ? <X className="size-7" strokeWidth={3} /> : LETTERS[index]}
-      </span>
-      <span className={`leading-tight font-semibold ${text.length > 40 ? "text-lg sm:text-xl" : "text-xl sm:text-2xl"}`}>{text}</span>
-    </button>
   );
 }

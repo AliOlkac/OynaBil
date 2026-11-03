@@ -129,9 +129,10 @@ export function SetupScreen() {
         </ButtonLink>
       </header>
 
-      <div className="relative grid min-h-0 flex-1 grid-cols-1 gap-5 px-4 pb-5 sm:px-8 lg:grid-cols-[0.85fr_1.2fr_1fr]">
+      <div className="relative grid min-h-0 flex-1 grid-cols-1 gap-5 px-4 pb-5 sm:px-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.2fr)_minmax(0,1fr)]">
         <Panel title="Oyun" delay={0}>
-          <div className="flex flex-col gap-3">
+          {/* Oyun çoğaldıkça liste sığsın: seçili oyunun açıklaması tam, ötekilerinki tek satır. */}
+          <div className="-mx-1 flex min-h-0 flex-col gap-2.5 overflow-y-auto px-1 pb-1">
             {GAMES.map((g) => {
               const selected = g.id === gameId;
               return (
@@ -140,7 +141,7 @@ export function SetupScreen() {
                   type="button"
                   onClick={() => setGameId(g.id)}
                   aria-pressed={selected}
-                  className={`group relative rounded-lg p-4 text-left transition-colors duration-(--dur-base) ${
+                  className={`group relative shrink-0 rounded-lg p-3 text-left transition-colors duration-(--dur-base) ${
                     selected ? "bg-ink-700" : "bg-ink-800/70 hover:bg-ink-800"
                   }`}
                   style={{ boxShadow: selected ? "inset 0 0 0 2px var(--color-firuze)" : "var(--surface-light)" }}
@@ -149,7 +150,9 @@ export function SetupScreen() {
                     <GameGlyph id={g.id} selected={selected} />
                     <div className="min-w-0 flex-1">
                       <p className="text-xl font-bold">{g.name}</p>
-                      <p className="mt-1 leading-snug text-ink-300">{g.tagline}</p>
+                      <p className={`mt-0.5 leading-snug text-ink-300 ${selected ? "" : "truncate text-sm"}`} title={g.tagline}>
+                        {g.tagline}
+                      </p>
                     </div>
                     {selected && <Check className="size-6 shrink-0 text-firuze" strokeWidth={3} />}
                   </div>

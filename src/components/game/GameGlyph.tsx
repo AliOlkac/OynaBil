@@ -15,6 +15,19 @@ export function GameGlyph({ id, selected = false }: { id: string; selected?: boo
       </span>
     );
   }
+  if (id === "penalti") {
+    return (
+      <span className={`grid size-14 shrink-0 place-items-center rounded-lg ${ring}`} aria-hidden>
+        <svg viewBox="0 0 48 48" className="size-11">
+          <path d="M5 30 V10 H43 V30" fill="none" stroke="var(--color-cream)" strokeWidth={3} strokeLinejoin="round" />
+          <path d="M9 13 H39 M9 18 H39 M9 23 H39 M14 10 V30 M22 10 V30 M30 10 V30 M38 10 V30" stroke="var(--color-cream)" strokeWidth={1} opacity={0.4} />
+          <rect x="18" y="16" width="10" height="14" rx="3" fill="var(--color-kehribar)" />
+          <circle cx="34" cy="38" r="6" fill="var(--color-cream)" />
+          <path d="M34 34.5 L36.5 36.5 L35.5 39.5 H32.5 L31.5 36.5 Z" fill="var(--color-ink-950)" />
+        </svg>
+      </span>
+    );
+  }
   if (id === "kule-yikmaca") {
     return (
       <span className={`grid size-14 shrink-0 place-items-center rounded-lg ${ring}`} aria-hidden>

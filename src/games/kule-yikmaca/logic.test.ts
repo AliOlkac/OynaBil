@@ -13,7 +13,6 @@ import {
   dealt,
   siegeReducer,
   sweepAt,
-  turnSide,
   windFor,
   windShift,
   zoneAt,
@@ -34,17 +33,19 @@ const deck: PlayableQuestion[] = Array.from({ length: 12 }, (_, i) => ({
 
 const teams = defaultTeams(2) as [Team, Team];
 const reduce = siegeReducer(deck);
+const right = (i: number) => deck[i].correctIndex;
+const wrong = (i: number, k = 1) => (deck[i].correctIndex + k) % 4;
 
-/** Rüzgârsız bir tohum: ilk turların rüzgârı sıfır olan tohumu arar. */
-function calmSeed(turns: number) {
+/** Rüzgârsız bir tohum: ilk soruların rüzgârı sıfır olan tohumu arar. */
+function calmSeed(rounds: number) {
   for (let seed = 1; seed < 10_000; seed++) {
-    if (Array.from({ length: turns }, (_, t) => windFor(seed, t)).every((w) => w === 0)) return seed;
+    if (Array.from({ length: rounds }, (_, t) => windFor(seed, t)).every((w) => w === 0)) return seed;
   }
   throw new Error("rüzgârsız tohum bulunamadı");
 }
 
 const start = (over: Partial<SiegeSettings> = {}, seed = calmSeed(2)) =>
-  reduce(createSiege(teams, { rounds: 3, seconds: 30, ...over }, seed), { type: "start", now: 0 });
+  reduce(createSiege(teams, { questions: 6, seconds: 30, ...over }, seed), { type: "start", now: 0 });
 
 /** Nişangâhın verilen yüksekliğe ilk ulaştığı an (çıkışta). */
 const timeFor = (aim: number) => AIM_LOCK_MS + (aim * SWEEP_MS) / 2;
@@ -73,7 +74,7 @@ describe("Kule Yıkmaca: atış hesabı", () => {
     expect(Math.min(...hits)).toBe(damageFor("temel", "tas", 5));
     expect(damageFor("kisa", "ates", 5)).toBe(0);
     expect(damageFor("pencere", "ates", 5)).toBeGreaterThan(damageFor("pencere", "tas", 5));
-    // Az turlu oyunda tek isabet daha çok hasar verir ki kule yıkılabilsin.
+    // Az sorulu oyunda tek isabet daha çok hasar verir ki kule yıkılabilsin.
     expect(damageFor("govde", "tas", 3)).toBeGreaterThan(damageFor("govde", "tas", 8));
   });
 
@@ -88,103 +89,120 @@ describe("Kule Yıkmaca: atış hesabı", () => {
   });
 });
 
-describe("Kule Yıkmaca: oyun akışı", () => {
-  it("doğru cevap atış hakkı verir; nişangâh pencerede durdurulursa kritik hasar olur", () => {
+describe("Kule Yıkmaca: düello sorusu", () => {
+  it("ilk doğru cevaplayan atış hakkı kazanır; nişangâh pencerede durdurulursa kritik hasar olur", () => {
     let s = start();
     expect(s.phase).toBe("question");
-    s = reduce(s, { type: "answer", option: deck[0].correctIndex, now: 1000 });
+    s = reduce(s, { type: "answer", side: 1, option: right(0), now: 1000 });
     expect(s.phase).toBe("aim");
-    expect(s.shooter).toBe(0);
+    expect(s.shooter).toBe(1);
+    // Karar verildikten sonra öteki takımın cevabı sayılmaz.
+    expect(reduce(s, { type: "answer", side: 0, option: right(0), now: 1001 })).toBe(s);
     // Kurulurken atış alınmaz.
     expect(reduce(s, { type: "fire", now: 1000 + AIM_LOCK_MS - 1 }).phase).toBe("aim");
     s = fireAt(s, 0.43);
     expect(s.phase).toBe("shot");
-    expect(s.shots[0]).toMatchObject({ side: 0, zone: "pencere", ammo: "tas" });
-    expect(s.hp).toEqual([TOWER_HP, TOWER_HP - damageFor("pencere", "tas", 3)]);
-    expect(dealt(s, 0)).toBe(damageFor("pencere", "tas", 3));
+    expect(s.shots[0]).toMatchObject({ side: 1, zone: "pencere", ammo: "tas" });
+    expect(s.hp).toEqual([TOWER_HP - damageFor("pencere", "tas", 3), TOWER_HP]);
+    expect(dealt(s, 1)).toBe(damageFor("pencere", "tas", 3));
+  });
+
+  it("yanlış cevap veren takım bekler, mancınığı tutukluk yapar; öteki takım bilirse o atar", () => {
+    let s = start();
+    s = reduce(s, { type: "answer", side: 0, option: wrong(0), now: 500 });
+    expect(s.phase).toBe("question");
+    expect(s.duel.locked).toEqual([true, false]);
+    expect(s.misfireAt).toEqual([500, null]);
+    // Bekleyen takım ikinci kez cevaplayamaz.
+    expect(reduce(s, { type: "answer", side: 0, option: right(0), now: 600 })).toBe(s);
+    s = reduce(s, { type: "answer", side: 1, option: right(0), now: 700 });
+    expect(s.phase).toBe("aim");
+    expect(s.shooter).toBe(1);
+    expect(s.log.map((l) => [l.teamId, l.correct])).toEqual([
+      [teams[0].id, false],
+      [teams[1].id, true],
+    ]);
+  });
+
+  it("iki takım da bilemezse kimse atmaz ve sıradaki soruya geçilir", () => {
+    let s = start();
+    s = reduce(s, { type: "answer", side: 0, option: wrong(0, 1), now: 100 });
+    s = reduce(s, { type: "answer", side: 1, option: wrong(0, 2), now: 200 });
+    expect(s.phase).toBe("reveal");
+    expect(s.misfireAt).toEqual([100, 200]);
+    expect(reduce(s, { type: "fire", now: 10_000 }).shots).toHaveLength(0);
+    s = reduce(s, { type: "next", now: 300 });
+    expect(s.phase).toBe("question");
+    expect(s.current).toBe(1);
+  });
+
+  it("zor soruyu bilen takım ateşli gülle atar", () => {
+    let s = start();
+    s = reduce(s, { type: "answer", side: 0, option: wrong(0), now: 0 });
+    s = reduce(s, { type: "answer", side: 1, option: wrong(0), now: 1 });
+    s = reduce(s, { type: "next", now: 100 });
+    s = reduce(s, { type: "answer", side: 0, option: right(1), now: 200 });
+    s = fireAt(s, 0.3);
+    expect(s.shots[0]).toMatchObject({ side: 0, ammo: "ates", zone: "govde" });
+    expect(s.hp[1]).toBe(TOWER_HP - damageFor("govde", "ates", 3));
   });
 
   it("rüzgâr isabet yüksekliğini kaydırır", () => {
     let seed = 1;
     while (windFor(seed, 0) !== 3) seed++;
     let s = start({}, seed);
-    s = reduce(s, { type: "answer", option: deck[0].correctIndex, now: 0 });
+    s = reduce(s, { type: "answer", side: 0, option: right(0), now: 0 });
     s = fireAt(s, 0.43);
     // Sağa esen güçlü rüzgâr soldaki takımın taşını pencerenin üstüne, gövdeye taşır.
     expect(s.shots[0].hit).toBeCloseTo(0.43 + 3 * WIND_STEP);
     expect(s.shots[0].zone).toBe("govde");
   });
 
-  it("zor soruyu bilen takım ateşli gülle atar", () => {
+  it("süre dolunca cevap vermeyen takımlar bilemedi sayılır", () => {
     let s = start();
-    s = reduce(s, { type: "answer", option: (deck[0].correctIndex + 1) % 4, now: 0 });
-    expect(s.phase).toBe("reveal");
-    expect(s.misfireAt).toBe(0);
-    s = reduce(s, { type: "next", now: 100 });
-    expect(turnSide(s)).toBe(1);
-    s = reduce(s, { type: "answer", option: deck[1].correctIndex, now: 200 });
-    s = fireAt(s, 0.3);
-    expect(s.shots[0]).toMatchObject({ side: 1, ammo: "ates", zone: "govde" });
-    expect(s.hp[0]).toBe(TOWER_HP - damageFor("govde", "ates", 3));
-  });
-
-  it("yanlış cevapta mancınık tutukluk yapar, kimse atış yapmaz ve sıra karşı takıma geçer", () => {
-    let s = start();
-    s = reduce(s, { type: "answer", option: (deck[0].correctIndex + 1) % 4, now: 50 });
-    expect(s.phase).toBe("reveal");
-    expect(s.misfireAt).toBe(50);
-    expect(s.shooter).toBeNull();
-    // Açıklama ekranında atış alınmaz.
-    expect(reduce(s, { type: "fire", now: 10_000 }).shots).toHaveLength(0);
-    s = reduce(s, { type: "next", now: 100 });
-    expect(s.phase).toBe("question");
-    expect(turnSide(s)).toBe(1);
-    expect(s.log).toEqual([{ questionId: deck[0].id, unit: deck[0].unit, teamId: teams[0].id, correct: false }]);
-  });
-
-  it("süre dolunca soru yanlış sayılır", () => {
-    let s = start();
+    s = reduce(s, { type: "answer", side: 1, option: wrong(0), now: 1000 });
     expect(reduce(s, { type: "timeout", now: 29_999 }).phase).toBe("question");
     s = reduce(s, { type: "timeout", now: 30_000 });
+    expect(s.phase).toBe("reveal");
     expect(s.outcome).toBe("timeout");
-    expect(s.asked).toBe(1);
+    expect(s.misfireAt).toEqual([30_000, 1000]);
+    expect(s.log.filter((l) => !l.correct)).toHaveLength(2);
   });
 
   it("canı biten kule yıkılır ve oyun hemen biter", () => {
-    let s = start({ rounds: 3 });
+    let s = start();
     s = { ...s, hp: [TOWER_HP, 10] };
-    s = reduce(s, { type: "answer", option: deck[0].correctIndex, now: 0 });
+    s = reduce(s, { type: "answer", side: 0, option: right(0), now: 0 });
     s = fireAt(s, 0.3);
     expect(s.phase).toBe("finished");
     expect(s.endReason).toBe("collapse");
     expect(s.winner).toBe(teams[0].id);
-    expect(s.hp[1]).toBe(0);
   });
 
-  it("turlar bitince kulesi daha sağlam olan kazanır; eşitse berabere", () => {
-    let s = start({ rounds: 1 });
-    s = reduce(s, { type: "answer", option: deck[0].correctIndex, now: 0 });
+  it("sorular bitince kulesi daha sağlam olan kazanır; eşitse berabere", () => {
+    let s = start({ questions: 2 });
+    s = reduce(s, { type: "answer", side: 0, option: right(0), now: 0 });
     s = fireAt(s, 0.2);
     s = reduce(s, { type: "next", now: 5000 });
-    s = reduce(s, { type: "answer", option: (deck[1].correctIndex + 1) % 4, now: 6000 });
+    s = reduce(s, { type: "answer", side: 0, option: wrong(1), now: 6000 });
+    s = reduce(s, { type: "answer", side: 1, option: wrong(1), now: 6100 });
     s = reduce(s, { type: "next", now: 7000 });
     expect(s.phase).toBe("finished");
     expect(s.endReason).toBe("rounds");
     expect(s.winner).toBe(teams[0].id);
 
-    let d = start({ rounds: 1 });
-    d = reduce(d, { type: "answer", option: (deck[0].correctIndex + 1) % 4, now: 0 });
-    d = reduce(d, { type: "next", now: 1 });
-    d = reduce(d, { type: "answer", option: (deck[1].correctIndex + 1) % 4, now: 2 });
+    let d = start({ questions: 1 });
+    d = reduce(d, { type: "answer", side: 0, option: wrong(0), now: 0 });
+    d = reduce(d, { type: "answer", side: 1, option: wrong(0), now: 1 });
     d = reduce(d, { type: "next", now: 3 });
     expect(d.winner).toBe("draw");
   });
 
-  it("duraklatılan süre kaldığı yerden devam eder", () => {
+  it("duraklatılan süre kaldığı yerden devam eder, duraklamada cevap alınmaz", () => {
     let s = start();
     s = reduce(s, { type: "pause", now: 10_000 });
     expect(s.remaining).toBe(20_000);
-    expect(reduce(s, { type: "answer", option: 0, now: 11_000 }).phase).toBe("question");
+    expect(reduce(s, { type: "answer", side: 0, option: 0, now: 11_000 })).toBe(s);
     s = reduce(s, { type: "resume", now: 50_000 });
     expect(s.deadline).toBe(70_000);
   });

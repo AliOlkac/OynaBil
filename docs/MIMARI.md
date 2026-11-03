@@ -78,6 +78,15 @@ Kule Yıkmaca'da atışın sonucu (bölge, hasar) reducer'da, ATEŞ anında hesa
 
 Sahne yalnızca bu sonucu oynatır. Kulenin bölgeleri `logic.ts` içindeki `BANDS` sınırlarından çizilir (`scene/geometry.ts`), yani pencereye isabet gerçekten pencereye çarpar. Taş kuleye değdiği anda sahne `onImpact` ile ekrana haber verir; sağlamlık çubuğu ancak o zaman düşer.
 
+Kule Yıkmaca ve Penaltı düello sorusu kullanır (`src/games/shared/duel.ts`). İki takıma aynı soru sorulur ve `duelAnswer` cevabı işler:
+- İlk doğru cevaplayan takım kazanır.
+- Yanlış cevap veren takım kilitlenir.
+- İkisi de yanlışsa kimse kazanamaz.
+
+`optionOrder`, iki takımın şıkları gördüğü sırayı soru ve oyun tohumundan türetir. Ekran `DuelQuestion` ile çizilir. Atıştan sonraki geçişi `AutoAdvance` zamanlar; zaman reducer'a yine eylemle (`next`) girer.
+
+Penaltı'da şutun yeri kale koordinatıyla gelir (x: -1 sol direk, +1 sağ direk; y: 0 zemin, 1 üst direk). Kalecinin seçimi `keeperFor(tohum, şut sırası)` ile belirlenir, sonuç (`gol`, `kurtardi`, `direk`, `aut`) reducer'da hesaplanır. Sahne yalnızca bu sonucu oynatır. Top kaleye ulaştığında `onContact` ile skoru, gösteri bitince `onKickDone` ile otomatik geçişi başlatır.
+
 Halat Çekme'de iki öğrenci aynı anda dokunur. Tarayıcılar çoklu dokunuşta `click` olayını yalnızca birine gönderdiği için cevaplar `pointerdown` ile alınır.
 
 ## 7. Çok cihazlı sürüme geçiş planı

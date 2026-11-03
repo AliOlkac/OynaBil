@@ -50,7 +50,8 @@ import { solveCrew, type CrewPose } from "./crew";
 
 export type SceneInput = {
   phase: SiegeState["phase"];
-  turn: 0 | 1;
+  /** Yanlış cevap verip bekleyen takımlar. */
+  locked: [boolean, boolean];
   shooter: 0 | 1 | null;
   /** Nişan evresinin başladığı an (Date.now). */
   aimStart: number | null;
@@ -58,8 +59,8 @@ export type SceneInput = {
   ammo: Ammo;
   shots: Shot[];
   hp: [number, number];
-  misfireAt: number | null;
-  misfireSide: 0 | 1;
+  /** Her takımın son yanlış cevap anı: o takımın mancınığı tutukluk yapar. */
+  misfireAt: [number | null, number | null];
   winner: 0 | 1 | "draw" | null;
   endReason: "collapse" | "rounds" | null;
 };
@@ -251,7 +252,7 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
       punch: null as null | { x: number; y: number; until: number },
       seenShots: start.shots.length,
       seenAim: start.aimStart,
-      seenMisfire: start.misfireAt,
+      seenMisfire: [...start.misfireAt] as (number | null)[],
       cloudX: CLOUDS.map((c) => c.x),
       flight: null as ActiveFlight | null,
       dud: null as null | { x: number; y: number; vx: number; vy: number; rot: number; start: number },
@@ -470,17 +471,18 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
         st.seenShots = inp.shots.length;
         launch(inp.shots[i], i, t);
       }
-      if (inp.misfireAt !== null && inp.misfireAt !== st.seenMisfire) {
-        st.seenMisfire = inp.misfireAt;
-        const c = cat[inp.misfireSide];
+      ([0, 1] as const).forEach((side) => {
+        const at = inp.misfireAt[side];
+        if (at === null || at === st.seenMisfire[side]) return;
+        st.seenMisfire[side] = at;
+        const c = cat[side];
         c.mode = "misfire";
         c.start = t;
         c.loaded = true;
         c.fire = false;
         c.sounds = new Set();
-        st.reactions[inp.misfireSide] = { kind: "dismay", start: t + 450, until: t + 2000 };
-        st.reactions[(1 - inp.misfireSide) as 0 | 1] = { kind: "relief", start: t + 450, until: t + 1800 };
-      }
+        st.reactions[side] = { kind: "dismay", start: t + 450, until: t + 2000 };
+      });
       // Bitiş: tur sonunda kazanan takım şeref atışıyla karşı kuleyi yıkar; berabere ise kuleler ayakta kalır.
       if (inp.phase === "finished" && !st.finale && (!st.flight || st.flight.impacted)) {
         const w = inp.winner;
@@ -793,8 +795,8 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
           target = { lean: 0.08, crouch: 0, near: { x: 62, y: -150 }, far: { x: -4, y: -44 }, armsUp: 0, cover: 0 };
           mouth = "grit";
         }
-        // Soru sırasında sırası gelen takımın gözcüsü elini kaldırır.
-        if (member.role === "gozcu" && inp.phase === "question" && inp.turn === side && c.mode === "rest") {
+        // Soru sırasında cevap hakkı süren takımın gözcüsü elini kaldırır.
+        if (member.role === "gozcu" && inp.phase === "question" && !inp.locked[side] && c.mode === "rest") {
           target = { ...target, near: { x: 24, y: -150 } };
           mouth = "smile";
         }
