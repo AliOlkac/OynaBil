@@ -144,18 +144,6 @@
     "tags": ["LGS", "zekât"]
   },
   {
-    "id": "dkab-8-2-lgs-03",
-    "unit": "dkab-8-2",
-    "type": "passage",
-    "difficulty": 2,
-    "context": "Nisap miktarı mala sahip olan Ahmet Bey, malının üzerinden bir yıl geçince zekâtını vermek istedi. Aklına gelen kişiler şunlardı: geçim sıkıntısı çeken yeğeni, emekli maaşıyla zor geçinen dedesi, borcunu ödeyemeyen komşusu ve yolculukta parası çalınıp memleketine dönemeyen bir tanıdığı.",
-    "prompt": "Hanefi mezhebine göre Ahmet Bey'in zekâtı aşağıdakilerden hangisine verilemez?",
-    "choices": ["Geçim sıkıntısı çeken yeğenine", "Emekli maaşıyla zor geçinen dedesine", "Borcunu ödeyemeyen komşusuna", "Yolculukta parası çalınan tanıdığına"],
-    "answer": 1,
-    "explanation": "Kişi zekâtını anne babasına, dede ve ninesine, çocuk ve torunlarına ve eşine veremez. İhtiyaç sahibi yeğen, borcunu ödeyemeyen kişi ve yolda kalmış yolcu ise zekât verilebilecekler arasındadır.",
-    "tags": ["LGS", "zekât"]
-  },
-  {
     "id": "dkab-8-2-lgs-04",
     "unit": "dkab-8-2",
     "type": "passage",
@@ -204,35 +192,11 @@
     "tags": ["LGS", "nisap"]
   },
   {
-    "id": "dkab-8-2-lgs-08",
-    "unit": "dkab-8-2",
-    "type": "passage",
-    "difficulty": 3,
-    "context": "Ramazan ayında Müslümanlar, bayramdan önce ihtiyaç sahiplerine fitre (sadaka-i fıtr) verir. Hanefi mezhebine göre fitre vaciptir. Temel ihtiyaçları dışında nisap miktarı mala sahip olan kişi, hem kendisi hem de bakmakla yükümlü olduğu küçük çocukları için fitre verir. Fitrenin bayram namazından önce verilmesi faziletlidir; böylece yoksullar da bayram sevincine ortak olur.",
-    "prompt": "Bu metne göre fitreyle ilgili aşağıdakilerden hangisi söylenemez?",
-    "choices": ["Yoksulların bayram sevincine ortak olmasını sağlar", "Hanefi mezhebine göre vacip bir ibadettir", "Bayram namazından önce verilmesi faziletlidir", "Kişinin yalnızca kendisi için verdiği bir sadakadır"],
-    "answer": 3,
-    "explanation": "Metinde fitrenin kişinin hem kendisi hem de bakmakla yükümlü olduğu küçük çocukları için verildiği belirtilir. Bu nedenle fitrenin yalnızca kişinin kendisi için verildiği söylenemez.",
-    "tags": ["LGS", "fitre"]
-  },
-  {
-    "id": "dkab-8-2-lgs-09",
-    "unit": "dkab-8-2",
-    "type": "passage",
-    "difficulty": 3,
-    "context": "Fatma Hanım, komşusunun hasta çocuğu için ilaç aldı. Murat Bey, Ramazan Bayramı namazından önce fitresini verdi. Ali Bey, nisap miktarındaki malının üzerinden bir yıl geçince kırkta birini ihtiyaç sahiplerine verdi. Zehra Hanım ise mahallesine herkesin yararlanacağı bir çeşme yaptırdı.",
-    "prompt": "Bu kişilerden hangisinin yaptığı, Hanefi mezhebine göre farz olan bir ibadettir?",
-    "choices": ["Fatma Hanım", "Murat Bey", "Ali Bey", "Zehra Hanım"],
-    "answer": 2,
-    "explanation": "Nisap miktarı malın kırkta birini vermek zekâttır ve farzdır. Hanefi mezhebine göre fitre vaciptir; ilaç almak sadaka, çeşme yaptırmak ise sadaka-i câriyedir.",
-    "tags": ["LGS", "zekât"]
-  },
-  {
     "id": "dkab-8-2-lgs-10",
     "unit": "dkab-8-2",
     "type": "passage",
     "difficulty": 3,
-    "context": "Hanefi mezhebine göre toprak ürünlerinden verilen zekâta öşür denir. Yağmur suyuyla ya da masrafsız sulanan üründen onda bir, emek ve masrafla sulanan üründen yirmide bir oranında öşür verilir. Çiftçi Kadir Bey'in buğday tarlası yalnızca yağmurla sulanmaktadır. Komşusu Osman Bey ise mısır tarlasını motorla kuyudan su çekerek sulamaktadır.",
+    "context": "Toprak ürünlerinden verilen zekâta öşür denir. Yağmur suyuyla ya da masrafsız sulanan üründen onda bir, emek ve masrafla sulanan üründen yirmide bir oranında öşür verilir. Çiftçi Kadir Bey'in buğday tarlası yalnızca yağmurla sulanmaktadır. Komşusu Osman Bey ise mısır tarlasını motorla kuyudan su çekerek sulamaktadır.",
     "prompt": "Buna göre iki çiftçinin vereceği öşürle ilgili aşağıdakilerden hangisi doğrudur?",
     "choices": ["Kadir Bey ürününün onda birini, Osman Bey yirmide birini verir", "Kadir Bey ürününün yirmide birini, Osman Bey onda birini verir", "Her ikisi de ürünlerinin kırkta birini öşür olarak verir", "Öşür yalnızca masrafla sulanan üründen verilir"],
     "answer": 0,

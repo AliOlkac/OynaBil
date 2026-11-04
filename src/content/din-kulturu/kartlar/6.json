@@ -107,8 +107,7 @@
     "items": [
       { "id": "kaza", "kavram": "Kaza", "kavramKucuk": "kaza", "tanim": "Tutulamayan orucu sonradan tutmak", "tanimYonelme": "Hastalık ya da yolculuk gibi bir mazeretle tutulamayan orucun sonradan tutulmasına", "not": "Kaza orucu, tutulamayan gün sayısı kadar tutulur." },
       { "id": "fidye", "kavram": "Fidye", "kavramKucuk": "fidye", "tanim": "Tutamadığı her gün için yoksulu doyurmak", "tanimYonelme": "Çok yaşlı ya da iyileşme umudu olmayan hasta kişinin, tutamadığı her gün için bir yoksulu doyuracak kadar yardımda bulunmasına", "not": "Fidye, sonradan da oruç tutamayacak durumdaki kişiler içindir." },
-      { "id": "keffaret", "kavram": "Keffaret orucu", "kavramKucuk": "keffaret orucu", "tanim": "Bilerek bozulan oruç için 60 gün oruç tutmak", "tanimYonelme": "Ramazan orucunu mazeretsiz ve bilerek bozan kişinin altmış gün aralıksız oruç tutmasına", "not": "Hanefi mezhebine göre bu kişi, bozduğu günün orucunu ayrıca kaza eder." },
-      { "id": "fitre", "kavram": "Fitre", "kavramKucuk": "fitre", "tanim": "Bayramdan önce verilen fıtır sadakası", "tanimYonelme": "Ramazan ayı içinde ya da bayram namazından önce ihtiyaç sahiplerine verilen sadakaya", "not": "Hanefi mezhebine göre fitre vermek vaciptir." }
+      { "id": "fitre", "kavram": "Fitre", "kavramKucuk": "fitre", "tanim": "Bayramdan önce verilen fıtır sadakası", "tanimYonelme": "Ramazan ayı içinde ya da bayram namazından önce ihtiyaç sahiplerine verilen sadakaya" }
     ]
   },
   {
@@ -119,9 +118,9 @@
     "positive": "Aşağıdakilerden hangisi orucu bozar?",
     "negative": "Aşağıdakilerden hangisi orucu bozmaz?",
     "statement": "{item} orucu bozar.",
-    "explanation": "Hanefi mezhebine göre bilerek yemek ve içmek, ağızdan ilaç almak ve sigara içmek orucu bozar. Unutarak yiyip içmek, uyumak, duş almak ve misvak kullanmak ise orucu bozmaz.",
+    "explanation": "Bilerek yemek ve içmek, ağızdan ilaç almak ve sigara içmek orucu bozar. Uyumak, duş almak ve misvak kullanmak ise orucu bozmaz.",
     "members": ["Bilerek yemek yemek", "Bilerek su içmek", "Ağızdan ilaç almak", "Sigara içmek"],
-    "nonMembers": ["Unutarak yemek yemek", "Uyumak", "Duş almak", "Misvak kullanmak"]
+    "nonMembers": ["Uyumak", "Duş almak", "Misvak kullanmak"]
   },
   {
     "kind": "list",

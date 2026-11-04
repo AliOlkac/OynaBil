@@ -178,7 +178,7 @@
     "prompt": "Ramazan ayı içinde ya da bayram namazından önce ihtiyaç sahiplerine verilen sadakaya ne denir?",
     "choices": ["Fitre", "Fidye", "Zekât", "Kurban"],
     "answer": 0,
-    "explanation": "Fitre (fıtır sadakası), Hanefi mezhebine göre vaciptir. Bayramdan önce verilerek ihtiyaç sahiplerinin de bayram sevincine ortak olması sağlanır.",
+    "explanation": "Fitre (fıtır sadakası), bayramdan önce verilerek ihtiyaç sahiplerinin de bayram sevincine ortak olmasını sağlar.",
     "tags": ["fitre", "Ramazan Bayramı"]
   },
   {

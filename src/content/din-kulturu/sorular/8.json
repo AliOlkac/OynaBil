@@ -136,7 +136,7 @@
     "prompt": "Zekâtla yükümlü olmak için sahip olunması gereken en az zenginlik ölçüsüne ne denir?",
     "choices": ["Fitre", "Nisap", "Öşür", "İnfak"],
     "answer": 1,
-    "explanation": "Nisap, zekâtla yükümlü olmak için gereken en az zenginlik ölçüsüdür. Hanefi mezhebine göre altında nisap 80,18 gramdır.",
+    "explanation": "Nisap, zekâtla yükümlü olmak için gereken en az zenginlik ölçüsüdür.",
     "tags": ["zekât", "nisap"]
   },
   {
@@ -160,17 +160,6 @@
     "answer": 0,
     "explanation": "Zekât, zengin ile yoksul arasında sevgi ve güven bağı kurar, kıskançlığı azaltır. Zekât veren kişi de cimrilikten arınır.",
     "tags": ["zekât", "toplumsal fayda", "LGS"]
-  },
-  {
-    "id": "dkab-8-2-04",
-    "unit": "dkab-8-2",
-    "type": "multiple-choice",
-    "difficulty": 3,
-    "prompt": "Hanefi mezhebine göre bir kişi zekâtını aşağıdakilerden hangisine verebilir?",
-    "choices": ["Annesine", "Kendi çocuğuna", "İhtiyaç sahibi kardeşine", "Eşine"],
-    "answer": 2,
-    "explanation": "Kişi zekâtını anne babasına, dede ve ninesine, çocuk ve torunlarına ve eşine veremez. İhtiyaç sahibi kardeş, amca, dayı gibi yakınlara verebilir.",
-    "tags": ["zekât", "LGS"]
   },
   {
     "id": "dkab-8-2-05",
@@ -199,7 +188,7 @@
     "difficulty": 3,
     "prompt": "Toprak ürünlerinden verilen zekâta öşür denir.",
     "answer": true,
-    "explanation": "Doğru. Öşür, toprak ürünlerinin zekâtıdır. Hanefi mezhebine göre yağmurla sulanan üründen onda bir, masraflı sulanan üründen yirmide bir verilir.",
+    "explanation": "Doğru. Öşür, toprak ürünlerinin zekâtıdır. Yağmurla sulanan üründen onda bir, masraflı sulanan üründen yirmide bir verilir.",
     "tags": ["zekât", "öşür"]
   },
   {
@@ -210,7 +199,7 @@
     "prompt": "Ramazan ayında verilen ve yoksulların da bayram sevincine ortak olmasını sağlayan sadaka hangisidir?",
     "choices": ["Öşür", "Zekât", "Kurban", "Fitre"],
     "answer": 3,
-    "explanation": "Fitre (sadaka-i fıtr), Hanefi mezhebine göre vaciptir. Ramazan içinde verilebilir; bayram namazından önce verilmesi faziletlidir.",
+    "explanation": "Fitre (sadaka-i fıtr) Ramazan içinde verilebilir; bayram namazından önce verilmesi faziletlidir.",
     "tags": ["fitre", "sadaka"]
   },
   {

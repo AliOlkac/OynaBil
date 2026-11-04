@@ -11,12 +11,23 @@ import { SUBJECTS } from "@/content";
  */
 const readJson = (path: string): unknown[] => (existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : []);
 
+/**
+ * Sorular mezhepler üstüdür: cevabı mezhebe göre değişen fıkıh ayrıntısı sorulmaz.
+ * "Hanefi mezhebine göre…", "Şâfiîlere göre…" gibi kalıplar bu yüzden hata sayılır.
+ * Mezhepleri konu olarak tanıtan sorular (7. sınıf) bu kalıpları kullanmaz.
+ */
+const MADHAB_RULING = /mezhebine göre|mezheplere göre|(hanef|şâfi|şafi|mâlik|malik|hanbel)[a-zçğıöşüâîû]*lere göre|imameyn/;
+
 function checkQuestion(q: Question, label: string, unitIds: Set<string>, prefix: string) {
   expect(unitIds.has(q.unit), `${label}: bilinmeyen ünite ${q.unit}`).toBe(true);
   expect(q.unit.startsWith(prefix), `${label}: ${q.unit} bu sınıfa ait değil`).toBe(true);
   expect(q.id.startsWith(`${q.unit}-`), `${label}: id ünite ile başlamalı (${q.id})`).toBe(true);
   const texts = [q.prompt, q.explanation, ...(q.type === "true-false" ? [] : q.choices), ...(q.type === "passage" ? [q.context] : [])];
   for (const t of texts) expect(t.includes("{") || t.includes("}"), `${label}: doldurulmamış kalıp: ${t}`).toBe(false);
+  for (const t of texts) {
+    const ruling = t.toLocaleLowerCase("tr").match(MADHAB_RULING);
+    expect(ruling, `${label}: mezhebe bağlı hüküm ("${ruling?.[0]}"); sorular mezhepler üstü olmalı`).toBeNull();
+  }
   if (q.type !== "true-false") {
     const normalized = q.choices.map((c) => c.trim().toLocaleLowerCase("tr"));
     expect(new Set(normalized).size, `${label}: aynı şık iki kez`).toBe(q.choices.length);

@@ -95,7 +95,7 @@ Sorular akıllı tahtada takım yarışmasında gösterilecek; her sorudan sonra
 
 Kurallar:
 - Doğru, doğal Türkçe; Türkçe karakterler eksiksiz (ğ, ş, ı, İ, ç, ö, ü, â, î).
-- MEB DKAB ders kitaplarının yaklaşımı: tarafsız, saygılı, mezhepler üstü, yaşa uygun. Fıkhî ayrıntılarda Hanefî görüş; gerekiyorsa belirt. Para tutarı yazma.
+- MEB DKAB ders kitaplarının yaklaşımı: tarafsız, saygılı, mezhepler üstü, yaşa uygun. Cevabı mezhebe göre değişen fıkıh ayrıntısı sorma (abdesti bozanlar, haccın farzları, kurbanın ya da fitrenin hükmü gibi); "... mezhebine göre" kalıbını kullanma. Para tutarı yazma.
 - Yalnızca Türkiye'deki din eğitiminde (Diyanet/MEB) tartışmasız kabul gören bilgiler. Ayet ya da hadis metni ancak Diyanet mealinin sözlerinden kesin eminsen ve kaynağıyla; değilsen durum, diyalog ya da açıklayıcı metin kullan.
 - "context": 2-5 cümle, 150-550 karakter: kısa bilgi metni, öğrenci/aile durumu ya da iki öğrenci arasında diyalog.
 - "prompt": soru kökü, en fazla 160 karakter. LGS kökleri: "Bu metinde aşağıdakilerden hangisine vurgu yapılmaktadır?", "Bu metinden aşağıdakilerden hangisi çıkarılamaz?", "Metindeki davranış hangi kavramla ilişkilidir?", "Bu durum aşağıdakilerden hangisine örnektir?". Olumsuz köklerden de kullan.

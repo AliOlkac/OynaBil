@@ -238,8 +238,7 @@
         "id": "seytan-taslama",
         "kavram": "Şeytan taşlama",
         "tanim": "Mina'daki cemrelere taş atmak",
-        "tanimKucuk": "Mina'daki cemrelere taş atmak",
-        "not": "Hanefîlere göre haccın vaciplerindendir."
+        "tanimKucuk": "Mina'daki cemrelere taş atmak"
       }
     ]
   },
@@ -294,18 +293,6 @@
   },
   {
     "kind": "list",
-    "id": "dkab-7-2-haccin-farzlari",
-    "unit": "dkab-7-2",
-    "difficulty": 3,
-    "positive": "Hanefî mezhebine göre aşağıdakilerden hangisi haccın farzlarından biridir?",
-    "negative": "Hanefî mezhebine göre aşağıdakilerden hangisi haccın farzlarından biri değildir?",
-    "statement": "{item}, Hanefî mezhebine göre haccın farzlarındandır.",
-    "explanation": "Hanefîlere göre haccın farzları üçtür: ihram, Arafat vakfesi ve ziyaret tavafı. Sa'y, Müzdelife vakfesi, şeytan taşlama, tıraş olmak ve veda tavafı ise haccın vaciplerindendir.",
-    "members": ["İhram", "Arafat vakfesi", "Ziyaret tavafı"],
-    "nonMembers": ["Sa'y", "Müzdelife vakfesi", "Şeytan taşlama", "Veda tavafı", "Tıraş olmak"]
-  },
-  {
-    "kind": "list",
     "id": "dkab-7-2-umre",
     "unit": "dkab-7-2",
     "difficulty": 2,
@@ -327,33 +314,6 @@
     "explanation": "Kurban yalnızca koyun, keçi, sığır, manda ve deveden olur. Tavuk ve hindi gibi kanatlı hayvanlar ile av hayvanları kurban edilmez.",
     "members": ["Koyun", "Keçi", "Sığır", "Manda", "Deve"],
     "nonMembers": ["Tavuk", "Hindi", "Kaz", "Tavşan", "Geyik"]
-  },
-  {
-    "kind": "pairs",
-    "id": "dkab-7-2-kurbanlik-yaslari",
-    "unit": "dkab-7-2",
-    "difficulty": 3,
-    "questions": [
-      { "prompt": "Hanefî mezhebine göre kurban edilecek bir {hayvanKucuk} en az kaç yaşını doldurmuş olmalıdır?", "answer": "yas" }
-    ],
-    "statement": {
-      "text": "Hanefî mezhebine göre kurban edilecek bir {hayvanIn} doldurması gereken en küçük yaş {yasTir}.",
-      "swap": "yasTir"
-    },
-    "explanation": "Hanefî mezhebine göre kurbanlık deve 5, sığır ve manda 2, koyun ve keçi 1 yaşını doldurmuş olmalıdır.",
-    "items": [
-      { "id": "deve", "hayvanKucuk": "deve", "hayvanIn": "devenin", "yas": "5 yaş", "yasTir": "5'tir" },
-      { "id": "sigir", "hayvanKucuk": "sığır", "hayvanIn": "sığırın", "yas": "2 yaş", "yasTir": "2'dir" },
-      {
-        "id": "keci",
-        "hayvanKucuk": "keçi",
-        "hayvanIn": "keçinin",
-        "yas": "1 yaş",
-        "yasTir": "1'dir",
-        "not": "6 ayını doldurmuş, iri ve gösterişli bir koyun da kurban edilebilir."
-      }
-    ],
-    "distractors": { "yas": ["3 yaş", "4 yaş"] }
   },
 
   {

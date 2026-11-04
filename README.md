@@ -1,14 +1,14 @@
 # OynaBil
 
 Ortaokul öğretmenlerinin akıllı tahtada sınıfı takımlara ayırıp **yarışarak ders işlediği** oyun platformu.
-İlk ders: **Din Kültürü ve Ahlak Bilgisi** (5-8. sınıf, 20 ünite, 2.122 açıklamalı soru).
+İlk ders: **Din Kültürü ve Ahlak Bilgisi** (5-8. sınıf, 20 ünite, 1.998 açıklamalı soru).
 
 | Sınıf | Elle yazılan | Bilgi kartından | LGS tarzı paragraf | Toplam |
 |---|---|---|---|---|
-| 5 | 60 | 461 | | 521 |
-| 6 | 60 | 424 | | 484 |
-| 7 | 60 | 501 | | 561 |
-| 8 | 60 | 446 | 50 | 556 |
+| 5 | 59 | 417 | | 476 |
+| 6 | 60 | 418 | | 478 |
+| 7 | 58 | 476 | | 534 |
+| 8 | 59 | 404 | 47 | 510 |
 
 - **Tek ekran:** Bütün oyun tahtada döner, öğrencilerin cihaz kullanmasına gerek yoktur.
 - **Öğreten yarışma:** Her sorudan sonra tahtada kısa bir açıklama çıkar. Oyun sonunda sınıfın zorlandığı üniteler ve kimsenin bilemediği sorular listelenir.
@@ -97,5 +97,5 @@ scripts/                   Service worker üretimi, LGS soru üretim hattı (lgs
 ## İçerik notu
 
 Sorular MEB Din Kültürü ve Ahlak Bilgisi programının ünite yapısına göre yazıldı. 5, 6 ve 7. sınıflar Türkiye Yüzyılı Maarif Modeli'ne, 8. sınıf 2026-2027'de okutulan programa göre düzenlendi.
-Bilgi kartları ve LGS soruları yazıldıktan sonra üretilen her soru okunarak gözden geçirildi; LGS soruları ayrıca cevap anahtarı gösterilmeden bağımsız olarak çözdürüldü (50 sorunun 50'sinde aynı cevap bulundu).
+Bilgi kartları ve LGS soruları yazıldıktan sonra üretilen her soru okunarak gözden geçirildi; LGS soruları ayrıca cevap anahtarı gösterilmeden bağımsız olarak çözdürüldü (47 sorunun 47'sinde aynı cevap bulundu).
 Sınıfta kullanmadan önce bir branş öğretmeninin gözden geçirmesi önerilir. Özellikle bakılması gereken sorular ve kart kümeleri: [docs/ICERIK-KONTROLU.md](docs/ICERIK-KONTROLU.md). Sınıfta fark edilen hatalar **Hata bildir** ile kaydedilir ve soru bankasından dışa aktarılır.

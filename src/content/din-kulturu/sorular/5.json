@@ -224,17 +224,6 @@
     "tags": ["temizlik", "namazın şartları"]
   },
   {
-    "id": "dkab-5-2-10",
-    "unit": "dkab-5-2",
-    "type": "multiple-choice",
-    "difficulty": 3,
-    "prompt": "Hanefi mezhebine göre aşağıdakilerden hangisi abdestin farzlarındandır?",
-    "choices": ["Ağza su vermek", "Kulakları meshetmek", "Kolları dirseklerle birlikte yıkamak", "Burna su çekmek"],
-    "answer": 2,
-    "explanation": "Hanefilere göre abdestin dört farzı vardır: yüzü, kolları dirseklerle, ayakları topuklarla yıkamak ve başın dörtte birini meshetmek.",
-    "tags": ["abdest", "Hanefi"]
-  },
-  {
     "id": "dkab-5-2-11",
     "unit": "dkab-5-2",
     "type": "multiple-choice",

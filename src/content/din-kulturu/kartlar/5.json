@@ -80,7 +80,7 @@
     "difficulty": 3,
     "questions": [{ "prompt": "{tanimYonelme} ne ad verilir?", "answer": "farz" }],
     "statement": { "text": "{tanimYonelme} {farzKucuk} denir.", "swap": "farzKucuk" },
-    "explanation": "{tanimYonelme} {farzKucuk} denir. Hanefi mezhebine göre namazın {yer} farzlardan biridir.",
+    "explanation": "{tanimYonelme} {farzKucuk} denir. Namazın {yer} farzlardan biridir.",
     "items": [
       { "id": "hadesten-taharet", "farz": "Hadesten taharet", "farzKucuk": "hadesten taharet", "tanimYonelme": "Namaz için abdest almaya, gerekiyorsa gusletmeye", "yer": "dışındaki" },
       { "id": "necasetten-taharet", "farz": "Necasetten taharet", "farzKucuk": "necasetten taharet", "tanimYonelme": "Beden, elbise ve namaz kılınacak yeri pislikten temizlemeye", "yer": "dışındaki" },
@@ -94,30 +94,6 @@
       { "id": "secde", "farz": "Secde", "farzKucuk": "secde", "tanimYonelme": "Namazda alnı ve burnu yere koyarak kapanmaya", "yer": "içindeki" },
       { "id": "kade-i-ahire", "farz": "Ka'de-i ahîre", "farzKucuk": "ka'de-i ahîre", "tanimYonelme": "Namazın son rekâtında Ettehiyyâtü okuyacak kadar oturmaya", "yer": "içindeki" }
     ]
-  },
-  {
-    "kind": "list",
-    "id": "dkab-5-2-namazin-icindeki-farzlar",
-    "unit": "dkab-5-2",
-    "difficulty": 2,
-    "positive": "Hanefi mezhebine göre aşağıdakilerden hangisi namazın içindeki farzlardandır?",
-    "negative": "Hanefi mezhebine göre aşağıdakilerden hangisi namazın içindeki farzlardan değildir?",
-    "statement": "{item}, Hanefi mezhebine göre namazın içindeki farzlardandır.",
-    "explanation": "Hanefi mezhebine göre namazın içindeki farzlar: {members}. Hadesten ve necasetten taharet, setr-i avret, istikbal-i kıble, vakit ve niyet ise namazın dışındaki farzlardır.",
-    "members": ["İftitah tekbiri", "Kıyam", "Kıraat", "Rükû", "Secde", "Ka'de-i ahîre"],
-    "nonMembers": ["Hadesten taharet", "Necasetten taharet", "Setr-i avret", "İstikbal-i kıble", "Vakit", "Niyet"]
-  },
-  {
-    "kind": "list",
-    "id": "dkab-5-2-abdesti-bozanlar",
-    "unit": "dkab-5-2",
-    "difficulty": 2,
-    "positive": "Hanefi mezhebine göre aşağıdakilerden hangisi abdesti bozar?",
-    "negative": "Hanefi mezhebine göre aşağıdakilerden hangisi abdesti bozmaz?",
-    "statement": "{item}, Hanefi mezhebine göre abdesti bozar.",
-    "explanation": "Hanefi mezhebine göre tuvalet ihtiyacını gidermek, yatarak uyumak, bayılmak, ağız dolusu kusmak ve yaradan kan çıkıp akması abdesti bozar. Tırnak kesmek, konuşmak ya da su içmek abdesti bozmaz.",
-    "members": ["Tuvalet ihtiyacını gidermek", "Yatarak uyumak", "Bayılmak", "Ağız dolusu kusmak", "Yaradan kan çıkıp akması"],
-    "nonMembers": ["Tırnak kesmek", "Su içmek", "Saçı taramak", "Konuşmak", "Yemek yemek"]
   },
   {
     "kind": "list",

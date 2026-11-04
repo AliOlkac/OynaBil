@@ -221,19 +221,8 @@
     "difficulty": 2,
     "prompt": "Umre, yalnızca hac mevsiminde yapılabilen bir ibadettir.",
     "answer": false,
-    "explanation": "Umre yılın her zamanında yapılabilir; Hanefîlere göre yalnızca Arefe günü ve bayram günlerinde yapılması mekruhtur. Umrede Arafat vakfesi yoktur.",
+    "explanation": "Umre yılın her zamanında yapılabilir; hac mevsimine bağlı değildir. Umrede Arafat vakfesi yoktur.",
     "tags": ["umre"]
-  },
-  {
-    "id": "dkab-7-2-10",
-    "unit": "dkab-7-2",
-    "type": "multiple-choice",
-    "difficulty": 3,
-    "prompt": "Hanefî mezhebine göre hangisi haccın farzlarındandır?",
-    "choices": ["Şeytan taşlama", "Veda tavafı", "Safa ile Merve arasında sa'y", "Ziyaret tavafı"],
-    "answer": 3,
-    "explanation": "Hanefîlere göre haccın farzları ihram, Arafat vakfesi ve ziyaret tavafıdır. Sa'y, şeytan taşlama ve veda tavafı ise haccın vaciplerindendir.",
-    "tags": ["hac", "farz", "hanefi"]
   },
   {
     "id": "dkab-7-2-11",
@@ -245,16 +234,6 @@
     "answer": 1,
     "explanation": "Mikat, Mekke'ye gelenlerin ihrama girmeden geçemeyeceği belirli yerlerdir. Harem ise Mekke çevresindeki dokunulmaz kutsal bölgenin adıdır.",
     "tags": ["hac", "mikat"]
-  },
-  {
-    "id": "dkab-7-2-12",
-    "unit": "dkab-7-2",
-    "type": "true-false",
-    "difficulty": 3,
-    "prompt": "Hanefî mezhebine göre, dinen zengin sayılan Müslümanın kurban kesmesi vaciptir.",
-    "answer": true,
-    "explanation": "Hanefîlere göre kurban; akıllı, ergen, mukim ve dinen zengin sayılan Müslümana vaciptir. Diğer mezheplere göre ise sünnettir.",
-    "tags": ["kurban", "hanefi"]
   },
 
   {
@@ -283,7 +262,7 @@
     "unit": "dkab-7-3",
     "type": "multiple-choice",
     "difficulty": 1,
-    "prompt": "Ayşe Hanefî, arkadaşı Zeynep ise Şâfiî mezhebine göre ibadet ediyor. Bu mezhepler hangi gruptandır?",
+    "prompt": "Ayşe'nin ailesi Hanefî, Zeynep'in ailesi Şâfiî mezhebini takip ediyor. Bu mezhepler hangi gruptandır?",
     "choices": ["Fıkhi mezhepler", "İtikadi mezhepler", "Tasavvufi yorumlar", "Tefsir ekolleri"],
     "answer": 0,
     "explanation": "Hanefîlik, Şâfiîlik, Mâlikîlik ve Hanbelîlik fıkhi (amelî) mezheplerdir. Bu mezhepler ibadetlerin ve günlük hayatla ilgili hükümlerin nasıl uygulanacağını açıklar.",
@@ -296,7 +275,7 @@
     "difficulty": 1,
     "prompt": "Türkiye'de en yaygın fıkhi mezhep Hanefîliktir.",
     "answer": true,
-    "explanation": "Türkiye'de Müslümanların çoğu Hanefî mezhebine göre ibadet eder. Doğu ve Güneydoğu Anadolu'da Şâfiîlik de yaygındır.",
+    "explanation": "Türkiye'de Müslümanların çoğu Hanefî mezhebini takip eder. Doğu ve Güneydoğu Anadolu'da Şâfiîlik de yaygındır.",
     "tags": ["mezhepler", "hanefîlik", "şâfiîlik"]
   },
   {
