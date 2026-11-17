@@ -11,7 +11,14 @@ import { ResumeCard } from "./ResumeCard";
 
 export default async function Home() {
   // Derleme sırasında sayılır: kartlardan üretilenler dahil, uygulamayla gelen bütün sorular.
-  const [{ subject, total }] = await countBuiltIn();
+  const counts = await countBuiltIn();
+  const total = counts.reduce((sum, c) => sum + c.total, 0);
+  const units = counts.reduce((sum, c) => sum + c.subject.units.length, 0);
+  const grades = counts.flatMap((c) => [...c.subject.grades]);
+  const summary =
+    counts.length === 1
+      ? `${counts[0].subject.name}: ${Math.min(...grades)}-${Math.max(...grades)}. sınıf, ${units} ünite, ${total.toLocaleString("tr-TR")} soru.`
+      : `${counts.length} ders, ${Math.min(...grades)}-${Math.max(...grades)}. sınıf, ${units} ünite, ${total.toLocaleString("tr-TR")} soru: ${counts.map((c) => c.subject.shortName).join(", ")}.`;
   return (
     <div className="relative flex min-h-dvh flex-col overflow-hidden bg-ink-900">
       <Girih className="text-cream opacity-[0.07]" scale={1.4} />
@@ -41,8 +48,7 @@ export default async function Home() {
             </ClientOnly>
           </div>
           <p className="mt-12 text-ink-400">
-            {subject.name}: {subject.grades[0]}-{subject.grades[subject.grades.length - 1]}. sınıf, {subject.units.length} ünite,{" "}
-            {total} soru.
+            {summary}
           </p>
         </section>
 

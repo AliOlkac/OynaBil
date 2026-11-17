@@ -11,6 +11,7 @@ import { Logo } from "@/components/ui/Logo";
 import { Segmented, Toggle } from "@/components/ui/Segmented";
 import { TeamEmblem } from "@/components/ui/TeamEmblem";
 import { GameGlyph } from "@/components/game/GameGlyph";
+import { SubjectPicker } from "@/components/ui/SubjectPicker";
 import { SUBJECTS } from "@/content";
 import { buildDeckIds, countEligible } from "@/core/deck";
 import type { Grade } from "@/core/model";
@@ -34,7 +35,7 @@ export function SetupScreen() {
     const requested = params.get("oyun");
     const gameId = (requested && getGame(requested) ? requested : saved?.gameId) ?? GAMES[0].id;
     const subject = SUBJECTS.find((s) => s.id === saved?.subjectId) ?? SUBJECTS[0];
-    const grade = saved?.grade ?? subject.grades[subject.grades.length - 1];
+    const grade = saved?.grade && subject.grades.includes(saved.grade) ? saved.grade : subject.grades[subject.grades.length - 1];
     return {
       gameId,
       subjectId: subject.id,
@@ -48,7 +49,7 @@ export function SetupScreen() {
   });
 
   const [gameId, setGameId] = useState(initial.gameId);
-  const [subjectId] = useState(initial.subjectId);
+  const [subjectId, setSubjectId] = useState(initial.subjectId);
   const [grade, setGrade] = useState<Grade>(initial.grade);
   const [unitIds, setUnitIds] = useState<string[]>(initial.unitIds);
   const [section, setSection] = useState<string | undefined>(initial.section);
@@ -86,6 +87,16 @@ export function SetupScreen() {
         : available < needed
         ? `Seçili ünitelerde ${available} soru var, bu ayarlarla ${needed} soru gerekiyor. Ünite ekleyin${game.id === "bilgi-yarismasi" ? " ya da tur sayısını azaltın" : ""}.`
         : null;
+
+  // Ders değişince sınıf korunur (o derste varsa); üniteler yeni dersin ilk ünitesine döner.
+  const changeSubject = (id: string) => {
+    const next = SUBJECTS.find((x) => x.id === id);
+    if (!next || id === subjectId) return;
+    const g = next.grades.includes(grade) ? grade : next.grades.reduce((best, x) => (Math.abs(x - grade) < Math.abs(best - grade) ? x : best), next.grades[0]);
+    setSubjectId(id);
+    setGrade(g);
+    setUnitIds(unitsFor(next, g).slice(0, 1).map((u) => u.id));
+  };
 
   const changeGrade = (g: Grade) => {
     setGrade(g);
@@ -181,11 +192,14 @@ export function SetupScreen() {
         </Panel>
 
         <Panel title={subject.name} delay={0.05}>
+          <div className={SUBJECTS.length > 1 ? "mb-3" : ""}>
+            <SubjectPicker subjects={SUBJECTS} value={subjectId} onChange={changeSubject} size="lg" />
+          </div>
           <Segmented
             label="Sınıf"
             size="lg"
             value={grade}
-            options={subject.grades.map((g) => ({ value: g, label: `${g}. sınıf` }))}
+            options={subject.grades.map((g) => ({ value: g, label: subject.grades.length > 4 ? `${g}` : `${g}. sınıf` }))}
             onChange={changeGrade}
           />
           <div className="mt-3 flex flex-wrap items-center gap-2" role="group" aria-label="Şube">

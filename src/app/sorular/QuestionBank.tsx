@@ -8,13 +8,13 @@ import { ReportDialog } from "@/components/game/ReportDialog";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 import { Segmented } from "@/components/ui/Segmented";
+import { SubjectPicker } from "@/components/ui/SubjectPicker";
 import { SUBJECTS } from "@/content";
 import { DIFFICULTY_LABELS, QUESTION_TYPE_LABELS, type Grade, type Question } from "@/core/model";
 import { deleteCustomQuestion, importCustomQuestions, isCustomQuestion, unitsFor, useCustomQuestions, useGradePool } from "@/core/repository";
 import { exportReports, removeReport, REPORT_REASONS, setHidden, useHidden, useReports, type Report } from "@/lib/reports";
 import { QuestionEditor } from "./QuestionEditor";
 
-const subject = SUBJECTS[0];
 const PAGE = 60;
 
 type Filter = "all" | "reported" | "hidden" | "passage" | "cards";
@@ -30,6 +30,8 @@ function download(name: string, text: string) {
 }
 
 export function QuestionBank() {
+  const [subjectId, setSubjectId] = useState(SUBJECTS[0].id);
+  const subject = SUBJECTS.find((s) => s.id === subjectId) ?? SUBJECTS[0];
   const [grade, setGrade] = useState<Grade>(subject.grades[0]);
   const loaded = useGradePool(subject.id, grade, { includeHidden: true });
   const pool = useMemo(() => loaded ?? [], [loaded]);
@@ -162,12 +164,26 @@ export function QuestionBank() {
           </div>
         )}
 
-        <div className="mt-6 flex flex-wrap items-center gap-4">
+        <div className="mt-6">
+          <SubjectPicker
+            subjects={SUBJECTS}
+            value={subjectId}
+            onChange={(id) => {
+              const next = SUBJECTS.find((s) => s.id === id);
+              if (!next) return;
+              setSubjectId(id);
+              if (!next.grades.includes(grade)) setGrade(next.grades[0]);
+              setUnitId("all");
+              setLimit(PAGE);
+            }}
+          />
+        </div>
+        <div className="mt-4 flex flex-wrap items-center gap-4">
           <div className="w-[28rem] max-w-full">
             <Segmented
               label="Sınıf"
               value={grade}
-              options={subject.grades.map((g) => ({ value: g, label: `${g}. sınıf` }))}
+              options={subject.grades.map((g) => ({ value: g, label: subject.grades.length > 4 ? `${g}` : `${g}. sınıf` }))}
               onChange={(g) => {
                 setGrade(g);
                 setUnitId("all");
