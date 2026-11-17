@@ -89,6 +89,19 @@ Penaltı'da şutun yeri kale koordinatıyla gelir (x: -1 sol direk, +1 sağ dire
 
 Halat Çekme'de iki öğrenci aynı anda dokunur. Tarayıcılar çoklu dokunuşta `click` olayını yalnızca birine gönderdiği için cevaplar `pointerdown` ile alınır.
 
+### Üç boyutlu sahne (Penaltı)
+
+Penaltı'nın iki sahnesi vardır: three.js ile çizilen üç boyutlu sahne (`scene3d/`) ve SVG çizimi (`scene/`). İkisi aynı girdiyi alır, aynı olayları bildirir (`onKick`, `onContact`, `onKickDone`, `onFinale`); oyun ekranı hangisinin çalıştığını bilmez. Seçimi `PenaltyStage` yapar.
+
+- **Karar** (`src/games/shared/stage3d/support.ts`, three.js içermez): Ekran kartıyla çizen bir WebGL 2 varsa 3D, yoksa çizim sahnesi açılır (yazılımsal çizen ya da yalnızca WebGL 1 sunan tarayıcıda 3D kendiliğinden açılmaz). Öğretmen üst çubuktaki 3D düğmesiyle tercihi değiştirebilir; tercih tarayıcıda saklanır.
+- **Tembel yükleme:** three.js ve sahne motoru (`scene3d/engine.ts`) ayrı bir parçadır, yalnızca 3D sahne açılırken indirilir. Öbür sayfalar ve oyunlar bu parçayı indirmez.
+- **Kalite:** Motor kare süresini ölçer; sahne akmıyorsa bir alt kademeye iner, en alt kademede de akmıyorsa çizim sahnesine dönülür ve tercih "kapalı" olarak saklanır. Çizim bağlamı kaybolursa da aynı yol izlenir. Sahne oyunun ortasında değişirse süren şut bitmiş sayılır, oyun takılmaz.
+- **Zaman çizelgesi** (`scene3d/timeline.ts`, three.js içermez): Topun yolu, kalecinin uçuşu ve şutçunun vuruşu yalnızca şuta ve geçen süreye bağlı saf fonksiyonlardır. Topun temastan sonraki yolu (ağ, eldiven, direk, pano) şut başlarken sabit adımlı küçük bir fizikle önceden hesaplanır. Bu sayede aynı şut başka bir kameradan ağır çekimde birebir yeniden oynatılır ve testte sınanır (`timeline.test.ts`).
+- **Nişan:** Parmağın altındaki nokta kameradan kale düzlemine ışın izlenerek kale koordinatına çevrilir. Görünen noktalı yol ile topun gittiği yol aynı fonksiyondan çıkar.
+- **Ortak parçalar** (`src/games/shared/stage3d/`): belirteç renkleri ve tuvalden doku (`kit.ts`), iki kemikli uzuvlar için ters kinematik ve çocuk karakter (`figure.ts`). Yeni bir üç boyutlu sahne bunları kullanır.
+
+Penaltı'nın kayıtlı sesleri (`src/lib/samples.ts`, `src/games/penalti/audio.ts`) için bkz. [SESLER.md](SESLER.md).
+
 ## 7. Çok cihazlı sürüme geçiş planı
 
 Bugünkü yapı bu geçiş düşünülerek kuruldu. Önerilen yol:
@@ -110,3 +123,5 @@ Reducer'lar, deste ve soru havuzu bu geçişte değişmeden kalır.
 - Her derleme yeni bir sürüm adı üretir; eski önbellek kendiliğinden silinir.
 
 Service worker yalnızca derlenmiş sürümde kaydolur, `npm run dev` sırasında devreye girmez.
+
+Üç boyutlu sahnenin parçası ve Penaltı'nın ses dosyaları da bu listeye girer; oyun bir kez açıldıktan sonra çevrimdışıyken de üç boyutlu ve sesli çalışır.

@@ -18,11 +18,13 @@ import { dur, ease, spring } from "@/lib/motion";
 import { sfx } from "@/lib/sound";
 import { penalti } from "../registry";
 import { optionOrder } from "../shared/duel";
+import { penaltyAudio } from "./audio";
 import { TEAM_STYLES } from "../teams";
 import type { GameProps, Team } from "../types";
 import { createPenalty, KICK_LOCK_MS, penaltyReducer, type Kick, type KickResult, type PenaltyAction, type PenaltySettings, type PenaltyState } from "./logic";
 import type { ArtTeam } from "./scene/art";
-import { PenaltyScene, type SceneInput } from "./scene/PenaltyScene";
+import type { SceneInput } from "./scene/PenaltyScene";
+import { PenaltyStage, preloadPenaltyStage } from "./scene3d/PenaltyStage";
 
 /** Şut bittikten sonra sıradaki soruya kendiliğinden geçiş; açıklama okunur. */
 const AFTER_KICK_MS = 5_000;
@@ -93,6 +95,28 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
     else if (s.outcome === "timeout") sfx.wrong();
   }, [s.outcome]);
 
+  // Kayıtlı sesler: açılışta indirilir, oyun kapanınca susar.
+  useEffect(() => {
+    penaltyAudio.preload();
+    preloadPenaltyStage();
+    return () => penaltyAudio.stop();
+  }, []);
+
+  // Tribün uğultusu soru sırasında alçak, şut anında yüksektir; spiker şut hakkını ve boş geçen soruyu duyurur.
+  const lastPhase = useRef(s.phase);
+  const lastSudden = useRef(s.suddenDeath);
+  useEffect(() => {
+    const playing = s.phase !== "ready" && !(s.phase === "finished" && showResults);
+    penaltyAudio.ambience(!playing ? null : s.phase === "kick" || s.phase === "result" ? "tense" : "quiet");
+    if (s.phase !== lastPhase.current) {
+      if (s.phase === "kick" && s.kicks.length % 2 === 0) penaltyAudio.say("hazir", 0.55);
+      else if (s.phase === "reveal") penaltyAudio.say("pas", 0.4);
+      else if (s.phase === "question" && s.suddenDeath && !lastSudden.current) penaltyAudio.say("seri", 0.2);
+      lastPhase.current = s.phase;
+      lastSudden.current = s.suddenDeath;
+    }
+  }, [s.phase, s.suddenDeath, s.kicks.length, showResults]);
+
   const kick = useCallback((x: number, y: number) => dispatch({ type: "kick", x, y, now: clock() }), [dispatch]);
   const next = useCallback(() => dispatch({ type: "next", now: clock() }), [dispatch]);
   const onContact = useCallback((index: number) => setContacted((n) => Math.max(n, index + 1)), []);
@@ -127,6 +151,7 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
         questionInfo={`${settings.questions} soru${settings.seconds ? `, soru başına ${settings.seconds} saniye` : ""}. İki takıma aynı soru sorulur; ilk bilen takım penaltıyı çeker.`}
         onStart={() => {
           sfx.go();
+          penaltyAudio.say("baslangic", 0.3);
           dispatch({ type: "start", now: clock() });
         }}
       />
@@ -179,7 +204,7 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
         } ${armed ? "cursor-grab" : ""}`}
         style={{ transition: `height var(--dur-scene) var(--ease-out)` }}
       >
-        <PenaltyScene input={sceneInput} teams={sceneTeams} reducedMotion={reducedMotion} onKick={kick} onContact={onContact} onKickDone={onKickDone} onFinale={onFinale} />
+        <PenaltyStage input={sceneInput} teams={sceneTeams} reducedMotion={reducedMotion} onKick={kick} onContact={onContact} onKickDone={onKickDone} onFinale={onFinale} />
         <Scoreboard teams={teams} goals={shownGoals} kicks={s.kicks.slice(0, contacted)} label={s.suddenDeath ? "SERİ PENALTI" : `Soru ${s.asked}/${settings.questions}`} compact={!expanded} />
         <AnimatePresence>
           {s.phase === "finished" && finaleDone && (

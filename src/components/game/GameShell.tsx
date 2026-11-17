@@ -1,24 +1,46 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
-import { Maximize, Minimize, Volume2, VolumeX, X } from "lucide-react";
+import { Box, Maximize, Minimize, Volume2, VolumeX, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
+import { setStage3dPref, useStage3d } from "@/games/shared/stage3d/support";
 import { useFullscreen } from "@/lib/hooks";
 import { isSoundOn, setSoundOn } from "@/lib/sound";
 import { dur, spring } from "@/lib/motion";
+
+/** Üç boyutlu sahneyi açıp kapatan düğme. Tahta WebGL çizemiyorsa hiç görünmez. */
+function Stage3dToggle() {
+  const stage3d = useStage3d();
+  if (!stage3d.available) return null;
+  return (
+    <Button
+      variant="quiet"
+      aria-label={stage3d.enabled ? "3D sahneyi kapat" : "3D sahneyi aç"}
+      aria-pressed={stage3d.enabled}
+      className="!gap-1.5 !px-3"
+      onClick={() => setStage3dPref(stage3d.enabled ? "kapali" : "acik")}
+      icon={<Box className={`size-5 ${stage3d.enabled ? "text-firuze" : ""}`} />}
+    >
+      <span className={`text-sm font-bold ${stage3d.enabled ? "text-cream" : "line-through"}`}>3D</span>
+    </Button>
+  );
+}
 
 /** Oyun ekranlarının ortak çerçevesi: üst çubuk, çıkış onayı, ses ve tam ekran. */
 export function GameShell({
   title,
   context,
   onExit,
+  scene3d = false,
   children,
 }: {
   title: string;
   context: string;
   onExit: () => void;
+  /** Oyunun üç boyutlu sahnesi varsa 3D düğmesi gösterilir (yavaş tahtada kapatmak için). */
+  scene3d?: boolean;
   children: ReactNode;
 }) {
   const [fullscreen, toggleFullscreen] = useFullscreen();
@@ -33,6 +55,7 @@ export function GameShell({
         <p className="hidden truncate text-base font-semibold sm:block">{title}</p>
         <p className="hidden truncate text-sm text-ink-400 md:block">{context}</p>
         <div className="ml-auto flex items-center gap-1">
+          {scene3d && <Stage3dToggle />}
           <Button
             variant="quiet"
             aria-label={sound ? "Sesi kapat" : "Sesi aç"}

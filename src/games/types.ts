@@ -64,6 +64,8 @@ export type GameDefinition = {
   defaultSettings: GameSettings;
   /** Bu ayarlarla oyunun ihtiyaç duyduğu en az soru sayısı. */
   questionsNeeded: (settings: GameSettings, teamCount: number) => number;
+  /** Oyunun üç boyutlu sahnesi var mı; varsa üst çubukta 3D düğmesi görünür. */
+  scene3d?: boolean;
 };
 
 /** Her cevap kaydedilir; oyun sonu raporu ve öğretmenin "zorlanılan konular" listesi buradan çıkar. */

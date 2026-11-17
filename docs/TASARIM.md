@@ -45,7 +45,7 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
   - ATEŞ'te kamera bütün sahayı gösterir. İsabet anında vurulan kuleye yaklaşıp sarsılır, yıkılışta yıkılan kuleyi izler.
   - Telefonda yakın planlar daha da daralır.
 - **Rüzgâr:** Bulutlar ve bayraklar rüzgârın yönünde ve şiddetinde hareket eder. Bu sürekli hareket oyun bilgisi taşıdığı için sonsuz döngü yasağının ikinci istisnasıdır.
-- **Penaltı'da sürekli hareket:** Kaleci şut beklerken parmak uçlarında yaylanır, taraftarlar golden sonra birkaç saniye zıplar. İkisi de canlı bir durumu gösterir ve durum bitince durur.
+- **Penaltı'da sürekli hareket:** Kaleci şut beklerken parmak uçlarında yaylanır, taraftarlar golden sonra birkaç saniye zıplar. İkisi de canlı bir durumu gösterir ve durum bitince durur. Üç boyutlu sahnede panolardaki yazı, bayraklar ve tribündeki flaşlar da yalnızca şut anında hareket eder; soru sırasında sahne durgundur, çünkü öğrenciler soruyu okur.
 - **Düello sorusu:**
   - Soru bir kez, ortada yazılır. İki takımın şıkları kendi yarısında, kendi renginde ve farklı sırayla durur.
   - Yanlış cevap veren tarafın şıkları kum saatiyle kapanır ("Rakibini bekle"). Hangi şıkkı seçtiği karar anına kadar gösterilmez.
@@ -53,15 +53,19 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
 - **Otomatik geçiş:**
   - Atıştan ya da açıklamadan sonra devam düğmesi yerine dolan bir çubuk gelir (Kule Yıkmaca, Penaltı).
   - Çubuğun yanında iki düğme vardır: "Bekle" geçişi durdurur, "Geç" hemen geçer.
-- **Penaltı sahnesi:**
-  - Gece maçı. Işık kuleleri, iki takımın renklerinde taraftarlar ve "OYNABİL" yazılı reklam panoları vardır.
-  - Kamera topun arkasından kaleye bakar; ağın arka yüzü derinlik için biraz küçüktür.
-  - Kaleci önden çizilir. Şutçular sahanın ön köşelerinde, sırtları kameraya dönük bekler; hak kazanan topun başına koşar.
-  - Şutçu parmağını sürüklerken toptan parmağa kesikli bir yay ve takım renginde bir hedef çizilir. Hedef kalenin dışındaysa gri olur.
-  - Kurtarışta kaleci topun gittiği yere uçar. Zaman yavaşlar ve kamera eldivenlere yaklaşır, eldivenlerde altın bir yıldız ve beyaz bir halka açılır. Ortaya gelen topu kaleci göğsünde tutar.
-  - Golde ağ topun çarptığı yerde esner, takım renginde konfeti atılır. O takımın tribünü zıplar, reklam panoları takım renginde yanıp söner.
-  - Direkte direk titrer ve top geri seker.
-  - Sonuç sahada büyük harflerle yazılır: GOL!, KURTARDI!, DİREK!, AUT!.
+- **Penaltı sahnesi (üç boyutlu):**
+  - Gece maçı, gerçek ölçülerinde bir kale (7,32 x 2,44 m). Çim 5,5 metrelik biçim şeritleriyle çizgilidir; kale arkasında ve yanlarda iki takımın renklerinde taraftarlarla dolu tribünler, "OYNABİL" ve "BİLEN ATAR" yazan LED panolar, projektör kuleleri vardır.
+  - Karakterler iri başlı, oyuncak gibi çocuklardır; Halat Çekme ve Kule Yıkmaca'daki çocukların üç boyutlu hâlidir (aynı ten, saç ve kıyafet renkleri). Kalecinin forması iki takımın renginden farklı seçilir.
+  - Soru sırasında kamera alçaktan kaleye bakar; iki şutçu ön planda, sırtları dönük bekler. Hak kazanan topun başına yürür, sahne büyür ve kamera yükselip kalenin tamamını gösterir.
+  - Şutçu parmağını sürüklerken hedefte takım renginde bir halka, toptan hedefe noktalı bir yol görünür. Yol, topun gerçekten izleyeceği falsolu yoldur. Hedef kalenin dışındaysa halka gri olur.
+  - Şutla birlikte kamera topun peşinden kaleye yaklaşır. Uçan topun arkasında kısa bir iz kalır.
+  - Kurtarışta kaleci topun gittiği yere uçar, zaman kısa bir an yavaşlar, eldivenlerde kehribar bir parlama açılır ve top sahaya seker. Ortaya gelen topu kaleci göğsünde tutar.
+  - Golde ağ topun çarptığı yerde esner, top ağın dibine düşer. Takım renginde konfeti atılır, o takımın tribünü zıplar, panolar takım renginde "GOOOL!" yazar.
+  - Direkte kale titrer ve top geri seker. Auta giden top panoya çarpar ya da tribüne gider.
+  - **Tekrar:** Gol, kurtarış ve direk, sonuç kartı okunurken başka bir kameradan ağır çekimde yeniden oynar. Gol ağın arkasından, kurtarış kalecinin uçtuğu yandan alçaktan gösterilir. Köşede "TEKRAR" etiketi durur.
+  - Sonuç sahnenin altında büyük harflerle yazılır: GOL!, KURTARDI!, DİREK!, AUT!. Oyun bitince kamera kazanan şutçunun çevresinde döner.
+  - **Ses:** Türkçe bir spiker gol, kurtarış, direk ve autu duyurur; tribün uğuldar, golde coşar (bkz. `docs/SESLER.md`).
+- **Penaltı sahnesi (çizim):** Tahta üç boyutlu çizemiyorsa ya da öğretmen üst çubuktaki 3D düğmesini kapattıysa aynı oyun SVG çizimiyle oynanır: kamera topun arkasından kaleye bakar, kaleci önden, şutçular sırtlarından çizilir. Kurallar, sesler ve sonuç yazıları aynıdır; tekrar gösterimi yoktur.
 - **Oyun anı efektleri:**
   - Toz, ter damlası ve çamur sıçraması parçacıkları.
   - Yanlış cevapta buz kalıbı ve titreme.
@@ -104,6 +108,14 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
 | `saha` / `saha-acik` | `#23603f` / `#2b6f49` | Çim ve çim şeritleri |
 | `camur` / `camur-koyu` / `camur-parlak` | `#6b4527` / `#3f2715` / `#9a6a3f` | Çamur havuzu, kenarı, parlaması |
 | `ip` / `ip-koyu` | `#d6ab66` / `#a67a3a` | İp ve örgü deseni |
+
+**Penaltı stadyumu (üç boyutlu):**
+
+| Belirteç | Değer | Kullanım |
+|---|---|---|
+| `cim` / `cim-acik` | `#2c8048` / `#3a9655` | Projektör altındaki çim ve biçim şeritleri |
+
+Stadyumun geri kalanı mevcut belirteçleri kullanır: gökyüzü ve sis `ink-950` / `ink-900`, çizgiler ve direkler `cream`, panolar `firuze` ve `kehribar`, taraftarlar takım renkleri.
 
 **Kule Yıkmaca sahnesi:**
 
@@ -174,5 +186,26 @@ Kök boyut ekrana göre ölçeklenir: 1920x1080 tahtada 20 px, 1366x768 tahtada 
   - Kule katlar hâlinde çökmez, solup moloza dönüşür.
   - Nişangâh oyunun parçası olduğu için hareket etmeye devam eder.
 - Penaltı'da:
-  - Ağır çekim, kamera yaklaşması, sarsıntı ve konfeti kapanır. Tribün zıplamaz, ağ esnemez.
+  - Ağır çekim, kamera yaklaşması, sarsıntı ve konfeti kapanır. Tribün zıplamaz.
+  - Üç boyutlu sahnede kamera kaymadan doğrudan yerine geçer; tekrar gösterimi, topun izi, parlama, flaşlar, bayrak ve pano hareketi kapanır.
   - Kalecinin uçuşu ve topun yolu yine gösterilir.
+
+## Üç boyutlu sahneler
+
+Üç boyutlu sahneler three.js ile çizilir. Ortak altyapı `src/games/shared/stage3d/` altındadır; ilk örnek Penaltı'dır (`src/games/penalti/scene3d/`).
+
+- **Görünüm:** Oyuncak gibi, yalın ve parlak. Foto-gerçekçilik hedeflenmez: tahtada 8 metreden okunan iri şekiller, takım renkleri ve net gölgeler yeterlidir.
+- **Dosya yok:** Hazır model ya da resim indirilmez. Çim, ağ, pano, forma ve top dokuları tuvale çizilerek, karakterler basit şekillerden kurulur. Renkler `globals.css` belirteçlerinden okunur.
+- **Yasaklar:** Sonradan işleme (bloom, bulanıklık, derinlik alanı) kullanılmaz. Parlama gereken yerde toplamalı bir ışık lekesi yeter.
+- **Kalite kademeleri:** Sahne tahtanın gücüne göre üç kademeden birinde açılır ve akmıyorsa kendiliğinden bir alt kademeye iner.
+
+  | Kademe | Çözünürlük | Gölge | Üç boyutlu taraftar sırası (kale arkası / yanlar) | Süsler |
+  |---|---|---|---|---|
+  | Yüksek | Ekranın tamamı (en çok 2x) | 2048 gölge haritası | 16 / 7 | Flaş, bayrak, ağ salınımı |
+  | Orta | En çok 1,25x | 1024 gölge haritası | 10 / 4 | Flaş, bayrak, ağ salınımı |
+  | Düşük | 0,8x | Yuvarlak gölge lekeleri | 7 / 0 | Yok |
+
+  Üç boyutlu sıraların arkasındaki taraftarlar tribüne çizilidir.
+
+- **Yedek sahne:** Her üç boyutlu sahnenin bir çizim (SVG) yedeği vardır. Ekran kartı olmayan ya da en düşük kademede de akmayan tahtada oyun yedek sahneyle sürer. Öğretmen üst çubuktaki **3D** düğmesiyle sahneyi kendisi de değiştirebilir.
+- **Durgunluk:** Soru sırasında sahnede sürekli hareket olmaz; kamera, panolar ve bayraklar yalnızca atış anında canlanır.

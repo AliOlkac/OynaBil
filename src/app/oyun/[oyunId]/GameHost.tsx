@@ -74,6 +74,7 @@ function ActiveGame({ gameId }: { gameId: string }) {
   return (
     <GameShell
       title={game.name}
+      scene3d={game.scene3d}
       context={`${config.grade}${config.section ? `-${config.section}` : ". sınıf"} ${subject?.shortName ?? ""}, ${unitLabel}`}
       onExit={() => {
         endActiveGame();

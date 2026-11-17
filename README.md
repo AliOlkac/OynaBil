@@ -24,11 +24,13 @@ Ortaokul öğretmenlerinin akıllı tahtada sınıfı takımlara ayırıp **yar�
 | **Bilgi Yarışması** | 2-4 | Takımlar sırayla soru alır. Bilemeyen takımın sorusunu başka takım çalabilir. Her takımın birer kez yarı yarıya, +15 saniye ve pas jokeri vardır. Doğru cevapta puan şıktan skor kutusuna uçar; önde olan takımda taç, üst üste bilen takımda alev rozeti çıkar. 8. sınıfta LGS tarzı paragraf soruları karışık ya da tek başına seçilebilir: metin solda okunur, okumak için 20 saniye ek süre verilir, olumsuz soru kökü ("çıkarılamaz", "değildir") altı çizili gösterilir. |
 | **Halat Çekme** | 2 | Tahta ikiye bölünür, iki öğrenci aynı anda kendi sorusunu çözer. Tahtanın üst yarısında çizimli bir halat çekme sahnesi vardır: doğru cevapta takım ipe asılır, yanlış cevapta buz kesilir. Kurdele bayrağa ulaşınca kaybeden takım çamura düşer, kazananlar sevinir. |
 | **Kule Yıkmaca** | 2 | Her takımın bir kulesi ve önünde bir mancınığı vardır. İki takıma aynı soru sorulur; ilk bilen takım atış hakkı kazanır, yanlış cevap veren takımın mancınığı tutukluk yapar. Karşı kulenin önünde inip çıkan nişangâhı doğru anda durdurmak gerekir: pencere en çok, temel en az hasar verir. Her soruda değişen rüzgâr taşı yükseltir ya da alçaltır, zor soruyu bilen ateşli gülle atar. Kulesi yıkılan kaybeder; sorular biterse kazanan şeref atışıyla karşı kuleyi yıkar. |
-| **Penaltı** | 2 | İki takıma aynı soru sorulur; ilk bilen takımın oyuncusu topun başına geçer. Şutçu topa dokunup parmağını kalede istediği yere sürükler ve bırakır. Bilgisayar kaleci üçte bir olasılıkla sola, ortaya ya da sağa atlar; topun gittiği köşeyi tutturursa ağır çekimde kurtarır, tutturamazsa ağ esner ve tribün coşar. Direğe ya da dışarıya giden şut gol olmaz. Eşitlikte seri penaltıya geçilir. |
+| **Penaltı** | 2 | İki takıma aynı soru sorulur; ilk bilen takımın oyuncusu topun başına geçer. Sahne üç boyutlu bir stadyumdur: şutçu parmağını kalede istediği yere sürükleyip bırakır, top falsoyla uçar, kamera peşinden kaleye yaklaşır. Bilgisayar kaleci üçte bir olasılıkla sola, ortaya ya da sağa atlar; topun gittiği köşeyi tutturursa uçarak kurtarır, tutturamazsa ağ esner ve tribün coşar. Gol, kurtarış ve direk başka bir kameradan ağır çekimde tekrar oynar; Türkçe bir spiker olanları duyurur. Direğe ya da dışarıya giden şut gol olmaz. Eşitlikte seri penaltıya geçilir. |
 
 Bilgi Yarışması'nı dizüstü bilgisayardan da yönetebilirsiniz: `A-D` ya da `1-4` cevap verir, `Enter` sonraki soruya geçer, `P` süreyi duraklatır. Kule Yıkmaca'da `Boşluk` ya da `Enter` mancınığı ateşler, Penaltı'da sayı tuşları (sayısal tuş takımı gibi, 7 sol üst, 3 sağ alt) şut çektirir.
 
 Kule Yıkmaca ve Penaltı'da iki takıma aynı soru sorulur: iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir, şıklar iki tarafta farklı sırayla dizilir. Bu iki oyunda yalnızca çoktan seçmeli sorular kullanılır; doğru/yanlış sorusunda bir takımın yanlış cevabı görülünce doğrusu belli olurdu. Atıştan sonra sıradaki soruya kendiliğinden geçilir; öğretmen geçişi durdurup konuyu anlatabilir.
+
+**Üç boyutlu sahne ve eski tahtalar:** Penaltı, ekran kartı olan tahtalarda üç boyutlu açılır. Oyun tahtanın gücünü kendisi ölçer: sahne akmıyorsa ayrıntıyı azaltır, yine akmıyorsa aynı oyunu çizim sahnesiyle sürdürür. Üst çubuktaki **3D** düğmesiyle sahneyi siz de açıp kapatabilirsiniz; tercih o tahtada hatırlanır. Üç boyutlu sahne ve sesler ilk açılışta indirilir, sonra internetsiz de çalışır.
 
 ## Çalıştırma
 
@@ -63,10 +65,12 @@ src/
   lib/                     Ses, hareket belirteçleri, sorulanlar hafızası, hata bildirimleri
   games/                   Oyunlar: her biri saf bir oyun mantığı (logic.ts) + tahta ekranı (Game.tsx)
     registry.ts              oyun tanımları ve ayarları
+    shared/stage3d/          üç boyutlu sahnelerin ortak altyapısı (three.js)
   components/              Ortak arayüz: düğmeler, takım amblemleri, oyun çerçevesi, sonuç ekranı
   app/                     Sayfalar: ana sayfa, /kurulum, /oyun/[oyun], /sorular
-docs/                      Mimari, tasarım sistemi, içerik kontrol listesi
-scripts/                   Service worker üretimi, LGS soru üretim hattı (lgs-uret.ts)
+public/ses/                Kayıtlı sesler (Penaltı'nın spikeri ve tribünü)
+docs/                      Mimari, tasarım sistemi, sesler, içerik kontrol listesi
+scripts/                   Service worker üretimi, LGS soru üretim hattı (lgs-uret.ts), ses hazırlama (sesleri-hazirla.sh)
 ```
 
 ## Ekleme rehberi
@@ -92,7 +96,7 @@ scripts/                   Service worker üretimi, LGS soru üretim hattı (lgs
 
 **Ders eklemek:** `src/content/<ders>/subject.ts` ile üniteleri tanımlayın, `sorular/` ve `kartlar/` klasörlerine JSON dosyalarını koyun, ardından `src/content/index.ts` içinde dersi `SUBJECTS` listesine, dosyalarını `CONTENT_FILES` tablosuna ekleyin. Her sınıfın dosyaları ayrı yüklenir; tahta yalnızca seçilen sınıfı indirir.
 
-**Oyun eklemek:** `src/games/<oyun>/logic.ts` (saf reducer) ve `Game.tsx` (tahta ekranı) dosyalarını yazın. Sonra tanımı `src/games/registry.ts`, ekranı `src/games/screens.ts` içine ekleyin. Kurulum ekranı, ayarlar ve soru havuzu bağlantısı kendiliğinden çalışır. Ayrıntılar: [docs/MIMARI.md](docs/MIMARI.md).
+**Oyun eklemek:** `src/games/<oyun>/logic.ts` (saf reducer) ve `Game.tsx` (tahta ekranı) dosyalarını yazın. Sonra tanımı `src/games/registry.ts`, ekranı `src/games/screens.ts` içine ekleyin. Kurulum ekranı, ayarlar ve soru havuzu bağlantısı kendiliğinden çalışır. Ayrıntılar: [docs/MIMARI.md](docs/MIMARI.md). Üç boyutlu bir sahne ekleyecekseniz Penaltı'yı örnek alın; kurallar [docs/TASARIM.md](docs/TASARIM.md) içindeki "Üç boyutlu sahneler" bölümündedir.
 
 ## İçerik notu
 

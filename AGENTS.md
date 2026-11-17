@@ -14,6 +14,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Sorular `src/content/<ders>/sorular/<sınıf>.json` içindedir; her değişiklikten sonra `npm test` çalıştırın (şema ve ünite doğrulaması).
 - Oyun mantığı saf reducer'dır (`src/games/<oyun>/logic.ts`): `Date.now()` ya da rastgelelik içermez, zaman eylemle gelir. Bu kural çok cihazlı sürüm için korunmalıdır.
 - Renk, süre ve yay değerleri yalnızca `src/app/globals.css` ve `src/lib/motion.ts` belirteçlerinden alınır (bkz. `docs/TASARIM.md`).
+- Üç boyutlu sahneler three.js ile, `src/games/shared/stage3d` üzerinden kurulur (örnek: `src/games/penalti/scene3d`). Her birinin çizim (SVG) yedeği ve üç kalite kademesi olur; three.js yalnızca sahne açılırken ayrı parça olarak indirilir. Şutun ya da atışın zaman çizelgesi saf fonksiyondur (`timeline.ts`), tekrar gösterimi buna dayanır.
 - Site durağan dışa aktarılır (`output: "export"`); `npm run build` service worker'ı da üretir.
 
 ### Kalite çıtası
@@ -21,8 +22,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 Projenin sahibinin isteği: her geliştirme Halat Çekme sahnesi seviyesinde olmalı.
 
 - **Oyun anı her şeyden önemli.** Bir oyun yalnızca çalışan bir arayüz değildir; gerçek bir sahnesi, karakterleri ve efektleri olur. Kazanma ve kaybetme anı bir gösteridir (Halat Çekme: kaybeden çamura düşer, kazanan sevinir).
-- **Her olay görünür ve duyulur.** Doğru, yanlış, puan, seri ve bitiş için animasyon ve ses (`src/lib/sound.ts`) birlikte tasarlanır.
-- **Tahta için tasarla.** 1920x1080 dokunmatik ekran, 8 metreden okunacak yazı. Eski tahtalarda da akıcı çalışmalı: SVG ya da canvas, tek `requestAnimationFrame` döngüsü, ağır filtre ve bulanıklık yok.
+- **Her olay görünür ve duyulur.** Doğru, yanlış, puan, seri ve bitiş için animasyon ve ses birlikte tasarlanır: üretilmiş sesler `src/lib/sound.ts`, kayıtlı sesler (spiker, tribün) `src/lib/samples.ts` (bkz. `docs/SESLER.md`). Kayıt yokken üretilmiş ses çalmalıdır.
+- **Tahta için tasarla.** 1920x1080 dokunmatik ekran, 8 metreden okunacak yazı. Eski tahtalarda da akıcı çalışmalı: SVG, canvas ya da three.js; tek `requestAnimationFrame` döngüsü; ağır filtre, bulanıklık ve sonradan işleme yok. Üç boyutlu sahne akmayan tahtada kendiliğinden çizim sahnesine döner. Soru sırasında sahnede sürekli hareket olmaz.
 - **Göstermeden bitti sayma.** Her değişiklik derlenmiş sitede tarayıcıyla gerçekten oynatılır. 1920x1080, 1366x768 ve telefon boyutunda ekran görüntüsü alınır; animasyonlu anlar kare kare incelenir.
 - **Erişilebilirlik ve belirteçler.** `prefers-reduced-motion` açıkken oyun yine oynanır, efektler sadeleşir. Yeni renk ve süreler önce belirteç olarak eklenir, `docs/TASARIM.md` güncellenir.
 - **Temiz push.** `npm test`, `npx eslint .`, `npm run typecheck` ve `npm run build` temiz olmadan push yapılmaz.

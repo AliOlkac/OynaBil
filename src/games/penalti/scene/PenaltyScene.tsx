@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef } from "react";
 import { cssColor } from "@/lib/color";
 import { sfx } from "@/lib/sound";
 import { fmt, reach, type Vec } from "../../shared/skeleton";
+import { penaltyAudio } from "../audio";
 import { classify, KICK_LOCK_MS, type Kick, type PenaltyState } from "../logic";
 import { DUST_COUNT, netGrid, SceneArt, type ArtTeam } from "./art";
 import {
@@ -339,7 +340,7 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
       // -- şutçu topun başına geldi: hakem düdüğü --
       if (inp.phase === "kick" && inp.kickStart !== null && inp.kickStart !== st.whistled && wall - inp.kickStart >= KICK_LOCK_MS - 150) {
         st.whistled = inp.kickStart;
-        if (wall - inp.kickStart < KICK_LOCK_MS + 1500) sfx.whistle();
+        if (wall - inp.kickStart < KICK_LOCK_MS + 1500) penaltyAudio.whistle();
       }
 
       // -- yeni şut --
@@ -454,8 +455,7 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
         const u = (tau - STRIKE) / FLIGHT;
         if (u >= 0 && !anim.struck) {
           anim.struck = true;
-          sfx.kick();
-          sfx.whoosh(FLIGHT * 1.6);
+          penaltyAudio.kick();
         }
         if (u < 0) {
           // Vuruştan önce top yerinde.
@@ -475,8 +475,9 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
               anim.loose = { p: { ...anim.target }, v: { x: (anim.target.x - SPOT.x) * 0.25, y: (anim.target.y - SPOT.y) * 0.1 }, r: BALL_FAR, back: true, spin: 600 };
               st.bulge = { at: toNetBack(anim.target), start: time };
               st.celebrate = { side: k.side, start: time };
-              sfx.net();
-              sfx.roar();
+              penaltyAudio.net();
+              penaltyAudio.crowdGoal();
+              penaltyAudio.say("gol", 0.15);
               if (!quiet) {
                 const colors = [teamsRef.current[k.side].base, "var(--color-cream)", "var(--color-kehribar)"].map(cssColor);
                 confetti({ particleCount: 90, spread: 100, startVelocity: 46, origin: { x: 0.5, y: 0.35 }, colors, disableForReducedMotion: true });
@@ -486,18 +487,21 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
               anim.loose = centre ? null : { p: { ...anim.target }, v: { x: d * 560, y: -360 }, r: BALL_FAR, back: false, spin: -900 };
               st.starAt = { p: { ...anim.target }, start: performance.now() };
               st.shake = 12;
-              sfx.save();
-              sfx.ooh();
+              penaltyAudio.gloves();
+              penaltyAudio.crowdApplause();
+              penaltyAudio.say("kurtaris", 0.2);
             } else if (k.result === "direk") {
               const bar = classify(k.x, k.y) === "direk" && Math.abs(k.x) < 1 - 0.045;
               anim.loose = { p: { ...anim.target }, v: { x: bar ? d * 60 : -d * 180, y: bar ? -260 : -120 }, r: BALL_FAR, back: false, spin: 500 };
               st.postHit = { start: performance.now() };
               st.shake = 8;
-              sfx.clang();
-              sfx.aww();
+              penaltyAudio.post();
+              penaltyAudio.crowdOoh();
+              penaltyAudio.say("direk", 0.2);
             } else {
               anim.loose = { p: { ...anim.target }, v: { x: (anim.target.x - SPOT.x) * 1.4, y: (anim.target.y - SPOT.y) * 0.9 }, r: BALL_FAR, back: true, spin: 400 };
-              sfx.aww();
+              penaltyAudio.crowdOoh();
+              penaltyAudio.say("aut", 0.25);
             }
           }
           if (anim.loose) {
@@ -739,13 +743,16 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
       const fin = st.finale;
       if (fin) {
         const w = inp.winner;
-        if (!fin.confetti && (w === 0 || w === 1)) {
+        if (!fin.confetti) {
           fin.confetti = true;
-          if (!quiet) {
-            const colors = [teamsRef.current[w].base, "var(--color-cream)", "var(--color-kehribar)"].map(cssColor);
-            confetti({ particleCount: 140, spread: 120, startVelocity: 52, origin: { x: w === 0 ? 0.25 : 0.75, y: 0.5 }, colors, disableForReducedMotion: true });
+          if (w === 0 || w === 1) {
+            if (!quiet) {
+              const colors = [teamsRef.current[w].base, "var(--color-cream)", "var(--color-kehribar)"].map(cssColor);
+              confetti({ particleCount: 140, spread: 120, startVelocity: 52, origin: { x: w === 0 ? 0.25 : 0.75, y: 0.5 }, colors, disableForReducedMotion: true });
+            }
+            penaltyAudio.crowdGoal();
           }
-          sfx.cheer();
+          penaltyAudio.say(w === "draw" ? "berabere" : "bitis", 0.5);
         }
         if (!fin.called && time - fin.start > (w === "draw" ? 1.2 : 1.8)) {
           fin.called = true;

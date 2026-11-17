@@ -56,6 +56,10 @@
   --color-toz: #d9c7a5;
   --color-servi: #173a2c;
 
+  /* Penaltı stadyumu (3D): projektör altında parlayan çim */
+  --color-cim: #2c8048;
+  --color-cim-acik: #3a9655;
+
   /* Yazı ölçeği (rem; kök boyut ekrana göre ölçeklenir) */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;

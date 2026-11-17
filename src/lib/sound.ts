@@ -5,6 +5,7 @@ import { readJson, writeJson } from "./storage";
 /**
  * Ses efektleri Web Audio ile üretilir: dosya indirmez, çevrimdışı çalışır,
  * lisans sorunu yoktur. Tahta hoparlöründe sınıfı rahatsız etmeyecek kadar kısa ve yumuşaktır.
+ * Kayıtlı sesler (spiker, tribün) aynı ses bağlamını `src/lib/samples.ts` üzerinden kullanır.
  */
 
 const KEY = "oynabil.ses";
@@ -16,9 +17,23 @@ export function isSoundOn(): boolean {
   return enabled;
 }
 
+const listeners = new Set<(on: boolean) => void>();
+
 export function setSoundOn(on: boolean) {
   enabled = on;
   writeJson(KEY, on);
+  listeners.forEach((l) => l(on));
+}
+
+/** Ses açılıp kapandığında haber verir (süren kayıtları susturmak için). */
+export function onSoundChange(listener: (on: boolean) => void): () => void {
+  listeners.add(listener);
+  return () => listeners.delete(listener);
+}
+
+/** Ses açıksa çalmaya hazır ses bağlamı; kapalıysa ya da tarayıcı izin vermiyorsa null. */
+export function audioContext(): AudioContext | null {
+  return audio();
 }
 
 function audio(): AudioContext | null {

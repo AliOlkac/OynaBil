@@ -146,6 +146,7 @@ export const kuleYikmaca: GameDefinition = {
 export const penalti: GameDefinition = {
   id: "penalti",
   name: "Penaltı",
+  scene3d: true,
   tagline: "İki takıma aynı soru. İlk bilen penaltıyı çeker, topu parmağıyla kalede istediği yere gönderir.",
   howTo: [
     "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
