@@ -16,6 +16,8 @@ import { dur, ease, spring, stagger } from "@/lib/motion";
 import { cssColor } from "@/lib/color";
 import { memoryScope } from "@/lib/memory";
 import { sfx } from "@/lib/sound";
+import type { StudioInput } from "./scene3d/engine";
+import { preloadStudioStage, StudioStage } from "./scene3d/StudioStage";
 import { bilgiYarismasi } from "../registry";
 import { TEAM_STYLES } from "../teams";
 import type { AnswerLog, GameProps, Team } from "../types";
@@ -111,6 +113,9 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
     else if (s.outcome === "wrong" || s.outcome === "timeout" || s.outcome === "steal-failed") sfx.wrong();
   }, [s.outcome]);
 
+
+  // Tanıtım ekranındayken 3D sahnenin parçası indirilir.
+  useEffect(() => preloadStudioStage(), []);
 
   const unitTitle = q ? findUnit(q.unit)?.title : undefined;
   const reducedMotion = useReducedMotion();
@@ -254,8 +259,39 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
   const activeStyle = TEAM_STYLES[activeTeam.color];
 
 
+  // Stüdyo sahnesi: sıradaki takım, son sonucun sahibi ve önde olan takım.
+  const indexOf = (id: string | null) => s.teams.findIndex((t) => t.id === id);
+  const turnIndex = indexOf(team.id);
+  const stealIndex = indexOf(s.stealTeam);
+  const byStealer = s.outcome === "stolen" || s.outcome === "steal-failed";
+  const topScore = Math.max(...s.teams.map((t) => s.scores[t.id]));
+  const leaders = s.teams.filter((t) => s.scores[t.id] === topScore);
+  const studioInput: StudioInput = {
+    active: s.phase === "steal" && stealIndex >= 0 ? stealIndex : turnIndex,
+    phase: s.phase === "steal" ? "steal" : s.phase === "reveal" ? "reveal" : "question",
+    result: s.outcome
+      ? {
+          key: `${s.asked}-${s.outcome}`,
+          team: byStealer && stealIndex >= 0 ? stealIndex : turnIndex,
+          good: s.outcome === "correct" || s.outcome === "stolen",
+          loser: s.outcome === "stolen" ? turnIndex : null,
+        }
+      : null,
+    scores: s.teams.map((t) => s.scores[t.id]),
+    leader: topScore > 0 && leaders.length === 1 ? indexOf(leaders[0].id) : null,
+  };
+
   return (
     <div className="flex min-h-0 flex-1 flex-col">
+      {/* Paragraf sorusunda metne yer kalsın diye stüdyo gizlenir; alçak ekranlarda da görünmez. */}
+      {q.type !== "passage" && (
+        <StudioStage
+          input={studioInput}
+          teams={s.teams.map((t) => ({ base: TEAM_STYLES[t.color].base, deep: TEAM_STYLES[t.color].deep }))}
+          reducedMotion={Boolean(reducedMotion)}
+          className="mx-4 mb-3 hidden h-[25%] sm:mx-8 lg:[@media(min-height:860px)]:block"
+        />
+      )}
       <Scoreboard state={s} />
 
       {flights.map((f) => (

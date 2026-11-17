@@ -62,6 +62,7 @@ export const bilgiYarismasi: GameDefinition = {
   defaultSettings: { rounds: 5, seconds: 30, lgs: 1, jokers: true, steal: true },
   // Her takım için tur sayısı kadar soru, pas jokerleri için de takım başına bir yedek.
   questionsNeeded: (s, teams) => Number(s.rounds) * teams + (s.jokers ? teams : 0),
+  scene3d: true,
 };
 
 export const halatCekme: GameDefinition = {
