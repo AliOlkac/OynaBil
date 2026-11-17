@@ -9,7 +9,7 @@ Kayıtlı bir ses henüz inmediyse ya da çözülemediyse aynı olay için üret
 
 ## Penaltı'nın kayıtları
 
-Dosyalar `public/ses/penalti/` altındadır: 30 dosya, toplam yaklaşık 870 KB. Service worker bunları da önbelleğe alır, yani oyun çevrimdışıyken de seslidir.
+Dosyalar `public/ses/penalti/` altındadır: 30 dosya, toplam yaklaşık 820 KB. Service worker bunları da önbelleğe alır, yani oyun çevrimdışıyken de seslidir.
 
 | Dosya | Ne zaman çalar |
 |---|---|
@@ -32,7 +32,7 @@ Aynı olayın birden çok repliği sırayla döner. Yeni bir replik başlayınca
 
 Sesler ElevenLabs ile üretildi.
 
-- **Spiker:** "Hasan – Energetic, Expressive, Playful, Versatile" sesi (`TA7RCSTD5b2z14h1TDTX`), `eleven_v4` modeli, Türkçe. Dört aday ses aynı iki replikle denendi; gol repliğini en yüksek heyecanla okuyan ses seçildi. Replikler takım adı içermez, çünkü takım adlarını öğretmen belirler.
+- **Spiker:** "Raju – High Energy Football Commentary" sesi (`jAUbTDuEGvdxrWhSe9eR`), `eleven_v4` modeli, Türkçe. Ses projenin sahibinin seçimidir. Replikler takım adı içermez, çünkü takım adlarını öğretmen belirler.
 - **Tribün ve vuruş sesleri:** Metinden ses efekti üretimiyle.
 - **Kontrol:** Üç replik yeniden yazıya döküldü ve metinle karşılaştırıldı.
 

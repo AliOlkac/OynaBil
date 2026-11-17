@@ -6,7 +6,7 @@
 # olarak public/ses/penalti/ altına yazar. Site bu dosyaları çevrimdışı çalışmak için önbelleğe alır.
 #
 # Kullanım: scripts/sesleri-hazirla.sh <ses deposunun klasörü>
-#   Beklenen içerik: jobs/oynabil-penalti-spiker/*.mp3 ve sfx/oynabil-*.mp3
+#   Beklenen içerik: jobs/oynabil-penalti-spiker-raju/*.mp3 ve sfx/oynabil-*.mp3
 set -euo pipefail
 
 SRC="${1:?Kullanım: scripts/sesleri-hazirla.sh <ses deposunun klasörü>}"
@@ -29,7 +29,7 @@ encode() {
 }
 
 # Spiker replikleri
-for f in "$SRC"/jobs/oynabil-penalti-spiker/*.mp3; do
+for f in "$SRC"/jobs/oynabil-penalti-spiker-raju/*.mp3; do
   encode "$f" "$OUT/spiker-$(basename "$f")" -1.5
 done
 
