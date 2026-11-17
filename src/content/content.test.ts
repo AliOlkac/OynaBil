@@ -2,8 +2,21 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { cardSetSchema, questionsFromCards, type CardSet } from "@/core/cards";
-import { questionSchema, type Question } from "@/core/model";
+import { questionSchema, type Question, type Subject } from "@/core/model";
 import { SUBJECTS } from "@/content";
+
+/**
+ * Dersler klasörlerden bulunur: `src/content/<ders>/subject.ts` bir `Subject` dışa aktarır.
+ * Böylece yeni bir ders, kayda (index.ts) eklenmeden önce de kendi klasöründe sınanabilir:
+ * `npx vitest run src/content -t "Matematik"`.
+ */
+const modules = import.meta.glob<Record<string, unknown>>("./*/subject.ts", { eager: true });
+const isSubject = (v: unknown): v is Subject => typeof v === "object" && v !== null && "units" in v && "grades" in v && "code" in v;
+const FOUND: { subject: Subject; dir: string }[] = Object.entries(modules).flatMap(([path, mod]) =>
+  Object.values(mod)
+    .filter(isSubject)
+    .map((subject) => ({ subject, dir: path.split("/")[1] })),
+);
 
 /**
  * İçerik dosyalarını doğrudan diskten okur. İçerik ekleyen biri kendi dosyasını
@@ -34,7 +47,26 @@ function checkQuestion(q: Question, label: string, unitIds: Set<string>, prefix:
   }
 }
 
-for (const subject of SUBJECTS) {
+describe("ders kaydı", () => {
+  it("kayıtlı her dersin klasörü vardır ve klasör adı ders kimliğidir", () => {
+    for (const s of SUBJECTS) expect(FOUND.some((f) => f.subject.id === s.id), `${s.id} klasörde bulunamadı`).toBe(true);
+    for (const f of FOUND) expect(f.dir, `${f.subject.id} dersinin klasörü kimliğiyle aynı olmalı`).toBe(f.subject.id);
+  });
+  it("ünite kimlikleri ders koduyla ve sınıfla başlar, benzersizdir", () => {
+    const seen = new Set<string>();
+    for (const { subject } of FOUND) {
+      for (const u of subject.units) {
+        expect(u.id.startsWith(`${subject.code}-${u.grade}-`), `${u.id}: "${subject.code}-${u.grade}-" ile başlamalı`).toBe(true);
+        expect(subject.grades.includes(u.grade), `${u.id}: ${u.grade}. sınıf dersin sınıfları arasında yok`).toBe(true);
+        expect(seen.has(u.id), `tekrarlanan ünite ${u.id}`).toBe(false);
+        seen.add(u.id);
+      }
+      for (const g of subject.grades) expect(subject.units.some((u) => u.grade === g), `${subject.id}: ${g}. sınıfın ünitesi yok`).toBe(true);
+    }
+  });
+});
+
+for (const { subject } of FOUND) {
   const unitIds = new Set(subject.units.map((u) => u.id));
   const base = join(__dirname, subject.id);
 
