@@ -40,7 +40,8 @@ import {
 } from "./logic";
 import type { ArtTeam } from "./scene/art";
 import { yOf } from "./scene/geometry";
-import { SiegeScene, type RulerSpec, type SceneInput } from "./scene/SiegeScene";
+import type { RulerSpec, SceneInput } from "./scene/SiegeScene";
+import { preloadSiegeStage, SiegeStage } from "./scene3d/SiegeStage";
 
 /** İsabetten sonra sıradaki soruya kendiliğinden geçiş; açıklama okunur. */
 const AFTER_SHOT_MS = 5_000;
@@ -140,6 +141,9 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
     return () => window.removeEventListener("keydown", onKey);
   });
 
+  // Tanıtım ekranındayken 3D sahnenin parçası indirilir.
+  useEffect(() => preloadSiegeStage(), []);
+
   const onImpact = useCallback((index: number) => setImpacted((n) => Math.max(n, index + 1)), []);
   const onFinale = useCallback(() => setFinaleDone(true), []);
 
@@ -220,7 +224,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
           fire();
         }}
       >
-        <SiegeScene input={sceneInput} teams={sceneTeams} ruler={ruler} reducedMotion={reducedMotion} onImpact={onImpact} onFinale={onFinale} />
+        <SiegeStage input={sceneInput} teams={sceneTeams} ruler={ruler} reducedMotion={reducedMotion} onImpact={onImpact} onFinale={onFinale} />
         <div className="pointer-events-none absolute inset-x-3 top-3 flex items-start justify-between gap-3 sm:inset-x-4">
           <TowerBar team={teams[0]} hp={shownHp[0]} align="left" compact={!expanded} />
           <WindBadge wind={wind} compact={!expanded} />

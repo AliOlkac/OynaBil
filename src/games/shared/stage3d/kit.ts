@@ -157,3 +157,13 @@ export const easeOut = (t: number) => 1 - (1 - t) ** 3;
 export const easeInOut = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
 /** Kare hızından bağımsız yumuşak takip katsayısı. */
 export const follow = (rate: number, dt: number) => 1 - Math.exp(-rate * dt);
+
+/** Tuval dokularındaki yazılar için yazı tipinin yüklenmesini bekler (yüklenemezse sistem yazı tipiyle sürer). */
+export async function fontsReady(): Promise<void> {
+  try {
+    await Promise.race([document.fonts.load('800 78px "Lexend Variable"'), new Promise((r) => setTimeout(r, 1500))]);
+  } catch {
+    // yazı tipi yoksa tarayıcının varsayılanı kullanılır
+  }
+}
+

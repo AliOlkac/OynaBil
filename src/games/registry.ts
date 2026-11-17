@@ -141,6 +141,7 @@ export const kuleYikmaca: GameDefinition = {
   ],
   defaultSettings: { questions: 10, seconds: 30 },
   questionsNeeded: (s) => Number(s.questions),
+  scene3d: true,
 };
 
 export const penalti: GameDefinition = {

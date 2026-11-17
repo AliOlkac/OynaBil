@@ -990,12 +990,4 @@ function turnTo(from: number, to: number, k: number): number {
   return from + d * k;
 }
 
-/** Tuval dokularındaki yazılar için yazı tipinin yüklenmesini bekler (yüklenemezse sistem yazı tipiyle sürer). */
-export async function fontsReady(): Promise<void> {
-  try {
-    await Promise.race([document.fonts.load('800 78px "Lexend Variable"'), new Promise((r) => setTimeout(r, 1500))]);
-  } catch {
-    // yazı tipi yoksa tarayıcının varsayılanı kullanılır
-  }
-}
-
+export { fontsReady } from "../../shared/stage3d/kit";

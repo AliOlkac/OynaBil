@@ -52,6 +52,22 @@ export type FigurePose = {
   mouth?: Mouth;
 };
 
+/**
+ * Poz, gövde koordinatında: `x`/`z` kalçanın altındaki zemin noktası, `hip` kalçanın yerden yüksekliği,
+ * `yaw` baktığı yön. Uzuv hedeflerinde x karakterin +x yanı, z baktığı yön, y yerden yükseklik (metre).
+ * Sahneler pozu böyle kurar; ölçeğe ve kök koordinatına çevirmeyi `poseBody` yapar.
+ */
+export type BodyMotion = Omit<FigurePose, "footL" | "footR" | "handL" | "handR"> & {
+  x: number;
+  z: number;
+  hip: number;
+  yaw: number;
+  footL: Vec3Like;
+  footR: Vec3Like;
+  handL: Vec3Like;
+  handR: Vec3Like;
+};
+
 export const FIGURE = {
   hipX: 0.095,
   thigh: 0.39,
@@ -104,6 +120,10 @@ const tmpB = new THREE.Vector3();
 const tmpC = new THREE.Vector3();
 const tmpD = new THREE.Vector3();
 const pole = new THREE.Vector3();
+const bodyA = new THREE.Vector3();
+const bodyB = new THREE.Vector3();
+const bodyC = new THREE.Vector3();
+const bodyD = new THREE.Vector3();
 
 export class KidFigure {
   /** Kalça ortası. Konumu ve dönüşü motor verir. */
@@ -249,6 +269,15 @@ export class KidFigure {
       l.hand.position.copy(tmpD);
       l.hand.quaternion.copy(l.fore.quaternion);
     }
+  }
+
+  /** Karakteri gövde koordinatında verilen poza getirir (bkz. `BodyMotion`). */
+  poseBody(m: BodyMotion, time = 0) {
+    const s = this.root.scale.x;
+    this.root.position.set(m.x, m.hip, m.z);
+    this.root.rotation.set(0, m.yaw, 0);
+    const local = (v: Vec3Like, out: THREE.Vector3) => out.set(v.x / s, (v.y - m.hip) / s, v.z / s);
+    this.pose({ ...m, footL: local(m.footL, bodyA), footR: local(m.footR, bodyB), handL: local(m.handL, bodyC), handR: local(m.handR, bodyD) }, time);
   }
 
   /** İki elin orta noktası (dünya koordinatı): kalecinin tuttuğu top buraya konur. */

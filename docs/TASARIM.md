@@ -65,6 +65,16 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
   - **Tekrar:** Gol, kurtarış ve direk, sonuç kartı okunurken başka bir kameradan ağır çekimde yeniden oynar. Gol ağın arkasından, kurtarış kalecinin uçtuğu yandan alçaktan gösterilir. Köşede "TEKRAR" etiketi durur.
   - Sonuç sahnenin altında büyük harflerle yazılır: GOL!, KURTARDI!, DİREK!, AUT!. Oyun bitince kamera kazanan şutçunun çevresinde döner.
   - **Ses:** Türkçe bir spiker gol, kurtarış, direk ve autu duyurur; tribün uğuldar, golde coşar (bkz. `docs/SESLER.md`).
+- **Kule Yıkmaca sahnesi (üç boyutlu):**
+  - Gün batımı: ufukta güneş, sıra sıra tepeler, serviler ve çayır. İki kule sahanın iki ucunda, mancınıklar kulelerinin önündedir.
+  - Kuleler taş taş örülüdür: geniş temel, gövde, çini kuşak, mazgallı burç ve takım renginde kiremitli külah. Pencereler içeriden aydınlıktır, kepenkler takım rengindedir.
+  - İsabet alan yerin taşları yerinden fırlar ve kulenin dibine yığılır; arkada karanlık dolgu görünür. Pencereye isabet camı ve kepenkleri dağıtır, burca isabet mazgalları düşürür, külaha isabet külahı yana yatırır. Hasar 70'i geçince kule yana yatmaya başlar.
+  - Kamera olayı izler: kurulurken atan mancınık, nişan alınırken hedef kule (çapraz açıdan), atışta taşın bütün yolu, isabette çarpma noktası. Soru sırasında iki kule birlikte görünür.
+  - Nişangâh hedef kulenin atış gelen yüzünde inip çıkar; yanında her bölgenin vereceği hasarı gösteren cetvel durur, pencere kehribar renklidir.
+  - Ekip (her mancınıkta kurucu ve gözcü) vinci çevirir, taşı kepçeye taşır, hedefi gösterir, isabette sevinir, karşı taş tepeden geçerken başını korur.
+  - Yıkılış: kule sarsılır, taşlar alttan başlayarak çözülür ve moloz yığınına dökülür, külah yığının üstüne yana yatmış düşer. Kamera kulenin çevresinde döner, toz kalkar, kazanan takımın renginde konfeti atılır.
+  - Sesler çizim sahnesiyle aynıdır (`src/lib/sound.ts`).
+- **Kule Yıkmaca sahnesi (çizim):** Tahta üç boyutlu çizemiyorsa ya da 3D düğmesi kapalıysa aynı oyun yandan görünen SVG çizimiyle oynanır.
 - **Penaltı sahnesi (çizim):** Tahta üç boyutlu çizemiyorsa ya da öğretmen üst çubuktaki 3D düğmesini kapattıysa aynı oyun SVG çizimiyle oynanır: kamera topun arkasından kaleye bakar, kaleci önden, şutçular sırtlarından çizilir. Kurallar, sesler ve sonuç yazıları aynıdır; tekrar gösterimi yoktur.
 - **Oyun anı efektleri:**
   - Toz, ter damlası ve çamur sıçraması parçacıkları.
@@ -185,6 +195,7 @@ Kök boyut ekrana göre ölçeklenir: 1920x1080 tahtada 20 px, 1366x768 tahtada 
   - Parçacıklar, kamera sarsıntısı ve bulut kayması kapanır. Kamera kaymadan doğrudan yerine geçer.
   - Kule katlar hâlinde çökmez, solup moloza dönüşür.
   - Nişangâh oyunun parçası olduğu için hareket etmeye devam eder.
+- Kule Yıkmaca'nın üç boyutlu sahnesinde kamera kaymadan yerine geçer; taşlar düşmez, doğrudan yere konur; toz, kırıntı, sarsıntı ve bayrak dalgalanması kapanır. Taşın uçuşu yine gösterilir.
 - Penaltı'da:
   - Ağır çekim, kamera yaklaşması, sarsıntı ve konfeti kapanır. Tribün zıplamaz.
   - Üç boyutlu sahnede kamera kaymadan doğrudan yerine geçer; tekrar gösterimi, topun izi, parlama, flaşlar, bayrak ve pano hareketi kapanır.
@@ -192,7 +203,7 @@ Kök boyut ekrana göre ölçeklenir: 1920x1080 tahtada 20 px, 1366x768 tahtada 
 
 ## Üç boyutlu sahneler
 
-Üç boyutlu sahneler three.js ile çizilir. Ortak altyapı `src/games/shared/stage3d/` altındadır; ilk örnek Penaltı'dır (`src/games/penalti/scene3d/`).
+Üç boyutlu sahneler three.js ile çizilir. Ortak altyapı `src/games/shared/stage3d/` altındadır; örnekler Penaltı (`src/games/penalti/scene3d/`) ve Kule Yıkmaca'dır (`src/games/kule-yikmaca/scene3d/`).
 
 - **Görünüm:** Oyuncak gibi, yalın ve parlak. Foto-gerçekçilik hedeflenmez: tahtada 8 metreden okunan iri şekiller, takım renkleri ve net gölgeler yeterlidir.
 - **Dosya yok:** Hazır model ya da resim indirilmez. Çim, ağ, pano, forma ve top dokuları tuvale çizilerek, karakterler basit şekillerden kurulur. Renkler `globals.css` belirteçlerinden okunur.
@@ -205,7 +216,7 @@ Kök boyut ekrana göre ölçeklenir: 1920x1080 tahtada 20 px, 1366x768 tahtada 
   | Orta | En çok 1,25x | 1024 gölge haritası | 10 / 4 | Flaş, bayrak, ağ salınımı |
   | Düşük | 0,8x | Yuvarlak gölge lekeleri | 7 / 0 | Yok |
 
-  Üç boyutlu sıraların arkasındaki taraftarlar tribüne çizilidir.
+  Üç boyutlu sıraların arkasındaki taraftarlar tribüne çizilidir. Kule Yıkmaca'da düşük kademede kayalar, bulutların ve servilerin bir bölümü çizilmez.
 
 - **Yedek sahne:** Her üç boyutlu sahnenin bir çizim (SVG) yedeği vardır. Ekran kartı olmayan ya da en düşük kademede de akmayan tahtada oyun yedek sahneyle sürer. Öğretmen üst çubuktaki **3D** düğmesiyle sahneyi kendisi de değiştirebilir.
-- **Durgunluk:** Soru sırasında sahnede sürekli hareket olmaz; kamera, panolar ve bayraklar yalnızca atış anında canlanır.
+- **Durgunluk:** Soru sırasında sahnede sürekli hareket olmaz; kamera, panolar, bayraklar ve bulutlar yalnızca atış anında canlanır. Bayrak dururken de rüzgârın yönünü ve şiddetini gösterir.

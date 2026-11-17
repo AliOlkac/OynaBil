@@ -98,7 +98,17 @@ Penaltı'nın iki sahnesi vardır: three.js ile çizilen üç boyutlu sahne (`sc
 - **Kalite:** Motor kare süresini ölçer; sahne akmıyorsa bir alt kademeye iner, en alt kademede de akmıyorsa çizim sahnesine dönülür ve tercih "kapalı" olarak saklanır. Çizim bağlamı kaybolursa da aynı yol izlenir. Sahne oyunun ortasında değişirse süren şut bitmiş sayılır, oyun takılmaz.
 - **Zaman çizelgesi** (`scene3d/timeline.ts`, three.js içermez): Topun yolu, kalecinin uçuşu ve şutçunun vuruşu yalnızca şuta ve geçen süreye bağlı saf fonksiyonlardır. Topun temastan sonraki yolu (ağ, eldiven, direk, pano) şut başlarken sabit adımlı küçük bir fizikle önceden hesaplanır. Bu sayede aynı şut başka bir kameradan ağır çekimde birebir yeniden oynatılır ve testte sınanır (`timeline.test.ts`).
 - **Nişan:** Parmağın altındaki nokta kameradan kale düzlemine ışın izlenerek kale koordinatına çevrilir. Görünen noktalı yol ile topun gittiği yol aynı fonksiyondan çıkar.
-- **Ortak parçalar** (`src/games/shared/stage3d/`): belirteç renkleri ve tuvalden doku (`kit.ts`), iki kemikli uzuvlar için ters kinematik ve çocuk karakter (`figure.ts`). Yeni bir üç boyutlu sahne bunları kullanır.
+- **Ortak parçalar** (`src/games/shared/stage3d/`): belirteç renkleri ve tuvalden doku (`kit.ts`), iki kemikli uzuvlar için ters kinematik ve çocuk karakter (`figure.ts`), toz ve kırıntı parçacıkları (`particles.ts`). Yeni bir üç boyutlu sahne bunları kullanır.
+
+### Üç boyutlu sahne (Kule Yıkmaca)
+
+Kule Yıkmaca aynı düzeni kullanır: `SiegeStage` üç boyutlu sahne (`scene3d/`) ile çizim sahnesi (`scene/`) arasında seçer; ikisi aynı girdiyi alır ve `onImpact`, `onFinale` olaylarını bildirir. Sahne oyunun ortasında değişirse havadaki taş isabet etmiş sayılır.
+
+- **Ölçüler ve uçuş** (`scene3d/world.ts`, three.js içermez): Kulenin bölgeleri oyun mantığındaki `BANDS` sınırlarından metreye çevrilir; taşın yolu ve ıskalayan taşın yuvarlanması saf fonksiyondur.
+- **Taşlar ve yıkılış** (`scene3d/debris.ts`, three.js içermez): Kule yaklaşık 215 taştan örülür. İsabet, çarptığı yere en yakın sağlam taşları yerinden çıkarır; yıkılışta hepsi moloz yığınına dökülür. Fizik motoru yoktur: her taşın duracağı yer ve düşüş süresi tohumlu rastgelelikle önceden hesaplanır, taş oraya çözümlü bir yayla iner. Bu yüzden yeniden açılan oyunda kule aynı hasarla, molozu aynı yerde kurulur.
+- **Çizim** (`scene3d/tower.ts`): Bir kulenin bütün taşları tek çizim çağrısıdır (`InstancedMesh`). Yerinde duran ve yere inmiş taşlar yeniden hesaplanmaz; yalnızca havadakiler her kare güncellenir.
+- **Nişan:** Nişangâh ve hasar cetveli sahnenin içindedir ve her şeyin üstüne çizilir. Cetvel, çizim sahnesiyle aynı veriden (`RulerSpec`) bir tuvale çizilir.
+- **Hasar yazısı:** Sahnenin üstünde HTML olarak durur; motor yazının yerini her kare isabet noktasından ekrana izdüşürerek bildirir.
 
 Penaltı'nın kayıtlı sesleri (`src/lib/samples.ts`, `src/games/penalti/audio.ts`) için bkz. [SESLER.md](SESLER.md).
 
