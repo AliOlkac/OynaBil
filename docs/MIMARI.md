@@ -100,6 +100,10 @@ Penaltı'nın iki sahnesi vardır: three.js ile çizilen üç boyutlu sahne (`sc
 - **Nişan:** Parmağın altındaki nokta kameradan kale düzlemine ışın izlenerek kale koordinatına çevrilir. Görünen noktalı yol ile topun gittiği yol aynı fonksiyondan çıkar.
 - **Ortak parçalar** (`src/games/shared/stage3d/`): belirteç renkleri ve tuvalden doku (`kit.ts`), iki kemikli uzuvlar için ters kinematik ve çocuk karakter (`figure.ts`), toz ve kırıntı parçacıkları (`particles.ts`). Yeni bir üç boyutlu sahne bunları kullanır.
 
+### Üç boyutlu sahne (Halat Çekme)
+
+`TugStage` üç boyutlu sahne (`scene3d/engine.ts`) ile çizim sahnesi (`scene/TugScene.tsx`) arasında seçer. İkisi aynı özet girdiyi alır (ipin konumu, son doğru ve yanlış anları, donma, kazanan) ve olay bildirmez; bu yüzden sahne oyunun ortasında değişse de oyun kesintisiz sürer. İp, çocukların ellerinden geçen parçalardan kurulur; el ipi bırakınca ip o noktada yere düşer.
+
 ### Üç boyutlu sahne (Kule Yıkmaca)
 
 Kule Yıkmaca aynı düzeni kullanır: `SiegeStage` üç boyutlu sahne (`scene3d/`) ile çizim sahnesi (`scene/`) arasında seçer; ikisi aynı girdiyi alır ve `onImpact`, `onFinale` olaylarını bildirir. Sahne oyunun ortasında değişirse havadaki taş isabet etmiş sayılır.

@@ -16,7 +16,8 @@ import { halatCekme } from "../registry";
 import { TEAM_STYLES } from "../teams";
 import type { AnswerLog, GameProps, Team } from "../types";
 import { createTug, FREEZE_MS, tugReducer, type SideState, type TugSettings, type TugState } from "./logic";
-import { TugScene, type SceneInput, type SceneTeam } from "./scene/TugScene";
+import type { SceneInput, SceneTeam } from "./scene/TugScene";
+import { preloadTugStage, TugStage } from "./scene3d/TugStage";
 
 const LETTERS = ["A", "B", "C", "D"];
 /** Bitiş gösterisinin süresi; sonra sonuç ekranı gelir. */
@@ -53,6 +54,9 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
 
   // Oyun bu ekranda biterse önce bitiş gösterisi oynar; bitmiş hâlde açıldıysa sonuçlar hemen gelir.
   const [showResults, setShowResults] = useState(() => s.phase === "finished");
+  // Tanıtım ekranındayken 3D sahnenin parçası indirilir.
+  useEffect(() => preloadTugStage(), []);
+
   useEffect(() => {
     if (s.phase !== "finished" || showResults) return;
     const id = window.setTimeout(() => setShowResults(true), SHOWTIME_MS);
@@ -128,7 +132,7 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
       <div className="relative mx-4 h-[44%] min-h-[13rem] shrink-0 overflow-hidden rounded-xl bg-ink-950 shadow-[var(--surface-light)] sm:mx-6">
-        <TugScene input={sceneInput} teams={sceneTeams} reducedMotion={reducedMotion} />
+        <TugStage input={sceneInput} teams={sceneTeams} reducedMotion={reducedMotion} />
 
         {/* Yayın tarzı skor çubuğu: takımlar ve süre tek yerde */}
         <ScoreBug teams={teams} sides={s.sides} log={s.log} frozen={frozen} clock={formatClock(finished ? 0 : remaining)} finished={finished} />

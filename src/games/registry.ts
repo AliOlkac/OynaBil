@@ -101,6 +101,7 @@ export const halatCekme: GameDefinition = {
   defaultSettings: { target: 6, seconds: 180 },
   // Deste bitince baştan döner; tekrarı azaltmak için bir miktar soru yeterli.
   questionsNeeded: () => 8,
+  scene3d: true,
 };
 
 export const kuleYikmaca: GameDefinition = {
