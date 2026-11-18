@@ -1,0 +1,302 @@
+[
+  {
+    "kind": "pairs",
+    "id": "tr-3-1-es-anlam",
+    "unit": "tr-3-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{a}\" sözcüğünün eş anlamlısı hangisidir?",
+        "answer": "b"
+      },
+      {
+        "prompt": "\"{b}\" sözcüğünün eş anlamlısı hangisidir?",
+        "answer": "a"
+      }
+    ],
+    "statement": {
+      "text": "\"{a}\" ile \"{b}\" eş anlamlı sözcüklerdir.",
+      "swap": "b"
+    },
+    "explanation": "\"{a}\" ve \"{b}\" aynı anlama gelir; eş anlamlı sözcüklerdir.",
+    "items": [
+      {
+        "id": "oyku",
+        "a": "öykü",
+        "b": "hikâye"
+      },
+      {
+        "id": "sonbahar",
+        "a": "sonbahar",
+        "b": "güz"
+      },
+      {
+        "id": "vatan",
+        "a": "vatan",
+        "b": "yurt"
+      },
+      {
+        "id": "ruzgar",
+        "a": "rüzgâr",
+        "b": "yel"
+      },
+      {
+        "id": "kalp",
+        "a": "kalp",
+        "b": "yürek"
+      },
+      {
+        "id": "hatira",
+        "a": "hatıra",
+        "b": "anı"
+      },
+      {
+        "id": "yoksul",
+        "a": "yoksul",
+        "b": "fakir"
+      },
+      {
+        "id": "ulus",
+        "a": "ulus",
+        "b": "millet"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-3-1-zit-anlam",
+    "unit": "tr-3-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{a}\" sözcüğünün zıt anlamlısı hangisidir?",
+        "answer": "b"
+      },
+      {
+        "prompt": "\"{b}\" sözcüğünün zıt anlamlısı hangisidir?",
+        "answer": "a"
+      }
+    ],
+    "statement": {
+      "text": "\"{a}\" ile \"{b}\" zıt anlamlı sözcüklerdir.",
+      "swap": "b"
+    },
+    "explanation": "\"{a}\" ile \"{b}\" zıt (karşıt) anlamlı sözcüklerdir.",
+    "items": [
+      {
+        "id": "cesur",
+        "a": "cesur",
+        "b": "korkak"
+      },
+      {
+        "id": "comert",
+        "a": "cömert",
+        "b": "cimri"
+      },
+      {
+        "id": "tembel",
+        "a": "tembel",
+        "b": "çalışkan"
+      },
+      {
+        "id": "ileri",
+        "a": "ileri",
+        "b": "geri"
+      },
+      {
+        "id": "taze",
+        "a": "taze",
+        "b": "bayat"
+      },
+      {
+        "id": "dar",
+        "a": "dar",
+        "b": "geniş"
+      },
+      {
+        "id": "acemi",
+        "a": "acemi",
+        "b": "usta"
+      },
+      {
+        "id": "alcak",
+        "a": "alçak",
+        "b": "yüksek"
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "tr-3-1-es-sesli",
+    "unit": "tr-3-1",
+    "difficulty": 2,
+    "positive": "Hangisi eş sesli (sesteş) bir sözcüktür?",
+    "negative": "Hangisi eş sesli (sesteş) bir sözcük değildir?",
+    "statement": "\"{item}\" eş sesli (sesteş) bir sözcüktür.",
+    "explanation": "Eş sesli sözcüklerin yazılışı aynı, anlamı farklıdır. Örnekler: {members}.",
+    "members": [
+      "dal",
+      "kır",
+      "ben",
+      "yaş",
+      "bağ",
+      "koy"
+    ],
+    "nonMembers": [
+      "kitap",
+      "öğretmen",
+      "bulut",
+      "pencere",
+      "çanta",
+      "bilgisayar"
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "tr-3-2-cogul-adlar",
+    "unit": "tr-3-2",
+    "difficulty": 2,
+    "positive": "Hangisi çoğul bir addır?",
+    "negative": "Hangisi çoğul bir ad değildir?",
+    "statement": "\"{item}\" çoğul bir addır.",
+    "explanation": "Çoğul adlar -ler, -lar ekini alır ve birden çok varlığı bildirir: {members}. \"kiler\", \"dolar\" ve \"biber\" sözcüklerinde bu ek yoktur.",
+    "members": [
+      "çiçekler",
+      "kuşlar",
+      "evler",
+      "kalemler",
+      "çocuklar"
+    ],
+    "nonMembers": [
+      "kiler",
+      "dolar",
+      "biber",
+      "çiçek",
+      "okul"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-3-5-noktalama",
+    "unit": "tr-3-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "Hangi noktalama işareti {gorev}?",
+        "answer": "isaret"
+      },
+      {
+        "prompt": "{isaret} için hangisi doğrudur?",
+        "answer": "gorevSik"
+      }
+    ],
+    "statement": {
+      "text": "{isaret}, {gorev}.",
+      "swap": "gorev"
+    },
+    "explanation": "{isaret} ({sembol}), {gorev}.",
+    "items": [
+      {
+        "id": "unlem",
+        "isaret": "Ünlem işareti",
+        "sembol": "!",
+        "gorev": "sevinç, korku ve şaşkınlık bildiren cümlenin sonuna konur",
+        "gorevSik": "Sevinç, korku ve şaşkınlık bildiren cümlenin sonuna konur.",
+        "not": "Örnek: \"Yaşasın, kazandık!\""
+      },
+      {
+        "id": "kesme",
+        "isaret": "Kesme işareti",
+        "sembol": "'",
+        "gorev": "özel adlara gelen ekleri ayırır",
+        "gorevSik": "Özel adlara gelen ekleri ayırır.",
+        "not": "Örnek: \"Ankara'ya gittik.\""
+      },
+      {
+        "id": "ikinokta",
+        "isaret": "İki nokta",
+        "sembol": ":",
+        "gorev": "kendisinden sonra örnek ya da açıklama verilecek cümlenin sonuna konur",
+        "gorevSik": "Kendisinden sonra örnek ya da açıklama verilecek cümlenin sonuna konur.",
+        "not": "Örnek: \"Çantamda şunlar var: kalem, defter.\""
+      },
+      {
+        "id": "kisacizgi",
+        "isaret": "Kısa çizgi",
+        "sembol": "-",
+        "gorev": "satır sonuna sığmayan sözcük bölünürken kullanılır",
+        "gorevSik": "Satır sonuna sığmayan sözcük bölünürken kullanılır.",
+        "not": "Sözcük, hece yapısına göre bölünür."
+      },
+      {
+        "id": "uzuncizgi",
+        "isaret": "Uzun çizgi",
+        "sembol": "—",
+        "gorev": "yazıda konuşmaların başına konur",
+        "gorevSik": "Yazıda konuşmaların başına konur.",
+        "not": "Bu işarete konuşma çizgisi de denir."
+      },
+      {
+        "id": "tirnak",
+        "isaret": "Tırnak işareti",
+        "sembol": "\" \"",
+        "gorev": "başkasından aynen aktarılan sözlerin başına ve sonuna konur",
+        "gorevSik": "Başkasından aynen aktarılan sözlerin başına ve sonuna konur.",
+        "not": "Örnek: Öğretmen \"Kitap en iyi dosttur.\" dedi."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-3-6-5n1k",
+    "unit": "tr-3-6",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{soru}\" sorusu neyi öğrenmek için sorulur?",
+        "answer": "bilgiSik"
+      },
+      {
+        "prompt": "{bilgiSik} öğrenmek için hangi soru sorulur?",
+        "answer": "soru"
+      }
+    ],
+    "statement": {
+      "text": "\"{soru}\" sorusu {bilgi} öğrenmek için sorulur.",
+      "swap": "bilgi"
+    },
+    "explanation": "\"{soru}\" sorusu {bilgi} öğrenmek için sorulur. Bir metni anlamak için ne, nerede, ne zaman, nasıl, neden ve kim soruları sorulur.",
+    "items": [
+      {
+        "id": "kim",
+        "soru": "Kim?",
+        "bilgi": "olayı yapan kişiyi",
+        "bilgiSik": "Olayı yapan kişiyi"
+      },
+      {
+        "id": "nerede",
+        "soru": "Nerede?",
+        "bilgi": "olayın geçtiği yeri",
+        "bilgiSik": "Olayın geçtiği yeri"
+      },
+      {
+        "id": "ne-zaman",
+        "soru": "Ne zaman?",
+        "bilgi": "olayın zamanını",
+        "bilgiSik": "Olayın zamanını"
+      },
+      {
+        "id": "neden",
+        "soru": "Neden?",
+        "bilgi": "olayın sebebini",
+        "bilgiSik": "Olayın sebebini"
+      },
+      {
+        "id": "nasil",
+        "soru": "Nasıl?",
+        "bilgi": "olayın oluş biçimini",
+        "bilgiSik": "Olayın oluş biçimini"
+      }
+    ]
+  }
+]

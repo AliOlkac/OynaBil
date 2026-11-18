@@ -1,0 +1,415 @@
+[
+  {
+    "kind": "pairs",
+    "id": "mat-2-1-okunus",
+    "unit": "mat-2-1",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{sayi} sayısı nasıl okunur?",
+        "answer": "okunusSik"
+      },
+      {
+        "prompt": "\"{okunusSik}\" diye okunan sayı hangisidir?",
+        "answer": "sayi"
+      }
+    ],
+    "statement": {
+      "text": "{sayi} sayısı \"{okunus}\" diye okunur.",
+      "swap": "okunus"
+    },
+    "explanation": "{sayi} sayısı \"{okunus}\" diye okunur. Önce onluklar, sonra birlikler okunur.",
+    "items": [
+      {
+        "id": "n34",
+        "sayi": "34",
+        "okunus": "otuz dört",
+        "okunusSik": "Otuz dört"
+      },
+      {
+        "id": "n43",
+        "sayi": "43",
+        "okunus": "kırk üç",
+        "okunusSik": "Kırk üç"
+      },
+      {
+        "id": "n58",
+        "sayi": "58",
+        "okunus": "elli sekiz",
+        "okunusSik": "Elli sekiz"
+      },
+      {
+        "id": "n67",
+        "sayi": "67",
+        "okunus": "altmış yedi",
+        "okunusSik": "Altmış yedi"
+      },
+      {
+        "id": "n76",
+        "sayi": "76",
+        "okunus": "yetmiş altı",
+        "okunusSik": "Yetmiş altı"
+      },
+      {
+        "id": "n85",
+        "sayi": "85",
+        "okunus": "seksen beş",
+        "okunusSik": "Seksen beş"
+      },
+      {
+        "id": "n99",
+        "sayi": "99",
+        "okunus": "doksan dokuz",
+        "okunusSik": "Doksan dokuz"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-2-3-zaman",
+    "unit": "mat-2-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{birim} neye eşittir?",
+        "answer": "karsilik"
+      }
+    ],
+    "statement": {
+      "text": "{birim}, {karsilikTam}.",
+      "swap": "karsilikTam"
+    },
+    "explanation": "{birim}, {karsilikTam}.",
+    "items": [
+      {
+        "id": "hafta",
+        "birim": "1 hafta",
+        "karsilik": "7 gün",
+        "karsilikTam": "7 gündür"
+      },
+      {
+        "id": "yil",
+        "birim": "1 yıl",
+        "karsilik": "12 ay",
+        "karsilikTam": "12 aydır"
+      },
+      {
+        "id": "gun",
+        "birim": "1 gün",
+        "karsilik": "24 saat",
+        "karsilikTam": "24 saattir"
+      },
+      {
+        "id": "saat",
+        "birim": "1 saat",
+        "karsilik": "60 dakika",
+        "karsilikTam": "60 dakikadır"
+      },
+      {
+        "id": "yarim-saat",
+        "birim": "Yarım saat",
+        "karsilik": "30 dakika",
+        "karsilikTam": "30 dakikadır"
+      },
+      {
+        "id": "ceyrek-saat",
+        "birim": "Çeyrek saat",
+        "karsilik": "15 dakika",
+        "karsilikTam": "15 dakikadır"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-2-4-carpim-2",
+    "unit": "mat-2-4",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{a} × {b} kaç eder?",
+        "answer": "sonuc"
+      }
+    ],
+    "statement": {
+      "text": "{a} × {b} = {sonuc} eder.",
+      "swap": "sonuc"
+    },
+    "explanation": "{a} × {b} = {sonuc} eder. Bu, {a} tane {b} sayısının toplamıdır.",
+    "items": [
+      {
+        "id": "c2x3",
+        "a": "2",
+        "b": "3",
+        "sonuc": "6"
+      },
+      {
+        "id": "c2x4",
+        "a": "2",
+        "b": "4",
+        "sonuc": "8"
+      },
+      {
+        "id": "c2x5",
+        "a": "2",
+        "b": "5",
+        "sonuc": "10"
+      },
+      {
+        "id": "c2x6",
+        "a": "2",
+        "b": "6",
+        "sonuc": "12"
+      },
+      {
+        "id": "c2x7",
+        "a": "2",
+        "b": "7",
+        "sonuc": "14"
+      },
+      {
+        "id": "c2x8",
+        "a": "2",
+        "b": "8",
+        "sonuc": "16"
+      },
+      {
+        "id": "c2x9",
+        "a": "2",
+        "b": "9",
+        "sonuc": "18"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-2-4-carpim-3",
+    "unit": "mat-2-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{a} × {b} kaç eder?",
+        "answer": "sonuc"
+      }
+    ],
+    "statement": {
+      "text": "{a} × {b} = {sonuc} eder.",
+      "swap": "sonuc"
+    },
+    "explanation": "{a} × {b} = {sonuc} eder. Bu, {a} tane {b} sayısının toplamıdır.",
+    "items": [
+      {
+        "id": "c3x3",
+        "a": "3",
+        "b": "3",
+        "sonuc": "9"
+      },
+      {
+        "id": "c3x4",
+        "a": "3",
+        "b": "4",
+        "sonuc": "12"
+      },
+      {
+        "id": "c3x5",
+        "a": "3",
+        "b": "5",
+        "sonuc": "15"
+      },
+      {
+        "id": "c3x6",
+        "a": "3",
+        "b": "6",
+        "sonuc": "18"
+      },
+      {
+        "id": "c3x7",
+        "a": "3",
+        "b": "7",
+        "sonuc": "21"
+      },
+      {
+        "id": "c3x8",
+        "a": "3",
+        "b": "8",
+        "sonuc": "24"
+      },
+      {
+        "id": "c3x9",
+        "a": "3",
+        "b": "9",
+        "sonuc": "27"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-2-4-carpim-4",
+    "unit": "mat-2-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{a} × {b} kaç eder?",
+        "answer": "sonuc"
+      }
+    ],
+    "statement": {
+      "text": "{a} × {b} = {sonuc} eder.",
+      "swap": "sonuc"
+    },
+    "explanation": "{a} × {b} = {sonuc} eder. Bu, {a} tane {b} sayısının toplamıdır.",
+    "items": [
+      {
+        "id": "c4x3",
+        "a": "4",
+        "b": "3",
+        "sonuc": "12"
+      },
+      {
+        "id": "c4x4",
+        "a": "4",
+        "b": "4",
+        "sonuc": "16"
+      },
+      {
+        "id": "c4x5",
+        "a": "4",
+        "b": "5",
+        "sonuc": "20"
+      },
+      {
+        "id": "c4x6",
+        "a": "4",
+        "b": "6",
+        "sonuc": "24"
+      },
+      {
+        "id": "c4x7",
+        "a": "4",
+        "b": "7",
+        "sonuc": "28"
+      },
+      {
+        "id": "c4x8",
+        "a": "4",
+        "b": "8",
+        "sonuc": "32"
+      },
+      {
+        "id": "c4x9",
+        "a": "4",
+        "b": "9",
+        "sonuc": "36"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-2-4-carpim-5",
+    "unit": "mat-2-4",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{a} × {b} kaç eder?",
+        "answer": "sonuc"
+      }
+    ],
+    "statement": {
+      "text": "{a} × {b} = {sonuc} eder.",
+      "swap": "sonuc"
+    },
+    "explanation": "{a} × {b} = {sonuc} eder. Bu, {a} tane {b} sayısının toplamıdır.",
+    "items": [
+      {
+        "id": "c5x2",
+        "a": "5",
+        "b": "2",
+        "sonuc": "10"
+      },
+      {
+        "id": "c5x3",
+        "a": "5",
+        "b": "3",
+        "sonuc": "15"
+      },
+      {
+        "id": "c5x4",
+        "a": "5",
+        "b": "4",
+        "sonuc": "20"
+      },
+      {
+        "id": "c5x6",
+        "a": "5",
+        "b": "6",
+        "sonuc": "30"
+      },
+      {
+        "id": "c5x7",
+        "a": "5",
+        "b": "7",
+        "sonuc": "35"
+      },
+      {
+        "id": "c5x8",
+        "a": "5",
+        "b": "8",
+        "sonuc": "40"
+      },
+      {
+        "id": "c5x9",
+        "a": "5",
+        "b": "9",
+        "sonuc": "45"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-2-5-cisimler",
+    "unit": "mat-2-5",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{ornek} hangi geometrik cisme benzer?",
+        "answer": "cisim"
+      }
+    ],
+    "statement": {
+      "text": "{ornek} şekil olarak {cisimE} benzer.",
+      "swap": "cisimE"
+    },
+    "explanation": "{ornek} {cisimE} benzer.",
+    "items": [
+      {
+        "id": "zar",
+        "ornek": "Zar",
+        "cisim": "Küp",
+        "cisimE": "küpe"
+      },
+      {
+        "id": "top",
+        "ornek": "Futbol topu",
+        "cisim": "Küre",
+        "cisimE": "küreye"
+      },
+      {
+        "id": "konserve",
+        "ornek": "Konserve kutusu",
+        "cisim": "Silindir",
+        "cisimE": "silindire"
+      },
+      {
+        "id": "kulah",
+        "ornek": "Dondurma külahı",
+        "cisim": "Koni",
+        "cisimE": "koniye"
+      },
+      {
+        "id": "kutu",
+        "ornek": "Ayakkabı kutusu",
+        "cisim": "Dikdörtgen prizma",
+        "cisimE": "dikdörtgen prizmaya"
+      }
+    ]
+  }
+]

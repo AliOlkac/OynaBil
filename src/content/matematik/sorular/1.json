@@ -1,0 +1,794 @@
+[
+  {
+    "id": "mat-1-1-01",
+    "unit": "mat-1-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Üçgenin kaç kenarı vardır?",
+    "choices": [
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1,
+    "explanation": "Üçgenin 3 kenarı ve 3 köşesi vardır."
+  },
+  {
+    "id": "mat-1-1-02",
+    "unit": "mat-1-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi şeklin hiç köşesi yoktur?",
+    "choices": [
+      "Kare",
+      "Üçgen",
+      "Daire"
+    ],
+    "answer": 2,
+    "explanation": "Daire yuvarlaktır, köşesi yoktur. Karenin 4, üçgenin 3 köşesi vardır."
+  },
+  {
+    "id": "mat-1-1-03",
+    "unit": "mat-1-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Karenin 4 köşesi vardır.",
+    "answer": true,
+    "explanation": "Karenin 4 köşesi ve 4 kenarı vardır."
+  },
+  {
+    "id": "mat-1-1-04",
+    "unit": "mat-1-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi eşya dikdörtgene benzer?",
+    "choices": [
+      "Kapı",
+      "Madenî para",
+      "Portakal"
+    ],
+    "answer": 0,
+    "explanation": "Kapının 4 kenarı ve 4 köşesi vardır, dikdörtgene benzer. Madenî para ve portakal yuvarlaktır."
+  },
+  {
+    "id": "mat-1-1-05",
+    "unit": "mat-1-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Karenin kenarları için hangisi doğrudur?",
+    "choices": [
+      "Üç kenarı vardır.",
+      "Dört kenarı da eşittir.",
+      "Hiç kenarı yoktur."
+    ],
+    "answer": 1,
+    "explanation": "Karenin 4 kenarı vardır ve bu kenarların hepsi aynı uzunluktadır."
+  },
+  {
+    "id": "mat-1-1-06",
+    "unit": "mat-1-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Üçgenin 4 kenarı vardır.",
+    "answer": false,
+    "explanation": "Üçgenin 3 kenarı vardır. 4 kenarı olan şekiller kare ve dikdörtgendir."
+  },
+  {
+    "id": "mat-1-1-07",
+    "unit": "mat-1-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir kare ile bir üçgenin köşe sayıları toplamı kaçtır?",
+    "choices": [
+      "6",
+      "8",
+      "7"
+    ],
+    "answer": 2,
+    "explanation": "Karenin 4, üçgenin 3 köşesi vardır. 4 + 3 = 7 eder."
+  },
+  {
+    "id": "mat-1-1-08",
+    "unit": "mat-1-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ali ile Ece aynı sırada yan yana oturuyor. Ali, Ece'nin sağında. Ece, Ali'nin neresindedir?",
+    "choices": [
+      "Solunda",
+      "Sağında",
+      "Önünde"
+    ],
+    "answer": 0,
+    "explanation": "Yan yana oturan iki kişiden biri sağdaysa öteki onun solunda kalır."
+  },
+  {
+    "id": "mat-1-2-01",
+    "unit": "mat-1-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "9'dan sonra hangi sayı gelir?",
+    "choices": [
+      "8",
+      "10",
+      "11"
+    ],
+    "answer": 1,
+    "explanation": "Birer sayarken 9'dan sonra 10 gelir."
+  },
+  {
+    "id": "mat-1-2-02",
+    "unit": "mat-1-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi sayı en büyüktür?",
+    "choices": [
+      "12",
+      "9",
+      "17"
+    ],
+    "answer": 2,
+    "explanation": "9 tek basamaklıdır, en küçüktür. 12 ile 17'den 17 daha büyüktür."
+  },
+  {
+    "id": "mat-1-2-03",
+    "unit": "mat-1-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "15 sayısı 13'ten büyüktür.",
+    "answer": true,
+    "explanation": "Sayarken 15, 13'ten sonra gelir. Sonra gelen sayı daha büyüktür."
+  },
+  {
+    "id": "mat-1-2-04",
+    "unit": "mat-1-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "13 ile 15 arasındaki sayı hangisidir?",
+    "choices": [
+      "14",
+      "12",
+      "16"
+    ],
+    "answer": 0,
+    "explanation": "13'ten sonra 14, 14'ten sonra 15 gelir. Aradaki sayı 14'tür."
+  },
+  {
+    "id": "mat-1-2-05",
+    "unit": "mat-1-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "8, 3 ve 11 sayılarının küçükten büyüğe sıralanışı hangisidir?",
+    "choices": [
+      "8, 3, 11",
+      "3, 8, 11",
+      "11, 8, 3"
+    ],
+    "answer": 1,
+    "explanation": "En küçük sayı 3, en büyük sayı 11'dir. Sıralama 3, 8, 11 olur."
+  },
+  {
+    "id": "mat-1-2-06",
+    "unit": "mat-1-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "20'den bir önceki sayı 19'dur.",
+    "answer": true,
+    "explanation": "Birer sayarken 19'dan sonra 20 gelir. Yani 20'den önce 19 vardır."
+  },
+  {
+    "id": "mat-1-2-07",
+    "unit": "mat-1-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"On altı\" diye okunan sayı hangisidir?",
+    "choices": [
+      "14",
+      "60",
+      "16"
+    ],
+    "answer": 2,
+    "explanation": "On altı, 1 onluk ve 6 birlikten oluşur ve 16 diye yazılır."
+  },
+  {
+    "id": "mat-1-2-08",
+    "unit": "mat-1-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Elif'in 12, Can'ın 9, Mert'in 15 bilyesi var. En az bilye kimdedir?",
+    "choices": [
+      "Can",
+      "Elif",
+      "Mert"
+    ],
+    "answer": 0,
+    "explanation": "9, 12 ve 15 sayılarından en küçüğü 9'dur. En az bilye Can'dadır."
+  },
+  {
+    "id": "mat-1-2-09",
+    "unit": "mat-1-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "11 sayısı 9'dan küçüktür.",
+    "answer": false,
+    "explanation": "11, sayarken 9'dan sonra gelir. Bu yüzden 11, 9'dan büyüktür."
+  },
+  {
+    "id": "mat-1-3-01",
+    "unit": "mat-1-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "1 onluk kaç birlik eder?",
+    "choices": [
+      "1",
+      "10",
+      "100"
+    ],
+    "answer": 1,
+    "explanation": "10 tane birlik bir araya gelince 1 onluk olur."
+  },
+  {
+    "id": "mat-1-3-02",
+    "unit": "mat-1-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "1 onluk ve 4 birlik hangi sayıdır?",
+    "choices": [
+      "5",
+      "41",
+      "14"
+    ],
+    "answer": 2,
+    "explanation": "1 onluk 10 eder. 10 ile 4 birlik birlikte 14 eder."
+  },
+  {
+    "id": "mat-1-3-03",
+    "unit": "mat-1-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Onar sayıyoruz: 10, 20, 30, ... Sıradaki sayı kaçtır?",
+    "choices": [
+      "40",
+      "31",
+      "35"
+    ],
+    "answer": 0,
+    "explanation": "Onar sayarken her sayı bir öncekinden 10 fazladır. 30'dan sonra 40 gelir."
+  },
+  {
+    "id": "mat-1-3-04",
+    "unit": "mat-1-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Beşer sayıyoruz: 5, 10, 15, ... Sıradaki sayı kaçtır?",
+    "choices": [
+      "16",
+      "20",
+      "25"
+    ],
+    "answer": 1,
+    "explanation": "Beşer sayarken her sayı bir öncekinden 5 fazladır. 15'ten sonra 20 gelir."
+  },
+  {
+    "id": "mat-1-3-05",
+    "unit": "mat-1-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "İkişer sayarken 6'dan sonra 8 gelir.",
+    "answer": true,
+    "explanation": "İkişer sayarken her sayıya 2 eklenir: 2, 4, 6, 8."
+  },
+  {
+    "id": "mat-1-3-06",
+    "unit": "mat-1-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "17 sayısı 1 onluk ve kaç birlikten oluşur?",
+    "choices": [
+      "6",
+      "8",
+      "7"
+    ],
+    "answer": 2,
+    "explanation": "17 sayısında 1 onluk (10) ve 7 birlik vardır. 10 + 7 = 17 eder."
+  },
+  {
+    "id": "mat-1-3-07",
+    "unit": "mat-1-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Geriye doğru ikişer sayıyoruz: 20, 18, 16, ... Sıradaki sayı kaçtır?",
+    "choices": [
+      "14",
+      "15",
+      "12"
+    ],
+    "answer": 0,
+    "explanation": "Geriye doğru ikişer sayarken her sayı 2 azalır. 16'dan sonra 14 gelir."
+  },
+  {
+    "id": "mat-1-3-08",
+    "unit": "mat-1-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "18 sayısında 8 onluk vardır.",
+    "answer": false,
+    "explanation": "18 sayısında 1 onluk ve 8 birlik vardır."
+  },
+  {
+    "id": "mat-1-4-01",
+    "unit": "mat-1-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "5 + 3 kaç eder?",
+    "choices": [
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "5'in üzerine 3 sayarız: 6, 7, 8. Sonuç 8'dir."
+  },
+  {
+    "id": "mat-1-4-02",
+    "unit": "mat-1-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "9 − 4 kaç eder?",
+    "choices": [
+      "4",
+      "6",
+      "5"
+    ],
+    "answer": 2,
+    "explanation": "9'dan geriye 4 sayarız: 8, 7, 6, 5. Sonuç 5'tir."
+  },
+  {
+    "id": "mat-1-4-03",
+    "unit": "mat-1-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "8 + 7 kaç eder?",
+    "choices": [
+      "15",
+      "14",
+      "16"
+    ],
+    "answer": 0,
+    "explanation": "8'i 10'a tamamlamak için 2 gerekir. 7'den 2 alınca 5 kalır. 10 + 5 = 15 eder."
+  },
+  {
+    "id": "mat-1-4-04",
+    "unit": "mat-1-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "16 − 9 kaç eder?",
+    "choices": [
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "16'dan önce 6 çıkarırız, 10 kalır. Sonra 3 daha çıkarırız, 7 kalır."
+  },
+  {
+    "id": "mat-1-4-05",
+    "unit": "mat-1-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "6 + 4 = 10 eder.",
+    "answer": true,
+    "explanation": "6'nın üzerine 4 sayarız: 7, 8, 9, 10. Sonuç 10'dur."
+  },
+  {
+    "id": "mat-1-4-06",
+    "unit": "mat-1-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Elif'in 7 kalemi var. Annesi 5 kalem daha aldı. Elif'in kaç kalemi oldu?",
+    "choices": [
+      "11",
+      "13",
+      "12"
+    ],
+    "answer": 2,
+    "explanation": "Kalemler çoğaldığı için toplama yaparız. 7 + 5 = 12 eder."
+  },
+  {
+    "id": "mat-1-4-07",
+    "unit": "mat-1-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sepette 14 elma vardı. 6 elma yendi. Sepette kaç elma kaldı?",
+    "choices": [
+      "8",
+      "7",
+      "9"
+    ],
+    "answer": 0,
+    "explanation": "Elmalar azaldığı için çıkarma yaparız. 14 − 6 = 8 eder."
+  },
+  {
+    "id": "mat-1-4-08",
+    "unit": "mat-1-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "7 + ? = 13. Soru işareti yerine hangi sayı gelir?",
+    "choices": [
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": 1,
+    "explanation": "7'ye 6 eklersek 13 olur. Bunu 13 − 7 = 6 işlemiyle de buluruz."
+  },
+  {
+    "id": "mat-1-4-09",
+    "unit": "mat-1-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "12 − 5 = 8 eder.",
+    "answer": false,
+    "explanation": "12'den 5 çıkarınca 7 kalır. 12 − 5 = 7 eder."
+  },
+  {
+    "id": "mat-1-4-10",
+    "unit": "mat-1-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Can'ın 9 cevizi var. 4 tanesini yedi, sonra 6 ceviz daha aldı. Can'ın kaç cevizi oldu?",
+    "choices": [
+      "10",
+      "12",
+      "11"
+    ],
+    "answer": 2,
+    "explanation": "Önce 9 − 4 = 5 ceviz kalır. Sonra 5 + 6 = 11 ceviz olur."
+  },
+  {
+    "id": "mat-1-4-11",
+    "unit": "mat-1-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir sayıya 0 eklersek sayı değişmez.",
+    "answer": true,
+    "explanation": "0 yokluğu gösterir. Örneğin 7 + 0 = 7 eder."
+  },
+  {
+    "id": "mat-1-5-01",
+    "unit": "mat-1-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir haftada kaç gün vardır?",
+    "choices": [
+      "7",
+      "5",
+      "10"
+    ],
+    "answer": 0,
+    "explanation": "Haftanın günleri pazartesi, salı, çarşamba, perşembe, cuma, cumartesi ve pazardır. Toplam 7 gün eder."
+  },
+  {
+    "id": "mat-1-5-02",
+    "unit": "mat-1-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Salı gününden sonra hangi gün gelir?",
+    "choices": [
+      "Pazartesi",
+      "Çarşamba",
+      "Perşembe"
+    ],
+    "answer": 1,
+    "explanation": "Günler sırayla pazartesi, salı, çarşamba diye devam eder. Salıdan sonra çarşamba gelir."
+  },
+  {
+    "id": "mat-1-5-03",
+    "unit": "mat-1-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Saatin uzun kolu 12'yi, kısa kolu 3'ü gösteriyor. Saat kaçtır?",
+    "choices": [
+      "Saat 12",
+      "Saat 6",
+      "Saat 3"
+    ],
+    "answer": 2,
+    "explanation": "Uzun kol (yelkovan) 12'deyken saat tamdır. Kısa kol (akrep) 3'ü gösterdiği için saat 3'tür."
+  },
+  {
+    "id": "mat-1-5-04",
+    "unit": "mat-1-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisinin boyunu karışla ölçmek daha uygundur?",
+    "choices": [
+      "Sıra",
+      "Okul bahçesi",
+      "Uzun bir yol"
+    ],
+    "answer": 0,
+    "explanation": "Karış kısa uzunlukları ölçmeye yarar. Bahçe ve yol gibi uzun yerler adımla ölçülür."
+  },
+  {
+    "id": "mat-1-5-05",
+    "unit": "mat-1-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bir yılda 12 ay vardır.",
+    "answer": true,
+    "explanation": "Yıl ocak ayıyla başlar, aralık ayıyla biter. Toplam 12 ay vardır."
+  },
+  {
+    "id": "mat-1-5-06",
+    "unit": "mat-1-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ayşe'nin bir 5 lirası ve bir 10 lirası var. Ayşe'nin toplam kaç lirası vardır?",
+    "choices": [
+      "10",
+      "15",
+      "50"
+    ],
+    "answer": 1,
+    "explanation": "Paraları toplarız. 5 + 10 = 15 lira eder."
+  },
+  {
+    "id": "mat-1-5-07",
+    "unit": "mat-1-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Cumartesi ve pazar hafta sonu günleridir.",
+    "answer": true,
+    "explanation": "Pazartesiden cumaya kadar olan günler hafta içi, cumartesi ve pazar hafta sonudur."
+  },
+  {
+    "id": "mat-1-5-08",
+    "unit": "mat-1-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir adımımız, bir karışımızdan daha kısadır.",
+    "answer": false,
+    "explanation": "Adım karıştan daha uzundur. Bu yüzden uzun yerleri adımla ölçeriz."
+  },
+  {
+    "id": "mat-1-5-09",
+    "unit": "mat-1-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bugün perşembe. İki gün sonra hangi gün olur?",
+    "choices": [
+      "Cuma",
+      "Pazar",
+      "Cumartesi"
+    ],
+    "answer": 2,
+    "explanation": "Perşembeden bir gün sonra cuma, iki gün sonra cumartesi olur."
+  },
+  {
+    "id": "mat-1-5-10",
+    "unit": "mat-1-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Ali'nin 20 lirası var. 8 liraya simit aldı. Ali'nin kaç lirası kaldı?",
+    "choices": [
+      "12",
+      "10",
+      "18"
+    ],
+    "answer": 0,
+    "explanation": "Harcanan para çıkarılır. 20 − 8 = 12 lira kalır."
+  },
+  {
+    "id": "mat-1-6-01",
+    "unit": "mat-1-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Örüntü: kare, üçgen, kare, üçgen, kare, ... Sıradaki şekil hangisidir?",
+    "choices": [
+      "Kare",
+      "Üçgen",
+      "Daire"
+    ],
+    "answer": 1,
+    "explanation": "Örüntüde kare ve üçgen sırayla tekrar ediyor. Kareden sonra üçgen gelir."
+  },
+  {
+    "id": "mat-1-6-02",
+    "unit": "mat-1-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Örüntü: kırmızı, mavi, mavi, kırmızı, mavi, mavi, ... Sıradaki renk hangisidir?",
+    "choices": [
+      "Mavi",
+      "Sarı",
+      "Kırmızı"
+    ],
+    "answer": 2,
+    "explanation": "Tekrar eden bölüm \"kırmızı, mavi, mavi\" şeklindedir. İki maviden sonra yine kırmızı gelir."
+  },
+  {
+    "id": "mat-1-6-03",
+    "unit": "mat-1-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Zar hangi geometrik cisme benzer?",
+    "choices": [
+      "Küp",
+      "Küre",
+      "Silindir"
+    ],
+    "answer": 0,
+    "explanation": "Zarın 6 yüzü de kare şeklindedir. Bu yüzden zar küpe benzer."
+  },
+  {
+    "id": "mat-1-6-04",
+    "unit": "mat-1-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Futbol topu küreye benzer.",
+    "answer": true,
+    "explanation": "Küre, top gibi yusyuvarlak bir cisimdir. Futbol topu küreye benzer."
+  },
+  {
+    "id": "mat-1-6-05",
+    "unit": "mat-1-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi kolayca yuvarlanır?",
+    "choices": [
+      "Küp",
+      "Küre",
+      "Kibrit kutusu"
+    ],
+    "answer": 1,
+    "explanation": "Kürenin yüzeyi eğridir, bu yüzden her yöne yuvarlanır. Küp ve kibrit kutusunun yüzleri düzdür."
+  },
+  {
+    "id": "mat-1-6-06",
+    "unit": "mat-1-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "İki eş kareyi kenarları tam çakışacak şekilde yan yana koyarsak hangi şekil oluşur?",
+    "choices": [
+      "Üçgen",
+      "Daire",
+      "Dikdörtgen"
+    ],
+    "answer": 2,
+    "explanation": "Yan yana gelen iki eş kare, bir kenarı ötekinden uzun olan bir dikdörtgen oluşturur."
+  },
+  {
+    "id": "mat-1-6-07",
+    "unit": "mat-1-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Küpün bütün yüzleri kare şeklindedir.",
+    "answer": true,
+    "explanation": "Küpün 6 yüzü vardır ve hepsi birbirine eş karelerdir."
+  },
+  {
+    "id": "mat-1-6-08",
+    "unit": "mat-1-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Konserve kutusu küpe benzer.",
+    "answer": false,
+    "explanation": "Konserve kutusunun altı ve üstü yuvarlaktır. Bu yüzden silindire benzer."
+  },
+  {
+    "id": "mat-1-6-09",
+    "unit": "mat-1-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Örüntü: 2, 4, 6, 8, ... Sıradaki sayı kaçtır?",
+    "choices": [
+      "10",
+      "9",
+      "12"
+    ],
+    "answer": 0,
+    "explanation": "Örüntüde sayılar ikişer artıyor. 8'den sonra 10 gelir."
+  },
+  {
+    "id": "mat-1-7-01",
+    "unit": "mat-1-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Sınıfta 8 kız, 6 erkek öğrenci var. Hangisi daha fazladır?",
+    "choices": [
+      "Erkekler",
+      "Kızlar",
+      "İkisi eşit"
+    ],
+    "answer": 1,
+    "explanation": "8 sayısı 6'dan büyüktür. Bu yüzden kızlar daha fazladır."
+  },
+  {
+    "id": "mat-1-7-02",
+    "unit": "mat-1-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Çetele tablosunda her çizgi 1 kişiyi gösterir. Elma için 5, armut için 3 çizgi var. Elmayı seçen kaç kişidir?",
+    "choices": [
+      "3",
+      "8",
+      "5"
+    ],
+    "answer": 2,
+    "explanation": "Her çizgi 1 kişidir. Elmanın yanında 5 çizgi olduğu için elmayı 5 kişi seçmiştir."
+  },
+  {
+    "id": "mat-1-7-03",
+    "unit": "mat-1-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sınıfta 7 kişi kediyi, 4 kişi kuşu, 9 kişi köpeği seviyor. En çok sevilen hayvan hangisidir?",
+    "choices": [
+      "Köpek",
+      "Kedi",
+      "Kuş"
+    ],
+    "answer": 0,
+    "explanation": "7, 4 ve 9 sayılarından en büyüğü 9'dur. En çok sevilen hayvan köpektir."
+  },
+  {
+    "id": "mat-1-7-04",
+    "unit": "mat-1-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "7 kişi kediyi, 4 kişi kuşu seviyor. Kediyi sevenler kuşu sevenlerden kaç kişi fazladır?",
+    "choices": [
+      "2",
+      "3",
+      "11"
+    ],
+    "answer": 1,
+    "explanation": "Farkı bulmak için çıkarma yaparız. 7 − 4 = 3 eder."
+  },
+  {
+    "id": "mat-1-7-05",
+    "unit": "mat-1-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Çetele tablosunda sayılar çizgilerle gösterilir.",
+    "answer": true,
+    "explanation": "Çetele tablosunda sayılan her şey için bir çizgi çizilir."
+  },
+  {
+    "id": "mat-1-7-06",
+    "unit": "mat-1-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kırmızıyı 6, maviyi 5, sarıyı 4 kişi seçti. Toplam kaç kişi renk seçti?",
+    "choices": [
+      "14",
+      "16",
+      "15"
+    ],
+    "answer": 2,
+    "explanation": "Hepsini toplarız. 6 + 5 = 11, 11 + 4 = 15 eder."
+  },
+  {
+    "id": "mat-1-7-07",
+    "unit": "mat-1-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "5 kişi çayı, 8 kişi sütü seçti. En çok seçilen içecek çaydır.",
+    "answer": false,
+    "explanation": "8 sayısı 5'ten büyüktür. En çok seçilen içecek süttür."
+  },
+  {
+    "id": "mat-1-7-08",
+    "unit": "mat-1-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"En sevdiğin meyve hangisi?\" sorusuna hangisi cevap olabilir?",
+    "choices": [
+      "Çilek",
+      "Mavi",
+      "Pazartesi"
+    ],
+    "answer": 0,
+    "explanation": "Çilek bir meyvedir. Mavi bir renk, pazartesi ise bir gündür."
+  }
+]

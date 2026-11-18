@@ -1,0 +1,1131 @@
+[
+  {
+    "id": "mat-4-1-01",
+    "unit": "mat-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Üç yüz kırk beş bin altı yüz yedi\" diye okunan sayı hangisidir?",
+    "choices": [
+      "345 670",
+      "345 607",
+      "354 607",
+      "34 567"
+    ],
+    "answer": 1,
+    "explanation": "Binler bölüğü 345, birler bölüğü 607'dir. Sayı 345 607 olarak yazılır."
+  },
+  {
+    "id": "mat-4-1-02",
+    "unit": "mat-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "628 451 sayısında on binler basamağındaki rakam hangisidir?",
+    "choices": [
+      "2",
+      "6",
+      "8",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "Basamaklar sağdan sola birler, onlar, yüzler, binler, on binler, yüz binlerdir. On binler basamağında 2 vardır."
+  },
+  {
+    "id": "mat-4-1-03",
+    "unit": "mat-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "734 529 sayısında 3 rakamının basamak değeri kaçtır?",
+    "choices": [
+      "300",
+      "3000",
+      "300 000",
+      "30 000"
+    ],
+    "answer": 3,
+    "explanation": "3 rakamı on binler basamağındadır. Basamak değeri 3 × 10 000 = 30 000'dir."
+  },
+  {
+    "id": "mat-4-1-04",
+    "unit": "mat-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "56 284 sayısı en yakın yüzlüğe yuvarlanırsa hangi sayı elde edilir?",
+    "choices": [
+      "56 200",
+      "56 280",
+      "56 300",
+      "57 000"
+    ],
+    "answer": 2,
+    "explanation": "Onlar basamağı 8'dir; 5 ve 5'ten büyük olduğu için yüzler basamağı 1 artar. Sayı 56 300 olur."
+  },
+  {
+    "id": "mat-4-1-05",
+    "unit": "mat-4-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Altı basamaklı en küçük doğal sayı 100 000'dir.",
+    "answer": true,
+    "explanation": "Yüz binler basamağına yazılabilecek en küçük rakam 1'dir, öteki basamaklara 0 yazılır: 100 000."
+  },
+  {
+    "id": "mat-4-1-06",
+    "unit": "mat-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi sıralama doğrudur?",
+    "choices": [
+      "45 210 < 45 120 < 54 012",
+      "45 120 < 45 210 < 54 012",
+      "54 012 < 45 210 < 45 120",
+      "45 120 < 54 012 < 45 210"
+    ],
+    "answer": 1,
+    "explanation": "Karşılaştırma en büyük basamaktan başlar. 45 120 ile 45 210'da yüzler basamağı 1 < 2'dir; 54 012 en büyüktür."
+  },
+  {
+    "id": "mat-4-1-07",
+    "unit": "mat-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Örüntü: 1250, 1500, 1750, ... Sıradaki sayı kaçtır?",
+    "choices": [
+      "2000",
+      "1800",
+      "2250",
+      "1850"
+    ],
+    "answer": 0,
+    "explanation": "Sayılar 250'şer artmaktadır. 1750 + 250 = 2000 eder."
+  },
+  {
+    "id": "mat-4-1-08",
+    "unit": "mat-4-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "408 096 sayısının binler bölüğünde 408 sayısı vardır.",
+    "answer": true,
+    "explanation": "Sayı sağdan üçer basamak ayrılır. 096 birler bölüğü, 408 binler bölüğüdür."
+  },
+  {
+    "id": "mat-4-1-09",
+    "unit": "mat-4-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Rakamları farklı altı basamaklı en büyük doğal sayı hangisidir?",
+    "choices": [
+      "999 999",
+      "987 645",
+      "986 754",
+      "987 654"
+    ],
+    "answer": 3,
+    "explanation": "En büyük rakamlar büyük basamaktan başlayarak birer kez yazılır: 9, 8, 7, 6, 5, 4. Sayı 987 654'tür."
+  },
+  {
+    "id": "mat-4-1-10",
+    "unit": "mat-4-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "4 yüz binlik, 5 binlik, 3 onluk ve 9 birlikten oluşan sayı hangisidir?",
+    "choices": [
+      "450 039",
+      "405 309",
+      "405 039",
+      "45 039"
+    ],
+    "answer": 2,
+    "explanation": "400 000 + 5000 + 30 + 9 = 405 039. Boş kalan on binler ve yüzler basamağına 0 yazılır."
+  },
+  {
+    "id": "mat-4-1-11",
+    "unit": "mat-4-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "7648 sayısı en yakın onluğa yuvarlanınca 7640 olur.",
+    "answer": false,
+    "explanation": "Birler basamağı 8'dir; 5 ve 5'ten büyük olduğu için onlar basamağı 1 artar. Sayı 7650 olur."
+  },
+  {
+    "id": "mat-4-1-12",
+    "unit": "mat-4-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "350 000 sayısı kaç tane binlikten oluşur?",
+    "choices": [
+      "35",
+      "350",
+      "3500",
+      "305"
+    ],
+    "answer": 1,
+    "explanation": "350 000 = 350 × 1000 olduğu için sayıda 350 tane binlik vardır."
+  },
+  {
+    "id": "mat-4-1-13",
+    "unit": "mat-4-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "99 999 sayısından sonra gelen doğal sayı 100 000'dir.",
+    "answer": true,
+    "explanation": "99 999'a 1 eklenince bütün basamaklar dolar ve altı basamaklı ilk sayı olan 100 000 elde edilir."
+  },
+  {
+    "id": "mat-4-2-01",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "4568 + 2375 kaç eder?",
+    "choices": [
+      "6943",
+      "6933",
+      "6843",
+      "7943"
+    ],
+    "answer": 0,
+    "explanation": "8 + 5 = 13, elde 1. 6 + 7 + 1 = 14, elde 1. 5 + 3 + 1 = 9. 4 + 2 = 6. Sonuç 6943'tür."
+  },
+  {
+    "id": "mat-4-2-02",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "7002 − 3458 kaç eder?",
+    "choices": [
+      "4544",
+      "3554",
+      "4456",
+      "3544"
+    ],
+    "answer": 3,
+    "explanation": "Sağlaması toplama ile yapılır: 3544 + 3458 = 7002. Sonuç 3544'tür."
+  },
+  {
+    "id": "mat-4-2-03",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "36 × 25 kaç eder?",
+    "choices": [
+      "800",
+      "252",
+      "900",
+      "850"
+    ],
+    "answer": 2,
+    "explanation": "36 × 5 = 180 ve 36 × 20 = 720 eder. 180 + 720 = 900."
+  },
+  {
+    "id": "mat-4-2-04",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "864 ÷ 8 kaç eder?",
+    "choices": [
+      "18",
+      "108",
+      "180",
+      "107"
+    ],
+    "answer": 1,
+    "explanation": "8 ÷ 8 = 1. 6'da 8 yoktur, bölüme 0 yazılır. 64 ÷ 8 = 8. Bölüm 108'dir."
+  },
+  {
+    "id": "mat-4-2-05",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "125 × 100 kaç eder?",
+    "choices": [
+      "12 500",
+      "1250",
+      "125 000",
+      "12 050"
+    ],
+    "answer": 0,
+    "explanation": "Bir sayı 100 ile çarpılırken sağına iki sıfır yazılır: 12 500."
+  },
+  {
+    "id": "mat-4-2-06",
+    "unit": "mat-4-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "45 × 10 = 450 eder.",
+    "answer": true,
+    "explanation": "Bir sayı 10 ile çarpılırken sağına bir sıfır yazılır. 45 × 10 = 450."
+  },
+  {
+    "id": "mat-4-2-07",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "6000 ÷ 100 kaç eder?",
+    "choices": [
+      "6",
+      "600",
+      "6000",
+      "60"
+    ],
+    "answer": 3,
+    "explanation": "Sonu sıfırla biten sayı 100'e bölünürken sağından iki sıfır atılır. 6000 ÷ 100 = 60."
+  },
+  {
+    "id": "mat-4-2-08",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir okulda 18 sınıf, her sınıfta 32 öğrenci var. Okulda kaç öğrenci vardır?",
+    "choices": [
+      "476",
+      "90",
+      "576",
+      "566"
+    ],
+    "answer": 2,
+    "explanation": "18 × 32 işlemi yapılır: 18 × 30 = 540, 18 × 2 = 36. 540 + 36 = 576."
+  },
+  {
+    "id": "mat-4-2-09",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "498 + 303 işleminin sonucu, sayılar en yakın yüzlüğe yuvarlanarak tahmin edilirse kaç bulunur?",
+    "choices": [
+      "700",
+      "800",
+      "801",
+      "900"
+    ],
+    "answer": 1,
+    "explanation": "498 sayısı 500'e, 303 sayısı 300'e yuvarlanır. Tahmini sonuç 500 + 300 = 800'dür."
+  },
+  {
+    "id": "mat-4-2-10",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir manav 1250 kg karpuzun 475 kg'ını pazartesi, 380 kg'ını salı sattı. Geriye kaç kilogram karpuz kaldı?",
+    "choices": [
+      "395",
+      "405",
+      "495",
+      "855"
+    ],
+    "answer": 0,
+    "explanation": "Satılan: 475 + 380 = 855 kg. Kalan: 1250 − 855 = 395 kg."
+  },
+  {
+    "id": "mat-4-2-11",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir bölme işleminde bölen 7, bölüm 15, kalan 4'tür. Bölünen kaçtır?",
+    "choices": [
+      "101",
+      "105",
+      "26",
+      "109"
+    ],
+    "answer": 3,
+    "explanation": "Bölünen = bölen × bölüm + kalan. 7 × 15 = 105, 105 + 4 = 109."
+  },
+  {
+    "id": "mat-4-2-12",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Tanesi 45 lira olan kitaplardan 12 tane alan okul 600 lira ödedi. Kaç lira para üstü alır?",
+    "choices": [
+      "50",
+      "140",
+      "60",
+      "540"
+    ],
+    "answer": 2,
+    "explanation": "Kitaplar 12 × 45 = 540 lira tutar. Para üstü 600 − 540 = 60 liradır."
+  },
+  {
+    "id": "mat-4-2-13",
+    "unit": "mat-4-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bölme işleminde kalan, bölenden büyük olabilir.",
+    "answer": false,
+    "explanation": "Kalan bölenden büyükse bölme henüz bitmemiştir. Kalan, bölenden küçük olmalıdır."
+  },
+  {
+    "id": "mat-4-2-14",
+    "unit": "mat-4-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Toplama işleminde toplananların yeri değişirse toplam değişmez.",
+    "answer": true,
+    "explanation": "Örneğin 25 + 40 = 65 ve 40 + 25 = 65 eder. Toplananların sırası sonucu etkilemez."
+  },
+  {
+    "id": "mat-4-2-15",
+    "unit": "mat-4-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "9000 − 4500 = 5500 eder.",
+    "answer": false,
+    "explanation": "4500 + 4500 = 9000 olduğu için 9000 − 4500 = 4500 eder."
+  },
+  {
+    "id": "mat-4-2-16",
+    "unit": "mat-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir sayı 9'a bölündüğünde bölüm 23, kalan 0 oluyor. Bu sayı kaçtır?",
+    "choices": [
+      "197",
+      "207",
+      "217",
+      "32"
+    ],
+    "answer": 1,
+    "explanation": "Bölünen, bölen ile bölümün çarpımıdır. 9 × 23 = 207."
+  },
+  {
+    "id": "mat-4-3-01",
+    "unit": "mat-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bileşik kesirdir?",
+    "choices": [
+      "9/4",
+      "3/8",
+      "5/6",
+      "1/2"
+    ],
+    "answer": 0,
+    "explanation": "Payı paydasına eşit ya da paydasından büyük olan kesirler bileşik kesirdir. 9/4'te pay paydadan büyüktür."
+  },
+  {
+    "id": "mat-4-3-02",
+    "unit": "mat-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"2 tam 1/3\" nasıl bir kesirdir?",
+    "choices": [
+      "Basit kesir",
+      "Bileşik kesir",
+      "Birim kesir",
+      "Tam sayılı kesir"
+    ],
+    "answer": 3,
+    "explanation": "Bir doğal sayı ile bir basit kesrin birlikte yazıldığı kesirlere tam sayılı kesir denir."
+  },
+  {
+    "id": "mat-4-3-03",
+    "unit": "mat-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "3/8 + 2/8 işleminin sonucu kaçtır?",
+    "choices": [
+      "5/16",
+      "1/8",
+      "5/8",
+      "6/8"
+    ],
+    "answer": 2,
+    "explanation": "Paydalar eşitse paylar toplanır, payda aynı kalır: 3 + 2 = 5, sonuç 5/8."
+  },
+  {
+    "id": "mat-4-3-04",
+    "unit": "mat-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "7/9 − 4/9 işleminin sonucu kaçtır?",
+    "choices": [
+      "11/9",
+      "3/9",
+      "3/18",
+      "4/9"
+    ],
+    "answer": 1,
+    "explanation": "Paydalar eşitse paylar çıkarılır, payda aynı kalır: 7 − 4 = 3, sonuç 3/9."
+  },
+  {
+    "id": "mat-4-3-05",
+    "unit": "mat-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi kesir en büyüktür?",
+    "choices": [
+      "1/2",
+      "1/3",
+      "1/5",
+      "1/8"
+    ],
+    "answer": 0,
+    "explanation": "Birim kesirlerde paydası küçük olan kesir daha büyüktür. Bütün en az parçaya 1/2'de bölünmüştür."
+  },
+  {
+    "id": "mat-4-3-06",
+    "unit": "mat-4-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Paydaları eşit kesirlerden payı büyük olan daha büyüktür.",
+    "answer": true,
+    "explanation": "Parçalar eş olduğunda daha çok parça alan kesir daha büyüktür. Örneğin 5/7 > 3/7."
+  },
+  {
+    "id": "mat-4-3-07",
+    "unit": "mat-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "24'ün 3/4'ü kaçtır?",
+    "choices": [
+      "6",
+      "8",
+      "32",
+      "18"
+    ],
+    "answer": 3,
+    "explanation": "Önce paydaya bölünür: 24 ÷ 4 = 6. Sonra payla çarpılır: 6 × 3 = 18."
+  },
+  {
+    "id": "mat-4-3-08",
+    "unit": "mat-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir pizzanın 5/8'i yendi. Geriye pizzanın kaçta kaçı kaldı?",
+    "choices": [
+      "5/8",
+      "8/3",
+      "3/8",
+      "2/8"
+    ],
+    "answer": 2,
+    "explanation": "Bütün pizza 8/8'dir. 8/8 − 5/8 = 3/8 kalır."
+  },
+  {
+    "id": "mat-4-3-09",
+    "unit": "mat-4-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "5/5 kesri 1 bütüne eşittir.",
+    "answer": true,
+    "explanation": "Pay ve payda eşitse bütünün bütün parçaları alınmıştır. 5/5 = 1 eder."
+  },
+  {
+    "id": "mat-4-3-10",
+    "unit": "mat-4-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "40 sayfalık kitabın 2/5'ini okuyan Defne'nin okumadığı kaç sayfa kalmıştır?",
+    "choices": [
+      "8",
+      "24",
+      "16",
+      "32"
+    ],
+    "answer": 1,
+    "explanation": "40 ÷ 5 = 8, 8 × 2 = 16 sayfa okunmuştur. Kalan 40 − 16 = 24 sayfadır."
+  },
+  {
+    "id": "mat-4-3-11",
+    "unit": "mat-4-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "30 litre suyun önce 2/6'sı, sonra 3/6'sı kullanıldı. Geriye kaç litre su kaldı?",
+    "choices": [
+      "5",
+      "10",
+      "15",
+      "25"
+    ],
+    "answer": 0,
+    "explanation": "2/6 + 3/6 = 5/6'sı kullanılmıştır. Kalan 1/6'dır: 30 ÷ 6 = 5 litre."
+  },
+  {
+    "id": "mat-4-3-12",
+    "unit": "mat-4-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "3/7 kesri 5/7 kesrinden büyüktür.",
+    "answer": false,
+    "explanation": "Paydalar eşit olduğunda payı büyük olan kesir büyüktür. 5 > 3 olduğu için 5/7 daha büyüktür."
+  },
+  {
+    "id": "mat-4-3-13",
+    "unit": "mat-4-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Birim kesirlerde payda büyüdükçe kesir de büyür.",
+    "answer": false,
+    "explanation": "Payda büyüdükçe bütün daha çok parçaya bölünür ve parçalar küçülür. Örneğin 1/8, 1/2'den küçüktür."
+  },
+  {
+    "id": "mat-4-3-14",
+    "unit": "mat-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "4/10 kesri nasıl okunur?",
+    "choices": [
+      "Dörtte on",
+      "Dört tam onda bir",
+      "On dört",
+      "Onda dört"
+    ],
+    "answer": 3,
+    "explanation": "Kesir okunurken önce payda, sonra pay söylenir: onda dört."
+  },
+  {
+    "id": "mat-4-4-01",
+    "unit": "mat-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ölçüsü 90° olan açıya ne denir?",
+    "choices": [
+      "Dar açı",
+      "Geniş açı",
+      "Dik açı",
+      "Doğru açı"
+    ],
+    "answer": 2,
+    "explanation": "90°'lik açı dik açıdır. Kitabın köşesi dik açıya örnektir."
+  },
+  {
+    "id": "mat-4-4-02",
+    "unit": "mat-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ölçüsü 120° olan açı hangi türdendir?",
+    "choices": [
+      "Dar açı",
+      "Geniş açı",
+      "Dik açı",
+      "Doğru açı"
+    ],
+    "answer": 1,
+    "explanation": "Ölçüsü 90° ile 180° arasında olan açılar geniş açıdır. 120° bu aralıktadır."
+  },
+  {
+    "id": "mat-4-4-03",
+    "unit": "mat-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Üç kenarı da eşit uzunlukta olan üçgene ne ad verilir?",
+    "choices": [
+      "Eşkenar üçgen",
+      "İkizkenar üçgen",
+      "Çeşitkenar üçgen",
+      "Dik üçgen"
+    ],
+    "answer": 0,
+    "explanation": "Bütün kenarları eşit olan üçgen eşkenar üçgendir. İkizkenar üçgende yalnızca iki kenar eşittir."
+  },
+  {
+    "id": "mat-4-4-04",
+    "unit": "mat-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kenar uzunlukları 5 cm, 5 cm ve 8 cm olan üçgen hangi türdendir?",
+    "choices": [
+      "Eşkenar üçgen",
+      "Çeşitkenar üçgen",
+      "İkizkenar üçgen"
+    ],
+    "answer": 2,
+    "explanation": "İki kenarı eşit (5 cm ve 5 cm), üçüncü kenarı farklı olan üçgen ikizkenar üçgendir."
+  },
+  {
+    "id": "mat-4-4-05",
+    "unit": "mat-4-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Dar açının ölçüsü 90°'den küçüktür.",
+    "answer": true,
+    "explanation": "Ölçüsü 0° ile 90° arasında olan açılara dar açı denir."
+  },
+  {
+    "id": "mat-4-4-06",
+    "unit": "mat-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Doğru açının ölçüsü kaç derecedir?",
+    "choices": [
+      "90°",
+      "270°",
+      "180°",
+      "360°"
+    ],
+    "answer": 2,
+    "explanation": "Doğru açının kolları bir doğru oluşturur ve ölçüsü 180°'dir. İki dik açı bir doğru açı eder."
+  },
+  {
+    "id": "mat-4-4-07",
+    "unit": "mat-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Dikdörtgenin açıları için hangisi doğrudur?",
+    "choices": [
+      "Dört açısı da dar açıdır.",
+      "Dört açısı da dik açıdır.",
+      "İki açısı geniş açıdır.",
+      "Yalnızca bir açısı dik açıdır."
+    ],
+    "answer": 1,
+    "explanation": "Dikdörtgenin ve karenin dört köşesindeki açıların her biri 90°'dir, yani dik açıdır."
+  },
+  {
+    "id": "mat-4-4-08",
+    "unit": "mat-4-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Karenin dört kenarı eşit uzunlukta ve dört açısı dik açıdır.",
+    "answer": true,
+    "explanation": "Kare, bütün kenarları eşit ve bütün açıları 90° olan dörtgendir."
+  },
+  {
+    "id": "mat-4-4-09",
+    "unit": "mat-4-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir açısı 95° olan üçgen, açılarına göre hangi türdendir?",
+    "choices": [
+      "Dar açılı üçgen",
+      "Dik açılı üçgen",
+      "Geniş açılı üçgen"
+    ],
+    "answer": 2,
+    "explanation": "95°, 90°'den büyük olduğu için geniş açıdır. Bir açısı geniş açı olan üçgen geniş açılı üçgendir."
+  },
+  {
+    "id": "mat-4-4-10",
+    "unit": "mat-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Küpün açınımında kaç tane kare bulunur?",
+    "choices": [
+      "4",
+      "8",
+      "12",
+      "6"
+    ],
+    "answer": 3,
+    "explanation": "Küpün 6 yüzü vardır ve hepsi karedir. Açınımında da 6 kare bulunur."
+  },
+  {
+    "id": "mat-4-4-11",
+    "unit": "mat-4-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Ölçüsü 89° olan açı geniş açıdır.",
+    "answer": false,
+    "explanation": "89°, 90°'den küçük olduğu için dar açıdır. Geniş açılar 90°'den büyüktür."
+  },
+  {
+    "id": "mat-4-4-12",
+    "unit": "mat-4-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Çeşitkenar üçgenin iki kenarı eşit uzunluktadır.",
+    "answer": false,
+    "explanation": "Çeşitkenar üçgenin bütün kenar uzunlukları birbirinden farklıdır. İki kenarı eşit olan üçgen ikizkenardır."
+  },
+  {
+    "id": "mat-4-4-13",
+    "unit": "mat-4-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Saat tam 3'ü gösterirken akrep ile yelkovan arasındaki açı hangi türdendir?",
+    "choices": [
+      "Dar açı",
+      "Geniş açı",
+      "Dik açı",
+      "Doğru açı"
+    ],
+    "answer": 2,
+    "explanation": "Saat 3'te yelkovan 12'yi, akrep 3'ü gösterir. Aralarındaki açı çeyrek tur, yani 90°'dir."
+  },
+  {
+    "id": "mat-4-4-14",
+    "unit": "mat-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Simetri doğrusu boyunca katlanan bir şeklin iki parçası için hangisi söylenir?",
+    "choices": [
+      "Biri ötekinden büyüktür.",
+      "Üst üste tam çakışır.",
+      "Biri ötekinin iki katıdır.",
+      "Hiç çakışmaz."
+    ],
+    "answer": 1,
+    "explanation": "Simetri doğrusu şekli iki eş parçaya ayırır. Katlandığında parçalar üst üste tam çakışır."
+  },
+  {
+    "id": "mat-4-5-01",
+    "unit": "mat-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "3 kilometre kaç metredir?",
+    "choices": [
+      "3000",
+      "30",
+      "300",
+      "30 000"
+    ],
+    "answer": 0,
+    "explanation": "1 kilometre 1000 metredir. 3 × 1000 = 3000 metre eder."
+  },
+  {
+    "id": "mat-4-5-02",
+    "unit": "mat-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "1 litre kaç mililitredir?",
+    "choices": [
+      "10",
+      "100",
+      "10 000",
+      "1000"
+    ],
+    "answer": 3,
+    "explanation": "1 litre 1000 mililitredir. Mililitre, az miktardaki sıvıları ölçmek için kullanılır."
+  },
+  {
+    "id": "mat-4-5-03",
+    "unit": "mat-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir kenarı 8 birim olan karenin alanı kaç birimkaredir?",
+    "choices": [
+      "16",
+      "32",
+      "64",
+      "80"
+    ],
+    "answer": 2,
+    "explanation": "Karenin alanı bir kenarının kendisiyle çarpımıdır. 8 × 8 = 64 birimkare."
+  },
+  {
+    "id": "mat-4-5-04",
+    "unit": "mat-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kısa kenarı 6 birim, uzun kenarı 9 birim olan dikdörtgenin alanı kaç birimkaredir?",
+    "choices": [
+      "15",
+      "54",
+      "30",
+      "45"
+    ],
+    "answer": 1,
+    "explanation": "Dikdörtgenin alanı kısa kenar ile uzun kenarın çarpımıdır. 6 × 9 = 54 birimkare."
+  },
+  {
+    "id": "mat-4-5-05",
+    "unit": "mat-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kısa kenarı 12 m, uzun kenarı 18 m olan dikdörtgen bahçenin çevresi kaç metredir?",
+    "choices": [
+      "60",
+      "30",
+      "216",
+      "48"
+    ],
+    "answer": 0,
+    "explanation": "Çevre bütün kenarların toplamıdır: 12 + 18 + 12 + 18 = 60 metre."
+  },
+  {
+    "id": "mat-4-5-06",
+    "unit": "mat-4-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "1 ton 1000 kilogramdır.",
+    "answer": true,
+    "explanation": "Ton, çok ağır yükleri ölçmek için kullanılır. 1 ton 1000 kilogram eder."
+  },
+  {
+    "id": "mat-4-5-07",
+    "unit": "mat-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "2 saat 15 dakika kaç dakikadır?",
+    "choices": [
+      "115",
+      "215",
+      "125",
+      "135"
+    ],
+    "answer": 3,
+    "explanation": "1 saat 60 dakikadır. 2 × 60 = 120, 120 + 15 = 135 dakika."
+  },
+  {
+    "id": "mat-4-5-08",
+    "unit": "mat-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "4500 gram kaç kilogram kaç gramdır?",
+    "choices": [
+      "45 kg",
+      "4 kg 50 g",
+      "4 kg 500 g",
+      "45 kg 500 g"
+    ],
+    "answer": 2,
+    "explanation": "1000 gram 1 kilogramdır. 4500 gramın 4000 gramı 4 kg eder, 500 gram artar."
+  },
+  {
+    "id": "mat-4-5-09",
+    "unit": "mat-4-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Çevresi 40 birim olan karenin alanı kaç birimkaredir?",
+    "choices": [
+      "40",
+      "100",
+      "160",
+      "1600"
+    ],
+    "answer": 1,
+    "explanation": "Bir kenar 40 ÷ 4 = 10 birimdir. Alan 10 × 10 = 100 birimkaredir."
+  },
+  {
+    "id": "mat-4-5-10",
+    "unit": "mat-4-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "2 litrelik şişedeki suyun 750 mililitresi içildi. Şişede kaç mililitre su kaldı?",
+    "choices": [
+      "1250",
+      "250",
+      "1750",
+      "1350"
+    ],
+    "answer": 0,
+    "explanation": "2 litre 2000 mililitredir. 2000 − 750 = 1250 mililitre kalır."
+  },
+  {
+    "id": "mat-4-5-11",
+    "unit": "mat-4-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "3 metre 5 santimetre, 350 santimetreye eşittir.",
+    "answer": false,
+    "explanation": "3 metre 300 santimetredir. 300 + 5 = 305 santimetre eder."
+  },
+  {
+    "id": "mat-4-5-12",
+    "unit": "mat-4-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "5 milimetre, yarım santimetreye eşittir.",
+    "answer": true,
+    "explanation": "1 santimetre 10 milimetredir. Yarısı 5 milimetre eder."
+  },
+  {
+    "id": "mat-4-5-13",
+    "unit": "mat-4-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Saat 08.45'te yola çıkan otobüs 2 saat 30 dakika sonra varıyor. Varış saati kaçtır?",
+    "choices": [
+      "10.15",
+      "11.45",
+      "10.75",
+      "11.15"
+    ],
+    "answer": 3,
+    "explanation": "08.45'e 2 saat eklenince 10.45 olur. 30 dakika daha eklenince 11.15 olur."
+  },
+  {
+    "id": "mat-4-5-14",
+    "unit": "mat-4-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Alanı 36 birimkare olan karenin bir kenarı 9 birimdir.",
+    "answer": false,
+    "explanation": "6 × 6 = 36 olduğu için karenin bir kenarı 6 birimdir. 36 ÷ 4 = 9 işlemi çevre için kullanılır."
+  },
+  {
+    "id": "mat-4-5-15",
+    "unit": "mat-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yarım kilogram peynir ile 250 gram zeytin toplam kaç gramdır?",
+    "choices": [
+      "500",
+      "1250",
+      "750",
+      "300"
+    ],
+    "answer": 2,
+    "explanation": "Yarım kilogram 500 gramdır. 500 + 250 = 750 gram eder."
+  },
+  {
+    "id": "mat-4-6-01",
+    "unit": "mat-4-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Sütun grafiğinde en uzun sütun neyi gösterir?",
+    "choices": [
+      "En küçük değeri",
+      "En büyük değeri",
+      "Verilerin toplamını",
+      "Veri sayısını"
+    ],
+    "answer": 1,
+    "explanation": "Sütun grafiğinde sütunun yüksekliği verinin büyüklüğünü gösterir. En uzun sütun en büyük değerdir."
+  },
+  {
+    "id": "mat-4-6-02",
+    "unit": "mat-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sütun grafiğine göre pazartesi 40, salı 55, çarşamba 35, perşembe 60 ekmek satıldı. En az satış hangi gün yapılmıştır?",
+    "choices": [
+      "Çarşamba",
+      "Pazartesi",
+      "Salı",
+      "Perşembe"
+    ],
+    "answer": 0,
+    "explanation": "40, 55, 35 ve 60 sayılarından en küçüğü 35'tir. En az satış çarşamba günü yapılmıştır."
+  },
+  {
+    "id": "mat-4-6-03",
+    "unit": "mat-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Dört günde sırasıyla 40, 55, 35 ve 60 ekmek satıldı. Toplam kaç ekmek satılmıştır?",
+    "choices": [
+      "180",
+      "200",
+      "150",
+      "190"
+    ],
+    "answer": 3,
+    "explanation": "40 + 55 = 95, 35 + 60 = 95. 95 + 95 = 190 ekmek."
+  },
+  {
+    "id": "mat-4-6-04",
+    "unit": "mat-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sıklık tablosuna göre A şubesinde 28, B şubesinde 34 öğrenci var. B şubesinde A şubesinden kaç öğrenci fazladır?",
+    "choices": [
+      "4",
+      "8",
+      "6",
+      "62"
+    ],
+    "answer": 2,
+    "explanation": "Fark çıkarma ile bulunur. 34 − 28 = 6 öğrenci."
+  },
+  {
+    "id": "mat-4-6-05",
+    "unit": "mat-4-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Sütun grafiğinde veriler sütunların yüksekliğiyle gösterilir.",
+    "answer": true,
+    "explanation": "Her sütun bir veriyi temsil eder; sütun ne kadar uzunsa değer o kadar büyüktür."
+  },
+  {
+    "id": "mat-4-6-06",
+    "unit": "mat-4-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Şekil grafiğinde her top resmi 10 kişiyi gösteriyor. Futbol satırında 4 tam ve 1 yarım resim var. Futbolu kaç kişi seçti?",
+    "choices": [
+      "41",
+      "45",
+      "50",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "4 tam resim 4 × 10 = 40 kişi, yarım resim 5 kişi eder. 40 + 5 = 45 kişi."
+  },
+  {
+    "id": "mat-4-6-07",
+    "unit": "mat-4-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Üç ayda toplam 240 kitap okundu. Ekimde 75, kasımda 90 kitap okunduysa aralıkta kaç kitap okunmuştur?",
+    "choices": [
+      "75",
+      "65",
+      "85",
+      "165"
+    ],
+    "answer": 0,
+    "explanation": "İlk iki ay 75 + 90 = 165 kitap okunmuştur. Aralıkta 240 − 165 = 75 kitap okunmuştur."
+  },
+  {
+    "id": "mat-4-6-08",
+    "unit": "mat-4-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Sütun grafiğine göre 25 elma, 15 armut satılmıştır. Satılan elma, armuttan 10 fazladır.",
+    "answer": true,
+    "explanation": "Fark çıkarma ile bulunur. 25 − 15 = 10 eder."
+  },
+  {
+    "id": "mat-4-6-09",
+    "unit": "mat-4-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Sütun grafiğinde bütün sütunlar aynı yükseklikteyse veriler birbirinden farklıdır.",
+    "answer": false,
+    "explanation": "Sütun yüksekliği değeri gösterir. Yükseklikler aynıysa veriler birbirine eşittir."
+  },
+  {
+    "id": "mat-4-6-10",
+    "unit": "mat-4-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Sütun grafiğinde dikey eksen 0'dan başlayıp 5'er artıyor. 0'dan sonraki 6. çizgiye kadar uzanan sütun hangi değeri gösterir?",
+    "choices": [
+      "11",
+      "25",
+      "35",
+      "30"
+    ],
+    "answer": 3,
+    "explanation": "Her çizgi 5 artışı gösterir. 6. çizgi 6 × 5 = 30 değerindedir."
+  },
+  {
+    "id": "mat-4-6-11",
+    "unit": "mat-4-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir veri toplama yöntemidir?",
+    "choices": [
+      "Resim boyamak",
+      "Şarkı söylemek",
+      "Anket yapmak",
+      "Koşu yapmak"
+    ],
+    "answer": 2,
+    "explanation": "Ankette herkese aynı sorular sorulur ve cevaplar kaydedilir. Gözlem ve görüşme de veri toplama yöntemleridir."
+  },
+  {
+    "id": "mat-4-6-12",
+    "unit": "mat-4-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Dört günde 20, 30, 25 ve 25 soru çözen Ece toplam 110 soru çözmüştür.",
+    "answer": false,
+    "explanation": "20 + 30 = 50, 25 + 25 = 50. 50 + 50 = 100 soru çözmüştür."
+  },
+  {
+    "id": "mat-4-6-13",
+    "unit": "mat-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "4-A 12, 4-B 9, 4-C 15 kitap bağışladı. En çok ve en az bağış yapan şubeler arasındaki fark kaç kitaptır?",
+    "choices": [
+      "3",
+      "6",
+      "24",
+      "36"
+    ],
+    "answer": 1,
+    "explanation": "En çok 15, en az 9 kitap bağışlanmıştır. Fark 15 − 9 = 6 kitaptır."
+  }
+]

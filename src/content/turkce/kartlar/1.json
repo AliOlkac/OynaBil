@@ -1,0 +1,246 @@
+[
+  {
+    "kind": "list",
+    "id": "tr-1-1-unlu-harfler",
+    "unit": "tr-1-1",
+    "difficulty": 1,
+    "positive": "Hangisi ünlü (sesli) bir harftir?",
+    "negative": "Hangisi ünlü (sesli) harf değildir?",
+    "statement": "\"{item}\" ünlü (sesli) bir harftir.",
+    "explanation": "Ünlü harfler şunlardır: {members}. Öteki harfler ünsüz (sessiz) harftir.",
+    "members": [
+      "a",
+      "e",
+      "ı",
+      "i",
+      "o",
+      "ö",
+      "u",
+      "ü"
+    ],
+    "nonMembers": [
+      "b",
+      "k",
+      "m",
+      "t",
+      "r",
+      "s"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-1-2-hece-sayisi",
+    "unit": "tr-1-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{sozcuk}\" sözcüğü kaç hecelidir?",
+        "answer": "sayi"
+      }
+    ],
+    "statement": {
+      "text": "\"{sozcuk}\" sözcüğü {sayi} hecelidir.",
+      "swap": "sayi"
+    },
+    "explanation": "Hecelere ayrılışı: {hece}. \"{sozcuk}\" sözcüğü {sayi} hecelidir.",
+    "distractors": {
+      "sayi": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "items": [
+      {
+        "id": "sut",
+        "sozcuk": "süt",
+        "hece": "süt",
+        "sayi": "1"
+      },
+      {
+        "id": "kus",
+        "sozcuk": "kuş",
+        "hece": "kuş",
+        "sayi": "1"
+      },
+      {
+        "id": "kedi",
+        "sozcuk": "kedi",
+        "hece": "ke-di",
+        "sayi": "2"
+      },
+      {
+        "id": "okul",
+        "sozcuk": "okul",
+        "hece": "o-kul",
+        "sayi": "2"
+      },
+      {
+        "id": "cicek",
+        "sozcuk": "çiçek",
+        "hece": "çi-çek",
+        "sayi": "2"
+      },
+      {
+        "id": "araba",
+        "sozcuk": "araba",
+        "hece": "a-ra-ba",
+        "sayi": "3"
+      },
+      {
+        "id": "portakal",
+        "sozcuk": "portakal",
+        "hece": "por-ta-kal",
+        "sayi": "3"
+      },
+      {
+        "id": "kaplumbaga",
+        "sozcuk": "kaplumbağa",
+        "hece": "kap-lum-ba-ğa",
+        "sayi": "4"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-1-3-zit-anlam",
+    "unit": "tr-1-3",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{a}\" sözcüğünün zıt anlamlısı hangisidir?",
+        "answer": "b"
+      },
+      {
+        "prompt": "\"{b}\" sözcüğünün zıt anlamlısı hangisidir?",
+        "answer": "a"
+      }
+    ],
+    "statement": {
+      "text": "\"{a}\" ile \"{b}\" zıt anlamlı sözcüklerdir.",
+      "swap": "b"
+    },
+    "explanation": "\"{a}\" ile \"{b}\" zıt (karşıt) anlamlı sözcüklerdir.",
+    "items": [
+      {
+        "id": "buyuk",
+        "a": "büyük",
+        "b": "küçük"
+      },
+      {
+        "id": "uzun",
+        "a": "uzun",
+        "b": "kısa"
+      },
+      {
+        "id": "sicak",
+        "a": "sıcak",
+        "b": "soğuk"
+      },
+      {
+        "id": "acik",
+        "a": "açık",
+        "b": "kapalı"
+      },
+      {
+        "id": "gece",
+        "a": "gece",
+        "b": "gündüz"
+      },
+      {
+        "id": "asagi",
+        "a": "aşağı",
+        "b": "yukarı"
+      },
+      {
+        "id": "hizli",
+        "a": "hızlı",
+        "b": "yavaş"
+      },
+      {
+        "id": "dolu",
+        "a": "dolu",
+        "b": "boş"
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "tr-1-4-soru-cumlesi",
+    "unit": "tr-1-4",
+    "difficulty": 1,
+    "positive": "Hangisi bir soru cümlesidir?",
+    "negative": "Hangisi soru cümlesi değildir?",
+    "statement": "\"{item}\" bir soru cümlesidir.",
+    "explanation": "Soru cümlesi bir şey sorar ve sonuna soru işareti (?) konur. Bir şey sormayan cümlenin sonunda nokta vardır.",
+    "members": [
+      "Adın ne?",
+      "Okula gittin mi?",
+      "Kaç yaşındasın?",
+      "Topum nerede?"
+    ],
+    "nonMembers": [
+      "Benim adım Ece.",
+      "Okula gittim.",
+      "Yedi yaşındayım.",
+      "Topum bahçede."
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-1-5-noktalama",
+    "unit": "tr-1-5",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "Hangi noktalama işareti {gorev}?",
+        "answer": "isaret"
+      },
+      {
+        "prompt": "{isaret} için hangisi doğrudur?",
+        "answer": "gorevSik"
+      }
+    ],
+    "statement": {
+      "text": "{isaret}, {gorev}.",
+      "swap": "gorev"
+    },
+    "explanation": "{isaret} ({sembol}), {gorev}.",
+    "items": [
+      {
+        "id": "nokta",
+        "isaret": "Nokta",
+        "sembol": ".",
+        "gorev": "tamamlanan cümlenin sonuna konur",
+        "gorevSik": "Tamamlanan cümlenin sonuna konur.",
+        "not": "Örnek: \"Ali okula gitti.\""
+      },
+      {
+        "id": "soru",
+        "isaret": "Soru işareti",
+        "sembol": "?",
+        "gorev": "soru bildiren cümlenin sonuna konur",
+        "gorevSik": "Soru bildiren cümlenin sonuna konur.",
+        "not": "Örnek: \"Adın ne?\""
+      },
+      {
+        "id": "unlem",
+        "isaret": "Ünlem işareti",
+        "sembol": "!",
+        "gorev": "sevinç, korku ve şaşkınlık bildiren cümlenin sonuna konur",
+        "gorevSik": "Sevinç, korku ve şaşkınlık bildiren cümlenin sonuna konur.",
+        "not": "Örnek: \"Yaşasın, kazandık!\""
+      },
+      {
+        "id": "virgul",
+        "isaret": "Virgül",
+        "sembol": ",",
+        "gorev": "art arda sıralanan sözcüklerin arasına konur",
+        "gorevSik": "Art arda sıralanan sözcüklerin arasına konur.",
+        "not": "Örnek: \"Elma, armut ve muz aldım.\""
+      }
+    ]
+  }
+]

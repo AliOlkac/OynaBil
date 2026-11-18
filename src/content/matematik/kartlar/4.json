@@ -1,0 +1,440 @@
+[
+  {
+    "kind": "pairs",
+    "id": "mat-4-1-okunus",
+    "unit": "mat-4-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{sayi} sayısı nasıl okunur?",
+        "answer": "okunusSik"
+      },
+      {
+        "prompt": "\"{okunusSik}\" diye okunan sayı hangisidir?",
+        "answer": "sayi"
+      }
+    ],
+    "statement": {
+      "text": "{sayi} sayısı \"{okunus}\" diye okunur.",
+      "swap": "okunus"
+    },
+    "explanation": "{sayi} sayısı \"{okunus}\" diye okunur. Önce binler bölüğü okunup \"bin\" denir, sonra birler bölüğü okunur.",
+    "items": [
+      {
+        "id": "n25300",
+        "sayi": "25 300",
+        "okunus": "yirmi beş bin üç yüz",
+        "okunusSik": "Yirmi beş bin üç yüz"
+      },
+      {
+        "id": "n205030",
+        "sayi": "205 030",
+        "okunus": "iki yüz beş bin otuz",
+        "okunusSik": "İki yüz beş bin otuz"
+      },
+      {
+        "id": "n205300",
+        "sayi": "205 300",
+        "okunus": "iki yüz beş bin üç yüz",
+        "okunusSik": "İki yüz beş bin üç yüz"
+      },
+      {
+        "id": "n250030",
+        "sayi": "250 030",
+        "okunus": "iki yüz elli bin otuz",
+        "okunusSik": "İki yüz elli bin otuz"
+      },
+      {
+        "id": "n502300",
+        "sayi": "502 300",
+        "okunus": "beş yüz iki bin üç yüz",
+        "okunusSik": "Beş yüz iki bin üç yüz"
+      },
+      {
+        "id": "n520003",
+        "sayi": "520 003",
+        "okunus": "beş yüz yirmi bin üç",
+        "okunusSik": "Beş yüz yirmi bin üç"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-4-1-basamaklar",
+    "unit": "mat-4-1",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "472 915 sayısında {rakam} rakamı hangi basamaktadır?",
+        "answer": "basamak"
+      },
+      {
+        "prompt": "472 915 sayısının {basamakKucuk} basamağındaki rakam hangisidir?",
+        "answer": "rakam"
+      }
+    ],
+    "statement": {
+      "text": "472 915 sayısında {rakam} rakamı {basamakKucuk} basamağındadır.",
+      "swap": "basamakKucuk"
+    },
+    "explanation": "472 915 sayısında {rakam} rakamı {basamakKucuk} basamağındadır. Basamaklar sağdan sola birler, onlar, yüzler, binler, on binler ve yüz binlerdir.",
+    "items": [
+      {
+        "id": "r4",
+        "rakam": "4",
+        "basamak": "Yüz binler basamağı",
+        "basamakKucuk": "yüz binler"
+      },
+      {
+        "id": "r7",
+        "rakam": "7",
+        "basamak": "On binler basamağı",
+        "basamakKucuk": "on binler"
+      },
+      {
+        "id": "r2",
+        "rakam": "2",
+        "basamak": "Binler basamağı",
+        "basamakKucuk": "binler"
+      },
+      {
+        "id": "r9",
+        "rakam": "9",
+        "basamak": "Yüzler basamağı",
+        "basamakKucuk": "yüzler"
+      },
+      {
+        "id": "r1",
+        "rakam": "1",
+        "basamak": "Onlar basamağı",
+        "basamakKucuk": "onlar"
+      },
+      {
+        "id": "r5",
+        "rakam": "5",
+        "basamak": "Birler basamağı",
+        "basamakKucuk": "birler"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-4-2-kisa-carpma",
+    "unit": "mat-4-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{a} × {b} kaç eder?",
+        "answer": "sonuc"
+      }
+    ],
+    "statement": {
+      "text": "{a} × {b} = {sonuc} eder.",
+      "swap": "sonuc"
+    },
+    "explanation": "{a} × {b} = {sonuc} eder. 10, 100 ve 1000 ile çarparken sayının sağına çarpandaki sıfır sayısı kadar sıfır yazılır.",
+    "items": [
+      {
+        "id": "k24x10",
+        "a": "24",
+        "b": "10",
+        "sonuc": "240"
+      },
+      {
+        "id": "k24x100",
+        "a": "24",
+        "b": "100",
+        "sonuc": "2400"
+      },
+      {
+        "id": "k37x10",
+        "a": "37",
+        "b": "10",
+        "sonuc": "370"
+      },
+      {
+        "id": "k6x1000",
+        "a": "6",
+        "b": "1000",
+        "sonuc": "6000"
+      },
+      {
+        "id": "k45x100",
+        "a": "45",
+        "b": "100",
+        "sonuc": "4500"
+      },
+      {
+        "id": "k8x100",
+        "a": "8",
+        "b": "100",
+        "sonuc": "800"
+      },
+      {
+        "id": "k53x10",
+        "a": "53",
+        "b": "10",
+        "sonuc": "530"
+      },
+      {
+        "id": "k9x1000",
+        "a": "9",
+        "b": "1000",
+        "sonuc": "9000"
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "mat-4-3-basit-kesirler",
+    "unit": "mat-4-3",
+    "difficulty": 1,
+    "positive": "Hangisi basit kesirdir?",
+    "negative": "Hangisi basit kesir değildir?",
+    "statement": "{item} basit kesirdir.",
+    "explanation": "Payı paydasından küçük olan kesirler basit kesirdir. Payı paydasına eşit ya da paydasından büyük olan kesirler bileşik kesirdir. {item} kesrinde pay ile payda karşılaştırılır.",
+    "members": [
+      "1/2",
+      "3/4",
+      "2/5",
+      "5/8",
+      "7/9"
+    ],
+    "nonMembers": [
+      "5/4",
+      "7/3",
+      "9/2",
+      "8/8",
+      "6/5"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-4-4-acilar",
+    "unit": "mat-4-4",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{aci} için hangisi doğrudur?",
+        "answer": "olcu"
+      },
+      {
+        "prompt": "{olcuBas} açıya ne denir?",
+        "answer": "aci"
+      }
+    ],
+    "statement": {
+      "text": "{aci}, {olcuKucuk} açıdır.",
+      "swap": "olcuKucuk"
+    },
+    "explanation": "{aci}, {olcuKucuk} açıdır.",
+    "items": [
+      {
+        "id": "dar",
+        "aci": "Dar açı",
+        "olcu": "Ölçüsü 90°'den küçüktür.",
+        "olcuKucuk": "ölçüsü 90°'den küçük olan",
+        "olcuBas": "Ölçüsü 90°'den küçük olan"
+      },
+      {
+        "id": "dik",
+        "aci": "Dik açı",
+        "olcu": "Ölçüsü 90°'dir.",
+        "olcuKucuk": "ölçüsü 90° olan",
+        "olcuBas": "Ölçüsü 90° olan"
+      },
+      {
+        "id": "genis",
+        "aci": "Geniş açı",
+        "olcu": "Ölçüsü 90° ile 180° arasındadır.",
+        "olcuKucuk": "ölçüsü 90° ile 180° arasında olan",
+        "olcuBas": "Ölçüsü 90° ile 180° arasında olan"
+      },
+      {
+        "id": "dogru",
+        "aci": "Doğru açı",
+        "olcu": "Ölçüsü 180°'dir.",
+        "olcuKucuk": "ölçüsü 180° olan",
+        "olcuBas": "Ölçüsü 180° olan"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-4-4-ucgenler-kenar",
+    "unit": "mat-4-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ozellikBas} üçgene ne ad verilir?",
+        "answer": "ucgen"
+      }
+    ],
+    "statement": {
+      "text": "{ucgen}, {ozellik} üçgendir.",
+      "swap": "ozellik"
+    },
+    "explanation": "{ucgen}, {ozellik} üçgendir. Kenarlarına göre üçgenler üç türe ayrılır.",
+    "items": [
+      {
+        "id": "eskenar",
+        "ucgen": "Eşkenar üçgen",
+        "ozellik": "üç kenarı da eşit uzunlukta olan",
+        "ozellikBas": "Üç kenarı da eşit uzunlukta olan"
+      },
+      {
+        "id": "ikizkenar",
+        "ucgen": "İkizkenar üçgen",
+        "ozellik": "yalnızca iki kenarı eşit uzunlukta olan",
+        "ozellikBas": "Yalnızca iki kenarı eşit uzunlukta olan"
+      },
+      {
+        "id": "cesitkenar",
+        "ucgen": "Çeşitkenar üçgen",
+        "ozellik": "bütün kenar uzunlukları farklı olan",
+        "ozellikBas": "Bütün kenar uzunlukları farklı olan"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-4-4-ucgenler-aci",
+    "unit": "mat-4-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ozellikBas} üçgene ne ad verilir?",
+        "answer": "ucgen"
+      }
+    ],
+    "statement": {
+      "text": "{ucgen}, {ozellik} üçgendir.",
+      "swap": "ozellik"
+    },
+    "explanation": "{ucgen}, {ozellik} üçgendir. Açılarına göre üçgenler üç türe ayrılır.",
+    "items": [
+      {
+        "id": "dik",
+        "ucgen": "Dik açılı üçgen",
+        "ozellik": "bir açısı 90° olan",
+        "ozellikBas": "Bir açısı 90° olan"
+      },
+      {
+        "id": "genis",
+        "ucgen": "Geniş açılı üçgen",
+        "ozellik": "bir açısı 90°'den büyük olan",
+        "ozellikBas": "Bir açısı 90°'den büyük olan"
+      },
+      {
+        "id": "dar",
+        "ucgen": "Dar açılı üçgen",
+        "ozellik": "üç açısı da 90°'den küçük olan",
+        "ozellikBas": "Üç açısı da 90°'den küçük olan"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-4-5-birimler",
+    "unit": "mat-4-5",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{birim} neye eşittir?",
+        "answer": "karsilik"
+      }
+    ],
+    "statement": {
+      "text": "{birim}, {karsilikTam}.",
+      "swap": "karsilikTam"
+    },
+    "explanation": "{birim}, {karsilikTam}.",
+    "items": [
+      {
+        "id": "km",
+        "birim": "1 kilometre",
+        "karsilik": "1000 metre",
+        "karsilikTam": "1000 metredir"
+      },
+      {
+        "id": "m",
+        "birim": "1 metre",
+        "karsilik": "100 santimetre",
+        "karsilikTam": "100 santimetredir"
+      },
+      {
+        "id": "cm",
+        "birim": "1 santimetre",
+        "karsilik": "10 milimetre",
+        "karsilikTam": "10 milimetredir"
+      },
+      {
+        "id": "ton",
+        "birim": "1 ton",
+        "karsilik": "1000 kilogram",
+        "karsilikTam": "1000 kilogramdır"
+      },
+      {
+        "id": "kg",
+        "birim": "1 kilogram",
+        "karsilik": "1000 gram",
+        "karsilikTam": "1000 gramdır"
+      },
+      {
+        "id": "l",
+        "birim": "1 litre",
+        "karsilik": "1000 mililitre",
+        "karsilikTam": "1000 mililitredir"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-4-5-zaman",
+    "unit": "mat-4-5",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{birim} neye eşittir?",
+        "answer": "karsilik"
+      }
+    ],
+    "statement": {
+      "text": "{birim}, {karsilikTam}.",
+      "swap": "karsilikTam"
+    },
+    "explanation": "{birim}, {karsilikTam}.",
+    "items": [
+      {
+        "id": "yil",
+        "birim": "1 yıl",
+        "karsilik": "12 ay",
+        "karsilikTam": "12 aydır"
+      },
+      {
+        "id": "hafta",
+        "birim": "1 hafta",
+        "karsilik": "7 gün",
+        "karsilikTam": "7 gündür"
+      },
+      {
+        "id": "gun",
+        "birim": "1 gün",
+        "karsilik": "24 saat",
+        "karsilikTam": "24 saattir"
+      },
+      {
+        "id": "saat",
+        "birim": "1 saat",
+        "karsilik": "60 dakika",
+        "karsilikTam": "60 dakikadır"
+      },
+      {
+        "id": "dk",
+        "birim": "1 dakika",
+        "karsilik": "60 saniye",
+        "karsilikTam": "60 saniyedir"
+      }
+    ]
+  }
+]

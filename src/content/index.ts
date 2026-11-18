@@ -1,5 +1,6 @@
 import { questionsFromCards, type CardSet } from "@/core/cards";
 import type { Grade, Question, Subject } from "@/core/model";
+import { turkce } from "./turkce/subject";
 import { matematik } from "./matematik/subject";
 import { hayatBilgisi } from "./hayat-bilgisi/subject";
 import { fenBilimleri } from "./fen-bilimleri/subject";
@@ -18,7 +19,7 @@ import { dinKulturu } from "./din-kulturu/subject";
  * Yeni bir ders eklemek için `subject.ts` ile üniteleri tanımlayın, dosyaları koyun ve
  * aşağıdaki iki listeye ekleyin.
  */
-export const SUBJECTS: Subject[] = [matematik, hayatBilgisi, fenBilimleri, ingilizce, dinKulturu];
+export const SUBJECTS: Subject[] = [turkce, matematik, hayatBilgisi, fenBilimleri, ingilizce, dinKulturu];
 
 type Module = { default: unknown };
 type GradeFiles = {
@@ -28,7 +29,17 @@ type GradeFiles = {
 };
 
 export const CONTENT_FILES: Record<string, Partial<Record<Grade, GradeFiles>>> = {
+  turkce: {
+    1: { questions: () => import("./turkce/sorular/1.json"), cards: () => import("./turkce/kartlar/1.json") },
+    2: { questions: () => import("./turkce/sorular/2.json"), cards: () => import("./turkce/kartlar/2.json") },
+    3: { questions: () => import("./turkce/sorular/3.json"), cards: () => import("./turkce/kartlar/3.json") },
+    4: { questions: () => import("./turkce/sorular/4.json"), cards: () => import("./turkce/kartlar/4.json") },
+  },
   matematik: {
+    1: { questions: () => import("./matematik/sorular/1.json"), cards: () => import("./matematik/kartlar/1.json") },
+    2: { questions: () => import("./matematik/sorular/2.json"), cards: () => import("./matematik/kartlar/2.json") },
+    3: { questions: () => import("./matematik/sorular/3.json"), cards: () => import("./matematik/kartlar/3.json") },
+    4: { questions: () => import("./matematik/sorular/4.json"), cards: () => import("./matematik/kartlar/4.json") },
     5: { questions: () => import("./matematik/sorular/5.json"), cards: () => import("./matematik/kartlar/5.json") },
     6: { questions: () => import("./matematik/sorular/6.json"), cards: () => import("./matematik/kartlar/6.json") },
     7: { questions: () => import("./matematik/sorular/7.json"), cards: () => import("./matematik/kartlar/7.json") },

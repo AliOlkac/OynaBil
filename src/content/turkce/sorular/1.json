@@ -1,0 +1,698 @@
+[
+  {
+    "id": "tr-1-1-01",
+    "unit": "tr-1-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Alfabemizde kaç harf vardır?",
+    "choices": [
+      "28",
+      "29",
+      "30"
+    ],
+    "answer": 1,
+    "explanation": "Alfabemizde 29 harf vardır. Bunların 8'i ünlü, 21'i ünsüz harftir."
+  },
+  {
+    "id": "tr-1-1-02",
+    "unit": "tr-1-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"elma\" sözcüğü hangi harfle başlar?",
+    "choices": [
+      "a",
+      "e",
+      "m"
+    ],
+    "answer": 1,
+    "explanation": "\"elma\" sözcüğünün ilk harfi \"e\" harfidir."
+  },
+  {
+    "id": "tr-1-1-03",
+    "unit": "tr-1-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"kitap\" sözcüğünün son harfi hangisidir?",
+    "choices": [
+      "p",
+      "k",
+      "t"
+    ],
+    "answer": 0,
+    "explanation": "\"kitap\" sözcüğü \"k\" ile başlar, \"p\" ile biter."
+  },
+  {
+    "id": "tr-1-1-04",
+    "unit": "tr-1-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"a\" ünlü (sesli) bir harftir.",
+    "answer": true,
+    "explanation": "Ünlü harfler: a, e, ı, i, o, ö, u, ü. \"a\" bunlardan biridir."
+  },
+  {
+    "id": "tr-1-1-05",
+    "unit": "tr-1-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"okul\" sözcüğünde kaç harf vardır?",
+    "choices": [
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "\"okul\" sözcüğünün harfleri: o, k, u, l. Dört harf vardır."
+  },
+  {
+    "id": "tr-1-1-06",
+    "unit": "tr-1-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi sözcük \"b\" sesiyle başlar?",
+    "choices": [
+      "balık",
+      "pasta",
+      "davul"
+    ],
+    "answer": 0,
+    "explanation": "\"balık\" sözcüğü \"b\" sesiyle başlar. \"pasta\" p ile, \"davul\" d ile başlar."
+  },
+  {
+    "id": "tr-1-1-07",
+    "unit": "tr-1-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"k\" ünlü (sesli) bir harftir.",
+    "answer": false,
+    "explanation": "\"k\" ünsüz (sessiz) bir harftir. Ünlü harfler: a, e, ı, i, o, ö, u, ü."
+  },
+  {
+    "id": "tr-1-1-08",
+    "unit": "tr-1-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Alfabemizin ilk harfi hangisidir?",
+    "choices": [
+      "b",
+      "e",
+      "a"
+    ],
+    "answer": 2,
+    "explanation": "Alfabemiz \"a\" harfiyle başlar, \"z\" harfiyle biter."
+  },
+  {
+    "id": "tr-1-1-09",
+    "unit": "tr-1-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"araba\" sözcüğünde kaç tane \"a\" harfi vardır?",
+    "choices": [
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": 2,
+    "explanation": "\"araba\" sözcüğünün harfleri: a, r, a, b, a. Üç tane \"a\" vardır."
+  },
+  {
+    "id": "tr-1-2-01",
+    "unit": "tr-1-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"masa\" sözcüğü kaç hecelidir?",
+    "choices": [
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": 1,
+    "explanation": "\"masa\" sözcüğü \"ma-sa\" diye hecelenir. İki hecelidir."
+  },
+  {
+    "id": "tr-1-2-02",
+    "unit": "tr-1-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"top\" sözcüğü kaç hecelidir?",
+    "choices": [
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": 0,
+    "explanation": "\"top\" sözcüğü bir kerede söylenir. Tek hecelidir."
+  },
+  {
+    "id": "tr-1-2-03",
+    "unit": "tr-1-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"anne\" sözcüğü iki hecelidir.",
+    "answer": true,
+    "explanation": "\"anne\" sözcüğü \"an-ne\" diye hecelenir. İki hecelidir."
+  },
+  {
+    "id": "tr-1-2-04",
+    "unit": "tr-1-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"kelebek\" sözcüğü kaç hecelidir?",
+    "choices": [
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1,
+    "explanation": "\"kelebek\" sözcüğü \"ke-le-bek\" diye hecelenir. Üç hecelidir."
+  },
+  {
+    "id": "tr-1-2-05",
+    "unit": "tr-1-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"kalem\" sözcüğü hecelerine nasıl ayrılır?",
+    "choices": [
+      "kal-em",
+      "k-alem",
+      "ka-lem"
+    ],
+    "answer": 2,
+    "explanation": "\"kalem\" sözcüğü \"ka-lem\" diye hecelenir."
+  },
+  {
+    "id": "tr-1-2-06",
+    "unit": "tr-1-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"el\" ve \"ma\" heceleri birleşince hangi sözcük olur?",
+    "choices": [
+      "elma",
+      "alma",
+      "elme"
+    ],
+    "answer": 0,
+    "explanation": "\"el\" ve \"ma\" heceleri yan yana gelince \"elma\" sözcüğü olur."
+  },
+  {
+    "id": "tr-1-2-07",
+    "unit": "tr-1-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"araba\" sözcüğü iki hecelidir.",
+    "answer": false,
+    "explanation": "\"araba\" sözcüğü \"a-ra-ba\" diye hecelenir. Üç hecelidir."
+  },
+  {
+    "id": "tr-1-2-08",
+    "unit": "tr-1-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi sözcük tek hecelidir?",
+    "choices": [
+      "süt",
+      "kedi",
+      "elma"
+    ],
+    "answer": 0,
+    "explanation": "\"süt\" tek hecelidir. \"ke-di\" ve \"el-ma\" iki hecelidir."
+  },
+  {
+    "id": "tr-1-2-09",
+    "unit": "tr-1-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"öğretmen\" sözcüğü kaç hecelidir?",
+    "choices": [
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1,
+    "explanation": "\"öğretmen\" sözcüğü \"öğ-ret-men\" diye hecelenir. Üç hecelidir."
+  },
+  {
+    "id": "tr-1-3-01",
+    "unit": "tr-1-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"büyük\" sözcüğünün zıt anlamlısı hangisidir?",
+    "choices": [
+      "uzun",
+      "küçük",
+      "geniş"
+    ],
+    "answer": 1,
+    "explanation": "\"büyük\" ile \"küçük\" zıt anlamlı sözcüklerdir."
+  },
+  {
+    "id": "tr-1-3-02",
+    "unit": "tr-1-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"sıcak\" sözcüğünün zıt anlamlısı hangisidir?",
+    "choices": [
+      "soğuk",
+      "tatlı",
+      "sarı"
+    ],
+    "answer": 0,
+    "explanation": "\"sıcak\" ile \"soğuk\" zıt anlamlı sözcüklerdir."
+  },
+  {
+    "id": "tr-1-3-03",
+    "unit": "tr-1-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"gece\" sözcüğünün zıt anlamlısı hangisidir?",
+    "choices": [
+      "akşam",
+      "karanlık",
+      "gündüz"
+    ],
+    "answer": 2,
+    "explanation": "\"gece\" ile \"gündüz\" zıt anlamlı sözcüklerdir."
+  },
+  {
+    "id": "tr-1-3-04",
+    "unit": "tr-1-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"uzun\" sözcüğünün zıt anlamlısı \"kısa\"dır.",
+    "answer": true,
+    "explanation": "\"uzun\" ile \"kısa\" zıt anlamlı sözcüklerdir."
+  },
+  {
+    "id": "tr-1-3-05",
+    "unit": "tr-1-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"kırmızı\" ile aynı anlama gelen sözcük hangisidir?",
+    "choices": [
+      "ak",
+      "al",
+      "kara"
+    ],
+    "answer": 1,
+    "explanation": "\"al\" kırmızı demektir. \"ak\" beyaz, \"kara\" siyah anlamına gelir."
+  },
+  {
+    "id": "tr-1-3-06",
+    "unit": "tr-1-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Bardak dolu.\" cümlesinde \"dolu\" yerine zıt anlamlısı gelirse cümle nasıl olur?",
+    "choices": [
+      "Bardak boş.",
+      "Bardak büyük.",
+      "Bardak kırık."
+    ],
+    "answer": 0,
+    "explanation": "\"dolu\" sözcüğünün zıt anlamlısı \"boş\" sözcüğüdür."
+  },
+  {
+    "id": "tr-1-3-07",
+    "unit": "tr-1-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"hızlı\" sözcüğünün zıt anlamlısı \"çabuk\"tur.",
+    "answer": false,
+    "explanation": "\"hızlı\" sözcüğünün zıt anlamlısı \"yavaş\"tır. \"çabuk\" ise hızlı ile yakın anlamlıdır."
+  },
+  {
+    "id": "tr-1-3-08",
+    "unit": "tr-1-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"ak\" sözcüğü hangi renk demektir?",
+    "choices": [
+      "siyah",
+      "beyaz",
+      "sarı"
+    ],
+    "answer": 1,
+    "explanation": "\"ak\" ile \"beyaz\" aynı anlama gelir; eş anlamlı sözcüklerdir."
+  },
+  {
+    "id": "tr-1-3-09",
+    "unit": "tr-1-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi sözcük çifti zıt anlamlıdır?",
+    "choices": [
+      "aşağı - yukarı",
+      "kırmızı - al",
+      "siyah - kara"
+    ],
+    "answer": 0,
+    "explanation": "\"aşağı\" ile \"yukarı\" zıt anlamlıdır. Öteki çiftler aynı anlama gelir."
+  },
+  {
+    "id": "tr-1-4-01",
+    "unit": "tr-1-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Cümle nasıl başlar?",
+    "choices": [
+      "Büyük harfle",
+      "Küçük harfle",
+      "Noktayla"
+    ],
+    "answer": 0,
+    "explanation": "Cümlenin ilk harfi büyük yazılır."
+  },
+  {
+    "id": "tr-1-4-02",
+    "unit": "tr-1-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir cümledir?",
+    "choices": [
+      "Kırmızı top",
+      "Ali ve top",
+      "Ali top oynadı."
+    ],
+    "answer": 2,
+    "explanation": "\"Ali top oynadı.\" bir işi tam olarak anlatır. Bu yüzden cümledir."
+  },
+  {
+    "id": "tr-1-4-03",
+    "unit": "tr-1-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Kedi süt içti.\" bir cümledir.",
+    "answer": true,
+    "explanation": "\"Kedi süt içti.\" bir işi tam olarak anlatır ve nokta ile biter. Bir cümledir."
+  },
+  {
+    "id": "tr-1-4-04",
+    "unit": "tr-1-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir soru cümlesidir?",
+    "choices": [
+      "Benim adım Can.",
+      "Can okula gitti.",
+      "Adın ne?"
+    ],
+    "answer": 2,
+    "explanation": "\"Adın ne?\" cümlesi bir şey sorar ve soru işaretiyle biter."
+  },
+  {
+    "id": "tr-1-4-05",
+    "unit": "tr-1-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"geldi / okula / Elif\" sözcükleri doğru sıralanınca hangi cümle olur?",
+    "choices": [
+      "Elif okula geldi.",
+      "Geldi okula Elif.",
+      "Okula geldi Elif."
+    ],
+    "answer": 0,
+    "explanation": "Kurallı cümlede iş bildiren sözcük sonda yer alır: \"Elif okula geldi.\""
+  },
+  {
+    "id": "tr-1-4-06",
+    "unit": "tr-1-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Annem bana ... aldı.\" cümlesinde boş yere hangisi gelir?",
+    "choices": [
+      "kitap",
+      "koştu",
+      "hızlı"
+    ],
+    "answer": 0,
+    "explanation": "\"Annem bana kitap aldı.\" anlamlı bir cümledir."
+  },
+  {
+    "id": "tr-1-4-07",
+    "unit": "tr-1-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Kuş uçtu.\" cümlesinde kaç sözcük vardır?",
+    "choices": [
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": 1,
+    "explanation": "Cümledeki sözcükler: \"Kuş\" ve \"uçtu\". İki sözcük vardır."
+  },
+  {
+    "id": "tr-1-4-08",
+    "unit": "tr-1-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Cümleler küçük harfle başlar.",
+    "answer": false,
+    "explanation": "Cümleler büyük harfle başlar."
+  },
+  {
+    "id": "tr-1-4-09",
+    "unit": "tr-1-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Ben bugün parka gittim.\" cümlesinde kaç sözcük vardır?",
+    "choices": [
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "Sözcükler: Ben, bugün, parka, gittim. Dört sözcük vardır."
+  },
+  {
+    "id": "tr-1-5-01",
+    "unit": "tr-1-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Ali eve geldi\" cümlesinin sonuna hangi işaret konur?",
+    "choices": [
+      "Soru işareti (?)",
+      "Nokta (.)",
+      "Virgül (,)"
+    ],
+    "answer": 1,
+    "explanation": "Tamamlanan cümlenin sonuna nokta konur: \"Ali eve geldi.\""
+  },
+  {
+    "id": "tr-1-5-02",
+    "unit": "tr-1-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Adın ne\" cümlesinin sonuna hangi işaret konur?",
+    "choices": [
+      "Soru işareti (?)",
+      "Nokta (.)",
+      "Virgül (,)"
+    ],
+    "answer": 0,
+    "explanation": "Soru cümlesinin sonuna soru işareti konur: \"Adın ne?\""
+  },
+  {
+    "id": "tr-1-5-03",
+    "unit": "tr-1-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi şehir adı doğru yazılmıştır?",
+    "choices": [
+      "izmir",
+      "bursa",
+      "Ankara"
+    ],
+    "answer": 2,
+    "explanation": "Şehir adları büyük harfle başlar: Ankara."
+  },
+  {
+    "id": "tr-1-5-04",
+    "unit": "tr-1-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Kişi adları büyük harfle başlar.",
+    "answer": true,
+    "explanation": "Ali, Ayşe, Can gibi kişi adlarının ilk harfi büyük yazılır."
+  },
+  {
+    "id": "tr-1-5-05",
+    "unit": "tr-1-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede ad doğru yazılmıştır?",
+    "choices": [
+      "Dün can geldi.",
+      "Bugün Ece geldi.",
+      "Yarın ela gelecek."
+    ],
+    "answer": 1,
+    "explanation": "Kişi adları büyük harfle başlar. Doğrusu: Ece, Can, Ela."
+  },
+  {
+    "id": "tr-1-5-06",
+    "unit": "tr-1-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Yaşasın, tatile gidiyoruz\" cümlesinin sonuna hangi işaret konur?",
+    "choices": [
+      "Ünlem işareti (!)",
+      "Soru işareti (?)",
+      "Virgül (,)"
+    ],
+    "answer": 0,
+    "explanation": "Sevinç bildiren cümlenin sonuna ünlem işareti konur."
+  },
+  {
+    "id": "tr-1-5-07",
+    "unit": "tr-1-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Soru cümlesinin sonuna nokta konur.",
+    "answer": false,
+    "explanation": "Soru cümlesinin sonuna soru işareti (?) konur."
+  },
+  {
+    "id": "tr-1-5-08",
+    "unit": "tr-1-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümle doğru yazılmıştır?",
+    "choices": [
+      "köpeğim Karabaş çok hızlı.",
+      "Kedim Pamuk çok tatlı.",
+      "Kuşum maviş çok güzel."
+    ],
+    "answer": 1,
+    "explanation": "Cümle büyük harfle başlar, hayvana verilen ad da büyük harfle yazılır."
+  },
+  {
+    "id": "tr-1-5-09",
+    "unit": "tr-1-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Elma armut ve muz aldım.\" cümlesinde virgül hangi sözcükten sonra konur?",
+    "choices": [
+      "elma",
+      "armut",
+      "muz"
+    ],
+    "answer": 0,
+    "explanation": "Sıralanan sözcüklerin arasına virgül konur: \"Elma, armut ve muz aldım.\" \"ve\" sözcüğünden önce virgül konmaz."
+  },
+  {
+    "id": "tr-1-6-01",
+    "unit": "tr-1-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Ela'nın kedisi var. Kedinin adı Boncuk.\" Kedinin adı nedir?",
+    "choices": [
+      "Boncuk",
+      "Ela",
+      "Pamuk"
+    ],
+    "answer": 0,
+    "explanation": "Metinde \"Kedinin adı Boncuk.\" deniyor. Ela, kedinin sahibidir."
+  },
+  {
+    "id": "tr-1-6-02",
+    "unit": "tr-1-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Can parka gitti. Orada top oynadı.\" Can nereye gitti?",
+    "choices": [
+      "Okula",
+      "Eve",
+      "Parka"
+    ],
+    "answer": 2,
+    "explanation": "Metinde \"Can parka gitti.\" deniyor."
+  },
+  {
+    "id": "tr-1-6-03",
+    "unit": "tr-1-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Ayşe sabah süt içti.\" Bu cümleye göre Ayşe sabah çay içmiştir.",
+    "answer": false,
+    "explanation": "Cümlede Ayşe'nin süt içtiği söyleniyor."
+  },
+  {
+    "id": "tr-1-6-04",
+    "unit": "tr-1-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Hava yağmurlu. Efe şemsiyesini aldı.\" Efe neden şemsiyesini aldı?",
+    "choices": [
+      "Hava sıcak olduğu için",
+      "Okul kapalı olduğu için",
+      "Hava yağmurlu olduğu için"
+    ],
+    "answer": 2,
+    "explanation": "Yağmurda ıslanmamak için şemsiye alınır. Metinde havanın yağmurlu olduğu söyleniyor."
+  },
+  {
+    "id": "tr-1-6-05",
+    "unit": "tr-1-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Deniz üç elma aldı. Birini kardeşine verdi.\" Deniz elmayı kime verdi?",
+    "choices": [
+      "Kardeşine",
+      "Annesine",
+      "Arkadaşına"
+    ],
+    "answer": 0,
+    "explanation": "Metinde \"Birini kardeşine verdi.\" deniyor."
+  },
+  {
+    "id": "tr-1-6-06",
+    "unit": "tr-1-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Kuşlar ağaca yuva yaptı. Yuvada iki yumurta var.\" Yuvada ne var?",
+    "choices": [
+      "İki yumurta",
+      "Üç kuş",
+      "Bir elma"
+    ],
+    "answer": 0,
+    "explanation": "Metinde \"Yuvada iki yumurta var.\" deniyor."
+  },
+  {
+    "id": "tr-1-6-07",
+    "unit": "tr-1-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Ali'nin topu kırmızı. Top bahçede duruyor.\" Bu metne göre Ali'nin topu kırmızıdır.",
+    "answer": true,
+    "explanation": "Metnin ilk cümlesi topun kırmızı olduğunu söylüyor."
+  },
+  {
+    "id": "tr-1-6-08",
+    "unit": "tr-1-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Mert dişlerini fırçaladı. Sonra yatağına yattı.\" Mert önce ne yaptı?",
+    "choices": [
+      "Yatağına yattı",
+      "Dişlerini fırçaladı",
+      "Kitap okudu"
+    ],
+    "answer": 1,
+    "explanation": "\"Sonra\" sözcüğü sırayı gösterir. Mert önce dişlerini fırçaladı, sonra yattı."
+  },
+  {
+    "id": "tr-1-6-09",
+    "unit": "tr-1-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Kar yağdı. Çocuklar dışarı çıkıp kardan adam yaptı.\" Bu metne hangi başlık uygundur?",
+    "choices": [
+      "Kar Sevinci",
+      "Yaz Tatili",
+      "Deniz Kenarı"
+    ],
+    "answer": 0,
+    "explanation": "Metin kar yağmasını ve çocukların karda oynamasını anlatıyor."
+  }
+]

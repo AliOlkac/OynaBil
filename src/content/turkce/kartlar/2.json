@@ -1,0 +1,316 @@
+[
+  {
+    "kind": "list",
+    "id": "tr-2-1-alfabede-olmayan",
+    "unit": "tr-2-1",
+    "difficulty": 2,
+    "positive": "Hangi harf Türk alfabesinde yoktur?",
+    "negative": "Hangi harf Türk alfabesinde vardır?",
+    "statement": "\"{item}\" harfi Türk alfabesinde yoktur.",
+    "explanation": "Alfabemizde 29 harf vardır. {members} harfleri alfabemizde yoktur; ğ, ç, ş, ö, ü, ı ve j harfleri ise alfabemizdedir.",
+    "members": [
+      "q",
+      "w",
+      "x"
+    ],
+    "nonMembers": [
+      "ğ",
+      "ç",
+      "ş",
+      "ö",
+      "ü",
+      "ı",
+      "j"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-2-1-hece-sayisi",
+    "unit": "tr-2-1",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{sozcuk}\" sözcüğü kaç hecelidir?",
+        "answer": "sayi"
+      }
+    ],
+    "statement": {
+      "text": "\"{sozcuk}\" sözcüğü {sayi} hecelidir.",
+      "swap": "sayi"
+    },
+    "explanation": "Hecelere ayrılışı: {hece}. \"{sozcuk}\" sözcüğü {sayi} hecelidir.",
+    "distractors": {
+      "sayi": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "items": [
+      {
+        "id": "tren",
+        "sozcuk": "tren",
+        "hece": "tren",
+        "sayi": "1"
+      },
+      {
+        "id": "canta",
+        "sozcuk": "çanta",
+        "hece": "çan-ta",
+        "sayi": "2"
+      },
+      {
+        "id": "saat",
+        "sozcuk": "saat",
+        "hece": "sa-at",
+        "sayi": "2"
+      },
+      {
+        "id": "pencere",
+        "sozcuk": "pencere",
+        "hece": "pen-ce-re",
+        "sayi": "3"
+      },
+      {
+        "id": "oyuncak",
+        "sozcuk": "oyuncak",
+        "hece": "o-yun-cak",
+        "sayi": "3"
+      },
+      {
+        "id": "bilgisayar",
+        "sozcuk": "bilgisayar",
+        "hece": "bil-gi-sa-yar",
+        "sayi": "4"
+      },
+      {
+        "id": "kutuphane",
+        "sozcuk": "kütüphane",
+        "hece": "kü-tüp-ha-ne",
+        "sayi": "4"
+      },
+      {
+        "id": "arkadaslarim",
+        "sozcuk": "arkadaşlarım",
+        "hece": "ar-ka-daş-la-rım",
+        "sayi": "5"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-2-2-es-anlam",
+    "unit": "tr-2-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{a}\" sözcüğünün eş anlamlısı hangisidir?",
+        "answer": "b"
+      },
+      {
+        "prompt": "\"{b}\" sözcüğünün eş anlamlısı hangisidir?",
+        "answer": "a"
+      }
+    ],
+    "statement": {
+      "text": "\"{a}\" ile \"{b}\" eş anlamlı sözcüklerdir.",
+      "swap": "b"
+    },
+    "explanation": "\"{a}\" ve \"{b}\" aynı anlama gelir; eş anlamlı sözcüklerdir.",
+    "items": [
+      {
+        "id": "yil",
+        "a": "yıl",
+        "b": "sene"
+      },
+      {
+        "id": "cevap",
+        "a": "cevap",
+        "b": "yanıt"
+      },
+      {
+        "id": "hediye",
+        "a": "hediye",
+        "b": "armağan"
+      },
+      {
+        "id": "doktor",
+        "a": "doktor",
+        "b": "hekim"
+      },
+      {
+        "id": "misafir",
+        "a": "misafir",
+        "b": "konuk"
+      },
+      {
+        "id": "kelime",
+        "a": "kelime",
+        "b": "sözcük"
+      },
+      {
+        "id": "siyah",
+        "a": "siyah",
+        "b": "kara"
+      },
+      {
+        "id": "beyaz",
+        "a": "beyaz",
+        "b": "ak"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-2-2-zit-anlam",
+    "unit": "tr-2-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{a}\" sözcüğünün zıt anlamlısı hangisidir?",
+        "answer": "b"
+      },
+      {
+        "prompt": "\"{b}\" sözcüğünün zıt anlamlısı hangisidir?",
+        "answer": "a"
+      }
+    ],
+    "statement": {
+      "text": "\"{a}\" ile \"{b}\" zıt anlamlı sözcüklerdir.",
+      "swap": "b"
+    },
+    "explanation": "\"{a}\" ile \"{b}\" zıt (karşıt) anlamlı sözcüklerdir.",
+    "items": [
+      {
+        "id": "zengin",
+        "a": "zengin",
+        "b": "fakir"
+      },
+      {
+        "id": "guzel",
+        "a": "güzel",
+        "b": "çirkin"
+      },
+      {
+        "id": "agir",
+        "a": "ağır",
+        "b": "hafif"
+      },
+      {
+        "id": "erken",
+        "a": "erken",
+        "b": "geç"
+      },
+      {
+        "id": "islak",
+        "a": "ıslak",
+        "b": "kuru"
+      },
+      {
+        "id": "temiz",
+        "a": "temiz",
+        "b": "kirli"
+      },
+      {
+        "id": "kalin",
+        "a": "kalın",
+        "b": "ince"
+      },
+      {
+        "id": "uzak",
+        "a": "uzak",
+        "b": "yakın"
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "tr-2-2-es-sesli",
+    "unit": "tr-2-2",
+    "difficulty": 2,
+    "positive": "Hangisi eş sesli (sesteş) bir sözcüktür?",
+    "negative": "Hangisi eş sesli (sesteş) bir sözcük değildir?",
+    "statement": "\"{item}\" eş sesli (sesteş) bir sözcüktür.",
+    "explanation": "Eş sesli sözcüklerin yazılışı aynı, anlamı farklıdır. Örnekler: {members}.",
+    "members": [
+      "yüz",
+      "çay",
+      "yaz",
+      "gül",
+      "at",
+      "kaz"
+    ],
+    "nonMembers": [
+      "masa",
+      "defter",
+      "pencere",
+      "çanta",
+      "bulut"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-2-5-noktalama",
+    "unit": "tr-2-5",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "Hangi noktalama işareti {gorev}?",
+        "answer": "isaret"
+      },
+      {
+        "prompt": "{isaret} için hangisi doğrudur?",
+        "answer": "gorevSik"
+      }
+    ],
+    "statement": {
+      "text": "{isaret}, {gorev}.",
+      "swap": "gorev"
+    },
+    "explanation": "{isaret} ({sembol}), {gorev}.",
+    "items": [
+      {
+        "id": "nokta",
+        "isaret": "Nokta",
+        "sembol": ".",
+        "gorev": "tamamlanan cümlenin sonuna konur",
+        "gorevSik": "Tamamlanan cümlenin sonuna konur.",
+        "not": "Örnek: \"Ali okula gitti.\""
+      },
+      {
+        "id": "soru",
+        "isaret": "Soru işareti",
+        "sembol": "?",
+        "gorev": "soru bildiren cümlenin sonuna konur",
+        "gorevSik": "Soru bildiren cümlenin sonuna konur.",
+        "not": "Örnek: \"Adın ne?\""
+      },
+      {
+        "id": "unlem",
+        "isaret": "Ünlem işareti",
+        "sembol": "!",
+        "gorev": "sevinç, korku ve şaşkınlık bildiren cümlenin sonuna konur",
+        "gorevSik": "Sevinç, korku ve şaşkınlık bildiren cümlenin sonuna konur.",
+        "not": "Örnek: \"Yaşasın, kazandık!\""
+      },
+      {
+        "id": "virgul",
+        "isaret": "Virgül",
+        "sembol": ",",
+        "gorev": "art arda sıralanan sözcüklerin arasına konur",
+        "gorevSik": "Art arda sıralanan sözcüklerin arasına konur.",
+        "not": "Örnek: \"Elma, armut ve muz aldım.\""
+      },
+      {
+        "id": "kesme",
+        "isaret": "Kesme işareti",
+        "sembol": "'",
+        "gorev": "özel adlara gelen ekleri ayırır",
+        "gorevSik": "Özel adlara gelen ekleri ayırır.",
+        "not": "Örnek: \"Ankara'ya gittik.\""
+      }
+    ]
+  }
+]

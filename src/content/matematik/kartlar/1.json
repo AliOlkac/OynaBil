@@ -1,0 +1,400 @@
+[
+  {
+    "kind": "pairs",
+    "id": "mat-1-1-sekil-kenar",
+    "unit": "mat-1-1",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{sekilin} kaç kenarı vardır?",
+        "answer": "kenar"
+      }
+    ],
+    "statement": {
+      "text": "{sekilin} {kenar} kenarı vardır.",
+      "swap": "kenar"
+    },
+    "explanation": "{sekilin} {kenar} kenarı ve {kenar} köşesi vardır.",
+    "items": [
+      {
+        "id": "ucgen",
+        "sekilin": "Üçgenin",
+        "kenar": "3"
+      },
+      {
+        "id": "kare",
+        "sekilin": "Karenin",
+        "kenar": "4"
+      },
+      {
+        "id": "dikdortgen",
+        "sekilin": "Dikdörtgenin",
+        "kenar": "4"
+      }
+    ],
+    "distractors": {
+      "kenar": [
+        "2",
+        "5"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-1-2-okunus",
+    "unit": "mat-1-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{sayi} sayısı nasıl okunur?",
+        "answer": "okunusSik"
+      },
+      {
+        "prompt": "\"{okunusSik}\" diye okunan sayı hangisidir?",
+        "answer": "sayi"
+      }
+    ],
+    "statement": {
+      "text": "{sayi} sayısı \"{okunus}\" diye okunur.",
+      "swap": "okunus"
+    },
+    "explanation": "{sayi} sayısı \"{okunus}\" diye okunur.",
+    "items": [
+      {
+        "id": "n11",
+        "sayi": "11",
+        "okunus": "on bir",
+        "okunusSik": "On bir"
+      },
+      {
+        "id": "n12",
+        "sayi": "12",
+        "okunus": "on iki",
+        "okunusSik": "On iki"
+      },
+      {
+        "id": "n14",
+        "sayi": "14",
+        "okunus": "on dört",
+        "okunusSik": "On dört"
+      },
+      {
+        "id": "n15",
+        "sayi": "15",
+        "okunus": "on beş",
+        "okunusSik": "On beş"
+      },
+      {
+        "id": "n17",
+        "sayi": "17",
+        "okunus": "on yedi",
+        "okunusSik": "On yedi"
+      },
+      {
+        "id": "n19",
+        "sayi": "19",
+        "okunus": "on dokuz",
+        "okunusSik": "On dokuz"
+      },
+      {
+        "id": "n20",
+        "sayi": "20",
+        "okunus": "yirmi",
+        "okunusSik": "Yirmi"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-1-3-ikiser",
+    "unit": "mat-1-3",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "İkişer sayarken {once} sayısından sonra hangi sayı gelir?",
+        "answer": "sonra"
+      }
+    ],
+    "statement": {
+      "text": "İkişer sayarken {once} sayısından sonra {sonra} gelir.",
+      "swap": "sonra"
+    },
+    "explanation": "İkişer sayarken her sayıya 2 eklenir. {once} sayısından sonra {sonra} gelir.",
+    "items": [
+      {
+        "id": "s2",
+        "once": "2",
+        "sonra": "4"
+      },
+      {
+        "id": "s6",
+        "once": "6",
+        "sonra": "8"
+      },
+      {
+        "id": "s8",
+        "once": "8",
+        "sonra": "10"
+      },
+      {
+        "id": "s12",
+        "once": "12",
+        "sonra": "14"
+      },
+      {
+        "id": "s14",
+        "once": "14",
+        "sonra": "16"
+      },
+      {
+        "id": "s18",
+        "once": "18",
+        "sonra": "20"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-1-3-onar",
+    "unit": "mat-1-3",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "Onar sayarken {once} sayısından sonra hangi sayı gelir?",
+        "answer": "sonra"
+      }
+    ],
+    "statement": {
+      "text": "Onar sayarken {once} sayısından sonra {sonra} gelir.",
+      "swap": "sonra"
+    },
+    "explanation": "Onar sayarken her sayıya 10 eklenir. {once} sayısından sonra {sonra} gelir.",
+    "items": [
+      {
+        "id": "s10",
+        "once": "10",
+        "sonra": "20"
+      },
+      {
+        "id": "s30",
+        "once": "30",
+        "sonra": "40"
+      },
+      {
+        "id": "s50",
+        "once": "50",
+        "sonra": "60"
+      },
+      {
+        "id": "s60",
+        "once": "60",
+        "sonra": "70"
+      },
+      {
+        "id": "s80",
+        "once": "80",
+        "sonra": "90"
+      },
+      {
+        "id": "s90",
+        "once": "90",
+        "sonra": "100"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-1-4-toplama",
+    "unit": "mat-1-4",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{a} + {b} kaç eder?",
+        "answer": "sonuc"
+      }
+    ],
+    "statement": {
+      "text": "{a} + {b} = {sonuc} eder.",
+      "swap": "sonuc"
+    },
+    "explanation": "{a} + {b} = {sonuc} eder.",
+    "items": [
+      {
+        "id": "t3-4",
+        "a": "3",
+        "b": "4",
+        "sonuc": "7"
+      },
+      {
+        "id": "t5-3",
+        "a": "5",
+        "b": "3",
+        "sonuc": "8"
+      },
+      {
+        "id": "t6-3",
+        "a": "6",
+        "b": "3",
+        "sonuc": "9"
+      },
+      {
+        "id": "t4-6",
+        "a": "4",
+        "b": "6",
+        "sonuc": "10"
+      },
+      {
+        "id": "t7-4",
+        "a": "7",
+        "b": "4",
+        "sonuc": "11"
+      },
+      {
+        "id": "t8-4",
+        "a": "8",
+        "b": "4",
+        "sonuc": "12"
+      },
+      {
+        "id": "t9-5",
+        "a": "9",
+        "b": "5",
+        "sonuc": "14"
+      },
+      {
+        "id": "t8-7",
+        "a": "8",
+        "b": "7",
+        "sonuc": "15"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-1-4-cikarma",
+    "unit": "mat-1-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{a} − {b} kaç eder?",
+        "answer": "sonuc"
+      }
+    ],
+    "statement": {
+      "text": "{a} − {b} = {sonuc} eder.",
+      "swap": "sonuc"
+    },
+    "explanation": "{a} − {b} = {sonuc} eder.",
+    "items": [
+      {
+        "id": "c13-9",
+        "a": "13",
+        "b": "9",
+        "sonuc": "4"
+      },
+      {
+        "id": "c9-4",
+        "a": "9",
+        "b": "4",
+        "sonuc": "5"
+      },
+      {
+        "id": "c11-5",
+        "a": "11",
+        "b": "5",
+        "sonuc": "6"
+      },
+      {
+        "id": "c10-3",
+        "a": "10",
+        "b": "3",
+        "sonuc": "7"
+      },
+      {
+        "id": "c12-4",
+        "a": "12",
+        "b": "4",
+        "sonuc": "8"
+      },
+      {
+        "id": "c15-6",
+        "a": "15",
+        "b": "6",
+        "sonuc": "9"
+      },
+      {
+        "id": "c17-7",
+        "a": "17",
+        "b": "7",
+        "sonuc": "10"
+      },
+      {
+        "id": "c20-8",
+        "a": "20",
+        "b": "8",
+        "sonuc": "12"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-1-5-gunler",
+    "unit": "mat-1-5",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{gun} gününden sonra hangi gün gelir?",
+        "answer": "sonraki"
+      }
+    ],
+    "statement": {
+      "text": "{gun} gününden sonra {sonrakiKucuk} günü gelir.",
+      "swap": "sonrakiKucuk"
+    },
+    "explanation": "Haftanın günleri sırayla pazartesi, salı, çarşamba, perşembe, cuma, cumartesi ve pazardır. {gun} gününden sonra {sonrakiKucuk} gelir.",
+    "items": [
+      {
+        "id": "g1",
+        "gun": "Pazartesi",
+        "sonraki": "Salı",
+        "sonrakiKucuk": "salı"
+      },
+      {
+        "id": "g2",
+        "gun": "Salı",
+        "sonraki": "Çarşamba",
+        "sonrakiKucuk": "çarşamba"
+      },
+      {
+        "id": "g3",
+        "gun": "Çarşamba",
+        "sonraki": "Perşembe",
+        "sonrakiKucuk": "perşembe"
+      },
+      {
+        "id": "g4",
+        "gun": "Perşembe",
+        "sonraki": "Cuma",
+        "sonrakiKucuk": "cuma"
+      },
+      {
+        "id": "g5",
+        "gun": "Cuma",
+        "sonraki": "Cumartesi",
+        "sonrakiKucuk": "cumartesi"
+      },
+      {
+        "id": "g6",
+        "gun": "Cumartesi",
+        "sonraki": "Pazar",
+        "sonrakiKucuk": "pazar"
+      },
+      {
+        "id": "g7",
+        "gun": "Pazar",
+        "sonraki": "Pazartesi",
+        "sonrakiKucuk": "pazartesi"
+      }
+    ]
+  }
+]

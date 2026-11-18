@@ -1,0 +1,432 @@
+[
+  {
+    "kind": "pairs",
+    "id": "tr-4-1-es-anlam",
+    "unit": "tr-4-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{a}\" sözcüğünün eş anlamlısı hangisidir?",
+        "answer": "b"
+      },
+      {
+        "prompt": "\"{b}\" sözcüğünün eş anlamlısı hangisidir?",
+        "answer": "a"
+      }
+    ],
+    "statement": {
+      "text": "\"{a}\" ile \"{b}\" eş anlamlı sözcüklerdir.",
+      "swap": "b"
+    },
+    "explanation": "\"{a}\" ve \"{b}\" aynı anlama gelir; eş anlamlı sözcüklerdir.",
+    "items": [
+      {
+        "id": "ozgurluk",
+        "a": "özgürlük",
+        "b": "hürriyet"
+      },
+      {
+        "id": "uygarlik",
+        "a": "uygarlık",
+        "b": "medeniyet"
+      },
+      {
+        "id": "doga",
+        "a": "doğa",
+        "b": "tabiat"
+      },
+      {
+        "id": "deprem",
+        "a": "deprem",
+        "b": "zelzele"
+      },
+      {
+        "id": "kiyi",
+        "a": "kıyı",
+        "b": "sahil"
+      },
+      {
+        "id": "yapit",
+        "a": "yapıt",
+        "b": "eser"
+      },
+      {
+        "id": "odul",
+        "a": "ödül",
+        "b": "mükâfat"
+      },
+      {
+        "id": "guc",
+        "a": "güç",
+        "b": "kuvvet"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-4-1-zit-anlam",
+    "unit": "tr-4-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{a}\" sözcüğünün zıt anlamlısı hangisidir?",
+        "answer": "b"
+      },
+      {
+        "prompt": "\"{b}\" sözcüğünün zıt anlamlısı hangisidir?",
+        "answer": "a"
+      }
+    ],
+    "statement": {
+      "text": "\"{a}\" ile \"{b}\" zıt anlamlı sözcüklerdir.",
+      "swap": "b"
+    },
+    "explanation": "\"{a}\" ile \"{b}\" zıt (karşıt) anlamlı sözcüklerdir.",
+    "items": [
+      {
+        "id": "dogal",
+        "a": "doğal",
+        "b": "yapay"
+      },
+      {
+        "id": "ovmek",
+        "a": "övmek",
+        "b": "yermek"
+      },
+      {
+        "id": "savas",
+        "a": "savaş",
+        "b": "barış"
+      },
+      {
+        "id": "neseli",
+        "a": "neşeli",
+        "b": "üzgün"
+      },
+      {
+        "id": "ucuz",
+        "a": "ucuz",
+        "b": "pahalı"
+      },
+      {
+        "id": "yerli",
+        "a": "yerli",
+        "b": "yabancı"
+      },
+      {
+        "id": "keskin",
+        "a": "keskin",
+        "b": "kör"
+      },
+      {
+        "id": "ilk",
+        "a": "ilk",
+        "b": "son"
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "tr-4-1-mecaz-anlam",
+    "unit": "tr-4-1",
+    "difficulty": 3,
+    "positive": "Hangi cümlede mecaz anlamlı bir sözcük kullanılmıştır?",
+    "negative": "Hangi cümlede mecaz anlamlı sözcük yoktur?",
+    "statement": "\"{item}\" cümlesinde mecaz anlamlı bir sözcük vardır.",
+    "explanation": "Sözcük gerçek anlamı dışında kullanılırsa mecaz anlam kazanır. \"Soğuk davranmak\", \"tatlı söz\", \"ağır söz\" ve \"ince düşünce\" mecaz; \"soğuk su\", \"tatlı kek\", \"ağır çanta\" ve \"ince kitap\" gerçek anlamlıdır.",
+    "members": [
+      "Bize çok soğuk davrandı.",
+      "Tatlı sözleriyle gönlümüzü aldı.",
+      "Ağır sözleri hepimizi üzdü.",
+      "Çok ince düşünceli bir insandır."
+    ],
+    "nonMembers": [
+      "Soğuk su dişlerimi sızlattı.",
+      "Annem tatlı bir kek yaptı.",
+      "Ağır çantayı zorla taşıdı.",
+      "İnce bir kitap okudum."
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-4-2-deyimler",
+    "unit": "tr-4-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{deyim}\" deyiminin anlamı nedir?",
+        "answer": "anlamSik"
+      },
+      {
+        "prompt": "\"{anlamSik}\" anlamına gelen deyim hangisidir?",
+        "answer": "deyim"
+      }
+    ],
+    "statement": {
+      "text": "\"{deyim}\" deyimi \"{anlam}\" anlamına gelir.",
+      "swap": "anlam"
+    },
+    "explanation": "\"{deyim}\" deyimi \"{anlam}\" demektir.",
+    "items": [
+      {
+        "id": "goz-atmak",
+        "deyim": "Göz atmak",
+        "anlam": "kısaca, şöyle bir bakmak",
+        "anlamSik": "Kısaca, şöyle bir bakmak",
+        "not": "Örnek: \"Gazeteye şöyle bir göz attı.\""
+      },
+      {
+        "id": "kulak-kabartmak",
+        "deyim": "Kulak kabartmak",
+        "anlam": "belli etmeden dinlemeye çalışmak",
+        "anlamSik": "Belli etmeden dinlemeye çalışmak",
+        "not": "Örnek: \"Yan masadaki konuşmaya kulak kabarttı.\""
+      },
+      {
+        "id": "burun-kivirmak",
+        "deyim": "Burun kıvırmak",
+        "anlam": "beğenmemek, küçümsemek",
+        "anlamSik": "Beğenmemek, küçümsemek",
+        "not": "Örnek: \"Yemeğe burun kıvırdı.\""
+      },
+      {
+        "id": "agzi-kulaklarina-varmak",
+        "deyim": "Ağzı kulaklarına varmak",
+        "anlam": "çok sevinmek",
+        "anlamSik": "Çok sevinmek",
+        "not": "Örnek: \"Karnesini görünce ağzı kulaklarına vardı.\""
+      },
+      {
+        "id": "dort-gozle-beklemek",
+        "deyim": "Dört gözle beklemek",
+        "anlam": "sabırsızlıkla beklemek",
+        "anlamSik": "Sabırsızlıkla beklemek",
+        "not": "Örnek: \"Tatili dört gözle bekliyorum.\""
+      },
+      {
+        "id": "eli-acik-olmak",
+        "deyim": "Eli açık olmak",
+        "anlam": "cömert olmak",
+        "anlamSik": "Cömert olmak",
+        "not": "Örnek: \"Dedem eli açık bir insandır.\""
+      },
+      {
+        "id": "kuplere-binmek",
+        "deyim": "Küplere binmek",
+        "anlam": "çok öfkelenmek",
+        "anlamSik": "Çok öfkelenmek",
+        "not": "Örnek: \"Camın kırıldığını görünce küplere bindi.\""
+      },
+      {
+        "id": "goz-kulak-olmak",
+        "deyim": "Göz kulak olmak",
+        "anlam": "korumak, gözetmek",
+        "anlamSik": "Korumak, gözetmek",
+        "not": "Örnek: \"Kardeşine göz kulak ol.\""
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-4-2-atasozleri",
+    "unit": "tr-4-2",
+    "difficulty": 3,
+    "questions": [
+      {
+        "prompt": "\"{soz}\" atasözü ne anlatır?",
+        "answer": "konuSik"
+      },
+      {
+        "prompt": "Hangi atasözü {konu} anlatır?",
+        "answer": "soz"
+      }
+    ],
+    "statement": {
+      "text": "\"{soz}\" atasözü {konu} anlatır.",
+      "swap": "konu"
+    },
+    "explanation": "\"{soz}\" atasözü {konu} anlatır.",
+    "items": [
+      {
+        "id": "damlaya",
+        "soz": "Damlaya damlaya göl olur.",
+        "konu": "küçük birikimlerin zamanla büyüdüğünü",
+        "konuSik": "Küçük birikimlerin zamanla büyüdüğünü"
+      },
+      {
+        "id": "bir-elin",
+        "soz": "Bir elin nesi var, iki elin sesi var.",
+        "konu": "iş birliğinin ve yardımlaşmanın gücünü",
+        "konuSik": "İş birliğinin ve yardımlaşmanın gücünü"
+      },
+      {
+        "id": "agac-yasken",
+        "soz": "Ağaç yaşken eğilir.",
+        "konu": "eğitimin küçük yaşta verilmesi gerektiğini",
+        "konuSik": "Eğitimin küçük yaşta verilmesi gerektiğini"
+      },
+      {
+        "id": "dost-kara-gunde",
+        "soz": "Dost kara günde belli olur.",
+        "konu": "gerçek dostun zor zamanda anlaşıldığını",
+        "konuSik": "Gerçek dostun zor zamanda anlaşıldığını"
+      },
+      {
+        "id": "bugunun-isini",
+        "soz": "Bugünün işini yarına bırakma.",
+        "konu": "işlerin ertelenmemesi gerektiğini",
+        "konuSik": "İşlerin ertelenmemesi gerektiğini"
+      },
+      {
+        "id": "akil-yasta",
+        "soz": "Akıl yaşta değil baştadır.",
+        "konu": "akıllı olmanın yaşa bağlı olmadığını",
+        "konuSik": "Akıllı olmanın yaşa bağlı olmadığını"
+      },
+      {
+        "id": "tatli-dil",
+        "soz": "Tatlı dil yılanı deliğinden çıkarır.",
+        "konu": "güzel sözün insanları ikna ettiğini",
+        "konuSik": "Güzel sözün insanları ikna ettiğini"
+      },
+      {
+        "id": "emek-olmadan",
+        "soz": "Emek olmadan yemek olmaz.",
+        "konu": "çalışmadan kazanç elde edilemeyeceğini",
+        "konuSik": "Çalışmadan kazanç elde edilemeyeceğini"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-4-4-kisaltmalar",
+    "unit": "tr-4-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{kisaltma} kısaltmasının açılımı nedir?",
+        "answer": "acilim"
+      },
+      {
+        "prompt": "\"{acilim}\" hangi kısaltmayla gösterilir?",
+        "answer": "kisaltma"
+      }
+    ],
+    "statement": {
+      "text": "{kisaltma}, \"{acilim}\" adının kısaltmasıdır.",
+      "swap": "acilim"
+    },
+    "explanation": "{kisaltma}, \"{acilim}\" adının kısaltmasıdır. Kurum adlarının kısaltmaları büyük harflerle ve noktasız yazılır.",
+    "items": [
+      {
+        "id": "tbmm",
+        "kisaltma": "TBMM",
+        "acilim": "Türkiye Büyük Millet Meclisi"
+      },
+      {
+        "id": "tdk",
+        "kisaltma": "TDK",
+        "acilim": "Türk Dil Kurumu"
+      },
+      {
+        "id": "trt",
+        "kisaltma": "TRT",
+        "acilim": "Türkiye Radyo Televizyon Kurumu"
+      },
+      {
+        "id": "thy",
+        "kisaltma": "THY",
+        "acilim": "Türk Hava Yolları"
+      },
+      {
+        "id": "meb",
+        "kisaltma": "MEB",
+        "acilim": "Millî Eğitim Bakanlığı"
+      },
+      {
+        "id": "tubitak",
+        "kisaltma": "TÜBİTAK",
+        "acilim": "Türkiye Bilimsel ve Teknolojik Araştırma Kurumu"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-4-5-noktalama",
+    "unit": "tr-4-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "Hangi noktalama işareti {gorev}?",
+        "answer": "isaret"
+      },
+      {
+        "prompt": "{isaret} için hangisi doğrudur?",
+        "answer": "gorevSik"
+      }
+    ],
+    "statement": {
+      "text": "{isaret}, {gorev}.",
+      "swap": "gorev"
+    },
+    "explanation": "{isaret} ({sembol}), {gorev}.",
+    "items": [
+      {
+        "id": "ikinokta",
+        "isaret": "İki nokta",
+        "sembol": ":",
+        "gorev": "kendisinden sonra örnek ya da açıklama verilecek cümlenin sonuna konur",
+        "gorevSik": "Kendisinden sonra örnek ya da açıklama verilecek cümlenin sonuna konur.",
+        "not": "Örnek: \"Çantamda şunlar var: kalem, defter.\""
+      },
+      {
+        "id": "tirnak",
+        "isaret": "Tırnak işareti",
+        "sembol": "\" \"",
+        "gorev": "başkasından aynen aktarılan sözlerin başına ve sonuna konur",
+        "gorevSik": "Başkasından aynen aktarılan sözlerin başına ve sonuna konur.",
+        "not": "Örnek: Öğretmen \"Kitap en iyi dosttur.\" dedi."
+      },
+      {
+        "id": "uzuncizgi",
+        "isaret": "Uzun çizgi",
+        "sembol": "—",
+        "gorev": "yazıda konuşmaların başına konur",
+        "gorevSik": "Yazıda konuşmaların başına konur.",
+        "not": "Bu işarete konuşma çizgisi de denir."
+      },
+      {
+        "id": "ucnokta",
+        "isaret": "Üç nokta",
+        "sembol": "...",
+        "gorev": "tamamlanmamış cümlenin sonuna konur",
+        "gorevSik": "Tamamlanmamış cümlenin sonuna konur.",
+        "not": "Örnek: \"Kapıyı açtım ve...\""
+      },
+      {
+        "id": "yayayrac",
+        "isaret": "Yay ayraç",
+        "sembol": "( )",
+        "gorev": "cümle içindeki açıklamaların başına ve sonuna konur",
+        "gorevSik": "Cümle içindeki açıklamaların başına ve sonuna konur.",
+        "not": "Örnek: \"Anı (hatıra) okumayı severim.\""
+      },
+      {
+        "id": "egikcizgi",
+        "isaret": "Eğik çizgi",
+        "sembol": "/",
+        "gorev": "yan yana yazılan şiir dizelerinin arasına konur",
+        "gorevSik": "Yan yana yazılan şiir dizelerinin arasına konur.",
+        "not": "Adres yazarken de kullanılır."
+      },
+      {
+        "id": "kesme",
+        "isaret": "Kesme işareti",
+        "sembol": "'",
+        "gorev": "özel adlara gelen ekleri ayırır",
+        "gorevSik": "Özel adlara gelen ekleri ayırır.",
+        "not": "Örnek: \"Ankara'ya gittik.\""
+      }
+    ]
+  }
+]

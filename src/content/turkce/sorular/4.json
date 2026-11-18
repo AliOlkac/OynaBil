@@ -1,0 +1,770 @@
+[
+  {
+    "id": "tr-4-1-01",
+    "unit": "tr-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"imtihan\" sözcüğünün eş anlamlısı hangisidir?",
+    "choices": [
+      "ödev",
+      "sınav",
+      "karne",
+      "ders"
+    ],
+    "answer": 1,
+    "explanation": "\"imtihan\" ve \"sınav\" aynı anlama gelir; eş anlamlı sözcüklerdir."
+  },
+  {
+    "id": "tr-4-1-02",
+    "unit": "tr-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"cömert\" sözcüğünün zıt anlamlısı hangisidir?",
+    "choices": [
+      "zengin",
+      "yoksul",
+      "kibar",
+      "cimri"
+    ],
+    "answer": 3,
+    "explanation": "Cömert, elindekini seve seve paylaşan kişidir; zıt anlamlısı \"cimri\" sözcüğüdür."
+  },
+  {
+    "id": "tr-4-1-03",
+    "unit": "tr-4-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Eş sesli sözcüklerin yazılışları aynı, anlamları farklıdır.",
+    "answer": true,
+    "explanation": "Örneğin \"yüz\" sözcüğü hem bir sayıyı hem de çehreyi karşılar."
+  },
+  {
+    "id": "tr-4-1-04",
+    "unit": "tr-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"soğuk\" sözcüğü hangi cümlede mecaz anlamda kullanılmıştır?",
+    "choices": [
+      "Bize karşı çok soğuk davrandı.",
+      "Soğuk su dişlerimi sızlattı.",
+      "Soğuk havada çok üşüdük.",
+      "Çorbayı soğuk içmeyi sevmem."
+    ],
+    "answer": 0,
+    "explanation": "\"Soğuk davranmak\" ilgisiz, sevgisiz davranmak demektir. Sözcük burada gerçek anlamından uzaklaşmıştır."
+  },
+  {
+    "id": "tr-4-1-05",
+    "unit": "tr-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi sözcük çifti eş anlamlıdır?",
+    "choices": [
+      "ileri - geri",
+      "taze - bayat",
+      "ulus - millet",
+      "dar - geniş"
+    ],
+    "answer": 2,
+    "explanation": "\"ulus\" ve \"millet\" aynı anlama gelir. Öteki çiftler zıt anlamlıdır."
+  },
+  {
+    "id": "tr-4-1-06",
+    "unit": "tr-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"çay\" sözcüğü hangi cümlede \"küçük akarsu\" anlamında kullanılmıştır?",
+    "choices": [
+      "Kahvaltıda çay içtik.",
+      "Çay bardağı kırıldı.",
+      "Köyün yanından bir çay akıyordu.",
+      "Çayına şeker atmadı."
+    ],
+    "answer": 2,
+    "explanation": "\"çay\" eş sesli bir sözcüktür: hem bir içeceğin hem de dereden büyük, ırmaktan küçük akarsuyun adıdır."
+  },
+  {
+    "id": "tr-4-1-07",
+    "unit": "tr-4-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Bu sözler kalbini kırdı.\" cümlesinde \"kırdı\" sözcüğü gerçek anlamıyla kullanılmıştır.",
+    "answer": false,
+    "explanation": "Burada \"kırmak\" üzmek, incitmek anlamındadır; sözcük mecaz anlamda kullanılmıştır."
+  },
+  {
+    "id": "tr-4-1-08",
+    "unit": "tr-4-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"tatlı\" sözcüğü hangi cümlede gerçek anlamıyla kullanılmıştır?",
+    "choices": [
+      "Bu üzüm çok tatlı.",
+      "Tatlı dilli bir çocuktu.",
+      "Bebeğin tatlı bir gülüşü vardı.",
+      "Bizi tatlı sözlerle karşıladı."
+    ],
+    "answer": 0,
+    "explanation": "Gerçek anlam, sözcüğün akla gelen ilk anlamıdır. \"Tatlı üzüm\" derken şeker tadı anlatılır; ötekilerde \"hoş, sevimli\" anlamı vardır."
+  },
+  {
+    "id": "tr-4-1-09",
+    "unit": "tr-4-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi sözcük eş sesli değildir?",
+    "choices": [
+      "yüz",
+      "ben",
+      "kır",
+      "kitap"
+    ],
+    "answer": 3,
+    "explanation": "\"yüz\", \"ben\" ve \"kır\" sözcüklerinin birbirinden farklı anlamları vardır. \"kitap\" sözcüğü eş sesli değildir."
+  },
+  {
+    "id": "tr-4-2-01",
+    "unit": "tr-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Kulak vermek\" deyiminin anlamı nedir?",
+    "choices": [
+      "Kulağını çekmek",
+      "Dikkatle dinlemek",
+      "Yüksek sesle konuşmak",
+      "Sır saklamak"
+    ],
+    "answer": 1,
+    "explanation": "\"Kulak vermek\" bir şeyi dikkatle dinlemek demektir."
+  },
+  {
+    "id": "tr-4-2-02",
+    "unit": "tr-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Çok sevinmek\" anlamına gelen deyim hangisidir?",
+    "choices": [
+      "Etekleri zil çalmak",
+      "Burnundan solumak",
+      "Kulak kabartmak",
+      "Gözden düşmek"
+    ],
+    "answer": 0,
+    "explanation": "\"Etekleri zil çalmak\" çok sevinmek demektir. \"Burnundan solumak\" ise çok öfkelenmek anlamına gelir."
+  },
+  {
+    "id": "tr-4-2-03",
+    "unit": "tr-4-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Deyimler genellikle gerçek anlamından farklı bir anlam taşır.",
+    "answer": true,
+    "explanation": "Deyimler kalıplaşmış sözlerdir ve çoğunlukla mecaz anlam taşır: \"göz atmak\" kısaca bakmak demektir."
+  },
+  {
+    "id": "tr-4-2-04",
+    "unit": "tr-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Küçük dilini yutmak\" deyimi hangi duyguyu anlatır?",
+    "choices": [
+      "Çok acıkmak",
+      "Çok yorulmak",
+      "Çok şaşırmak",
+      "Çok üzülmek"
+    ],
+    "answer": 2,
+    "explanation": "\"Küçük dilini yutmak\" çok şaşırmak, şaşkınlıktan ne diyeceğini bilememek demektir."
+  },
+  {
+    "id": "tr-4-2-05",
+    "unit": "tr-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Üzüm üzüme baka baka kararır.\" atasözü ne anlatır?",
+    "choices": [
+      "Meyvelerin zamanla olgunlaştığını",
+      "Arkadaşların birbirini etkilediğini",
+      "Çalışanın kazandığını",
+      "Sabredenin başardığını"
+    ],
+    "answer": 1,
+    "explanation": "Bu atasözü, birlikte vakit geçiren insanların birbirinden etkilendiğini anlatır."
+  },
+  {
+    "id": "tr-4-2-06",
+    "unit": "tr-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi bir atasözüdür?",
+    "choices": [
+      "Göz kulak olmak",
+      "Burun kıvırmak",
+      "Dört gözle beklemek",
+      "Sakla samanı, gelir zamanı."
+    ],
+    "answer": 3,
+    "explanation": "Atasözleri öğüt veren, yargı bildiren cümlelerdir. Öteki seçenekler deyimdir."
+  },
+  {
+    "id": "tr-4-2-07",
+    "unit": "tr-4-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Burnu havada olmak\" deyimi \"alçak gönüllü olmak\" anlamına gelir.",
+    "answer": false,
+    "explanation": "\"Burnu havada olmak\" kendini beğenmek, kibirli olmak demektir."
+  },
+  {
+    "id": "tr-4-2-08",
+    "unit": "tr-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Ayağını yorganına göre uzat.\" atasözü ne öğütler?",
+    "choices": [
+      "Erken yatıp erken kalkmayı",
+      "Gelirimize göre harcama yapmayı",
+      "Büyüklerin sözünü dinlemeyi",
+      "Soğukta sıkı giyinmeyi"
+    ],
+    "answer": 1,
+    "explanation": "Bu atasözü, harcamalarımızı kazancımıza göre ayarlamamızı öğütler."
+  },
+  {
+    "id": "tr-4-2-09",
+    "unit": "tr-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede deyim kullanılmıştır?",
+    "choices": [
+      "Kardeşimle parka gittim.",
+      "Kardeşim gözlük takıyor.",
+      "Kardeşimin kulağı ağrıyor.",
+      "Kardeşime göz kulak oldum."
+    ],
+    "answer": 3,
+    "explanation": "\"Göz kulak olmak\" korumak, gözetmek anlamında bir deyimdir."
+  },
+  {
+    "id": "tr-4-3-01",
+    "unit": "tr-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi cümlede neden-sonuç ilişkisi vardır?",
+    "choices": [
+      "Hasta olduğu için okula gelemedi.",
+      "Okula her gün yürüyerek gelir.",
+      "Okulumuzun bahçesi çok geniştir.",
+      "Bugün okulda resim yaptık."
+    ],
+    "answer": 0,
+    "explanation": "Neden: hasta olması. Sonuç: okula gelememesi."
+  },
+  {
+    "id": "tr-4-3-02",
+    "unit": "tr-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi cümle hayal ürünü bir olayı anlatır?",
+    "choices": [
+      "Tavşan havuç yedi.",
+      "Kaplumbağa yavaş yürür.",
+      "Tavşan, kaplumbağaya şarkı söyledi.",
+      "Tavşanın kulakları uzundur."
+    ],
+    "answer": 2,
+    "explanation": "Hayvanların şarkı söylemesi gerçek hayatta olamaz; hayal ürünüdür."
+  },
+  {
+    "id": "tr-4-3-03",
+    "unit": "tr-4-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Pamuk gibi yumuşak bir yastığı vardı.\" cümlesinde benzetme yapılmıştır.",
+    "answer": true,
+    "explanation": "Yastık, yumuşaklığı bakımından pamuğa benzetilmiştir. \"gibi\" sözcüğü benzetme anlamı katar."
+  },
+  {
+    "id": "tr-4-3-04",
+    "unit": "tr-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede karşılaştırma yapılmıştır?",
+    "choices": [
+      "Bu kitabı dün bitirdim.",
+      "Kitabın kapağı mavi.",
+      "Bu kitap ötekinden daha kalın.",
+      "Kitabı arkadaşıma verdim."
+    ],
+    "answer": 2,
+    "explanation": "Karşılaştırmada iki varlık bir özellik bakımından kıyaslanır: iki kitabın kalınlığı."
+  },
+  {
+    "id": "tr-4-3-05",
+    "unit": "tr-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Erken yattı çünkü çok yorgundu.\" cümlesinde neden hangisidir?",
+    "choices": [
+      "Çok yorgun olması",
+      "Erken yatması",
+      "Uykusunun kaçması",
+      "Geç kalkması"
+    ],
+    "answer": 0,
+    "explanation": "\"çünkü\" sözcüğünden sonra neden söylenir. Neden: çok yorgun olması. Sonuç: erken yatması."
+  },
+  {
+    "id": "tr-4-3-06",
+    "unit": "tr-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede bir işin hangi amaçla yapıldığı belirtilmiştir?",
+    "choices": [
+      "Sınav çok zordu.",
+      "Sınav iki saat sürdü.",
+      "Sınavdan sonra eve gitti.",
+      "Sınavı kazanmak için çok çalıştı."
+    ],
+    "answer": 3,
+    "explanation": "Çok çalışmasının amacı sınavı kazanmaktır."
+  },
+  {
+    "id": "tr-4-3-07",
+    "unit": "tr-4-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Çantam o kadar ağırdı ki bir ton geliyordu.\" cümlesinde abartma yoktur.",
+    "answer": false,
+    "explanation": "Bir çantanın bir ton gelmesi olanaksızdır. Ağırlık, olduğundan çok fazla gösterilerek abartılmıştır."
+  },
+  {
+    "id": "tr-4-3-08",
+    "unit": "tr-4-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Yollar buz tuttuğundan araçlar ilerleyemedi.\" cümlesinde sonuç hangisidir?",
+    "choices": [
+      "Yolların buz tutması",
+      "Araçların ilerleyememesi",
+      "Havanın ısınması",
+      "Yolların onarılması"
+    ],
+    "answer": 1,
+    "explanation": "Neden: yolların buz tutması. Sonuç: araçların ilerleyememesi."
+  },
+  {
+    "id": "tr-4-3-09",
+    "unit": "tr-4-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Güneş gibi parlayan gözleri vardı.\" cümlesinde ne neye benzetilmiştir?",
+    "choices": [
+      "Gözler güneşe",
+      "Güneş gözlere",
+      "Gözler yıldıza",
+      "Güneş aya"
+    ],
+    "answer": 0,
+    "explanation": "Parlaklığı anlatmak için gözler güneşe benzetilmiştir."
+  },
+  {
+    "id": "tr-4-4-01",
+    "unit": "tr-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi doğru yazılmıştır?",
+    "choices": [
+      "bir kaç",
+      "birkac",
+      "birkaç",
+      "bir-kaç"
+    ],
+    "answer": 2,
+    "explanation": "\"birkaç\" sözcüğü bitişik yazılır."
+  },
+  {
+    "id": "tr-4-4-02",
+    "unit": "tr-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi doğru yazılmıştır?",
+    "choices": [
+      "herşey",
+      "her şey",
+      "her-şey",
+      "herşşey"
+    ],
+    "answer": 1,
+    "explanation": "\"her şey\" ayrı yazılır."
+  },
+  {
+    "id": "tr-4-4-03",
+    "unit": "tr-4-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "TDK, TBMM gibi kurum adlarının kısaltmaları büyük harflerle yazılır.",
+    "answer": true,
+    "explanation": "Kurum adlarının kısaltmaları, her sözcüğün ilk harfi büyük yazılarak yapılır."
+  },
+  {
+    "id": "tr-4-4-04",
+    "unit": "tr-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"de\" hangi cümlede doğru yazılmıştır?",
+    "choices": [
+      "Sende gel bizimle.",
+      "Okul da toplantı var.",
+      "Bahçe de top oynadık.",
+      "Kitabı ben de okudum."
+    ],
+    "answer": 3,
+    "explanation": "\"Dahi, bile\" anlamı katan \"de\" ayrı yazılır: \"ben de\". Yer bildiren ek ise bitişik yazılır: okulda, bahçede."
+  },
+  {
+    "id": "tr-4-4-05",
+    "unit": "tr-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"ki\" hangi cümlede doğru yazılmıştır?",
+    "choices": [
+      "Duydumki yarın okul yokmuş.",
+      "Duydum ki yarın okul yokmuş.",
+      "Masada ki kalem benim.",
+      "Benim ki daha güzel."
+    ],
+    "answer": 1,
+    "explanation": "Bağlaç olan \"ki\" ayrı yazılır: \"Duydum ki\". Ek olan \"-ki\" bitişik yazılır: masadaki, benimki."
+  },
+  {
+    "id": "tr-4-4-06",
+    "unit": "tr-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi sözcük doğru yazılmıştır?",
+    "choices": [
+      "mas mavi",
+      "mas-mavi",
+      "masmaavi",
+      "masmavi"
+    ],
+    "answer": 3,
+    "explanation": "Pekiştirmeli sözcükler bitişik yazılır: masmavi, yemyeşil, bembeyaz."
+  },
+  {
+    "id": "tr-4-4-07",
+    "unit": "tr-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede büyük harfler doğru kullanılmıştır?",
+    "choices": [
+      "Kurban Bayramı'nda dedeme gittik.",
+      "Ramazan bayramında ninemi ziyaret ettik.",
+      "cumhuriyet Bayramı'nda törene katıldık.",
+      "Zafer Bayramı'nda Parka gittik."
+    ],
+    "answer": 0,
+    "explanation": "Bayram adları özel addır; her sözcüğü büyük harfle başlar ve gelen ek kesme işaretiyle ayrılır."
+  },
+  {
+    "id": "tr-4-4-08",
+    "unit": "tr-4-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"yemyeşil\" sözcüğü \"yem yeşil\" biçiminde ayrı yazılır.",
+    "answer": false,
+    "explanation": "Pekiştirmeli sözcükler bitişik yazılır: yemyeşil."
+  },
+  {
+    "id": "tr-4-4-09",
+    "unit": "tr-4-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede sayılar doğru yazılmıştır?",
+    "choices": [
+      "Sınıfımızda yirmibeş öğrenci var.",
+      "Kütüphanede ikiyüz kitap var.",
+      "Sınıfımızda yirmi beş öğrenci var.",
+      "Onbir yaşına girdim."
+    ],
+    "answer": 2,
+    "explanation": "Birden çok sözcükten oluşan sayılar ayrı yazılır: yirmi beş, iki yüz, on bir."
+  },
+  {
+    "id": "tr-4-4-10",
+    "unit": "tr-4-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede yazım yanlışı vardır?",
+    "choices": [
+      "TDK'nin sözlüğünü inceledik.",
+      "23 Nisan 1920'de Meclis açıldı.",
+      "Herkez törene zamanında geldi.",
+      "Annem de bizimle geldi."
+    ],
+    "answer": 2,
+    "explanation": "Doğru yazılış \"herkes\" biçimindedir."
+  },
+  {
+    "id": "tr-4-5-01",
+    "unit": "tr-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Marketten süt( ) yumurta( ) peynir aldım.\" cümlesinde ayraçlı yerlere hangi işaret gelir?",
+    "choices": [
+      "Virgül",
+      "Nokta",
+      "İki nokta",
+      "Kesme işareti"
+    ],
+    "answer": 0,
+    "explanation": "Art arda sıralanan sözcüklerin arasına virgül konur."
+  },
+  {
+    "id": "tr-4-5-02",
+    "unit": "tr-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Atatürk( )ün doğduğu ev Selanik'tedir.\" cümlesinde ayraçla gösterilen yere hangi işaret gelir?",
+    "choices": [
+      "Virgül",
+      "Kısa çizgi",
+      "Tırnak işareti",
+      "Kesme işareti"
+    ],
+    "answer": 3,
+    "explanation": "Özel adlara gelen ekler kesme işaretiyle ayrılır: \"Atatürk'ün\"."
+  },
+  {
+    "id": "tr-4-5-03",
+    "unit": "tr-4-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Tamamlanmamış cümlelerin sonuna üç nokta konur.",
+    "answer": true,
+    "explanation": "Örnek: \"Kapıyı açtım ve...\""
+  },
+  {
+    "id": "tr-4-5-04",
+    "unit": "tr-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Annem pazardan şunları aldı( ) domates, biber, patlıcan.\" cümlesinde ayraçlı yere hangi işaret gelir?",
+    "choices": [
+      "Virgül",
+      "İki nokta",
+      "Üç nokta",
+      "Ünlem işareti"
+    ],
+    "answer": 1,
+    "explanation": "Kendisinden sonra örnek verilecek ya da açıklama yapılacak cümlenin sonuna iki nokta konur."
+  },
+  {
+    "id": "tr-4-5-05",
+    "unit": "tr-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Öğretmenimiz ( )Kitap en iyi dosttur.( ) dedi. Bu cümlede ayraçlı yerlere hangi işaret gelir?",
+    "choices": [
+      "Tırnak işareti",
+      "Yay ayraç",
+      "Kesme işareti",
+      "Kısa çizgi"
+    ],
+    "answer": 0,
+    "explanation": "Başkasından aynen aktarılan sözler tırnak içine alınır."
+  },
+  {
+    "id": "tr-4-5-06",
+    "unit": "tr-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Dr( ) Ayşe Yılmaz hastalarını muayene etti.\" cümlesinde ayraçlı yere hangi işaret gelir?",
+    "choices": [
+      "Virgül",
+      "Kesme işareti",
+      "Nokta",
+      "İki nokta"
+    ],
+    "answer": 2,
+    "explanation": "Bazı kısaltmaların sonuna nokta konur: Dr. (doktor), Prof. (profesör)."
+  },
+  {
+    "id": "tr-4-5-07",
+    "unit": "tr-4-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Ne zaman geleceksin\" cümlesinin sonuna ünlem işareti konur.",
+    "answer": false,
+    "explanation": "Bu cümle bir şey sorar; sonuna soru işareti konur."
+  },
+  {
+    "id": "tr-4-5-08",
+    "unit": "tr-4-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Anı( )hatıra( ) türünde kitaplar okumayı severim.\" cümlesinde ayraçlı yerlere hangi işaret gelir?",
+    "choices": [
+      "Tırnak işareti",
+      "Yay ayraç",
+      "Kesme işareti",
+      "Üç nokta"
+    ],
+    "answer": 1,
+    "explanation": "Cümle içinde bir sözün açıklaması ya da eş anlamlısı yay ayraç içinde verilir: \"Anı (hatıra)\"."
+  },
+  {
+    "id": "tr-4-5-09",
+    "unit": "tr-4-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede noktalama yanlışı vardır?",
+    "choices": [
+      "Eyvah, otobüsü kaçırdım!",
+      "Ali, Efe ve Can maça gitti.",
+      "Kitabın 5. sayfasını açın.",
+      "Sen de mi geldin."
+    ],
+    "answer": 3,
+    "explanation": "\"Sen de mi geldin\" bir soru cümlesidir; sonuna soru işareti konmalıdır."
+  },
+  {
+    "id": "tr-4-6-01",
+    "unit": "tr-4-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Kütüphaneler bilgi hazinesidir. Orada binlerce kitap sessizce okurunu bekler.\" Bu metnin konusu nedir?",
+    "choices": [
+      "Okullar",
+      "Kütüphaneler",
+      "Sessizlik",
+      "Hazine avı"
+    ],
+    "answer": 1,
+    "explanation": "Konu, metinde sözü edilen şeydir. Metin kütüphaneleri anlatıyor."
+  },
+  {
+    "id": "tr-4-6-02",
+    "unit": "tr-4-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Balinalar denizde yaşar ama balık değildir. Yavrularını sütle besler.\" Metne göre balinalar yavrularını nasıl besler?",
+    "choices": [
+      "Yosunla",
+      "Küçük balıklarla",
+      "Deniz kabuklarıyla",
+      "Sütle"
+    ],
+    "answer": 3,
+    "explanation": "Metinde \"Yavrularını sütle besler.\" deniyor."
+  },
+  {
+    "id": "tr-4-6-03",
+    "unit": "tr-4-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Develer günlerce su içmeden yaşayabilir. Bu yüzden çölde yolculuk için kullanılır.\" Metne göre develer susuzluğa dayanıklıdır.",
+    "answer": true,
+    "explanation": "Günlerce su içmeden yaşayabilmek, susuzluğa dayanıklı olmak demektir."
+  },
+  {
+    "id": "tr-4-6-04",
+    "unit": "tr-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Dün akşam Ali ile Can okul bahçesinde uçurtma uçurdu.\" cümlesinde olayın geçtiği yer hangisidir?",
+    "choices": [
+      "Okul bahçesi",
+      "Dün akşam",
+      "Ali ile Can",
+      "Uçurtma"
+    ],
+    "answer": 0,
+    "explanation": "Yer, olayın geçtiği mekândır. \"Dün akşam\" zamanı, \"Ali ile Can\" kişileri gösterir."
+  },
+  {
+    "id": "tr-4-6-05",
+    "unit": "tr-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Kitap okuyan insan yeni yerler ve insanlar tanır, kelime dağarcığı gelişir. Bu yüzden her gün kitap okumalıyız.\" Bu metnin ana fikri nedir?",
+    "choices": [
+      "Kitaplar çok pahalıdır.",
+      "Yeni yerler görmek güzeldir.",
+      "Kitap okumak insanı geliştirir.",
+      "Herkes yazar olabilir."
+    ],
+    "answer": 2,
+    "explanation": "Ana fikir, yazarın vermek istediği mesajdır. Metin kitap okumanın yararlarını anlatıp okumayı öğütlüyor."
+  },
+  {
+    "id": "tr-4-6-06",
+    "unit": "tr-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Elif pencereden baktı. Her yer bembeyazdı, çocuklar kartopu oynuyordu.\" Bu metinde hangi mevsim anlatılmaktadır?",
+    "choices": [
+      "Yaz",
+      "İlkbahar",
+      "Kış",
+      "Sonbahar"
+    ],
+    "answer": 2,
+    "explanation": "Her yerin bembeyaz olması ve kartopu oynanması kar yağdığını, mevsimin kış olduğunu gösterir."
+  },
+  {
+    "id": "tr-4-6-07",
+    "unit": "tr-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Orman yangınlarının çoğu insanların dikkatsizliğinden çıkar. Söndürülmeyen bir ateş binlerce ağacı yok edebilir.\" Yazar neye dikkat çekmektedir?",
+    "choices": [
+      "Ormanda ateşe karşı dikkatli olmaya",
+      "Ağaç dikmenin kolaylığına",
+      "İtfaiyecilerin hızına",
+      "Ormanda yürümenin yararına"
+    ],
+    "answer": 0,
+    "explanation": "Yazar, yangınların dikkatsizlikten çıktığını söyleyerek ateş konusunda dikkatli olmamızı istiyor."
+  },
+  {
+    "id": "tr-4-6-08",
+    "unit": "tr-4-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Kaplumbağa yavaştı ama hiç durmadı. Tavşan ise uyuyakaldı ve yarışı kaybetti.\" Metne göre yarışı tavşan kazanmıştır.",
+    "answer": false,
+    "explanation": "Metinde tavşanın uyuyakaldığı ve yarışı kaybettiği söyleniyor."
+  },
+  {
+    "id": "tr-4-6-09",
+    "unit": "tr-4-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Barış sabah uyandığında boğazı ağrıyordu, ateşi vardı. Annesi hemen telefonu eline aldı.\" Annesi büyük olasılıkla kimi arayacaktır?",
+    "choices": [
+      "Marangozu",
+      "Terziyi",
+      "Bahçıvanı",
+      "Doktoru"
+    ],
+    "answer": 3,
+    "explanation": "Boğaz ağrısı ve ateş hastalık belirtisidir. Bu ipuçlarından annenin doktoru arayacağı çıkarılır."
+  },
+  {
+    "id": "tr-4-6-10",
+    "unit": "tr-4-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Karınca bütün yaz yiyecek topladı. Ağustos böceği ise saz çaldı. Kış gelince ağustos böceği aç kaldı.\" Bu metnin ana fikri nedir?",
+    "choices": [
+      "Müzik insanı dinlendirir.",
+      "Zamanında çalışan rahat eder.",
+      "Kış mevsimi çok soğuktur.",
+      "Karıncalar çok küçüktür."
+    ],
+    "answer": 1,
+    "explanation": "Çalışan karınca kışı rahat geçirmiş, çalışmayan ağustos böceği aç kalmıştır. Metin zamanında çalışmayı öğütler."
+  }
+]
