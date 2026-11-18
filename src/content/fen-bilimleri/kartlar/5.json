@@ -1,0 +1,138 @@
+[
+  {
+    "kind": "pairs",
+    "id": "fen-5-1-ay-evreleri",
+    "unit": "fen-5-1",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanim} Ay evresi hangisidir?", "answer": "evre" },
+      { "prompt": "Ay'ın ana evrelerinde {evre} evresinden hemen sonra hangi ana evre gelir?", "answer": "sonraki" }
+    ],
+    "statement": { "text": "{tanim} Ay evresi {evreDir}.", "swap": "evreDir" },
+    "explanation": "{aciklama} Ana evrelerin sırası: yeni ay, ilk dördün, dolunay, son dördün.",
+    "items": [
+      { "id": "yeni-ay", "evre": "Yeni ay", "evreDir": "yeni aydır", "sonraki": "İlk dördün", "tanim": "Ay'ın Dünya'ya dönük yüzünün hiç aydınlık görünmediği", "aciklama": "Yeni ay evresinde Ay'ın Dünya'ya dönük yüzü Güneş ışığı almaz, bu yüzden Ay görünmez." },
+      { "id": "ilk-dordun", "evre": "İlk dördün", "evreDir": "ilk dördündür", "sonraki": "Dolunay", "tanim": "Yeni aydan yaklaşık bir hafta sonra görülen", "aciklama": "İlk dördün, yeni aydan yaklaşık bir hafta sonra görülür; Ay yarım daire biçiminde görünür." },
+      { "id": "dolunay", "evre": "Dolunay", "evreDir": "dolunaydır", "sonraki": "Son dördün", "tanim": "Ay'ın Dünya'ya dönük yüzünün tamamının aydınlık göründüğü", "aciklama": "Dolunay evresinde Ay'ın Dünya'ya dönük yüzünün tamamı aydınlıktır; Ay parlak bir daire biçiminde görünür." },
+      { "id": "son-dordun", "evre": "Son dördün", "evreDir": "son dördündür", "sonraki": "Yeni ay", "tanim": "Dolunaydan yaklaşık bir hafta sonra görülen", "aciklama": "Son dördün, dolunaydan yaklaşık bir hafta sonra görülür; Ay yine yarım daire biçiminde görünür." }
+    ],
+    "distractors": { "evre": ["Hilal", "Şişkin ay"] }
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-5-1-gok-cisimleri",
+    "unit": "fen-5-1",
+    "difficulty": 1,
+    "questions": [{ "prompt": "{cisim} ne tür bir gök cismidir?", "answer": "tur" }],
+    "statement": { "text": "{cisim} bir {turDir}.", "swap": "turDir" },
+    "explanation": "{aciklama}",
+    "items": [
+      { "id": "gunes", "cisim": "Güneş", "tur": "Yıldız", "turDir": "yıldızdır", "aciklama": "Güneş bir yıldızdır; kendi ısı ve ışığını üretir." },
+      { "id": "dunya", "cisim": "Dünya", "tur": "Gezegen", "turDir": "gezegendir", "aciklama": "Dünya bir gezegendir; Güneş'in etrafında dolanır ve ışığını Güneş'ten alır." },
+      { "id": "ay", "cisim": "Ay", "tur": "Uydu", "turDir": "uydudur", "aciklama": "Ay bir uydudur; Dünya'nın etrafında dolanır ve Güneş'ten aldığı ışığı yansıtır." }
+    ],
+    "distractors": { "tur": ["Kuyruklu yıldız", "Gök taşı"] }
+  },
+  {
+    "kind": "list",
+    "id": "fen-5-2-surtunme",
+    "unit": "fen-5-2",
+    "difficulty": 2,
+    "positive": "Hangisi sürtünmeyi azaltmak için yapılır?",
+    "negative": "Hangisi sürtünmeyi artırmak için yapılır?",
+    "statement": "{item}, sürtünmeyi azaltmak için yapılan bir uygulamadır.",
+    "explanation": "Yağlama, tekerlek kullanma ve yüzeyi pürüzsüzleştirme sürtünmeyi azaltır. Kar zinciri, kum, dişli taban ve toz ise sürtünmeyi artırarak kaymayı önler.",
+    "members": ["Kapı menteşelerini yağlamak", "Valizlere tekerlek takmak", "Kızakların altını pürüzsüz yapmak", "Bisiklet zincirini yağlamak"],
+    "nonMembers": ["Araç lastiklerine kar zinciri takmak", "Buzlu yola kum dökmek", "Ayakkabı tabanlarını dişli yapmak", "Halterden önce ellere toz sürmek"]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-5-3-hucre-yapilari",
+    "unit": "fen-5-3",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanim} yapı hangisidir?", "answer": "yapi" },
+      { "prompt": "Hücrede {yapiEk} görevi nedir?", "answer": "gorev" }
+    ],
+    "statement": { "text": "{tanim} yapı {yapiDir}.", "swap": "yapiDir" },
+    "explanation": "{aciklama}",
+    "items": [
+      { "id": "cekirdek", "yapi": "Çekirdek", "yapiEk": "çekirdeğin", "yapiDir": "çekirdektir", "tanim": "Hücrenin yönetim ve denetim merkezi olan", "gorev": "Hücreyi yönetmek ve denetlemek", "aciklama": "Çekirdek, hücrenin yönetim ve denetim merkezidir; hücredeki yaşamsal olayları yönetir." },
+      { "id": "mitokondri", "yapi": "Mitokondri", "yapiEk": "mitokondrinin", "yapiDir": "mitokondridir", "tanim": "Hücrenin ihtiyaç duyduğu enerjiyi üreten", "gorev": "Enerji üretmek", "aciklama": "Mitokondri, hücrenin ihtiyaç duyduğu enerjiyi üretir. Enerji ihtiyacı fazla olan hücrelerde sayısı çoktur." },
+      { "id": "kloroplast", "yapi": "Kloroplast", "yapiEk": "kloroplastın", "yapiDir": "kloroplasttır", "tanim": "Bitki hücresinde fotosentezin gerçekleştiği", "gorev": "Fotosentez yaparak besin üretmek", "aciklama": "Kloroplast bitki hücresinde bulunur; fotosentezle besin ve oksijen üretir. Bitkiye yeşil rengini verir." },
+      { "id": "koful", "yapi": "Koful", "yapiEk": "kofulun", "yapiDir": "kofuldur", "tanim": "Hücrede su, besin ve atık maddeleri depolayan", "gorev": "Su, besin ve atık maddeleri depolamak", "aciklama": "Koful depolama görevi yapar. Bitki hücrelerinde büyük ve az sayıda, hayvan hücrelerinde küçük ve çok sayıdadır." },
+      { "id": "ribozom", "yapi": "Ribozom", "yapiEk": "ribozomun", "yapiDir": "ribozomdur", "tanim": "Hücrede protein üretiminde görev alan", "gorev": "Protein üretmek", "aciklama": "Ribozom, hücrede protein üretir. Hücrenin en küçük organelidir." },
+      { "id": "hucre-zari", "yapi": "Hücre zarı", "yapiEk": "hücre zarının", "yapiDir": "hücre zarıdır", "tanim": "Hücreye madde giriş çıkışını denetleyen", "gorev": "Madde giriş çıkışını denetlemek", "aciklama": "Hücre zarı hücreyi çevreler; canlı, esnek ve seçici geçirgendir. Hücreye madde giriş çıkışını denetler." },
+      { "id": "hucre-duvari", "yapi": "Hücre duvarı", "yapiEk": "hücre duvarının", "yapiDir": "hücre duvarıdır", "tanim": "Bitki hücresine sertlik ve dayanıklılık veren", "gorev": "Bitki hücresine sertlik ve dayanıklılık vermek", "aciklama": "Hücre duvarı bitki hücresinde hücre zarının dışında bulunur; cansızdır, hücreye sertlik ve dayanıklılık verir." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-5-4-saydamlik",
+    "unit": "fen-5-4",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{tanim} maddelere ne ad verilir?", "answer": "tur" },
+      { "prompt": "{ornek}, ışığı geçirme durumuna göre hangi gruptadır?", "answer": "tur" }
+    ],
+    "statement": { "text": "{ornek}, {turEk} örnektir.", "swap": "turEk" },
+    "explanation": "{aciklama}",
+    "items": [
+      { "id": "saydam", "tur": "Saydam madde", "turEk": "saydam maddelere", "tanim": "Işığın tamamına yakınını geçiren", "ornek": "Temiz pencere camı", "aciklama": "Saydam maddeler ışığın tamamına yakınını geçirir; arkalarındaki cisimler net görülür. Pencere camı, hava ve temiz su saydamdır." },
+      { "id": "yari-saydam", "tur": "Yarı saydam madde", "turEk": "yarı saydam maddelere", "tanim": "Işığın yalnızca bir kısmını geçiren", "ornek": "Buzlu cam", "aciklama": "Yarı saydam maddeler ışığın bir kısmını geçirir; arkalarındaki cisimler bulanık görülür. Buzlu cam ve yağlı kâğıt yarı saydamdır." },
+      { "id": "opak", "tur": "Opak madde", "turEk": "opak maddelere", "tanim": "Işığı hiç geçirmeyen", "ornek": "Tahta kapı", "aciklama": "Opak maddeler ışığı geçirmez; arkalarındaki cisimler görülmez ve arkalarında tam gölge oluşur. Tahta, karton ve metal opaktır." }
+    ],
+    "distractors": { "tur": ["Parlak madde"] }
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-5-5-hal-degisimleri",
+    "unit": "fen-5-5",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Maddenin {gecis} geçmesine ne ad verilir?", "answer": "ad" },
+      { "prompt": "{ornek} hangi hâl değişimine örnektir?", "answer": "ad" }
+    ],
+    "statement": { "text": "{ad}, maddenin {gecis} geçmesidir.", "swap": "gecis" },
+    "explanation": "{ad}, maddenin {gecis} geçmesidir. {ek}",
+    "items": [
+      { "id": "erime", "ad": "Erime", "gecis": "ısı alarak katı hâlden sıvı hâle", "ornek": "Tavadaki tereyağının sıvılaşması", "ek": "Tereyağı ve buz ısı alınca erir." },
+      { "id": "donma", "ad": "Donma", "gecis": "ısı vererek sıvı hâlden katı hâle", "ornek": "Kışın göl yüzeyinin buz tutması", "ek": "Su 0 °C'ta ısı vererek donar." },
+      { "id": "buharlasma", "ad": "Buharlaşma", "gecis": "ısı alarak sıvı hâlden gaz hâle", "ornek": "Islak çamaşırların kuruması", "ek": "Buharlaşma her sıcaklıkta gerçekleşir; çamaşırlar bu yolla kurur." },
+      { "id": "yogusma", "ad": "Yoğuşma", "gecis": "ısı vererek gaz hâlden sıvı hâle", "ornek": "Soğuk su dolu bardağın dışında su damlalarının oluşması", "ek": "Havadaki su buharı soğuk yüzeye değince yoğuşur." },
+      { "id": "sublimlesme", "ad": "Süblimleşme", "gecis": "ısı alarak katı hâlden doğrudan gaz hâle", "ornek": "Dolaptaki naftalinin zamanla küçülmesi", "ek": "Naftalin sıvılaşmadan gaz hâle geçer." },
+      { "id": "kiragilasma", "ad": "Kırağılaşma", "gecis": "ısı vererek gaz hâlden doğrudan katı hâle", "ornek": "Soğuk kış sabahlarında otların üzerinde buz kristallerinin oluşması", "ek": "Soğuk havada su buharı sıvılaşmadan buz kristallerine dönüşür." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-5-6-devre-elemanlari",
+    "unit": "fen-5-6",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "Elektrik devresinde {gorev} eleman hangisidir?", "answer": "eleman" },
+      { "prompt": "Elektrik devresinde {elemanEk} görevi nedir?", "answer": "gorevSik" }
+    ],
+    "statement": { "text": "{eleman}, elektrik devresinde {gorev} elemandır.", "swap": "gorev" },
+    "explanation": "{eleman}, elektrik devresinde {gorev} elemandır. {ek}",
+    "items": [
+      { "id": "pil", "eleman": "Pil", "elemanEk": "pilin", "gorev": "elektrik enerjisini sağlayan", "gorevSik": "Elektrik enerjisi sağlamak", "ek": "Pil sayısı arttıkça ampul daha parlak yanar." },
+      { "id": "ampul", "eleman": "Ampul", "elemanEk": "ampulün", "gorev": "elektrik enerjisini ışığa dönüştüren", "gorevSik": "Elektrik enerjisini ışığa dönüştürmek", "ek": "Devre tamamlandığında ampul ışık verir." },
+      { "id": "anahtar", "eleman": "Anahtar", "elemanEk": "anahtarın", "gorev": "devreyi açıp kapatan", "gorevSik": "Devreyi açıp kapatmak", "ek": "Anahtar kapalıyken ampul yanar, açıkken söner." },
+      { "id": "kablo", "eleman": "Bağlantı kablosu", "elemanEk": "bağlantı kablosunun", "gorev": "elemanları birbirine bağlayıp elektriği ileten", "gorevSik": "Elemanları birbirine bağlayıp elektriği iletmek", "ek": "Kablolar elektriği pilden ampule taşır." },
+      { "id": "duy", "eleman": "Duy", "elemanEk": "duyun", "gorev": "ampulün takıldığı", "gorevSik": "Ampulü devreye bağlamak", "ek": "Duy, ampulün devreye bağlanmasını sağlar." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "fen-5-7-geri-donusum",
+    "unit": "fen-5-7",
+    "difficulty": 1,
+    "positive": "Hangisi geri dönüşüm kutusuna atılması gereken bir atıktır?",
+    "negative": "Hangisi geri dönüşüm kutusuna atılmaz?",
+    "statement": "{item}, geri dönüşüm kutusuna atılması gereken bir atıktır.",
+    "explanation": "Cam, plastik, metal ve kâğıt atıklar geri dönüşüm kutusuna atılır: {members}. Yemek artığı, çay posası ve kullanılmış mendil gibi atıklar bu kutulara atılmaz.",
+    "members": ["Cam kavanoz", "Plastik şişe", "Alüminyum içecek kutusu", "Eski gazete", "Karton kutu"],
+    "nonMembers": ["Yemek artığı", "Kullanılmış kâğıt mendil", "Çay posası", "Meyve kabuğu"]
+  }
+]

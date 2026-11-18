@@ -1,0 +1,883 @@
+[
+  {
+    "id": "fen-4-1-01",
+    "unit": "fen-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yer kabuğunu oluşturan, farklı büyüklüklerdeki taş kütlelerine ne ad verilir?",
+    "choices": [
+      "Kayaç",
+      "Fosil",
+      "Maden",
+      "Humus"
+    ],
+    "answer": 0,
+    "explanation": "Yer kabuğunun kara parçaları kayaçlardan oluşur. Kayaçlar halk arasında taş ya da kaya olarak bilinir."
+  },
+  {
+    "id": "fen-4-1-02",
+    "unit": "fen-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Dünya, kendi ekseni etrafındaki bir tam dönüşünü ne kadar sürede tamamlar?",
+    "choices": [
+      "12 saat",
+      "24 saat",
+      "30 gün",
+      "365 gün"
+    ],
+    "answer": 1,
+    "explanation": "Dünya kendi ekseni etrafındaki dönüşünü 24 saatte, yani bir günde tamamlar."
+  },
+  {
+    "id": "fen-4-1-03",
+    "unit": "fen-4-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Gece ile gündüzün birbirini izlemesinin sebebi, Dünya'nın kendi ekseni etrafında dönmesidir.",
+    "answer": true,
+    "explanation": "Dünya dönerken Güneş'e bakan yüzü aydınlık olur ve gündüzü yaşar; öteki yüzü karanlıkta kalır ve geceyi yaşar."
+  },
+  {
+    "id": "fen-4-1-04",
+    "unit": "fen-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Dünya'nın Güneş etrafındaki bir tam dolanımı ne kadar sürer?",
+    "choices": [
+      "24 saat",
+      "30 gün",
+      "365 gün 6 saat",
+      "7 gün"
+    ],
+    "answer": 2,
+    "explanation": "Dünya, Güneş etrafındaki dolanımını 365 gün 6 saatte tamamlar. Bu süre bir yıldır."
+  },
+  {
+    "id": "fen-4-1-05",
+    "unit": "fen-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yer kabuğundan çıkarılan, işlenerek kullanılan ve ekonomik değeri olan minerallere ne denir?",
+    "choices": [
+      "Fosil",
+      "Çakıl",
+      "Toprak",
+      "Maden"
+    ],
+    "answer": 3,
+    "explanation": "Ekonomik değeri olan mineraller madendir. Demir, bakır, altın ve bor birer madendir."
+  },
+  {
+    "id": "fen-4-1-06",
+    "unit": "fen-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Fosilleri inceleyen bilim insanlarına ne ad verilir?",
+    "choices": [
+      "Astronom",
+      "Meteorolog",
+      "Paleontolog",
+      "Botanikçi"
+    ],
+    "answer": 2,
+    "explanation": "Fosilleri inceleyen bilim insanlarına paleontolog (fosil bilimci) denir. Fosiller geçmişte yaşamış canlılar hakkında bilgi verir."
+  },
+  {
+    "id": "fen-4-1-07",
+    "unit": "fen-4-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir canlı kalıntısının fosile dönüşmesi birkaç gün sürer.",
+    "answer": false,
+    "explanation": "Fosil oluşumu çok uzun, milyonlarca yıl sürebilen bir süreçtir. Canlı kalıntıları kayaç tabakaları arasında zamanla taşlaşır."
+  },
+  {
+    "id": "fen-4-1-08",
+    "unit": "fen-4-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bor, ülkemizde çıkarılan önemli madenlerden biridir.",
+    "answer": true,
+    "explanation": "Türkiye bor madeni bakımından çok zengindir. Bor; cam, seramik ve temizlik ürünleri gibi pek çok alanda kullanılır."
+  },
+  {
+    "id": "fen-4-1-09",
+    "unit": "fen-4-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Güneş'in gün boyunca gökyüzünde yer değiştiriyormuş gibi görünmesinin sebebi nedir?",
+    "choices": [
+      "Güneş'in Dünya etrafında dolanması",
+      "Dünya'nın kendi ekseni etrafında dönmesi",
+      "Ay'ın Dünya etrafında dolanması",
+      "Bulutların hareket etmesi"
+    ],
+    "answer": 1,
+    "explanation": "Güneş, Dünya'nın etrafında dolanmaz. Dünya kendi ekseni etrafında döndüğü için bize Güneş hareket ediyormuş gibi görünür."
+  },
+  {
+    "id": "fen-4-2-01",
+    "unit": "fen-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi protein bakımından zengin bir besindir?",
+    "choices": [
+      "Bal",
+      "Zeytinyağı",
+      "Yumurta",
+      "Ekmek"
+    ],
+    "answer": 2,
+    "explanation": "Yumurta, et, süt, balık ve kuru baklagiller protein bakımından zengindir. Bal ve ekmek karbonhidrat, zeytinyağı ise yağ içerir."
+  },
+  {
+    "id": "fen-4-2-02",
+    "unit": "fen-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Vücudumuzun enerji ihtiyacını karşılamak için ilk sırada kullandığı besin içeriği hangisidir?",
+    "choices": [
+      "Vitaminler",
+      "Karbonhidratlar",
+      "Su",
+      "Mineraller"
+    ],
+    "answer": 1,
+    "explanation": "Karbonhidratlar vücudun temel enerji kaynağıdır. Ekmek, makarna, pirinç ve patates karbonhidrat bakımından zengindir."
+  },
+  {
+    "id": "fen-4-2-03",
+    "unit": "fen-4-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Paketli besinleri satın alırken son kullanma tarihine bakmak gerekir.",
+    "answer": true,
+    "explanation": "Son kullanma tarihi geçmiş besinler bozulmuş olabilir ve sağlığımıza zarar verebilir."
+  },
+  {
+    "id": "fen-4-2-04",
+    "unit": "fen-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Büyüme, gelişme ve yaraların onarılmasında en çok görev alan besin içeriği hangisidir?",
+    "choices": [
+      "Karbonhidratlar",
+      "Yağlar",
+      "Su",
+      "Proteinler"
+    ],
+    "answer": 3,
+    "explanation": "Proteinler yapıcı ve onarıcı besin içeriğidir. Büyümede ve yıpranan dokuların onarılmasında görev alır."
+  },
+  {
+    "id": "fen-4-2-05",
+    "unit": "fen-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Dengeli beslenme ne demektir?",
+    "choices": [
+      "Her besin içeriğinden yeterli miktarda almak",
+      "Yalnızca sevdiğimiz besinleri yemek",
+      "Bol miktarda et yemek",
+      "Günde bir öğün yemek"
+    ],
+    "answer": 0,
+    "explanation": "Dengeli beslenme, vücudumuzun ihtiyaç duyduğu bütün besin içeriklerini yeterli miktarda almaktır."
+  },
+  {
+    "id": "fen-4-2-06",
+    "unit": "fen-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi vitamin bakımından en zengin besindir?",
+    "choices": [
+      "Pirinç pilavı",
+      "Portakal",
+      "Ekmek",
+      "Şekerleme"
+    ],
+    "answer": 1,
+    "explanation": "Taze sebze ve meyveler vitamin bakımından zengindir. Portakal özellikle C vitamini içerir."
+  },
+  {
+    "id": "fen-4-2-07",
+    "unit": "fen-4-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Su, vücudumuza enerji veren bir besin içeriğidir.",
+    "answer": false,
+    "explanation": "Su enerji vermez ama yaşamsal olayların gerçekleşmesi için gereklidir. Enerjiyi karbonhidratlar, yağlar ve proteinlerden sağlarız."
+  },
+  {
+    "id": "fen-4-2-08",
+    "unit": "fen-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Sigara içmeyen bir kişinin, yanında içilen sigaranın dumanından zarar görmesine ne denir?",
+    "choices": [
+      "Aktif içicilik",
+      "Bağımlılık",
+      "Pasif içicilik",
+      "Hava kirliliği"
+    ],
+    "answer": 2,
+    "explanation": "Sigara içilen ortamda bulunan kişiler de dumanı solur ve zarar görür. Bu duruma pasif içicilik denir."
+  },
+  {
+    "id": "fen-4-2-09",
+    "unit": "fen-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kahvaltıda yalnızca reçelli ekmek yiyen bir çocuğun öğününde en eksik kalan besin içeriği hangisidir?",
+    "choices": [
+      "Karbonhidrat",
+      "Protein",
+      "Şeker",
+      "Nişasta"
+    ],
+    "answer": 1,
+    "explanation": "Reçel ve ekmek karbonhidrat bakımından zengindir. Öğüne yumurta, peynir ya da süt eklenirse protein eksiği giderilir."
+  },
+  {
+    "id": "fen-4-3-01",
+    "unit": "fen-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Duran bir topa ayağımızla vurduğumuzda uyguladığımız kuvvet topa ne yapar?",
+    "choices": [
+      "Topu hareket ettirir",
+      "Topu ağırlaştırır",
+      "Topun rengini değiştirir",
+      "Topu büyütür"
+    ],
+    "answer": 0,
+    "explanation": "Kuvvet duran cisimleri hareket ettirebilir. Vurduğumuz top bu yüzden harekete geçer."
+  },
+  {
+    "id": "fen-4-3-02",
+    "unit": "fen-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Mıknatıs hangisini çeker?",
+    "choices": [
+      "Plastik kaşık",
+      "Tahta cetvel",
+      "Demir çivi",
+      "Cam bardak"
+    ],
+    "answer": 2,
+    "explanation": "Mıknatıs demir, nikel ve kobalt içeren maddeleri çeker. Plastik, tahta ve camı çekmez."
+  },
+  {
+    "id": "fen-4-3-03",
+    "unit": "fen-4-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Mıknatısın N ve S olmak üzere iki kutbu vardır.",
+    "answer": true,
+    "explanation": "Her mıknatısın N (kuzey) ve S (güney) olmak üzere iki kutbu bulunur."
+  },
+  {
+    "id": "fen-4-3-04",
+    "unit": "fen-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Oyun hamurunu elimizle sıktığımızda hamurun hangi özelliği değişir?",
+    "choices": [
+      "Rengi",
+      "Şekli",
+      "Kokusu",
+      "Tadı"
+    ],
+    "answer": 1,
+    "explanation": "Kuvvet cisimlerin şeklini değiştirebilir. Sıkılan oyun hamuru yeni bir şekil alır."
+  },
+  {
+    "id": "fen-4-3-05",
+    "unit": "fen-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İki mıknatısın aynı kutupları birbirine yaklaştırılırsa ne olur?",
+    "choices": [
+      "Birbirini çeker",
+      "Hiç etkileşmez",
+      "Mıknatıslık özelliği kaybolur",
+      "Birbirini iter"
+    ],
+    "answer": 3,
+    "explanation": "Mıknatısların aynı kutupları (N-N ya da S-S) birbirini iter, zıt kutupları (N-S) birbirini çeker."
+  },
+  {
+    "id": "fen-4-3-06",
+    "unit": "fen-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kaleci, kaleye doğru gelen topu tutuyor. Kuvvet burada hangi etkiyi göstermiştir?",
+    "choices": [
+      "Hızlandırma",
+      "Döndürme",
+      "Durdurma",
+      "Şekil değiştirme"
+    ],
+    "answer": 2,
+    "explanation": "Kuvvet hareket eden cisimleri durdurabilir. Kaleci topa kuvvet uygulayarak onu durdurur."
+  },
+  {
+    "id": "fen-4-3-07",
+    "unit": "fen-4-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Mıknatıs bir cismi çekebilmek için ona dokunmak zorundadır.",
+    "answer": false,
+    "explanation": "Mıknatıs belirli bir uzaklıktan, dokunmadan da çekme kuvveti uygular. Ataşın mıknatısa doğru kendiliğinden gelmesi bunu gösterir."
+  },
+  {
+    "id": "fen-4-3-08",
+    "unit": "fen-4-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir çubuk mıknatıs ataş dolu kaba daldırılıyor. Ataşlar en çok mıknatısın neresinde toplanır?",
+    "choices": [
+      "Uçlarındaki kutuplarda",
+      "Tam ortasında",
+      "Her yerinde eşit miktarda"
+    ],
+    "answer": 0,
+    "explanation": "Mıknatısın çekim kuvveti kutuplarda en fazladır. Bu yüzden ataşlar en çok uçlarda toplanır, ortada çok az tutunur."
+  },
+  {
+    "id": "fen-4-3-09",
+    "unit": "fen-4-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cisim, üzerine uygulanan kuvvet kalkınca eski şekline döner?",
+    "choices": [
+      "Cam bardak",
+      "Oyun hamuru",
+      "Buruşturulan kâğıt",
+      "Sünger"
+    ],
+    "answer": 3,
+    "explanation": "Sünger esnek bir cisimdir; sıkılınca şekli değişir, bırakılınca eski şekline döner. Oyun hamuru ve kâğıt ise yeni şeklinde kalır."
+  },
+  {
+    "id": "fen-4-4-01",
+    "unit": "fen-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir maddenin kütlesi hangi araçla ölçülür?",
+    "choices": [
+      "Termometre",
+      "Cetvel",
+      "Terazi",
+      "Kronometre"
+    ],
+    "answer": 2,
+    "explanation": "Kütle terazi ile ölçülür. Kütle birimleri gram (g) ve kilogramdır (kg)."
+  },
+  {
+    "id": "fen-4-4-02",
+    "unit": "fen-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Buzun ısı alarak suya dönüşmesine ne denir?",
+    "choices": [
+      "Donma",
+      "Erime",
+      "Buharlaşma",
+      "Süzülme"
+    ],
+    "answer": 1,
+    "explanation": "Katı bir maddenin ısı alarak sıvı hâle geçmesine erime denir. Buz ısı alınca eriyerek suya dönüşür."
+  },
+  {
+    "id": "fen-4-4-03",
+    "unit": "fen-4-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Sıvıların hacmi dereceli kap ile ölçülebilir.",
+    "answer": true,
+    "explanation": "Sıvıların hacmi dereceli kaplarla ölçülür. Hacim birimleri litre (L) ve mililitredir (mL)."
+  },
+  {
+    "id": "fen-4-4-04",
+    "unit": "fen-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Islak çamaşırların ipte kuruması hangi olaya örnektir?",
+    "choices": [
+      "Buharlaşma",
+      "Erime",
+      "Donma",
+      "Eleme"
+    ],
+    "answer": 0,
+    "explanation": "Çamaşırdaki su ısı alarak gaz hâle geçer ve havaya karışır. Sıvının gaz hâle geçmesine buharlaşma denir."
+  },
+  {
+    "id": "fen-4-4-05",
+    "unit": "fen-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi bir karışımdır?",
+    "choices": [
+      "Demir",
+      "Saf su",
+      "Bakır",
+      "Tuzlu su"
+    ],
+    "answer": 3,
+    "explanation": "Tuzlu su, su ile tuzun bir araya gelmesiyle oluşan bir karışımdır. Demir, bakır ve saf su ise saf maddelerdir."
+  },
+  {
+    "id": "fen-4-4-06",
+    "unit": "fen-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "2 kilogram kaç gramdır?",
+    "choices": [
+      "20",
+      "200",
+      "2000",
+      "20 000"
+    ],
+    "answer": 2,
+    "explanation": "1 kilogram 1000 gramdır. Buna göre 2 kilogram 2 × 1000 = 2000 gram eder."
+  },
+  {
+    "id": "fen-4-4-07",
+    "unit": "fen-4-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir sıvı başka bir kaba boşaltıldığında şekli değişir ama miktarı değişmez.",
+    "answer": true,
+    "explanation": "Sıvıların belirli bir şekli yoktur, konuldukları kabın şeklini alırlar. Kap değişince sıvının miktarı aynı kalır."
+  },
+  {
+    "id": "fen-4-4-08",
+    "unit": "fen-4-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Gazların belirli bir şekli vardır.",
+    "answer": false,
+    "explanation": "Gazların belirli bir şekli yoktur. Bulundukları kabın her yerine yayılır ve kabın şeklini alırlar."
+  },
+  {
+    "id": "fen-4-4-09",
+    "unit": "fen-4-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Boş bir kabın kütlesi 150 g, su doluyken kütlesi 400 g'dır. Kaptaki suyun kütlesi kaç gramdır?",
+    "choices": [
+      "150",
+      "250",
+      "400",
+      "550"
+    ],
+    "answer": 1,
+    "explanation": "Boş kabın kütlesine dara denir. Suyun kütlesi, toplam kütleden dara çıkarılarak bulunur: 400 − 150 = 250 g."
+  },
+  {
+    "id": "fen-4-4-10",
+    "unit": "fen-4-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Pirinç ile un karışımını ayırmak için en uygun yöntem hangisidir?",
+    "choices": [
+      "Mıknatısla ayırma",
+      "Süzme",
+      "Yüzdürme",
+      "Eleme"
+    ],
+    "answer": 3,
+    "explanation": "Un taneleri küçük, pirinç taneleri büyüktür. Elekten un geçer, pirinç üstte kalır. Tanecik büyüklüğü farklı katılar eleme ile ayrılır."
+  },
+  {
+    "id": "fen-4-5-01",
+    "unit": "fen-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi geçmişte kullanılan bir aydınlatma aracıdır?",
+    "choices": [
+      "LED ampul",
+      "Floresan lamba",
+      "Kandil",
+      "El feneri"
+    ],
+    "answer": 2,
+    "explanation": "Geçmişte aydınlanmak için meşale, kandil, mum ve gaz lambası kullanılırdı. LED ampul ve floresan günümüz teknolojileridir."
+  },
+  {
+    "id": "fen-4-5-02",
+    "unit": "fen-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ampulü geliştirerek evlerde yaygın biçimde kullanılmasını sağlayan mucit kimdir?",
+    "choices": [
+      "Graham Bell",
+      "Thomas Edison",
+      "Isaac Newton",
+      "Galileo Galilei"
+    ],
+    "answer": 1,
+    "explanation": "Thomas Edison, uzun süre yanabilen ampulü geliştirerek elektrikli aydınlatmanın yaygınlaşmasını sağlamıştır."
+  },
+  {
+    "id": "fen-4-5-03",
+    "unit": "fen-4-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Gereksiz yere yanan lambaları söndürmek enerji tasarrufu sağlar.",
+    "answer": true,
+    "explanation": "Kullanılmayan lambaları söndürmek elektrik tüketimini azaltır; hem aile bütçesine hem ülke ekonomisine katkı sağlar."
+  },
+  {
+    "id": "fen-4-5-04",
+    "unit": "fen-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi ışık kirliliğinin bir sonucudur?",
+    "choices": [
+      "Havanın soğuması",
+      "Seslerin daha az duyulması",
+      "Yağışların azalması",
+      "Geceleri yıldızların zor görülmesi"
+    ],
+    "answer": 3,
+    "explanation": "Yanlış yerde, yanlış yönde ve gereğinden fazla kullanılan ışık gökyüzünü aydınlatır. Bu yüzden şehirlerde yıldızlar zor görülür."
+  },
+  {
+    "id": "fen-4-5-05",
+    "unit": "fen-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sokak lambalarının ışık kirliliğine yol açmaması için ışık nasıl kullanılmalıdır?",
+    "choices": [
+      "Yalnızca aydınlatılacak alana, aşağı doğru yönlendirilmeli",
+      "Gökyüzüne doğru yönlendirilmeli",
+      "Her yöne eşit yayılmalı",
+      "Gündüzleri de açık bırakılmalı"
+    ],
+    "answer": 0,
+    "explanation": "Işık yalnızca ihtiyaç duyulan yere yönlendirilmelidir. Gökyüzüne ve çevreye taşan ışık hem kirlilik hem enerji israfıdır."
+  },
+  {
+    "id": "fen-4-5-06",
+    "unit": "fen-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sesin şiddetini artırarak uzaktaki kişilere ulaşmasını sağlayan araç hangisidir?",
+    "choices": [
+      "Kulak tıkacı",
+      "Ses yalıtım süngeri",
+      "Megafon",
+      "Dürbün"
+    ],
+    "answer": 2,
+    "explanation": "Megafon sesi yükselterek uzağa ulaştırır. Kulak tıkacı ve yalıtım süngeri ise sesi azaltmak için kullanılır."
+  },
+  {
+    "id": "fen-4-5-07",
+    "unit": "fen-4-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Uzun süre yüksek sesle müzik dinlemek işitme sağlığına zarar verebilir.",
+    "answer": true,
+    "explanation": "Şiddetli sesler kulağa zarar verir ve zamanla işitme kaybına yol açabilir."
+  },
+  {
+    "id": "fen-4-5-08",
+    "unit": "fen-4-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Ses kirliliği yalnızca hayvanları etkiler, insan sağlığını etkilemez.",
+    "answer": false,
+    "explanation": "Ses kirliliği insanlarda baş ağrısı, dikkat dağınıklığı, uyku sorunları ve işitme kaybına yol açabilir."
+  },
+  {
+    "id": "fen-4-5-09",
+    "unit": "fen-4-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Yoğun trafiğin yanındaki bir okulda ses kirliliğini azaltmak için hangisi yapılabilir?",
+    "choices": [
+      "Pencereleri açık tutmak",
+      "Çift camlı pencere takmak ve bahçeye ağaç dikmek",
+      "Sınıflara hoparlör koymak",
+      "Zilin sesini yükseltmek"
+    ],
+    "answer": 1,
+    "explanation": "Çift cam ve ses yalıtımı gürültünün içeri girmesini azaltır. Ağaçlar da sesi bir ölçüde keser."
+  },
+  {
+    "id": "fen-4-5-10",
+    "unit": "fen-4-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Sahildeki yoğun ışıklar, yumurtadan yeni çıkan deniz kaplumbağası yavrularını nasıl etkiler?",
+    "choices": [
+      "Daha hızlı büyümelerini sağlar",
+      "Daha kolay beslenmelerini sağlar",
+      "Denize gitmek yerine ışığa yönelip yollarını şaşırırlar",
+      "Yüzmeyi daha çabuk öğrenirler"
+    ],
+    "answer": 2,
+    "explanation": "Yavrular denizi ay ışığının sudaki parlaklığına bakarak bulur. Sahildeki yapay ışıklar onları yanıltır ve karaya doğru yönlendirir."
+  },
+  {
+    "id": "fen-4-6-01",
+    "unit": "fen-4-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Dişlerimizi fırçalarken musluğu kapatmak hangi kaynağın tasarruflu kullanılmasını sağlar?",
+    "choices": [
+      "Elektrik",
+      "Kâğıt",
+      "Su",
+      "Besin"
+    ],
+    "answer": 2,
+    "explanation": "Diş fırçalarken musluğu kapatmak suyun boşa akmasını önler. Su, tasarruflu kullanılması gereken önemli bir kaynaktır."
+  },
+  {
+    "id": "fen-4-6-02",
+    "unit": "fen-4-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi geri dönüştürülebilen bir atıktır?",
+    "choices": [
+      "Cam şişe",
+      "Yemek artığı",
+      "Kullanılmış peçete",
+      "Islak mendil"
+    ],
+    "answer": 0,
+    "explanation": "Cam, kâğıt, plastik ve metal atıklar geri dönüştürülebilir. Cam şişeler eritilerek yeni cam ürünlere dönüştürülür."
+  },
+  {
+    "id": "fen-4-6-03",
+    "unit": "fen-4-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Kâğıtların geri dönüştürülmesi ağaçların korunmasına katkı sağlar.",
+    "answer": true,
+    "explanation": "Kâğıt ağaçtan üretilir. Atık kâğıtlar geri dönüştürüldüğünde yeni kâğıt için daha az ağaç kesilir."
+  },
+  {
+    "id": "fen-4-6-04",
+    "unit": "fen-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bilinçli bir tüketici alışverişte nasıl davranır?",
+    "choices": [
+      "Reklamı yapılan her ürünü alır",
+      "İhtiyacı olanı, ihtiyacı kadar alır",
+      "En pahalı ürünü seçer",
+      "Ürünün etiketini okumaz"
+    ],
+    "answer": 1,
+    "explanation": "Bilinçli tüketici ihtiyaç listesi yapar, ihtiyacı kadar alır, ürünün etiketine ve son kullanma tarihine bakar."
+  },
+  {
+    "id": "fen-4-6-05",
+    "unit": "fen-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kullanılmış maddelerin işlenerek yeniden kullanılabilir hâle getirilmesine ne denir?",
+    "choices": [
+      "Tüketim",
+      "Tasarruf",
+      "İsraf",
+      "Geri dönüşüm"
+    ],
+    "answer": 3,
+    "explanation": "Atık maddelerin çeşitli işlemlerden geçirilerek yeniden ham maddeye ve ürüne dönüştürülmesine geri dönüşüm denir."
+  },
+  {
+    "id": "fen-4-6-06",
+    "unit": "fen-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi elektrik tasarrufu sağlayan bir davranıştır?",
+    "choices": [
+      "Televizyonu izlemediğimizde açık bırakmak",
+      "Buzdolabının kapağını uzun süre açık tutmak",
+      "Gündüz perdeleri açıp güneş ışığından yararlanmak",
+      "Boş odada lambayı yanık bırakmak"
+    ],
+    "answer": 2,
+    "explanation": "Gündüz güneş ışığından yararlanırsak lamba yakmamıza gerek kalmaz. Böylece elektrik tüketimi azalır."
+  },
+  {
+    "id": "fen-4-6-07",
+    "unit": "fen-4-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Yaşam için gerekli kaynaklar sınırsız olduğundan tasarruf yapmaya gerek yoktur.",
+    "answer": false,
+    "explanation": "Su, elektrik ve besin gibi kaynaklar sınırlıdır. Gelecekte de yeterli kaynak bulunması için bu kaynaklar tasarruflu kullanılmalıdır."
+  },
+  {
+    "id": "fen-4-6-08",
+    "unit": "fen-4-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Cam şişeyi çöpe atmak yerine geri dönüşüm kutusuna atmanın en önemli yararı hangisidir?",
+    "choices": [
+      "Çöp kutusunun temiz kalması",
+      "Ham madde ve enerji tasarrufu sağlanması",
+      "Şişenin gözden uzaklaşması",
+      "Evde yer açılması"
+    ],
+    "answer": 1,
+    "explanation": "Geri dönüştürülen camdan yeni ürün yapmak için daha az ham madde ve daha az enerji harcanır; çöp miktarı da azalır."
+  },
+  {
+    "id": "fen-4-6-09",
+    "unit": "fen-4-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Su faturası çok yüksek gelen bir aile için hangi önlem su tüketimini en çok azaltır?",
+    "choices": [
+      "Lambaları söndürmek",
+      "Pencereleri kapalı tutmak",
+      "Atıkları türlerine göre ayırmak",
+      "Damlatan muslukları onarmak ve duş süresini kısaltmak"
+    ],
+    "answer": 3,
+    "explanation": "Damlatan musluklar her gün litrelerce suyun boşa gitmesine yol açar. Musluk onarımı ve kısa duş doğrudan su tasarrufu sağlar."
+  },
+  {
+    "id": "fen-4-7-01",
+    "unit": "fen-4-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Basit bir elektrik devresinde elektrik enerjisini sağlayan eleman hangisidir?",
+    "choices": [
+      "Ampul",
+      "Pil",
+      "Anahtar",
+      "Bağlantı kablosu"
+    ],
+    "answer": 1,
+    "explanation": "Pil, devrenin elektrik enerjisi kaynağıdır. Pil olmadan devreden elektrik geçmez ve ampul yanmaz."
+  },
+  {
+    "id": "fen-4-7-02",
+    "unit": "fen-4-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Elektrik devresini açıp kapatmaya yarayan eleman hangisidir?",
+    "choices": [
+      "Duy",
+      "Pil yatağı",
+      "Anahtar",
+      "Ampul"
+    ],
+    "answer": 2,
+    "explanation": "Anahtar devreyi açıp kapatarak elektriğin geçişini denetler. Evlerimizdeki lamba düğmeleri birer anahtardır."
+  },
+  {
+    "id": "fen-4-7-03",
+    "unit": "fen-4-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Basit bir elektrik devresinde ampul, elektrik enerjisini ışığa dönüştürür.",
+    "answer": true,
+    "explanation": "Devre tamamlandığında ampulden elektrik geçer ve ampul ışık verir."
+  },
+  {
+    "id": "fen-4-7-04",
+    "unit": "fen-4-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ampulün takıldığı devre elemanına ne ad verilir?",
+    "choices": [
+      "Pil yatağı",
+      "Anahtar",
+      "Fiş",
+      "Duy"
+    ],
+    "answer": 3,
+    "explanation": "Ampul duya takılır. Duy, ampulün devreye bağlanmasını sağlar."
+  },
+  {
+    "id": "fen-4-7-05",
+    "unit": "fen-4-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi basit bir elektrik devresinin elemanlarından biri olamaz?",
+    "choices": [
+      "Pil",
+      "Mıknatıs",
+      "Ampul",
+      "Bağlantı kablosu"
+    ],
+    "answer": 1,
+    "explanation": "Basit elektrik devresi pil, ampul, bağlantı kablosu ve anahtardan oluşur; pil yatağı ve duy da kullanılır. Mıknatıs devre elemanı değildir."
+  },
+  {
+    "id": "fen-4-7-06",
+    "unit": "fen-4-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "El fenerinin düğmesine basınca ışık yanar, yeniden basınca söner. Düğme hangi devre elemanının görevini yapar?",
+    "choices": [
+      "Anahtar",
+      "Pil",
+      "Ampul",
+      "Duy"
+    ],
+    "answer": 0,
+    "explanation": "El fenerinin düğmesi devreyi açıp kapatır. Bu, anahtarın görevidir."
+  },
+  {
+    "id": "fen-4-7-07",
+    "unit": "fen-4-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Anahtarı kapalı olan bir devrede pil, ampul ve kablolar sağlamsa ampul ışık verir.",
+    "answer": true,
+    "explanation": "Anahtar kapatıldığında devre tamamlanır ve elektrik ampule ulaşır. Anahtar açıkken devre tamamlanmaz, ampul yanmaz."
+  },
+  {
+    "id": "fen-4-7-08",
+    "unit": "fen-4-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Pili bitmiş bir devrede ampul ışık vermeye devam eder.",
+    "answer": false,
+    "explanation": "Pil devrenin enerji kaynağıdır. Pil bittiğinde devreye enerji sağlanamaz ve ampul söner."
+  },
+  {
+    "id": "fen-4-7-09",
+    "unit": "fen-4-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir devrede pil, ampul ve kablolar sağlam olduğu hâlde ampul yanmıyor. En olası sebep hangisidir?",
+    "choices": [
+      "Kabloların renkli olması",
+      "Ampulün küçük olması",
+      "Anahtarın açık olması",
+      "Pilin yeni olması"
+    ],
+    "answer": 2,
+    "explanation": "Bütün elemanlar sağlamsa sorun devrenin tamamlanmamasıdır. Anahtar açıkken elektrik ampule ulaşamaz."
+  },
+  {
+    "id": "fen-4-7-10",
+    "unit": "fen-4-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Çalışan bir devrede bağlantı kablolarından biri pilden ayrılırsa ne olur?",
+    "choices": [
+      "Ampul daha parlak yanar",
+      "Devre tamamlanmaz ve ampul söner",
+      "Pil kendiliğinden dolar",
+      "Hiçbir değişiklik olmaz"
+    ],
+    "answer": 1,
+    "explanation": "Ampulün yanması için elektriğin pilden çıkıp ampulden geçerek pile dönmesi gerekir. Kablo ayrılınca bu yol kesilir."
+  }
+]

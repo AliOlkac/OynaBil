@@ -1,0 +1,930 @@
+[
+  {
+    "id": "fen-5-1-01",
+    "unit": "fen-5-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Güneş ne tür bir gök cismidir?",
+    "choices": [
+      "Gezegen",
+      "Yıldız",
+      "Uydu",
+      "Gök taşı"
+    ],
+    "answer": 1,
+    "explanation": "Güneş, kendi ısı ve ışığını üreten bir yıldızdır. Dünya'mızın ısı ve ışık kaynağıdır."
+  },
+  {
+    "id": "fen-5-1-02",
+    "unit": "fen-5-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Dünya'nın tek doğal uydusu hangisidir?",
+    "choices": [
+      "Mars",
+      "Venüs",
+      "Ay",
+      "Güneş"
+    ],
+    "answer": 2,
+    "explanation": "Ay, Dünya'nın etrafında dolanan tek doğal uydusudur."
+  },
+  {
+    "id": "fen-5-1-03",
+    "unit": "fen-5-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Ay, kendi ışığını üreten bir ışık kaynağıdır.",
+    "answer": false,
+    "explanation": "Ay ışık üretmez. Güneş'ten aldığı ışığı yansıttığı için Dünya'dan parlak görünür."
+  },
+  {
+    "id": "fen-5-1-04",
+    "unit": "fen-5-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Güneş, Dünya ve Ay'ın şekli küreye benzer.",
+    "answer": true,
+    "explanation": "Üç gök cismi de küre şeklindedir. Büyüklükleri ise birbirinden çok farklıdır."
+  },
+  {
+    "id": "fen-5-1-05",
+    "unit": "fen-5-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Güneş, Dünya ve Ay'ın büyükten küçüğe doğru sıralanışı hangisidir?",
+    "choices": [
+      "Dünya, Güneş, Ay",
+      "Güneş, Dünya, Ay",
+      "Güneş, Ay, Dünya",
+      "Ay, Dünya, Güneş"
+    ],
+    "answer": 1,
+    "explanation": "En büyüğü Güneş, en küçüğü Ay'dır. Güneş, Dünya'dan çok uzakta olduğu için gökyüzünde küçük görünür."
+  },
+  {
+    "id": "fen-5-1-06",
+    "unit": "fen-5-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ay'ın yüzeyinde gök taşı çarpmalarıyla oluşan çukurlara ne ad verilir?",
+    "choices": [
+      "Vadi",
+      "Kanyon",
+      "Delta",
+      "Krater"
+    ],
+    "answer": 3,
+    "explanation": "Ay'ın yüzeyine çarpan gök taşları krater adı verilen çukurlar oluşturur. Ay'da yok denecek kadar az atmosfer bulunduğundan kraterler bozulmadan kalır."
+  },
+  {
+    "id": "fen-5-1-07",
+    "unit": "fen-5-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ay'ın ana evreleri oluş sırasına göre hangisinde doğru verilmiştir?",
+    "choices": [
+      "Yeni ay, ilk dördün, dolunay, son dördün",
+      "Yeni ay, dolunay, ilk dördün, son dördün",
+      "Dolunay, yeni ay, son dördün, ilk dördün",
+      "İlk dördün, son dördün, yeni ay, dolunay"
+    ],
+    "answer": 0,
+    "explanation": "Ay'ın ana evreleri sırasıyla yeni ay, ilk dördün, dolunay ve son dördündür. İki ana evre arasında yaklaşık bir hafta vardır."
+  },
+  {
+    "id": "fen-5-1-08",
+    "unit": "fen-5-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Dünya'dan bakıldığında Ay'ın hep aynı yüzü görülür.",
+    "answer": true,
+    "explanation": "Ay'ın kendi ekseni etrafında dönme süresi ile Dünya etrafında dolanma süresi eşittir. Bu yüzden Dünya'dan hep aynı yüzünü görürüz."
+  },
+  {
+    "id": "fen-5-1-09",
+    "unit": "fen-5-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Güneş'in kendi ekseni etrafında döndüğü hangi gözlemle anlaşılmıştır?",
+    "choices": [
+      "Ay'ın evrelerinin değişmesiyle",
+      "Gece ile gündüzün oluşmasıyla",
+      "Güneş lekelerinin zamanla yer değiştirmesiyle",
+      "Yıldızların geceleri görünmesiyle"
+    ],
+    "answer": 2,
+    "explanation": "Güneş'in yüzeyindeki lekelerin zamanla yer değiştirdiği gözlemlenmiştir. Bu, Güneş'in kendi ekseni etrafında döndüğünü gösterir."
+  },
+  {
+    "id": "fen-5-1-10",
+    "unit": "fen-5-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Ay'ın evrelerinin oluşmasının sebebi hangisidir?",
+    "choices": [
+      "Dünya'nın gölgesinin Ay'ın üzerine düşmesi",
+      "Ay'ın Dünya etrafında dolanırken aydınlık yüzünün farklı kısımlarının görülmesi",
+      "Ay'ın büyüyüp küçülmesi",
+      "Bulutların Ay'ı örtmesi"
+    ],
+    "answer": 1,
+    "explanation": "Ay'ın Güneş'e bakan yarısı hep aydınlıktır. Ay, Dünya etrafında dolanırken bu aydınlık yarının Dünya'dan görünen kısmı değişir ve evreler oluşur."
+  },
+  {
+    "id": "fen-5-2-01",
+    "unit": "fen-5-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kuvvetin büyüklüğü hangi araçla ölçülür?",
+    "choices": [
+      "Termometre",
+      "Dinamometre",
+      "Eşit kollu terazi",
+      "Dereceli silindir"
+    ],
+    "answer": 1,
+    "explanation": "Kuvvet dinamometre ile ölçülür. Dinamometrenin içindeki yay, uygulanan kuvvet arttıkça daha çok uzar."
+  },
+  {
+    "id": "fen-5-2-02",
+    "unit": "fen-5-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kuvvetin birimi hangisidir?",
+    "choices": [
+      "Kilogram",
+      "Metre",
+      "Litre",
+      "Newton"
+    ],
+    "answer": 3,
+    "explanation": "Kuvvetin birimi newtondur ve N harfi ile gösterilir."
+  },
+  {
+    "id": "fen-5-2-03",
+    "unit": "fen-5-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Sürtünme kuvveti, cisimlerin hareketini zorlaştıran bir kuvvettir.",
+    "answer": true,
+    "explanation": "Sürtünme kuvveti harekete zıt yönde etki eder; hareket eden cisimleri yavaşlatır ya da durdurur."
+  },
+  {
+    "id": "fen-5-2-04",
+    "unit": "fen-5-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Pürüzlü yüzeylerde sürtünme kuvveti, pürüzsüz yüzeylere göre daha büyüktür.",
+    "answer": true,
+    "explanation": "Yüzeyin pürüzlülüğü arttıkça sürtünme kuvveti artar. Bu yüzden halıda itilen bir kutu, cilalı zeminde itilenden daha çabuk durur."
+  },
+  {
+    "id": "fen-5-2-05",
+    "unit": "fen-5-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir cisme etki eden yer çekimi kuvvetine ne ad verilir?",
+    "choices": [
+      "Kütle",
+      "Ağırlık",
+      "Hacim",
+      "Sürtünme"
+    ],
+    "answer": 1,
+    "explanation": "Ağırlık, cisme etki eden yer çekimi kuvvetidir. Dinamometre ile ölçülür ve birimi newtondur."
+  },
+  {
+    "id": "fen-5-2-06",
+    "unit": "fen-5-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi sürtünmeyi azaltmak için yapılan bir uygulamadır?",
+    "choices": [
+      "Kışın araç lastiklerine zincir takmak",
+      "Buzlu yola kum dökmek",
+      "Kapı menteşesini yağlamak",
+      "Dişli tabanlı ayakkabı giymek"
+    ],
+    "answer": 2,
+    "explanation": "Yağlamak yüzeyleri kayganlaştırarak sürtünmeyi azaltır. Zincir, kum ve dişli taban ise sürtünmeyi artırarak kaymayı önler."
+  },
+  {
+    "id": "fen-5-2-07",
+    "unit": "fen-5-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Dinamometrenin kuvveti ölçmesini sağlayan temel parçası hangisidir?",
+    "choices": [
+      "Yay",
+      "Mıknatıs",
+      "Pil",
+      "Mercek"
+    ],
+    "answer": 0,
+    "explanation": "Dinamometrenin içinde esnek bir yay bulunur. Yay kuvvetin büyüklüğüne göre uzar ve gösterge ölçülen değeri gösterir."
+  },
+  {
+    "id": "fen-5-2-08",
+    "unit": "fen-5-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir astronotun Ay'daki kütlesi, Dünya'daki kütlesinden küçüktür.",
+    "answer": false,
+    "explanation": "Kütle, bir cisimdeki madde miktarıdır ve bulunulan yere göre değişmez. Ay'da değişen astronotun kütlesi değil, ağırlığıdır."
+  },
+  {
+    "id": "fen-5-2-09",
+    "unit": "fen-5-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Dünya'dan Ay'a götürülen bir cisim için hangisi doğrudur?",
+    "choices": [
+      "Kütlesi de ağırlığı da azalır",
+      "Kütlesi azalır, ağırlığı değişmez",
+      "Kütlesi değişmez, ağırlığı azalır",
+      "Kütlesi de ağırlığı da değişmez"
+    ],
+    "answer": 2,
+    "explanation": "Kütle değişmez. Ay'ın çekim kuvveti Dünya'nınkinden küçük olduğu için cismin Ay'daki ağırlığı daha azdır."
+  },
+  {
+    "id": "fen-5-2-10",
+    "unit": "fen-5-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Büyük kuvvetleri ölçmek için tasarlanan bir dinamometrenin yayı nasıl olmalıdır?",
+    "choices": [
+      "İnce ve kolay uzayan",
+      "Kalın ve sert",
+      "Çok kısa ve ince",
+      "Plastikten yapılmış"
+    ],
+    "answer": 1,
+    "explanation": "Kalın ve sert yaylar büyük kuvvetlerle bile az uzar, bu yüzden büyük kuvvetleri ölçmeye uygundur. İnce yaylar küçük kuvvetleri ölçmede kullanılır."
+  },
+  {
+    "id": "fen-5-3-01",
+    "unit": "fen-5-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Canlıların canlılık özelliği gösteren en küçük yapı birimi hangisidir?",
+    "choices": [
+      "Doku",
+      "Organ",
+      "Hücre",
+      "Sistem"
+    ],
+    "answer": 2,
+    "explanation": "Bütün canlılar hücrelerden oluşur. Hücre, canlılık özelliği gösteren en küçük yapı birimidir."
+  },
+  {
+    "id": "fen-5-3-02",
+    "unit": "fen-5-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hücrenin yönetim ve denetim merkezi hangisidir?",
+    "choices": [
+      "Sitoplazma",
+      "Çekirdek",
+      "Hücre zarı",
+      "Koful"
+    ],
+    "answer": 1,
+    "explanation": "Çekirdek, hücredeki yaşamsal olayları yönetir ve denetler."
+  },
+  {
+    "id": "fen-5-3-03",
+    "unit": "fen-5-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Hücreleri incelemek için mikroskop kullanılır.",
+    "answer": true,
+    "explanation": "Hücrelerin çoğu gözle görülemeyecek kadar küçüktür. Mikroskop görüntüyü büyüterek hücreleri incelememizi sağlar."
+  },
+  {
+    "id": "fen-5-3-04",
+    "unit": "fen-5-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hücrede enerji üretiminden sorumlu organel hangisidir?",
+    "choices": [
+      "Ribozom",
+      "Koful",
+      "Kloroplast",
+      "Mitokondri"
+    ],
+    "answer": 3,
+    "explanation": "Mitokondri, hücrenin ihtiyaç duyduğu enerjiyi üretir. Bu yüzden hücrenin enerji santrali olarak anılır."
+  },
+  {
+    "id": "fen-5-3-05",
+    "unit": "fen-5-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi bitki hücresinde bulunur ama hayvan hücresinde bulunmaz?",
+    "choices": [
+      "Kloroplast",
+      "Çekirdek",
+      "Sitoplazma",
+      "Hücre zarı"
+    ],
+    "answer": 0,
+    "explanation": "Kloroplast ve hücre duvarı bitki hücresinde bulunur, hayvan hücresinde bulunmaz. Çekirdek, sitoplazma ve hücre zarı her ikisinde de vardır."
+  },
+  {
+    "id": "fen-5-3-06",
+    "unit": "fen-5-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hücreyi çevreleyen ve hücreye madde giriş çıkışını denetleyen yapı hangisidir?",
+    "choices": [
+      "Hücre duvarı",
+      "Hücre zarı",
+      "Çekirdek",
+      "Mitokondri"
+    ],
+    "answer": 1,
+    "explanation": "Hücre zarı canlı, esnek ve seçici geçirgendir; madde alışverişini denetler. Hücre duvarı ise cansızdır ve bitki hücresine dayanıklılık verir."
+  },
+  {
+    "id": "fen-5-3-07",
+    "unit": "fen-5-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bitki hücresinde su, besin ve atıkların depolandığı, büyük yer kaplayan organel hangisidir?",
+    "choices": [
+      "Koful",
+      "Ribozom",
+      "Mitokondri",
+      "Kloroplast"
+    ],
+    "answer": 0,
+    "explanation": "Koful depolama görevi yapar. Bitki hücrelerinde büyük ve az sayıda, hayvan hücrelerinde küçük ve çok sayıdadır."
+  },
+  {
+    "id": "fen-5-3-08",
+    "unit": "fen-5-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Hayvan hücrelerinde hücre duvarı bulunur.",
+    "answer": false,
+    "explanation": "Hücre duvarı bitki hücresinde bulunur. Hayvan hücresinin en dışında hücre zarı yer alır."
+  },
+  {
+    "id": "fen-5-3-09",
+    "unit": "fen-5-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Mikroskopta incelenen bir hücrede hücre duvarı ve kloroplast görülüyor. Bu hücre hangisinden alınmış olabilir?",
+    "choices": [
+      "İnsanın yanak içinden",
+      "Tavuğun kasından",
+      "Ispanak yaprağından",
+      "Balığın derisinden"
+    ],
+    "answer": 2,
+    "explanation": "Hücre duvarı ve kloroplast bitki hücrelerine özgüdür. Ispanak bir bitki olduğu için yaprak hücrelerinde bu yapılar bulunur."
+  },
+  {
+    "id": "fen-5-3-10",
+    "unit": "fen-5-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Çok hareket eden kas hücrelerinde hangi organelin sayıca fazla olması beklenir?",
+    "choices": [
+      "Koful",
+      "Mitokondri",
+      "Kloroplast",
+      "Hücre duvarı"
+    ],
+    "answer": 1,
+    "explanation": "Kas hücreleri hareket için çok enerji harcar. Enerji mitokondride üretildiğinden bu hücrelerde mitokondri sayısı fazladır."
+  },
+  {
+    "id": "fen-5-4-01",
+    "unit": "fen-5-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Işık, kaynağından çıktıktan sonra nasıl yayılır?",
+    "choices": [
+      "Yalnızca aşağıya doğru",
+      "Her yöne ve doğrular boyunca",
+      "Eğriler çizerek",
+      "Yalnızca tek bir yöne"
+    ],
+    "answer": 1,
+    "explanation": "Işık, kaynağından çıkarak her yöne doğrusal yolla yayılır."
+  },
+  {
+    "id": "fen-5-4-02",
+    "unit": "fen-5-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Işığın tamamına yakınını geçiren maddelere ne ad verilir?",
+    "choices": [
+      "Opak",
+      "Yarı saydam",
+      "Saydam",
+      "Parlak"
+    ],
+    "answer": 2,
+    "explanation": "Saydam maddeler ışığı geçirir; arkalarındaki cisimler net görülür. Cam, hava ve temiz su saydamdır."
+  },
+  {
+    "id": "fen-5-4-03",
+    "unit": "fen-5-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Tahta kapı opak (saydam olmayan) bir maddedir.",
+    "answer": true,
+    "explanation": "Opak maddeler ışığı geçirmez; arkalarındaki cisimler görülmez. Tahta, karton ve metal opaktır."
+  },
+  {
+    "id": "fen-5-4-04",
+    "unit": "fen-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi yarı saydam bir maddedir?",
+    "choices": [
+      "Temiz pencere camı",
+      "Tahta masa",
+      "Demir levha",
+      "Buzlu cam"
+    ],
+    "answer": 3,
+    "explanation": "Yarı saydam maddeler ışığın bir kısmını geçirir; arkalarındaki cisimler bulanık görülür. Buzlu cam ve yağlı kâğıt yarı saydamdır."
+  },
+  {
+    "id": "fen-5-4-05",
+    "unit": "fen-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Tam gölge oluşturmak için ışık kaynağının önüne hangi tür madde konmalıdır?",
+    "choices": [
+      "Opak",
+      "Saydam",
+      "Yarı saydam"
+    ],
+    "answer": 0,
+    "explanation": "Opak maddeler ışığı geçirmediği için arkalarında ışık almayan karanlık bir bölge, yani tam gölge oluşur."
+  },
+  {
+    "id": "fen-5-4-06",
+    "unit": "fen-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir cisim ışık kaynağına yaklaştırılırsa perdedeki gölgesi nasıl değişir?",
+    "choices": [
+      "Küçülür",
+      "Büyür",
+      "Değişmez",
+      "Kaybolur"
+    ],
+    "answer": 1,
+    "explanation": "Cisim ışık kaynağına yaklaştıkça daha çok ışığın önünü keser ve gölgesi büyür. Kaynaktan uzaklaştıkça gölgesi küçülür."
+  },
+  {
+    "id": "fen-5-4-07",
+    "unit": "fen-5-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir cismin gölgesi, ışık kaynağının bulunduğu tarafta oluşur.",
+    "answer": false,
+    "explanation": "Gölge, cismin ışık kaynağına göre arka tarafında oluşur; çünkü ışık cismin arkasına geçemez."
+  },
+  {
+    "id": "fen-5-4-08",
+    "unit": "fen-5-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Gölgenin oluşması, ışığın doğrusal yolla yayıldığını gösterir.",
+    "answer": true,
+    "explanation": "Işık doğrusal yayıldığı için opak cisimlerin etrafından dolanıp arkasına geçemez; cismin arkasında gölge oluşur."
+  },
+  {
+    "id": "fen-5-4-09",
+    "unit": "fen-5-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Ortası delik üç karton art arda diziliyor. Arkadaki mum alevi yalnızca delikler aynı hizadayken görülebiliyor. Bu deney neyi gösterir?",
+    "choices": [
+      "Işığın opak maddelerden geçtiğini",
+      "Işığın renklere ayrıldığını",
+      "Işığın doğrusal yolla yayıldığını",
+      "Işığın yalnızca karanlıkta yayıldığını"
+    ],
+    "answer": 2,
+    "explanation": "Delikler aynı doğru üzerindeyken ışık göze ulaşır. Kartonlardan biri kaydırılınca ışık ulaşamaz; bu, ışığın doğrusal yayıldığını gösterir."
+  },
+  {
+    "id": "fen-5-4-10",
+    "unit": "fen-5-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Güneşli bir günde öğle vakti gölgemizin sabaha göre daha kısa olmasının sebebi nedir?",
+    "choices": [
+      "Öğlen Güneş'in daha küçük görünmesi",
+      "Öğlen havanın daha sıcak olması",
+      "Öğlen boyumuzun kısalması",
+      "Öğlen Güneş ışınlarının daha dik gelmesi"
+    ],
+    "answer": 3,
+    "explanation": "Öğle vakti Güneş gökyüzünde en yüksek konumdadır ve ışınlar dik gelir; gölge kısalır. Sabah ve akşam ışınlar eğik geldiği için gölge uzar."
+  },
+  {
+    "id": "fen-5-5-01",
+    "unit": "fen-5-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Katı bir maddenin ısı alarak sıvı hâle geçmesine ne denir?",
+    "choices": [
+      "Donma",
+      "Erime",
+      "Yoğuşma",
+      "Buharlaşma"
+    ],
+    "answer": 1,
+    "explanation": "Erime, katının ısı alarak sıvıya dönüşmesidir. Buzun suya dönüşmesi erimeye örnektir."
+  },
+  {
+    "id": "fen-5-5-02",
+    "unit": "fen-5-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Sıcaklık hangi araçla ölçülür?",
+    "choices": [
+      "Dinamometre",
+      "Terazi",
+      "Termometre",
+      "Cetvel"
+    ],
+    "answer": 2,
+    "explanation": "Sıcaklık termometre ile ölçülür. Birimi santigrat derecedir (°C)."
+  },
+  {
+    "id": "fen-5-5-03",
+    "unit": "fen-5-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Maddeler, gözle görülemeyecek kadar küçük taneciklerden oluşur.",
+    "answer": true,
+    "explanation": "Bütün maddeler tanecikli yapıdadır. Tanecikler arasındaki boşluk ve taneciklerin hareketi maddenin hâline göre değişir."
+  },
+  {
+    "id": "fen-5-5-04",
+    "unit": "fen-5-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Gaz hâlindeki bir maddenin ısı vererek sıvı hâle geçmesine ne denir?",
+    "choices": [
+      "Buharlaşma",
+      "Erime",
+      "Süblimleşme",
+      "Yoğuşma"
+    ],
+    "answer": 3,
+    "explanation": "Yoğuşma, gazın ısı vererek sıvıya dönüşmesidir. Soğuk bardağın dışında su damlacıklarının oluşması yoğuşmaya örnektir."
+  },
+  {
+    "id": "fen-5-5-05",
+    "unit": "fen-5-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Naftalinin sıvılaşmadan doğrudan gaz hâle geçmesine ne ad verilir?",
+    "choices": [
+      "Süblimleşme",
+      "Kırağılaşma",
+      "Buharlaşma",
+      "Erime"
+    ],
+    "answer": 0,
+    "explanation": "Katı bir maddenin ısı alarak doğrudan gaz hâle geçmesine süblimleşme denir. Naftalin bu yüzden zamanla küçülür."
+  },
+  {
+    "id": "fen-5-5-06",
+    "unit": "fen-5-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yaz aylarında tren raylarının uzaması hangi olaya örnektir?",
+    "choices": [
+      "Büzülme",
+      "Genleşme",
+      "Erime",
+      "Yoğuşma"
+    ],
+    "answer": 1,
+    "explanation": "Maddeler ısı aldığında genleşir, yani hacmi ya da boyu artar. Raylar arasında bu yüzden boşluk bırakılır."
+  },
+  {
+    "id": "fen-5-5-07",
+    "unit": "fen-5-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Buharlaşma yalnızca kaynama sıcaklığında gerçekleşir.",
+    "answer": false,
+    "explanation": "Buharlaşma her sıcaklıkta ve sıvının yüzeyinde gerçekleşir. Çamaşırların oda sıcaklığında kuruması bunun örneğidir."
+  },
+  {
+    "id": "fen-5-5-08",
+    "unit": "fen-5-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Isı, sıcaklığı yüksek olan maddeden sıcaklığı düşük olan maddeye doğru aktarılır.",
+    "answer": true,
+    "explanation": "Sıcaklıkları farklı maddeler temas ettiğinde ısı, sıcak olandan soğuk olana aktarılır. Aktarım sıcaklıklar eşitlenene kadar sürer."
+  },
+  {
+    "id": "fen-5-5-09",
+    "unit": "fen-5-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Maddenin hangi hâlinde tanecikler arasındaki boşluk en fazladır?",
+    "choices": [
+      "Katı",
+      "Sıvı",
+      "Gaz"
+    ],
+    "answer": 2,
+    "explanation": "Gaz hâlinde tanecikler birbirinden çok uzaktır ve serbestçe hareket eder. Katılarda ise tanecikler birbirine en yakın konumdadır."
+  },
+  {
+    "id": "fen-5-5-10",
+    "unit": "fen-5-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Saf suyun donma sıcaklığı ile buzun erime sıcaklığı için hangisi söylenebilir?",
+    "choices": [
+      "Donma sıcaklığı daha yüksektir",
+      "Birbirine eşittir",
+      "Erime sıcaklığı daha yüksektir",
+      "Aralarında bir ilişki yoktur"
+    ],
+    "answer": 1,
+    "explanation": "Saf bir maddenin erime ve donma sıcaklıkları aynıdır. Saf su 0 °C'ta donar, buz da 0 °C'ta erir."
+  },
+  {
+    "id": "fen-5-6-01",
+    "unit": "fen-5-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir elektrik devresinde elektrik enerjisinin kaynağı hangisidir?",
+    "choices": [
+      "Ampul",
+      "Anahtar",
+      "Bağlantı kablosu",
+      "Pil"
+    ],
+    "answer": 3,
+    "explanation": "Pil, devreye elektrik enerjisi sağlar. Ampul bu enerjiyi ışığa dönüştürür."
+  },
+  {
+    "id": "fen-5-6-02",
+    "unit": "fen-5-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ampulün takıldığı devre elemanı hangisidir?",
+    "choices": [
+      "Pil yatağı",
+      "Anahtar",
+      "Duy",
+      "Kablo"
+    ],
+    "answer": 2,
+    "explanation": "Ampul duya takılarak devreye bağlanır. Pil ise pil yatağına yerleştirilir."
+  },
+  {
+    "id": "fen-5-6-03",
+    "unit": "fen-5-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bir devrede anahtar kapatıldığında devre tamamlanır ve ampul ışık verir.",
+    "answer": true,
+    "explanation": "Anahtar kapalıyken elektrik devreyi dolaşır ve ampul yanar. Anahtar açıkken devre tamamlanmaz."
+  },
+  {
+    "id": "fen-5-6-04",
+    "unit": "fen-5-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Devre elemanlarının sembollerle gösterilmesinin temel yararı nedir?",
+    "choices": [
+      "Herkesin anlayabileceği ortak bir dil oluşturması",
+      "Devrenin daha parlak ışık vermesi",
+      "Pilin daha uzun süre dayanması",
+      "Devrenin daha ucuza kurulması"
+    ],
+    "answer": 0,
+    "explanation": "Semboller sayesinde bir devre şeması dünyanın her yerinde aynı biçimde okunur; çizim ve anlatım kolaylaşır."
+  },
+  {
+    "id": "fen-5-6-05",
+    "unit": "fen-5-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Özdeş pillerle kurulan bir devrede pil sayısı artırılırsa ampulün parlaklığı nasıl değişir?",
+    "choices": [
+      "Azalır",
+      "Artar",
+      "Değişmez",
+      "Ampul söner"
+    ],
+    "answer": 1,
+    "explanation": "Ampul sayısı aynı kalırken pil sayısı artırılırsa devreye sağlanan enerji artar ve ampul daha parlak yanar."
+  },
+  {
+    "id": "fen-5-6-06",
+    "unit": "fen-5-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Pil sayısı değiştirilmeden devreye art arda yeni özdeş ampuller eklenirse ampullerin parlaklığı nasıl değişir?",
+    "choices": [
+      "Artar",
+      "Değişmez",
+      "Azalır",
+      "Önce artar, sonra azalır"
+    ],
+    "answer": 2,
+    "explanation": "Pil sayısı aynıyken art arda bağlanan ampul sayısı arttıkça her ampulün parlaklığı azalır."
+  },
+  {
+    "id": "fen-5-6-07",
+    "unit": "fen-5-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir devreye özdeş pillerden bir tane daha eklemek ampulün parlaklığını azaltır.",
+    "answer": false,
+    "explanation": "Pil sayısı arttıkça ampul daha parlak yanar. Parlaklığı azaltan değişiklik, devreye art arda ampul eklemektir."
+  },
+  {
+    "id": "fen-5-6-08",
+    "unit": "fen-5-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Art arda bağlı iki ampulden biri duyundan çıkarılırsa öteki ampul de söner.",
+    "answer": true,
+    "explanation": "Art arda bağlı ampuller aynı yol üzerindedir. Biri çıkarılınca devre tamamlanmaz ve öteki ampul de söner."
+  },
+  {
+    "id": "fen-5-6-09",
+    "unit": "fen-5-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Pil sayısının ampul parlaklığına etkisini araştıran bir öğrenci, kurduğu devrelerde neyi değiştirmelidir?",
+    "choices": [
+      "Yalnızca ampul sayısını",
+      "Hem pil hem ampul sayısını",
+      "Yalnızca kablonun uzunluğunu",
+      "Yalnızca pil sayısını"
+    ],
+    "answer": 3,
+    "explanation": "Bir deneyde etkisi araştırılan değişken değiştirilir, ötekiler sabit tutulur. Bu deneyde yalnızca pil sayısı değişmeli, ampul sayısı aynı kalmalıdır."
+  },
+  {
+    "id": "fen-5-6-10",
+    "unit": "fen-5-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Özdeş pil ve ampullerle kurulan devrelerde ampuller art arda bağlıdır. Hangi devrede ampul parlaklığı en fazladır?",
+    "choices": [
+      "1 pil, 2 ampul",
+      "2 pil, 1 ampul",
+      "1 pil, 1 ampul",
+      "2 pil, 2 ampul"
+    ],
+    "answer": 1,
+    "explanation": "Pil sayısı arttıkça parlaklık artar, ampul sayısı arttıkça azalır. Pil sayısının en çok, ampul sayısının en az olduğu devre en parlaktır."
+  },
+  {
+    "id": "fen-5-7-01",
+    "unit": "fen-5-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi geri dönüştürülebilen bir atıktır?",
+    "choices": [
+      "Yemek artığı",
+      "Kullanılmış peçete",
+      "Plastik şişe",
+      "Islak mendil"
+    ],
+    "answer": 2,
+    "explanation": "Plastik, cam, kâğıt ve metal atıklar geri dönüştürülerek yeniden ham maddeye çevrilebilir."
+  },
+  {
+    "id": "fen-5-7-02",
+    "unit": "fen-5-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Atıkları kâğıt, cam, plastik ve metal olarak ayrı kutularda toplamanın amacı nedir?",
+    "choices": [
+      "Geri dönüşümü kolaylaştırmak",
+      "Çöp kutularını renklendirmek",
+      "Atıkları daha ağır hâle getirmek",
+      "Çöp miktarını artırmak"
+    ],
+    "answer": 0,
+    "explanation": "Türlerine göre ayrılan atıklar geri dönüşüm tesislerinde daha kolay ve daha verimli biçimde işlenir."
+  },
+  {
+    "id": "fen-5-7-03",
+    "unit": "fen-5-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Geri dönüşüm, doğal kaynakların daha az tüketilmesini sağlar.",
+    "answer": true,
+    "explanation": "Geri dönüştürülen atıklar yeniden ham madde olur. Böylece ağaç, su, petrol ve maden gibi doğal kaynaklar korunur."
+  },
+  {
+    "id": "fen-5-7-04",
+    "unit": "fen-5-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi evsel atıkları azaltmaya yönelik bir davranıştır?",
+    "choices": [
+      "Tek kullanımlık tabak kullanmak",
+      "İhtiyaçtan fazla yiyecek almak",
+      "Her alışverişte yeni poşet almak",
+      "Alışverişte bez çanta kullanmak"
+    ],
+    "answer": 3,
+    "explanation": "Bez çanta defalarca kullanılabilir ve plastik poşet atığını azaltır. Atığı kaynağında azaltmak sürdürülebilir yaşamın ilk adımıdır."
+  },
+  {
+    "id": "fen-5-7-05",
+    "unit": "fen-5-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kullanılmış bitkisel yağlar lavaboya dökülürse hangisi gerçekleşir?",
+    "choices": [
+      "Sular daha temiz olur",
+      "Sular kirlenir ve giderler tıkanır",
+      "Yağ kendiliğinden yok olur",
+      "Su tasarrufu sağlanır"
+    ],
+    "answer": 1,
+    "explanation": "Atık yağlar su kaynaklarını kirletir ve su canlılarına zarar verir. Bu yağlar ayrı biriktirilip toplama noktalarına verilmelidir."
+  },
+  {
+    "id": "fen-5-7-06",
+    "unit": "fen-5-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Doğal kaynakları, gelecek nesillerin ihtiyaçlarını da düşünerek kullanma anlayışına ne denir?",
+    "choices": [
+      "Tüketim",
+      "Geri kazanım",
+      "Sürdürülebilirlik",
+      "Sanayileşme"
+    ],
+    "answer": 2,
+    "explanation": "Sürdürülebilirlik, bugünün ihtiyaçlarını karşılarken gelecek nesillerin kaynaklarını tüketmemektir."
+  },
+  {
+    "id": "fen-5-7-07",
+    "unit": "fen-5-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Cam, kalitesini yitirmeden defalarca geri dönüştürülebilir.",
+    "answer": true,
+    "explanation": "Cam eritilerek yeniden şekillendirilir ve bu işlem sırasında özelliğini kaybetmez. Bu yüzden tekrar tekrar geri dönüştürülebilir."
+  },
+  {
+    "id": "fen-5-7-08",
+    "unit": "fen-5-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Atık piller evsel çöplerle birlikte atılabilir.",
+    "answer": false,
+    "explanation": "Pillerdeki zararlı maddeler toprağa ve suya karışır. Atık piller ayrı toplanarak atık pil kutularına atılmalıdır."
+  },
+  {
+    "id": "fen-5-7-09",
+    "unit": "fen-5-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sebze ve meyve artıklarının çürütülerek bahçe için gübreye dönüştürülmesine ne ad verilir?",
+    "choices": [
+      "Kompost yapma",
+      "Eleme",
+      "Yakma",
+      "Depolama"
+    ],
+    "answer": 0,
+    "explanation": "Organik atıkların çürütülmesiyle elde edilen doğal gübreye kompost denir. Kompost hem atığı azaltır hem toprağı zenginleştirir."
+  },
+  {
+    "id": "fen-5-7-10",
+    "unit": "fen-5-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangisi geri dönüşüme değil, yeniden kullanıma örnektir?",
+    "choices": [
+      "Atık kâğıdın fabrikada yeni kâğıda çevrilmesi",
+      "Plastik şişelerin eritilip elyafa dönüştürülmesi",
+      "Boş cam kavanozun kalemlik olarak kullanılması",
+      "Metal kutuların eritilip yeni kutu yapılması"
+    ],
+    "answer": 2,
+    "explanation": "Yeniden kullanımda ürün işlem görmeden başka bir amaçla değerlendirilir. Geri dönüşümde ise atık işlenerek ham maddeye çevrilir."
+  }
+]

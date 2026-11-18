@@ -1,0 +1,325 @@
+[
+  {
+    "kind": "list",
+    "id": "fen-3-1-bilim-insani",
+    "unit": "fen-3-1",
+    "difficulty": 1,
+    "positive": "Hangisi bilim insanlarının özelliklerinden biridir?",
+    "negative": "Hangisi bilim insanlarının özelliklerinden biri değildir?",
+    "statement": "{item}, bilim insanlarının özelliklerinden biridir.",
+    "explanation": "Bilim insanları meraklı, sabırlı ve dikkatlidir; kararlarını kanıtlara dayandırır, sonuçlarını paylaşır. Aceleyle ve denemeden karar vermez, zorlukta vazgeçmezler.",
+    "members": [
+      "Meraklı olmak",
+      "Sabırlı olmak",
+      "Dikkatli gözlem yapmak",
+      "Kanıtlara dayanarak karar vermek"
+    ],
+    "nonMembers": [
+      "Aceleyle karar vermek",
+      "Denemeden sonuca varmak",
+      "Sonuçlarını kimseyle paylaşmamak",
+      "Zorlukla karşılaşınca hemen vazgeçmek"
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "fen-3-2-canlilar",
+    "unit": "fen-3-2",
+    "difficulty": 1,
+    "positive": "Hangisi canlı bir varlıktır?",
+    "negative": "Hangisi cansız bir varlıktır?",
+    "statement": "{item} canlı bir varlıktır.",
+    "explanation": "Canlılar beslenir, solunum yapar, büyür ve çoğalır. Buradaki canlılar: {members}. Taş, bulut, su ve insan yapımı eşyalar cansızdır.",
+    "members": [
+      "Karınca",
+      "Papatya",
+      "Kedi",
+      "Çam ağacı",
+      "Serçe"
+    ],
+    "nonMembers": [
+      "Taş",
+      "Bulut",
+      "Oyuncak bebek",
+      "Bisiklet",
+      "Su"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-3-3-katmanlar",
+    "unit": "fen-3-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "Dünya'nın {tanim} katmanı hangisidir?",
+        "answer": "katman"
+      },
+      {
+        "prompt": "{katman} için hangisi doğrudur?",
+        "answer": "ozellik"
+      }
+    ],
+    "statement": {
+      "text": "{katman}, Dünya'nın {tanim} katmanıdır.",
+      "swap": "tanim"
+    },
+    "explanation": "{katman}, Dünya'nın {tanim} katmanıdır.",
+    "items": [
+      {
+        "id": "hava",
+        "katman": "Hava küre",
+        "tanim": "havadan oluşan ve Dünya'yı çepeçevre saran",
+        "ozellik": "Dünya'yı saran gaz tabakasıdır"
+      },
+      {
+        "id": "su",
+        "katman": "Su küre",
+        "tanim": "okyanus, deniz, göl ve akarsulardan oluşan",
+        "ozellik": "Yeryüzündeki suların oluşturduğu katmandır"
+      },
+      {
+        "id": "tas",
+        "katman": "Taş küre",
+        "tanim": "karalardan ve kayaçlardan oluşan",
+        "ozellik": "Üzerinde yaşadığımız kayaçlardan oluşan katmandır"
+      }
+    ],
+    "distractors": {
+      "katman": [
+        "Ateş küre"
+      ],
+      "ozellik": [
+        "Dünya'nın en sıcak katmanıdır"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-3-4-ayirma",
+    "unit": "fen-3-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{karisim} karışımını ayırmak için en uygun yöntem hangisidir?",
+        "answer": "yontem"
+      }
+    ],
+    "statement": {
+      "text": "{karisim} karışımı {yontemle} ayrılır.",
+      "swap": "yontemle"
+    },
+    "explanation": "{aciklama}",
+    "items": [
+      {
+        "id": "suzme",
+        "karisim": "Haşlanmış makarna ve su",
+        "yontem": "Süzme",
+        "yontemle": "süzme yöntemiyle",
+        "aciklama": "Su süzgecin deliklerinden geçer, makarna süzgeçte kalır. Katı ile sıvıdan oluşan karışımlar süzme ile ayrılır."
+      },
+      {
+        "id": "miknatis",
+        "karisim": "Kum ve demir tozu",
+        "yontem": "Mıknatısla ayırma",
+        "yontemle": "mıknatıs yardımıyla",
+        "aciklama": "Mıknatıs demir tozlarını çeker, kumu çekmez. Mıknatısın çektiği maddeler karışımdan bu yolla ayrılır."
+      },
+      {
+        "id": "eleme",
+        "karisim": "Un ve kepek",
+        "yontem": "Eleme",
+        "yontemle": "eleme yöntemiyle",
+        "aciklama": "İnce un taneleri elekten geçer, iri kepek parçaları eleğin üstünde kalır. Tanecik büyüklüğü farklı katılar eleme ile ayrılır."
+      },
+      {
+        "id": "ayiklama",
+        "karisim": "Nohut ve kuru fasulye",
+        "yontem": "Elle ayıklama",
+        "yontemle": "elle ayıklanarak",
+        "aciklama": "Nohut ve fasulye taneleri iridir ve kolayca ayırt edilir. Böyle karışımlar elle ayıklanarak ayrılır."
+      }
+    ],
+    "distractors": {
+      "yontem": [
+        "Yüzdürme"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-3-5-hareket",
+    "unit": "fen-3-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ornek} hareketi hangisine örnektir?",
+        "answer": "tur"
+      }
+    ],
+    "statement": {
+      "text": "{ornek} hareketi {turEk} örnektir.",
+      "swap": "turEk"
+    },
+    "explanation": "{aciklama}",
+    "items": [
+      {
+        "id": "hizlanma",
+        "ornek": "Pistte kalkışa geçen uçağın",
+        "tur": "Hızlanma",
+        "turEk": "hızlanmaya",
+        "aciklama": "Kalkışa geçen uçak giderek daha hızlı gider. Bir varlığın süratinin artmasına hızlanma denir."
+      },
+      {
+        "id": "yavaslama",
+        "ornek": "Durağa yaklaşan otobüsün",
+        "tur": "Yavaşlama",
+        "turEk": "yavaşlamaya",
+        "aciklama": "Durağa yaklaşan otobüs fren yaparak giderek daha yavaş gider. Bu harekete yavaşlama denir."
+      },
+      {
+        "id": "donme",
+        "ornek": "Çalışan vantilatör pervanesinin",
+        "tur": "Dönme",
+        "turEk": "dönmeye",
+        "aciklama": "Pervane bir merkezin etrafında hareket eder. Bu harekete dönme denir."
+      },
+      {
+        "id": "sallanma",
+        "ornek": "Salıncaktaki çocuğun",
+        "tur": "Sallanma",
+        "turEk": "sallanmaya",
+        "aciklama": "Salıncak bir noktaya bağlı olarak ileri geri gidip gelir. Bu harekete sallanma denir."
+      },
+      {
+        "id": "yon",
+        "ornek": "Duvara çarpıp geri gelen topun",
+        "tur": "Yön değiştirme",
+        "turEk": "yön değiştirmeye",
+        "aciklama": "Top duvara çarpınca geldiği tarafa geri döner. Hareket eden bir varlığın gittiği tarafın değişmesine yön değiştirme denir."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "fen-3-6-elektrikli-araclar",
+    "unit": "fen-3-6",
+    "difficulty": 1,
+    "positive": "Hangisi elektrikle çalışan bir araçtır?",
+    "negative": "Hangisi elektrikle çalışmaz?",
+    "statement": "{item} elektrikle çalışan bir araçtır.",
+    "explanation": "Elektrikle çalışan araçlar yaşamımızı kolaylaştırır. Buradaki elektrikli araçlar: {members}. Makas, mum, kürek, tahta kaşık ve el arabası elektrik kullanmaz.",
+    "members": [
+      "Buzdolabı",
+      "Ütü",
+      "Televizyon",
+      "Çamaşır makinesi",
+      "Elektrikli süpürge"
+    ],
+    "nonMembers": [
+      "Makas",
+      "Mum",
+      "Kürek",
+      "Tahta kaşık",
+      "El arabası"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-3-7-toprak-turleri",
+    "unit": "fen-3-7",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ozellik} toprak türü hangisidir?",
+        "answer": "tur"
+      }
+    ],
+    "statement": {
+      "text": "{tur}, {ozellikKucuk} toprak türüdür.",
+      "swap": "ozellikKucuk"
+    },
+    "explanation": "{aciklama}",
+    "items": [
+      {
+        "id": "kumlu",
+        "tur": "Kumlu toprak",
+        "ozellik": "Suyu en hızlı geçiren",
+        "ozellikKucuk": "suyu en hızlı geçiren",
+        "aciklama": "Kumlu toprağın taneleri iridir, aralarında boşluk çoktur. Su bu boşluklardan hızla süzülür; kumlu toprak suyu tutamaz."
+      },
+      {
+        "id": "killi",
+        "tur": "Killi toprak",
+        "ozellik": "Suyu en çok tutan ve ıslanınca yapışkan olan",
+        "ozellikKucuk": "suyu en çok tutan ve ıslanınca yapışkan olan",
+        "aciklama": "Killi toprağın taneleri çok incedir ve birbirine yakındır. Suyu tutar, geçirmez; ıslanınca yapışkan olur. Çömlek yapımında kullanılır."
+      },
+      {
+        "id": "humuslu",
+        "tur": "Humuslu toprak",
+        "ozellik": "Çürümüş bitki ve hayvan kalıntıları bakımından zengin olan",
+        "ozellikKucuk": "çürümüş bitki ve hayvan kalıntıları bakımından zengin olan",
+        "aciklama": "Humuslu toprak, çürümüş bitki ve hayvan kalıntıları bakımından zengindir. Koyu renklidir ve bitki yetiştirmeye en elverişli topraktır."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-3-8-yasam-alanlari",
+    "unit": "fen-3-8",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{canli} doğal olarak hangi yaşam alanında yaşar?",
+        "answer": "alan"
+      },
+      {
+        "prompt": "Hangi canlı doğal olarak {alanda} yaşar?",
+        "answer": "canli"
+      }
+    ],
+    "statement": {
+      "text": "{canli} doğal olarak {alanda} yaşar.",
+      "swap": "alanda"
+    },
+    "explanation": "{aciklama}",
+    "items": [
+      {
+        "id": "deve",
+        "canli": "Deve",
+        "alan": "Çöl",
+        "alanda": "çölde",
+        "aciklama": "Deve çölde yaşar. Uzun süre susuzluğa dayanabilir ve geniş tabanlı ayakları kuma batmaz."
+      },
+      {
+        "id": "penguen",
+        "canli": "Penguen",
+        "alan": "Kutup bölgesi",
+        "alanda": "kutup bölgesinde",
+        "aciklama": "Penguen soğuk kutup bölgesinde yaşar. Sık tüyleri ve derisinin altındaki yağ tabakası onu soğuktan korur."
+      },
+      {
+        "id": "sincap",
+        "canli": "Sincap",
+        "alan": "Orman",
+        "alanda": "ormanda",
+        "aciklama": "Sincap ormanda yaşar. Ağaçlara tırmanır, ağaç kovuklarında barınır ve palamut gibi orman meyveleriyle beslenir."
+      },
+      {
+        "id": "yunus",
+        "canli": "Yunus",
+        "alan": "Deniz",
+        "alanda": "denizde",
+        "aciklama": "Yunus denizde yaşar. Yüzgeçleri ve kaygan gövdesi suda hızlı yüzmesini sağlar."
+      },
+      {
+        "id": "kurbaga",
+        "canli": "Kurbağa",
+        "alan": "Göl kıyısı",
+        "alanda": "göl kıyısında",
+        "aciklama": "Kurbağa göl ve dere kıyılarında yaşar. Hem karada hem suda yaşayabilir, yumurtalarını suya bırakır."
+      }
+    ]
+  }
+]

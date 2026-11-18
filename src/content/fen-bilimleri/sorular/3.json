@@ -1,0 +1,783 @@
+[
+  {
+    "id": "fen-3-1-01",
+    "unit": "fen-3-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bilimsel bir çalışma çoğunlukla nasıl başlar?",
+    "choices": [
+      "Merak edip soru sorarak",
+      "Sonucu ezberleyerek",
+      "Deney malzemelerini toplayarak",
+      "Rapor yazarak"
+    ],
+    "answer": 0,
+    "explanation": "Bilim merakla başlar. Bilim insanı önce bir soru sorar, sonra gözlem ve deneylerle bu sorunun cevabını arar."
+  },
+  {
+    "id": "fen-3-1-02",
+    "unit": "fen-3-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Duyu organlarımızı kullanarak bir varlığı ya da olayı dikkatle incelemeye ne denir?",
+    "choices": [
+      "Tahmin",
+      "Gözlem",
+      "Ezber",
+      "Tartışma"
+    ],
+    "answer": 1,
+    "explanation": "Gözlem, bir varlığı ya da olayı duyu organlarımızla dikkatle incelemektir. Büyüteç gibi araçlar gözlemi kolaylaştırır."
+  },
+  {
+    "id": "fen-3-1-03",
+    "unit": "fen-3-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bilim insanları ulaştıkları sonuçları başkalarıyla paylaşır.",
+    "answer": true,
+    "explanation": "Bilim insanları sonuçlarını paylaşır. Böylece başkaları da aynı çalışmayı deneyip sonucu kontrol edebilir."
+  },
+  {
+    "id": "fen-3-1-04",
+    "unit": "fen-3-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Elif, fasulye bitkisinin boyunu her hafta cetvelle ölçüp defterine yazıyor. Elif ne yapmaktadır?",
+    "choices": [
+      "Tahmin yürütmektedir",
+      "Sonuç paylaşmaktadır",
+      "Ölçüm yapıp kaydetmektedir",
+      "Soru sormaktadır"
+    ],
+    "answer": 2,
+    "explanation": "Elif cetvelle ölçüm yapıyor ve sonuçları yazıyor. Düzenli ölçüm ve kayıt, bilimsel çalışmanın önemli bir parçasıdır."
+  },
+  {
+    "id": "fen-3-1-05",
+    "unit": "fen-3-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi bir bilim insanının özelliği olamaz?",
+    "choices": [
+      "Meraklı olmak",
+      "Sabırlı olmak",
+      "Dikkatli gözlem yapmak",
+      "Denemeden karar vermek"
+    ],
+    "answer": 3,
+    "explanation": "Bilim insanları meraklı, sabırlı ve dikkatlidir. Bir düşüncenin doğru olup olmadığına denemeden, kanıt toplamadan karar vermezler."
+  },
+  {
+    "id": "fen-3-1-06",
+    "unit": "fen-3-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir deney ilk denemede beklenen sonucu vermezse bilim insanı çalışmayı bırakır.",
+    "answer": false,
+    "explanation": "Bilim insanları sabırlı ve kararlıdır. Deney beklenen sonucu vermezse nedenini araştırır ve yeniden dener."
+  },
+  {
+    "id": "fen-3-1-07",
+    "unit": "fen-3-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Can, \"Bitkiler karanlıkta daha iyi büyür.\" diye düşünüyor. Bunun doğru olup olmadığını anlamanın en güvenilir yolu hangisidir?",
+    "choices": [
+      "Arkadaşlarına sormak",
+      "Bir bitkiyi ışıkta, birini karanlıkta yetiştirip karşılaştırmak",
+      "Düşüncesini deftere yazmak",
+      "Bitkiyi her gün sulamak"
+    ],
+    "answer": 1,
+    "explanation": "Bir düşüncenin doğruluğu deneyle sınanır. Aynı türden iki bitkiden biri ışıkta, öteki karanlıkta yetiştirilip karşılaştırılırsa güvenilir sonuca ulaşılır."
+  },
+  {
+    "id": "fen-3-2-01",
+    "unit": "fen-3-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi canlı bir varlıktır?",
+    "choices": [
+      "Taş",
+      "Bulut",
+      "Karınca",
+      "Oyuncak ayı"
+    ],
+    "answer": 2,
+    "explanation": "Karınca beslenir, büyür, hareket eder ve çoğalır; bu yüzden canlıdır. Taş, bulut ve oyuncak ayı cansız varlıklardır."
+  },
+  {
+    "id": "fen-3-2-02",
+    "unit": "fen-3-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bütün canlıların ortak özelliğidir?",
+    "choices": [
+      "Beslenmek",
+      "Uçmak",
+      "Yüzmek",
+      "Konuşmak"
+    ],
+    "answer": 0,
+    "explanation": "Bütün canlılar beslenir, solunum yapar, büyür ve çoğalır. Uçmak, yüzmek ya da konuşmak yalnızca bazı canlıların özelliğidir."
+  },
+  {
+    "id": "fen-3-2-03",
+    "unit": "fen-3-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bitkiler canlı varlıklardır.",
+    "answer": true,
+    "explanation": "Bitkiler de beslenir, solunum yapar, büyür ve çoğalır. Yer değiştirmeseler de canlıdırlar."
+  },
+  {
+    "id": "fen-3-2-04",
+    "unit": "fen-3-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bitkiler yer değiştiremez ama canlıdır. Hangisi bitkilerin canlı olduğunu gösterir?",
+    "choices": [
+      "Rüzgârda sallanmaları",
+      "Büyüyüp çiçek açmaları",
+      "Toprağın içinde durmaları",
+      "Yağmurda ıslanmaları"
+    ],
+    "answer": 1,
+    "explanation": "Büyüme ve gelişme canlılara özgüdür. Bir bitkinin boy atması, yaprak ve çiçek açması onun canlı olduğunu gösterir."
+  },
+  {
+    "id": "fen-3-2-05",
+    "unit": "fen-3-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi hayvanları bitkilerden ayıran bir özelliktir?",
+    "choices": [
+      "Büyümeleri",
+      "Solunum yapmaları",
+      "Çoğalmaları",
+      "Yer değiştirerek hareket etmeleri"
+    ],
+    "answer": 3,
+    "explanation": "Bitkiler de hayvanlar da büyür, solunum yapar ve çoğalır. Hayvanlar bitkilerden farklı olarak yer değiştirerek hareket eder."
+  },
+  {
+    "id": "fen-3-2-06",
+    "unit": "fen-3-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Otomobil hareket ettiği için canlı bir varlıktır.",
+    "answer": false,
+    "explanation": "Otomobil hareket eder ama beslenmez, büyümez, solunum yapmaz ve çoğalmaz. Bu yüzden cansız bir varlıktır."
+  },
+  {
+    "id": "fen-3-2-07",
+    "unit": "fen-3-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Islak pamuğun üzerindeki fasulye tohumu birkaç gün sonra filizleniyor. Bu gözlem canlıların hangi özelliğine örnektir?",
+    "choices": [
+      "Yer değiştirme",
+      "Boşaltım",
+      "Büyüme ve gelişme",
+      "Uyuma"
+    ],
+    "answer": 2,
+    "explanation": "Tohumun filizlenip fidana dönüşmesi büyüme ve gelişmedir. Büyüme ve gelişme canlıların ortak özelliklerindendir."
+  },
+  {
+    "id": "fen-3-3-01",
+    "unit": "fen-3-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Dünya'mızın şekli hangisine benzer?",
+    "choices": [
+      "Tepsi",
+      "Küre",
+      "Küp",
+      "Koni"
+    ],
+    "answer": 1,
+    "explanation": "Dünya'nın şekli küreye benzer. Uzaydan çekilen fotoğraflar Dünya'nın yuvarlak olduğunu açıkça gösterir."
+  },
+  {
+    "id": "fen-3-3-02",
+    "unit": "fen-3-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Dünya'yı çepeçevre saran hava tabakasına ne ad verilir?",
+    "choices": [
+      "Su küre",
+      "Taş küre",
+      "Hava küre",
+      "Ateş küre"
+    ],
+    "answer": 2,
+    "explanation": "Dünya'yı saran gaz tabakasına hava küre (atmosfer) denir. Canlılar solunum için gereken havayı buradan alır."
+  },
+  {
+    "id": "fen-3-3-03",
+    "unit": "fen-3-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Dünya'nın yüzeyinde sularla kaplı alanlar karalardan daha fazladır.",
+    "answer": true,
+    "explanation": "Dünya yüzeyinin büyük bölümü okyanus ve denizlerle kaplıdır. Karalar daha az yer tutar."
+  },
+  {
+    "id": "fen-3-3-04",
+    "unit": "fen-3-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Uzaydan çekilen fotoğraflarda Dünya'nın büyük ölçüde mavi görünmesinin sebebi nedir?",
+    "choices": [
+      "Yüzeyinin büyük bölümünün sularla kaplı olması",
+      "Karaların mavi renkte olması",
+      "Bulutların mavi olması",
+      "Ay'ın ışığının mavi olması"
+    ],
+    "answer": 0,
+    "explanation": "Dünya yüzeyinin büyük bölümü sularla kaplıdır. Bu yüzden uzaydan bakıldığında Dünya mavi bir küre gibi görünür."
+  },
+  {
+    "id": "fen-3-3-05",
+    "unit": "fen-3-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Çok eski zamanlarda yaşamış canlıların taşlaşmış kalıntılarına ya da izlerine ne denir?",
+    "choices": [
+      "Maden",
+      "Kum",
+      "Toprak",
+      "Fosil"
+    ],
+    "answer": 3,
+    "explanation": "Fosil, çok eski zamanlarda yaşamış canlıların kayaçlar arasında taşlaşmış kalıntıları ya da izleridir."
+  },
+  {
+    "id": "fen-3-3-06",
+    "unit": "fen-3-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Kayaçlar uzun zaman içinde ufalanarak toprağın oluşumuna katkı sağlar.",
+    "answer": true,
+    "explanation": "Kayaçlar sıcaklık değişimi, su ve rüzgâr gibi etkilerle çok uzun sürede parçalanır. Ufalanan kayaçlar toprağın oluşumunda yer alır."
+  },
+  {
+    "id": "fen-3-3-07",
+    "unit": "fen-3-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Limandan uzaklaşan bir geminin önce gövdesi, en son direği gözden kaybolur. Bu gözlem neyi gösterir?",
+    "choices": [
+      "Denizin çok derin olduğunu",
+      "Geminin battığını",
+      "Dünya'nın yuvarlak olduğunu",
+      "Dünya'nın düz olduğunu"
+    ],
+    "answer": 2,
+    "explanation": "Dünya düz olsaydı gemi küçülerek bütün hâlde kaybolurdu. Önce gövdenin, sonra direğin kaybolması Dünya yüzeyinin yuvarlak olduğunu gösterir."
+  },
+  {
+    "id": "fen-3-4-01",
+    "unit": "fen-3-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi katı bir maddedir?",
+    "choices": [
+      "Süt",
+      "Hava",
+      "Taş",
+      "Zeytinyağı"
+    ],
+    "answer": 2,
+    "explanation": "Taş katıdır; belirli bir şekli vardır. Süt ve zeytinyağı sıvı, hava ise gaz hâlindedir."
+  },
+  {
+    "id": "fen-3-4-02",
+    "unit": "fen-3-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir bardaktan ötekine dökülebilen ve konulduğu kabın şeklini alan süt hangi hâldedir?",
+    "choices": [
+      "Katı",
+      "Sıvı",
+      "Gaz"
+    ],
+    "answer": 1,
+    "explanation": "Sıvılar akar ve konuldukları kabın şeklini alır. Süt de bu yüzden sıvı bir maddedir."
+  },
+  {
+    "id": "fen-3-4-03",
+    "unit": "fen-3-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Hava, gaz hâlinde bir maddedir.",
+    "answer": true,
+    "explanation": "Hava gaz hâlindedir. Göremesek de balonu şişirdiğimizde ya da rüzgâr estiğinde varlığını fark ederiz."
+  },
+  {
+    "id": "fen-3-4-04",
+    "unit": "fen-3-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Pamuk ile taşı elimizle sıktığımızda aralarındaki hangi farkı anlarız?",
+    "choices": [
+      "Renk farkını",
+      "Koku farkını",
+      "Sertlik ve yumuşaklık farkını",
+      "Tat farkını"
+    ],
+    "answer": 2,
+    "explanation": "Dokunma duyumuzla maddelerin sert ya da yumuşak olduğunu anlarız. Pamuk yumuşak, taş ise serttir."
+  },
+  {
+    "id": "fen-3-4-05",
+    "unit": "fen-3-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Haşlanan makarnayı suyundan ayırmak için hangi yöntem kullanılır?",
+    "choices": [
+      "Süzme",
+      "Eleme",
+      "Mıknatısla ayırma",
+      "Yüzdürme"
+    ],
+    "answer": 0,
+    "explanation": "Katı ile sıvıdan oluşan karışımlar süzgeçle ayrılabilir. Su süzgecin deliklerinden geçer, makarna süzgeçte kalır."
+  },
+  {
+    "id": "fen-3-4-06",
+    "unit": "fen-3-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kum ile demir tozu karışımını ayırmanın en kolay yolu hangisidir?",
+    "choices": [
+      "Süzgeçten geçirmek",
+      "Mıknatıs yaklaştırmak",
+      "Elle tek tek ayıklamak",
+      "Üzerine üflemek"
+    ],
+    "answer": 1,
+    "explanation": "Mıknatıs demir tozlarını çeker, kumu çekmez. Bu yüzden karışıma mıknatıs yaklaştırmak demir tozlarını kolayca ayırır."
+  },
+  {
+    "id": "fen-3-4-07",
+    "unit": "fen-3-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Un ile kepeği birbirinden ayırmak için eleme yöntemi kullanılır.",
+    "answer": true,
+    "explanation": "Elekten ince un taneleri geçer, iri kepek parçaları eleğin üstünde kalır. Tanecik büyüklüğü farklı katılar eleme ile ayrılır."
+  },
+  {
+    "id": "fen-3-4-08",
+    "unit": "fen-3-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Tanımadığımız bir maddeyi tanımak için tadına bakmak güvenli bir yoldur.",
+    "answer": false,
+    "explanation": "Tanımadığımız maddeler zararlı olabilir. Bu yüzden bilmediğimiz maddelerin tadına bakmak, onları koklamak ya da onlara dokunmak tehlikelidir."
+  },
+  {
+    "id": "fen-3-4-09",
+    "unit": "fen-3-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kum ve talaş karışımı suya atılıyor: talaş su yüzünde kalıyor, kum dibe çöküyor. Bu ayırma yönteminin adı nedir?",
+    "choices": [
+      "Eleme",
+      "Mıknatısla ayırma",
+      "Yüzdürme",
+      "Süzme"
+    ],
+    "answer": 2,
+    "explanation": "Suda yüzen madde ile batan madde yüzdürme yöntemiyle ayrılır. Talaş yüzer ve üstten toplanır, kum dipte kalır."
+  },
+  {
+    "id": "fen-3-5-01",
+    "unit": "fen-3-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Salıncaktaki bir çocuğun ileri geri yaptığı hareket hangisidir?",
+    "choices": [
+      "Dönme",
+      "Sallanma",
+      "Yuvarlanma",
+      "Durma"
+    ],
+    "answer": 1,
+    "explanation": "Salıncak bir noktaya bağlı olarak ileri geri gidip gelir. Bu harekete sallanma denir."
+  },
+  {
+    "id": "fen-3-5-02",
+    "unit": "fen-3-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kapıyı açmak için kolunu tutup kendimize doğru getiririz. Kapıya uyguladığımız kuvvet hangisidir?",
+    "choices": [
+      "Çekme",
+      "İtme",
+      "Dönme",
+      "Sallanma"
+    ],
+    "answer": 0,
+    "explanation": "Bir cismi kendimize doğru hareket ettiren kuvvet çekmedir. Kendimizden uzaklaştıran kuvvet ise itmedir."
+  },
+  {
+    "id": "fen-3-5-03",
+    "unit": "fen-3-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Duran bir topu hareket ettirmek için ona itme ya da çekme uygulamak gerekir.",
+    "answer": true,
+    "explanation": "Duran cisimler kendiliğinden harekete geçmez. Onları hareket ettirmek için itme ya da çekme kuvveti uygulanır."
+  },
+  {
+    "id": "fen-3-5-04",
+    "unit": "fen-3-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Durağa yaklaşan bir otobüsün hareketi nasıl değişir?",
+    "choices": [
+      "Hızlanır",
+      "Sallanır",
+      "Döner",
+      "Yavaşlar"
+    ],
+    "answer": 3,
+    "explanation": "Otobüs durağa yaklaşırken sürücü frene basar ve otobüs yavaşlayarak durur."
+  },
+  {
+    "id": "fen-3-5-05",
+    "unit": "fen-3-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi dönme hareketine örnektir?",
+    "choices": [
+      "Çalışan vantilatörün pervanesi",
+      "Buzda kayan kızak",
+      "Sallanan beşik",
+      "Daldan düşen elma"
+    ],
+    "answer": 0,
+    "explanation": "Vantilatörün pervanesi bir merkezin etrafında döner. Kızak kayar, beşik sallanır, elma ise aşağı düşer."
+  },
+  {
+    "id": "fen-3-5-06",
+    "unit": "fen-3-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Yokuş aşağı inen bir bisiklet, fren yapılmazsa giderek yavaşlar.",
+    "answer": false,
+    "explanation": "Yokuş aşağı inen bisiklet fren yapılmazsa giderek hızlanır. Bu yüzden inişlerde frenler dikkatli kullanılmalıdır."
+  },
+  {
+    "id": "fen-3-5-07",
+    "unit": "fen-3-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Duvara doğru atılan top duvara çarpınca geri geliyor. Topun hareketinde hangi değişiklik olmuştur?",
+    "choices": [
+      "Sallanma",
+      "Dönme",
+      "Yön değiştirme",
+      "Büyüme"
+    ],
+    "answer": 2,
+    "explanation": "Top duvara çarpınca geldiği tarafa geri döner. Hareket eden bir cismin gittiği tarafın değişmesine yön değiştirme denir."
+  },
+  {
+    "id": "fen-3-6-01",
+    "unit": "fen-3-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi elektrikle çalışır?",
+    "choices": [
+      "Makas",
+      "Buzdolabı",
+      "Bisiklet",
+      "Tahta kaşık"
+    ],
+    "answer": 1,
+    "explanation": "Buzdolabı elektrikle çalışan bir araçtır. Makas, bisiklet ve tahta kaşık elektrik kullanmaz."
+  },
+  {
+    "id": "fen-3-6-02",
+    "unit": "fen-3-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Televizyon kumandası hangi elektrik kaynağıyla çalışır?",
+    "choices": [
+      "Akü",
+      "Şehir elektriği",
+      "Pil",
+      "Jeneratör"
+    ],
+    "answer": 2,
+    "explanation": "Kumanda, el feneri ve duvar saati gibi küçük ve taşınabilir araçlar pille çalışır."
+  },
+  {
+    "id": "fen-3-6-03",
+    "unit": "fen-3-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Islak elle prize ve elektrik düğmesine dokunmak tehlikelidir.",
+    "answer": true,
+    "explanation": "Su elektriği iletir. Islak elle prize ya da düğmeye dokunmak elektrik çarpmasına yol açabilir."
+  },
+  {
+    "id": "fen-3-6-04",
+    "unit": "fen-3-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Otomobillerde motoru çalıştırmak ve farları yakmak için hangi elektrik kaynağı kullanılır?",
+    "choices": [
+      "Kalem pil",
+      "Akü",
+      "Şehir elektriği",
+      "Düğme pil"
+    ],
+    "answer": 1,
+    "explanation": "Otomobil, otobüs ve kamyon gibi taşıtlarda elektrik kaynağı olarak akü kullanılır."
+  },
+  {
+    "id": "fen-3-6-05",
+    "unit": "fen-3-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi elektriğin güvenli kullanımına uygun bir davranıştır?",
+    "choices": [
+      "Fişi kablosundan çekerek çıkarmak",
+      "Prize metal cisim sokmak",
+      "Kablosu soyulmuş aleti kullanmamak",
+      "Bir prize çok sayıda fiş takmak"
+    ],
+    "answer": 2,
+    "explanation": "Kablosu soyulmuş aletler elektrik çarpmasına ve yangına yol açabilir. Böyle aletler onarılmadan kullanılmamalıdır."
+  },
+  {
+    "id": "fen-3-6-06",
+    "unit": "fen-3-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Çamaşır makinesi pille çalışan bir araçtır.",
+    "answer": false,
+    "explanation": "Çamaşır makinesi, buzdolabı ve fırın gibi büyük ev aletleri prize takılır ve şehir elektriğiyle çalışır."
+  },
+  {
+    "id": "fen-3-6-07",
+    "unit": "fen-3-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Biten piller neden çöpe atılmaz da atık pil kutusuna atılır?",
+    "choices": [
+      "Çöp kutusunda çok yer kapladıkları için",
+      "Çok ağır oldukları için",
+      "Çöpte kayboldukları için",
+      "İçlerindeki maddeler toprağı ve suyu kirlettiği için"
+    ],
+    "answer": 3,
+    "explanation": "Pillerin içindeki zararlı maddeler toprağa ve suya karışarak çevreyi kirletir. Bu yüzden atık piller ayrı toplanır."
+  },
+  {
+    "id": "fen-3-7-01",
+    "unit": "fen-3-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bitkiler ihtiyaç duydukları suyu ve mineralleri kökleriyle nereden alır?",
+    "choices": [
+      "Topraktan",
+      "Güneş'ten",
+      "Rüzgârdan",
+      "Bulutlardan"
+    ],
+    "answer": 0,
+    "explanation": "Bitkiler kökleriyle topraktaki suyu ve suda çözünmüş mineralleri alır. Bu yüzden toprak bitkiler için çok önemlidir."
+  },
+  {
+    "id": "fen-3-7-02",
+    "unit": "fen-3-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Toprağı işleyerek bitki yetiştirme işine ne denir?",
+    "choices": [
+      "Hayvancılık",
+      "Tarım",
+      "Madencilik",
+      "Balıkçılık"
+    ],
+    "answer": 1,
+    "explanation": "Toprağın sürülmesi, tohum ekilmesi, bitkilerin bakımı ve ürünün toplanması tarım etkinlikleridir."
+  },
+  {
+    "id": "fen-3-7-03",
+    "unit": "fen-3-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Toprağın içinde solucan gibi küçük canlılar yaşar.",
+    "answer": true,
+    "explanation": "Toprak; solucan, karınca ve böcek gibi pek çok canlının yaşam alanıdır. Solucanlar toprağı havalandırarak bitkilere yardımcı olur."
+  },
+  {
+    "id": "fen-3-7-04",
+    "unit": "fen-3-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Filizlenen bir tohumun büyüyebilmesi için hangisine ihtiyacı vardır?",
+    "choices": [
+      "Tuza",
+      "Boyaya",
+      "Suya",
+      "Çakıla"
+    ],
+    "answer": 2,
+    "explanation": "Bitkiler büyümek için suya, havaya, ışığa ve uygun sıcaklığa ihtiyaç duyar. Susuz kalan filiz kurur."
+  },
+  {
+    "id": "fen-3-7-05",
+    "unit": "fen-3-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi toprak türü suyu en hızlı geçirir?",
+    "choices": [
+      "Killi toprak",
+      "Kumlu toprak",
+      "Humuslu toprak"
+    ],
+    "answer": 1,
+    "explanation": "Kumlu toprağın taneleri iridir ve aralarında boşluk çoktur; su bu boşluklardan hızla süzülür. Killi toprak ise suyu tutar."
+  },
+  {
+    "id": "fen-3-7-06",
+    "unit": "fen-3-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Çiftçiler ekimden önce tarlayı neden sürer?",
+    "choices": [
+      "Toprağı havalandırıp ekime hazırlamak için",
+      "Toprağı sertleştirmek için",
+      "Topraktaki suyu boşaltmak için",
+      "Toprağın rengini değiştirmek için"
+    ],
+    "answer": 0,
+    "explanation": "Tarla sürülünce toprak kabarır, havalanır ve yumuşar. Böylece tohumlar kolay ekilir ve kökler rahat gelişir."
+  },
+  {
+    "id": "fen-3-7-07",
+    "unit": "fen-3-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bitkilerin iyi yetişmesi için toprağın sıkı ve havasız olması gerekir.",
+    "answer": false,
+    "explanation": "Bitki kökleri de havaya ihtiyaç duyar. Bu yüzden toprak çapalanarak gevşetilir ve havalandırılır."
+  },
+  {
+    "id": "fen-3-7-08",
+    "unit": "fen-3-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "İki saksıya aynı tohumlar ekiliyor. Yalnızca biri düzenli sulanıyor. Bu deneyde hangi sorunun cevabı aranmaktadır?",
+    "choices": [
+      "Işık, bitkinin büyümesini etkiler mi?",
+      "Su, bitkinin büyümesini etkiler mi?",
+      "Saksının rengi büyümeyi etkiler mi?",
+      "Toprak türü büyümeyi etkiler mi?"
+    ],
+    "answer": 1,
+    "explanation": "İki saksı arasındaki tek fark sulamadır. Bu yüzden deney, suyun bitkinin büyümesine etkisini araştırır."
+  },
+  {
+    "id": "fen-3-8-01",
+    "unit": "fen-3-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Balıkların yaşam alanı hangisidir?",
+    "choices": [
+      "Orman",
+      "Çöl",
+      "Deniz ve göller",
+      "Mağara"
+    ],
+    "answer": 2,
+    "explanation": "Balıklar suda yaşar; solungaçlarıyla suda çözünmüş oksijeni alır. Deniz, göl ve akarsular balıkların yaşam alanıdır."
+  },
+  {
+    "id": "fen-3-8-02",
+    "unit": "fen-3-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi insanlar tarafından yapılmış yapay bir çevredir?",
+    "choices": [
+      "Orman",
+      "Şelale",
+      "Mağara",
+      "Oyun parkı"
+    ],
+    "answer": 3,
+    "explanation": "Oyun parkı insan eliyle yapılmıştır, yani yapay çevredir. Orman, şelale ve mağara doğal çevredir."
+  },
+  {
+    "id": "fen-3-8-03",
+    "unit": "fen-3-8",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Develer sıcak ve kurak çöllerde yaşayabilen hayvanlardır.",
+    "answer": true,
+    "explanation": "Develer uzun süre susuzluğa dayanabilir ve kumda rahat yürür. Bu özellikleri çölde yaşamalarını sağlar."
+  },
+  {
+    "id": "fen-3-8-04",
+    "unit": "fen-3-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kutup ayısının kalın kürkü ve derisinin altındaki yağ tabakası ona ne sağlar?",
+    "choices": [
+      "Daha yükseğe zıplamayı",
+      "Soğuktan korunmayı",
+      "Daha az beslenmeyi",
+      "Daha iyi duymayı"
+    ],
+    "answer": 1,
+    "explanation": "Kalın kürk ve yağ tabakası vücut ısısını korur. Kutup ayısı bu sayede çok soğuk kutup bölgelerinde yaşayabilir."
+  },
+  {
+    "id": "fen-3-8-05",
+    "unit": "fen-3-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi doğal çevreyi korumaya yönelik bir davranıştır?",
+    "choices": [
+      "Ağaçların dallarını kırmak",
+      "Göle atık atmak",
+      "Piknikten sonra çöpleri toplamak",
+      "Piknik ateşini söndürmeden gitmek"
+    ],
+    "answer": 2,
+    "explanation": "Çöplerimizi toplamak canlıların yaşam alanlarını temiz tutar. Öteki davranışlar doğaya ve canlılara zarar verir."
+  },
+  {
+    "id": "fen-3-8-06",
+    "unit": "fen-3-8",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir ormanın yok olması yalnızca ağaçları etkiler, orada yaşayan hayvanları etkilemez.",
+    "answer": false,
+    "explanation": "Orman pek çok hayvanın yuvası ve besin kaynağıdır. Orman yok olursa orada yaşayan hayvanlar da yaşam alanını kaybeder."
+  },
+  {
+    "id": "fen-3-8-07",
+    "unit": "fen-3-8",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir göl tamamen kurursa o gölde yaşayan balıklar ve kurbağalar için hangisi beklenir?",
+    "choices": [
+      "Sayıları hızla artar",
+      "Hiç etkilenmezler",
+      "Daha iyi beslenirler",
+      "Yaşam alanlarını kaybederler"
+    ],
+    "answer": 3,
+    "explanation": "Canlılar ihtiyaçlarını yaşam alanlarından karşılar. Göl kurursa suya bağlı yaşayan canlılar barınacak ve beslenecek yer bulamaz."
+  }
+]

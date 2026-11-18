@@ -1,0 +1,133 @@
+[
+  {
+    "kind": "pairs",
+    "id": "fen-4-1-kavramlar",
+    "unit": "fen-4-1",
+    "difficulty": 2,
+    "questions": [{ "prompt": "{tanim} ne ad verilir?", "answer": "kavram" }],
+    "statement": { "text": "{tanim} {kavramKucuk} denir.", "swap": "kavramKucuk" },
+    "explanation": "{aciklama}",
+    "items": [
+      { "id": "kayac", "kavram": "Kayaç", "kavramKucuk": "kayaç", "tanim": "Yer kabuğunu oluşturan, farklı büyüklükteki taş kütlelerine", "aciklama": "Yer kabuğunu oluşturan taş kütlelerine kayaç denir. Kayaçlar minerallerden oluşur; granit ve mermer birer kayaçtır." },
+      { "id": "mineral", "kavram": "Mineral", "kavramKucuk": "mineral", "tanim": "Kayaçları oluşturan doğal yapı taşlarına", "aciklama": "Kayaçların yapısını oluşturan doğal maddelere mineral denir. Bir kayaçta bir ya da birden çok mineral bulunabilir." },
+      { "id": "maden", "kavram": "Maden", "kavramKucuk": "maden", "tanim": "Ekonomik değeri olan ve işlenerek kullanılan minerallere", "aciklama": "Ekonomik değeri olan, işlenerek kullanılan minerallere maden denir. Demir, bakır, altın ve bor birer madendir." },
+      { "id": "fosil", "kavram": "Fosil", "kavramKucuk": "fosil", "tanim": "Çok eski zamanlarda yaşamış canlıların taşlaşmış kalıntı ve izlerine", "aciklama": "Eski canlıların kayaç tabakaları arasında taşlaşmış kalıntı ve izlerine fosil denir. Fosil oluşumu çok uzun zaman alır." }
+    ],
+    "distractors": { "kavram": ["Toprak", "Humus"] }
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-4-2-icerik-gorev",
+    "unit": "fen-4-2",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{gorev} besin içeriği hangisidir?", "answer": "icerik" },
+      { "prompt": "{icerik} için hangisi söylenebilir?", "answer": "gorevSik" }
+    ],
+    "explanation": "{aciklama}",
+    "items": [
+      { "id": "karbonhidrat", "icerik": "Karbonhidratlar", "gorev": "Vücudun enerji ihtiyacı için ilk sırada kullandığı", "gorevSik": "Vücudun ilk sırada kullandığı enerji kaynağıdır", "aciklama": "Karbonhidratlar vücudun temel enerji kaynağıdır. Ekmek, makarna, pirinç ve patates karbonhidrat bakımından zengindir." },
+      { "id": "protein", "icerik": "Proteinler", "gorev": "Büyüme, gelişme ve yaraların onarımında en çok görev alan", "gorevSik": "Büyüme, gelişme ve onarımda en çok görev alır", "aciklama": "Proteinler yapıcı ve onarıcıdır; büyüme, gelişme ve yaraların onarımında görev alır. Et, süt, yumurta ve kuru baklagillerde bolca bulunur." },
+      { "id": "yag", "icerik": "Yağlar", "gorev": "Vücutta yedek enerji kaynağı olarak depolanan", "gorevSik": "Vücutta yedek enerji kaynağı olarak depolanır", "aciklama": "Yağlar enerji verir ve vücutta yedek enerji kaynağı olarak depolanır. Zeytinyağı, tereyağı, ceviz ve fındık yağ bakımından zengindir." },
+      { "id": "vitamin", "icerik": "Vitaminler", "gorev": "Enerji vermeyen, taze sebze ve meyvelerde bolca bulunan düzenleyici", "gorevSik": "Enerji vermez, vücudu hastalıklara karşı dirençli kılar", "aciklama": "Vitaminler enerji vermez; vücudun düzenli çalışmasını sağlar ve hastalıklara karşı direnci artırır. Taze sebze ve meyvelerde bolca bulunur." }
+    ],
+    "distractors": { "icerik": ["Su"] }
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-4-2-besin-icerik",
+    "unit": "fen-4-2",
+    "difficulty": 1,
+    "questions": [{ "prompt": "{besin} en çok hangi besin içeriği bakımından zengindir?", "answer": "icerik" }],
+    "statement": { "text": "{besin}, {icerikKucuk} bakımından zengin bir besindir.", "swap": "icerikKucuk" },
+    "explanation": "{besin}, {icerikKucuk} bakımından zengin bir besindir. {ek}",
+    "items": [
+      { "id": "makarna", "besin": "Makarna", "icerik": "Karbonhidrat", "icerikKucuk": "karbonhidrat", "ek": "Tahıllardan yapılan besinler karbonhidrat deposudur." },
+      { "id": "zeytinyagi", "besin": "Zeytinyağı", "icerik": "Yağ", "icerikKucuk": "yağ", "ek": "Zeytinyağı bitkisel bir yağdır." },
+      { "id": "yumurta", "besin": "Yumurta", "icerik": "Protein", "icerikKucuk": "protein", "ek": "Yumurta, et ve süt hayvansal protein kaynaklarıdır." },
+      { "id": "ekmek", "besin": "Ekmek", "icerik": "Karbonhidrat", "icerikKucuk": "karbonhidrat", "ek": "Ekmek tahıldan yapılır ve enerji verir." },
+      { "id": "tereyagi", "besin": "Tereyağı", "icerik": "Yağ", "icerikKucuk": "yağ", "ek": "Tereyağı sütten elde edilen hayvansal bir yağdır." },
+      { "id": "tavuk", "besin": "Tavuk eti", "icerik": "Protein", "icerikKucuk": "protein", "ek": "Etler büyüme ve gelişme için gerekli proteini sağlar." },
+      { "id": "pirinc", "besin": "Pirinç", "icerik": "Karbonhidrat", "icerikKucuk": "karbonhidrat", "ek": "Pirinç bir tahıldır ve enerji verir." }
+    ],
+    "distractors": { "icerik": ["Vitamin", "Su"] }
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-4-3-kuvvetin-etkisi",
+    "unit": "fen-4-3",
+    "difficulty": 2,
+    "questions": [{ "prompt": "{olay} durumunda kuvvetin hangi etkisi görülür?", "answer": "etki" }],
+    "explanation": "{aciklama}",
+    "items": [
+      { "id": "hareket", "olay": "Duran bir topa ayakla vurulması", "etki": "Hareket ettirme", "aciklama": "Kuvvet duran cisimleri hareket ettirebilir. Duran topa vurulduğunda top harekete geçer." },
+      { "id": "durdurma", "olay": "Kalecinin kaleye gelen topu tutması", "etki": "Durdurma", "aciklama": "Kuvvet hareket eden cisimleri durdurabilir. Kaleci topa kuvvet uygulayarak onu durdurur." },
+      { "id": "sekil", "olay": "Oyun hamurunun elle sıkılması", "etki": "Şekil değiştirme", "aciklama": "Kuvvet cisimlerin şeklini değiştirebilir. Sıkılan oyun hamuru yeni bir şekil alır." },
+      { "id": "hizlandirma", "olay": "Bisikletlinin pedalları daha güçlü çevirmesi", "etki": "Hızlandırma", "aciklama": "Kuvvet hareket eden cisimleri hızlandırabilir. Pedallar daha güçlü çevrildiğinde bisiklet hızlanır." },
+      { "id": "yavaslatma", "olay": "Bisikletlinin frene hafifçe basması", "etki": "Yavaşlatma", "aciklama": "Kuvvet hareket eden cisimleri yavaşlatabilir. Fren, tekerleğe kuvvet uygulayarak bisikleti yavaşlatır." },
+      { "id": "yon", "olay": "Gelen topa raketle vurulup topun geri gönderilmesi", "etki": "Yön değiştirme", "aciklama": "Kuvvet hareket eden cisimlerin yönünü değiştirebilir. Raketle vurulan top geldiği tarafa geri gider." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "fen-4-3-miknatis",
+    "unit": "fen-4-3",
+    "difficulty": 1,
+    "positive": "Mıknatıs hangisini çeker?",
+    "negative": "Mıknatıs hangisini çekmez?",
+    "statement": "{item}, mıknatısın çektiği cisimlerdendir.",
+    "explanation": "Mıknatıs demir, nikel ve kobalt içeren maddeleri çeker. Buradaki cisimlerden mıknatısın çektikleri: {members}. Plastik, tahta, cam, lastik ve kâğıdı çekmez.",
+    "members": ["Demir çivi", "Çelik ataş", "Toplu iğne", "Demir tozu"],
+    "nonMembers": ["Plastik kaşık", "Tahta kalem", "Cam bilye", "Lastik silgi", "Kâğıt"]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-4-4-hal-degisimi",
+    "unit": "fen-4-4",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanim} ne ad verilir?", "answer": "ad" },
+      { "prompt": "{ornek} hangi hâl değişimine örnektir?", "answer": "ad" }
+    ],
+    "statement": { "text": "{ornek} {adEk} örnektir.", "swap": "adEk" },
+    "explanation": "{aciklama}",
+    "items": [
+      { "id": "erime", "ad": "Erime", "adEk": "erimeye", "tanim": "Katı bir maddenin ısı alarak sıvı hâle geçmesine", "ornek": "Güneşte kalan dondurmanın sıvılaşması", "aciklama": "Katı bir maddenin ısı alarak sıvı hâle geçmesine erime denir. Dondurma, buz ve tereyağı ısı alınca erir." },
+      { "id": "donma", "ad": "Donma", "adEk": "donmaya", "tanim": "Sıvı bir maddenin ısı vererek katı hâle geçmesine", "ornek": "Buzluğa konan suyun buza dönüşmesi", "aciklama": "Sıvı bir maddenin ısı vererek katı hâle geçmesine donma denir. Buzluktaki su ısı vererek buza dönüşür." },
+      { "id": "buharlasma", "ad": "Buharlaşma", "adEk": "buharlaşmaya", "tanim": "Sıvı bir maddenin ısı alarak gaz hâle geçmesine", "ornek": "Yere dökülen suyun bir süre sonra kuruması", "aciklama": "Sıvı bir maddenin ısı alarak gaz hâle geçmesine buharlaşma denir. Yerdeki su ve ıslak çamaşırlar buharlaşma ile kurur." }
+    ],
+    "distractors": { "ad": ["Çözünme", "Süzme"] }
+  },
+  {
+    "kind": "list",
+    "id": "fen-4-5-eski-aydinlatma",
+    "unit": "fen-4-5",
+    "difficulty": 1,
+    "positive": "Hangisi elektrikli aydınlatmadan önce kullanılan bir aydınlatma aracıdır?",
+    "negative": "Hangisi elektrikle çalışan bir aydınlatma aracıdır?",
+    "statement": "{item}, elektrikli aydınlatmadan önce kullanılan bir aydınlatma aracıdır.",
+    "explanation": "Elektrikli aydınlatmadan önce insanlar ateşten yararlanan araçlar kullanırdı: {members}. LED ampul, floresan lamba, el feneri ve projektör ise elektrikle çalışır.",
+    "members": ["Meşale", "Kandil", "Mum", "Gaz lambası"],
+    "nonMembers": ["LED ampul", "Floresan lamba", "El feneri", "Projektör"]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-4-7-devre-elemanlari",
+    "unit": "fen-4-7",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Basit elektrik devresinde {gorev} eleman hangisidir?", "answer": "eleman" },
+      { "prompt": "Basit elektrik devresinde {elemanEk} görevi nedir?", "answer": "gorevSik" }
+    ],
+    "statement": { "text": "{eleman}, basit elektrik devresinde {gorev} elemandır.", "swap": "gorev" },
+    "explanation": "{eleman}, basit elektrik devresinde {gorev} elemandır. {ek}",
+    "items": [
+      { "id": "pil", "eleman": "Pil", "elemanEk": "pilin", "gorev": "elektrik enerjisini sağlayan", "gorevSik": "Elektrik enerjisi sağlamak", "ek": "Pil olmadan devre çalışmaz." },
+      { "id": "ampul", "eleman": "Ampul", "elemanEk": "ampulün", "gorev": "elektrik enerjisini ışığa dönüştüren", "gorevSik": "Elektrik enerjisini ışığa dönüştürmek", "ek": "Devre tamamlandığında ampul ışık verir." },
+      { "id": "anahtar", "eleman": "Anahtar", "elemanEk": "anahtarın", "gorev": "devreyi açıp kapatan", "gorevSik": "Devreyi açıp kapatmak", "ek": "Anahtar kapalıyken ampul yanar, açıkken söner." },
+      { "id": "kablo", "eleman": "Bağlantı kablosu", "elemanEk": "bağlantı kablosunun", "gorev": "elemanları birbirine bağlayıp elektriği ileten", "gorevSik": "Elemanları birbirine bağlayıp elektriği iletmek", "ek": "Kablolar pilden gelen elektriği ampule taşır." },
+      { "id": "duy", "eleman": "Duy", "elemanEk": "duyun", "gorev": "ampulün takıldığı", "gorevSik": "Ampulü devreye bağlamak", "ek": "Duy, ampulün devreye bağlanmasını sağlar." },
+      { "id": "pil-yatagi", "eleman": "Pil yatağı", "elemanEk": "pil yatağının", "gorev": "pilin yerleştirildiği", "gorevSik": "Pili devreye bağlamak", "ek": "Pil yatağı, pilin devreye bağlanmasını sağlar." }
+    ]
+  }
+]

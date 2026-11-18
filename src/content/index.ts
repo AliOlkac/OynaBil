@@ -52,6 +52,9 @@ export const CONTENT_FILES: Record<string, Partial<Record<Grade, GradeFiles>>> =
     3: { questions: () => import("./hayat-bilgisi/sorular/3.json"), cards: () => import("./hayat-bilgisi/kartlar/3.json") },
   },
   "fen-bilimleri": {
+    3: { questions: () => import("./fen-bilimleri/sorular/3.json"), cards: () => import("./fen-bilimleri/kartlar/3.json") },
+    4: { questions: () => import("./fen-bilimleri/sorular/4.json"), cards: () => import("./fen-bilimleri/kartlar/4.json") },
+    5: { questions: () => import("./fen-bilimleri/sorular/5.json"), cards: () => import("./fen-bilimleri/kartlar/5.json") },
     6: { questions: () => import("./fen-bilimleri/sorular/6.json"), cards: () => import("./fen-bilimleri/kartlar/6.json") },
     7: { questions: () => import("./fen-bilimleri/sorular/7.json"), cards: () => import("./fen-bilimleri/kartlar/7.json") },
     8: { questions: () => import("./fen-bilimleri/sorular/8.json"), cards: () => import("./fen-bilimleri/kartlar/8.json"), passages: () => import("./fen-bilimleri/sorular/8-lgs.json") },
