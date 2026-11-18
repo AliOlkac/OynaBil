@@ -1,0 +1,410 @@
+[
+  {
+    "kind": "pairs",
+    "id": "mat-5-2-uslu-ifadeler",
+    "unit": "mat-5-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{ifade} ifadesinin değeri kaçtır?",
+        "answer": "deger"
+      },
+      {
+        "prompt": "Değeri {deger} olan üslü ifade hangisidir?",
+        "answer": "ifade"
+      }
+    ],
+    "statement": {
+      "text": "{ifade} = {deger} eşitliği doğrudur.",
+      "swap": "deger"
+    },
+    "explanation": "{ifade} = {acilim} = {deger}. Üs, tabanın kaç kez çarpılacağını gösterir.",
+    "items": [
+      {
+        "id": "2-3",
+        "ifade": "2³",
+        "acilim": "2 × 2 × 2",
+        "deger": "8"
+      },
+      {
+        "id": "3-2",
+        "ifade": "3²",
+        "acilim": "3 × 3",
+        "deger": "9"
+      },
+      {
+        "id": "4-2",
+        "ifade": "4²",
+        "acilim": "4 × 4",
+        "deger": "16"
+      },
+      {
+        "id": "5-2",
+        "ifade": "5²",
+        "acilim": "5 × 5",
+        "deger": "25"
+      },
+      {
+        "id": "3-3",
+        "ifade": "3³",
+        "acilim": "3 × 3 × 3",
+        "deger": "27"
+      },
+      {
+        "id": "6-2",
+        "ifade": "6²",
+        "acilim": "6 × 6",
+        "deger": "36"
+      },
+      {
+        "id": "7-2",
+        "ifade": "7²",
+        "acilim": "7 × 7",
+        "deger": "49"
+      },
+      {
+        "id": "10-2",
+        "ifade": "10²",
+        "acilim": "10 × 10",
+        "deger": "100"
+      },
+      {
+        "id": "10-3",
+        "ifade": "10³",
+        "acilim": "10 × 10 × 10",
+        "deger": "1000"
+      }
+    ],
+    "distractors": {
+      "deger": [
+        "6",
+        "12",
+        "20",
+        "30"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-5-4-kesir-ondalik-yuzde",
+    "unit": "mat-5-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{kesir} kesrinin ondalık gösterimi hangisidir?",
+        "answer": "ondalik"
+      },
+      {
+        "prompt": "{ondalik} ondalık gösteriminin yüzde olarak yazılışı hangisidir?",
+        "answer": "yuzde"
+      },
+      {
+        "prompt": "{yuzde} ifadesine eşit olan kesir hangisidir?",
+        "answer": "kesir"
+      }
+    ],
+    "statement": {
+      "text": "{kesir} = {ondalik} eşitliği doğrudur.",
+      "swap": "ondalik"
+    },
+    "explanation": "{kesir} = {yuzluk} = {ondalik} = {yuzde}. Paydası 100 olan kesir yüzde ile gösterilir.",
+    "items": [
+      {
+        "id": "1-2",
+        "kesir": "1/2",
+        "yuzluk": "50/100",
+        "ondalik": "0,5",
+        "yuzde": "%50"
+      },
+      {
+        "id": "1-4",
+        "kesir": "1/4",
+        "yuzluk": "25/100",
+        "ondalik": "0,25",
+        "yuzde": "%25"
+      },
+      {
+        "id": "3-4",
+        "kesir": "3/4",
+        "yuzluk": "75/100",
+        "ondalik": "0,75",
+        "yuzde": "%75"
+      },
+      {
+        "id": "1-5",
+        "kesir": "1/5",
+        "yuzluk": "20/100",
+        "ondalik": "0,2",
+        "yuzde": "%20"
+      },
+      {
+        "id": "2-5",
+        "kesir": "2/5",
+        "yuzluk": "40/100",
+        "ondalik": "0,4",
+        "yuzde": "%40"
+      },
+      {
+        "id": "3-5",
+        "kesir": "3/5",
+        "yuzluk": "60/100",
+        "ondalik": "0,6",
+        "yuzde": "%60"
+      },
+      {
+        "id": "1-10",
+        "kesir": "1/10",
+        "yuzluk": "10/100",
+        "ondalik": "0,1",
+        "yuzde": "%10"
+      },
+      {
+        "id": "3-10",
+        "kesir": "3/10",
+        "yuzluk": "30/100",
+        "ondalik": "0,3",
+        "yuzde": "%30"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-5-1-aci-turleri",
+    "unit": "mat-5-1",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "Ölçüsü {olcu} olan açıya ne ad verilir?",
+        "answer": "ad"
+      }
+    ],
+    "statement": {
+      "text": "Ölçüsü {olcu} olan açıya {adKucuk} denir.",
+      "swap": "adKucuk"
+    },
+    "explanation": "Ölçüsü {olcu} olan açı: {adKucuk}. Açılar ölçülerine göre dar, dik, geniş, doğru ve tam açı olarak adlandırılır.",
+    "items": [
+      {
+        "id": "dar",
+        "olcu": "0° ile 90° arasında",
+        "ad": "Dar açı",
+        "adKucuk": "dar açı"
+      },
+      {
+        "id": "dik",
+        "olcu": "90°",
+        "ad": "Dik açı",
+        "adKucuk": "dik açı"
+      },
+      {
+        "id": "genis",
+        "olcu": "90° ile 180° arasında",
+        "ad": "Geniş açı",
+        "adKucuk": "geniş açı"
+      },
+      {
+        "id": "dogru",
+        "olcu": "180°",
+        "ad": "Doğru açı",
+        "adKucuk": "doğru açı"
+      },
+      {
+        "id": "tam",
+        "olcu": "360°",
+        "ad": "Tam açı",
+        "adKucuk": "tam açı"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-5-1-ucgen-cesitleri",
+    "unit": "mat-5-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ozellik} olan üçgene ne ad verilir?",
+        "answer": "ad"
+      }
+    ],
+    "statement": {
+      "text": "{ozellik} olan üçgene {adKucuk} denir.",
+      "swap": "adKucuk"
+    },
+    "explanation": "{ozellik} olan üçgenin adı: {adKucuk}. Üçgenler kenarlarına göre eşkenar, ikizkenar ve çeşitkenar olarak adlandırılır.",
+    "items": [
+      {
+        "id": "eskenar",
+        "ozellik": "Üç kenarı da eşit uzunlukta",
+        "ad": "Eşkenar üçgen",
+        "adKucuk": "eşkenar üçgen"
+      },
+      {
+        "id": "ikizkenar",
+        "ozellik": "Yalnızca iki kenarı eşit uzunlukta",
+        "ad": "İkizkenar üçgen",
+        "adKucuk": "ikizkenar üçgen"
+      },
+      {
+        "id": "cesitkenar",
+        "ozellik": "Bütün kenarları farklı uzunlukta",
+        "ad": "Çeşitkenar üçgen",
+        "adKucuk": "çeşitkenar üçgen"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-5-1-acilarina-gore-ucgenler",
+    "unit": "mat-5-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ozellik} olan üçgene ne ad verilir?",
+        "answer": "ad"
+      }
+    ],
+    "statement": {
+      "text": "{ozellik} olan üçgene {adKucuk} denir.",
+      "swap": "adKucuk"
+    },
+    "explanation": "{ozellik} olan üçgenin adı: {adKucuk}. Üçgenler açılarına göre dar açılı, dik açılı ve geniş açılı olarak adlandırılır.",
+    "items": [
+      {
+        "id": "dik",
+        "ozellik": "Bir açısı 90°",
+        "ad": "Dik açılı üçgen",
+        "adKucuk": "dik açılı üçgen"
+      },
+      {
+        "id": "genis",
+        "ozellik": "Bir açısı 90°'den büyük",
+        "ad": "Geniş açılı üçgen",
+        "adKucuk": "geniş açılı üçgen"
+      },
+      {
+        "id": "dar",
+        "ozellik": "Üç açısı da 90°'den küçük",
+        "ad": "Dar açılı üçgen",
+        "adKucuk": "dar açılı üçgen"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-5-3-uzunluk-donusumleri",
+    "unit": "mat-5-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{soru}",
+        "answer": "deger"
+      }
+    ],
+    "statement": {
+      "text": "{sol} = {deger} {birim} eşitliği doğrudur.",
+      "swap": "deger"
+    },
+    "explanation": "{sol} = {deger} {birim}. {kural}",
+    "items": [
+      {
+        "id": "1km",
+        "soru": "1 km kaç metredir?",
+        "sol": "1 km",
+        "deger": "1000",
+        "birim": "m",
+        "kural": "Kilometre metreye çevrilirken 1000 ile çarpılır."
+      },
+      {
+        "id": "1m",
+        "soru": "1 m kaç santimetredir?",
+        "sol": "1 m",
+        "deger": "100",
+        "birim": "cm",
+        "kural": "Metre santimetreye çevrilirken 100 ile çarpılır."
+      },
+      {
+        "id": "1cm",
+        "soru": "1 cm kaç milimetredir?",
+        "sol": "1 cm",
+        "deger": "10",
+        "birim": "mm",
+        "kural": "Santimetre milimetreye çevrilirken 10 ile çarpılır."
+      },
+      {
+        "id": "5km",
+        "soru": "5 km kaç metredir?",
+        "sol": "5 km",
+        "deger": "5000",
+        "birim": "m",
+        "kural": "Kilometre metreye çevrilirken 1000 ile çarpılır."
+      },
+      {
+        "id": "3m",
+        "soru": "3 m kaç santimetredir?",
+        "sol": "3 m",
+        "deger": "300",
+        "birim": "cm",
+        "kural": "Metre santimetreye çevrilirken 100 ile çarpılır."
+      },
+      {
+        "id": "2-5m",
+        "soru": "2,5 m kaç santimetredir?",
+        "sol": "2,5 m",
+        "deger": "250",
+        "birim": "cm",
+        "kural": "Metre santimetreye çevrilirken 100 ile çarpılır."
+      },
+      {
+        "id": "40mm",
+        "soru": "40 mm kaç santimetredir?",
+        "sol": "40 mm",
+        "deger": "4",
+        "birim": "cm",
+        "kural": "Milimetre santimetreye çevrilirken 10'a bölünür."
+      },
+      {
+        "id": "7000m",
+        "soru": "7000 m kaç kilometredir?",
+        "sol": "7000 m",
+        "deger": "7",
+        "birim": "km",
+        "kural": "Metre kilometreye çevrilirken 1000'e bölünür."
+      }
+    ],
+    "distractors": {
+      "deger": [
+        "50",
+        "500",
+        "30",
+        "25",
+        "400",
+        "70",
+        "700",
+        "2500"
+      ]
+    }
+  },
+  {
+    "kind": "list",
+    "id": "mat-5-7-kesin-olaylar",
+    "unit": "mat-5-7",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi kesin gerçekleşen bir olaydır?",
+    "negative": "Aşağıdakilerden hangisi kesin gerçekleşen bir olay değildir?",
+    "statement": "\"{item}\" kesin bir olaydır.",
+    "explanation": "Kesin olay, her denemede mutlaka gerçekleşen olaydır. Bazen gerçekleşen olaylar olası, hiç gerçekleşmeyen olaylar imkânsız olaydır.",
+    "members": [
+      "Bir zar atıldığında 7'den küçük sayı gelmesi",
+      "Salı gününden sonra çarşamba gelmesi",
+      "Yalnızca mavi top olan torbadan mavi top çekilmesi",
+      "Bir zar atıldığında 0'dan büyük sayı gelmesi"
+    ],
+    "nonMembers": [
+      "Bir zar atıldığında 6 gelmesi",
+      "Madenî para atıldığında yazı gelmesi",
+      "Bir zar atıldığında 8 gelmesi",
+      "Yalnızca mavi top olan torbadan sarı top çekilmesi"
+    ]
+  }
+]

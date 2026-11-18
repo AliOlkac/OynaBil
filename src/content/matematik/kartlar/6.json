@@ -1,0 +1,405 @@
+[
+  {
+    "kind": "pairs",
+    "id": "mat-6-1-asal-carpanlar",
+    "unit": "mat-6-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{sayi} sayısının asal çarpanlarına ayrılmış hâli hangisidir?",
+        "answer": "carpim"
+      },
+      {
+        "prompt": "{carpim} işleminin sonucu kaçtır?",
+        "answer": "sayi"
+      }
+    ],
+    "statement": {
+      "text": "{sayi} = {carpim} eşitliği doğrudur.",
+      "swap": "carpim"
+    },
+    "explanation": "{sayi} = {acik} = {carpim}. Sayı, asal sayılara bölünerek asal çarpanlarına ayrılır.",
+    "items": [
+      {
+        "id": "12",
+        "sayi": "12",
+        "acik": "2 × 2 × 3",
+        "carpim": "2² × 3"
+      },
+      {
+        "id": "18",
+        "sayi": "18",
+        "acik": "2 × 3 × 3",
+        "carpim": "2 × 3²"
+      },
+      {
+        "id": "20",
+        "sayi": "20",
+        "acik": "2 × 2 × 5",
+        "carpim": "2² × 5"
+      },
+      {
+        "id": "28",
+        "sayi": "28",
+        "acik": "2 × 2 × 7",
+        "carpim": "2² × 7"
+      },
+      {
+        "id": "30",
+        "sayi": "30",
+        "acik": "2 × 3 × 5",
+        "carpim": "2 × 3 × 5"
+      },
+      {
+        "id": "45",
+        "sayi": "45",
+        "acik": "3 × 3 × 5",
+        "carpim": "3² × 5"
+      },
+      {
+        "id": "50",
+        "sayi": "50",
+        "acik": "2 × 5 × 5",
+        "carpim": "2 × 5²"
+      },
+      {
+        "id": "36",
+        "sayi": "36",
+        "acik": "2 × 2 × 3 × 3",
+        "carpim": "2² × 3²"
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "mat-6-1-asal-sayilar",
+    "unit": "mat-6-1",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi asal sayıdır?",
+    "negative": "Aşağıdakilerden hangisi asal sayı değildir?",
+    "statement": "{item} bir asal sayıdır.",
+    "explanation": "Asal sayının 1 ve kendisinden başka çarpanı yoktur; 1 asal değildir. 40'tan küçük asal sayılar: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37.",
+    "members": [
+      "2",
+      "11",
+      "13",
+      "17",
+      "19",
+      "23",
+      "31",
+      "37"
+    ],
+    "nonMembers": [
+      "1",
+      "9",
+      "15",
+      "21",
+      "27",
+      "33",
+      "39",
+      "49"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-6-2-sozden-cebire",
+    "unit": "mat-6-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{soz}\" ifadesinin cebirsel gösterimi hangisidir? (Sayı: x)",
+        "answer": "cebir"
+      },
+      {
+        "prompt": "{cebir} cebirsel ifadesinin sözle anlatımı hangisidir? (Sayı: x)",
+        "answer": "soz"
+      }
+    ],
+    "statement": {
+      "text": "\"{soz}\" ifadesi {cebir} biçiminde gösterilir. (Sayı: x)",
+      "swap": "cebir"
+    },
+    "explanation": "\"{soz}\" ifadesi {cebir} olarak yazılır. İşlemlerin söyleniş sırası cebirsel ifadeyi belirler.",
+    "items": [
+      {
+        "id": "2x",
+        "soz": "Bir sayının 2 katı",
+        "cebir": "2x"
+      },
+      {
+        "id": "x-arti-5",
+        "soz": "Bir sayının 5 fazlası",
+        "cebir": "x + 5"
+      },
+      {
+        "id": "x-eksi-3",
+        "soz": "Bir sayının 3 eksiği",
+        "cebir": "x − 3"
+      },
+      {
+        "id": "x-bolu-2",
+        "soz": "Bir sayının yarısı",
+        "cebir": "x/2"
+      },
+      {
+        "id": "2x-arti-5",
+        "soz": "Bir sayının 2 katının 5 fazlası",
+        "cebir": "2x + 5"
+      },
+      {
+        "id": "2-x-arti-5",
+        "soz": "Bir sayının 5 fazlasının 2 katı",
+        "cebir": "2(x + 5)"
+      },
+      {
+        "id": "3x-eksi-1",
+        "soz": "Bir sayının 3 katının 1 eksiği",
+        "cebir": "3x − 1"
+      },
+      {
+        "id": "3-x-eksi-1",
+        "soz": "Bir sayının 1 eksiğinin 3 katı",
+        "cebir": "3(x − 1)"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-6-3-kesir-ondalik-yuzde",
+    "unit": "mat-6-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{kesir} kesrinin ondalık gösterimi hangisidir?",
+        "answer": "ondalik"
+      },
+      {
+        "prompt": "{ondalik} ondalık gösteriminin yüzde olarak yazılışı hangisidir?",
+        "answer": "yuzde"
+      },
+      {
+        "prompt": "{yuzde} ifadesine eşit olan kesir hangisidir?",
+        "answer": "kesir"
+      }
+    ],
+    "statement": {
+      "text": "{kesir} = {yuzde} eşitliği doğrudur.",
+      "swap": "yuzde"
+    },
+    "explanation": "{kesir} = {ondalik} = {yuzde}. Kesrin payı paydasına bölünerek ondalık gösterim, 100 ile çarpılarak yüzde bulunur.",
+    "items": [
+      {
+        "id": "1-8",
+        "kesir": "1/8",
+        "ondalik": "0,125",
+        "yuzde": "%12,5"
+      },
+      {
+        "id": "3-8",
+        "kesir": "3/8",
+        "ondalik": "0,375",
+        "yuzde": "%37,5"
+      },
+      {
+        "id": "1-20",
+        "kesir": "1/20",
+        "ondalik": "0,05",
+        "yuzde": "%5"
+      },
+      {
+        "id": "3-20",
+        "kesir": "3/20",
+        "ondalik": "0,15",
+        "yuzde": "%15"
+      },
+      {
+        "id": "9-20",
+        "kesir": "9/20",
+        "ondalik": "0,45",
+        "yuzde": "%45"
+      },
+      {
+        "id": "7-10",
+        "kesir": "7/10",
+        "ondalik": "0,7",
+        "yuzde": "%70"
+      },
+      {
+        "id": "1-25",
+        "kesir": "1/25",
+        "ondalik": "0,04",
+        "yuzde": "%4"
+      },
+      {
+        "id": "3-2",
+        "kesir": "3/2",
+        "ondalik": "1,5",
+        "yuzde": "%150"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-6-4-tumler-acilar",
+    "unit": "mat-6-4",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "Ölçüsü {aci} olan açının tümleri kaç derecedir?",
+        "answer": "tumler"
+      }
+    ],
+    "statement": {
+      "text": "Ölçüsü {aci} olan açının tümleri {tumler} ölçüsündedir.",
+      "swap": "tumler"
+    },
+    "explanation": "Tümler açıların ölçüleri toplamı 90°'dir: 90° − {aci} = {tumler}.",
+    "items": [
+      {
+        "id": "20",
+        "aci": "20°",
+        "tumler": "70°"
+      },
+      {
+        "id": "35",
+        "aci": "35°",
+        "tumler": "55°"
+      },
+      {
+        "id": "48",
+        "aci": "48°",
+        "tumler": "42°"
+      },
+      {
+        "id": "62",
+        "aci": "62°",
+        "tumler": "28°"
+      },
+      {
+        "id": "75",
+        "aci": "75°",
+        "tumler": "15°"
+      },
+      {
+        "id": "8",
+        "aci": "8°",
+        "tumler": "82°"
+      }
+    ],
+    "distractors": {
+      "tumler": [
+        "160°",
+        "145°",
+        "132°",
+        "118°",
+        "105°",
+        "172°"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-6-4-butunler-acilar",
+    "unit": "mat-6-4",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "Ölçüsü {aci} olan açının bütünleri kaç derecedir?",
+        "answer": "butunler"
+      }
+    ],
+    "statement": {
+      "text": "Ölçüsü {aci} olan açının bütünleri {butunler} ölçüsündedir.",
+      "swap": "butunler"
+    },
+    "explanation": "Bütünler açıların ölçüleri toplamı 180°'dir: 180° − {aci} = {butunler}.",
+    "items": [
+      {
+        "id": "30",
+        "aci": "30°",
+        "butunler": "150°"
+      },
+      {
+        "id": "45",
+        "aci": "45°",
+        "butunler": "135°"
+      },
+      {
+        "id": "72",
+        "aci": "72°",
+        "butunler": "108°"
+      },
+      {
+        "id": "95",
+        "aci": "95°",
+        "butunler": "85°"
+      },
+      {
+        "id": "120",
+        "aci": "120°",
+        "butunler": "60°"
+      },
+      {
+        "id": "164",
+        "aci": "164°",
+        "butunler": "16°"
+      }
+    ],
+    "distractors": {
+      "butunler": [
+        "18°",
+        "330°",
+        "315°",
+        "288°",
+        "240°",
+        "196°"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-6-5-alan-bagintilari",
+    "unit": "mat-6-5",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{sekilIn} alanı hangi işlemle bulunur?",
+        "answer": "formul"
+      }
+    ],
+    "explanation": "{sekilIn} alanı: {formul}. {neden}",
+    "items": [
+      {
+        "id": "kare",
+        "sekilIn": "Karenin",
+        "formul": "kenar × kenar",
+        "neden": "Karenin bütün kenarları eşit olduğundan bir kenar kendisiyle çarpılır."
+      },
+      {
+        "id": "dikdortgen",
+        "sekilIn": "Dikdörtgenin",
+        "formul": "kısa kenar × uzun kenar",
+        "neden": "Dikdörtgen, kısa kenar sayısı kadar sıra ve uzun kenar sayısı kadar birim kareden oluşur."
+      },
+      {
+        "id": "paralelkenar",
+        "sekilIn": "Paralelkenarın",
+        "formul": "taban × yükseklik",
+        "neden": "Paralelkenar, aynı taban ve yüksekliğe sahip bir dikdörtgene dönüştürülebilir."
+      },
+      {
+        "id": "ucgen",
+        "sekilIn": "Üçgenin",
+        "formul": "(taban × yükseklik) ÷ 2",
+        "neden": "Üçgen, aynı taban ve yüksekliğe sahip paralelkenarın yarısıdır."
+      }
+    ],
+    "distractors": {
+      "formul": [
+        "(kısa kenar + uzun kenar) × 2",
+        "kenar × 4",
+        "taban + yükseklik"
+      ]
+    }
+  }
+]

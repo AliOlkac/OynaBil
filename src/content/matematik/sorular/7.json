@@ -1,0 +1,914 @@
+[
+  {
+    "id": "mat-7-1-01",
+    "unit": "mat-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "(−8) + (+3) işleminin sonucu kaçtır?",
+    "choices": [
+      "−11",
+      "5",
+      "−5",
+      "11"
+    ],
+    "answer": 2,
+    "explanation": "Ters işaretli sayılar toplanırken mutlak değerlerin farkı alınır, mutlak değeri büyük olanın işareti yazılır: 8 − 3 = 5 ve sonuç −5'tir."
+  },
+  {
+    "id": "mat-7-1-02",
+    "unit": "mat-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "(−6) × (−4) işleminin sonucu kaçtır?",
+    "choices": [
+      "−24",
+      "24",
+      "−10",
+      "10"
+    ],
+    "answer": 1,
+    "explanation": "Aynı işaretli iki tam sayının çarpımı pozitiftir: (−6) × (−4) = +24."
+  },
+  {
+    "id": "mat-7-1-03",
+    "unit": "mat-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hava sıcaklığı sabah −4 °C iken öğlene kadar 9 °C artmıştır. Öğle sıcaklığı kaç °C'dir?",
+    "choices": [
+      "5",
+      "13",
+      "−13",
+      "−5"
+    ],
+    "answer": 0,
+    "explanation": "Artış toplama ile gösterilir: (−4) + 9 = 5 °C."
+  },
+  {
+    "id": "mat-7-1-04",
+    "unit": "mat-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "(−12) − (−7) işleminin sonucu kaçtır?",
+    "choices": [
+      "−19",
+      "5",
+      "−5",
+      "19"
+    ],
+    "answer": 2,
+    "explanation": "Bir sayıyı çıkarmak, ters işaretlisini eklemektir: (−12) + (+7) = −5."
+  },
+  {
+    "id": "mat-7-1-05",
+    "unit": "mat-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "|−9| + |4| işleminin sonucu kaçtır?",
+    "choices": [
+      "−5",
+      "13",
+      "5",
+      "−13"
+    ],
+    "answer": 1,
+    "explanation": "Mutlak değer, sayının sıfıra uzaklığıdır ve negatif olmaz: |−9| = 9, |4| = 4. Toplam 13'tür."
+  },
+  {
+    "id": "mat-7-1-06",
+    "unit": "mat-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "(−2)³ ifadesinin değeri kaçtır?",
+    "choices": [
+      "8",
+      "−8",
+      "−6",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "(−2)³ = (−2) × (−2) × (−2) = −8. Negatif bir sayının tek kuvveti negatiftir."
+  },
+  {
+    "id": "mat-7-1-07",
+    "unit": "mat-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "−3/4 + 1/2 işleminin sonucu kaçtır?",
+    "choices": [
+      "−1/4",
+      "−5/4",
+      "1/4",
+      "−2/6"
+    ],
+    "answer": 0,
+    "explanation": "Paydalar eşitlenir: −3/4 + 2/4 = −1/4."
+  },
+  {
+    "id": "mat-7-1-08",
+    "unit": "mat-7-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "(−1/2) × (4/5) ÷ (−2/5) işleminin sonucu kaçtır?",
+    "choices": [
+      "−1",
+      "4/25",
+      "−4/25",
+      "1"
+    ],
+    "answer": 3,
+    "explanation": "Önce çarpma: (−1/2) × (4/5) = −2/5. Sonra bölme: (−2/5) ÷ (−2/5) = 1. Aynı işaretli sayıların bölümü pozitiftir."
+  },
+  {
+    "id": "mat-7-1-09",
+    "unit": "mat-7-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "−7, −3'ten küçüktür.",
+    "answer": true,
+    "explanation": "Sayı doğrusunda solda kalan sayı daha küçüktür. −7, −3'ün solundadır."
+  },
+  {
+    "id": "mat-7-1-10",
+    "unit": "mat-7-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "İki negatif tam sayının toplamı pozitif bir tam sayıdır.",
+    "answer": false,
+    "explanation": "İki negatif tam sayının toplamı negatiftir; örneğin (−2) + (−5) = −7. Pozitif olan, iki negatif sayının çarpımıdır."
+  },
+  {
+    "id": "mat-7-1-11",
+    "unit": "mat-7-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Her tam sayı aynı zamanda bir rasyonel sayıdır.",
+    "answer": true,
+    "explanation": "Her tam sayı paydası 1 olan bir kesir olarak yazılabilir; örneğin −5 = −5/1. Bu yüzden tam sayılar rasyonel sayıdır."
+  },
+  {
+    "id": "mat-7-2-01",
+    "unit": "mat-7-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "3x + 5 = 20 denkleminde x kaçtır?",
+    "choices": [
+      "15",
+      "5",
+      "8",
+      "45"
+    ],
+    "answer": 1,
+    "explanation": "Her iki taraftan 5 çıkarılır: 3x = 15. Her iki taraf 3'e bölünür: x = 5."
+  },
+  {
+    "id": "mat-7-2-02",
+    "unit": "mat-7-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "4x − 7 + 2x + 3 ifadesinin en sade hâli hangisidir?",
+    "choices": [
+      "6x + 10",
+      "2x − 4",
+      "6x − 10",
+      "6x − 4"
+    ],
+    "answer": 3,
+    "explanation": "Benzer terimler birlikte işlenir: 4x + 2x = 6x ve −7 + 3 = −4. Sonuç 6x − 4'tür."
+  },
+  {
+    "id": "mat-7-2-03",
+    "unit": "mat-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "2(x − 3) = 14 denkleminde x kaçtır?",
+    "choices": [
+      "4",
+      "17",
+      "8,5",
+      "10"
+    ],
+    "answer": 3,
+    "explanation": "Her iki taraf 2'ye bölünür: x − 3 = 7. Buradan x = 10 bulunur."
+  },
+  {
+    "id": "mat-7-2-04",
+    "unit": "mat-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "3(2x − 4) ifadesinin eşiti hangisidir?",
+    "choices": [
+      "6x − 4",
+      "5x − 7",
+      "6x − 12",
+      "6x + 12"
+    ],
+    "answer": 2,
+    "explanation": "Dağılma özelliğiyle 3, parantezdeki her terimle çarpılır: 3 × 2x = 6x ve 3 × (−4) = −12."
+  },
+  {
+    "id": "mat-7-2-05",
+    "unit": "mat-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir sayının 4 katının 6 eksiği 30'dur. Bu sayı kaçtır?",
+    "choices": [
+      "6",
+      "9",
+      "36",
+      "24"
+    ],
+    "answer": 1,
+    "explanation": "Denklem 4x − 6 = 30'dur. 4x = 36 ve x = 9 bulunur."
+  },
+  {
+    "id": "mat-7-2-06",
+    "unit": "mat-7-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Ardışık üç doğal sayının toplamı 72'dir. Bu sayıların en büyüğü kaçtır?",
+    "choices": [
+      "24",
+      "25",
+      "23",
+      "26"
+    ],
+    "answer": 1,
+    "explanation": "Sayılar x, x + 1 ve x + 2 olsun: 3x + 3 = 72, x = 23. Sayılar 23, 24 ve 25'tir; en büyüğü 25'tir."
+  },
+  {
+    "id": "mat-7-2-07",
+    "unit": "mat-7-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "5x − 8 = 2x + 13 denkleminde x kaçtır?",
+    "choices": [
+      "3",
+      "21",
+      "7",
+      "5"
+    ],
+    "answer": 2,
+    "explanation": "Bilinmeyenler bir tarafa toplanır: 5x − 2x = 13 + 8, yani 3x = 21. Buradan x = 7 bulunur."
+  },
+  {
+    "id": "mat-7-2-08",
+    "unit": "mat-7-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "x = 3 değeri 2x + 1 = 7 denklemini sağlar.",
+    "answer": true,
+    "explanation": "x yerine 3 yazılır: 2 × 3 + 1 = 7. Eşitlik sağlandığı için 3 bu denklemin çözümüdür."
+  },
+  {
+    "id": "mat-7-2-09",
+    "unit": "mat-7-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "−(x − 5) ifadesi −x − 5 ifadesine eşittir.",
+    "answer": false,
+    "explanation": "Parantezin önündeki eksi, içerideki her terimin işaretini değiştirir: −(x − 5) = −x + 5."
+  },
+  {
+    "id": "mat-7-3-01",
+    "unit": "mat-7-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "x/12 = 3/4 orantısında x kaçtır?",
+    "choices": [
+      "16",
+      "4",
+      "36",
+      "9"
+    ],
+    "answer": 3,
+    "explanation": "İçler dışlar çarpımı yapılır: 4 × x = 12 × 3 = 36. Buradan x = 9 bulunur."
+  },
+  {
+    "id": "mat-7-3-02",
+    "unit": "mat-7-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "3 kg elma 60 lira ise aynı elmanın 5 kg'ı kaç liradır?",
+    "choices": [
+      "100",
+      "36",
+      "180",
+      "300"
+    ],
+    "answer": 0,
+    "explanation": "1 kg elma 60 ÷ 3 = 20 liradır. 5 kg elma 5 × 20 = 100 lira eder."
+  },
+  {
+    "id": "mat-7-3-03",
+    "unit": "mat-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "6 işçinin 12 günde bitirdiği işi, aynı hızla çalışan 9 işçi kaç günde bitirir?",
+    "choices": [
+      "18",
+      "6",
+      "15",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "İşçi sayısı ile gün sayısı ters orantılıdır; çarpımları sabittir: 6 × 12 = 72 ve 72 ÷ 9 = 8 gün."
+  },
+  {
+    "id": "mat-7-3-04",
+    "unit": "mat-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "80 sayısının %35'i kaçtır?",
+    "choices": [
+      "35",
+      "28",
+      "45",
+      "52"
+    ],
+    "answer": 1,
+    "explanation": "80 × 35/100 = 28. Ya da %10'u 8, %5'i 4 olduğundan %35'i 3 × 8 + 4 = 28'dir."
+  },
+  {
+    "id": "mat-7-3-05",
+    "unit": "mat-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "%20'si 18 olan sayı kaçtır?",
+    "choices": [
+      "36",
+      "90",
+      "72",
+      "360"
+    ],
+    "answer": 1,
+    "explanation": "%20, sayının 1/5'idir. Sayının 1/5'i 18 ise tamamı 5 × 18 = 90'dır."
+  },
+  {
+    "id": "mat-7-3-06",
+    "unit": "mat-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "250 liralık bir ürüne %20 indirim yapılırsa yeni fiyatı kaç lira olur?",
+    "choices": [
+      "230",
+      "50",
+      "300",
+      "200"
+    ],
+    "answer": 3,
+    "explanation": "İndirim tutarı 250 × 20/100 = 50 liradır. Yeni fiyat 250 − 50 = 200 liradır."
+  },
+  {
+    "id": "mat-7-3-07",
+    "unit": "mat-7-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir ürünün fiyatı önce %20 artırılıyor, sonra yeni fiyat üzerinden %20 indiriliyor. Son fiyat ilk fiyatın yüzde kaçıdır?",
+    "choices": [
+      "%100",
+      "%104",
+      "%80",
+      "%96"
+    ],
+    "answer": 3,
+    "explanation": "Fiyat 100 lira olsun. %20 artınca 120 lira olur. 120'nin %20'si 24'tür; indirimden sonra 96 lira kalır. Son fiyat ilk fiyatın %96'sıdır."
+  },
+  {
+    "id": "mat-7-3-08",
+    "unit": "mat-7-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "y = 3x ilişkisinde x ile y doğru orantılıdır.",
+    "answer": true,
+    "explanation": "x arttıkça y de aynı oranda artar ve y/x oranı hep 3'tür. Oranı sabit olan çokluklar doğru orantılıdır."
+  },
+  {
+    "id": "mat-7-3-09",
+    "unit": "mat-7-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Hız sabitken alınan yol ile geçen süre ters orantılıdır.",
+    "answer": false,
+    "explanation": "Sabit hızda süre arttıkça alınan yol da aynı oranda artar. Bu yüzden yol ile süre doğru orantılıdır."
+  },
+  {
+    "id": "mat-7-3-10",
+    "unit": "mat-7-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir haritada 1 cm, gerçekte 5 km'yi gösteriyorsa haritanın ölçeği 1/500 000'dir.",
+    "answer": true,
+    "explanation": "5 km = 5000 m = 500 000 cm'dir. Ölçek, haritadaki uzunluğun gerçek uzunluğa oranıdır: 1/500 000."
+  },
+  {
+    "id": "mat-7-4-01",
+    "unit": "mat-7-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir beşgenin iç açılarının ölçüleri toplamı kaç derecedir?",
+    "choices": [
+      "540",
+      "360",
+      "720",
+      "900"
+    ],
+    "answer": 0,
+    "explanation": "n kenarlı çokgenin iç açıları toplamı (n − 2) × 180°'dir. Beşgen için (5 − 2) × 180 = 540°."
+  },
+  {
+    "id": "mat-7-4-02",
+    "unit": "mat-7-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir çokgenin dış açılarının ölçüleri toplamı kaç derecedir?",
+    "choices": [
+      "180",
+      "540",
+      "360",
+      "720"
+    ],
+    "answer": 2,
+    "explanation": "Kenar sayısı kaç olursa olsun bir çokgenin dış açılarının ölçüleri toplamı 360°'dir."
+  },
+  {
+    "id": "mat-7-4-03",
+    "unit": "mat-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Düzgün altıgenin bir iç açısı kaç derecedir?",
+    "choices": [
+      "60",
+      "120",
+      "108",
+      "135"
+    ],
+    "answer": 1,
+    "explanation": "Altıgenin iç açıları toplamı (6 − 2) × 180 = 720°'dir. Düzgün altıgende açılar eşittir: 720 ÷ 6 = 120°."
+  },
+  {
+    "id": "mat-7-4-04",
+    "unit": "mat-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Paralel iki doğruyu bir kesen kesiyor. Yöndeş açılardan biri 70° ise diğeri kaç derecedir?",
+    "choices": [
+      "70",
+      "110",
+      "20",
+      "140"
+    ],
+    "answer": 0,
+    "explanation": "Paralel doğrularda yöndeş açıların ölçüleri eşittir. Bu yüzden diğer açı da 70°'dir."
+  },
+  {
+    "id": "mat-7-4-05",
+    "unit": "mat-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Dört kenarı da eşit uzunlukta olan, açılarının dik olması gerekmeyen paralelkenar hangisidir?",
+    "choices": [
+      "Dikdörtgen",
+      "Yamuk",
+      "Deltoid",
+      "Eşkenar dörtgen"
+    ],
+    "answer": 3,
+    "explanation": "Dört kenarı eşit olan paralelkenara eşkenar dörtgen denir. Açıları da dik olursa kare adını alır."
+  },
+  {
+    "id": "mat-7-4-06",
+    "unit": "mat-7-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Paralel iki doğruyu kesen doğrunun aynı tarafında ve paralellerin arasında kalan iki açıdan biri 65° ise diğeri kaç derecedir?",
+    "choices": [
+      "65",
+      "115",
+      "25",
+      "295"
+    ],
+    "answer": 1,
+    "explanation": "Bu açılar karşı durumlu açılardır ve ölçüleri toplamı 180°'dir: 180 − 65 = 115."
+  },
+  {
+    "id": "mat-7-4-07",
+    "unit": "mat-7-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "İç açılarının ölçüleri toplamı 1080° olan çokgenin kaç kenarı vardır?",
+    "choices": [
+      "6",
+      "7",
+      "10",
+      "8"
+    ],
+    "answer": 3,
+    "explanation": "(n − 2) × 180 = 1080 ise n − 2 = 6 ve n = 8'dir. Çokgen bir sekizgendir."
+  },
+  {
+    "id": "mat-7-4-08",
+    "unit": "mat-7-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Karenin köşegenleri birbirine eşit uzunluktadır.",
+    "answer": true,
+    "explanation": "Karenin köşegenleri eşit uzunluktadır, birbirini ortalar ve dik keser."
+  },
+  {
+    "id": "mat-7-4-09",
+    "unit": "mat-7-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Paralel iki doğrunun bir kesenle yaptığı iç ters açıların ölçüleri eşittir.",
+    "answer": true,
+    "explanation": "İç ters açılar paralellerin arasında ve kesenin farklı taraflarındadır; paralel doğrularda ölçüleri eşittir."
+  },
+  {
+    "id": "mat-7-4-10",
+    "unit": "mat-7-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Her dikdörtgen aynı zamanda bir karedir.",
+    "answer": false,
+    "explanation": "Karenin dört kenarı eşittir; dikdörtgende yalnızca karşılıklı kenarlar eşit olmak zorundadır. Her kare bir dikdörtgendir ama her dikdörtgen kare değildir."
+  },
+  {
+    "id": "mat-7-5-01",
+    "unit": "mat-7-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yarıçapı 5 cm olan çemberin uzunluğu kaç cm'dir? (π = 3 alınız.)",
+    "choices": [
+      "15",
+      "75",
+      "30",
+      "25"
+    ],
+    "answer": 2,
+    "explanation": "Çemberin uzunluğu 2 × π × r'dir: 2 × 3 × 5 = 30 cm. 75 ise aynı yarıçaplı dairenin alanıdır."
+  },
+  {
+    "id": "mat-7-5-02",
+    "unit": "mat-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Alt tabanı 10 cm, üst tabanı 6 cm, yüksekliği 5 cm olan yamuğun alanı kaç cm²'dir?",
+    "choices": [
+      "80",
+      "40",
+      "300",
+      "21"
+    ],
+    "answer": 1,
+    "explanation": "Yamuğun alanı (tabanların toplamı × yükseklik) ÷ 2'dir: (10 + 6) × 5 ÷ 2 = 40 cm²."
+  },
+  {
+    "id": "mat-7-5-03",
+    "unit": "mat-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Köşegen uzunlukları 8 cm ve 6 cm olan eşkenar dörtgenin alanı kaç cm²'dir?",
+    "choices": [
+      "24",
+      "48",
+      "14",
+      "28"
+    ],
+    "answer": 0,
+    "explanation": "Eşkenar dörtgenin alanı köşegenlerin çarpımının yarısıdır: (8 × 6) ÷ 2 = 24 cm²."
+  },
+  {
+    "id": "mat-7-5-04",
+    "unit": "mat-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yarıçapı 4 cm olan dairenin alanı kaç cm²'dir? (π = 3 alınız.)",
+    "choices": [
+      "24",
+      "12",
+      "16",
+      "48"
+    ],
+    "answer": 3,
+    "explanation": "Dairenin alanı π × r²'dir: 3 × 4² = 3 × 16 = 48 cm². 24 ise çemberin uzunluğudur."
+  },
+  {
+    "id": "mat-7-5-05",
+    "unit": "mat-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Çapı 20 cm olan dairenin alanı kaç cm²'dir? (π = 3 alınız.)",
+    "choices": [
+      "1200",
+      "300",
+      "60",
+      "30"
+    ],
+    "answer": 1,
+    "explanation": "Yarıçap çapın yarısıdır: r = 10 cm. Alan = 3 × 10² = 300 cm². Çapı yarıçap yerine kullanmak 1200 sonucunu verir."
+  },
+  {
+    "id": "mat-7-5-06",
+    "unit": "mat-7-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Uzunluğu 42 cm olan çemberin yarıçapı kaç cm'dir? (π = 3 alınız.)",
+    "choices": [
+      "7",
+      "14",
+      "21",
+      "6"
+    ],
+    "answer": 0,
+    "explanation": "2 × π × r = 42 ise 6 × r = 42 ve r = 7 cm'dir."
+  },
+  {
+    "id": "mat-7-5-07",
+    "unit": "mat-7-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Yarıçapı 6 cm olan dairede 60°'lik merkez açının gördüğü daire diliminin alanı kaç cm²'dir? (π = 3 alınız.)",
+    "choices": [
+      "36",
+      "18",
+      "6",
+      "108"
+    ],
+    "answer": 1,
+    "explanation": "Dairenin alanı 3 × 6² = 108 cm²'dir. 60°, 360°'nin 1/6'sıdır; dilimin alanı 108 ÷ 6 = 18 cm² olur."
+  },
+  {
+    "id": "mat-7-5-08",
+    "unit": "mat-7-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bir çemberin çapı, yarıçapının 2 katıdır.",
+    "answer": true,
+    "explanation": "Çap merkezden geçer ve iki yarıçapın uç uca eklenmesiyle oluşur: çap = 2 × yarıçap."
+  },
+  {
+    "id": "mat-7-5-09",
+    "unit": "mat-7-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir dairenin yarıçapı 2 katına çıkarılırsa alanı da 2 katına çıkar.",
+    "answer": false,
+    "explanation": "Alan yarıçapın karesiyle orantılıdır. Yarıçap 2 katına çıkınca alan 2² = 4 katına çıkar."
+  },
+  {
+    "id": "mat-7-6-01",
+    "unit": "mat-7-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "3, 7, 7, 9, 12 veri grubunun tepe değeri (mod) kaçtır?",
+    "choices": [
+      "9",
+      "7",
+      "12",
+      "3"
+    ],
+    "answer": 1,
+    "explanation": "Tepe değer, en çok tekrar eden değerdir. 7 iki kez, öteki değerler birer kez yazılmıştır."
+  },
+  {
+    "id": "mat-7-6-02",
+    "unit": "mat-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "4, 9, 6, 13, 8 veri grubunun ortancası (medyan) kaçtır?",
+    "choices": [
+      "8",
+      "6",
+      "9",
+      "13"
+    ],
+    "answer": 0,
+    "explanation": "Veriler sıralanır: 4, 6, 8, 9, 13. Ortadaki değer 8'dir. Sıralamadan ortadaki sayıyı almak hatalı olarak 6 verir."
+  },
+  {
+    "id": "mat-7-6-03",
+    "unit": "mat-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "5, 8, 10, 12, 14, 20 veri grubunun ortancası kaçtır?",
+    "choices": [
+      "10",
+      "12",
+      "11,5",
+      "11"
+    ],
+    "answer": 3,
+    "explanation": "Veri sayısı çift olduğunda ortanca, ortadaki iki değerin ortalamasıdır: (10 + 12) ÷ 2 = 11."
+  },
+  {
+    "id": "mat-7-6-04",
+    "unit": "mat-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir daire grafiğinde %25'lik bir dilimin merkez açısı kaç derecedir?",
+    "choices": [
+      "25",
+      "45",
+      "100",
+      "90"
+    ],
+    "answer": 3,
+    "explanation": "Dairenin tamamı 360°'dir. %25 dörtte bir demektir: 360 ÷ 4 = 90°."
+  },
+  {
+    "id": "mat-7-6-05",
+    "unit": "mat-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir hastanın gün içinde ölçülen ateşinin zamana göre değişimini göstermek için en uygun grafik hangisidir?",
+    "choices": [
+      "Daire grafiği",
+      "Çetele tablosu",
+      "Çizgi grafiği",
+      "Sıklık tablosu"
+    ],
+    "answer": 2,
+    "explanation": "Zamana bağlı değişim (artış ve azalış) en iyi çizgi grafiğiyle görülür. Daire grafiği bir bütünün parçalarını gösterir."
+  },
+  {
+    "id": "mat-7-6-06",
+    "unit": "mat-7-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "40 kişilik bir sınıfta gözlüklü öğrenciler daire grafiğinde 72°'lik dilimle gösterilmiştir. Gözlüklü öğrenci sayısı kaçtır?",
+    "choices": [
+      "5",
+      "8",
+      "18",
+      "10"
+    ],
+    "answer": 1,
+    "explanation": "72°, 360°'nin 1/5'idir. Sınıfın 1/5'i 40 ÷ 5 = 8 öğrencidir."
+  },
+  {
+    "id": "mat-7-6-07",
+    "unit": "mat-7-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Beş sayının aritmetik ortalaması 12'dir. Bu sayılara 24 eklenirse yeni ortalama kaç olur?",
+    "choices": [
+      "14",
+      "18",
+      "36",
+      "13"
+    ],
+    "answer": 0,
+    "explanation": "Beş sayının toplamı 5 × 12 = 60'tır. 24 eklenince toplam 84, sayı adedi 6 olur: 84 ÷ 6 = 14."
+  },
+  {
+    "id": "mat-7-6-08",
+    "unit": "mat-7-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bir veri grubunda en çok tekrar eden değere tepe değer denir.",
+    "answer": true,
+    "explanation": "Tepe değer (mod), veri grubunda en sık görülen değerdir."
+  },
+  {
+    "id": "mat-7-6-09",
+    "unit": "mat-7-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Ortanca bulunurken veriler önce küçükten büyüğe sıralanır.",
+    "answer": true,
+    "explanation": "Ortanca, sıralanmış verilerin ortasındaki değerdir. Veriler sıralanmadan ortanca bulunamaz."
+  },
+  {
+    "id": "mat-7-6-10",
+    "unit": "mat-7-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "2, 2, 5, 9, 12 veri grubunun aritmetik ortalaması ile ortancası eşittir.",
+    "answer": false,
+    "explanation": "Ortalama (2 + 2 + 5 + 9 + 12) ÷ 5 = 30 ÷ 5 = 6'dır. Ortanca ise ortadaki değer olan 5'tir."
+  },
+  {
+    "id": "mat-7-7-01",
+    "unit": "mat-7-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hilesiz bir zar atıldığında 3'ten büyük sayı gelme olasılığı kaçtır?",
+    "choices": [
+      "1/3",
+      "2/3",
+      "1/2",
+      "1/6"
+    ],
+    "answer": 2,
+    "explanation": "3'ten büyük sayılar 4, 5 ve 6'dır. Olasılık 3/6 = 1/2'dir. 3 sayısı \"3'ten büyük\" değildir."
+  },
+  {
+    "id": "mat-7-7-02",
+    "unit": "mat-7-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kesin bir olayın olasılığı kaçtır?",
+    "choices": [
+      "0",
+      "1",
+      "1/2",
+      "100"
+    ],
+    "answer": 1,
+    "explanation": "Kesin olayda bütün durumlar istenen durumdur; olasılık 1'dir. İmkânsız olayın olasılığı 0'dır."
+  },
+  {
+    "id": "mat-7-7-03",
+    "unit": "mat-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir torbada 4 kırmızı, 6 mavi, 5 yeşil top vardır. Çekilen topun mavi olma olasılığı kaçtır?",
+    "choices": [
+      "2/5",
+      "3/5",
+      "6/9",
+      "1/6"
+    ],
+    "answer": 0,
+    "explanation": "Toplam top sayısı 4 + 6 + 5 = 15'tir. Mavi olma olasılığı 6/15 = 2/5'tir."
+  },
+  {
+    "id": "mat-7-7-04",
+    "unit": "mat-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir olayın olma olasılığı 3/7 ise olmama olasılığı kaçtır?",
+    "choices": [
+      "3/7",
+      "7/3",
+      "4/7",
+      "1/7"
+    ],
+    "answer": 2,
+    "explanation": "Bir olayın olma ve olmama olasılıklarının toplamı 1'dir: 1 − 3/7 = 4/7."
+  },
+  {
+    "id": "mat-7-7-05",
+    "unit": "mat-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "1'den 20'ye kadar numaralı kartlardan rastgele biri çekiliyor. Kartın 5'in katı olma olasılığı kaçtır?",
+    "choices": [
+      "1/4",
+      "1/20",
+      "2/5",
+      "1/5"
+    ],
+    "answer": 3,
+    "explanation": "5'in katları 5, 10, 15 ve 20'dir; 4 tanedir. Olasılık 4/20 = 1/5'tir."
+  },
+  {
+    "id": "mat-7-7-06",
+    "unit": "mat-7-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir torbadaki 24 topun bir kısmı beyazdır. Beyaz top çekme olasılığı 3/8 ise torbada kaç beyaz top vardır?",
+    "choices": [
+      "9",
+      "8",
+      "3",
+      "15"
+    ],
+    "answer": 0,
+    "explanation": "Beyaz top sayısı toplamın 3/8'idir: 24 × 3/8 = 9."
+  },
+  {
+    "id": "mat-7-7-07",
+    "unit": "mat-7-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "İki madenî para birlikte atıldığında ikisinin de tura gelme olasılığı kaçtır?",
+    "choices": [
+      "1/2",
+      "1/3",
+      "3/4",
+      "1/4"
+    ],
+    "answer": 3,
+    "explanation": "Dört eş olasılıklı durum vardır: yazı-yazı, yazı-tura, tura-yazı, tura-tura. Yalnızca biri istenen durumdur: 1/4."
+  },
+  {
+    "id": "mat-7-7-08",
+    "unit": "mat-7-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Hilesiz bir zar atıldığında her yüzün gelme olasılığı eşittir.",
+    "answer": true,
+    "explanation": "Hilesiz zarda altı yüzün de gelme şansı aynıdır; her birinin olasılığı 1/6'dır."
+  },
+  {
+    "id": "mat-7-7-09",
+    "unit": "mat-7-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir olayın olasılığı 5/4 olabilir.",
+    "answer": false,
+    "explanation": "Olasılık 0 ile 1 arasında bir değerdir. 5/4, 1'den büyük olduğu için bir olasılık değeri olamaz."
+  }
+]

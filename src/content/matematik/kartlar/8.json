@@ -1,0 +1,603 @@
+[
+  {
+    "kind": "pairs",
+    "id": "mat-8-1-ebob-ekok",
+    "unit": "mat-8-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "EBOB({cift}) kaçtır?",
+        "answer": "ebob"
+      },
+      {
+        "prompt": "EKOK({cift}) kaçtır?",
+        "answer": "ekok"
+      }
+    ],
+    "statement": {
+      "text": "EKOK({cift}) = {ekok} eşitliği doğrudur.",
+      "swap": "ekok"
+    },
+    "explanation": "EBOB({cift}) = {ebob} ve EKOK({cift}) = {ekok}. EBOB ortak bölenlerin en büyüğü, EKOK ortak katların en küçüğüdür.",
+    "items": [
+      {
+        "id": "4-6",
+        "cift": "4, 6",
+        "ebob": "2",
+        "ekok": "12"
+      },
+      {
+        "id": "6-8",
+        "cift": "6, 8",
+        "ebob": "2",
+        "ekok": "24"
+      },
+      {
+        "id": "8-12",
+        "cift": "8, 12",
+        "ebob": "4",
+        "ekok": "24"
+      },
+      {
+        "id": "9-12",
+        "cift": "9, 12",
+        "ebob": "3",
+        "ekok": "36"
+      },
+      {
+        "id": "10-15",
+        "cift": "10, 15",
+        "ebob": "5",
+        "ekok": "30"
+      },
+      {
+        "id": "12-18",
+        "cift": "12, 18",
+        "ebob": "6",
+        "ekok": "36"
+      },
+      {
+        "id": "5-7",
+        "cift": "5, 7",
+        "ebob": "1",
+        "ekok": "35"
+      },
+      {
+        "id": "6-10",
+        "cift": "6, 10",
+        "ebob": "2",
+        "ekok": "30"
+      }
+    ],
+    "distractors": {
+      "ekok": [
+        "48",
+        "60",
+        "72"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-8-2-negatif-usler",
+    "unit": "mat-8-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ifade} ifadesinin değeri kaçtır?",
+        "answer": "deger"
+      },
+      {
+        "prompt": "Değeri {deger} olan üslü ifade hangisidir?",
+        "answer": "ifade"
+      }
+    ],
+    "statement": {
+      "text": "{ifade} = {deger} eşitliği doğrudur.",
+      "swap": "deger"
+    },
+    "explanation": "{ifade} = {deger}. Negatif üs, tabanın çarpma işlemine göre tersini aldırır; sıfırdan farklı her sayının sıfırıncı kuvveti 1'dir.",
+    "items": [
+      {
+        "id": "2-1",
+        "ifade": "2⁻¹",
+        "deger": "1/2"
+      },
+      {
+        "id": "2-2",
+        "ifade": "2⁻²",
+        "deger": "1/4"
+      },
+      {
+        "id": "2-3",
+        "ifade": "2⁻³",
+        "deger": "1/8"
+      },
+      {
+        "id": "3-2",
+        "ifade": "3⁻²",
+        "deger": "1/9"
+      },
+      {
+        "id": "5-2",
+        "ifade": "5⁻²",
+        "deger": "1/25"
+      },
+      {
+        "id": "10-2",
+        "ifade": "10⁻²",
+        "deger": "1/100"
+      },
+      {
+        "id": "10-3",
+        "ifade": "10⁻³",
+        "deger": "1/1000"
+      },
+      {
+        "id": "7-0",
+        "ifade": "7⁰",
+        "deger": "1"
+      }
+    ],
+    "distractors": {
+      "deger": [
+        "−4",
+        "−8",
+        "−9",
+        "0",
+        "−100"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-8-3-tam-kareler",
+    "unit": "mat-8-3",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{kok} kaçtır?",
+        "answer": "deger"
+      }
+    ],
+    "statement": {
+      "text": "{kok} = {deger} eşitliği doğrudur.",
+      "swap": "deger"
+    },
+    "explanation": "{deger} × {deger} = {ic} olduğundan {kok} = {deger}.",
+    "items": [
+      {
+        "id": "121",
+        "kok": "√121",
+        "ic": "121",
+        "deger": "11"
+      },
+      {
+        "id": "144",
+        "kok": "√144",
+        "ic": "144",
+        "deger": "12"
+      },
+      {
+        "id": "169",
+        "kok": "√169",
+        "ic": "169",
+        "deger": "13"
+      },
+      {
+        "id": "196",
+        "kok": "√196",
+        "ic": "196",
+        "deger": "14"
+      },
+      {
+        "id": "225",
+        "kok": "√225",
+        "ic": "225",
+        "deger": "15"
+      },
+      {
+        "id": "256",
+        "kok": "√256",
+        "ic": "256",
+        "deger": "16"
+      },
+      {
+        "id": "289",
+        "kok": "√289",
+        "ic": "289",
+        "deger": "17"
+      },
+      {
+        "id": "324",
+        "kok": "√324",
+        "ic": "324",
+        "deger": "18"
+      },
+      {
+        "id": "400",
+        "kok": "√400",
+        "ic": "400",
+        "deger": "20"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-8-3-kok-sadelestirme",
+    "unit": "mat-8-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{kok} ifadesinin a√b biçiminde yazılışı hangisidir?",
+        "answer": "sade"
+      },
+      {
+        "prompt": "{sade} ifadesi hangisine eşittir?",
+        "answer": "kok"
+      }
+    ],
+    "statement": {
+      "text": "{kok} = {sade} eşitliği doğrudur.",
+      "swap": "sade"
+    },
+    "explanation": "{ic} = {carpim} olduğundan {kok} = {sade}. Kök içindeki tam kare çarpan kök dışına çıkarılır.",
+    "items": [
+      {
+        "id": "8",
+        "kok": "√8",
+        "ic": "8",
+        "carpim": "4 × 2",
+        "sade": "2√2"
+      },
+      {
+        "id": "12",
+        "kok": "√12",
+        "ic": "12",
+        "carpim": "4 × 3",
+        "sade": "2√3"
+      },
+      {
+        "id": "18",
+        "kok": "√18",
+        "ic": "18",
+        "carpim": "9 × 2",
+        "sade": "3√2"
+      },
+      {
+        "id": "20",
+        "kok": "√20",
+        "ic": "20",
+        "carpim": "4 × 5",
+        "sade": "2√5"
+      },
+      {
+        "id": "27",
+        "kok": "√27",
+        "ic": "27",
+        "carpim": "9 × 3",
+        "sade": "3√3"
+      },
+      {
+        "id": "32",
+        "kok": "√32",
+        "ic": "32",
+        "carpim": "16 × 2",
+        "sade": "4√2"
+      },
+      {
+        "id": "45",
+        "kok": "√45",
+        "ic": "45",
+        "carpim": "9 × 5",
+        "sade": "3√5"
+      },
+      {
+        "id": "48",
+        "kok": "√48",
+        "ic": "48",
+        "carpim": "16 × 3",
+        "sade": "4√3"
+      },
+      {
+        "id": "50",
+        "kok": "√50",
+        "ic": "50",
+        "carpim": "25 × 2",
+        "sade": "5√2"
+      },
+      {
+        "id": "75",
+        "kok": "√75",
+        "ic": "75",
+        "carpim": "25 × 3",
+        "sade": "5√3"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-8-5-ozdeslikler",
+    "unit": "mat-8-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ifade} ifadesinin açılımı hangisidir?",
+        "answer": "acilim"
+      },
+      {
+        "prompt": "{acilim} ifadesinin çarpanlara ayrılmış hâli hangisidir?",
+        "answer": "ifade"
+      }
+    ],
+    "statement": {
+      "text": "{ifade} = {acilim} eşitliği bir özdeşliktir.",
+      "swap": "acilim"
+    },
+    "explanation": "{ifade} = {acilim}. {kural}",
+    "items": [
+      {
+        "id": "tam-kare-arti",
+        "ifade": "(a + b)²",
+        "acilim": "a² + 2ab + b²",
+        "kural": "Bu, iki terimin toplamının karesi özdeşliğidir."
+      },
+      {
+        "id": "tam-kare-eksi",
+        "ifade": "(a − b)²",
+        "acilim": "a² − 2ab + b²",
+        "kural": "Bu, iki terimin farkının karesi özdeşliğidir."
+      },
+      {
+        "id": "iki-kare-farki",
+        "ifade": "(a − b)(a + b)",
+        "acilim": "a² − b²",
+        "kural": "Bu, iki kare farkı özdeşliğidir."
+      },
+      {
+        "id": "x-arti-2",
+        "ifade": "(x + 2)²",
+        "acilim": "x² + 4x + 4",
+        "kural": "(a + b)² = a² + 2ab + b² özdeşliği kullanılır."
+      },
+      {
+        "id": "x-eksi-3",
+        "ifade": "(x − 3)²",
+        "acilim": "x² − 6x + 9",
+        "kural": "(a − b)² = a² − 2ab + b² özdeşliği kullanılır."
+      },
+      {
+        "id": "x-4",
+        "ifade": "(x − 4)(x + 4)",
+        "acilim": "x² − 16",
+        "kural": "(a − b)(a + b) = a² − b² özdeşliği kullanılır."
+      },
+      {
+        "id": "2x-arti-1",
+        "ifade": "(2x + 1)²",
+        "acilim": "4x² + 4x + 1",
+        "kural": "(a + b)² = a² + 2ab + b² özdeşliği kullanılır."
+      },
+      {
+        "id": "x-1",
+        "ifade": "(x − 1)(x + 1)",
+        "acilim": "x² − 1",
+        "kural": "(a − b)(a + b) = a² − b² özdeşliği kullanılır."
+      }
+    ],
+    "distractors": {
+      "acilim": [
+        "a² + b²",
+        "x² + 4",
+        "x² + 9",
+        "x² − 6x − 9",
+        "4x² + 1"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-8-6-egim",
+    "unit": "mat-8-6",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{denklem} doğrusunun eğimi kaçtır?",
+        "answer": "egim"
+      }
+    ],
+    "statement": {
+      "text": "{denklem} doğrusunun eğimi {egim} olur.",
+      "swap": "egim"
+    },
+    "explanation": "{denklem} doğrusunun eğimi {egim} olur. y = mx + n biçiminde yazılan denklemde eğim, x'in katsayısı olan m'dir.",
+    "items": [
+      {
+        "id": "e1",
+        "denklem": "y = 2x + 1",
+        "egim": "2"
+      },
+      {
+        "id": "e2",
+        "denklem": "y = −3x + 4",
+        "egim": "−3"
+      },
+      {
+        "id": "e3",
+        "denklem": "y = x − 5",
+        "egim": "1"
+      },
+      {
+        "id": "e4",
+        "denklem": "y = 5 − 4x",
+        "egim": "−4"
+      },
+      {
+        "id": "e5",
+        "denklem": "y = x/2 + 3",
+        "egim": "1/2"
+      },
+      {
+        "id": "e6",
+        "denklem": "y = 7",
+        "egim": "0",
+        "not": "y = 7 yatay bir doğrudur; x'in katsayısı 0'dır."
+      },
+      {
+        "id": "e7",
+        "denklem": "y = −x",
+        "egim": "−1"
+      },
+      {
+        "id": "e8",
+        "denklem": "y = 6x",
+        "egim": "6"
+      }
+    ],
+    "distractors": {
+      "egim": [
+        "5",
+        "4",
+        "3",
+        "7",
+        "−5"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-8-7-pisagor-uclukleri",
+    "unit": "mat-8-7",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "Dik kenarları {kenarlar} olan dik üçgenin hipotenüsü kaç cm'dir?",
+        "answer": "hip"
+      }
+    ],
+    "statement": {
+      "text": "Dik kenarları {kenarlar} olan dik üçgenin hipotenüsü {hip} cm olur.",
+      "swap": "hip"
+    },
+    "explanation": "Pisagor bağıntısına göre {islem} olur; hipotenüs {hip} cm'dir.",
+    "items": [
+      {
+        "id": "3-4",
+        "kenarlar": "3 cm ve 4 cm",
+        "islem": "3² + 4² = 25 = 5²",
+        "hip": "5"
+      },
+      {
+        "id": "6-8",
+        "kenarlar": "6 cm ve 8 cm",
+        "islem": "6² + 8² = 100 = 10²",
+        "hip": "10"
+      },
+      {
+        "id": "5-12",
+        "kenarlar": "5 cm ve 12 cm",
+        "islem": "5² + 12² = 169 = 13²",
+        "hip": "13"
+      },
+      {
+        "id": "9-12",
+        "kenarlar": "9 cm ve 12 cm",
+        "islem": "9² + 12² = 225 = 15²",
+        "hip": "15"
+      },
+      {
+        "id": "8-15",
+        "kenarlar": "8 cm ve 15 cm",
+        "islem": "8² + 15² = 289 = 17²",
+        "hip": "17"
+      },
+      {
+        "id": "12-16",
+        "kenarlar": "12 cm ve 16 cm",
+        "islem": "12² + 16² = 400 = 20²",
+        "hip": "20"
+      },
+      {
+        "id": "7-24",
+        "kenarlar": "7 cm ve 24 cm",
+        "islem": "7² + 24² = 625 = 25²",
+        "hip": "25"
+      },
+      {
+        "id": "20-21",
+        "kenarlar": "20 cm ve 21 cm",
+        "islem": "20² + 21² = 841 = 29²",
+        "hip": "29"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-8-8-cisimler",
+    "unit": "mat-8-8",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{adIn} kaç yüzü vardır?",
+        "answer": "yuz"
+      },
+      {
+        "prompt": "{adIn} kaç köşesi vardır?",
+        "answer": "kose"
+      },
+      {
+        "prompt": "{adIn} kaç ayrıtı vardır?",
+        "answer": "ayrit"
+      }
+    ],
+    "statement": {
+      "text": "{adIn} {ayrit} ayrıtı vardır.",
+      "swap": "ayrit"
+    },
+    "explanation": "{adIn} {yuz} yüzü, {kose} köşesi ve {ayrit} ayrıtı vardır.",
+    "items": [
+      {
+        "id": "kup",
+        "adIn": "Küpün",
+        "yuz": "6",
+        "kose": "8",
+        "ayrit": "12"
+      },
+      {
+        "id": "ucgen-prizma",
+        "adIn": "Üçgen dik prizmanın",
+        "yuz": "5",
+        "kose": "6",
+        "ayrit": "9"
+      },
+      {
+        "id": "besgen-prizma",
+        "adIn": "Beşgen dik prizmanın",
+        "yuz": "7",
+        "kose": "10",
+        "ayrit": "15"
+      },
+      {
+        "id": "altigen-prizma",
+        "adIn": "Altıgen dik prizmanın",
+        "yuz": "8",
+        "kose": "12",
+        "ayrit": "18"
+      },
+      {
+        "id": "ucgen-piramit",
+        "adIn": "Üçgen piramidin",
+        "yuz": "4",
+        "kose": "4",
+        "ayrit": "6"
+      },
+      {
+        "id": "kare-piramit",
+        "adIn": "Kare piramidin",
+        "yuz": "5",
+        "kose": "5",
+        "ayrit": "8"
+      }
+    ]
+  }
+]

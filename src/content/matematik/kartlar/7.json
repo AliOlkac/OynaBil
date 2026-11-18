@@ -1,0 +1,475 @@
+[
+  {
+    "kind": "pairs",
+    "id": "mat-7-1-tam-sayi-islemleri",
+    "unit": "mat-7-1",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{islem} işleminin sonucu kaçtır?",
+        "answer": "sonuc"
+      }
+    ],
+    "statement": {
+      "text": "{islem} = {sonuc} eşitliği doğrudur.",
+      "swap": "sonuc"
+    },
+    "explanation": "{islem} = {sonuc}. {kural}",
+    "items": [
+      {
+        "id": "t1",
+        "islem": "(−5) + (−3)",
+        "sonuc": "−8",
+        "kural": "Aynı işaretli sayılar toplanırken mutlak değerler toplanır, ortak işaret yazılır."
+      },
+      {
+        "id": "t2",
+        "islem": "(−9) + (+4)",
+        "sonuc": "−5",
+        "kural": "Ters işaretli sayılar toplanırken mutlak değerlerin farkı alınır, büyük olanın işareti yazılır."
+      },
+      {
+        "id": "c1",
+        "islem": "(+7) − (−2)",
+        "sonuc": "9",
+        "kural": "Bir sayıyı çıkarmak, ters işaretlisini eklemektir: 7 + 2."
+      },
+      {
+        "id": "c2",
+        "islem": "(−6) − (+5)",
+        "sonuc": "−11",
+        "kural": "Bir sayıyı çıkarmak, ters işaretlisini eklemektir: (−6) + (−5)."
+      },
+      {
+        "id": "k1",
+        "islem": "(−4) × (−7)",
+        "sonuc": "28",
+        "kural": "Aynı işaretli iki sayının çarpımı pozitiftir."
+      },
+      {
+        "id": "k2",
+        "islem": "(+6) × (−3)",
+        "sonuc": "−18",
+        "kural": "Ters işaretli iki sayının çarpımı negatiftir."
+      },
+      {
+        "id": "b1",
+        "islem": "(−24) ÷ (−6)",
+        "sonuc": "4",
+        "kural": "Aynı işaretli iki sayının bölümü pozitiftir."
+      },
+      {
+        "id": "b2",
+        "islem": "(−30) ÷ (+5)",
+        "sonuc": "−6",
+        "kural": "Ters işaretli iki sayının bölümü negatiftir."
+      }
+    ],
+    "distractors": {
+      "sonuc": [
+        "8",
+        "5",
+        "−9",
+        "11",
+        "−28",
+        "18",
+        "−4",
+        "6"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-7-1-tam-sayi-kuvvetleri",
+    "unit": "mat-7-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ifade} ifadesinin değeri kaçtır?",
+        "answer": "deger"
+      }
+    ],
+    "statement": {
+      "text": "{ifade} = {deger} eşitliği doğrudur.",
+      "swap": "deger"
+    },
+    "explanation": "{ifade} = {deger}. Negatif sayının çift kuvveti pozitif, tek kuvveti negatiftir.",
+    "items": [
+      {
+        "id": "a",
+        "ifade": "(−2)²",
+        "deger": "4"
+      },
+      {
+        "id": "b",
+        "ifade": "(−2)³",
+        "deger": "−8"
+      },
+      {
+        "id": "c",
+        "ifade": "(−3)²",
+        "deger": "9"
+      },
+      {
+        "id": "d",
+        "ifade": "−3²",
+        "deger": "−9",
+        "not": "Parantez olmadığında üs yalnızca 3'e aittir: −(3 × 3)."
+      },
+      {
+        "id": "e",
+        "ifade": "(−1)⁷",
+        "deger": "−1"
+      },
+      {
+        "id": "f",
+        "ifade": "(−5)²",
+        "deger": "25"
+      },
+      {
+        "id": "g",
+        "ifade": "(−4)³",
+        "deger": "−64"
+      },
+      {
+        "id": "h",
+        "ifade": "(−10)³",
+        "deger": "−1000"
+      }
+    ],
+    "distractors": {
+      "deger": [
+        "−4",
+        "8",
+        "−25",
+        "64",
+        "1",
+        "−6"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-7-2-denklem-cozumleri",
+    "unit": "mat-7-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{denklem} denkleminde x kaçtır?",
+        "answer": "x"
+      }
+    ],
+    "statement": {
+      "text": "{denklem} denkleminin çözümü x = {x} olur.",
+      "swap": "x"
+    },
+    "explanation": "{denklem} denkleminde {cozum} bulunur.",
+    "items": [
+      {
+        "id": "d1",
+        "denklem": "x + 7 = 12",
+        "x": "5",
+        "cozum": "her iki taraftan 7 çıkarılarak x = 5"
+      },
+      {
+        "id": "d2",
+        "denklem": "3x = 27",
+        "x": "9",
+        "cozum": "her iki taraf 3'e bölünerek x = 9"
+      },
+      {
+        "id": "d3",
+        "denklem": "2x − 1 = 13",
+        "x": "7",
+        "cozum": "önce 2x = 14, sonra x = 7"
+      },
+      {
+        "id": "d4",
+        "denklem": "x/4 = 3",
+        "x": "12",
+        "cozum": "her iki taraf 4 ile çarpılarak x = 12"
+      },
+      {
+        "id": "d5",
+        "denklem": "5x + 2 = 17",
+        "x": "3",
+        "cozum": "önce 5x = 15, sonra x = 3"
+      },
+      {
+        "id": "d6",
+        "denklem": "4x − 6 = 10",
+        "x": "4",
+        "cozum": "önce 4x = 16, sonra x = 4"
+      },
+      {
+        "id": "d7",
+        "denklem": "2x + 9 = 1",
+        "x": "−4",
+        "cozum": "önce 2x = −8, sonra x = −4"
+      },
+      {
+        "id": "d8",
+        "denklem": "6x = −12",
+        "x": "−2",
+        "cozum": "her iki taraf 6'ya bölünerek x = −2"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-7-3-yuzde-hesaplari",
+    "unit": "mat-7-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ifade} kaçtır?",
+        "answer": "sonuc"
+      }
+    ],
+    "statement": {
+      "text": "{ifade} {sonuc} eder.",
+      "swap": "sonuc"
+    },
+    "explanation": "{ifade}: {islem} = {sonuc}.",
+    "items": [
+      {
+        "id": "y1",
+        "ifade": "50'nin %10'u",
+        "islem": "50 × 10/100",
+        "sonuc": "5"
+      },
+      {
+        "id": "y2",
+        "ifade": "80'in %25'i",
+        "islem": "80 × 25/100",
+        "sonuc": "20"
+      },
+      {
+        "id": "y3",
+        "ifade": "200'ün %15'i",
+        "islem": "200 × 15/100",
+        "sonuc": "30"
+      },
+      {
+        "id": "y4",
+        "ifade": "90'ın %50'si",
+        "islem": "90 × 50/100",
+        "sonuc": "45"
+      },
+      {
+        "id": "y5",
+        "ifade": "120'nin %75'i",
+        "islem": "120 × 75/100",
+        "sonuc": "90"
+      },
+      {
+        "id": "y6",
+        "ifade": "40'ın %20'si",
+        "islem": "40 × 20/100",
+        "sonuc": "8"
+      },
+      {
+        "id": "y7",
+        "ifade": "300'ün %5'i",
+        "islem": "300 × 5/100",
+        "sonuc": "15"
+      },
+      {
+        "id": "y8",
+        "ifade": "150'nin %40'ı",
+        "islem": "150 × 40/100",
+        "sonuc": "60"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-7-4-ic-acilar-toplami",
+    "unit": "mat-7-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{adIn} iç açılarının ölçüleri toplamı kaç derecedir?",
+        "answer": "toplam"
+      },
+      {
+        "prompt": "İç açılarının ölçüleri toplamı {toplam} olan çokgen hangisidir?",
+        "answer": "ad"
+      }
+    ],
+    "statement": {
+      "text": "{adIn} iç açılarının ölçüleri toplamı {toplam} olur.",
+      "swap": "toplam"
+    },
+    "explanation": "n kenarlı çokgenin iç açıları toplamı (n − 2) × 180°'dir. {ad} için ({n} − 2) × 180° = {toplam}.",
+    "items": [
+      {
+        "id": "ucgen",
+        "ad": "Üçgen",
+        "adIn": "Üçgenin",
+        "n": "3",
+        "toplam": "180°"
+      },
+      {
+        "id": "dortgen",
+        "ad": "Dörtgen",
+        "adIn": "Dörtgenin",
+        "n": "4",
+        "toplam": "360°"
+      },
+      {
+        "id": "besgen",
+        "ad": "Beşgen",
+        "adIn": "Beşgenin",
+        "n": "5",
+        "toplam": "540°"
+      },
+      {
+        "id": "altigen",
+        "ad": "Altıgen",
+        "adIn": "Altıgenin",
+        "n": "6",
+        "toplam": "720°"
+      },
+      {
+        "id": "sekizgen",
+        "ad": "Sekizgen",
+        "adIn": "Sekizgenin",
+        "n": "8",
+        "toplam": "1080°"
+      },
+      {
+        "id": "ongen",
+        "ad": "Ongen",
+        "adIn": "Ongenin",
+        "n": "10",
+        "toplam": "1440°"
+      }
+    ],
+    "distractors": {
+      "toplam": [
+        "900°",
+        "1260°"
+      ],
+      "ad": [
+        "Yedigen",
+        "Dokuzgen"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-7-4-duzgun-cokgen-acilari",
+    "unit": "mat-7-4",
+    "difficulty": 3,
+    "questions": [
+      {
+        "prompt": "{adIn} bir iç açısı kaç derecedir?",
+        "answer": "aci"
+      }
+    ],
+    "statement": {
+      "text": "{adIn} bir iç açısı {aci} ölçüsündedir.",
+      "swap": "aci"
+    },
+    "explanation": "{adIn} iç açıları toplamı {toplam} olup {n} açı da eşittir: {toplam} ÷ {n} = {aci}.",
+    "items": [
+      {
+        "id": "ucgen",
+        "adIn": "Eşkenar üçgenin",
+        "n": "3",
+        "toplam": "180°",
+        "aci": "60°"
+      },
+      {
+        "id": "kare",
+        "adIn": "Karenin",
+        "n": "4",
+        "toplam": "360°",
+        "aci": "90°"
+      },
+      {
+        "id": "besgen",
+        "adIn": "Düzgün beşgenin",
+        "n": "5",
+        "toplam": "540°",
+        "aci": "108°"
+      },
+      {
+        "id": "altigen",
+        "adIn": "Düzgün altıgenin",
+        "n": "6",
+        "toplam": "720°",
+        "aci": "120°"
+      },
+      {
+        "id": "sekizgen",
+        "adIn": "Düzgün sekizgenin",
+        "n": "8",
+        "toplam": "1080°",
+        "aci": "135°"
+      },
+      {
+        "id": "ongen",
+        "adIn": "Düzgün ongenin",
+        "n": "10",
+        "toplam": "1440°",
+        "aci": "144°"
+      }
+    ],
+    "distractors": {
+      "aci": [
+        "72°",
+        "150°",
+        "45°"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "mat-7-6-merkezi-egilim",
+    "unit": "mat-7-6",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{tanim}\" hangi kavramın tanımıdır?",
+        "answer": "ad"
+      },
+      {
+        "prompt": "{ad} nedir?",
+        "answer": "tanim"
+      }
+    ],
+    "statement": {
+      "text": "{ad}: {tanimKucuk}.",
+      "swap": "tanimKucuk"
+    },
+    "explanation": "{ad}: {tanimKucuk}.",
+    "items": [
+      {
+        "id": "ortalama",
+        "ad": "Aritmetik ortalama",
+        "tanim": "Verilerin toplamının veri sayısına bölümü",
+        "tanimKucuk": "verilerin toplamının veri sayısına bölümü"
+      },
+      {
+        "id": "ortanca",
+        "ad": "Ortanca (medyan)",
+        "tanim": "Sıralanmış verilerin ortasındaki değer",
+        "tanimKucuk": "sıralanmış verilerin ortasındaki değer"
+      },
+      {
+        "id": "tepe",
+        "ad": "Tepe değer (mod)",
+        "tanim": "Veri grubunda en çok tekrar eden değer",
+        "tanimKucuk": "veri grubunda en çok tekrar eden değer"
+      },
+      {
+        "id": "aciklik",
+        "ad": "Açıklık",
+        "tanim": "En büyük değer ile en küçük değerin farkı",
+        "tanimKucuk": "en büyük değer ile en küçük değerin farkı"
+      }
+    ]
+  }
+]

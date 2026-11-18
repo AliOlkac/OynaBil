@@ -1,0 +1,973 @@
+[
+  {
+    "id": "mat-8-1-01",
+    "unit": "mat-8-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "EBOB(18, 24) kaçtır?",
+    "choices": [
+      "72",
+      "3",
+      "12",
+      "6"
+    ],
+    "answer": 3,
+    "explanation": "18 = 2 × 3² ve 24 = 2³ × 3'tür. Ortak asal çarpanların en küçük üslüleri çarpılır: 2 × 3 = 6. 72 ise EKOK'tur."
+  },
+  {
+    "id": "mat-8-1-02",
+    "unit": "mat-8-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "EKOK(6, 8) kaçtır?",
+    "choices": [
+      "48",
+      "24",
+      "2",
+      "14"
+    ],
+    "answer": 1,
+    "explanation": "6'nın katları 6, 12, 18, 24...; 8'in katları 8, 16, 24... Ortak katların en küçüğü 24'tür. 2 ise EBOB'dur."
+  },
+  {
+    "id": "mat-8-1-03",
+    "unit": "mat-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Aralarında asal olan sayı çifti hangisidir?",
+    "choices": [
+      "6 ve 9",
+      "12 ve 18",
+      "8 ve 15",
+      "14 ve 21"
+    ],
+    "answer": 2,
+    "explanation": "1'den başka ortak çarpanı olmayan sayılar aralarında asaldır. 8 = 2³ ve 15 = 3 × 5'in ortak asal çarpanı yoktur."
+  },
+  {
+    "id": "mat-8-1-04",
+    "unit": "mat-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "72 sayısının asal çarpanlarına ayrılmış hâli hangisidir?",
+    "choices": [
+      "2³ × 3²",
+      "2² × 3³",
+      "2³ × 9",
+      "8 × 9"
+    ],
+    "answer": 0,
+    "explanation": "72 = 8 × 9 = 2³ × 3²'dir. Asal çarpanlara ayırmada bütün çarpanlar asal olmalıdır; 8 ve 9 asal değildir."
+  },
+  {
+    "id": "mat-8-1-05",
+    "unit": "mat-8-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Biri 12, diğeri 18 dakikada bir çalan iki zil birlikte çaldıktan kaç dakika sonra ilk kez yeniden birlikte çalar?",
+    "choices": [
+      "36",
+      "6",
+      "216",
+      "30"
+    ],
+    "answer": 0,
+    "explanation": "Birlikte çalma anları 12 ve 18'in ortak katlarıdır. İlk kez EKOK(12, 18) = 36 dakika sonra birlikte çalarlar."
+  },
+  {
+    "id": "mat-8-1-06",
+    "unit": "mat-8-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "48 m ve 60 m uzunluğundaki iki kumaş, hiç artmayacak biçimde eşit ve en uzun parçalara ayrılacaktır. Toplam kaç parça elde edilir?",
+    "choices": [
+      "12",
+      "108",
+      "9",
+      "20"
+    ],
+    "answer": 2,
+    "explanation": "Parça uzunluğu EBOB(48, 60) = 12 m'dir. 48 ÷ 12 = 4 ve 60 ÷ 12 = 5 parça; toplam 9 parça elde edilir."
+  },
+  {
+    "id": "mat-8-1-07",
+    "unit": "mat-8-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Aralarında asal iki sayının EBOB'u 1'dir.",
+    "answer": true,
+    "explanation": "Aralarında asal sayıların 1'den başka ortak çarpanı yoktur. Bu yüzden en büyük ortak bölenleri 1'dir."
+  },
+  {
+    "id": "mat-8-1-08",
+    "unit": "mat-8-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "İki doğal sayının EKOK'u, bu sayıların EBOB'undan küçük olabilir.",
+    "answer": false,
+    "explanation": "EBOB sayıları böler, EKOK ise sayıların katıdır. Bu yüzden EKOK, EBOB'dan küçük olamaz; örneğin EBOB(4, 6) = 2 ve EKOK(4, 6) = 12'dir."
+  },
+  {
+    "id": "mat-8-2-01",
+    "unit": "mat-8-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "2⁻³ ifadesinin değeri kaçtır?",
+    "choices": [
+      "−8",
+      "−6",
+      "1/8",
+      "1/6"
+    ],
+    "answer": 2,
+    "explanation": "Negatif üs, sayının çarpma işlemine göre tersini aldırır: 2⁻³ = 1/2³ = 1/8. Sonuç negatif olmaz."
+  },
+  {
+    "id": "mat-8-2-02",
+    "unit": "mat-8-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "3⁴ × 3² işleminin sonucu hangisidir?",
+    "choices": [
+      "3⁸",
+      "9⁶",
+      "9⁸",
+      "3⁶"
+    ],
+    "answer": 3,
+    "explanation": "Tabanları aynı olan üslü ifadeler çarpılırken üsler toplanır: 3⁴⁺² = 3⁶."
+  },
+  {
+    "id": "mat-8-2-03",
+    "unit": "mat-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "5⁷ ÷ 5³ işleminin sonucu hangisidir?",
+    "choices": [
+      "5⁴",
+      "5¹⁰",
+      "1⁴",
+      "5²¹"
+    ],
+    "answer": 0,
+    "explanation": "Tabanları aynı olan üslü ifadeler bölünürken üsler çıkarılır: 5⁷⁻³ = 5⁴."
+  },
+  {
+    "id": "mat-8-2-04",
+    "unit": "mat-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "(2³)² ifadesinin değeri kaçtır?",
+    "choices": [
+      "32",
+      "12",
+      "36",
+      "64"
+    ],
+    "answer": 3,
+    "explanation": "Üssün üssü alınırken üsler çarpılır: (2³)² = 2⁶ = 64. Üsleri toplamak hatalı olarak 2⁵ = 32 verir."
+  },
+  {
+    "id": "mat-8-2-05",
+    "unit": "mat-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "45 000 000 sayısının bilimsel gösterimi hangisidir?",
+    "choices": [
+      "45 × 10⁶",
+      "4,5 × 10⁷",
+      "4,5 × 10⁶",
+      "0,45 × 10⁸"
+    ],
+    "answer": 1,
+    "explanation": "Bilimsel gösterimde katsayı 1 ile 10 arasında olmalıdır (1 dâhil). Virgül 7 basamak sola kaydırılır: 4,5 × 10⁷."
+  },
+  {
+    "id": "mat-8-2-06",
+    "unit": "mat-8-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "0,00032 sayısının bilimsel gösterimi hangisidir?",
+    "choices": [
+      "3,2 × 10⁻⁴",
+      "3,2 × 10⁻⁵",
+      "32 × 10⁻⁵",
+      "3,2 × 10⁴"
+    ],
+    "answer": 0,
+    "explanation": "Virgül 4 basamak sağa kaydırılınca 3,2 elde edilir. Sayı 1'den küçük olduğu için üs negatiftir: 3,2 × 10⁻⁴."
+  },
+  {
+    "id": "mat-8-2-07",
+    "unit": "mat-8-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "2⁵ + 2⁵ toplamı hangisine eşittir?",
+    "choices": [
+      "2¹⁰",
+      "2⁶",
+      "4¹⁰",
+      "2²⁵"
+    ],
+    "answer": 1,
+    "explanation": "2⁵ + 2⁵ = 2 × 2⁵ = 2⁶'dır. Toplama işleminde üsler toplanmaz; aynı terimden iki tane vardır."
+  },
+  {
+    "id": "mat-8-2-08",
+    "unit": "mat-8-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Sıfırdan farklı bir sayının sıfırıncı kuvveti 1'dir.",
+    "answer": true,
+    "explanation": "a sıfırdan farklı olmak üzere a⁰ = 1'dir. Örneğin 5³ ÷ 5³ = 5⁰ = 1."
+  },
+  {
+    "id": "mat-8-2-09",
+    "unit": "mat-8-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "(−3)² ile −3² ifadelerinin değerleri eşittir.",
+    "answer": false,
+    "explanation": "(−3)² = (−3) × (−3) = 9'dur. −3² ifadesinde üs yalnızca 3'e aittir: −(3 × 3) = −9."
+  },
+  {
+    "id": "mat-8-3-01",
+    "unit": "mat-8-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "√144 kaçtır?",
+    "choices": [
+      "12",
+      "14",
+      "72",
+      "24"
+    ],
+    "answer": 0,
+    "explanation": "12 × 12 = 144 olduğundan √144 = 12'dir. Karekök almak sayıyı 2'ye bölmek değildir."
+  },
+  {
+    "id": "mat-8-3-02",
+    "unit": "mat-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "√50 ifadesi a√b biçiminde nasıl yazılır?",
+    "choices": [
+      "5√2",
+      "2√5",
+      "25√2",
+      "10√5"
+    ],
+    "answer": 0,
+    "explanation": "50 = 25 × 2'dir. √25 = 5 kök dışına çıkar: √50 = 5√2."
+  },
+  {
+    "id": "mat-8-3-03",
+    "unit": "mat-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "√12 + √27 işleminin sonucu kaçtır?",
+    "choices": [
+      "√39",
+      "5√3",
+      "6√3",
+      "13√3"
+    ],
+    "answer": 1,
+    "explanation": "√12 = 2√3 ve √27 = 3√3'tür. Kök içleri aynı olan terimler toplanır: 2√3 + 3√3 = 5√3."
+  },
+  {
+    "id": "mat-8-3-04",
+    "unit": "mat-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "√3 × √12 işleminin sonucu kaçtır?",
+    "choices": [
+      "6",
+      "√15",
+      "36",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "Kareköklü ifadeler çarpılırken kök içleri çarpılır: √3 × √12 = √36 = 6."
+  },
+  {
+    "id": "mat-8-3-05",
+    "unit": "mat-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "√70 hangi iki ardışık doğal sayı arasındadır?",
+    "choices": [
+      "7 ile 8",
+      "9 ile 10",
+      "8 ile 9",
+      "6 ile 7"
+    ],
+    "answer": 2,
+    "explanation": "64 < 70 < 81 olduğundan √64 < √70 < √81, yani 8 < √70 < 9'dur."
+  },
+  {
+    "id": "mat-8-3-06",
+    "unit": "mat-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi irrasyonel sayıdır?",
+    "choices": [
+      "√7",
+      "√16",
+      "0,25",
+      "22/7"
+    ],
+    "answer": 0,
+    "explanation": "7 tam kare olmadığı için √7 iki tam sayının oranı olarak yazılamaz. √16 = 4, 0,25 = 1/4 ve 22/7 rasyonel sayılardır."
+  },
+  {
+    "id": "mat-8-3-07",
+    "unit": "mat-8-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Alanı 72 cm² olan karenin bir kenarı kaç cm'dir?",
+    "choices": [
+      "36",
+      "18",
+      "2√6",
+      "6√2"
+    ],
+    "answer": 3,
+    "explanation": "Kenar uzunluğu √72'dir. 72 = 36 × 2 olduğundan √72 = 6√2 cm'dir."
+  },
+  {
+    "id": "mat-8-3-08",
+    "unit": "mat-8-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "√0,25 ifadesinin değeri 0,5'tir.",
+    "answer": true,
+    "explanation": "0,5 × 0,5 = 0,25 olduğundan √0,25 = 0,5'tir."
+  },
+  {
+    "id": "mat-8-3-09",
+    "unit": "mat-8-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "√9 + √16 = √25 eşitliği doğrudur.",
+    "answer": false,
+    "explanation": "√9 + √16 = 3 + 4 = 7'dir, √25 ise 5'tir. Toplama işleminde kök içleri toplanmaz."
+  },
+  {
+    "id": "mat-8-4-01",
+    "unit": "mat-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir bütünün parçalarının bütüne oranını göstermek için en uygun grafik hangisidir?",
+    "choices": [
+      "Çizgi grafiği",
+      "Çetele tablosu",
+      "Daire grafiği",
+      "Sayı doğrusu"
+    ],
+    "answer": 2,
+    "explanation": "Daire grafiğinde her dilim, o verinin bütün içindeki payını gösterir. Çizgi grafiği ise zamana bağlı değişimi gösterir."
+  },
+  {
+    "id": "mat-8-4-02",
+    "unit": "mat-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir daire grafiğinde 300 kişiden 75'ini gösteren dilimin merkez açısı kaç derecedir?",
+    "choices": [
+      "75",
+      "25",
+      "120",
+      "90"
+    ],
+    "answer": 3,
+    "explanation": "75/300 = 1/4'tür. Dairenin tamamı 360° olduğundan dilimin açısı 360 ÷ 4 = 90°'dir."
+  },
+  {
+    "id": "mat-8-4-03",
+    "unit": "mat-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hilesiz bir zar atıldığında üst yüze 6'nın çarpanlarından biri gelme olasılığı kaçtır?",
+    "choices": [
+      "1/2",
+      "1/6",
+      "2/3",
+      "1/3"
+    ],
+    "answer": 2,
+    "explanation": "6'nın çarpanları 1, 2, 3 ve 6'dır; zarda 4 uygun yüz vardır. Olasılık 4/6 = 2/3'tür."
+  },
+  {
+    "id": "mat-8-4-04",
+    "unit": "mat-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"ANKARA\" kelimesinin harflerinden rastgele seçilen birinin A olma olasılığı kaçtır?",
+    "choices": [
+      "1/3",
+      "1/2",
+      "1/6",
+      "2/3"
+    ],
+    "answer": 1,
+    "explanation": "Kelimede 6 harf vardır ve 3'ü A'dır. Olasılık 3/6 = 1/2'dir."
+  },
+  {
+    "id": "mat-8-4-05",
+    "unit": "mat-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir torbada 5 kırmızı, 7 mavi top vardır. Kırmızı ve mavi çekme olasılıklarının eşit olması için torbaya kaç kırmızı top eklenmelidir?",
+    "choices": [
+      "7",
+      "5",
+      "12",
+      "2"
+    ],
+    "answer": 3,
+    "explanation": "Olasılıkların eşit olması için iki renkten eşit sayıda top olmalıdır. 7 − 5 = 2 kırmızı top eklenir."
+  },
+  {
+    "id": "mat-8-4-06",
+    "unit": "mat-8-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "30 kişilik bir sınıftan rastgele seçilen öğrencinin kız olma olasılığı 2/5'tir. Sınıfta kaç erkek öğrenci vardır?",
+    "choices": [
+      "12",
+      "20",
+      "15",
+      "18"
+    ],
+    "answer": 3,
+    "explanation": "Kız öğrenci sayısı 30 × 2/5 = 12'dir. Erkek öğrenci sayısı 30 − 12 = 18'dir."
+  },
+  {
+    "id": "mat-8-4-07",
+    "unit": "mat-8-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bir olayın olma olasılığı 0'dan küçük ya da 1'den büyük olamaz.",
+    "answer": true,
+    "explanation": "Olasılık, istenen durum sayısının tüm durum sayısına oranıdır; bu oran en az 0, en çok 1 olur."
+  },
+  {
+    "id": "mat-8-4-08",
+    "unit": "mat-8-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir zar atıldığında 2'den küçük sayı gelme olasılığı ile 5'ten büyük sayı gelme olasılığı farklıdır.",
+    "answer": false,
+    "explanation": "2'den küçük yalnızca 1, 5'ten büyük yalnızca 6 vardır. İki olayın da olasılığı 1/6'dır; yani eş olasılıklıdır."
+  },
+  {
+    "id": "mat-8-5-01",
+    "unit": "mat-8-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "(x + 3)² ifadesinin açılımı hangisidir?",
+    "choices": [
+      "x² + 6x + 9",
+      "x² + 9",
+      "x² + 3x + 9",
+      "x² + 6x + 6"
+    ],
+    "answer": 0,
+    "explanation": "(a + b)² = a² + 2ab + b² özdeşliğinden x² + 2 × x × 3 + 3² = x² + 6x + 9 bulunur. Ortadaki terim unutulmamalıdır."
+  },
+  {
+    "id": "mat-8-5-02",
+    "unit": "mat-8-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "(x − 5)(x + 5) çarpımı hangisine eşittir?",
+    "choices": [
+      "x² − 25",
+      "x² + 25",
+      "x² − 10x + 25",
+      "x² − 10"
+    ],
+    "answer": 0,
+    "explanation": "(a − b)(a + b) = a² − b² özdeşliğine göre sonuç x² − 5² = x² − 25'tir."
+  },
+  {
+    "id": "mat-8-5-03",
+    "unit": "mat-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "(2x − 1)(x + 4) çarpımının sonucu hangisidir?",
+    "choices": [
+      "2x² + 9x − 4",
+      "2x² − 4",
+      "2x² + 7x − 4",
+      "2x² + 7x + 4"
+    ],
+    "answer": 2,
+    "explanation": "Her terim diğer parantezdeki her terimle çarpılır: 2x² + 8x − x − 4 = 2x² + 7x − 4."
+  },
+  {
+    "id": "mat-8-5-04",
+    "unit": "mat-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "x² − 9x ifadesinin çarpanlara ayrılmış hâli hangisidir?",
+    "choices": [
+      "(x − 3)(x + 3)",
+      "x(x − 9)",
+      "x(x − 3)",
+      "9x(x − 1)"
+    ],
+    "answer": 1,
+    "explanation": "İki terimde de x ortaktır; ortak çarpan paranteze alınır: x² − 9x = x(x − 9). (x − 3)(x + 3) ise x² − 9'a eşittir."
+  },
+  {
+    "id": "mat-8-5-05",
+    "unit": "mat-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "4x² − 49 ifadesinin çarpanlara ayrılmış hâli hangisidir?",
+    "choices": [
+      "(2x − 7)²",
+      "(4x − 7)(x + 7)",
+      "(2x − 7)(2x + 7)",
+      "(2x − 49)(2x + 1)"
+    ],
+    "answer": 2,
+    "explanation": "4x² = (2x)² ve 49 = 7²'dir. İki kare farkı özdeşliğiyle (2x − 7)(2x + 7) yazılır."
+  },
+  {
+    "id": "mat-8-5-06",
+    "unit": "mat-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "x² + 10x + 25 ifadesi hangisinin karesidir?",
+    "choices": [
+      "x − 5",
+      "x + 25",
+      "5x + 1",
+      "x + 5"
+    ],
+    "answer": 3,
+    "explanation": "(x + 5)² = x² + 2 × x × 5 + 5² = x² + 10x + 25'tir."
+  },
+  {
+    "id": "mat-8-5-07",
+    "unit": "mat-8-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "x + y = 7 ve x − y = 3 ise x² − y² kaçtır?",
+    "choices": [
+      "10",
+      "4",
+      "40",
+      "21"
+    ],
+    "answer": 3,
+    "explanation": "x² − y² = (x − y)(x + y) özdeşliğinden 3 × 7 = 21 bulunur. x ve y'yi ayrı ayrı bulmaya gerek yoktur."
+  },
+  {
+    "id": "mat-8-5-08",
+    "unit": "mat-8-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "3x² ile 5x² benzer terimlerdir.",
+    "answer": true,
+    "explanation": "Değişkenleri ve değişkenlerin üsleri aynı olan terimler benzer terimdir. İkisinde de x² vardır."
+  },
+  {
+    "id": "mat-8-5-09",
+    "unit": "mat-8-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "(a − b)² = a² − b² eşitliği bir özdeşliktir.",
+    "answer": false,
+    "explanation": "(a − b)² = a² − 2ab + b²'dir. a² − b² ise (a − b)(a + b) çarpımına eşittir."
+  },
+  {
+    "id": "mat-8-6-01",
+    "unit": "mat-8-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "y = 2x + 3 doğrusunun eğimi kaçtır?",
+    "choices": [
+      "3",
+      "2",
+      "5",
+      "−2"
+    ],
+    "answer": 1,
+    "explanation": "y = mx + n biçimindeki denklemde eğim x'in katsayısı olan m'dir. Burada m = 2'dir; 3 ise doğrunun y eksenini kestiği değerdir."
+  },
+  {
+    "id": "mat-8-6-02",
+    "unit": "mat-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "2x − 5 > 7 eşitsizliğinin çözümü hangisidir?",
+    "choices": [
+      "x > 6",
+      "x > 1",
+      "x < 6",
+      "x > 12"
+    ],
+    "answer": 0,
+    "explanation": "Her iki tarafa 5 eklenir: 2x > 12. Her iki taraf 2'ye bölünür: x > 6."
+  },
+  {
+    "id": "mat-8-6-03",
+    "unit": "mat-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "−3x ≤ 12 eşitsizliğinin çözümü hangisidir?",
+    "choices": [
+      "x ≤ −4",
+      "x ≥ 4",
+      "x ≤ 4",
+      "x ≥ −4"
+    ],
+    "answer": 3,
+    "explanation": "Eşitsizliğin iki tarafı negatif bir sayıya bölünürse eşitsizlik yön değiştirir: x ≥ 12 ÷ (−3), yani x ≥ −4."
+  },
+  {
+    "id": "mat-8-6-04",
+    "unit": "mat-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "(1, 2) ve (3, 8) noktalarından geçen doğrunun eğimi kaçtır?",
+    "choices": [
+      "1/3",
+      "3",
+      "2",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "Eğim, dikey değişimin yatay değişime oranıdır: (8 − 2) ÷ (3 − 1) = 6 ÷ 2 = 3."
+  },
+  {
+    "id": "mat-8-6-05",
+    "unit": "mat-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "y = 3x − 6 doğrusu x eksenini hangi noktada keser?",
+    "choices": [
+      "(0, −6)",
+      "(−2, 0)",
+      "(0, 2)",
+      "(2, 0)"
+    ],
+    "answer": 3,
+    "explanation": "x eksenini kestiği noktada y = 0'dır: 0 = 3x − 6, x = 2. Nokta (2, 0)'dır. (0, −6) ise y eksenini kestiği noktadır."
+  },
+  {
+    "id": "mat-8-6-06",
+    "unit": "mat-8-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "(x + 2)/3 = (x − 1)/2 denkleminde x kaçtır?",
+    "choices": [
+      "1",
+      "7",
+      "−7",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "İçler dışlar çarpımı yapılır: 2(x + 2) = 3(x − 1), yani 2x + 4 = 3x − 3. Buradan x = 7 bulunur."
+  },
+  {
+    "id": "mat-8-6-07",
+    "unit": "mat-8-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir taksi açılışta 30 lira, gidilen her kilometre için 15 lira almaktadır. x km yol için ödenecek y lirayı veren denklem hangisidir?",
+    "choices": [
+      "y = 30x + 15",
+      "y = 45x",
+      "y = 15x − 30",
+      "y = 15x + 30"
+    ],
+    "answer": 3,
+    "explanation": "Kilometreye bağlı ücret 15x, sabit açılış ücreti 30 liradır. Toplam ücret y = 15x + 30 olur."
+  },
+  {
+    "id": "mat-8-6-08",
+    "unit": "mat-8-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "A(−3, 4) noktası koordinat sisteminin II. bölgesindedir.",
+    "answer": true,
+    "explanation": "II. bölgede x koordinatı negatif, y koordinatı pozitiftir. (−3, 4) bu koşulu sağlar."
+  },
+  {
+    "id": "mat-8-6-09",
+    "unit": "mat-8-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "y = 5 doğrusu y eksenine paraleldir.",
+    "answer": false,
+    "explanation": "y = 5 doğrusunda her noktanın y değeri 5'tir; bu doğru yataydır ve x eksenine paraleldir."
+  },
+  {
+    "id": "mat-8-7-01",
+    "unit": "mat-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Dik kenarları 6 cm ve 8 cm olan dik üçgenin hipotenüsü kaç cm'dir?",
+    "choices": [
+      "14",
+      "100",
+      "10",
+      "48"
+    ],
+    "answer": 2,
+    "explanation": "Pisagor bağıntısına göre 6² + 8² = 36 + 64 = 100'dür. Hipotenüs √100 = 10 cm'dir."
+  },
+  {
+    "id": "mat-8-7-02",
+    "unit": "mat-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Açıları 50°, 60° ve 70° olan üçgende en uzun kenar hangi açının karşısındadır?",
+    "choices": [
+      "50°",
+      "60°",
+      "70°"
+    ],
+    "answer": 2,
+    "explanation": "Bir üçgende büyük açının karşısında uzun kenar bulunur. En büyük açı 70° olduğundan en uzun kenar onun karşısındadır."
+  },
+  {
+    "id": "mat-8-7-03",
+    "unit": "mat-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hipotenüsü 13 cm, bir dik kenarı 5 cm olan dik üçgenin diğer dik kenarı kaç cm'dir?",
+    "choices": [
+      "8",
+      "12",
+      "18",
+      "144"
+    ],
+    "answer": 1,
+    "explanation": "13² − 5² = 169 − 25 = 144'tür. Diğer dik kenar √144 = 12 cm'dir."
+  },
+  {
+    "id": "mat-8-7-04",
+    "unit": "mat-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İki kenarı 5 cm ve 9 cm olan bir üçgenin üçüncü kenarı hangisi olamaz?",
+    "choices": [
+      "5 cm",
+      "4 cm",
+      "10 cm",
+      "13 cm"
+    ],
+    "answer": 1,
+    "explanation": "Üçüncü kenar, diğer iki kenarın farkından büyük ve toplamından küçük olmalıdır: 4 < kenar < 14. 4 cm bu aralıkta değildir."
+  },
+  {
+    "id": "mat-8-7-05",
+    "unit": "mat-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Benzerlik oranı 2/3 olan iki üçgenden küçüğünün bir kenarı 8 cm ise büyüğünde bu kenara karşılık gelen kenar kaç cm'dir?",
+    "choices": [
+      "6",
+      "12",
+      "16",
+      "24"
+    ],
+    "answer": 1,
+    "explanation": "8/x = 2/3 orantısından 2x = 24 ve x = 12 cm bulunur."
+  },
+  {
+    "id": "mat-8-7-06",
+    "unit": "mat-8-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir köşegeni 10 cm, kısa kenarı 6 cm olan dikdörtgenin alanı kaç cm²'dir?",
+    "choices": [
+      "60",
+      "48",
+      "30",
+      "24"
+    ],
+    "answer": 1,
+    "explanation": "Köşegen, dikdörtgeni iki dik üçgene ayırır: uzun kenar √(10² − 6²) = √64 = 8 cm. Alan 6 × 8 = 48 cm²'dir."
+  },
+  {
+    "id": "mat-8-7-07",
+    "unit": "mat-8-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Boyu 1,5 m olan çocuğun gölgesi 2 m iken aynı anda bir ağacın gölgesi 8 m'dir. Ağacın boyu kaç metredir?",
+    "choices": [
+      "6",
+      "7,5",
+      "12",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "Aynı anda boy ile gölge orantılıdır (benzer üçgenler): 1,5/2 = x/8. Buradan x = 6 m bulunur."
+  },
+  {
+    "id": "mat-8-7-08",
+    "unit": "mat-8-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Kenarortay, üçgenin bir köşesini karşı kenarın orta noktasına birleştiren doğru parçasıdır.",
+    "answer": true,
+    "explanation": "Kenarortay karşı kenarı iki eş parçaya ayırır. Her üçgenin üç kenarortayı vardır."
+  },
+  {
+    "id": "mat-8-7-09",
+    "unit": "mat-8-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Benzer iki üçgenin karşılıklı açılarının ölçüleri eşittir.",
+    "answer": true,
+    "explanation": "Benzer üçgenlerde karşılıklı açılar eşit, karşılıklı kenarlar orantılıdır."
+  },
+  {
+    "id": "mat-8-7-10",
+    "unit": "mat-8-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Kenar uzunlukları 4 cm, 5 cm ve 6 cm olan üçgen bir dik üçgendir.",
+    "answer": false,
+    "explanation": "Dik üçgende en uzun kenarın karesi diğer ikisinin kareleri toplamına eşittir. 4² + 5² = 41, 6² = 36'dır; eşit olmadığı için dik üçgen değildir."
+  },
+  {
+    "id": "mat-8-8-01",
+    "unit": "mat-8-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "A(3, −2) noktasının x eksenine göre yansıması hangi noktadır?",
+    "choices": [
+      "(3, 2)",
+      "(−3, −2)",
+      "(−3, 2)",
+      "(−2, 3)"
+    ],
+    "answer": 0,
+    "explanation": "x eksenine göre yansımada x koordinatı aynı kalır, y koordinatının işareti değişir: (3, 2)."
+  },
+  {
+    "id": "mat-8-8-02",
+    "unit": "mat-8-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "A(5, 1) noktasının y eksenine göre yansıması hangi noktadır?",
+    "choices": [
+      "(5, −1)",
+      "(−5, 1)",
+      "(−5, −1)",
+      "(1, 5)"
+    ],
+    "answer": 1,
+    "explanation": "y eksenine göre yansımada y koordinatı aynı kalır, x koordinatının işareti değişir: (−5, 1)."
+  },
+  {
+    "id": "mat-8-8-03",
+    "unit": "mat-8-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir kare dik piramidin kaç yüzü vardır?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "Kare piramidin 1 kare tabanı ve 4 üçgen yan yüzü vardır: toplam 5 yüz."
+  },
+  {
+    "id": "mat-8-8-04",
+    "unit": "mat-8-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "A(−1, 4) noktası 3 birim sağa, 2 birim aşağı ötelenirse hangi noktaya gelir?",
+    "choices": [
+      "(−4, 6)",
+      "(2, 6)",
+      "(−4, 2)",
+      "(2, 2)"
+    ],
+    "answer": 3,
+    "explanation": "Sağa öteleme x'i artırır: −1 + 3 = 2. Aşağı öteleme y'yi azaltır: 4 − 2 = 2. Yeni nokta (2, 2)'dir."
+  },
+  {
+    "id": "mat-8-8-05",
+    "unit": "mat-8-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Taban yarıçapı 3 cm, yüksekliği 10 cm olan dik dairesel silindirin hacmi kaç cm³'tür? (π = 3 alınız.)",
+    "choices": [
+      "90",
+      "270",
+      "180",
+      "810"
+    ],
+    "answer": 1,
+    "explanation": "Silindirin hacmi π × r² × h'dir: 3 × 3² × 10 = 3 × 9 × 10 = 270 cm³."
+  },
+  {
+    "id": "mat-8-8-06",
+    "unit": "mat-8-8",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Taban yarıçapı 2 cm, yüksekliği 5 cm olan dik dairesel silindirin yanal alanı kaç cm²'dir? (π = 3 alınız.)",
+    "choices": [
+      "30",
+      "60",
+      "84",
+      "20"
+    ],
+    "answer": 1,
+    "explanation": "Yanal alan 2 × π × r × h'dir: 2 × 3 × 2 × 5 = 60 cm². 84 ise iki taban da eklenince bulunan yüzey alanıdır."
+  },
+  {
+    "id": "mat-8-8-07",
+    "unit": "mat-8-8",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "A(2, 3) noktası önce x eksenine göre yansıtılıyor, sonra 4 birim sola öteleniyor. Noktanın son konumu hangisidir?",
+    "choices": [
+      "(−2, 3)",
+      "(−2, −3)",
+      "(6, −3)",
+      "(−6, 3)"
+    ],
+    "answer": 1,
+    "explanation": "x eksenine göre yansıma: (2, −3). 4 birim sola öteleme: 2 − 4 = −2. Son konum (−2, −3)'tür."
+  },
+  {
+    "id": "mat-8-8-08",
+    "unit": "mat-8-8",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Öteleme hareketinde şeklin biçimi ve büyüklüğü değişmez.",
+    "answer": true,
+    "explanation": "Öteleme, şeklin her noktasını aynı yönde ve aynı uzunlukta kaydırır. Şeklin yalnızca yeri değişir."
+  },
+  {
+    "id": "mat-8-8-09",
+    "unit": "mat-8-8",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Dik koninin tabanı bir karedir.",
+    "answer": false,
+    "explanation": "Dik koninin tabanı bir dairedir. Tabanı kare olan ve bir tepe noktasında birleşen cisim kare piramittir."
+  },
+  {
+    "id": "mat-8-8-10",
+    "unit": "mat-8-8",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir üçgen dik prizmanın 6 köşesi vardır.",
+    "answer": true,
+    "explanation": "Üçgen prizmanın alt ve üst tabanları birer üçgendir. Her tabanda 3 köşe olduğundan toplam 6 köşesi vardır."
+  }
+]

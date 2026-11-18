@@ -1,0 +1,845 @@
+[
+  {
+    "id": "mat-6-1-01",
+    "unit": "mat-6-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi asal sayıdır?",
+    "choices": [
+      "21",
+      "27",
+      "29",
+      "33"
+    ],
+    "answer": 2,
+    "explanation": "29'un 1 ve kendisinden başka çarpanı yoktur. 21 = 3 × 7, 27 = 3 × 9 ve 33 = 3 × 11 olduğundan asal değildir."
+  },
+  {
+    "id": "mat-6-1-02",
+    "unit": "mat-6-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "36 sayısının çarpanlarından biri hangisidir?",
+    "choices": [
+      "8",
+      "7",
+      "9",
+      "24"
+    ],
+    "answer": 2,
+    "explanation": "36 = 9 × 4 olduğundan 9, 36'nın bir çarpanıdır. 36; 8, 7 ve 24'e kalansız bölünmez."
+  },
+  {
+    "id": "mat-6-1-03",
+    "unit": "mat-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "3 ile kalansız bölünebilen sayı hangisidir?",
+    "choices": [
+      "512",
+      "340",
+      "471",
+      "725"
+    ],
+    "answer": 2,
+    "explanation": "Rakamları toplamı 3'ün katı olan sayılar 3 ile bölünür. 4 + 7 + 1 = 12 ve 12, 3'ün katıdır."
+  },
+  {
+    "id": "mat-6-1-04",
+    "unit": "mat-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "6 ile kalansız bölünebilen sayı hangisidir?",
+    "choices": [
+      "164",
+      "135",
+      "174",
+      "201"
+    ],
+    "answer": 2,
+    "explanation": "Hem 2 hem 3 ile bölünen sayılar 6 ile bölünür. 174 çifttir ve 1 + 7 + 4 = 12, 3'ün katıdır."
+  },
+  {
+    "id": "mat-6-1-05",
+    "unit": "mat-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "60 sayısının asal çarpanları hangileridir?",
+    "choices": [
+      "2, 3 ve 5",
+      "2 ve 3",
+      "3, 4 ve 5",
+      "2, 5 ve 6"
+    ],
+    "answer": 0,
+    "explanation": "60 = 2 × 2 × 3 × 5'tir. Asal çarpanları 2, 3 ve 5'tir; 4 ve 6 asal sayı değildir."
+  },
+  {
+    "id": "mat-6-1-06",
+    "unit": "mat-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "24 ve 36 sayılarının ortak çarpanlarının en büyüğü kaçtır?",
+    "choices": [
+      "6",
+      "72",
+      "4",
+      "12"
+    ],
+    "answer": 3,
+    "explanation": "24'ün çarpanları 1, 2, 3, 4, 6, 8, 12, 24; 36'nın çarpanları 1, 2, 3, 4, 6, 9, 12, 18, 36'dır. Ortak olanların en büyüğü 12'dir."
+  },
+  {
+    "id": "mat-6-1-07",
+    "unit": "mat-6-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "5A2 üç basamaklı sayısı 9 ile kalansız bölünebildiğine göre A kaçtır?",
+    "choices": [
+      "2",
+      "7",
+      "9",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "9 ile bölünen sayıların rakamları toplamı 9'un katıdır. 5 + A + 2 = 7 + A, 9 olmalıdır; A = 2 bulunur."
+  },
+  {
+    "id": "mat-6-1-08",
+    "unit": "mat-6-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "1 sayısı asal sayıdır.",
+    "answer": false,
+    "explanation": "Asal sayıların tam iki farklı çarpanı vardır: 1 ve kendisi. 1'in tek çarpanı olduğu için asal değildir; en küçük asal sayı 2'dir."
+  },
+  {
+    "id": "mat-6-1-09",
+    "unit": "mat-6-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Birler basamağı 0 ya da 5 olan sayılar 5 ile kalansız bölünür.",
+    "answer": true,
+    "explanation": "5'in katları 5, 10, 15, 20, ... biçiminde ilerler ve birler basamakları hep 0 ya da 5'tir."
+  },
+  {
+    "id": "mat-6-1-10",
+    "unit": "mat-6-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "4 ile bölünebilen her sayı 8 ile de bölünebilir.",
+    "answer": false,
+    "explanation": "12 sayısı 4 ile bölünür ama 8 ile bölünmez. 8 ile bölünen her sayı ise 4 ile bölünür."
+  },
+  {
+    "id": "mat-6-2-01",
+    "unit": "mat-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Bir sayının 3 katının 5 fazlası\" ifadesinin cebirsel gösterimi hangisidir? (Sayı: x)",
+    "choices": [
+      "3x + 5",
+      "3(x + 5)",
+      "5x + 3",
+      "x + 8"
+    ],
+    "answer": 0,
+    "explanation": "Sayının 3 katı 3x'tir. 5 fazlası için 5 eklenir: 3x + 5. 3(x + 5) ise sayının 5 fazlasının 3 katıdır."
+  },
+  {
+    "id": "mat-6-2-02",
+    "unit": "mat-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "x = 4 için 2x + 7 ifadesinin değeri kaçtır?",
+    "choices": [
+      "13",
+      "31",
+      "22",
+      "15"
+    ],
+    "answer": 3,
+    "explanation": "2x, 2 ile x'in çarpımıdır: 2 × 4 = 8 ve 8 + 7 = 15. 2x ifadesi 24 diye okunmaz."
+  },
+  {
+    "id": "mat-6-2-03",
+    "unit": "mat-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "7x cebirsel ifadesinde 7 sayısına ne ad verilir?",
+    "choices": [
+      "Değişken",
+      "Sabit terim",
+      "Üs",
+      "Katsayı"
+    ],
+    "answer": 3,
+    "explanation": "Değişkenin önündeki çarpan katsayıdır. 7x ifadesinde x değişken, 7 katsayıdır."
+  },
+  {
+    "id": "mat-6-2-04",
+    "unit": "mat-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "5a + 3a − 2a ifadesinin en sade hâli hangisidir?",
+    "choices": [
+      "10a",
+      "6a³",
+      "6a",
+      "6"
+    ],
+    "answer": 2,
+    "explanation": "Benzer terimlerde katsayılar toplanıp çıkarılır: 5 + 3 − 2 = 6. Değişken aynı kalır: 6a."
+  },
+  {
+    "id": "mat-6-2-05",
+    "unit": "mat-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "4, 7, 10, 13, ... örüntüsünün genel kuralı hangisidir? (n: adım sayısı)",
+    "choices": [
+      "n + 3",
+      "4n",
+      "3n + 1",
+      "3n + 4"
+    ],
+    "answer": 2,
+    "explanation": "Terimler 3'er artıyor, bu yüzden kural 3n ile başlar. n = 1 için 4 olması gerektiğinden kural 3n + 1'dir."
+  },
+  {
+    "id": "mat-6-2-06",
+    "unit": "mat-6-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Tanesi a lira olan kalemlerden 6 tane alan biri kasaya 100 lira verirse para üstü hangi ifadeyle gösterilir?",
+    "choices": [
+      "6a − 100",
+      "100 − 6a",
+      "100 − a",
+      "6a + 100"
+    ],
+    "answer": 1,
+    "explanation": "6 kalemin tutarı 6a liradır. Para üstü, verilen paradan tutar çıkarılarak bulunur: 100 − 6a."
+  },
+  {
+    "id": "mat-6-2-07",
+    "unit": "mat-6-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kuralı 5n − 2 olan sayı örüntüsünün 12. terimi kaçtır?",
+    "choices": [
+      "60",
+      "58",
+      "62",
+      "46"
+    ],
+    "answer": 1,
+    "explanation": "n yerine 12 yazılır: 5 × 12 − 2 = 60 − 2 = 58."
+  },
+  {
+    "id": "mat-6-2-08",
+    "unit": "mat-6-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "3x + 4 cebirsel ifadesinde sabit terim 4'tür.",
+    "answer": true,
+    "explanation": "Değişken içermeyen terime sabit terim denir. 3x + 4 ifadesinde 3x değişkenli terim, 4 sabit terimdir."
+  },
+  {
+    "id": "mat-6-2-09",
+    "unit": "mat-6-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "x + x + x ifadesi 3x ifadesine eşittir.",
+    "answer": true,
+    "explanation": "Aynı değişkenin üç kez toplanması, o değişkenin 3 katıdır: x + x + x = 3x."
+  },
+  {
+    "id": "mat-6-2-10",
+    "unit": "mat-6-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "a = 5 için 3a − 5 ifadesinin değeri 20'dir.",
+    "answer": false,
+    "explanation": "3a = 3 × 5 = 15'tir ve 15 − 5 = 10 olur. İfadenin değeri 10'dur."
+  },
+  {
+    "id": "mat-6-3-01",
+    "unit": "mat-6-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "1/2 + 1/3 işleminin sonucu kaçtır?",
+    "choices": [
+      "5/6",
+      "2/5",
+      "1/6",
+      "2/6"
+    ],
+    "answer": 0,
+    "explanation": "Paydalar 6'da eşitlenir: 3/6 + 2/6 = 5/6. Paylar ve paydalar ayrı ayrı toplanmaz."
+  },
+  {
+    "id": "mat-6-3-02",
+    "unit": "mat-6-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "1,25 + 0,8 işleminin sonucu kaçtır?",
+    "choices": [
+      "1,33",
+      "2,5",
+      "2,05",
+      "1,105"
+    ],
+    "answer": 2,
+    "explanation": "Virgüller alt alta gelecek biçimde toplanır: 1,25 + 0,80 = 2,05."
+  },
+  {
+    "id": "mat-6-3-03",
+    "unit": "mat-6-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "2/3 × 3/5 işleminin sonucu kaçtır?",
+    "choices": [
+      "2/5",
+      "5/8",
+      "10/9",
+      "6/8"
+    ],
+    "answer": 0,
+    "explanation": "Paylar kendi arasında, paydalar kendi arasında çarpılır: 6/15. Sadeleştirilince 2/5 olur."
+  },
+  {
+    "id": "mat-6-3-04",
+    "unit": "mat-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "3/4 ÷ 1/8 işleminin sonucu kaçtır?",
+    "choices": [
+      "6",
+      "3/32",
+      "1/6",
+      "4"
+    ],
+    "answer": 0,
+    "explanation": "Bölme işleminde ikinci kesir ters çevrilip çarpılır: 3/4 × 8/1 = 24/4 = 6."
+  },
+  {
+    "id": "mat-6-3-05",
+    "unit": "mat-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "2,5 × 0,4 işleminin sonucu kaçtır?",
+    "choices": [
+      "10",
+      "0,1",
+      "1",
+      "2,9"
+    ],
+    "answer": 2,
+    "explanation": "25 × 4 = 100'dür. Çarpanlarda toplam iki ondalık basamak olduğundan sonuç 1,00 yani 1'dir."
+  },
+  {
+    "id": "mat-6-3-06",
+    "unit": "mat-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir sınıfta 12 kız, 18 erkek öğrenci vardır. Kız öğrenci sayısının erkek öğrenci sayısına oranı kaçtır?",
+    "choices": [
+      "2/3",
+      "3/2",
+      "2/5",
+      "3/5"
+    ],
+    "answer": 0,
+    "explanation": "Oran 12/18'dir. 6 ile sadeleştirilince 2/3 olur. 2/5 ise kızların sınıfın tamamına oranıdır."
+  },
+  {
+    "id": "mat-6-3-07",
+    "unit": "mat-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "200 sayısının %15'i kaçtır?",
+    "choices": [
+      "15",
+      "30",
+      "3",
+      "185"
+    ],
+    "answer": 1,
+    "explanation": "%15 = 15/100'dür. 200 × 15/100 = 30 olur."
+  },
+  {
+    "id": "mat-6-3-08",
+    "unit": "mat-6-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir deponun 3/5'i doludur. Depoda 120 litre su olduğuna göre deponun tamamı kaç litre su alır?",
+    "choices": [
+      "200",
+      "72",
+      "180",
+      "320"
+    ],
+    "answer": 0,
+    "explanation": "3/5'i 120 litre ise 1/5'i 120 ÷ 3 = 40 litredir. Tamamı 5 × 40 = 200 litredir."
+  },
+  {
+    "id": "mat-6-3-09",
+    "unit": "mat-6-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "4,2 ÷ 10 işleminin sonucu 0,42'dir.",
+    "answer": true,
+    "explanation": "Bir ondalık gösterim 10'a bölünürken virgül bir basamak sola kayar: 4,2 ÷ 10 = 0,42."
+  },
+  {
+    "id": "mat-6-3-10",
+    "unit": "mat-6-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir doğal sayı 1'den küçük bir kesirle çarpılırsa sonuç o sayıdan büyük olur.",
+    "answer": false,
+    "explanation": "1'den küçük bir kesirle çarpmak sayının bir parçasını almaktır. Örneğin 8 × 1/2 = 4'tür ve 4, 8'den küçüktür."
+  },
+  {
+    "id": "mat-6-4-01",
+    "unit": "mat-6-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ölçüsü 35° olan açının tümleri kaç derecedir?",
+    "choices": [
+      "145",
+      "65",
+      "325",
+      "55"
+    ],
+    "answer": 3,
+    "explanation": "Tümler açıların ölçüleri toplamı 90°'dir: 90 − 35 = 55. 145° ise bu açının bütünleridir."
+  },
+  {
+    "id": "mat-6-4-02",
+    "unit": "mat-6-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ölçüsü 110° olan açının bütünleri kaç derecedir?",
+    "choices": [
+      "250",
+      "20",
+      "80",
+      "70"
+    ],
+    "answer": 3,
+    "explanation": "Bütünler açıların ölçüleri toplamı 180°'dir: 180 − 110 = 70."
+  },
+  {
+    "id": "mat-6-4-03",
+    "unit": "mat-6-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Çemberin merkezini çember üzerindeki bir noktaya birleştiren doğru parçası hangisidir?",
+    "choices": [
+      "Çap",
+      "Kiriş",
+      "Yay",
+      "Yarıçap"
+    ],
+    "answer": 3,
+    "explanation": "Merkez ile çember üzerindeki bir nokta arasındaki doğru parçası yarıçaptır. Çap ve kirişin iki ucu da çember üzerindedir."
+  },
+  {
+    "id": "mat-6-4-04",
+    "unit": "mat-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kesişen iki doğrunun oluşturduğu ters açılardan biri 48° ise diğeri kaç derecedir?",
+    "choices": [
+      "132",
+      "42",
+      "96",
+      "48"
+    ],
+    "answer": 3,
+    "explanation": "Ters açıların ölçüleri birbirine eşittir. Bu yüzden diğer açı da 48°'dir."
+  },
+  {
+    "id": "mat-6-4-05",
+    "unit": "mat-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir dik üçgenin dar açılarından biri 37°'dir. Diğer dar açı kaç derecedir?",
+    "choices": [
+      "143",
+      "53",
+      "63",
+      "37"
+    ],
+    "answer": 1,
+    "explanation": "Dik üçgende bir açı 90°'dir; kalan iki açının toplamı 90° olur. 90 − 37 = 53."
+  },
+  {
+    "id": "mat-6-4-06",
+    "unit": "mat-6-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir üçgenin iç açılarının ölçüleri x, 2x ve 3x derecedir. En büyük açı kaç derecedir?",
+    "choices": [
+      "30",
+      "60",
+      "90",
+      "120"
+    ],
+    "answer": 2,
+    "explanation": "x + 2x + 3x = 6x = 180 olduğundan x = 30'dur. En büyük açı 3x = 90°'dir."
+  },
+  {
+    "id": "mat-6-4-07",
+    "unit": "mat-6-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Tümler iki açının ölçüleri toplamı 90°'dir.",
+    "answer": true,
+    "explanation": "Ölçüleri toplamı 90° olan iki açıya tümler açılar denir. Toplam 180° ise açılar bütünlerdir."
+  },
+  {
+    "id": "mat-6-4-08",
+    "unit": "mat-6-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir çemberin en uzun kirişi çapıdır.",
+    "answer": true,
+    "explanation": "Kiriş, çemberin iki noktasını birleştiren doğru parçasıdır. Merkezden geçen kiriş çaptır ve öteki bütün kirişlerden uzundur."
+  },
+  {
+    "id": "mat-6-4-09",
+    "unit": "mat-6-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bütünler iki açının ikisi de dar açı olabilir.",
+    "answer": false,
+    "explanation": "İki dar açının toplamı 180°'den küçüktür. Bütünler açıların toplamı 180° olduğundan ikisi birden dar açı olamaz."
+  },
+  {
+    "id": "mat-6-5-01",
+    "unit": "mat-6-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Taban uzunluğu 10 cm, yüksekliği 6 cm olan paralelkenarın alanı kaç cm²'dir?",
+    "choices": [
+      "60",
+      "30",
+      "32",
+      "16"
+    ],
+    "answer": 0,
+    "explanation": "Paralelkenarın alanı taban ile yüksekliğin çarpımıdır: 10 × 6 = 60 cm²."
+  },
+  {
+    "id": "mat-6-5-02",
+    "unit": "mat-6-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir ayrıtı 3 cm olan küpün hacmi kaç cm³'tür?",
+    "choices": [
+      "27",
+      "9",
+      "18",
+      "54"
+    ],
+    "answer": 0,
+    "explanation": "Küpün hacmi bir ayrıtının üç kez çarpımıdır: 3 × 3 × 3 = 27 cm³. 54 ise küpün yüzey alanıdır."
+  },
+  {
+    "id": "mat-6-5-03",
+    "unit": "mat-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Taban uzunluğu 12 cm, bu tabana ait yüksekliği 5 cm olan üçgenin alanı kaç cm²'dir?",
+    "choices": [
+      "60",
+      "17",
+      "30",
+      "34"
+    ],
+    "answer": 2,
+    "explanation": "Üçgenin alanı (taban × yükseklik) ÷ 2'dir: (12 × 5) ÷ 2 = 30 cm². İkiye bölmeyi unutmak 60 sonucunu verir."
+  },
+  {
+    "id": "mat-6-5-04",
+    "unit": "mat-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ayrıt uzunlukları 4 cm, 5 cm ve 6 cm olan dikdörtgenler prizmasının hacmi kaç cm³'tür?",
+    "choices": [
+      "15",
+      "120",
+      "148",
+      "60"
+    ],
+    "answer": 1,
+    "explanation": "Hacim, üç ayrıt uzunluğunun çarpımıdır: 4 × 5 × 6 = 120 cm³. 148 ise yüzey alanıdır."
+  },
+  {
+    "id": "mat-6-5-05",
+    "unit": "mat-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "1 m² kaç cm²'dir?",
+    "choices": [
+      "100",
+      "1000",
+      "10 000",
+      "1 000 000"
+    ],
+    "answer": 2,
+    "explanation": "1 m = 100 cm'dir. Kenarı 1 m olan karenin alanı 100 cm × 100 cm = 10 000 cm² olur."
+  },
+  {
+    "id": "mat-6-5-06",
+    "unit": "mat-6-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Alanı 48 cm² olan üçgenin taban uzunluğu 12 cm'dir. Bu tabana ait yükseklik kaç cm'dir?",
+    "choices": [
+      "4",
+      "8",
+      "36",
+      "16"
+    ],
+    "answer": 1,
+    "explanation": "(12 × yükseklik) ÷ 2 = 48 ise 12 × yükseklik = 96'dır. Yükseklik 96 ÷ 12 = 8 cm olur."
+  },
+  {
+    "id": "mat-6-5-07",
+    "unit": "mat-6-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Üçgenin alanı, taban uzunluğu ile o tabana ait yüksekliğin çarpımının yarısıdır.",
+    "answer": true,
+    "explanation": "Bir üçgen, aynı taban ve yüksekliğe sahip paralelkenarın yarısıdır. Bu yüzden alanı (taban × yükseklik) ÷ 2'dir."
+  },
+  {
+    "id": "mat-6-5-08",
+    "unit": "mat-6-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "2 litre, 200 mililitreye eşittir.",
+    "answer": false,
+    "explanation": "1 litre = 1000 mililitredir. Bu yüzden 2 litre = 2000 mililitre eder."
+  },
+  {
+    "id": "mat-6-6-01",
+    "unit": "mat-6-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "5, 9, 4, 12 ve 10 verilerinin aritmetik ortalaması kaçtır?",
+    "choices": [
+      "40",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 1,
+    "explanation": "Verilerin toplamı 5 + 9 + 4 + 12 + 10 = 40'tır. Veri sayısı 5 olduğundan ortalama 40 ÷ 5 = 8'dir."
+  },
+  {
+    "id": "mat-6-6-02",
+    "unit": "mat-6-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "18, 25, 11, 30 ve 22 verilerinin açıklığı kaçtır?",
+    "choices": [
+      "41",
+      "22",
+      "4",
+      "19"
+    ],
+    "answer": 3,
+    "explanation": "Açıklık, en büyük değer ile en küçük değerin farkıdır: 30 − 11 = 19."
+  },
+  {
+    "id": "mat-6-6-03",
+    "unit": "mat-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Dört sınavının ortalaması 80 olan bir öğrencinin bu sınavlardaki puanları toplamı kaçtır?",
+    "choices": [
+      "320",
+      "84",
+      "20",
+      "240"
+    ],
+    "answer": 0,
+    "explanation": "Toplam = ortalama × veri sayısı: 80 × 4 = 320."
+  },
+  {
+    "id": "mat-6-6-04",
+    "unit": "mat-6-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir veri grubundaki en büyük değer 46, açıklık 19'dur. En küçük değer kaçtır?",
+    "choices": [
+      "65",
+      "27",
+      "19",
+      "37"
+    ],
+    "answer": 1,
+    "explanation": "Açıklık = en büyük − en küçük olduğundan en küçük değer 46 − 19 = 27'dir."
+  },
+  {
+    "id": "mat-6-6-05",
+    "unit": "mat-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İki sınıfın aylara göre okuduğu kitap sayılarını aynı grafikte karşılaştırmak için en uygun gösterim hangisidir?",
+    "choices": [
+      "Sayı doğrusu",
+      "Çetele tablosu",
+      "Ağaç şeması",
+      "İkili sütun grafiği"
+    ],
+    "answer": 3,
+    "explanation": "İkili sütun grafiğinde iki grubun verileri yan yana sütunlarla gösterilir; böylece karşılaştırmak kolaylaşır."
+  },
+  {
+    "id": "mat-6-6-06",
+    "unit": "mat-6-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Üç sayının aritmetik ortalaması 15'tir. Sayılardan ikisi 12 ve 20 ise üçüncü sayı kaçtır?",
+    "choices": [
+      "13",
+      "16",
+      "17",
+      "32"
+    ],
+    "answer": 0,
+    "explanation": "Üç sayının toplamı 15 × 3 = 45'tir. Bilinen iki sayının toplamı 32 olduğundan üçüncü sayı 45 − 32 = 13'tür."
+  },
+  {
+    "id": "mat-6-6-07",
+    "unit": "mat-6-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Açıklık, bir veri grubundaki en büyük değer ile en küçük değerin farkıdır.",
+    "answer": true,
+    "explanation": "Açıklık verilerin ne kadar yayıldığını gösterir ve en büyük değerden en küçük değer çıkarılarak bulunur."
+  },
+  {
+    "id": "mat-6-6-08",
+    "unit": "mat-6-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir veri grubuna ortalamadan büyük bir değer eklenirse ortalama azalır.",
+    "answer": false,
+    "explanation": "Ortalamadan büyük bir değer eklenince ortalama artar. Örneğin 4 ve 6'nın ortalaması 5'tir; 11 eklenince ortalama 7 olur."
+  },
+  {
+    "id": "mat-6-7-01",
+    "unit": "mat-6-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hilesiz bir zar atıldığında 4 gelme olasılığı kaçtır?",
+    "choices": [
+      "1/4",
+      "4/6",
+      "1/6",
+      "1/2"
+    ],
+    "answer": 2,
+    "explanation": "Zarın 6 yüzü vardır ve yalnızca birinde 4 yazar. Olasılık = istenen durum sayısı / tüm durum sayısı = 1/6."
+  },
+  {
+    "id": "mat-6-7-02",
+    "unit": "mat-6-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İmkânsız bir olayın olasılığı kaçtır?",
+    "choices": [
+      "1",
+      "1/2",
+      "0",
+      "100"
+    ],
+    "answer": 2,
+    "explanation": "İmkânsız olay hiç gerçekleşmez; istenen durum sayısı 0'dır. Bu yüzden olasılığı 0'dır. Kesin olayın olasılığı ise 1'dir."
+  },
+  {
+    "id": "mat-6-7-03",
+    "unit": "mat-6-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir torbada 3 kırmızı, 5 mavi top vardır. Rastgele çekilen topun kırmızı olma olasılığı kaçtır?",
+    "choices": [
+      "3/5",
+      "3/8",
+      "5/8",
+      "1/3"
+    ],
+    "answer": 1,
+    "explanation": "Torbada toplam 3 + 5 = 8 top vardır. Kırmızı çekme olasılığı 3/8'dir. Payda, topların tamamının sayısıdır."
+  },
+  {
+    "id": "mat-6-7-04",
+    "unit": "mat-6-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"MATEMATİK\" kelimesinin harfleri ayrı kartlara yazılıp torbaya atılıyor. Çekilen kartta A harfi olma olasılığı kaçtır?",
+    "choices": [
+      "2/9",
+      "1/9",
+      "2/7",
+      "1/4"
+    ],
+    "answer": 0,
+    "explanation": "Kelimede 9 harf vardır ve bunların 2'si A'dır. Olasılık 2/9'dur."
+  },
+  {
+    "id": "mat-6-7-05",
+    "unit": "mat-6-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hilesiz bir zar atıldığında asal sayı gelme olasılığı kaçtır?",
+    "choices": [
+      "2/3",
+      "1/3",
+      "1/6",
+      "1/2"
+    ],
+    "answer": 3,
+    "explanation": "Zardaki asal sayılar 2, 3 ve 5'tir (1 asal değildir). Olasılık 3/6 = 1/2'dir."
+  },
+  {
+    "id": "mat-6-7-06",
+    "unit": "mat-6-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir torbadaki 20 topun 8'i sarıdır. Rastgele çekilen topun sarı olmama olasılığı kaçtır?",
+    "choices": [
+      "2/5",
+      "8/12",
+      "1/8",
+      "3/5"
+    ],
+    "answer": 3,
+    "explanation": "Sarı olmayan top sayısı 20 − 8 = 12'dir. Olasılık 12/20 = 3/5 olur."
+  },
+  {
+    "id": "mat-6-7-07",
+    "unit": "mat-6-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bir olayın olasılığı 1'den büyük olamaz.",
+    "answer": true,
+    "explanation": "İstenen durum sayısı tüm durum sayısını geçemez. Bu yüzden olasılık 0 ile 1 arasında bir değerdir."
+  },
+  {
+    "id": "mat-6-7-08",
+    "unit": "mat-6-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Madenî para iki kez atıldığında ikisinin de yazı gelmesi kesin bir olaydır.",
+    "answer": false,
+    "explanation": "İki atışta yazı-yazı, yazı-tura, tura-yazı ve tura-tura gelebilir. İkisinin de yazı gelmesi olasıdır ama kesin değildir."
+  }
+]

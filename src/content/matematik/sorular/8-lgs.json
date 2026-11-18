@@ -1,0 +1,402 @@
+[
+  {
+    "id": "mat-8-1-lgs-01",
+    "unit": "mat-8-1",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir limandan A gemisi 6 günde bir, B gemisi 8 günde bir, C gemisi 9 günde bir sefere çıkmaktadır. Üç gemi 1 Mart günü birlikte sefere çıkmıştır.",
+    "prompt": "Bu üç gemi 1 Mart'tan kaç gün sonra ilk kez yeniden aynı gün sefere çıkar?",
+    "choices": [
+      "72",
+      "144",
+      "36",
+      "432"
+    ],
+    "answer": 0,
+    "explanation": "Birlikte sefere çıkılan günler 6, 8 ve 9'un ortak katlarıdır. 6 = 2 × 3, 8 = 2³, 9 = 3² olduğundan EKOK = 2³ × 3² = 72'dir. 36, 8'in katı değildir.",
+    "tags": [
+      "LGS",
+      "EKOK"
+    ]
+  },
+  {
+    "id": "mat-8-1-lgs-02",
+    "unit": "mat-8-1",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Bir manav 84 elma, 126 portakal ve 168 mandalinayı poşetlere koyacaktır. Her poşette yalnızca bir çeşit meyve olacak, bütün poşetlerde eşit sayıda meyve bulunacak ve hiç meyve artmayacaktır. Manav olabildiğince az poşet kullanmak istemektedir.",
+    "prompt": "Manav bu iş için en az kaç poşet kullanır?",
+    "choices": [
+      "42",
+      "9",
+      "18",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "Poşet sayısının en az olması için poşetteki meyve sayısı en çok, yani EBOB(84, 126, 168) = 42 olmalıdır. 84 ÷ 42 = 2, 126 ÷ 42 = 3 ve 168 ÷ 42 = 4; toplam 9 poşet gerekir.",
+    "tags": [
+      "LGS",
+      "EBOB"
+    ]
+  },
+  {
+    "id": "mat-8-1-lgs-03",
+    "unit": "mat-8-1",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir kasanın şifresi şu kurallara göre belirlenmiştir: Şifre iki basamaklı bir doğal sayıdır. Şifre 5'in katıdır. Şifre ile 36 aralarında asaldır.",
+    "prompt": "Bu kurallara uyan en büyük şifre kaçtır?",
+    "choices": [
+      "90",
+      "85",
+      "95",
+      "75"
+    ],
+    "answer": 2,
+    "explanation": "36 = 2² × 3² olduğundan şifre 2'ye ve 3'e bölünmemelidir. 5'in iki basamaklı en büyük katı 95'tir; 95 = 5 × 19 olup tek sayıdır ve 3'e bölünmez. 90 ile 75 ise 3'e bölünür.",
+    "tags": [
+      "LGS",
+      "aralarında asal"
+    ]
+  },
+  {
+    "id": "mat-8-2-lgs-01",
+    "unit": "mat-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir bakteri türü uygun ortamda her 20 dakikada bir ikiye bölünerek çoğalmaktadır. Bir deney kabına başlangıçta 2³ bakteri konulmuştur.",
+    "prompt": "Buna göre 2 saat sonra kaptaki bakteri sayısı kaç olur?",
+    "choices": [
+      "2¹⁸",
+      "2⁶",
+      "2⁸",
+      "2⁹"
+    ],
+    "answer": 3,
+    "explanation": "2 saat 120 dakikadır ve 120 ÷ 20 = 6 kez bölünme olur. Her bölünmede sayı 2 ile çarpılır: 2³ × 2⁶ = 2⁹. Çarpmada üsler toplanır, çarpılmaz.",
+    "tags": [
+      "LGS",
+      "üslü ifadeler"
+    ]
+  },
+  {
+    "id": "mat-8-2-lgs-02",
+    "unit": "mat-8-2",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Bir kum tanesinin kütlesi yaklaşık 4 × 10⁻³ gramdır. Bir çocuk oyun kovasına yaklaşık 2,5 × 10⁶ kum tanesi doldurmuştur.",
+    "prompt": "Kovadaki kumun kütlesi yaklaşık kaç gramdır?",
+    "choices": [
+      "1 × 10³",
+      "1 × 10⁹",
+      "1 × 10⁴",
+      "6,5 × 10³"
+    ],
+    "answer": 2,
+    "explanation": "Kütle = 4 × 10⁻³ × 2,5 × 10⁶'dır. Katsayılar çarpılır: 4 × 2,5 = 10. Üsler toplanır: 10⁻³⁺⁶ = 10³. Sonuç 10 × 10³ = 1 × 10⁴ gramdır.",
+    "tags": [
+      "LGS",
+      "bilimsel gösterim"
+    ]
+  },
+  {
+    "id": "mat-8-3-lgs-01",
+    "unit": "mat-8-3",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Kare biçimindeki bir bahçenin alanı 200 m²'dir. Bahçenin çevresi bir sıra tel ile çevrilecektir. Tel yalnızca tam metre olarak satılmaktadır. (√2 yerine 1,41 alınız.)",
+    "prompt": "Bu iş için en az kaç metre tel satın alınmalıdır?",
+    "choices": [
+      "56",
+      "60",
+      "57",
+      "40"
+    ],
+    "answer": 2,
+    "explanation": "Bahçenin bir kenarı √200 = 10√2 m'dir. Çevresi 40√2 ≈ 40 × 1,41 = 56,4 m'dir. Tel tam metre satıldığından en az 57 m alınmalıdır; 56 m yetmez.",
+    "tags": [
+      "LGS",
+      "kareköklü ifadeler"
+    ]
+  },
+  {
+    "id": "mat-8-3-lgs-02",
+    "unit": "mat-8-3",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir marangozun elinde alanları 18 dm², 32 dm² ve 50 dm² olan kare biçiminde üç tahta parçası vardır. Marangoz bu tahtaları birer kenarları aynı doğru üzerinde olacak ve aralarında boşluk kalmayacak biçimde yan yana dizmiştir.",
+    "prompt": "Yan yana dizilen tahtaların toplam uzunluğu kaç desimetredir?",
+    "choices": [
+      "10√2",
+      "10",
+      "100√2",
+      "12√2"
+    ],
+    "answer": 3,
+    "explanation": "Karelerin kenarları √18 = 3√2, √32 = 4√2 ve √50 = 5√2 dm'dir. Toplam uzunluk 3√2 + 4√2 + 5√2 = 12√2 dm'dir. Alanları toplayıp kök almak hatalıdır.",
+    "tags": [
+      "LGS",
+      "kareköklü ifadelerde toplama"
+    ]
+  },
+  {
+    "id": "mat-8-3-lgs-03",
+    "unit": "mat-8-3",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Bir sayı oyununda oyuncular birer kart çeker ve kartındaki sayıya en yakın doğal sayı kadar puan alır. Deniz √40, Ada √90, Kerem ise 3√7 yazan kartı çekmiştir.",
+    "prompt": "Üç oyuncunun aldığı puanların toplamı kaçtır?",
+    "choices": [
+      "23",
+      "24",
+      "22",
+      "25"
+    ],
+    "answer": 0,
+    "explanation": "√40, 6 ile 7 arasındadır ve 6,5² = 42,25 > 40 olduğundan 6'ya yakındır. √90 için 9,5² = 90,25 > 90 olduğundan 9'a yakındır. 3√7 = √63 için 7,5² = 56,25 < 63 olduğundan 8'e yakındır. Toplam 6 + 9 + 8 = 23.",
+    "tags": [
+      "LGS",
+      "karekök tahmini"
+    ]
+  },
+  {
+    "id": "mat-8-4-lgs-01",
+    "unit": "mat-8-4",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Bir okulda 240 öğrenciye en sevdiği spor sorulmuş, her öğrenci bir spor seçmiş ve sonuçlar daire grafiğiyle gösterilmiştir. Grafikte futbol diliminin merkez açısı 150°, basketbol diliminin 90°, voleybol diliminin 75°'dir. Kalan dilim yüzmeye aittir.",
+    "prompt": "Buna göre yüzmeyi seçen kaç öğrenci vardır?",
+    "choices": [
+      "45",
+      "30",
+      "60",
+      "50"
+    ],
+    "answer": 1,
+    "explanation": "Yüzme diliminin açısı 360 − (150 + 90 + 75) = 45°'dir. 45°, 360°'nin 1/8'idir; 240 ÷ 8 = 30 öğrenci yüzmeyi seçmiştir. 45 açının ölçüsüdür, öğrenci sayısı değildir.",
+    "tags": [
+      "LGS",
+      "daire grafiği"
+    ]
+  },
+  {
+    "id": "mat-8-4-lgs-02",
+    "unit": "mat-8-4",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Bir çekiliş torbasında 1'den 30'a kadar numaralanmış 30 top vardır. Üzerinde asal sayı yazan topu çeken büyük ödülü, 6'nın katı yazan topu çeken küçük ödülü kazanır. Öteki toplar ödül kazandırmaz.",
+    "prompt": "Torbadan rastgele bir top çeken oyuncunun ödül kazanamama olasılığı kaçtır?",
+    "choices": [
+      "1/2",
+      "1/3",
+      "1/6",
+      "2/3"
+    ],
+    "answer": 0,
+    "explanation": "30'a kadar asal sayılar 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 (10 tane); 6'nın katları 6, 12, 18, 24, 30 (5 tane). Ödüllü top sayısı 15, ödülsüz top sayısı 30 − 15 = 15'tir. Olasılık 15/30 = 1/2.",
+    "tags": [
+      "LGS",
+      "olasılık"
+    ]
+  },
+  {
+    "id": "mat-8-4-lgs-03",
+    "unit": "mat-8-4",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir kutuda 12 kırmızı, 8 mavi ve bir miktar sarı bilye vardır. Bilyeler renkleri dışında özdeştir. Kutudan rastgele çekilen bir bilyenin sarı olma olasılığı 1/5'tir.",
+    "prompt": "Buna göre kutuda kaç sarı bilye vardır?",
+    "choices": [
+      "4",
+      "10",
+      "25",
+      "5"
+    ],
+    "answer": 3,
+    "explanation": "Sarı bilye sayısı s olsun. s/(20 + s) = 1/5 ise 5s = 20 + s ve s = 5'tir. Kontrol: 5/25 = 1/5. Paydaya sarı bilyeleri eklemeyi unutmak 4 sonucunu verir.",
+    "tags": [
+      "LGS",
+      "olasılık"
+    ]
+  },
+  {
+    "id": "mat-8-5-lgs-01",
+    "unit": "mat-8-5",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Kenar uzunluğu (x + 5) metre olan kare biçimindeki bir bahçenin bir köşesine, kenar uzunluğu 3 metre olan kare biçiminde bir süs havuzu yapılmıştır.",
+    "prompt": "Bahçenin havuz dışında kalan bölümünün alanını metrekare olarak veren ifade hangisidir?",
+    "choices": [
+      "x² + 10x + 16",
+      "x² + 16",
+      "x² + 10x + 34",
+      "x² + 5x + 16"
+    ],
+    "answer": 0,
+    "explanation": "Bahçenin alanı (x + 5)² = x² + 10x + 25, havuzun alanı 3² = 9 m²'dir. Kalan alan x² + 10x + 25 − 9 = x² + 10x + 16 olur.",
+    "tags": [
+      "LGS",
+      "özdeşlikler"
+    ]
+  },
+  {
+    "id": "mat-8-5-lgs-02",
+    "unit": "mat-8-5",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Uzun kenarı (3x + 2) cm, kısa kenarı (3x − 2) cm olan dikdörtgen biçimindeki bir kartonun dört köşesinden, kenar uzunluğu 1 cm olan birer kare kesilip atılmıştır.",
+    "prompt": "Kartonun kalan bölümünün alanını santimetrekare olarak veren ifade hangisidir?",
+    "choices": [
+      "9x² − 4",
+      "9x² − 8",
+      "9x² − 5",
+      "9x² + 12x"
+    ],
+    "answer": 1,
+    "explanation": "Kartonun alanı (3x + 2)(3x − 2) = 9x² − 4'tür (iki kare farkı). Kesilen dört karenin toplam alanı 4 × 1 = 4 cm²'dir. Kalan alan 9x² − 4 − 4 = 9x² − 8 olur.",
+    "tags": [
+      "LGS",
+      "iki kare farkı"
+    ]
+  },
+  {
+    "id": "mat-8-6-lgs-01",
+    "unit": "mat-8-6",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Bir su deposunda 600 litre su vardır. Deponun musluğu açıldığında her dakika 25 litre su boşalmaktadır. Musluk açıldıktan x dakika sonra depoda kalan su miktarı y litredir.",
+    "prompt": "Depoda 150 litre su kaldığı anda musluk kaç dakikadır açıktır?",
+    "choices": [
+      "24",
+      "6",
+      "30",
+      "18"
+    ],
+    "answer": 3,
+    "explanation": "Denklem y = 600 − 25x'tir. 150 = 600 − 25x ise 25x = 450 ve x = 18 dakikadır. 24 dakika deponun tamamen boşalma süresidir.",
+    "tags": [
+      "LGS",
+      "doğrusal ilişki"
+    ]
+  },
+  {
+    "id": "mat-8-6-lgs-02",
+    "unit": "mat-8-6",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "İki internet tarifesi şöyledir: A tarifesinde aylık sabit ücret 120 lira, kullanılan her GB için ek ücret 10 liradır. B tarifesinde aylık sabit ücret 60 lira, kullanılan her GB için ek ücret 25 liradır.",
+    "prompt": "Bir ayda kaç GB kullanıldığında iki tarifede ödenen ücret eşit olur?",
+    "choices": [
+      "6",
+      "12",
+      "4",
+      "3"
+    ],
+    "answer": 2,
+    "explanation": "x GB için A: 120 + 10x, B: 60 + 25x lira ödenir. 120 + 10x = 60 + 25x ise 60 = 15x ve x = 4 GB'dir. Kontrol: iki tarifede de 160 lira ödenir.",
+    "tags": [
+      "LGS",
+      "doğrusal denklemler"
+    ]
+  },
+  {
+    "id": "mat-8-6-lgs-03",
+    "unit": "mat-8-6",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Bir yük asansörü en çok 480 kg taşıyabilmektedir. Asansöre 75 kg kütleli bir görevli ile her biri 18 kg olan koliler binecektir.",
+    "prompt": "Görevli asansöre en çok kaç koli ile birlikte binebilir?",
+    "choices": [
+      "23",
+      "22",
+      "26",
+      "21"
+    ],
+    "answer": 1,
+    "explanation": "Koli sayısı n olsun: 75 + 18n ≤ 480 ise 18n ≤ 405 ve n ≤ 22,5'tir. Koli sayısı tam sayı olduğundan en çok 22 koli binebilir. 26, görevlinin kütlesi hesaba katılmadığında bulunur.",
+    "tags": [
+      "LGS",
+      "eşitsizlikler"
+    ]
+  },
+  {
+    "id": "mat-8-7-lgs-01",
+    "unit": "mat-8-7",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "25 m uzunluğundaki bir itfaiye merdiveni düz bir zemine dik duran duvara dayanmıştır. Merdivenin ayağı duvardan 7 m uzaktadır. Daha sonra merdivenin ayağı duvardan 8 m daha uzaklaştırılmış, ucu yine duvara dayalı kalmıştır.",
+    "prompt": "Merdivenin duvardaki ucu kaç metre aşağı inmiştir?",
+    "choices": [
+      "8",
+      "20",
+      "4",
+      "5"
+    ],
+    "answer": 2,
+    "explanation": "İlk durumda yükseklik √(25² − 7²) = √576 = 24 m'dir. Ayak duvardan 7 + 8 = 15 m uzakta olunca yükseklik √(25² − 15²) = √400 = 20 m olur. Uç 24 − 20 = 4 m aşağı inmiştir.",
+    "tags": [
+      "LGS",
+      "Pisagor bağıntısı"
+    ]
+  },
+  {
+    "id": "mat-8-7-lgs-02",
+    "unit": "mat-8-7",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir haritada A, B ve C köyleri bir üçgenin köşelerinde yer almaktadır. A ile B arası kuş uçuşu 7 km, B ile C arası 12 km'dir. A ile C arasındaki uzaklık kilometre cinsinden bir tam sayıdır.",
+    "prompt": "Buna göre A ile C köyleri arasındaki uzaklık en çok kaç kilometre olabilir?",
+    "choices": [
+      "19",
+      "17",
+      "6",
+      "18"
+    ],
+    "answer": 3,
+    "explanation": "Üçgen eşitsizliğine göre üçüncü kenar diğer ikisinin farkından büyük, toplamından küçüktür: 5 < AC < 19. En büyük tam sayı değeri 18'dir; 19 olursa üçgen oluşmaz.",
+    "tags": [
+      "LGS",
+      "üçgen eşitsizliği"
+    ]
+  },
+  {
+    "id": "mat-8-8-lgs-01",
+    "unit": "mat-8-8",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Taban yarıçapı 10 cm olan silindir biçimindeki bir sürahide 20 cm yüksekliğinde su vardır. Bu su, taban yarıçapı 5 cm ve yüksekliği 10 cm olan silindir biçimindeki bardaklara, her bardak ağzına kadar doldurularak paylaştırılacaktır.",
+    "prompt": "Sürahideki su ile kaç bardak tam olarak doldurulabilir?",
+    "choices": [
+      "4",
+      "8",
+      "2",
+      "16"
+    ],
+    "answer": 1,
+    "explanation": "Suyun hacmi π × 10² × 20 = 2000π cm³, bir bardağın hacmi π × 5² × 10 = 250π cm³'tür. 2000π ÷ 250π = 8 bardak dolar. Yarıçapın karesini almayı unutmak 4 sonucunu verir.",
+    "tags": [
+      "LGS",
+      "silindirin hacmi"
+    ]
+  },
+  {
+    "id": "mat-8-8-lgs-02",
+    "unit": "mat-8-8",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Koordinat düzleminde hareket eden bir robot A(−2, 3) noktasındadır. Robot önce 5 birim sağa ve 4 birim aşağı ötelenmiş, sonra bulunduğu noktanın y eksenine göre yansıması olan noktaya geçmiştir.",
+    "prompt": "Robotun son bulunduğu nokta hangisidir?",
+    "choices": [
+      "(−3, −1)",
+      "(3, 1)",
+      "(−3, 1)",
+      "(3, −1)"
+    ],
+    "answer": 0,
+    "explanation": "Öteleme: x = −2 + 5 = 3 ve y = 3 − 4 = −1, yani (3, −1). y eksenine göre yansımada x'in işareti değişir, y aynı kalır: (−3, −1).",
+    "tags": [
+      "LGS",
+      "öteleme ve yansıma"
+    ]
+  }
+]

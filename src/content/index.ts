@@ -1,5 +1,6 @@
 import { questionsFromCards, type CardSet } from "@/core/cards";
 import type { Grade, Question, Subject } from "@/core/model";
+import { matematik } from "./matematik/subject";
 import { hayatBilgisi } from "./hayat-bilgisi/subject";
 import { fenBilimleri } from "./fen-bilimleri/subject";
 import { ingilizce } from "./ingilizce/subject";
@@ -17,7 +18,7 @@ import { dinKulturu } from "./din-kulturu/subject";
  * Yeni bir ders eklemek için `subject.ts` ile üniteleri tanımlayın, dosyaları koyun ve
  * aşağıdaki iki listeye ekleyin.
  */
-export const SUBJECTS: Subject[] = [hayatBilgisi, fenBilimleri, ingilizce, dinKulturu];
+export const SUBJECTS: Subject[] = [matematik, hayatBilgisi, fenBilimleri, ingilizce, dinKulturu];
 
 type Module = { default: unknown };
 type GradeFiles = {
@@ -27,6 +28,12 @@ type GradeFiles = {
 };
 
 export const CONTENT_FILES: Record<string, Partial<Record<Grade, GradeFiles>>> = {
+  matematik: {
+    5: { questions: () => import("./matematik/sorular/5.json"), cards: () => import("./matematik/kartlar/5.json") },
+    6: { questions: () => import("./matematik/sorular/6.json"), cards: () => import("./matematik/kartlar/6.json") },
+    7: { questions: () => import("./matematik/sorular/7.json"), cards: () => import("./matematik/kartlar/7.json") },
+    8: { questions: () => import("./matematik/sorular/8.json"), cards: () => import("./matematik/kartlar/8.json"), passages: () => import("./matematik/sorular/8-lgs.json") },
+  },
   "hayat-bilgisi": {
     1: { questions: () => import("./hayat-bilgisi/sorular/1.json"), cards: () => import("./hayat-bilgisi/kartlar/1.json") },
     2: { questions: () => import("./hayat-bilgisi/sorular/2.json"), cards: () => import("./hayat-bilgisi/kartlar/2.json") },

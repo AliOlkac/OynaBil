@@ -1,0 +1,815 @@
+[
+  {
+    "id": "mat-5-1-01",
+    "unit": "mat-5-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ölçüsü 90° olan açıya ne ad verilir?",
+    "choices": [
+      "Dar açı",
+      "Geniş açı",
+      "Doğru açı",
+      "Dik açı"
+    ],
+    "answer": 3,
+    "explanation": "Ölçüsü tam 90° olan açı dik açıdır. 90°'den küçük açılar dar, 90° ile 180° arasındaki açılar geniş açıdır."
+  },
+  {
+    "id": "mat-5-1-02",
+    "unit": "mat-5-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ölçüsü 125° olan açı hangi türdendir?",
+    "choices": [
+      "Dar açı",
+      "Dik açı",
+      "Doğru açı",
+      "Geniş açı"
+    ],
+    "answer": 3,
+    "explanation": "Ölçüsü 90° ile 180° arasında olan açılar geniş açıdır. 125° bu aralıktadır."
+  },
+  {
+    "id": "mat-5-1-03",
+    "unit": "mat-5-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir çemberin merkezinden geçen ve çember üzerindeki iki noktayı birleştiren doğru parçasına ne denir?",
+    "choices": [
+      "Yarıçap",
+      "Çap",
+      "Yay",
+      "Merkez"
+    ],
+    "answer": 1,
+    "explanation": "Merkezden geçip çemberin iki noktasını birleştiren doğru parçası çaptır. Çap, yarıçapın 2 katıdır."
+  },
+  {
+    "id": "mat-5-1-04",
+    "unit": "mat-5-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir üçgenin iki iç açısı 65° ve 45°'dir. Üçüncü iç açısı kaç derecedir?",
+    "choices": [
+      "110",
+      "80",
+      "70",
+      "250"
+    ],
+    "answer": 2,
+    "explanation": "Üçgenin iç açılarının toplamı 180°'dir. 65 + 45 = 110 ve 180 − 110 = 70 olur."
+  },
+  {
+    "id": "mat-5-1-05",
+    "unit": "mat-5-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Üç kenarının uzunluğu da birbirine eşit olan üçgene ne ad verilir?",
+    "choices": [
+      "Eşkenar üçgen",
+      "İkizkenar üçgen",
+      "Çeşitkenar üçgen",
+      "Dik üçgen"
+    ],
+    "answer": 0,
+    "explanation": "Üç kenarı da eşit olan üçgen eşkenar üçgendir. Yalnızca iki kenarı eşitse ikizkenar, hiçbiri eşit değilse çeşitkenar üçgen denir."
+  },
+  {
+    "id": "mat-5-1-06",
+    "unit": "mat-5-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yarıçapı 7 cm olan çemberin çapı kaç cm'dir?",
+    "choices": [
+      "3,5",
+      "14",
+      "7",
+      "21"
+    ],
+    "answer": 1,
+    "explanation": "Çap, yarıçapın 2 katıdır: 2 × 7 = 14 cm."
+  },
+  {
+    "id": "mat-5-1-07",
+    "unit": "mat-5-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir ikizkenar üçgenin tepe açısı 40°'dir. Taban açılarından biri kaç derecedir?",
+    "choices": [
+      "140",
+      "40",
+      "70",
+      "60"
+    ],
+    "answer": 2,
+    "explanation": "İkizkenar üçgende taban açıları eşittir. 180 − 40 = 140 ve 140 ÷ 2 = 70 olur."
+  },
+  {
+    "id": "mat-5-1-08",
+    "unit": "mat-5-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bir doğru açının ölçüsü 180°'dir.",
+    "answer": true,
+    "explanation": "Doğru açının kolları aynı doğru üzerindedir ve ölçüsü 180°'dir."
+  },
+  {
+    "id": "mat-5-1-09",
+    "unit": "mat-5-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir üçgende iki tane geniş açı bulunabilir.",
+    "answer": false,
+    "explanation": "İki geniş açının toplamı 180°'den büyük olur. Üçgenin iç açıları toplamı 180° olduğundan bir üçgende en çok bir geniş açı bulunur."
+  },
+  {
+    "id": "mat-5-2-01",
+    "unit": "mat-5-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "5³ ifadesinin değeri kaçtır?",
+    "choices": [
+      "15",
+      "125",
+      "25",
+      "243"
+    ],
+    "answer": 1,
+    "explanation": "5³ = 5 × 5 × 5 = 125. Üs, tabanın kaç kez çarpılacağını gösterir; 5 × 3 = 15 yanlıştır."
+  },
+  {
+    "id": "mat-5-2-02",
+    "unit": "mat-5-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "7 × 7 çarpımının üslü gösterimi hangisidir?",
+    "choices": [
+      "2⁷",
+      "7 × 2",
+      "7²",
+      "7⁷"
+    ],
+    "answer": 2,
+    "explanation": "Aynı sayının tekrarlı çarpımı üslü gösterilir. 7 iki kez çarpıldığı için 7 × 7 = 7² yazılır."
+  },
+  {
+    "id": "mat-5-2-03",
+    "unit": "mat-5-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "480 ÷ 16 işleminin sonucu kaçtır?",
+    "choices": [
+      "3",
+      "300",
+      "30",
+      "32"
+    ],
+    "answer": 2,
+    "explanation": "16 × 30 = 480 olduğundan 480 ÷ 16 = 30'dur."
+  },
+  {
+    "id": "mat-5-2-04",
+    "unit": "mat-5-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "12 + 8 × 5 işleminin sonucu kaçtır?",
+    "choices": [
+      "100",
+      "52",
+      "25",
+      "60"
+    ],
+    "answer": 1,
+    "explanation": "Önce çarpma yapılır: 8 × 5 = 40. Sonra toplanır: 12 + 40 = 52. Soldan sağa yapılırsa hatalı olarak 100 bulunur."
+  },
+  {
+    "id": "mat-5-2-05",
+    "unit": "mat-5-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "(40 − 10) ÷ 5 + 4 işleminin sonucu kaçtır?",
+    "choices": [
+      "42",
+      "6",
+      "34",
+      "10"
+    ],
+    "answer": 3,
+    "explanation": "Önce parantez içi: 40 − 10 = 30. Sonra bölme: 30 ÷ 5 = 6. En son toplama: 6 + 4 = 10."
+  },
+  {
+    "id": "mat-5-2-06",
+    "unit": "mat-5-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "9² − 4² işleminin sonucu kaçtır?",
+    "choices": [
+      "25",
+      "10",
+      "65",
+      "97"
+    ],
+    "answer": 2,
+    "explanation": "9² = 81 ve 4² = 16'dır. 81 − 16 = 65 olur. Önce üslü ifadelerin değeri bulunur."
+  },
+  {
+    "id": "mat-5-2-07",
+    "unit": "mat-5-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir kolide 24 şişe vardır. 15 kolideki şişelerin 60'ı satılırsa geriye kaç şişe kalır?",
+    "choices": [
+      "360",
+      "300",
+      "420",
+      "99"
+    ],
+    "answer": 1,
+    "explanation": "15 × 24 = 360 şişe vardır. 60'ı satılınca 360 − 60 = 300 şişe kalır."
+  },
+  {
+    "id": "mat-5-2-08",
+    "unit": "mat-5-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "2⁴ ifadesinin değeri 8'dir.",
+    "answer": false,
+    "explanation": "2⁴ = 2 × 2 × 2 × 2 = 16'dır. 2 × 4 = 8 işlemi üslü ifadenin değeri değildir."
+  },
+  {
+    "id": "mat-5-2-09",
+    "unit": "mat-5-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "25 × 4 × 13 işleminin sonucu 1300'dür.",
+    "answer": true,
+    "explanation": "25 × 4 = 100 ve 100 × 13 = 1300. Çarpanları uygun gruplamak işlemi kolaylaştırır."
+  },
+  {
+    "id": "mat-5-3-01",
+    "unit": "mat-5-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kenar uzunluğu 9 cm olan karenin çevresi kaç cm'dir?",
+    "choices": [
+      "81",
+      "18",
+      "27",
+      "36"
+    ],
+    "answer": 3,
+    "explanation": "Karenin dört kenarı eşittir. Çevre = 4 × 9 = 36 cm. 9 × 9 = 81 ise alandır."
+  },
+  {
+    "id": "mat-5-3-02",
+    "unit": "mat-5-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kısa kenarı 5 cm, uzun kenarı 8 cm olan dikdörtgenin alanı kaç cm²'dir?",
+    "choices": [
+      "26",
+      "13",
+      "80",
+      "40"
+    ],
+    "answer": 3,
+    "explanation": "Dikdörtgenin alanı kısa kenar ile uzun kenarın çarpımıdır: 5 × 8 = 40 cm². 26 ise çevresidir."
+  },
+  {
+    "id": "mat-5-3-03",
+    "unit": "mat-5-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "3 km 250 m kaç metredir?",
+    "choices": [
+      "325",
+      "3025",
+      "3250",
+      "32 500"
+    ],
+    "answer": 2,
+    "explanation": "1 km = 1000 m'dir. 3 km = 3000 m ve 3000 + 250 = 3250 m olur."
+  },
+  {
+    "id": "mat-5-3-04",
+    "unit": "mat-5-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Çevresi 30 cm olan dikdörtgenin uzun kenarı 9 cm'dir. Kısa kenarı kaç cm'dir?",
+    "choices": [
+      "6",
+      "21",
+      "12",
+      "3"
+    ],
+    "answer": 0,
+    "explanation": "Bir uzun ve bir kısa kenarın toplamı çevrenin yarısıdır: 30 ÷ 2 = 15. Kısa kenar 15 − 9 = 6 cm'dir."
+  },
+  {
+    "id": "mat-5-3-05",
+    "unit": "mat-5-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Alanı 64 cm² olan karenin çevresi kaç cm'dir?",
+    "choices": [
+      "16",
+      "8",
+      "256",
+      "32"
+    ],
+    "answer": 3,
+    "explanation": "8 × 8 = 64 olduğundan karenin bir kenarı 8 cm'dir. Çevresi 4 × 8 = 32 cm olur."
+  },
+  {
+    "id": "mat-5-3-06",
+    "unit": "mat-5-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kenarları 12 m ve 7 m olan dikdörtgen bahçenin çevresine 2 sıra tel çekilecektir. Kaç metre tel gerekir?",
+    "choices": [
+      "76",
+      "38",
+      "168",
+      "84"
+    ],
+    "answer": 0,
+    "explanation": "Bahçenin çevresi 2 × (12 + 7) = 38 m'dir. 2 sıra tel için 2 × 38 = 76 m gerekir."
+  },
+  {
+    "id": "mat-5-3-07",
+    "unit": "mat-5-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Kenar uzunluğu 6 cm olan karenin alanı 36 cm²'dir.",
+    "answer": true,
+    "explanation": "Karenin alanı bir kenarının kendisiyle çarpımıdır: 6 × 6 = 36 cm²."
+  },
+  {
+    "id": "mat-5-3-08",
+    "unit": "mat-5-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Çevreleri eşit olan iki dikdörtgenin alanları da eşit olmak zorundadır.",
+    "answer": false,
+    "explanation": "Kenarları 1 cm ve 5 cm olan dikdörtgen ile 2 cm ve 4 cm olan dikdörtgenin çevreleri 12 cm'dir ama alanları 5 cm² ve 8 cm²'dir."
+  },
+  {
+    "id": "mat-5-4-01",
+    "unit": "mat-5-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "3/4 kesrinin ondalık gösterimi hangisidir?",
+    "choices": [
+      "0,34",
+      "3,4",
+      "0,75",
+      "0,25"
+    ],
+    "answer": 2,
+    "explanation": "3/4 = 75/100 olduğundan ondalık gösterimi 0,75'tir."
+  },
+  {
+    "id": "mat-5-4-02",
+    "unit": "mat-5-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "0,4 ondalık gösteriminin yüzde olarak yazılışı hangisidir?",
+    "choices": [
+      "%4",
+      "%0,4",
+      "%400",
+      "%40"
+    ],
+    "answer": 3,
+    "explanation": "0,4 = 4/10 = 40/100'dür. Paydası 100 olan kesir yüzde ile gösterilir: %40."
+  },
+  {
+    "id": "mat-5-4-03",
+    "unit": "mat-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "2/3 kesrine denk olan kesir hangisidir?",
+    "choices": [
+      "8/12",
+      "4/9",
+      "3/2",
+      "6/8"
+    ],
+    "answer": 0,
+    "explanation": "Pay ve payda aynı sayıyla çarpılırsa denk kesir elde edilir: 2 × 4 = 8 ve 3 × 4 = 12, yani 8/12."
+  },
+  {
+    "id": "mat-5-4-04",
+    "unit": "mat-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "2/5 + 1/5 işleminin sonucu kaçtır?",
+    "choices": [
+      "3/10",
+      "3/5",
+      "2/25",
+      "1/5"
+    ],
+    "answer": 1,
+    "explanation": "Paydaları eşit kesirler toplanırken paylar toplanır, payda aynı kalır: 2/5 + 1/5 = 3/5."
+  },
+  {
+    "id": "mat-5-4-05",
+    "unit": "mat-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "60 sayısının %25'i kaçtır?",
+    "choices": [
+      "15",
+      "25",
+      "35",
+      "240"
+    ],
+    "answer": 0,
+    "explanation": "%25, 25/100 yani 1/4 demektir. 60 ÷ 4 = 15 olur."
+  },
+  {
+    "id": "mat-5-4-06",
+    "unit": "mat-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "2 tam 3/4 tam sayılı kesrinin bileşik kesir olarak yazılışı hangisidir?",
+    "choices": [
+      "9/4",
+      "11/4",
+      "6/4",
+      "23/4"
+    ],
+    "answer": 1,
+    "explanation": "Tam kısım payda ile çarpılıp paya eklenir: 2 × 4 + 3 = 11. Payda aynı kalır: 11/4."
+  },
+  {
+    "id": "mat-5-4-07",
+    "unit": "mat-5-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "3/8, 1/2 ve 5/8 kesirleri küçükten büyüğe sıralanırsa ortadaki kesir hangisi olur?",
+    "choices": [
+      "3/8",
+      "1/2",
+      "5/8"
+    ],
+    "answer": 1,
+    "explanation": "1/2 = 4/8'dir. Paydalar eşitlenince sıralama 3/8 < 4/8 < 5/8 olur; ortadaki kesir 1/2'dir."
+  },
+  {
+    "id": "mat-5-4-08",
+    "unit": "mat-5-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "17/5 bir bileşik kesirdir.",
+    "answer": true,
+    "explanation": "Payı paydasına eşit ya da paydasından büyük olan kesirler bileşik kesirdir. 17, 5'ten büyüktür."
+  },
+  {
+    "id": "mat-5-4-09",
+    "unit": "mat-5-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "0,5 ondalık gösterimi 0,45'ten küçüktür.",
+    "answer": false,
+    "explanation": "0,5 = 0,50'dir ve 0,50 > 0,45'tir. Basamak sayısı çok olan ondalık gösterim daha büyük olmak zorunda değildir."
+  },
+  {
+    "id": "mat-5-5-01",
+    "unit": "mat-5-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir sınıfta 12 öğrenci futbolu, 9 öğrenci basketbolu, 7 öğrenci voleybolu seçmiştir. Ankete kaç öğrenci katılmıştır?",
+    "choices": [
+      "21",
+      "19",
+      "12",
+      "28"
+    ],
+    "answer": 3,
+    "explanation": "Her öğrenci bir spor seçtiğine göre sayılar toplanır: 12 + 9 + 7 = 28."
+  },
+  {
+    "id": "mat-5-5-02",
+    "unit": "mat-5-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Verilerin çizgilerle sayılarak kaydedildiği tabloya ne ad verilir?",
+    "choices": [
+      "Çarpım tablosu",
+      "Çetele tablosu",
+      "Sütun grafiği",
+      "Sayı doğrusu"
+    ],
+    "answer": 1,
+    "explanation": "Çetele tablosunda her veri için bir çizgi atılır. Çizgiler sayılarak sıklık tablosu ve grafik oluşturulur."
+  },
+  {
+    "id": "mat-5-5-03",
+    "unit": "mat-5-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir ankette 14 öğrenci kedi, 9 öğrenci köpek, 5 öğrenci kuş sevdiğini söylemiştir. Kedi sevenler kuş sevenlerden kaç fazladır?",
+    "choices": [
+      "5",
+      "19",
+      "14",
+      "9"
+    ],
+    "answer": 3,
+    "explanation": "Fark çıkarma ile bulunur: 14 − 5 = 9."
+  },
+  {
+    "id": "mat-5-5-04",
+    "unit": "mat-5-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi veri toplamayı gerektiren bir araştırma sorusudur?",
+    "choices": [
+      "Bir haftada kaç gün vardır?",
+      "5 ile 7'nin toplamı kaçtır?",
+      "Bir üçgenin kaç kenarı vardır?",
+      "Sınıfımızdaki öğrenciler en çok hangi sporu seviyor?"
+    ],
+    "answer": 3,
+    "explanation": "Araştırma sorusunun cevabı kişiden kişiye değişir ve veri toplanarak bulunur. Öteki soruların tek ve bilinen bir cevabı vardır."
+  },
+  {
+    "id": "mat-5-5-05",
+    "unit": "mat-5-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Elif 4 günde 6, 8, 5 ve 9 sayfa kitap okumuştur. Elif günde ortalama kaç sayfa okumuştur?",
+    "choices": [
+      "28",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "Aritmetik ortalama, verilerin toplamının veri sayısına bölümüdür: 6 + 8 + 5 + 9 = 28 ve 28 ÷ 4 = 7."
+  },
+  {
+    "id": "mat-5-5-06",
+    "unit": "mat-5-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir sütun grafiğinde dikey eksen 0 yerine 50'den başlatılırsa bu durum neye yol açabilir?",
+    "choices": [
+      "Verilerin değişmesine",
+      "Toplam veri sayısının artmasına",
+      "Sütunlar arasındaki farkın olduğundan büyük görünmesine",
+      "Farkın olduğundan küçük görünmesine"
+    ],
+    "answer": 2,
+    "explanation": "Eksen sıfırdan başlamazsa sütun boyları verilerle orantılı olmaz ve küçük farklar büyük görünür. Grafik yorumlanırken eksenin başlangıcına bakılmalıdır."
+  },
+  {
+    "id": "mat-5-5-07",
+    "unit": "mat-5-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Sıklık tablosu, her veriden kaç tane olduğunu gösterir.",
+    "answer": true,
+    "explanation": "Sıklık, bir verinin kaç kez tekrarlandığıdır. Sıklık tablosu bu sayıları düzenli biçimde gösterir."
+  },
+  {
+    "id": "mat-5-5-08",
+    "unit": "mat-5-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Okuldaki öğrencilerin boylarını öğrenmek için yalnızca basketbol takımındaki öğrencileri ölçmek yeterlidir.",
+    "answer": false,
+    "explanation": "Basketbol takımı okulun tamamını temsil etmez; bu öğrenciler genellikle daha uzundur. Veri, bütün grubu temsil edecek biçimde toplanmalıdır."
+  },
+  {
+    "id": "mat-5-6-01",
+    "unit": "mat-5-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "3, 7, 11, 15, ... örüntüsünde sıradaki sayı kaçtır?",
+    "choices": [
+      "18",
+      "17",
+      "20",
+      "19"
+    ],
+    "answer": 3,
+    "explanation": "Örüntüde her adımda 4 ekleniyor: 15 + 4 = 19."
+  },
+  {
+    "id": "mat-5-6-02",
+    "unit": "mat-5-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "□ + 17 = 42 eşitliğinde □ yerine hangi sayı gelmelidir?",
+    "choices": [
+      "59",
+      "35",
+      "25",
+      "24"
+    ],
+    "answer": 2,
+    "explanation": "Bilinmeyen toplanan, toplamdan diğer toplanan çıkarılarak bulunur: 42 − 17 = 25."
+  },
+  {
+    "id": "mat-5-6-03",
+    "unit": "mat-5-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "8 × 14 = (8 × 10) + (8 × □) eşitliğinde □ yerine hangi sayı gelir?",
+    "choices": [
+      "14",
+      "10",
+      "8",
+      "4"
+    ],
+    "answer": 3,
+    "explanation": "14 = 10 + 4 olarak ayrılmıştır. Çarpmanın toplama üzerine dağılma özelliğine göre 8 × 14 = (8 × 10) + (8 × 4)."
+  },
+  {
+    "id": "mat-5-6-04",
+    "unit": "mat-5-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "5, 10, 20, 40, ... örüntüsünün kuralı nedir?",
+    "choices": [
+      "Her adımda 5 ekleniyor",
+      "Her adımda 2 ile çarpılıyor",
+      "Her adımda 10 ekleniyor",
+      "Her adımda 5 ile çarpılıyor"
+    ],
+    "answer": 1,
+    "explanation": "5 × 2 = 10, 10 × 2 = 20, 20 × 2 = 40. Her sayı bir öncekinin 2 katıdır."
+  },
+  {
+    "id": "mat-5-6-05",
+    "unit": "mat-5-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "6 × □ = 54 eşitliğinde □ yerine gelecek sayı kaçtır?",
+    "choices": [
+      "8",
+      "9",
+      "48",
+      "60"
+    ],
+    "answer": 1,
+    "explanation": "Bilinmeyen çarpan, çarpım diğer çarpana bölünerek bulunur: 54 ÷ 6 = 9."
+  },
+  {
+    "id": "mat-5-6-06",
+    "unit": "mat-5-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "45 + 28 = □ + 30 eşitliğinde □ kaçtır?",
+    "choices": [
+      "43",
+      "73",
+      "47",
+      "13"
+    ],
+    "answer": 0,
+    "explanation": "Eşitliğin sol tarafı 45 + 28 = 73'tür. Sağ tarafın da 73 olması için □ = 73 − 30 = 43 olmalıdır."
+  },
+  {
+    "id": "mat-5-6-07",
+    "unit": "mat-5-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kuralı \"adım sayısının 3 katının 1 fazlası\" olan örüntünün 10. adımındaki sayı kaçtır?",
+    "choices": [
+      "30",
+      "31",
+      "33",
+      "14"
+    ],
+    "answer": 1,
+    "explanation": "Adım sayısı 10'dur. 3 katı 30, 1 fazlası 31 olur."
+  },
+  {
+    "id": "mat-5-6-08",
+    "unit": "mat-5-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "23 + 48 = 48 + 23 eşitliği toplama işleminin değişme özelliğini gösterir.",
+    "answer": true,
+    "explanation": "Toplamada toplananların yeri değişse de sonuç değişmez. Buna değişme özelliği denir."
+  },
+  {
+    "id": "mat-5-6-09",
+    "unit": "mat-5-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "36 ÷ 4 işleminin sonucu ile 4 ÷ 36 işleminin sonucu eşittir.",
+    "answer": false,
+    "explanation": "36 ÷ 4 = 9'dur, 4 ÷ 36 ise 1'den küçük bir sayıdır. Bölme işleminin değişme özelliği yoktur."
+  },
+  {
+    "id": "mat-5-7-01",
+    "unit": "mat-5-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İçinde yalnızca kırmızı toplar olan torbadan mavi top çekilmesi nasıl bir olaydır?",
+    "choices": [
+      "Kesin olay",
+      "Eşit olasılıklı olay",
+      "İmkânsız olay",
+      "Olasılığı yüksek olay"
+    ],
+    "answer": 2,
+    "explanation": "Torbada mavi top olmadığı için bu olay hiçbir zaman gerçekleşmez. Gerçekleşmesi mümkün olmayan olaya imkânsız olay denir."
+  },
+  {
+    "id": "mat-5-7-02",
+    "unit": "mat-5-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir zar atıldığında 7'den küçük bir sayı gelmesi nasıl bir olaydır?",
+    "choices": [
+      "İmkânsız olay",
+      "Olasılığı düşük olay",
+      "Kesin olay",
+      "Yarı yarıya olasılıklı olay"
+    ],
+    "answer": 2,
+    "explanation": "Zarın yüzlerinde 1, 2, 3, 4, 5 ve 6 vardır; hepsi 7'den küçüktür. Her atışta gerçekleşen olay kesin olaydır."
+  },
+  {
+    "id": "mat-5-7-03",
+    "unit": "mat-5-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir torbada 8 sarı, 2 yeşil top vardır. Rastgele çekilen topun hangi renkte olma olasılığı daha fazladır?",
+    "choices": [
+      "Sarı",
+      "Yeşil",
+      "İkisinin olasılığı eşittir"
+    ],
+    "answer": 0,
+    "explanation": "Torbada sarı toplar daha çoktur. Sayısı fazla olan rengin çekilme olasılığı daha fazladır."
+  },
+  {
+    "id": "mat-5-7-04",
+    "unit": "mat-5-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hilesiz bir madenî para atıldığında yazı gelme olasılığı için ne söylenebilir?",
+    "choices": [
+      "Tura gelme olasılığından fazladır",
+      "Tura gelme olasılığından azdır",
+      "Kesin gerçekleşir",
+      "Tura gelme olasılığına eşittir"
+    ],
+    "answer": 3,
+    "explanation": "Paranın iki yüzü vardır ve ikisinin gelme şansı aynıdır. Bu yüzden yazı ve tura eşit olasılıklıdır."
+  },
+  {
+    "id": "mat-5-7-05",
+    "unit": "mat-5-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir çarkın 4 eş bölmesinden 3'ü mavi, 1'i sarıdır. Çark çevrildiğinde hangisi daha olasıdır?",
+    "choices": [
+      "Mavi gelmesi",
+      "Sarı gelmesi",
+      "İkisi eşit olasılıklıdır"
+    ],
+    "answer": 0,
+    "explanation": "Eş bölmelerin 3'ü mavi, 1'i sarıdır. Mavi bölme sayısı fazla olduğundan mavi gelmesi daha olasıdır."
+  },
+  {
+    "id": "mat-5-7-06",
+    "unit": "mat-5-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir torbada 5 kırmızı, 5 mavi ve 1 beyaz top vardır. Hangi olayın olasılığı en düşüktür?",
+    "choices": [
+      "Beyaz top çekilmesi",
+      "Kırmızı top çekilmesi",
+      "Mavi top çekilmesi",
+      "Kırmızı ya da mavi top çekilmesi"
+    ],
+    "answer": 0,
+    "explanation": "Torbada en az sayıda olan beyaz toptur (1 tane). Sayısı en az olan rengin çekilme olasılığı en düşüktür."
+  },
+  {
+    "id": "mat-5-7-07",
+    "unit": "mat-5-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Pazartesiden sonraki günün salı olması kesin bir olaydır.",
+    "answer": true,
+    "explanation": "Haftanın günleri hep aynı sırayla gelir; pazartesiden sonra her zaman salı gelir. Bu yüzden olay kesindir."
+  },
+  {
+    "id": "mat-5-7-08",
+    "unit": "mat-5-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir zar atıldığında çift sayı gelme olasılığı, tek sayı gelme olasılığından fazladır.",
+    "answer": false,
+    "explanation": "Zarda 3 çift (2, 4, 6) ve 3 tek (1, 3, 5) sayı vardır. Sayıları eşit olduğundan iki olay eşit olasılıklıdır."
+  }
+]
