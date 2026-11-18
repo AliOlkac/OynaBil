@@ -4,6 +4,7 @@ import { turkce } from "./turkce/subject";
 import { matematik } from "./matematik/subject";
 import { hayatBilgisi } from "./hayat-bilgisi/subject";
 import { fenBilimleri } from "./fen-bilimleri/subject";
+import { sosyalBilgiler } from "./sosyal-bilgiler/subject";
 import { ingilizce } from "./ingilizce/subject";
 import { dinKulturu } from "./din-kulturu/subject";
 
@@ -19,7 +20,7 @@ import { dinKulturu } from "./din-kulturu/subject";
  * Yeni bir ders eklemek için `subject.ts` ile üniteleri tanımlayın, dosyaları koyun ve
  * aşağıdaki iki listeye ekleyin.
  */
-export const SUBJECTS: Subject[] = [turkce, matematik, hayatBilgisi, fenBilimleri, ingilizce, dinKulturu];
+export const SUBJECTS: Subject[] = [turkce, matematik, hayatBilgisi, fenBilimleri, sosyalBilgiler, ingilizce, dinKulturu];
 
 type Module = { default: unknown };
 type GradeFiles = {
@@ -54,6 +55,12 @@ export const CONTENT_FILES: Record<string, Partial<Record<Grade, GradeFiles>>> =
     6: { questions: () => import("./fen-bilimleri/sorular/6.json"), cards: () => import("./fen-bilimleri/kartlar/6.json") },
     7: { questions: () => import("./fen-bilimleri/sorular/7.json"), cards: () => import("./fen-bilimleri/kartlar/7.json") },
     8: { questions: () => import("./fen-bilimleri/sorular/8.json"), cards: () => import("./fen-bilimleri/kartlar/8.json"), passages: () => import("./fen-bilimleri/sorular/8-lgs.json") },
+  },
+  "sosyal-bilgiler": {
+    4: { questions: () => import("./sosyal-bilgiler/sorular/4.json"), cards: () => import("./sosyal-bilgiler/kartlar/4.json") },
+    5: { questions: () => import("./sosyal-bilgiler/sorular/5.json"), cards: () => import("./sosyal-bilgiler/kartlar/5.json") },
+    6: { questions: () => import("./sosyal-bilgiler/sorular/6.json"), cards: () => import("./sosyal-bilgiler/kartlar/6.json") },
+    7: { questions: () => import("./sosyal-bilgiler/sorular/7.json"), cards: () => import("./sosyal-bilgiler/kartlar/7.json") },
   },
   ingilizce: {
     2: { questions: () => import("./ingilizce/sorular/2.json"), cards: () => import("./ingilizce/kartlar/2.json") },

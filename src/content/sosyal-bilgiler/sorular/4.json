@@ -1,0 +1,653 @@
+[
+  {
+    "id": "sos-4-1-01",
+    "unit": "sos-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Adımız, soyadımız, doğum tarihimiz ve T.C. kimlik numaramız hangi resmî belgede yer alır?",
+    "choices": [
+      "Karne",
+      "Kimlik kartı",
+      "Kütüphane kartı",
+      "Davetiye"
+    ],
+    "answer": 1,
+    "explanation": "Kimlik kartı, kim olduğumuzu gösteren resmî belgedir. Üzerinde ad, soyad, doğum tarihi ve T.C. kimlik numarası gibi bilgiler bulunur."
+  },
+  {
+    "id": "sos-4-1-02",
+    "unit": "sos-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Olayların oluş zamanına göre, eskiden yeniye doğru sıralanmasına ne denir?",
+    "choices": [
+      "Kroki",
+      "Ölçek",
+      "Kronoloji",
+      "Bütçe"
+    ],
+    "answer": 2,
+    "explanation": "Kronoloji, olayların zaman sırasına göre dizilmesidir. Hayatımızdaki olayları kronolojik sıraya koyarak yaşam öykümüzü anlatabiliriz."
+  },
+  {
+    "id": "sos-4-1-03",
+    "unit": "sos-4-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Her insanın parmak izi birbirinden farklıdır.",
+    "answer": true,
+    "explanation": "Parmak izi kişiye özeldir; iki insanın parmak izi birbirinin aynısı değildir. Bu, bizi başkalarından ayıran özelliklerden biridir."
+  },
+  {
+    "id": "sos-4-1-04",
+    "unit": "sos-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kendimizi başkasının yerine koyarak onun duygu ve düşüncelerini anlamaya çalışmaya ne denir?",
+    "choices": [
+      "Empati",
+      "İnat",
+      "Tasarruf",
+      "Rekabet"
+    ],
+    "answer": 0,
+    "explanation": "Empati, kendimizi karşımızdaki kişinin yerine koymaktır. Empati kuran kişi başkalarının duygularını daha iyi anlar."
+  },
+  {
+    "id": "sos-4-1-05",
+    "unit": "sos-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Elif resim yapmayı çok seviyor ve boş zamanlarında hep resim yapıyor. Bu durum Elif'in en çok hangi özelliğini gösterir?",
+    "choices": [
+      "Fiziksel özelliğini",
+      "Sorumluluğunu",
+      "İhtiyacını",
+      "İlgi alanını"
+    ],
+    "answer": 3,
+    "explanation": "Bir işi severek ve isteyerek yapmak, o işe ilgi duyduğumuzu gösterir. Elif'in ilgi alanı resimdir."
+  },
+  {
+    "id": "sos-4-1-06",
+    "unit": "sos-4-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Kronolojik sıralamada olaylar önem sırasına göre dizilir.",
+    "answer": false,
+    "explanation": "Kronolojik sıralamada olaylar önemine göre değil, oluş zamanına göre eskiden yeniye doğru dizilir."
+  },
+  {
+    "id": "sos-4-1-07",
+    "unit": "sos-4-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Mert 2016'da doğdu, 2022'de ilkokula başladı, 2019'da bisiklete binmeyi öğrendi. Bu olayların kronolojik sıralaması hangisidir?",
+    "choices": [
+      "Doğum, ilkokul, bisiklet",
+      "Doğum, bisiklet, ilkokul",
+      "Bisiklet, doğum, ilkokul",
+      "İlkokul, bisiklet, doğum"
+    ],
+    "answer": 1,
+    "explanation": "Yıllar küçükten büyüğe sıralanır: 2016 doğum, 2019 bisiklete binmeyi öğrenme, 2022 ilkokula başlama."
+  },
+  {
+    "id": "sos-4-2-01",
+    "unit": "sos-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Mustafa Kemal, Millî Mücadele'yi başlatmak için 19 Mayıs 1919'da hangi şehre çıkmıştır?",
+    "choices": [
+      "İzmir",
+      "Ankara",
+      "Samsun",
+      "Erzurum"
+    ],
+    "answer": 2,
+    "explanation": "Mustafa Kemal 19 Mayıs 1919'da Samsun'a çıkmıştır. Bu olay Millî Mücadele'nin başlangıcı kabul edilir."
+  },
+  {
+    "id": "sos-4-2-02",
+    "unit": "sos-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Türkiye Büyük Millet Meclisi 23 Nisan 1920'de hangi şehirde açılmıştır?",
+    "choices": [
+      "İstanbul",
+      "Sivas",
+      "Bursa",
+      "Ankara"
+    ],
+    "answer": 3,
+    "explanation": "TBMM 23 Nisan 1920'de Ankara'da açılmıştır. Bu gün her yıl Ulusal Egemenlik ve Çocuk Bayramı olarak kutlanır."
+  },
+  {
+    "id": "sos-4-2-03",
+    "unit": "sos-4-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Aile büyüklerimizle konuşarak geçmiş hakkında bilgi toplamaya sözlü tarih çalışması denir.",
+    "answer": true,
+    "explanation": "Sözlü tarih, olayları yaşamış ya da duymuş kişilerle görüşerek bilgi toplamaktır. Aile tarihimizi bu yolla öğrenebiliriz."
+  },
+  {
+    "id": "sos-4-2-04",
+    "unit": "sos-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Millî Mücadele'de Doğu Cephesi'nde ordumuza kim komuta etmiştir?",
+    "choices": [
+      "Kâzım Karabekir Paşa",
+      "İsmet Paşa",
+      "Refet Paşa",
+      "Ali Fuat Paşa"
+    ],
+    "answer": 0,
+    "explanation": "Doğu Cephesi'nde Kâzım Karabekir Paşa komutasındaki ordumuz Ermenilere karşı başarı kazanmıştır."
+  },
+  {
+    "id": "sos-4-2-05",
+    "unit": "sos-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi geleneksel çocuk oyunlarımızdan biridir?",
+    "choices": [
+      "Tablet oyunu",
+      "Beş taş",
+      "Bilgisayar oyunu",
+      "Oyun konsolu"
+    ],
+    "answer": 1,
+    "explanation": "Beş taş, körebe, saklambaç ve seksek gibi oyunlar kuşaktan kuşağa aktarılan geleneksel çocuk oyunlarımızdır."
+  },
+  {
+    "id": "sos-4-2-06",
+    "unit": "sos-4-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Millî Mücadele'de Batı Cephesi'nde Fransızlara karşı savaşılmıştır.",
+    "answer": false,
+    "explanation": "Batı Cephesi'nde Yunanlılara karşı savaşılmıştır. Fransızlara karşı Güney Cephesi'nde mücadele edilmiştir."
+  },
+  {
+    "id": "sos-4-2-07",
+    "unit": "sos-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi savaşın kazanılmasından sonra TBMM, Mustafa Kemal'e \"Gazi\" unvanını ve \"Mareşal\" rütbesini vermiştir?",
+    "choices": [
+      "I. İnönü Muharebesi",
+      "II. İnönü Muharebesi",
+      "Sakarya Meydan Muharebesi",
+      "Büyük Taarruz"
+    ],
+    "answer": 2,
+    "explanation": "1921'deki Sakarya Meydan Muharebesi'nin kazanılmasından sonra TBMM, Mustafa Kemal'e Gazi unvanı ve Mareşal rütbesi vermiştir."
+  },
+  {
+    "id": "sos-4-3-01",
+    "unit": "sos-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Güneş hangi yönden doğar?",
+    "choices": [
+      "Batı",
+      "Kuzey",
+      "Güney",
+      "Doğu"
+    ],
+    "answer": 3,
+    "explanation": "Güneş doğudan doğar, batıdan batar. Bu bilgi yön bulmamıza yardım eder."
+  },
+  {
+    "id": "sos-4-3-02",
+    "unit": "sos-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yön bulmak için kullanılan, ibresinin renkli ucu kuzeyi gösteren araç hangisidir?",
+    "choices": [
+      "Pusula",
+      "Termometre",
+      "Büyüteç",
+      "Cetvel"
+    ],
+    "answer": 0,
+    "explanation": "Pusulanın ibresi her zaman kuzey-güney doğrultusunda durur; renkli ucu kuzeyi gösterir."
+  },
+  {
+    "id": "sos-4-3-03",
+    "unit": "sos-4-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Kroki, bir yerin kuş bakışı görünüşünün ölçeksiz olarak kâğıda çizilmesidir.",
+    "answer": true,
+    "explanation": "Kroki, bir yerin kuş bakışı görünüşünün kabataslak çizimidir. Haritadan farkı ölçek kullanılmamasıdır."
+  },
+  {
+    "id": "sos-4-3-04",
+    "unit": "sos-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Gece yön bulmak isteyen biri Kutup Yıldızı'na bakıyor. Kutup Yıldızı hangi yönü gösterir?",
+    "choices": [
+      "Güney",
+      "Doğu",
+      "Kuzey",
+      "Batı"
+    ],
+    "answer": 2,
+    "explanation": "Kutup Yıldızı kuzey yönünü gösterir. Geceleri yön bulmak için bu yıldızdan yararlanılır."
+  },
+  {
+    "id": "sos-4-3-05",
+    "unit": "sos-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi çevremizdeki doğal unsurlardan biridir?",
+    "choices": [
+      "Köprü",
+      "Okul",
+      "Yol",
+      "Dağ"
+    ],
+    "answer": 3,
+    "explanation": "Dağ, ova, akarsu gibi unsurlar doğal; köprü, okul, yol gibi insan yapımı unsurlar beşerî unsurlardır."
+  },
+  {
+    "id": "sos-4-3-06",
+    "unit": "sos-4-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Deprem sırasında asansöre binip binadan hızla çıkmak gerekir.",
+    "answer": false,
+    "explanation": "Sarsıntı sırasında asansör ve merdiven kullanılmaz. Güvenli bir yerde çök-kapan-tutun hareketi yapılır; sarsıntı bitince bina sakince boşaltılır."
+  },
+  {
+    "id": "sos-4-3-07",
+    "unit": "sos-4-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Sabah yüzünü güneşin doğduğu yöne dönen bir kişinin sol kolu hangi yönü gösterir?",
+    "choices": [
+      "Güney",
+      "Kuzey",
+      "Batı",
+      "Doğu"
+    ],
+    "answer": 1,
+    "explanation": "Yüzümüzü güneşin doğduğu yöne (doğuya) döndüğümüzde sol kolumuz kuzeyi, sağ kolumuz güneyi, arkamız batıyı gösterir."
+  },
+  {
+    "id": "sos-4-4-01",
+    "unit": "sos-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Telefonu icat eden kişi olarak bilinen mucit kimdir?",
+    "choices": [
+      "Thomas Edison",
+      "Graham Bell",
+      "Samuel Morse",
+      "Johannes Gutenberg"
+    ],
+    "answer": 1,
+    "explanation": "Telefonun mucidi olarak Graham Bell bilinir. Telefon, uzaktaki insanların sesli görüşmesini sağlamıştır."
+  },
+  {
+    "id": "sos-4-4-02",
+    "unit": "sos-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi geçmişte aydınlanmak için kullanılan araçlardan biridir?",
+    "choices": [
+      "LED ampul",
+      "Akıllı telefon",
+      "Gaz lambası",
+      "Projeksiyon cihazı"
+    ],
+    "answer": 2,
+    "explanation": "Elektrik yaygınlaşmadan önce insanlar mum, kandil ve gaz lambası ile aydınlanırdı. Bugün ise elektrikli ampuller kullanılır."
+  },
+  {
+    "id": "sos-4-4-03",
+    "unit": "sos-4-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Teknolojik ürünler zaman içinde değişir ve gelişir.",
+    "answer": true,
+    "explanation": "İnsanların ihtiyaçları ve bilgileri arttıkça ürünler de gelişir. Örneğin çevirmeli telefonların yerini akıllı telefonlar almıştır."
+  },
+  {
+    "id": "sos-4-4-04",
+    "unit": "sos-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Çamaşır makinesi icat edilmeden önce çamaşırlar nasıl yıkanırdı?",
+    "choices": [
+      "Bulaşık makinesinde",
+      "Kuru temizlemede",
+      "Buharlı ütüyle",
+      "Elde, leğende"
+    ],
+    "answer": 3,
+    "explanation": "Çamaşır makinesinden önce çamaşırlar elde, leğen ve teknelerde yıkanırdı. Makine bu işi kolaylaştırıp zaman kazandırmıştır."
+  },
+  {
+    "id": "sos-4-4-05",
+    "unit": "sos-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İlk motorlu uçağı yapıp uçurmayı başaranlar kimlerdir?",
+    "choices": [
+      "Wright Kardeşler",
+      "Lumière Kardeşler",
+      "Grimm Kardeşler",
+      "Montgolfier Kardeşler"
+    ],
+    "answer": 0,
+    "explanation": "Wright Kardeşler 1903'te ilk motorlu uçağı uçurmayı başarmıştır. Montgolfier Kardeşler sıcak hava balonu, Lumière Kardeşler sinema ile tanınır."
+  },
+  {
+    "id": "sos-4-4-06",
+    "unit": "sos-4-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir teknolojik ürünü kullanmadan önce kullanım kılavuzunu okumak gereksizdir.",
+    "answer": false,
+    "explanation": "Kullanım kılavuzu, ürünün doğru ve güvenli kullanılmasını anlatır. Kılavuzu okumak hem bizi hem ürünü korur."
+  },
+  {
+    "id": "sos-4-4-07",
+    "unit": "sos-4-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangisi teknolojinin doğru ve bilinçli kullanımına örnektir?",
+    "choices": [
+      "Saatlerce ara vermeden oyun oynamak",
+      "Kişisel bilgileri herkesle paylaşmak",
+      "Ödev için güvenilir sitelerden bilgi araştırmak",
+      "Yemekte sürekli telefona bakmak"
+    ],
+    "answer": 2,
+    "explanation": "Teknolojiyi bilgi edinmek için, süreyi ayarlayarak ve güvenli biçimde kullanmak bilinçli kullanımdır."
+  },
+  {
+    "id": "sos-4-5-01",
+    "unit": "sos-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi temel ihtiyaçlarımızdan biridir?",
+    "choices": [
+      "Oyuncak",
+      "Beslenme",
+      "Tatil",
+      "Bisiklet"
+    ],
+    "answer": 1,
+    "explanation": "Beslenme, barınma ve giyinme yaşamak için zorunlu olan temel ihtiyaçlardır. Oyuncak, tatil ve bisiklet ise isteklerimizdir."
+  },
+  {
+    "id": "sos-4-5-02",
+    "unit": "sos-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Gelir ve giderlerimizi gösteren plana ne denir?",
+    "choices": [
+      "Bütçe",
+      "Kroki",
+      "Fatura",
+      "Takvim"
+    ],
+    "answer": 0,
+    "explanation": "Bütçe, gelir ve giderlerin planlanmasıdır. Bütçe yapan kişi parasını nereye harcayacağını önceden bilir."
+  },
+  {
+    "id": "sos-4-5-03",
+    "unit": "sos-4-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Alışveriş yaptıktan sonra fiş ya da fatura almalıyız.",
+    "answer": true,
+    "explanation": "Fiş ve fatura, alışveriş yaptığımızın belgesidir. Ürünü değiştirmek ya da iade etmek gerektiğinde bu belge istenir."
+  },
+  {
+    "id": "sos-4-5-04",
+    "unit": "sos-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Paketli bir yiyecek alırken hangisine mutlaka bakmalıyız?",
+    "choices": [
+      "Ambalajın rengine",
+      "Reklamına",
+      "Son tüketim tarihine",
+      "Paketin büyüklüğüne"
+    ],
+    "answer": 2,
+    "explanation": "Son tüketim tarihi geçmiş yiyecekler sağlığımıza zarar verebilir. Bilinçli tüketici bu tarihi kontrol eder."
+  },
+  {
+    "id": "sos-4-5-05",
+    "unit": "sos-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir ailenin aylık geliri giderinden fazlaysa bu aile ne yapabilir?",
+    "choices": [
+      "Borçlanır",
+      "Bütçe açığı verir",
+      "İhtiyaçlarını karşılayamaz",
+      "Birikim yapar"
+    ],
+    "answer": 3,
+    "explanation": "Gelir giderden fazla olduğunda artan para biriktirilebilir. Buna tasarruf ya da birikim denir."
+  },
+  {
+    "id": "sos-4-5-06",
+    "unit": "sos-4-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Dişlerimizi fırçalarken musluğu açık bırakmak su tasarrufu sağlar.",
+    "answer": false,
+    "explanation": "Musluğu açık bırakmak suyu boşa harcar. Tasarruf için diş fırçalarken musluk kapatılmalıdır."
+  },
+  {
+    "id": "sos-4-5-07",
+    "unit": "sos-4-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangisi bilinçli tüketici davranışıdır?",
+    "choices": [
+      "İhtiyaç listesi hazırlayıp ona göre alışveriş yapmak",
+      "Reklamı çok yapılan ürünü hemen almak",
+      "Fiyat karşılaştırmadan ilk görülen ürünü almak",
+      "Arkadaşında var diye aynı ürünü istemek"
+    ],
+    "answer": 0,
+    "explanation": "Bilinçli tüketici ihtiyacını belirler, liste yapar, fiyat ve kaliteyi karşılaştırır. Reklamlara ya da başkalarına göre alışveriş yapmaz."
+  },
+  {
+    "id": "sos-4-6-01",
+    "unit": "sos-4-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Çocuk Haklarına Dair Sözleşme'ye göre kaç yaşına kadar herkes çocuk sayılır?",
+    "choices": [
+      "12",
+      "15",
+      "18",
+      "21"
+    ],
+    "answer": 2,
+    "explanation": "Çocuk Haklarına Dair Sözleşme'ye göre 18 yaşına kadar herkes çocuktur ve çocuk haklarına sahiptir."
+  },
+  {
+    "id": "sos-4-6-02",
+    "unit": "sos-4-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi çocukların sahip olduğu haklardan biridir?",
+    "choices": [
+      "Oy kullanma hakkı",
+      "Ehliyet alma hakkı",
+      "Milletvekili seçilme hakkı",
+      "Eğitim hakkı"
+    ],
+    "answer": 3,
+    "explanation": "Her çocuğun eğitim görme hakkı vardır. Oy kullanmak, ehliyet almak ve milletvekili seçilmek yetişkinlere tanınan haklardır."
+  },
+  {
+    "id": "sos-4-6-03",
+    "unit": "sos-4-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Sınıf başkanını seçerken oy kullanmak demokratik bir davranıştır.",
+    "answer": true,
+    "explanation": "Seçimle karar vermek ve oy kullanmak demokrasinin gereğidir. Böylece herkes yönetime katılmış olur."
+  },
+  {
+    "id": "sos-4-6-04",
+    "unit": "sos-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir ülkenin başka devletlerin denetimi altında olmadan kendi kararlarını kendisinin vermesine ne denir?",
+    "choices": [
+      "Bağımsızlık",
+      "Sorumluluk",
+      "Tasarruf",
+      "Gelenek"
+    ],
+    "answer": 0,
+    "explanation": "Bağımsızlık, bir ülkenin hiçbir devlete bağlı olmadan kendi kendini yönetmesidir. Millî Mücadele bağımsızlığımız için yapılmıştır."
+  },
+  {
+    "id": "sos-4-6-05",
+    "unit": "sos-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi evdeki sorumluluklarımızdan biridir?",
+    "choices": [
+      "Sağlık hizmeti almak",
+      "Oyun oynamak",
+      "Odamızı düzenli tutmak",
+      "Eğitim görmek"
+    ],
+    "answer": 2,
+    "explanation": "Odamızı düzenli tutmak bir sorumluluktur. Sağlık hizmeti almak, oyun oynamak ve eğitim görmek ise haklarımızdır."
+  },
+  {
+    "id": "sos-4-6-06",
+    "unit": "sos-4-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Ulusal egemenlik, yönetme yetkisinin tek bir kişiye ait olması demektir.",
+    "answer": false,
+    "explanation": "Ulusal egemenlik, yönetme yetkisinin millete ait olmasıdır. Millet bu yetkiyi seçtiği temsilciler aracılığıyla kullanır."
+  },
+  {
+    "id": "sos-4-6-07",
+    "unit": "sos-4-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Okul meclisi seçimlerinde hangisi demokratik bir uygulamadır?",
+    "choices": [
+      "Yalnızca çalışkan öğrencilerin oy kullanması",
+      "Adayların düşüncelerini serbestçe anlatması",
+      "Başkanı öğretmenin tek başına belirlemesi",
+      "Bazı öğrencilerin aday olmasının yasaklanması"
+    ],
+    "answer": 1,
+    "explanation": "Demokratik seçimde herkes aday olabilir, adaylar düşüncelerini serbestçe anlatır ve her öğrenci oy kullanır."
+  },
+  {
+    "id": "sos-4-7-01",
+    "unit": "sos-4-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi Türkiye'nin komşularından biridir?",
+    "choices": [
+      "Almanya",
+      "Yunanistan",
+      "Mısır",
+      "Japonya"
+    ],
+    "answer": 1,
+    "explanation": "Yunanistan, Türkiye'nin batıdaki kara sınırı komşusudur. Almanya, Mısır ve Japonya ile ortak sınırımız yoktur."
+  },
+  {
+    "id": "sos-4-7-02",
+    "unit": "sos-4-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Azerbaycan'ın başkenti neresidir?",
+    "choices": [
+      "Taşkent",
+      "Bişkek",
+      "Bakü",
+      "Aşkabat"
+    ],
+    "answer": 2,
+    "explanation": "Azerbaycan'ın başkenti Bakü'dür. Taşkent Özbekistan'ın, Bişkek Kırgızistan'ın, Aşkabat Türkmenistan'ın başkentidir."
+  },
+  {
+    "id": "sos-4-7-03",
+    "unit": "sos-4-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Her ülkenin kendine özgü bir bayrağı vardır.",
+    "answer": true,
+    "explanation": "Bayrak, bir ülkenin bağımsızlık simgesidir. Her ülkenin bayrağı farklıdır ve o ülkeyi temsil eder."
+  },
+  {
+    "id": "sos-4-7-04",
+    "unit": "sos-4-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Türkiye'nin kuzeybatısında yer alan iki komşusu hangileridir?",
+    "choices": [
+      "İran ve Irak",
+      "Gürcistan ve Ermenistan",
+      "Suriye ve Irak",
+      "Yunanistan ve Bulgaristan"
+    ],
+    "answer": 3,
+    "explanation": "Yunanistan ve Bulgaristan, Türkiye'nin Trakya'daki kuzeybatı komşularıdır."
+  },
+  {
+    "id": "sos-4-7-05",
+    "unit": "sos-4-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi Türkiye'nin güney komşusudur?",
+    "choices": [
+      "Suriye",
+      "Bulgaristan",
+      "Gürcistan",
+      "Yunanistan"
+    ],
+    "answer": 0,
+    "explanation": "Suriye, Türkiye'nin güneyinde yer alır ve en uzun kara sınırımız Suriye iledir."
+  },
+  {
+    "id": "sos-4-7-06",
+    "unit": "sos-4-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "İran, Türkiye'nin batı komşusudur.",
+    "answer": false,
+    "explanation": "İran, Türkiye'nin doğu komşusudur. Batıda Yunanistan ve Bulgaristan yer alır."
+  },
+  {
+    "id": "sos-4-7-07",
+    "unit": "sos-4-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi ülkenin Türkiye ile kara sınırı yoktur?",
+    "choices": [
+      "Irak",
+      "Gürcistan",
+      "Rusya",
+      "Bulgaristan"
+    ],
+    "answer": 2,
+    "explanation": "Türkiye'nin kara sınırı komşuları Yunanistan, Bulgaristan, Gürcistan, Ermenistan, Azerbaycan (Nahçıvan), İran, Irak ve Suriye'dir. Rusya ile kara sınırımız yoktur."
+  }
+]

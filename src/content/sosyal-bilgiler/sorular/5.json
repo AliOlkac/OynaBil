@@ -1,0 +1,635 @@
+[
+  {
+    "id": "sos-5-1-01",
+    "unit": "sos-5-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Aile, sınıf ve spor takımı gibi ortak bir amaçla bir araya gelen insan topluluklarına ne ad verilir?",
+    "choices": [
+      "Kurum",
+      "Grup",
+      "Miras",
+      "Bütçe"
+    ],
+    "answer": 1,
+    "explanation": "Ortak amaç için bir araya gelen ve birbiriyle etkileşim içinde olan insan topluluklarına grup denir. Aile, ilk dâhil olduğumuz gruptur."
+  },
+  {
+    "id": "sos-5-1-02",
+    "unit": "sos-5-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Afetlerde yardım ulaştıran ve kan bağışı toplayan sivil toplum kuruluşu hangisidir?",
+    "choices": [
+      "TEMA",
+      "Yeşilay",
+      "Kızılay",
+      "LÖSEV"
+    ],
+    "answer": 2,
+    "explanation": "Türk Kızılay, afetlerde ihtiyaç sahiplerine yardım ulaştırır ve kan bağışı toplar."
+  },
+  {
+    "id": "sos-5-1-03",
+    "unit": "sos-5-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Yardımlaşma ve dayanışma, toplumda birlik ve beraberliği güçlendirir.",
+    "answer": true,
+    "explanation": "İnsanlar birbirine destek olduğunda aralarındaki bağ güçlenir. Yardımlaşma, toplumsal birliğin temelidir."
+  },
+  {
+    "id": "sos-5-1-04",
+    "unit": "sos-5-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Zeynep evde \"abla\", okulda \"öğrenci\", spor kulübünde \"takım kaptanı\"dır. Bu durum neyi gösterir?",
+    "choices": [
+      "Bir kişinin farklı gruplarda farklı rolleri olabileceğini",
+      "Rollerin hiç değişmediğini",
+      "Herkesin tek bir rolü olduğunu",
+      "Rollerin sorumluluk getirmediğini"
+    ],
+    "answer": 0,
+    "explanation": "İnsanlar aynı anda birden çok grubun üyesidir ve her grupta farklı bir rol üstlenir. Her rol, hak ve sorumlulukları da beraberinde getirir."
+  },
+  {
+    "id": "sos-5-1-05",
+    "unit": "sos-5-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir kişinin aynı anda yalnızca tek bir grupta rolü olabilir.",
+    "answer": false,
+    "explanation": "Bir kişi aynı anda ailenin, sınıfın ve bir takımın üyesi olabilir; her birinde farklı bir rolü vardır."
+  },
+  {
+    "id": "sos-5-1-06",
+    "unit": "sos-5-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Türkiye'nin farklı yörelerinde halk oyunlarının, yemeklerin ve el sanatlarının çeşitlilik göstermesi neyin göstergesidir?",
+    "choices": [
+      "Ekonomik sorunların",
+      "İklim değişikliğinin",
+      "Nüfus artışının",
+      "Kültürel zenginliğin"
+    ],
+    "answer": 3,
+    "explanation": "Yörelere göre değişen halk oyunları, yemekler ve el sanatları ülkemizin kültürel zenginliğini gösterir."
+  },
+  {
+    "id": "sos-5-1-07",
+    "unit": "sos-5-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Mahalledeki parkın temizliği için gönüllü ekip kuran öğrenciler hangi davranışı göstermiştir?",
+    "choices": [
+      "Bireysel çıkarını öne alma",
+      "Soruna duyarsız kalma",
+      "Toplumsal soruna çözüm üretme",
+      "Sorumluluğu başkasına bırakma"
+    ],
+    "answer": 2,
+    "explanation": "Çevresindeki bir sorunu fark edip çözüm için birlikte harekete geçmek, toplumsal sorumluluk bilincinin göstergesidir."
+  },
+  {
+    "id": "sos-5-2-01",
+    "unit": "sos-5-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Haritada kullanılan renk ve işaretlerin ne anlama geldiğini gösteren bölüme ne denir?",
+    "choices": [
+      "Ölçek",
+      "Lejant (harita anahtarı)",
+      "Başlık",
+      "Yön oku"
+    ],
+    "answer": 1,
+    "explanation": "Lejant (harita anahtarı), haritadaki işaret ve renklerin anlamını açıklar. Haritayı doğru okumak için önce lejanta bakılır."
+  },
+  {
+    "id": "sos-5-2-02",
+    "unit": "sos-5-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yer kabuğunun aniden sarsılmasıyla oluşan doğal afet hangisidir?",
+    "choices": [
+      "Sel",
+      "Çığ",
+      "Erozyon",
+      "Deprem"
+    ],
+    "answer": 3,
+    "explanation": "Deprem, yer kabuğundaki kırılmalar sonucu oluşan sarsıntıdır. Ülkemizde sık görülen doğal afetlerdendir."
+  },
+  {
+    "id": "sos-5-2-03",
+    "unit": "sos-5-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Fiziki haritalarda yeşil renk, yükseltisi az olan düzlükleri gösterir.",
+    "answer": true,
+    "explanation": "Fiziki haritalarda yeşil alçak düzlükleri, sarı ve kahverengi yüksek yerleri, mavi ise suları gösterir."
+  },
+  {
+    "id": "sos-5-2-04",
+    "unit": "sos-5-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Okulumuz, belediye binasının karşısında ve parkın yanındadır.\" cümlesinde okulun yeri nasıl tarif edilmiştir?",
+    "choices": [
+      "Göreceli konumla",
+      "Ölçekle",
+      "Lejantla",
+      "Yükseltiyle"
+    ],
+    "answer": 0,
+    "explanation": "Bir yerin, çevresindeki başka yerlere göre tarif edilmesine göreceli konum denir."
+  },
+  {
+    "id": "sos-5-2-05",
+    "unit": "sos-5-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Eğimli yamaçlardaki toprağın ve kayaların, özellikle yağışlardan sonra aşağı doğru kaymasına ne denir?",
+    "choices": [
+      "Çığ",
+      "Sel",
+      "Heyelan",
+      "Kuraklık"
+    ],
+    "answer": 2,
+    "explanation": "Heyelan (toprak kayması), eğimli ve yağışlı yerlerde görülür. Yamaçları ağaçlandırmak heyelan riskini azaltır."
+  },
+  {
+    "id": "sos-5-2-06",
+    "unit": "sos-5-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Fiziki haritalarda kahverengi, denizlerin derin yerlerini gösterir.",
+    "answer": false,
+    "explanation": "Kahverengi, yükseltisi fazla olan dağlık yerleri gösterir. Denizler mavi ile gösterilir; mavi koyulaştıkça derinlik artar."
+  },
+  {
+    "id": "sos-5-2-07",
+    "unit": "sos-5-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Akarsular tarafından derin yarılmış, çevresine göre yüksekte kalan geniş düzlüklere ne ad verilir?",
+    "choices": [
+      "Ova",
+      "Vadi",
+      "Dağ",
+      "Plato"
+    ],
+    "answer": 3,
+    "explanation": "Plato, akarsularla derin yarılmış yüksek düzlüktür. Ova ise çevresine göre alçakta kalan düzlüktür."
+  },
+  {
+    "id": "sos-5-2-08",
+    "unit": "sos-5-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Dere yatağına ev yapılması en çok hangi afetin zararını artırır?",
+    "choices": [
+      "Sel",
+      "Çığ",
+      "Kuraklık",
+      "Erozyon"
+    ],
+    "answer": 0,
+    "explanation": "Aşırı yağışlarda dereler taşar. Dere yatağına yapılan binalar sel sularından doğrudan zarar görür."
+  },
+  {
+    "id": "sos-5-3-01",
+    "unit": "sos-5-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yazıyı bularak tarihî çağları başlatan Mezopotamya uygarlığı hangisidir?",
+    "choices": [
+      "Hititler",
+      "Sümerler",
+      "Lidyalılar",
+      "Frigler"
+    ],
+    "answer": 1,
+    "explanation": "Sümerler çivi yazısını bulmuştur. Yazının bulunması tarih öncesi çağları bitirip tarihî çağları başlatmıştır."
+  },
+  {
+    "id": "sos-5-3-02",
+    "unit": "sos-5-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Tarihte parayı ilk kez kullanan Anadolu uygarlığı hangisidir?",
+    "choices": [
+      "Urartular",
+      "İyonlar",
+      "Lidyalılar",
+      "Hititler"
+    ],
+    "answer": 2,
+    "explanation": "Lidyalılar parayı icat ederek takas yerine parayla alışverişi başlatmış, böylece ticareti kolaylaştırmıştır."
+  },
+  {
+    "id": "sos-5-3-03",
+    "unit": "sos-5-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Hititlerin başkenti Hattuşa'dır.",
+    "answer": true,
+    "explanation": "Hititlerin başkenti Hattuşa, bugünkü Çorum'un Boğazkale ilçesindedir."
+  },
+  {
+    "id": "sos-5-3-04",
+    "unit": "sos-5-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Tarihte bilinen ilk yazılı antlaşma olan Kadeş Antlaşması hangi iki devlet arasında yapılmıştır?",
+    "choices": [
+      "Sümerler ve Babiller",
+      "Lidyalılar ve Persler",
+      "Frigler ve Urartular",
+      "Hititler ve Mısırlılar"
+    ],
+    "answer": 3,
+    "explanation": "Kadeş Antlaşması, Hititler ile Mısırlılar arasında yapılmıştır ve tarihte bilinen ilk yazılı antlaşmadır."
+  },
+  {
+    "id": "sos-5-3-05",
+    "unit": "sos-5-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Babil Kralı Hammurabi en çok hangi özelliğiyle tanınır?",
+    "choices": [
+      "Yazılı kanunlar hazırlatmasıyla",
+      "Parayı bulmasıyla",
+      "Tekerleği icat etmesiyle",
+      "Kral Yolu'nu yaptırmasıyla"
+    ],
+    "answer": 0,
+    "explanation": "Hammurabi, kendi adıyla anılan yazılı kanunları hazırlatmıştır. Hammurabi Kanunları tarihin en eski yazılı hukuk kurallarındandır."
+  },
+  {
+    "id": "sos-5-3-06",
+    "unit": "sos-5-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Urartular, başkentleri Tuşpa'yı bugünkü Konya çevresinde kurmuşlardır.",
+    "answer": false,
+    "explanation": "Urartuların başkenti Tuşpa, bugünkü Van'dadır. Urartular Van Gölü çevresinde yaşamıştır."
+  },
+  {
+    "id": "sos-5-3-07",
+    "unit": "sos-5-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Lidyalıların ticareti geliştirmek için kullandığı, başkent Sardes'ten başlayan ünlü yolun adı nedir?",
+    "choices": [
+      "İpek Yolu",
+      "Baharat Yolu",
+      "Kral Yolu",
+      "Kürk Yolu"
+    ],
+    "answer": 2,
+    "explanation": "Kral Yolu, Sardes'ten başlayıp Mezopotamya'ya kadar uzanır. Bu yol Lidya'da ticaretin gelişmesini sağlamıştır."
+  },
+  {
+    "id": "sos-5-3-08",
+    "unit": "sos-5-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Asurlu tüccarların Anadolu'ya getirdiği ve Anadolu'da tarihî çağları başlatan gelişme hangisidir?",
+    "choices": [
+      "Para",
+      "Yazı",
+      "Tekerlek",
+      "Takvim"
+    ],
+    "answer": 1,
+    "explanation": "Asurlu tüccarlar ticaret için geldikleri Anadolu'ya yazıyı da getirmiştir. Kayseri yakınlarındaki Kültepe'de bulunan tabletler bunun kanıtıdır."
+  },
+  {
+    "id": "sos-5-4-01",
+    "unit": "sos-5-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Halkın kendi kendini yönetmesine dayanan yönetim biçimine ne denir?",
+    "choices": [
+      "Krallık",
+      "Saltanat",
+      "Demokrasi",
+      "İmparatorluk"
+    ],
+    "answer": 2,
+    "explanation": "Demokrasi, halkın yönetime katıldığı ve yöneticilerini seçimle belirlediği yönetim biçimidir."
+  },
+  {
+    "id": "sos-5-4-02",
+    "unit": "sos-5-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Türkiye'de cumhuriyet hangi tarihte ilan edilmiştir?",
+    "choices": [
+      "29 Ekim 1923",
+      "23 Nisan 1920",
+      "30 Ağustos 1922",
+      "19 Mayıs 1919"
+    ],
+    "answer": 0,
+    "explanation": "Cumhuriyet 29 Ekim 1923'te ilan edilmiştir. Bu tarih her yıl Cumhuriyet Bayramı olarak kutlanır."
+  },
+  {
+    "id": "sos-5-4-03",
+    "unit": "sos-5-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Demokratik ülkelerde yöneticiler seçimle belirlenir.",
+    "answer": true,
+    "explanation": "Demokraside halk, kendisini yönetecek kişileri oy vererek seçer. Seçim, demokrasinin temel özelliklerindendir."
+  },
+  {
+    "id": "sos-5-4-04",
+    "unit": "sos-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir çocuğun hastalandığında hastanede tedavi edilmesi hangi hakkıyla ilgilidir?",
+    "choices": [
+      "Eğitim hakkı",
+      "Sağlık hakkı",
+      "Oyun hakkı",
+      "Düşünce özgürlüğü"
+    ],
+    "answer": 1,
+    "explanation": "Her çocuğun sağlıklı yaşama ve sağlık hizmeti alma hakkı vardır. Devlet bu hakkı korumakla görevlidir."
+  },
+  {
+    "id": "sos-5-4-05",
+    "unit": "sos-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir ilin en üst yöneticisi kimdir?",
+    "choices": [
+      "Muhtar",
+      "Belediye başkanı",
+      "Vali",
+      "Kaymakam"
+    ],
+    "answer": 2,
+    "explanation": "İli vali yönetir. İlçenin yöneticisi kaymakam, köy ve mahallenin yöneticisi muhtardır."
+  },
+  {
+    "id": "sos-5-4-06",
+    "unit": "sos-5-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Muhtar, ilçenin yönetiminden sorumlu olan görevlidir.",
+    "answer": false,
+    "explanation": "Muhtar köy ya da mahallenin yöneticisidir. İlçenin yönetiminden kaymakam sorumludur."
+  },
+  {
+    "id": "sos-5-4-07",
+    "unit": "sos-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Mahalledeki bozuk kaldırımın onarılması için öncelikle hangi kuruma başvurulur?",
+    "choices": [
+      "Belediye",
+      "Okul müdürlüğü",
+      "Sağlık ocağı",
+      "Kütüphane"
+    ],
+    "answer": 0,
+    "explanation": "Yol, kaldırım, park, temizlik ve su gibi yerel hizmetleri belediyeler yürütür."
+  },
+  {
+    "id": "sos-5-4-08",
+    "unit": "sos-5-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangisi etkin bir vatandaşın davranışıdır?",
+    "choices": [
+      "Çevredeki sorunlarla ilgilenmemek",
+      "Kurallara yalnızca denetim varken uymak",
+      "Seçimlerde oy kullanmamak",
+      "Gördüğü sorunu ilgili kuruma bildirmek"
+    ],
+    "answer": 3,
+    "explanation": "Etkin vatandaş haklarını bilir, sorumluluklarını yerine getirir ve toplumsal sorunların çözümüne katkı sağlar."
+  },
+  {
+    "id": "sos-5-5-01",
+    "unit": "sos-5-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Toprağın ekilip biçilerek ürün elde edilmesine dayanan ekonomik faaliyet hangisidir?",
+    "choices": [
+      "Madencilik",
+      "Tarım",
+      "Turizm",
+      "Sanayi"
+    ],
+    "answer": 1,
+    "explanation": "Tarım, toprağı işleyerek bitkisel ürün elde etmektir. Buğday, pamuk, çay ve sebze yetiştiriciliği tarım faaliyetidir."
+  },
+  {
+    "id": "sos-5-5-02",
+    "unit": "sos-5-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kâğıt, cam ve plastik gibi atıkların işlenerek yeniden kullanılır hâle getirilmesine ne denir?",
+    "choices": [
+      "Tüketim",
+      "Dağıtım",
+      "İsraf",
+      "Geri dönüşüm"
+    ],
+    "answer": 3,
+    "explanation": "Geri dönüşüm, atıkların yeniden ham maddeye dönüştürülmesidir. Böylece doğal kaynaklar korunur."
+  },
+  {
+    "id": "sos-5-5-03",
+    "unit": "sos-5-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Kaynaklarımız sınırsız olduğu için tasarruf yapmaya gerek yoktur.",
+    "answer": false,
+    "explanation": "Su, enerji ve orman gibi kaynaklar sınırlıdır. Gelecek kuşaklar için bu kaynakları tasarruflu kullanmalıyız."
+  },
+  {
+    "id": "sos-5-5-04",
+    "unit": "sos-5-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ham maddelerin fabrikalarda işlenerek ürüne dönüştürülmesi hangi ekonomik faaliyettir?",
+    "choices": [
+      "Sanayi",
+      "Hayvancılık",
+      "Turizm",
+      "Ormancılık"
+    ],
+    "answer": 0,
+    "explanation": "Sanayi, ham maddelerin makinelerle işlenip kullanılabilir ürün hâline getirilmesidir."
+  },
+  {
+    "id": "sos-5-5-05",
+    "unit": "sos-5-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Deniz kıyısında yer alan, tarihî ve doğal güzellikleri çok olan bir ilde en çok hangi ekonomik faaliyetin gelişmesi beklenir?",
+    "choices": [
+      "Madencilik",
+      "Ormancılık",
+      "Turizm",
+      "Ağır sanayi"
+    ],
+    "answer": 2,
+    "explanation": "Deniz, tarihî eserler ve doğal güzellikler ziyaretçi çeker. Bu nedenle böyle yerlerde turizm gelişir."
+  },
+  {
+    "id": "sos-5-5-06",
+    "unit": "sos-5-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir yerin iklimi ve yeryüzü şekilleri, orada yapılan ekonomik faaliyetleri etkiler.",
+    "answer": true,
+    "explanation": "Örneğin düz ve verimli ovalarda tarım, dağlık ve otlak alanlarda hayvancılık daha çok yapılır."
+  },
+  {
+    "id": "sos-5-5-07",
+    "unit": "sos-5-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Aile bütçesine katkı sağlamak isteyen bir öğrenci hangisini yapmalıdır?",
+    "choices": [
+      "Her gördüğü oyuncağı istemeli",
+      "Kullanmadığı odanın ışığını kapatmalı",
+      "Yemeğini tabağında bırakmalı",
+      "Sağlam eşyalarını yenisiyle değiştirmeli"
+    ],
+    "answer": 1,
+    "explanation": "Elektriği, suyu ve eşyaları tasarruflu kullanmak ailenin giderlerini azaltır ve bütçeye katkı sağlar."
+  },
+  {
+    "id": "sos-5-5-08",
+    "unit": "sos-5-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Geliri giderinden az olan bir ailenin bütçesi için hangisi söylenir?",
+    "choices": [
+      "Bütçe denktir",
+      "Bütçe fazla vermiştir",
+      "Bütçe açık vermiştir",
+      "Birikim yapılmıştır"
+    ],
+    "answer": 2,
+    "explanation": "Gider gelirden fazlaysa bütçe açık verir. Gelir ile gider eşitse bütçe denktir; gelir fazlaysa birikim yapılabilir."
+  },
+  {
+    "id": "sos-5-6-01",
+    "unit": "sos-5-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi iletişim alanında kullanılan teknolojik bir üründür?",
+    "choices": [
+      "Buzdolabı",
+      "Traktör",
+      "Akıllı telefon",
+      "Dikiş makinesi"
+    ],
+    "answer": 2,
+    "explanation": "Akıllı telefon, insanların konuşmasını, yazışmasını ve bilgi paylaşmasını sağlayan bir iletişim aracıdır."
+  },
+  {
+    "id": "sos-5-6-02",
+    "unit": "sos-5-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İnternette güvende olmak için hangisi yapılmalıdır?",
+    "choices": [
+      "Şifreleri kimseyle paylaşmamak",
+      "Tanımadığımız kişilere adresimizi vermek",
+      "Gelen her bağlantıya tıklamak",
+      "Kişisel fotoğrafları herkese açık paylaşmak"
+    ],
+    "answer": 0,
+    "explanation": "Şifreler ve kişisel bilgiler gizli tutulmalıdır. Tanımadığımız kişilerle bilgi paylaşmak ve bilinmeyen bağlantılara tıklamak tehlikelidir."
+  },
+  {
+    "id": "sos-5-6-03",
+    "unit": "sos-5-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Teknolojik gelişmeler ulaşımı hızlandırmış ve kolaylaştırmıştır.",
+    "answer": true,
+    "explanation": "Tren, otomobil ve uçak gibi araçlar sayesinde günlerce süren yolculuklar saatlere inmiştir."
+  },
+  {
+    "id": "sos-5-6-04",
+    "unit": "sos-5-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Matbaanın geliştirilmesi toplum hayatında en çok hangi değişikliğe yol açmıştır?",
+    "choices": [
+      "Ulaşımın hızlanmasına",
+      "Tarım ürünlerinin artmasına",
+      "Evlerin aydınlatılmasına",
+      "Kitapların çoğalıp bilginin hızla yayılmasına"
+    ],
+    "answer": 3,
+    "explanation": "Matbaa sayesinde kitaplar hızlı ve ucuz biçimde çoğaltılmış, bilgi daha çok insana ulaşmıştır."
+  },
+  {
+    "id": "sos-5-6-05",
+    "unit": "sos-5-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Uzun süre ara vermeden ekran başında kalmak hangi soruna yol açabilir?",
+    "choices": [
+      "Kemiklerin güçlenmesine",
+      "Göz yorgunluğu ve hareketsizliğe",
+      "Uyku düzeninin iyileşmesine",
+      "Arkadaşlık bağlarının güçlenmesine"
+    ],
+    "answer": 1,
+    "explanation": "Ekran başında uzun süre kalmak gözleri yorar ve hareketsizliğe neden olur. Bu yüzden ekran süresi sınırlandırılmalıdır."
+  },
+  {
+    "id": "sos-5-6-06",
+    "unit": "sos-5-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "İnternette okuduğumuz her bilgi doğrudur; başka kaynaklardan kontrol etmeye gerek yoktur.",
+    "answer": false,
+    "explanation": "İnternette yanlış ya da eksik bilgiler de bulunur. Bilgiyi güvenilir ve farklı kaynaklardan kontrol etmek gerekir."
+  },
+  {
+    "id": "sos-5-6-07",
+    "unit": "sos-5-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir buluşun, onu yapan kişiye ait olduğunu gösteren resmî belgeye ne denir?",
+    "choices": [
+      "Fatura",
+      "Diploma",
+      "Patent",
+      "Dilekçe"
+    ],
+    "answer": 2,
+    "explanation": "Patent, bir buluşun sahibini belirleyen ve buluşu izinsiz kullanıma karşı koruyan resmî belgedir."
+  },
+  {
+    "id": "sos-5-6-08",
+    "unit": "sos-5-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangisi teknolojinin toplum hayatına olumsuz etkilerinden biridir?",
+    "choices": [
+      "Yüz yüze iletişimin azalması",
+      "Bilgiye hızlı ulaşılması",
+      "Uzaktaki yakınlarla görüşülebilmesi",
+      "Hastalıkların daha kolay teşhis edilmesi"
+    ],
+    "answer": 0,
+    "explanation": "Teknoloji bilinçsiz kullanıldığında insanlar birbiriyle daha az yüz yüze vakit geçirir. Diğer seçenekler teknolojinin yararlarıdır."
+  }
+]

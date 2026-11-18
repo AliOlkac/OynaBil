@@ -1,0 +1,710 @@
+[
+  {
+    "id": "sos-6-1-01",
+    "unit": "sos-6-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir kişi ya da grup hakkında yeterli bilgi edinmeden önceden verilen olumsuz yargıya ne denir?",
+    "choices": [
+      "Empati",
+      "Hoşgörü",
+      "Ön yargı",
+      "Dayanışma"
+    ],
+    "answer": 2,
+    "explanation": "Ön yargı, bir kişi ya da olay hakkında yeterince bilgi sahibi olmadan önceden karar vermektir."
+  },
+  {
+    "id": "sos-6-1-02",
+    "unit": "sos-6-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir toplumun dili, gelenekleri, sanatı ve yaşam biçimi gibi ortak değerlerinin bütününe ne denir?",
+    "choices": [
+      "Kültür",
+      "Bütçe",
+      "Nüfus",
+      "Statü"
+    ],
+    "answer": 0,
+    "explanation": "Kültür, bir toplumu diğerlerinden ayıran maddi ve manevi değerlerin tümüdür ve kuşaktan kuşağa aktarılır."
+  },
+  {
+    "id": "sos-6-1-03",
+    "unit": "sos-6-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bireyin toplum içindeki konumuna uygun olarak kendisinden beklenen davranışlara rol denir.",
+    "answer": true,
+    "explanation": "Her birey toplumda çeşitli roller üstlenir: öğrenci, evlat, takım oyuncusu gibi. Roller sorumlulukları da beraberinde getirir."
+  },
+  {
+    "id": "sos-6-1-04",
+    "unit": "sos-6-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Bütün gençler sorumsuzdur.\" gibi, bir grubun tamamına yönelik değişmez genellemeye ne ad verilir?",
+    "choices": [
+      "Empati",
+      "Rol",
+      "Dayanışma",
+      "Kalıp yargı"
+    ],
+    "answer": 3,
+    "explanation": "Kalıp yargı, bir grubun bütün üyelerinin aynı özelliği taşıdığını varsayan genellemedir ve çoğu zaman gerçeği yansıtmaz."
+  },
+  {
+    "id": "sos-6-1-05",
+    "unit": "sos-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Geçmişten günümüze cami, çeşme, aşevi ve kervansaray gibi eserler yaptırarak toplumsal yardımlaşmayı sağlayan kuruluşlar hangisidir?",
+    "choices": [
+      "Bankalar",
+      "Vakıflar",
+      "Şirketler",
+      "Borsalar"
+    ],
+    "answer": 1,
+    "explanation": "Vakıflar, kişilerin mallarını toplum yararına bağışlamasıyla kurulur ve yardımlaşmayı kurumsallaştırır."
+  },
+  {
+    "id": "sos-6-1-06",
+    "unit": "sos-6-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Ön yargılar, insanlar arasındaki iletişimi güçlendirir.",
+    "answer": false,
+    "explanation": "Ön yargılar insanları tanımadan yargılamaya yol açar ve iletişimi zayıflatır. Sağlıklı iletişim için ön yargılardan kaçınılmalıdır."
+  },
+  {
+    "id": "sos-6-1-07",
+    "unit": "sos-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi toplumsal birlik ve beraberliği güçlendirir?",
+    "choices": [
+      "Ön yargılar",
+      "Ayrımcılık",
+      "Millî ve dinî bayramlar",
+      "Kalıp yargılar"
+    ],
+    "answer": 2,
+    "explanation": "Bayramlarda insanlar bir araya gelir, yardımlaşır ve ortak duyguları paylaşır. Bu da birlik ve beraberliği güçlendirir."
+  },
+  {
+    "id": "sos-6-1-08",
+    "unit": "sos-6-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Engelli bireylerin kaldırımları rahat kullanabilmesi için rampa yapılması en çok hangi değerle ilgilidir?",
+    "choices": [
+      "Tasarruf",
+      "Eşitlik",
+      "Çalışkanlık",
+      "Misafirperverlik"
+    ],
+    "answer": 1,
+    "explanation": "Herkesin toplumsal hayata eşit biçimde katılabilmesi için engelleri kaldıran düzenlemeler eşitlik ve adalet değerinin gereğidir."
+  },
+  {
+    "id": "sos-6-2-01",
+    "unit": "sos-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Dünya'yı Kuzey ve Güney yarım kürelere ayıran, 0° ile gösterilen en büyük paralel hangisidir?",
+    "choices": [
+      "Başlangıç meridyeni",
+      "Yengeç Dönencesi",
+      "Kutup dairesi",
+      "Ekvator"
+    ],
+    "answer": 3,
+    "explanation": "Ekvator, 0° paralelidir ve Dünya'yı Kuzey ve Güney yarım küre olarak ikiye ayırır."
+  },
+  {
+    "id": "sos-6-2-02",
+    "unit": "sos-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Türkiye'de kaç coğrafi bölge vardır?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "Türkiye yedi coğrafi bölgeye ayrılır: Marmara, Ege, Akdeniz, İç Anadolu, Karadeniz, Doğu Anadolu ve Güneydoğu Anadolu."
+  },
+  {
+    "id": "sos-6-2-03",
+    "unit": "sos-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Dünya'nın en büyük okyanusu hangisidir?",
+    "choices": [
+      "Büyük Okyanus (Pasifik)",
+      "Atlas Okyanusu",
+      "Hint Okyanusu",
+      "Arktik Okyanusu"
+    ],
+    "answer": 0,
+    "explanation": "Büyük Okyanus (Pasifik), yeryüzündeki okyanusların en büyüğü ve en derinidir."
+  },
+  {
+    "id": "sos-6-2-04",
+    "unit": "sos-6-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Türkiye'nin yüz ölçümü en büyük coğrafi bölgesi Doğu Anadolu Bölgesi'dir.",
+    "answer": true,
+    "explanation": "Doğu Anadolu yüz ölçümü en büyük, Güneydoğu Anadolu ise en küçük coğrafi bölgemizdir."
+  },
+  {
+    "id": "sos-6-2-05",
+    "unit": "sos-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yazları sıcak ve kurak, kışları ılık ve yağışlı geçen iklim tipi hangisidir?",
+    "choices": [
+      "Akdeniz iklimi",
+      "Karadeniz iklimi",
+      "Karasal iklim",
+      "Kutup iklimi"
+    ],
+    "answer": 0,
+    "explanation": "Akdeniz ikliminde yazlar sıcak ve kurak, kışlar ılık ve yağışlıdır. Bitki örtüsü makidir."
+  },
+  {
+    "id": "sos-6-2-06",
+    "unit": "sos-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Karasal iklimin görüldüğü İç Anadolu'da yaygın olan, ilkbaharda yeşerip yazın kuruyan bitki örtüsü hangisidir?",
+    "choices": [
+      "Maki",
+      "Bozkır",
+      "Orman",
+      "Tundra"
+    ],
+    "answer": 1,
+    "explanation": "Bozkır (step), ilkbahar yağmurlarıyla yeşerip yaz kuraklığında sararan ot topluluğudur ve karasal iklimin bitki örtüsüdür."
+  },
+  {
+    "id": "sos-6-2-07",
+    "unit": "sos-6-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Karadeniz ikliminde yazlar kurak geçer.",
+    "answer": false,
+    "explanation": "Karadeniz iklimi her mevsim yağışlıdır. Bu nedenle bölgede gür ormanlar yetişir."
+  },
+  {
+    "id": "sos-6-2-08",
+    "unit": "sos-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Türkiye hangi iki kıtada toprağı bulunan bir ülkedir?",
+    "choices": [
+      "Asya ve Afrika",
+      "Avrupa ve Afrika",
+      "Asya ve Avrupa",
+      "Avrupa ve Amerika"
+    ],
+    "answer": 2,
+    "explanation": "Türkiye'nin Anadolu toprakları Asya'da, Trakya toprakları Avrupa'dadır. Bu konum Türkiye'yi iki kıta arasında köprü yapar."
+  },
+  {
+    "id": "sos-6-2-09",
+    "unit": "sos-6-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Türkiye'nin 36°-42° kuzey paralelleri ile 26°-45° doğu meridyenleri arasında yer alması onun hangi konumunu ifade eder?",
+    "choices": [
+      "Göreceli (özel) konumunu",
+      "Ekonomik konumunu",
+      "Siyasi konumunu",
+      "Mutlak (matematik) konumunu"
+    ],
+    "answer": 3,
+    "explanation": "Bir yerin paralel ve meridyenlerle belirtilen yeri mutlak (matematik) konumudur. Komşulara, denizlere ve kıtalara göre yeri ise göreceli konumdur."
+  },
+  {
+    "id": "sos-6-3-01",
+    "unit": "sos-6-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Tarihte bilinen ilk Türk devleti hangisidir?",
+    "choices": [
+      "Kök Türk Devleti",
+      "Asya Hun Devleti",
+      "Uygur Devleti",
+      "Karahanlı Devleti"
+    ],
+    "answer": 1,
+    "explanation": "Asya Hun Devleti, Orta Asya'da kurulan ve tarihte bilinen ilk Türk devletidir. Bilinen ilk hükümdarı Teoman'dır."
+  },
+  {
+    "id": "sos-6-3-02",
+    "unit": "sos-6-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hz. Muhammed'in ve Müslümanların 622 yılında Mekke'den Medine'ye göç etmesine ne denir?",
+    "choices": [
+      "Fetih",
+      "Biat",
+      "Hicret",
+      "Hac"
+    ],
+    "answer": 2,
+    "explanation": "Hicret, 622'de Mekke'den Medine'ye yapılan göçtür. Hicret, hicri takvimin başlangıcı kabul edilmiştir."
+  },
+  {
+    "id": "sos-6-3-03",
+    "unit": "sos-6-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Türk adını devlet adı olarak kullanan ilk devlet Kök Türklerdir.",
+    "answer": true,
+    "explanation": "Kök Türkler, \"Türk\" adını devletin resmî adı olarak kullanan ilk Türk devletidir."
+  },
+  {
+    "id": "sos-6-3-04",
+    "unit": "sos-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Orduyu onluk sisteme göre düzenleyen Asya Hun hükümdarı kimdir?",
+    "choices": [
+      "Mete Han",
+      "Bumin Kağan",
+      "Bilge Kağan",
+      "Tuğrul Bey"
+    ],
+    "answer": 0,
+    "explanation": "Mete Han orduyu onluk, yüzlük, binlik ve on binlik birliklere ayırmıştır. Onluk sistem daha sonraki Türk devletlerinde de kullanılmıştır."
+  },
+  {
+    "id": "sos-6-3-05",
+    "unit": "sos-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "1071'de kazanılan ve Anadolu'nun kapılarını Türklere açan savaş hangisidir?",
+    "choices": [
+      "Dandanakan Savaşı",
+      "Talas Savaşı",
+      "Miryokefalon Savaşı",
+      "Malazgirt Savaşı"
+    ],
+    "answer": 3,
+    "explanation": "Sultan Alparslan 1071'de Malazgirt'te Bizans ordusunu yenmiş, bu zaferle Anadolu'nun kapıları Türklere açılmıştır."
+  },
+  {
+    "id": "sos-6-3-06",
+    "unit": "sos-6-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Orhun Yazıtları Uygurlar tarafından dikilmiştir.",
+    "answer": false,
+    "explanation": "Orhun Yazıtları Kök Türkler döneminde Bilge Kağan, Kül Tigin ve Tonyukuk adına dikilmiştir. Türk tarihinin ilk yazılı belgelerindendir."
+  },
+  {
+    "id": "sos-6-3-07",
+    "unit": "sos-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yerleşik hayata geçen, kâğıt ve matbaayı kullanan Türk devleti hangisidir?",
+    "choices": [
+      "Asya Hunları",
+      "Kök Türkler",
+      "Uygurlar",
+      "Avarlar"
+    ],
+    "answer": 2,
+    "explanation": "Uygurlar yerleşik hayata geçmiş, şehirler kurmuş, tarımla uğraşmış, kâğıt ve matbaayı kullanmıştır."
+  },
+  {
+    "id": "sos-6-3-08",
+    "unit": "sos-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Orta Asya'da kurulan ilk Müslüman Türk devleti hangisidir?",
+    "choices": [
+      "Gazneliler",
+      "Karahanlılar",
+      "Büyük Selçuklular",
+      "Uygurlar"
+    ],
+    "answer": 1,
+    "explanation": "Karahanlılar, Satuk Buğra Han döneminde İslamiyet'i kabul etmiş ve Orta Asya'da kurulan ilk Müslüman Türk devleti olmuştur."
+  },
+  {
+    "id": "sos-6-3-09",
+    "unit": "sos-6-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "751'de Türklerin Abbasilerin yanında yer aldığı ve Türk-İslam ilişkilerini geliştiren savaş hangisidir?",
+    "choices": [
+      "Talas Savaşı",
+      "Dandanakan Savaşı",
+      "Pasinler Savaşı",
+      "Kösedağ Savaşı"
+    ],
+    "answer": 0,
+    "explanation": "Talas Savaşı'nda Karluk Türkleri Çinlilere karşı Abbasileri desteklemiştir. Bu savaştan sonra Türkler arasında İslamiyet yayılmaya başlamıştır."
+  },
+  {
+    "id": "sos-6-3-10",
+    "unit": "sos-6-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kur'an-ı Kerim hangi halife döneminde çoğaltılarak önemli merkezlere gönderilmiştir?",
+    "choices": [
+      "Hz. Ebubekir",
+      "Hz. Ömer",
+      "Hz. Ali",
+      "Hz. Osman"
+    ],
+    "answer": 3,
+    "explanation": "Kur'an-ı Kerim Hz. Ebubekir döneminde kitap hâline getirilmiş, Hz. Osman döneminde çoğaltılarak önemli merkezlere gönderilmiştir."
+  },
+  {
+    "id": "sos-6-4-01",
+    "unit": "sos-6-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Türkiye'de yasama (kanun yapma) yetkisi hangi kuruma aittir?",
+    "choices": [
+      "Mahkemeler",
+      "Belediyeler",
+      "Türkiye Büyük Millet Meclisi",
+      "Valilikler"
+    ],
+    "answer": 2,
+    "explanation": "Anayasa'ya göre yasama yetkisi Türk milleti adına Türkiye Büyük Millet Meclisine aittir."
+  },
+  {
+    "id": "sos-6-4-02",
+    "unit": "sos-6-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yönetimin tek kişide olduğu ve genellikle babadan oğula geçtiği yönetim biçimi hangisidir?",
+    "choices": [
+      "Monarşi",
+      "Demokrasi",
+      "Oligarşi",
+      "Cumhuriyet"
+    ],
+    "answer": 0,
+    "explanation": "Monarşide egemenlik tek bir kişiye (kral, padişah, imparator) aittir ve yönetim çoğunlukla babadan oğula geçer."
+  },
+  {
+    "id": "sos-6-4-03",
+    "unit": "sos-6-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Demokrasilerde egemenlik millete aittir.",
+    "answer": true,
+    "explanation": "Demokraside yönetme yetkisinin kaynağı millettir. Millet bu yetkiyi seçtiği temsilciler aracılığıyla kullanır."
+  },
+  {
+    "id": "sos-6-4-04",
+    "unit": "sos-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Türkiye'de yargı yetkisini Türk milleti adına kimler kullanır?",
+    "choices": [
+      "Belediye meclisleri",
+      "Bağımsız ve tarafsız mahkemeler",
+      "Siyasi partiler",
+      "Muhtarlıklar"
+    ],
+    "answer": 1,
+    "explanation": "Anayasa'ya göre yargı yetkisi Türk milleti adına bağımsız ve tarafsız mahkemelerce kullanılır."
+  },
+  {
+    "id": "sos-6-4-05",
+    "unit": "sos-6-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Yasama, yürütme ve yargı yetkilerinin farklı organlarca kullanılmasına ne denir?",
+    "choices": [
+      "Kuvvetler birliği",
+      "Monarşi",
+      "Oligarşi",
+      "Kuvvetler ayrılığı"
+    ],
+    "answer": 3,
+    "explanation": "Kuvvetler ayrılığında yasama, yürütme ve yargı ayrı organlara verilir. Böylece yetkinin tek elde toplanması önlenir."
+  },
+  {
+    "id": "sos-6-4-06",
+    "unit": "sos-6-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Oligarşi, yöneticilerin halkın tamamının oyuyla belirlendiği yönetim biçimidir.",
+    "answer": false,
+    "explanation": "Oligarşide yönetim ayrıcalıklı küçük bir grubun elindedir. Yöneticilerin halk oyuyla belirlendiği yönetim demokrasidir."
+  },
+  {
+    "id": "sos-6-4-07",
+    "unit": "sos-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Devletin din kurallarına göre yönetildiği yönetim biçimine ne ad verilir?",
+    "choices": [
+      "Demokrasi",
+      "Cumhuriyet",
+      "Teokrasi",
+      "Oligarşi"
+    ],
+    "answer": 2,
+    "explanation": "Teokraside devlet din kurallarına göre yönetilir ve yöneticiler gücünü dinden aldığını kabul eder."
+  },
+  {
+    "id": "sos-6-4-08",
+    "unit": "sos-6-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangisi demokrasinin temel ilkelerinden biri değildir?",
+    "choices": [
+      "Millî egemenlik",
+      "Yönetim yetkisinin tek kişide toplanması",
+      "Hukukun üstünlüğü",
+      "Özgür ve adil seçimler"
+    ],
+    "answer": 1,
+    "explanation": "Demokrasi millî egemenliğe, hukukun üstünlüğüne, eşitliğe ve özgür seçimlere dayanır. Yetkinin tek kişide toplanması demokrasiye aykırıdır."
+  },
+  {
+    "id": "sos-6-5-01",
+    "unit": "sos-6-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Devletin kamu hizmetlerini karşılamak için vatandaşlardan topladığı paraya ne denir?",
+    "choices": [
+      "Kredi",
+      "Vergi",
+      "Faiz",
+      "Bağış"
+    ],
+    "answer": 1,
+    "explanation": "Vergi, devletin yol, okul, hastane ve güvenlik gibi hizmetleri karşılamak için topladığı paradır. Vergi vermek vatandaşlık görevidir."
+  },
+  {
+    "id": "sos-6-5-02",
+    "unit": "sos-6-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Türkiye'de çay tarımı en çok hangi coğrafi bölgede yapılır?",
+    "choices": [
+      "Ege Bölgesi",
+      "İç Anadolu Bölgesi",
+      "Akdeniz Bölgesi",
+      "Karadeniz Bölgesi"
+    ],
+    "answer": 3,
+    "explanation": "Çay bol yağış ve ılıman iklim ister. Bu koşullar Doğu Karadeniz kıyılarında, özellikle Rize çevresinde bulunur."
+  },
+  {
+    "id": "sos-6-5-03",
+    "unit": "sos-6-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Taş kömürü yenilenebilir bir enerji kaynağıdır.",
+    "answer": false,
+    "explanation": "Taş kömürü, petrol ve doğal gaz tükenebilir (yenilenemez) kaynaklardır. Güneş, rüzgâr ve su gücü yenilenebilir kaynaklardır."
+  },
+  {
+    "id": "sos-6-5-04",
+    "unit": "sos-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi yenilenebilir enerji kaynağıdır?",
+    "choices": [
+      "Güneş enerjisi",
+      "Petrol",
+      "Doğal gaz",
+      "Linyit"
+    ],
+    "answer": 0,
+    "explanation": "Güneş enerjisi tükenmez ve kendini yeniler. Petrol, doğal gaz ve linyit ise kullanıldıkça tükenen fosil yakıtlardır."
+  },
+  {
+    "id": "sos-6-5-05",
+    "unit": "sos-6-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Türkiye'nin dünyada en zengin rezervlerine sahip olduğu maden hangisidir?",
+    "choices": [
+      "Altın",
+      "Elmas",
+      "Bor",
+      "Petrol"
+    ],
+    "answer": 2,
+    "explanation": "Dünya bor rezervlerinin büyük bölümü Türkiye'dedir. Bor; cam, seramik, temizlik ve savunma sanayisi gibi pek çok alanda kullanılır."
+  },
+  {
+    "id": "sos-6-5-06",
+    "unit": "sos-6-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Vergi veren vatandaşlar; yol, okul ve hastane gibi hizmetlerin yapılmasına katkı sağlar.",
+    "answer": true,
+    "explanation": "Devlet kamu hizmetlerini büyük ölçüde vergi gelirleriyle yürütür. Bu nedenle vergisini veren herkes bu hizmetlere katkıda bulunur."
+  },
+  {
+    "id": "sos-6-5-07",
+    "unit": "sos-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yeni bir iş fikrini hayata geçirmek için risk alarak iş kuran kişiye ne denir?",
+    "choices": [
+      "Tüketici",
+      "Girişimci",
+      "Memur",
+      "Emekli"
+    ],
+    "answer": 1,
+    "explanation": "Girişimci, bir ihtiyacı fark edip sermaye ve emeğini ortaya koyarak yeni bir iş kuran kişidir."
+  },
+  {
+    "id": "sos-6-5-08",
+    "unit": "sos-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir ürünün tüketiciye tanıtılması ve satışa sunulması sürecine ne ad verilir?",
+    "choices": [
+      "Pazarlama",
+      "Hasat",
+      "Tasarruf",
+      "Geri dönüşüm"
+    ],
+    "answer": 0,
+    "explanation": "Pazarlama, ürünün tanıtım, reklam ve satış yoluyla tüketiciye ulaştırılması sürecidir."
+  },
+  {
+    "id": "sos-6-5-09",
+    "unit": "sos-6-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir ülkede eğitimli ve nitelikli insan gücünün artması en çok neyi sağlar?",
+    "choices": [
+      "Doğal kaynakların tükenmesini",
+      "İhtiyaçların azalmasını",
+      "Vergilerin kaldırılmasını",
+      "Üretimin ve verimliliğin artmasını"
+    ],
+    "answer": 3,
+    "explanation": "Nitelikli insan gücü bilgiyi ve teknolojiyi daha iyi kullanır. Bu da üretimi, verimliliği ve ülke ekonomisini geliştirir."
+  },
+  {
+    "id": "sos-6-6-01",
+    "unit": "sos-6-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kazı yaparak eski uygarlıklara ait kalıntıları ortaya çıkaran bilim dalı hangisidir?",
+    "choices": [
+      "Sosyoloji",
+      "Psikoloji",
+      "Arkeoloji",
+      "Ekonomi"
+    ],
+    "answer": 2,
+    "explanation": "Arkeoloji (kazı bilimi), toprak ve su altındaki kalıntıları ortaya çıkarıp inceleyerek geçmiş uygarlıkları aydınlatır."
+  },
+  {
+    "id": "sos-6-6-02",
+    "unit": "sos-6-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bilimsel bir araştırmanın ilk basamağı hangisidir?",
+    "choices": [
+      "Araştırma konusunun belirlenmesi",
+      "Raporun yazılması",
+      "Kaynakçanın hazırlanması",
+      "Sonuçların sunulması"
+    ],
+    "answer": 0,
+    "explanation": "Araştırma, konunun (problemin) belirlenmesiyle başlar. Ardından bilgi toplanır, değerlendirilir, rapor yazılır ve sunulur."
+  },
+  {
+    "id": "sos-6-6-03",
+    "unit": "sos-6-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bir araştırmada yararlanılan kaynakların kaynakçada belirtilmesi gerekir.",
+    "answer": true,
+    "explanation": "Kaynak göstermek hem başkalarının emeğine saygıdır hem de araştırmanın güvenilirliğini artırır."
+  },
+  {
+    "id": "sos-6-6-04",
+    "unit": "sos-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir yazarın kitabının izinsiz çoğaltılıp satılması hangi hakkın ihlalidir?",
+    "choices": [
+      "Seyahat özgürlüğü",
+      "Telif hakkı",
+      "Seçme hakkı",
+      "Dilekçe hakkı"
+    ],
+    "answer": 1,
+    "explanation": "Telif hakkı, bir kişinin ürettiği eser üzerindeki hakkıdır. Eserin izinsiz çoğaltılması bu hakkı çiğner."
+  },
+  {
+    "id": "sos-6-6-05",
+    "unit": "sos-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Toplumun yapısını ve toplumsal ilişkileri inceleyen bilim dalı hangisidir?",
+    "choices": [
+      "Coğrafya",
+      "Arkeoloji",
+      "Tarih",
+      "Sosyoloji"
+    ],
+    "answer": 3,
+    "explanation": "Sosyoloji (toplum bilimi), toplumu, toplumsal grupları ve insanlar arasındaki ilişkileri inceler."
+  },
+  {
+    "id": "sos-6-6-06",
+    "unit": "sos-6-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Başkasına ait bir yazıyı kaynak göstermeden kendi ödevimiz gibi sunmak doğru bir davranıştır.",
+    "answer": false,
+    "explanation": "Başkasının emeğini kendi çalışmamız gibi göstermek etik değildir. Yararlandığımız kaynakları mutlaka belirtmeliyiz."
+  },
+  {
+    "id": "sos-6-6-07",
+    "unit": "sos-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İnternet ve uydu teknolojisinin gelişmesi kültürler arası etkileşimi nasıl etkilemiştir?",
+    "choices": [
+      "Tamamen durdurmuştur",
+      "Yavaşlatmıştır",
+      "Hızlandırıp artırmıştır",
+      "Etkilememiştir"
+    ],
+    "answer": 2,
+    "explanation": "İletişim teknolojileri sayesinde farklı ülkelerdeki insanlar birbirinin kültürünü kolayca tanır; kültürel etkileşim hızlanmıştır."
+  },
+  {
+    "id": "sos-6-6-08",
+    "unit": "sos-6-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir tarihçi, araştırdığı döneme ait mektup ve fermanları inceliyor. Bu belgeler ne tür kaynaktır?",
+    "choices": [
+      "Sözlü kaynak",
+      "Birinci elden yazılı kaynak",
+      "İkinci elden kaynak",
+      "Kalıntı (arkeolojik buluntu)"
+    ],
+    "answer": 1,
+    "explanation": "Olayın yaşandığı döneme ait mektup, ferman ve kitabe gibi belgeler birinci elden yazılı kaynaklardır."
+  }
+]

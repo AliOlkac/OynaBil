@@ -1,0 +1,725 @@
+[
+  {
+    "id": "sos-7-1-01",
+    "unit": "sos-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Karşımızdaki kişiyi suçlamadan, kendi duygu ve düşüncelerimizi açıkça anlatma biçimine ne denir?",
+    "choices": [
+      "Sen dili",
+      "Ben dili",
+      "Beden dili",
+      "Ön yargı"
+    ],
+    "answer": 1,
+    "explanation": "Ben dili, \"Geç kaldığında merak ediyorum.\" gibi kendi duygumuzu anlatan konuşma biçimidir. Suçlayıcı olan sen dili ise iletişimi zedeler."
+  },
+  {
+    "id": "sos-7-1-02",
+    "unit": "sos-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi kitle iletişim araçlarından biridir?",
+    "choices": [
+      "Mektup",
+      "Günlük",
+      "Not defteri",
+      "Televizyon"
+    ],
+    "answer": 3,
+    "explanation": "Televizyon, radyo, gazete ve internet aynı anda çok sayıda insana ulaşan kitle iletişim araçlarıdır."
+  },
+  {
+    "id": "sos-7-1-03",
+    "unit": "sos-7-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Jest ve mimikler sözsüz iletişimin (beden dilinin) parçasıdır.",
+    "answer": true,
+    "explanation": "İletişim yalnızca sözle kurulmaz. El kol hareketleri (jest) ve yüz ifadeleri (mimik) de duygu ve düşünce aktarır."
+  },
+  {
+    "id": "sos-7-1-04",
+    "unit": "sos-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi iletişimi olumsuz etkileyen bir davranıştır?",
+    "choices": [
+      "Konuşanın sözünü sık sık kesmek",
+      "Göz teması kurmak",
+      "Empati kurmak",
+      "Etkin dinlemek"
+    ],
+    "answer": 0,
+    "explanation": "Söz kesmek karşıdaki kişiye değer verilmediği duygusunu uyandırır. Göz teması, empati ve etkin dinleme ise iletişimi güçlendirir."
+  },
+  {
+    "id": "sos-7-1-05",
+    "unit": "sos-7-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir haberin doğruluğunu farklı ve güvenilir kaynaklardan kontrol etmeye ne ad verilir?",
+    "choices": [
+      "Sansür",
+      "Reklam",
+      "Teyit (doğrulama)",
+      "Yorum"
+    ],
+    "answer": 2,
+    "explanation": "Teyit, bir bilginin doğru olup olmadığını güvenilir kaynaklardan kontrol etmektir. Medya okuryazarı kişi haberi teyit etmeden paylaşmaz."
+  },
+  {
+    "id": "sos-7-1-06",
+    "unit": "sos-7-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Basın özgürlüğü, kişilerin özel hayatının gizliliğini ihlal etme hakkı verir.",
+    "answer": false,
+    "explanation": "Özgürlükler sınırsız değildir. Basın, haber yaparken kişilerin özel hayatının gizliliğine saygı göstermek zorundadır."
+  },
+  {
+    "id": "sos-7-1-07",
+    "unit": "sos-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Medyada haberlerin doğru ve tarafsız verilmesi en çok hangi hakla ilgilidir?",
+    "choices": [
+      "Mülkiyet hakkı",
+      "Doğru bilgi alma hakkı",
+      "Seyahat özgürlüğü",
+      "Dilekçe hakkı"
+    ],
+    "answer": 1,
+    "explanation": "Halkın olaylardan doğru biçimde haberdar olması doğru bilgi alma hakkının gereğidir. Bu nedenle medya tarafsız ve doğru haber vermelidir."
+  },
+  {
+    "id": "sos-7-1-08",
+    "unit": "sos-7-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir gazetenin, hakkında yanlış haber yaptığı kişinin gönderdiği düzeltme yazısını yayımlaması hangi hakla ilgilidir?",
+    "choices": [
+      "Konut dokunulmazlığı",
+      "Seyahat özgürlüğü",
+      "Mülkiyet hakkı",
+      "Düzeltme ve cevap hakkı"
+    ],
+    "answer": 3,
+    "explanation": "Hakkında gerçeğe aykırı yayın yapılan kişi düzeltme ve cevap (tekzip) hakkını kullanabilir; yayın organı bu yazıyı yayımlamak zorundadır."
+  },
+  {
+    "id": "sos-7-2-01",
+    "unit": "sos-7-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İnsanların çeşitli nedenlerle yaşadıkları yerden ayrılıp başka bir yere yerleşmesine ne denir?",
+    "choices": [
+      "Göç",
+      "Turizm",
+      "Ticaret",
+      "Sayım"
+    ],
+    "answer": 0,
+    "explanation": "Göç, insanların ekonomik, doğal, sosyal ya da siyasi nedenlerle yaşadıkları yeri değiştirmesidir."
+  },
+  {
+    "id": "sos-7-2-02",
+    "unit": "sos-7-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Dünya'nın yüz ölçümü en büyük kıtası hangisidir?",
+    "choices": [
+      "Afrika",
+      "Avrupa",
+      "Amerika",
+      "Asya"
+    ],
+    "answer": 3,
+    "explanation": "Asya, yüz ölçümü bakımından Dünya'nın en büyük kıtasıdır."
+  },
+  {
+    "id": "sos-7-2-03",
+    "unit": "sos-7-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir yerde nüfusun yoğunlaşmasını sağlayan etkenlerden biridir?",
+    "choices": [
+      "Arazinin çok engebeli olması",
+      "İklimin çok sert olması",
+      "İş imkânlarının fazla olması",
+      "Su kaynaklarının az olması"
+    ],
+    "answer": 2,
+    "explanation": "İnsanlar iş bulabildikleri, ikliminin ve arazisinin elverişli olduğu yerlere yerleşmeyi tercih eder."
+  },
+  {
+    "id": "sos-7-2-04",
+    "unit": "sos-7-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Türkiye'de nüfus, genel olarak kıyı kesimlerde iç ve dağlık kesimlere göre daha yoğundur.",
+    "answer": true,
+    "explanation": "Kıyılarda iklimin ılıman, arazinin düz, ulaşım ve iş imkânlarının fazla olması nüfusun buralarda yoğunlaşmasını sağlamıştır."
+  },
+  {
+    "id": "sos-7-2-05",
+    "unit": "sos-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İyi eğitimli ve nitelikli kişilerin çalışmak için başka ülkelere gitmesine ne denir?",
+    "choices": [
+      "Mevsimlik göç",
+      "İç göç",
+      "Mübadele",
+      "Beyin göçü"
+    ],
+    "answer": 3,
+    "explanation": "Beyin göçü, bilim insanı, mühendis ve doktor gibi nitelikli kişilerin başka ülkelere göç etmesidir. Göç veren ülke için kayıptır."
+  },
+  {
+    "id": "sos-7-2-06",
+    "unit": "sos-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi göçün doğal nedenlerinden biridir?",
+    "choices": [
+      "İşsizlik",
+      "Deprem",
+      "Savaş",
+      "Eğitim imkânları"
+    ],
+    "answer": 1,
+    "explanation": "Deprem, sel, kuraklık ve heyelan gibi olaylar göçün doğal nedenleridir. İşsizlik ekonomik, savaş siyasi, eğitim sosyal nedendir."
+  },
+  {
+    "id": "sos-7-2-07",
+    "unit": "sos-7-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Köyden kente yoğun göç, kentlerde konut ve trafik sorunlarını azaltır.",
+    "answer": false,
+    "explanation": "Yoğun göç alan kentlerde nüfus hızla artar; konut sıkıntısı, trafik, altyapı ve çevre sorunları büyür."
+  },
+  {
+    "id": "sos-7-2-08",
+    "unit": "sos-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yeryüzü şekillerinin engebeli ve yükseltinin fazla olduğu yerlerde nüfus genellikle nasıldır?",
+    "choices": [
+      "Yoğundur",
+      "Her yerde eşittir",
+      "Seyrektir",
+      "Hızla artar"
+    ],
+    "answer": 2,
+    "explanation": "Dağlık ve yüksek yerlerde tarım, ulaşım ve yerleşme zordur. Bu yüzden buralarda nüfus seyrektir."
+  },
+  {
+    "id": "sos-7-2-09",
+    "unit": "sos-7-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Anayasamıza göre herkesin dilediği yerde oturma ve gezme hakkına ne ad verilir?",
+    "choices": [
+      "Konut dokunulmazlığı",
+      "Yerleşme ve seyahat özgürlüğü",
+      "Dilekçe hakkı",
+      "Mülkiyet hakkı"
+    ],
+    "answer": 1,
+    "explanation": "Yerleşme ve seyahat özgürlüğü, kişilerin istedikleri yerde yaşayabilmesini ve seyahat edebilmesini güvence altına alır."
+  },
+  {
+    "id": "sos-7-3-01",
+    "unit": "sos-7-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Osmanlı Devleti'nin kurucusu kimdir?",
+    "choices": [
+      "Ertuğrul Gazi",
+      "Orhan Bey",
+      "Osman Bey",
+      "I. Murad"
+    ],
+    "answer": 2,
+    "explanation": "Osmanlı Devleti, 1299'da Osman Bey tarafından kurulmuş ve adını kurucusundan almıştır."
+  },
+  {
+    "id": "sos-7-3-02",
+    "unit": "sos-7-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İstanbul'u 1453'te fetheden Osmanlı padişahı kimdir?",
+    "choices": [
+      "II. Mehmed (Fatih)",
+      "II. Murad",
+      "Yavuz Sultan Selim",
+      "Kanuni Sultan Süleyman"
+    ],
+    "answer": 0,
+    "explanation": "II. Mehmed 1453'te İstanbul'u fethetmiş ve \"Fatih\" unvanını almıştır. Fetihle Bizans İmparatorluğu sona ermiştir."
+  },
+  {
+    "id": "sos-7-3-03",
+    "unit": "sos-7-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Osmanlı Devleti, Söğüt ve Domaniç çevresinde kurulmuştur.",
+    "answer": true,
+    "explanation": "Kayı boyu Söğüt ve Domaniç çevresine yerleşmiş, Osmanlı Beyliği burada kurulmuştur."
+  },
+  {
+    "id": "sos-7-3-04",
+    "unit": "sos-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bursa'yı fethederek başkent yapan Osmanlı hükümdarı kimdir?",
+    "choices": [
+      "Osman Bey",
+      "I. Murad",
+      "Yıldırım Bayezid",
+      "Orhan Bey"
+    ],
+    "answer": 3,
+    "explanation": "Orhan Bey 1326'da Bursa'yı fethederek başkent yapmıştır. Onun döneminde ilk düzenli ordu kurulmuş ve Rumeli'ye geçilmiştir."
+  },
+  {
+    "id": "sos-7-3-05",
+    "unit": "sos-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "1402 Ankara Savaşı'ndan sonra şehzadeler arasında taht kavgalarının yaşandığı döneme ne ad verilir?",
+    "choices": [
+      "Lale Devri",
+      "Fetret Devri",
+      "Tanzimat Dönemi",
+      "Yükselme Dönemi"
+    ],
+    "answer": 1,
+    "explanation": "Yıldırım Bayezid'in Ankara Savaşı'nda Timur'a yenilmesinden sonra başlayan Fetret Devri, 1413'te Çelebi Mehmed'in tahta geçmesiyle sona ermiştir."
+  },
+  {
+    "id": "sos-7-3-06",
+    "unit": "sos-7-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Preveze Deniz Savaşı'nı kazanan Osmanlı donanmasının komutanı Piri Reis'tir.",
+    "answer": false,
+    "explanation": "1538 Preveze Deniz Savaşı'nı Barbaros Hayrettin Paşa komutasındaki Osmanlı donanması kazanmıştır."
+  },
+  {
+    "id": "sos-7-3-07",
+    "unit": "sos-7-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Osmanlı'nın, fethettiği Balkan topraklarına Anadolu'dan getirdiği Türkmenleri yerleştirmesine ne ad verilir?",
+    "choices": [
+      "Tımar sistemi",
+      "Devşirme sistemi",
+      "İskân politikası",
+      "Ahilik"
+    ],
+    "answer": 2,
+    "explanation": "İskân (yerleştirme) politikasıyla fethedilen yerlerin Türkleşmesi ve kalıcı biçimde elde tutulması amaçlanmıştır."
+  },
+  {
+    "id": "sos-7-3-08",
+    "unit": "sos-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Halifelik, hangi padişahın Mısır Seferi'nden sonra Osmanlı Devleti'ne geçmiştir?",
+    "choices": [
+      "Fatih Sultan Mehmed",
+      "Yavuz Sultan Selim",
+      "Kanuni Sultan Süleyman",
+      "II. Bayezid"
+    ],
+    "answer": 1,
+    "explanation": "Yavuz Sultan Selim'in Mısır Seferi (1516-1517) ile Memlük Devleti sona ermiş, halifelik Osmanlı'ya geçmiştir."
+  },
+  {
+    "id": "sos-7-3-09",
+    "unit": "sos-7-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Avrupa'da 15. yüzyılda İtalya'da başlayan; bilim, sanat ve edebiyat alanındaki yenilik hareketine ne ad verilir?",
+    "choices": [
+      "Reform",
+      "Coğrafi Keşifler",
+      "Sanayi İnkılabı",
+      "Rönesans"
+    ],
+    "answer": 3,
+    "explanation": "Rönesans (yeniden doğuş), İtalya'da başlayıp Avrupa'ya yayılan bilim, sanat ve edebiyattaki yenilik hareketidir."
+  },
+  {
+    "id": "sos-7-3-10",
+    "unit": "sos-7-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "1517'de Almanya'da Martin Luther'in öncülüğünde başlayan dinî yenilik hareketi hangisidir?",
+    "choices": [
+      "Reform",
+      "Rönesans",
+      "Aydınlanma",
+      "Fransız İhtilali"
+    ],
+    "answer": 0,
+    "explanation": "Reform, Katolik Kilisesi'nin uygulamalarına tepki olarak Almanya'da başlamış ve Avrupa'da yeni mezheplerin doğmasına yol açmıştır."
+  },
+  {
+    "id": "sos-7-4-01",
+    "unit": "sos-7-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İngiltere'de 1215'te kralın yetkilerini ilk kez sınırlandıran belge hangisidir?",
+    "choices": [
+      "Sened-i İttifak",
+      "Magna Carta",
+      "Kanun-i Esasi",
+      "Tanzimat Fermanı"
+    ],
+    "answer": 1,
+    "explanation": "Magna Carta (Büyük Sözleşme) ile İngiltere'de kralın yetkileri ilk kez sınırlandırılmıştır. Demokrasi tarihinin önemli adımlarındandır."
+  },
+  {
+    "id": "sos-7-4-02",
+    "unit": "sos-7-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Türk kadınına milletvekili seçme ve seçilme hakkı hangi yıl tanınmıştır?",
+    "choices": [
+      "1923",
+      "1930",
+      "1934",
+      "1946"
+    ],
+    "answer": 2,
+    "explanation": "Türk kadını 1930'da belediye seçimlerine katılma, 1934'te milletvekili seçme ve seçilme hakkını kazanmıştır."
+  },
+  {
+    "id": "sos-7-4-03",
+    "unit": "sos-7-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Osmanlı Devleti'nin ilk anayasası Kanun-i Esasi'dir.",
+    "answer": true,
+    "explanation": "Kanun-i Esasi 1876'da ilan edilmiş, böylece I. Meşrutiyet dönemi başlamıştır."
+  },
+  {
+    "id": "sos-7-4-04",
+    "unit": "sos-7-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Osmanlı'da padişahın yetkilerinin âyanlar karşısında ilk kez sınırlandığı 1808 tarihli belge hangisidir?",
+    "choices": [
+      "Islahat Fermanı",
+      "Tanzimat Fermanı",
+      "Kanun-i Esasi",
+      "Sened-i İttifak"
+    ],
+    "answer": 3,
+    "explanation": "Sened-i İttifak, II. Mahmud döneminde âyanlarla imzalanmış ve padişahın yetkilerini ilk kez sınırlandırmıştır."
+  },
+  {
+    "id": "sos-7-4-05",
+    "unit": "sos-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "1839'da ilan edilen ve kanun gücünün üstünlüğünün kabul edildiği belge hangisidir?",
+    "choices": [
+      "Tanzimat Fermanı",
+      "Sened-i İttifak",
+      "Magna Carta",
+      "Kanun-i Esasi"
+    ],
+    "answer": 0,
+    "explanation": "Tanzimat Fermanı ile padişah, kanunların kendi yetkisinin de üstünde olduğunu kabul etmiş; can, mal ve namus güvenliği güvence altına alınmıştır."
+  },
+  {
+    "id": "sos-7-4-06",
+    "unit": "sos-7-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Kanun-i Esasi'nin ilanıyla Osmanlı Devleti'nde cumhuriyet yönetimine geçilmiştir.",
+    "answer": false,
+    "explanation": "Kanun-i Esasi ile meşrutiyet yönetimine geçilmiştir. Meşrutiyette padişahın yanında halkın seçtiği bir meclis de bulunur."
+  },
+  {
+    "id": "sos-7-4-07",
+    "unit": "sos-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "1948'de Birleşmiş Milletler tarafından kabul edilen ve temel insan haklarını sayan belge hangisidir?",
+    "choices": [
+      "Magna Carta",
+      "Fransız İnsan ve Yurttaş Hakları Bildirisi",
+      "İnsan Hakları Evrensel Bildirgesi",
+      "Çocuk Haklarına Dair Sözleşme"
+    ],
+    "answer": 2,
+    "explanation": "İnsan Hakları Evrensel Bildirgesi 10 Aralık 1948'de kabul edilmiştir. Bu nedenle 10 Aralık, İnsan Hakları Günü olarak anılır."
+  },
+  {
+    "id": "sos-7-4-08",
+    "unit": "sos-7-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Antik Çağ'da Atina'da uygulanan demokrasinin günümüz demokrasisinden farkı hangisidir?",
+    "choices": [
+      "Kararların oylamayla alınması",
+      "Kadınların ve kölelerin yönetime katılamaması",
+      "Yurttaşların söz hakkının olması",
+      "Meclisin bulunması"
+    ],
+    "answer": 1,
+    "explanation": "Atina demokrasisinde yalnızca özgür erkek yurttaşlar yönetime katılabilirdi. Kadınların, kölelerin ve yabancıların siyasi hakkı yoktu."
+  },
+  {
+    "id": "sos-7-5-01",
+    "unit": "sos-7-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Anadolu'da 13. yüzyılda Ahi Evran'ın öncülüğünde kurulan esnaf ve zanaatkâr dayanışma teşkilatı hangisidir?",
+    "choices": [
+      "Divan",
+      "Medrese",
+      "Ahilik",
+      "Tımar"
+    ],
+    "answer": 2,
+    "explanation": "Ahilik, esnaf ve zanaatkârlar arasında dayanışmayı, dürüstlüğü ve kaliteli üretimi esas alan teşkilattır."
+  },
+  {
+    "id": "sos-7-5-02",
+    "unit": "sos-7-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Meslek seçerken öncelikle neye dikkat etmeliyiz?",
+    "choices": [
+      "İlgi ve yeteneklerimize",
+      "Arkadaşlarımızın seçimine",
+      "Mesleğin yalnızca kazancına",
+      "Mesleğin ne kadar kolay olduğuna"
+    ],
+    "answer": 0,
+    "explanation": "İlgi ve yeteneklerimize uygun meslek seçmek, işimizde hem mutlu hem başarılı olmamızı sağlar."
+  },
+  {
+    "id": "sos-7-5-03",
+    "unit": "sos-7-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Üretilen ürünlerin tüketicilere ulaştırılması aşamasına ne denir?",
+    "choices": [
+      "Üretim",
+      "Dağıtım",
+      "Tüketim",
+      "Tasarruf"
+    ],
+    "answer": 1,
+    "explanation": "Ekonomik faaliyetler üretim, dağıtım ve tüketim olarak sıralanır. Dağıtım, ürünün üreticiden tüketiciye ulaştırılmasıdır."
+  },
+  {
+    "id": "sos-7-5-04",
+    "unit": "sos-7-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Vakıflar, kişilerin mallarını toplum yararına karşılıksız olarak bağışlamasıyla kurulan kuruluşlardır.",
+    "answer": true,
+    "explanation": "Osmanlı'da cami, medrese, hastane, çeşme ve aşevi gibi pek çok hizmet vakıflar eliyle yürütülmüştür."
+  },
+  {
+    "id": "sos-7-5-05",
+    "unit": "sos-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Osmanlı'da toprak gelirlerinin hizmet karşılığında asker ve memurlara bırakıldığı sistem hangisidir?",
+    "choices": [
+      "Devşirme sistemi",
+      "İskân politikası",
+      "Lonca teşkilatı",
+      "Tımar sistemi"
+    ],
+    "answer": 3,
+    "explanation": "Tımar sisteminde toprağın geliri maaş yerine görevlilere bırakılır, onlar da atlı asker (cebelü) yetiştirirdi. Böylece hem üretim hem ordu güçlenirdi."
+  },
+  {
+    "id": "sos-7-5-06",
+    "unit": "sos-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "18. yüzyılda İngiltere'de başlayan, üretimde insan ve hayvan gücünden makine gücüne geçişe ne ad verilir?",
+    "choices": [
+      "Rönesans",
+      "Sanayi İnkılabı",
+      "Reform",
+      "Coğrafi Keşifler"
+    ],
+    "answer": 1,
+    "explanation": "Sanayi İnkılabı ile buhar gücüyle çalışan makineler kullanılmaya başlanmış, fabrikalar kurulmuş ve seri üretime geçilmiştir."
+  },
+  {
+    "id": "sos-7-5-07",
+    "unit": "sos-7-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Sanayi İnkılabı ile el tezgâhlarındaki üretim artmış, fabrikalar önemini yitirmiştir.",
+    "answer": false,
+    "explanation": "Sanayi İnkılabı ile fabrikalarda seri üretim başlamış, el tezgâhlarına dayalı küçük atölyeler ise önemini yitirmiştir."
+  },
+  {
+    "id": "sos-7-5-08",
+    "unit": "sos-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Osmanlı şehirlerinde aynı meslekten esnafın bağlı olduğu, ürün kalitesini ve fiyatları denetleyen örgüt hangisidir?",
+    "choices": [
+      "Lonca",
+      "Divan",
+      "Medrese",
+      "Kervansaray"
+    ],
+    "answer": 0,
+    "explanation": "Loncalar esnafı denetler, ürün kalitesini ve fiyatları belirler, üyeleri arasında dayanışmayı sağlardı."
+  },
+  {
+    "id": "sos-7-5-09",
+    "unit": "sos-7-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangisi dijital teknolojilerin gelişmesiyle ortaya çıkan mesleklerden biridir?",
+    "choices": [
+      "Demircilik",
+      "Çiftçilik",
+      "Yazılım geliştiricilik",
+      "Marangozluk"
+    ],
+    "answer": 2,
+    "explanation": "Yazılım geliştiricilik, veri analistliği ve siber güvenlik uzmanlığı dijital teknolojilerle ortaya çıkan mesleklerdendir."
+  },
+  {
+    "id": "sos-7-6-01",
+    "unit": "sos-7-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Avrupa'da matbaayı geliştirerek kitapların hızla çoğaltılmasını sağlayan kişi kimdir?",
+    "choices": [
+      "Newton",
+      "Kopernik",
+      "Galileo",
+      "Gutenberg"
+    ],
+    "answer": 3,
+    "explanation": "Johannes Gutenberg 15. yüzyılda hareketli harflerle baskı yapan matbaayı geliştirmiş, böylece bilgi hızla yayılmıştır."
+  },
+  {
+    "id": "sos-7-6-02",
+    "unit": "sos-7-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kâğıdı ilk kez üreten uygarlık hangisidir?",
+    "choices": [
+      "Sümerler",
+      "Çinliler",
+      "Fenikeliler",
+      "Lidyalılar"
+    ],
+    "answer": 1,
+    "explanation": "Kâğıt Çin'de icat edilmiştir. 751 Talas Savaşı'ndan sonra kâğıt yapımı İslam dünyasına, oradan da Avrupa'ya yayılmıştır."
+  },
+  {
+    "id": "sos-7-6-03",
+    "unit": "sos-7-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Yazıyı ilk kez Sümerler kullanmıştır.",
+    "answer": true,
+    "explanation": "Sümerler çivi yazısını bulmuş, böylece bilginin kaydedilip gelecek kuşaklara aktarılması mümkün olmuştur."
+  },
+  {
+    "id": "sos-7-6-04",
+    "unit": "sos-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Cebir biliminin kurucusu sayılan Türk-İslam bilgini kimdir?",
+    "choices": [
+      "Harezmi",
+      "İbn-i Sina",
+      "Farabi",
+      "Piri Reis"
+    ],
+    "answer": 0,
+    "explanation": "Harezmi, cebir alanındaki çalışmalarıyla tanınır. \"Algoritma\" sözcüğü onun adından türemiştir."
+  },
+  {
+    "id": "sos-7-6-05",
+    "unit": "sos-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Semerkant'ta rasathane kurarak astronomi çalışmaları yapan Timurlu hükümdarı ve bilgin kimdir?",
+    "choices": [
+      "Ali Kuşçu",
+      "Biruni",
+      "Uluğ Bey",
+      "Cezeri"
+    ],
+    "answer": 2,
+    "explanation": "Uluğ Bey, Semerkant'ta kurduğu rasathanede yıldızların konumlarını gösteren ayrıntılı cetveller hazırlamıştır."
+  },
+  {
+    "id": "sos-7-6-06",
+    "unit": "sos-7-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"El-Kanun fi't-Tıb\" adlı eser Piri Reis tarafından yazılmıştır.",
+    "answer": false,
+    "explanation": "El-Kanun fi't-Tıb, İbn-i Sina'nın tıp alanındaki eseridir. Piri Reis ise Kitab-ı Bahriye'nin yazarıdır."
+  },
+  {
+    "id": "sos-7-6-07",
+    "unit": "sos-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Osmanlı'da ilk Türk matbaasını 1727'de Said Efendi ile birlikte kuran kişi kimdir?",
+    "choices": [
+      "Kâtip Çelebi",
+      "Evliya Çelebi",
+      "Ali Kuşçu",
+      "İbrahim Müteferrika"
+    ],
+    "answer": 3,
+    "explanation": "İbrahim Müteferrika, Lale Devri'nde Said Efendi ile birlikte ilk Türk matbaasını kurmuştur."
+  },
+  {
+    "id": "sos-7-6-08",
+    "unit": "sos-7-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Evrenin merkezinde Dünya'nın değil Güneş'in bulunduğunu savunarak astronomide çığır açan bilim insanı kimdir?",
+    "choices": [
+      "Newton",
+      "Edison",
+      "Kopernik",
+      "Pasteur"
+    ],
+    "answer": 2,
+    "explanation": "Kopernik, gezegenlerin Güneş'in çevresinde döndüğünü savunan Güneş merkezli evren modelini ortaya koymuştur."
+  },
+  {
+    "id": "sos-7-6-09",
+    "unit": "sos-7-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Su gücüyle çalışan otomatik makineler tasarlayan ve robotik biliminin öncülerinden sayılan Artuklu dönemi bilgini kimdir?",
+    "choices": [
+      "Cezeri",
+      "Harezmi",
+      "Akşemseddin",
+      "Farabi"
+    ],
+    "answer": 0,
+    "explanation": "Cezeri, 12-13. yüzyılda Artuklu sarayında su saatleri ve otomatik makineler tasarlamış, bu yönüyle sibernetik ve robotiğin öncüsü sayılmıştır."
+  }
+]

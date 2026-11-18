@@ -1,0 +1,262 @@
+[
+  {
+    "kind": "pairs",
+    "id": "sos-4-2-milli-mucadele-tarihleri",
+    "unit": "sos-4-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{olay} hangi tarihte gerçekleşmiştir?",
+        "answer": "tarih"
+      },
+      {
+        "prompt": "{tarih} tarihinde gerçekleşen olay hangisidir?",
+        "answer": "olay"
+      }
+    ],
+    "statement": {
+      "text": "{olay} {tarih} tarihinde gerçekleşmiştir.",
+      "swap": "tarih"
+    },
+    "explanation": "{olay} {tarih} tarihinde gerçekleşmiştir.",
+    "items": [
+      {
+        "id": "samsun",
+        "olay": "Mustafa Kemal'in Samsun'a çıkışı",
+        "tarih": "19 Mayıs 1919",
+        "not": "Bu olay Millî Mücadele'nin başlangıcı sayılır."
+      },
+      {
+        "id": "tbmm",
+        "olay": "TBMM'nin açılışı",
+        "tarih": "23 Nisan 1920",
+        "not": "Bu gün Ulusal Egemenlik ve Çocuk Bayramı olarak kutlanır."
+      },
+      {
+        "id": "taarruz",
+        "olay": "Büyük Taarruz'un başlaması",
+        "tarih": "26 Ağustos 1922",
+        "not": "Taarruz 30 Ağustos'ta zaferle sonuçlanmıştır."
+      },
+      {
+        "id": "lozan",
+        "olay": "Lozan Barış Antlaşması'nın imzalanması",
+        "tarih": "24 Temmuz 1923",
+        "not": "Bu antlaşmayla yeni Türk devletinin bağımsızlığı tanınmıştır."
+      },
+      {
+        "id": "cumhuriyet",
+        "olay": "Cumhuriyet'in ilanı",
+        "tarih": "29 Ekim 1923",
+        "not": "Bu gün Cumhuriyet Bayramı olarak kutlanır."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "sos-4-3-yon-bulma",
+    "unit": "sos-4-3",
+    "difficulty": 1,
+    "positive": "Hangisi yön bulmak için kullanılan yöntemlerden biridir?",
+    "negative": "Hangisi yön bulmak için kullanılan bir yöntem değildir?",
+    "statement": "{item}, yön bulmak için kullanılan yöntemlerden biridir.",
+    "explanation": "Yön bulma yöntemleri: {members}. Karınca yuvalarının ağzı güneye bakar, ağaçların kuzey yüzü yosun tutar, Kutup Yıldızı kuzeyi gösterir.",
+    "members": [
+      "Pusula kullanmak",
+      "Kutup Yıldızı'na bakmak",
+      "Karınca yuvalarına bakmak",
+      "Ağaçların yosunlu yüzüne bakmak",
+      "Güneşin doğduğu yöne bakmak"
+    ],
+    "nonMembers": [
+      "Termometreye bakmak",
+      "Bulutların rengine bakmak",
+      "Yağmur miktarını ölçmek",
+      "Kuş seslerini dinlemek"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-4-4-buluslar",
+    "unit": "sos-4-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{bulusAcc} bulan ya da geliştiren kişi kimdir?",
+        "answer": "mucit"
+      },
+      {
+        "prompt": "{mucit} hangi buluşuyla tanınır?",
+        "answer": "bulus"
+      }
+    ],
+    "statement": {
+      "text": "{bulusAcc} bulan ya da geliştiren kişi {mucit} olarak bilinir.",
+      "swap": "mucit"
+    },
+    "explanation": "{bulusAcc} bulan ya da geliştiren kişi {mucit} olarak bilinir.",
+    "items": [
+      {
+        "id": "telefon",
+        "bulus": "Telefon",
+        "bulusAcc": "Telefonu",
+        "mucit": "Graham Bell"
+      },
+      {
+        "id": "ampul",
+        "bulus": "Ampul",
+        "bulusAcc": "Ampulü",
+        "mucit": "Thomas Edison"
+      },
+      {
+        "id": "matbaa",
+        "bulus": "Matbaa",
+        "bulusAcc": "Matbaayı",
+        "mucit": "Johannes Gutenberg"
+      },
+      {
+        "id": "telgraf",
+        "bulus": "Telgraf",
+        "bulusAcc": "Telgrafı",
+        "mucit": "Samuel Morse"
+      },
+      {
+        "id": "radyo",
+        "bulus": "Radyo",
+        "bulusAcc": "Radyoyu",
+        "mucit": "Guglielmo Marconi"
+      },
+      {
+        "id": "penisilin",
+        "bulus": "Penisilin",
+        "bulusAcc": "Penisilini",
+        "mucit": "Alexander Fleming",
+        "not": "Penisilin, mikropların yol açtığı hastalıkların tedavisinde kullanılan ilk antibiyotiktir."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "sos-4-5-temel-ihtiyaclar",
+    "unit": "sos-4-5",
+    "difficulty": 1,
+    "positive": "Hangisi temel ihtiyaçlarımızdan biridir?",
+    "negative": "Hangisi temel ihtiyaç değil, bir istektir?",
+    "statement": "{item} temel ihtiyaçlarımızdan biridir.",
+    "explanation": "Temel ihtiyaçlar yaşamak için zorunludur: {members}. Bunların dışında kalan ve olmadan da yaşayabildiğimiz şeyler isteklerimizdir.",
+    "members": [
+      "Beslenme",
+      "Barınma",
+      "Giyinme",
+      "Su içme"
+    ],
+    "nonMembers": [
+      "Oyun konsolu",
+      "Tablet bilgisayar",
+      "Paten",
+      "Lunaparka gitme"
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "sos-4-6-hak-sorumluluk",
+    "unit": "sos-4-6",
+    "difficulty": 1,
+    "positive": "Hangisi çocukların haklarından biridir?",
+    "negative": "Hangisi bir hak değil, sorumluluktur?",
+    "statement": "{item}, çocukların haklarından biridir.",
+    "explanation": "Çocukların hakları arasında şunlar vardır: {members}. Odasını toplamak, ödev yapmak ve eşyalarını korumak gibi işler ise sorumluluktur.",
+    "members": [
+      "Eğitim görmek",
+      "Oyun oynamak",
+      "Sağlık hizmeti almak",
+      "Düşüncesini söylemek",
+      "Korunmak ve güvende olmak"
+    ],
+    "nonMembers": [
+      "Odasını toplamak",
+      "Ödevlerini yapmak",
+      "Okul eşyalarını korumak",
+      "Sınıf kurallarına uymak"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-4-7-komsu-baskentleri",
+    "unit": "sos-4-7",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "Komşumuz {ulkeGen} başkenti neresidir?",
+        "answer": "baskent"
+      },
+      {
+        "prompt": "Başkenti {baskent} olan komşumuz hangisidir?",
+        "answer": "ulke"
+      }
+    ],
+    "statement": {
+      "text": "Komşumuz {ulkeGen} başkenti {baskent} şehridir.",
+      "swap": "baskent"
+    },
+    "explanation": "{ulkeGen} başkenti {baskent} şehridir.",
+    "items": [
+      {
+        "id": "yunanistan",
+        "ulke": "Yunanistan",
+        "ulkeGen": "Yunanistan'ın",
+        "baskent": "Atina",
+        "not": "Yunanistan batı komşumuzdur."
+      },
+      {
+        "id": "bulgaristan",
+        "ulke": "Bulgaristan",
+        "ulkeGen": "Bulgaristan'ın",
+        "baskent": "Sofya",
+        "not": "Bulgaristan kuzeybatı komşumuzdur."
+      },
+      {
+        "id": "gurcistan",
+        "ulke": "Gürcistan",
+        "ulkeGen": "Gürcistan'ın",
+        "baskent": "Tiflis",
+        "not": "Gürcistan kuzeydoğu komşumuzdur."
+      },
+      {
+        "id": "ermenistan",
+        "ulke": "Ermenistan",
+        "ulkeGen": "Ermenistan'ın",
+        "baskent": "Erivan",
+        "not": "Ermenistan doğu komşumuzdur."
+      },
+      {
+        "id": "azerbaycan",
+        "ulke": "Azerbaycan",
+        "ulkeGen": "Azerbaycan'ın",
+        "baskent": "Bakü",
+        "not": "Azerbaycan ile sınırımız Nahçıvan üzerindendir."
+      },
+      {
+        "id": "iran",
+        "ulke": "İran",
+        "ulkeGen": "İran'ın",
+        "baskent": "Tahran",
+        "not": "İran doğu komşumuzdur."
+      },
+      {
+        "id": "irak",
+        "ulke": "Irak",
+        "ulkeGen": "Irak'ın",
+        "baskent": "Bağdat",
+        "not": "Irak güneydoğu komşumuzdur."
+      },
+      {
+        "id": "suriye",
+        "ulke": "Suriye",
+        "ulkeGen": "Suriye'nin",
+        "baskent": "Şam",
+        "not": "Suriye güney komşumuzdur."
+      }
+    ]
+  }
+]

@@ -1,0 +1,326 @@
+[
+  {
+    "kind": "pairs",
+    "id": "sos-5-1-sivil-toplum",
+    "unit": "sos-5-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{amac} sivil toplum kuruluşu hangisidir?",
+        "answer": "stk"
+      }
+    ],
+    "statement": {
+      "text": "{amac} sivil toplum kuruluşu {stk} adını taşır.",
+      "swap": "stk"
+    },
+    "explanation": "{amac} sivil toplum kuruluşu {stk} adını taşır.",
+    "items": [
+      {
+        "id": "kizilay",
+        "stk": "Kızılay",
+        "amac": "Afetzedelere yardım ulaştıran ve kan bağışı toplayan"
+      },
+      {
+        "id": "yesilay",
+        "stk": "Yeşilay",
+        "amac": "Sigara, alkol ve teknoloji bağımlılığıyla mücadele eden"
+      },
+      {
+        "id": "tema",
+        "stk": "TEMA",
+        "amac": "Erozyonla mücadele eden ve ağaçlandırma çalışmaları yapan"
+      },
+      {
+        "id": "losev",
+        "stk": "LÖSEV",
+        "amac": "Lösemili çocuklara ve ailelerine destek olan"
+      },
+      {
+        "id": "akut",
+        "stk": "AKUT",
+        "amac": "Afet ve kazalarda gönüllü arama kurtarma çalışması yapan"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-5-2-harita-ogeleri",
+    "unit": "sos-5-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "Bir haritada {tanim} ögeye ne denir?",
+        "answer": "oge"
+      }
+    ],
+    "statement": {
+      "text": "Bir haritada {tanim} ögeye {ogeKucuk} denir.",
+      "swap": "ogeKucuk"
+    },
+    "explanation": "Bir haritada {tanim} ögeye {ogeKucuk} denir.",
+    "items": [
+      {
+        "id": "baslik",
+        "oge": "Başlık",
+        "tanim": "konuyu ve gösterilen yeri belirten",
+        "ogeKucuk": "başlık"
+      },
+      {
+        "id": "olcek",
+        "oge": "Ölçek",
+        "tanim": "gerçek uzunlukların ne kadar küçültüldüğünü gösteren",
+        "ogeKucuk": "ölçek"
+      },
+      {
+        "id": "lejant",
+        "oge": "Lejant",
+        "tanim": "işaret ve renklerin anlamını açıklayan",
+        "ogeKucuk": "lejant"
+      },
+      {
+        "id": "yon-oku",
+        "oge": "Yön oku",
+        "tanim": "yönleri bulmamızı sağlayan ve genellikle kuzeyi gösteren",
+        "ogeKucuk": "yön oku"
+      }
+    ],
+    "distractors": {
+      "oge": [
+        "Kroki",
+        "Pusula"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-5-2-afetler",
+    "unit": "sos-5-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{tanim} doğal afet hangisidir?",
+        "answer": "afet"
+      }
+    ],
+    "statement": {
+      "text": "{tanim} doğal afete {afetKucuk} denir.",
+      "swap": "afetKucuk"
+    },
+    "explanation": "{tanim} doğal afete {afetKucuk} denir.",
+    "items": [
+      {
+        "id": "deprem",
+        "afet": "Deprem",
+        "tanim": "Yer kabuğundaki kırılmalar sonucu yerin sarsılmasıyla oluşan",
+        "afetKucuk": "deprem"
+      },
+      {
+        "id": "sel",
+        "afet": "Sel",
+        "tanim": "Aşırı yağışlarla akarsuların taşıp çevreyi su basmasıyla oluşan",
+        "afetKucuk": "sel"
+      },
+      {
+        "id": "heyelan",
+        "afet": "Heyelan",
+        "tanim": "Eğimli yamaçlarda toprağın kütle hâlinde kaymasıyla oluşan",
+        "afetKucuk": "heyelan"
+      },
+      {
+        "id": "cig",
+        "afet": "Çığ",
+        "tanim": "Dağ yamaçlarında biriken karın kopup hızla aşağı kaymasıyla oluşan",
+        "afetKucuk": "çığ"
+      },
+      {
+        "id": "erozyon",
+        "afet": "Erozyon",
+        "tanim": "Toprağın su ve rüzgârla aşınıp taşınmasıyla oluşan",
+        "afetKucuk": "erozyon"
+      },
+      {
+        "id": "kuraklik",
+        "afet": "Kuraklık",
+        "tanim": "Yağışların uzun süre normalin altında kalmasıyla oluşan",
+        "afetKucuk": "kuraklık"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-5-3-baskentler",
+    "unit": "sos-5-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{uygarlikGen} başkenti neresidir?",
+        "answer": "baskent"
+      },
+      {
+        "prompt": "Başkenti {baskent} olan Anadolu uygarlığı hangisidir?",
+        "answer": "uygarlik"
+      }
+    ],
+    "statement": {
+      "text": "{uygarlikGen} başkenti {baskent} şehridir.",
+      "swap": "baskent"
+    },
+    "explanation": "{uygarlikGen} başkenti {baskent} şehridir.",
+    "items": [
+      {
+        "id": "hitit",
+        "uygarlik": "Hititler",
+        "uygarlikGen": "Hititlerin",
+        "baskent": "Hattuşa",
+        "not": "Hattuşa bugünkü Çorum'dadır."
+      },
+      {
+        "id": "frig",
+        "uygarlik": "Frigler",
+        "uygarlikGen": "Friglerin",
+        "baskent": "Gordion",
+        "not": "Gordion bugünkü Ankara'nın Polatlı ilçesi yakınlarındadır."
+      },
+      {
+        "id": "lidya",
+        "uygarlik": "Lidyalılar",
+        "uygarlikGen": "Lidyalıların",
+        "baskent": "Sardes",
+        "not": "Sardes bugünkü Manisa'nın Salihli ilçesindedir."
+      },
+      {
+        "id": "urartu",
+        "uygarlik": "Urartular",
+        "uygarlikGen": "Urartuların",
+        "baskent": "Tuşpa",
+        "not": "Tuşpa bugünkü Van'dadır."
+      }
+    ],
+    "distractors": {
+      "baskent": [
+        "Babil",
+        "Ninova"
+      ],
+      "uygarlik": [
+        "İyonlar"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-5-3-uygarliklar",
+    "unit": "sos-5-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ozellik} uygarlık hangisidir?",
+        "answer": "uygarlik"
+      }
+    ],
+    "statement": {
+      "text": "{ozellik} uygarlık {uygarlik} olarak bilinir.",
+      "swap": "uygarlik"
+    },
+    "explanation": "{ozellik} uygarlık {uygarlik} olarak bilinir.",
+    "items": [
+      {
+        "id": "sumer",
+        "uygarlik": "Sümerler",
+        "ozellik": "Çivi yazısını bularak tarihî çağları başlatan",
+        "not": "Sümerler Mezopotamya'da yaşamıştır."
+      },
+      {
+        "id": "babil",
+        "uygarlik": "Babiller",
+        "ozellik": "Hammurabi Kanunları ile tanınan",
+        "not": "Babiller Mezopotamya'da yaşamıştır."
+      },
+      {
+        "id": "hitit",
+        "uygarlik": "Hititler",
+        "ozellik": "Mısırlılarla Kadeş Antlaşması'nı imzalayan",
+        "not": "Kadeş, tarihte bilinen ilk yazılı antlaşmadır."
+      },
+      {
+        "id": "lidya",
+        "uygarlik": "Lidyalılar",
+        "ozellik": "Parayı ilk kez kullanan",
+        "not": "Para, takas yerine geçerek ticareti kolaylaştırmıştır."
+      },
+      {
+        "id": "frig",
+        "uygarlik": "Frigler",
+        "ozellik": "Tapates adı verilen kilimleriyle ve tarıma verdiği önemle tanınan",
+        "not": "Frigler tarımı korumak için sert kanunlar koymuştur."
+      },
+      {
+        "id": "urartu",
+        "uygarlik": "Urartular",
+        "ozellik": "Van Gölü çevresinde kaleler ve su kanalları yapan",
+        "not": "Urartular taş işçiliği ve madencilikte ileri gitmiştir."
+      },
+      {
+        "id": "iyon",
+        "uygarlik": "İyonlar",
+        "ozellik": "Efes ve Milet gibi şehir devletleri kuran",
+        "not": "İyonlar Batı Anadolu kıyılarında yaşamış, bilim ve felsefede ilerlemiştir."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-5-5-ekonomik-faaliyetler",
+    "unit": "sos-5-5",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{ornek} hangi ekonomik faaliyete örnektir?",
+        "answer": "faaliyet"
+      }
+    ],
+    "statement": {
+      "text": "{ornek}, {faaliyetKucuk} faaliyetine örnektir.",
+      "swap": "faaliyetKucuk"
+    },
+    "explanation": "{ornek}, {faaliyetKucuk} faaliyetine örnektir.",
+    "items": [
+      {
+        "id": "tarim",
+        "faaliyet": "Tarım",
+        "ornek": "Tarlada buğday yetiştirmek",
+        "faaliyetKucuk": "tarım"
+      },
+      {
+        "id": "hayvancilik",
+        "faaliyet": "Hayvancılık",
+        "ornek": "Arı kovanlarından bal elde etmek",
+        "faaliyetKucuk": "hayvancılık"
+      },
+      {
+        "id": "sanayi",
+        "faaliyet": "Sanayi",
+        "ornek": "Fabrikada otomobil üretmek",
+        "faaliyetKucuk": "sanayi"
+      },
+      {
+        "id": "madencilik",
+        "faaliyet": "Madencilik",
+        "ornek": "Yer altından kömür ve bor çıkarmak",
+        "faaliyetKucuk": "madencilik"
+      },
+      {
+        "id": "turizm",
+        "faaliyet": "Turizm",
+        "ornek": "Tatile gelen ziyaretçileri otelde ağırlamak",
+        "faaliyetKucuk": "turizm"
+      },
+      {
+        "id": "ticaret",
+        "faaliyet": "Ticaret",
+        "ornek": "Markette ürün alıp satmak",
+        "faaliyetKucuk": "ticaret"
+      }
+    ]
+  }
+]

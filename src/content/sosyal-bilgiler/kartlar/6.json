@@ -1,0 +1,447 @@
+[
+  {
+    "kind": "pairs",
+    "id": "sos-6-2-bolgeler",
+    "unit": "sos-6-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ozellik} coğrafi bölgemiz hangisidir?",
+        "answer": "bolge"
+      }
+    ],
+    "statement": {
+      "text": "{ozellik} coğrafi bölgemiz {bolge} Bölgesi olarak bilinir.",
+      "swap": "bolge"
+    },
+    "explanation": "{ozellik} coğrafi bölgemiz {bolge} Bölgesi olarak bilinir.",
+    "items": [
+      {
+        "id": "dogu-anadolu",
+        "bolge": "Doğu Anadolu",
+        "ozellik": "Yüz ölçümü en büyük ve ortalama yükseltisi en fazla olan"
+      },
+      {
+        "id": "guneydogu",
+        "bolge": "Güneydoğu Anadolu",
+        "ozellik": "Yüz ölçümü en küçük olan"
+      },
+      {
+        "id": "karadeniz",
+        "bolge": "Karadeniz",
+        "ozellik": "Her mevsim yağış alan, çay ve fındık tarımıyla tanınan"
+      },
+      {
+        "id": "akdeniz",
+        "bolge": "Akdeniz",
+        "ozellik": "Turunçgil ve seracılıkla tanınan, bitki örtüsü maki olan"
+      },
+      {
+        "id": "ic-anadolu",
+        "bolge": "İç Anadolu",
+        "ozellik": "Tahıl tarımı ve geniş bozkırlarıyla tanınan"
+      },
+      {
+        "id": "ege",
+        "bolge": "Ege",
+        "ozellik": "Dağları kıyıya dik uzanan; zeytin, üzüm ve incir üretimiyle tanınan"
+      },
+      {
+        "id": "marmara",
+        "bolge": "Marmara",
+        "ozellik": "İstanbul ve Çanakkale boğazlarının bulunduğu"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-6-3-kurucular",
+    "unit": "sos-6-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{devletGen} kurucusu kimdir?",
+        "answer": "kurucu"
+      },
+      {
+        "prompt": "{kurucu} hangi devletin kurucusudur?",
+        "answer": "devlet"
+      }
+    ],
+    "statement": {
+      "text": "{devletGen} kurucusu {kurucu} olarak kabul edilir.",
+      "swap": "kurucu"
+    },
+    "explanation": "{devletGen} kurucusu {kurucu} olarak kabul edilir.",
+    "items": [
+      {
+        "id": "hun",
+        "devlet": "Asya Hun Devleti",
+        "devletGen": "Asya Hun Devleti'nin",
+        "kurucu": "Teoman",
+        "not": "Devlet en parlak dönemini Teoman'ın oğlu Mete Han zamanında yaşamıştır."
+      },
+      {
+        "id": "kokturk",
+        "devlet": "I. Kök Türk Devleti",
+        "devletGen": "I. Kök Türk Devleti'nin",
+        "kurucu": "Bumin Kağan",
+        "not": "Devletin merkezi Ötüken'dir."
+      },
+      {
+        "id": "uygur",
+        "devlet": "Uygur Devleti",
+        "devletGen": "Uygur Devleti'nin",
+        "kurucu": "Kutluk Bilge Kül Kağan"
+      },
+      {
+        "id": "gazneli",
+        "devlet": "Gazneli Devleti",
+        "devletGen": "Gazneli Devleti'nin",
+        "kurucu": "Alp Tigin",
+        "not": "Devlet en parlak dönemini Gazneli Mahmud zamanında yaşamıştır."
+      },
+      {
+        "id": "selcuklu",
+        "devlet": "Büyük Selçuklu Devleti",
+        "devletGen": "Büyük Selçuklu Devleti'nin",
+        "kurucu": "Tuğrul Bey",
+        "not": "Devlet 1040 Dandanakan Savaşı'ndan sonra Tuğrul ve Çağrı Beylerin önderliğinde kurulmuştur."
+      },
+      {
+        "id": "turkiye-selcuklu",
+        "devlet": "Türkiye Selçuklu Devleti",
+        "devletGen": "Türkiye Selçuklu Devleti'nin",
+        "kurucu": "Kutalmışoğlu Süleyman Şah",
+        "not": "Devletin ilk başkenti İznik'tir."
+      }
+    ],
+    "distractors": {
+      "kurucu": [
+        "Mete Han",
+        "Bilge Kağan",
+        "Alparslan"
+      ],
+      "devlet": [
+        "Karahanlı Devleti"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-6-3-savaslar",
+    "unit": "sos-6-3",
+    "difficulty": 3,
+    "questions": [
+      {
+        "prompt": "{olay} hangi yıl yapılmıştır?",
+        "answer": "yil"
+      },
+      {
+        "prompt": "{yil} yılında yapılan savaş hangisidir?",
+        "answer": "olay"
+      }
+    ],
+    "statement": {
+      "text": "{olay} {yil} yılında yapılmıştır.",
+      "swap": "yil"
+    },
+    "explanation": "{olay} {yil} yılında yapılmıştır.",
+    "items": [
+      {
+        "id": "talas",
+        "olay": "Talas Savaşı",
+        "yil": "751",
+        "not": "Abbasiler, Karluk Türklerinin desteğiyle Çinlileri yenmiştir."
+      },
+      {
+        "id": "dandanakan",
+        "olay": "Dandanakan Savaşı",
+        "yil": "1040",
+        "not": "Selçuklular Gaznelileri yenmiş ve Büyük Selçuklu Devleti kurulmuştur."
+      },
+      {
+        "id": "pasinler",
+        "olay": "Pasinler Savaşı",
+        "yil": "1048",
+        "not": "Selçuklular ile Bizans arasındaki ilk büyük savaştır."
+      },
+      {
+        "id": "malazgirt",
+        "olay": "Malazgirt Savaşı",
+        "yil": "1071",
+        "not": "Sultan Alparslan Bizans'ı yenmiş, Anadolu'nun kapıları Türklere açılmıştır."
+      },
+      {
+        "id": "miryokefalon",
+        "olay": "Miryokefalon Savaşı",
+        "yil": "1176",
+        "not": "II. Kılıç Arslan Bizans'ı yenmiş, Anadolu'nun Türk yurdu olduğu kesinleşmiştir."
+      },
+      {
+        "id": "kosedag",
+        "olay": "Kösedağ Savaşı",
+        "yil": "1243",
+        "not": "Türkiye Selçukluları Moğollara yenilmiş ve devlet zayıflamıştır."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-6-3-islam-tarihi",
+    "unit": "sos-6-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{olay} hangi yıl gerçekleşmiştir?",
+        "answer": "yil"
+      },
+      {
+        "prompt": "{yil} yılında gerçekleşen olay hangisidir?",
+        "answer": "olay"
+      }
+    ],
+    "statement": {
+      "text": "{olay} {yil} yılında gerçekleşmiştir.",
+      "swap": "yil"
+    },
+    "explanation": "{olay} {yil} yılında gerçekleşmiştir.",
+    "items": [
+      {
+        "id": "hicret",
+        "olay": "Hicret",
+        "yil": "622",
+        "not": "Hicret, Müslümanların Mekke'den Medine'ye göç etmesidir."
+      },
+      {
+        "id": "bedir",
+        "olay": "Bedir Savaşı",
+        "yil": "624",
+        "not": "Müslümanların Mekkelilere karşı kazandığı ilk savaştır."
+      },
+      {
+        "id": "uhud",
+        "olay": "Uhud Savaşı",
+        "yil": "625"
+      },
+      {
+        "id": "hendek",
+        "olay": "Hendek Savaşı",
+        "yil": "627",
+        "not": "Medine'nin çevresine hendek kazılarak savunma yapılmıştır."
+      },
+      {
+        "id": "hudeybiye",
+        "olay": "Hudeybiye Antlaşması'nın imzalanması",
+        "yil": "628",
+        "not": "Bu antlaşmayla Mekkeliler Müslümanları resmen tanımıştır."
+      },
+      {
+        "id": "mekke",
+        "olay": "Mekke'nin Fethi",
+        "yil": "630"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-6-3-eserler",
+    "unit": "sos-6-3",
+    "difficulty": 3,
+    "questions": [
+      {
+        "prompt": "{eser} adlı eserin yazarı kimdir?",
+        "answer": "yazar"
+      },
+      {
+        "prompt": "{yazar} hangi eseriyle tanınır?",
+        "answer": "eser"
+      }
+    ],
+    "statement": {
+      "text": "{eser} adlı eseri {yazar} yazmıştır.",
+      "swap": "yazar"
+    },
+    "explanation": "{eser} adlı eseri {yazar} yazmıştır.",
+    "items": [
+      {
+        "id": "kutadgu-bilig",
+        "eser": "Kutadgu Bilig",
+        "yazar": "Yusuf Has Hacib",
+        "not": "Karahanlılar döneminde yazılan eser, devlet yönetimi üzerine öğütler içerir."
+      },
+      {
+        "id": "divan",
+        "eser": "Divanü Lügati't-Türk",
+        "yazar": "Kaşgarlı Mahmud",
+        "not": "Eser, Araplara Türkçe öğretmek için yazılmış ilk Türkçe sözlüktür."
+      },
+      {
+        "id": "atabet",
+        "eser": "Atabetü'l-Hakayık",
+        "yazar": "Edip Ahmet Yükneki",
+        "not": "Karahanlılar döneminde yazılmış bir öğüt kitabıdır."
+      },
+      {
+        "id": "hikmet",
+        "eser": "Divan-ı Hikmet",
+        "yazar": "Ahmet Yesevi",
+        "not": "Eser, İslam'ı Türklere sade bir Türkçeyle anlatan şiirlerden oluşur."
+      },
+      {
+        "id": "siyasetname",
+        "eser": "Siyasetname",
+        "yazar": "Nizamülmülk",
+        "not": "Nizamülmülk, Büyük Selçuklu Devleti'nin ünlü veziridir."
+      },
+      {
+        "id": "sehname",
+        "eser": "Şehname",
+        "yazar": "Firdevsi",
+        "not": "Firdevsi bu eserini Gazneli Mahmud'a sunmuştur."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-6-4-yonetim-bicimleri",
+    "unit": "sos-6-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{tanim} yönetim biçimi hangisidir?",
+        "answer": "bicim"
+      }
+    ],
+    "statement": {
+      "text": "{tanim} yönetim biçimine {bicimKucuk} denir.",
+      "swap": "bicimKucuk"
+    },
+    "explanation": "{tanim} yönetim biçimine {bicimKucuk} denir.",
+    "items": [
+      {
+        "id": "monarsi",
+        "bicim": "Monarşi",
+        "tanim": "Yönetimin tek kişide olduğu ve genellikle babadan oğula geçtiği",
+        "bicimKucuk": "monarşi"
+      },
+      {
+        "id": "oligarsi",
+        "bicim": "Oligarşi",
+        "tanim": "Yönetimin ayrıcalıklı küçük bir grubun elinde olduğu",
+        "bicimKucuk": "oligarşi"
+      },
+      {
+        "id": "teokrasi",
+        "bicim": "Teokrasi",
+        "tanim": "Devletin din kurallarına göre yönetildiği",
+        "bicimKucuk": "teokrasi"
+      },
+      {
+        "id": "demokrasi",
+        "bicim": "Demokrasi",
+        "tanim": "Halkın, yöneticilerini özgür seçimlerle belirlediği",
+        "bicimKucuk": "demokrasi"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-6-4-kuvvetler",
+    "unit": "sos-6-4",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "Türkiye'de {yetki} yetkisi kime aittir?",
+        "answer": "organ"
+      }
+    ],
+    "statement": {
+      "text": "Türkiye'de {yetki} yetkisi {organDat} aittir.",
+      "swap": "organDat"
+    },
+    "explanation": "Anayasa'ya göre {yetki} yetkisi {organDat} aittir.",
+    "items": [
+      {
+        "id": "yasama",
+        "yetki": "yasama (kanun yapma)",
+        "organ": "Türkiye Büyük Millet Meclisi",
+        "organDat": "Türkiye Büyük Millet Meclisine"
+      },
+      {
+        "id": "yurutme",
+        "yetki": "yürütme (kanunları uygulama)",
+        "organ": "Cumhurbaşkanı",
+        "organDat": "Cumhurbaşkanına"
+      },
+      {
+        "id": "yargi",
+        "yetki": "yargı (yargılama)",
+        "organ": "Bağımsız ve tarafsız mahkemeler",
+        "organDat": "bağımsız ve tarafsız mahkemelere"
+      }
+    ],
+    "distractors": {
+      "organ": [
+        "Belediye meclisleri",
+        "Valilikler",
+        "Muhtarlıklar"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-6-6-sosyal-bilimler",
+    "unit": "sos-6-6",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{konu} bilim dalı hangisidir?",
+        "answer": "dal"
+      }
+    ],
+    "statement": {
+      "text": "{konu} bilim dalına {dalKucuk} denir.",
+      "swap": "dalKucuk"
+    },
+    "explanation": "{konu} bilim dalına {dalKucuk} denir.",
+    "items": [
+      {
+        "id": "tarih",
+        "dal": "Tarih",
+        "konu": "Geçmişteki olayları yer ve zaman göstererek, belgelere dayanarak inceleyen",
+        "dalKucuk": "tarih"
+      },
+      {
+        "id": "cografya",
+        "dal": "Coğrafya",
+        "konu": "Yeryüzünü ve insan ile doğal çevre arasındaki ilişkiyi inceleyen",
+        "dalKucuk": "coğrafya"
+      },
+      {
+        "id": "arkeoloji",
+        "dal": "Arkeoloji",
+        "konu": "Kazılarla eski uygarlıkların kalıntılarını ortaya çıkaran",
+        "dalKucuk": "arkeoloji"
+      },
+      {
+        "id": "sosyoloji",
+        "dal": "Sosyoloji",
+        "konu": "Toplumun yapısını ve toplumsal ilişkileri inceleyen",
+        "dalKucuk": "sosyoloji"
+      },
+      {
+        "id": "psikoloji",
+        "dal": "Psikoloji",
+        "konu": "İnsanın davranışlarını ve zihinsel süreçlerini inceleyen",
+        "dalKucuk": "psikoloji"
+      },
+      {
+        "id": "ekonomi",
+        "dal": "Ekonomi",
+        "konu": "Üretim, dağıtım ve tüketim faaliyetlerini inceleyen",
+        "dalKucuk": "ekonomi"
+      }
+    ]
+  }
+]

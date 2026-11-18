@@ -1,0 +1,397 @@
+[
+  {
+    "kind": "list",
+    "id": "sos-7-1-iletisim",
+    "unit": "sos-7-1",
+    "difficulty": 1,
+    "positive": "Hangisi olumlu iletişimi destekleyen bir davranıştır?",
+    "negative": "Hangisi iletişimi olumsuz etkileyen bir davranıştır?",
+    "statement": "{item}, iletişimi olumlu etkileyen bir davranıştır.",
+    "explanation": "İletişimi güçlendiren davranışlar: {members}. Söz kesmek, suçlamak, alay etmek ve dinlememek ise iletişimi zedeler.",
+    "members": [
+      "Göz teması kurmak",
+      "Etkin dinlemek",
+      "Ben dili kullanmak",
+      "Empati kurmak",
+      "Nazik ve saygılı konuşmak"
+    ],
+    "nonMembers": [
+      "Karşıdakinin sözünü kesmek",
+      "Suçlayıcı sen dili kullanmak",
+      "Konuşanla alay etmek",
+      "Dinlerken telefonla ilgilenmek"
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "sos-7-2-goc-nedenleri",
+    "unit": "sos-7-2",
+    "difficulty": 2,
+    "positive": "Hangisi göçün ekonomik nedenlerinden biridir?",
+    "negative": "Hangisi göçün ekonomik nedenlerinden biri değildir?",
+    "statement": "{item}, göçün ekonomik nedenlerinden biridir.",
+    "explanation": "Göçün ekonomik nedenleri: {members}. Deprem, sel, kuraklık ve heyelan doğal; savaş ise siyasi nedenlerdendir.",
+    "members": [
+      "İşsizlik",
+      "Geçim sıkıntısı",
+      "Tarım topraklarının yetersizliği",
+      "İş imkânlarının kısıtlı olması"
+    ],
+    "nonMembers": [
+      "Deprem",
+      "Sel",
+      "Kuraklık",
+      "Savaş",
+      "Heyelan"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-7-3-savaslar",
+    "unit": "sos-7-3",
+    "difficulty": 3,
+    "questions": [
+      {
+        "prompt": "{olay} hangi yıl gerçekleşmiştir?",
+        "answer": "yil"
+      },
+      {
+        "prompt": "{yil} yılında gerçekleşen olay hangisidir?",
+        "answer": "olay"
+      }
+    ],
+    "statement": {
+      "text": "{olay} {yil} yılında gerçekleşmiştir.",
+      "swap": "yil"
+    },
+    "explanation": "{olay} {yil} yılında gerçekleşmiştir.",
+    "items": [
+      {
+        "id": "koyunhisar",
+        "olay": "Koyunhisar (Bafeus) Savaşı",
+        "yil": "1302",
+        "not": "Osman Bey'in Bizans'a karşı kazandığı ilk büyük savaştır."
+      },
+      {
+        "id": "kosova1",
+        "olay": "I. Kosova Savaşı",
+        "yil": "1389",
+        "not": "I. Murad bu savaşın sonunda şehit olmuştur."
+      },
+      {
+        "id": "nigbolu",
+        "olay": "Niğbolu Savaşı",
+        "yil": "1396",
+        "not": "Yıldırım Bayezid, Haçlı ordusunu yenmiştir."
+      },
+      {
+        "id": "ankara",
+        "olay": "Ankara Savaşı",
+        "yil": "1402",
+        "not": "Yıldırım Bayezid Timur'a yenilmiş ve Fetret Devri başlamıştır."
+      },
+      {
+        "id": "varna",
+        "olay": "Varna Savaşı",
+        "yil": "1444",
+        "not": "II. Murad, Haçlı ordusunu yenmiştir."
+      },
+      {
+        "id": "istanbul",
+        "olay": "İstanbul'un Fethi",
+        "yil": "1453",
+        "not": "II. Mehmed bu fetihle \"Fatih\" unvanını almıştır."
+      },
+      {
+        "id": "caldiran",
+        "olay": "Çaldıran Savaşı",
+        "yil": "1514",
+        "not": "Yavuz Sultan Selim, Safevi hükümdarı Şah İsmail'i yenmiştir."
+      },
+      {
+        "id": "mohac",
+        "olay": "Mohaç Savaşı",
+        "yil": "1526",
+        "not": "Kanuni Sultan Süleyman Macar ordusunu kısa sürede yenmiştir."
+      },
+      {
+        "id": "preveze",
+        "olay": "Preveze Deniz Savaşı",
+        "yil": "1538",
+        "not": "Barbaros Hayrettin Paşa komutasındaki donanma Haçlı donanmasını yenmiştir."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-7-3-hukumdarlar",
+    "unit": "sos-7-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{olay} Osmanlı hükümdarı kimdir?",
+        "answer": "hukumdar"
+      }
+    ],
+    "statement": {
+      "text": "{olay} Osmanlı hükümdarı {hukumdar} olarak bilinir.",
+      "swap": "hukumdar"
+    },
+    "explanation": "{olay} Osmanlı hükümdarı {hukumdar} olarak bilinir.",
+    "items": [
+      {
+        "id": "osman",
+        "hukumdar": "Osman Bey",
+        "olay": "Söğüt'te beyliği kuran ve Koyunhisar Savaşı'nı kazanan"
+      },
+      {
+        "id": "orhan",
+        "hukumdar": "Orhan Bey",
+        "olay": "Bursa'yı fethedip başkent yapan"
+      },
+      {
+        "id": "murad1",
+        "hukumdar": "I. Murad",
+        "olay": "Edirne'yi fetheden ve I. Kosova Savaşı'nı kazanan"
+      },
+      {
+        "id": "bayezid1",
+        "hukumdar": "Yıldırım Bayezid",
+        "olay": "Niğbolu Savaşı'nı kazanan ve Ankara Savaşı'nda Timur'a yenilen"
+      },
+      {
+        "id": "mehmed2",
+        "hukumdar": "II. Mehmed (Fatih)",
+        "olay": "İstanbul'u fetheden"
+      },
+      {
+        "id": "selim1",
+        "hukumdar": "Yavuz Sultan Selim",
+        "olay": "Mısır Seferi ile halifeliği Osmanlı'ya kazandıran"
+      },
+      {
+        "id": "suleyman1",
+        "hukumdar": "Kanuni Sultan Süleyman",
+        "olay": "Belgrad'ı fetheden ve Mohaç Savaşı'nı kazanan"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-7-3-kasifler",
+    "unit": "sos-7-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{basari} denizci kimdir?",
+        "answer": "kasif"
+      }
+    ],
+    "statement": {
+      "text": "{basari} denizci {kasif} olarak bilinir.",
+      "swap": "kasif"
+    },
+    "explanation": "{basari} denizci {kasif} olarak bilinir.",
+    "items": [
+      {
+        "id": "kolomb",
+        "kasif": "Kristof Kolomb",
+        "basari": "1492'de Amerika kıtasına ulaşan"
+      },
+      {
+        "id": "dias",
+        "kasif": "Bartolomeu Dias",
+        "basari": "Afrika'nın güneyindeki Ümit Burnu'na ulaşan ilk Avrupalı"
+      },
+      {
+        "id": "gama",
+        "kasif": "Vasco da Gama",
+        "basari": "Ümit Burnu'nu dolaşarak Hindistan'a ulaşan"
+      },
+      {
+        "id": "macellan",
+        "kasif": "Macellan",
+        "basari": "Dünya'yı dolaşan ilk deniz seferini başlatan",
+        "not": "Macellan yolculukta ölmüş, seferi Del Cano tamamlamıştır. Böylece Dünya'nın yuvarlak olduğu kanıtlanmıştır."
+      },
+      {
+        "id": "vespucci",
+        "kasif": "Amerigo Vespucci",
+        "basari": "Amerika'nın yeni bir kıta olduğunu ortaya koyan",
+        "not": "Kıtaya onun adı verilmiştir."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-7-4-belgeler",
+    "unit": "sos-7-4",
+    "difficulty": 3,
+    "questions": [
+      {
+        "prompt": "{belge} hangi yıl ilan ya da kabul edilmiştir?",
+        "answer": "yil"
+      },
+      {
+        "prompt": "{yil} yılında ilan ya da kabul edilen belge hangisidir?",
+        "answer": "belge"
+      }
+    ],
+    "statement": {
+      "text": "{belge} {yil} yılında ilan ya da kabul edilmiştir.",
+      "swap": "yil"
+    },
+    "explanation": "{belge} {yil} yılında ilan ya da kabul edilmiştir.",
+    "items": [
+      {
+        "id": "magna-carta",
+        "belge": "Magna Carta",
+        "yil": "1215",
+        "not": "İngiltere'de kralın yetkileri ilk kez sınırlandırılmıştır."
+      },
+      {
+        "id": "sened",
+        "belge": "Sened-i İttifak",
+        "yil": "1808",
+        "not": "Osmanlı'da padişahın yetkileri âyanlar karşısında ilk kez sınırlandırılmıştır."
+      },
+      {
+        "id": "tanzimat",
+        "belge": "Tanzimat Fermanı",
+        "yil": "1839",
+        "not": "Kanun gücünün üstünlüğü kabul edilmiştir."
+      },
+      {
+        "id": "islahat",
+        "belge": "Islahat Fermanı",
+        "yil": "1856",
+        "not": "Gayrimüslim halka yeni haklar tanınmıştır."
+      },
+      {
+        "id": "kanun-i-esasi",
+        "belge": "Kanun-i Esasi",
+        "yil": "1876",
+        "not": "Osmanlı Devleti'nin ilk anayasasıdır; ilanıyla I. Meşrutiyet başlamıştır."
+      },
+      {
+        "id": "bildirge",
+        "belge": "İnsan Hakları Evrensel Bildirgesi",
+        "yil": "1948",
+        "not": "Birleşmiş Milletler Genel Kurulunda kabul edilmiştir."
+      }
+    ],
+    "distractors": {
+      "yil": [
+        "1789",
+        "1923"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-7-6-eserler",
+    "unit": "sos-7-6",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{eser} adlı eserin yazarı kimdir?",
+        "answer": "yazar"
+      },
+      {
+        "prompt": "{yazar} hangi eseriyle tanınır?",
+        "answer": "eser"
+      }
+    ],
+    "statement": {
+      "text": "{eser} adlı eseri {yazar} yazmıştır.",
+      "swap": "yazar"
+    },
+    "explanation": "{eser} adlı eseri {yazar} yazmıştır.",
+    "items": [
+      {
+        "id": "kanun",
+        "eser": "El-Kanun fi't-Tıb",
+        "yazar": "İbn-i Sina",
+        "not": "Eser, yüzyıllarca Avrupa'da tıp eğitiminde ders kitabı olarak okutulmuştur."
+      },
+      {
+        "id": "bahriye",
+        "eser": "Kitab-ı Bahriye",
+        "yazar": "Piri Reis",
+        "not": "Eser, Akdeniz kıyılarını ve limanlarını tanıtan bir denizcilik kitabıdır."
+      },
+      {
+        "id": "cihannuma",
+        "eser": "Cihannüma",
+        "yazar": "Kâtip Çelebi",
+        "not": "Cihannüma bir coğrafya kitabıdır."
+      },
+      {
+        "id": "seyahatname",
+        "eser": "Seyahatname",
+        "yazar": "Evliya Çelebi",
+        "not": "Eser, gezilen yerlerin halkını, kültürünü ve yapılarını anlatır."
+      },
+      {
+        "id": "mukaddime",
+        "eser": "Mukaddime",
+        "yazar": "İbn-i Haldun",
+        "not": "İbn-i Haldun, tarih ve toplum bilimi alanındaki görüşleriyle tanınır."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "sos-7-6-bilginler",
+    "unit": "sos-7-6",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{alan} bilgin kimdir?",
+        "answer": "bilgin"
+      }
+    ],
+    "statement": {
+      "text": "{alan} bilgin {bilgin} olarak bilinir.",
+      "swap": "bilgin"
+    },
+    "explanation": "{alan} bilgin {bilgin} olarak bilinir.",
+    "items": [
+      {
+        "id": "harezmi",
+        "bilgin": "Harezmi",
+        "alan": "Cebir biliminin kurucusu sayılan"
+      },
+      {
+        "id": "ibn-i-sina",
+        "bilgin": "İbn-i Sina",
+        "alan": "Tıp alanındaki çalışmalarıyla Avrupa'da Avicenna adıyla tanınan"
+      },
+      {
+        "id": "farabi",
+        "bilgin": "Farabi",
+        "alan": "\"Muallim-i Sani\" (İkinci Öğretmen) unvanıyla anılan"
+      },
+      {
+        "id": "ulug-bey",
+        "bilgin": "Uluğ Bey",
+        "alan": "Semerkant'ta rasathane kurup yıldız cetvelleri hazırlayan"
+      },
+      {
+        "id": "ali-kuscu",
+        "bilgin": "Ali Kuşçu",
+        "alan": "Fatih döneminde İstanbul'a gelip astronomi ve matematik dersleri veren"
+      },
+      {
+        "id": "cezeri",
+        "bilgin": "Cezeri",
+        "alan": "Otomatik makineleriyle robotiğin öncülerinden sayılan"
+      },
+      {
+        "id": "aksemseddin",
+        "bilgin": "Akşemseddin",
+        "alan": "Hastalıkların gözle görülmeyen canlılarla bulaştığını öne süren"
+      }
+    ]
+  }
+]
