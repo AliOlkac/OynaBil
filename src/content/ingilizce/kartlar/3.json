@@ -1,0 +1,565 @@
+[
+  {
+    "kind": "list",
+    "id": "ing-3-1-selamlasma",
+    "unit": "ing-3-1",
+    "difficulty": 2,
+    "positive": "Hangisi bir selamlaşma sözüdür?",
+    "negative": "Hangisi bir selamlaşma sözü değildir?",
+    "statement": "\"{item}\" bir selamlaşma sözüdür.",
+    "explanation": "Bu sözlerden selamlaşmak için kullanılanlar şunlardır: {members}.",
+    "members": [
+      "Hello",
+      "Hi",
+      "Good morning",
+      "Good afternoon",
+      "Good evening"
+    ],
+    "nonMembers": [
+      "Thank you",
+      "Sorry",
+      "Please",
+      "Sit down"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-3-2-sayilar",
+    "unit": "ing-3-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{en}\" hangi sayıdır?",
+        "answer": "rakam"
+      },
+      {
+        "prompt": "{rakam} sayısının İngilizcesi hangisidir?",
+        "answer": "en"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\", {rakam} sayısının İngilizcesidir.",
+      "swap": "rakam"
+    },
+    "explanation": "{rakam} sayısı İngilizcede \"{en}\" diye söylenir.",
+    "items": [
+      {
+        "id": "eleven",
+        "en": "eleven",
+        "rakam": "11"
+      },
+      {
+        "id": "twelve",
+        "en": "twelve",
+        "rakam": "12"
+      },
+      {
+        "id": "thirteen",
+        "en": "thirteen",
+        "rakam": "13"
+      },
+      {
+        "id": "fourteen",
+        "en": "fourteen",
+        "rakam": "14"
+      },
+      {
+        "id": "fifteen",
+        "en": "fifteen",
+        "rakam": "15"
+      },
+      {
+        "id": "sixteen",
+        "en": "sixteen",
+        "rakam": "16"
+      },
+      {
+        "id": "seventeen",
+        "en": "seventeen",
+        "rakam": "17"
+      },
+      {
+        "id": "eighteen",
+        "en": "eighteen",
+        "rakam": "18"
+      },
+      {
+        "id": "nineteen",
+        "en": "nineteen",
+        "rakam": "19"
+      },
+      {
+        "id": "twenty",
+        "en": "twenty",
+        "rakam": "20"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-3-2-yer-bildirenler",
+    "unit": "ing-3-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce söz hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" sözünün Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" sözü Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", \"{tr}\" demektir. Bir şeyin yerini söylerken kullanılır.",
+    "items": [
+      {
+        "id": "in",
+        "en": "in",
+        "tr": "içinde",
+        "trSik": "İçinde"
+      },
+      {
+        "id": "on",
+        "en": "on",
+        "tr": "üstünde",
+        "trSik": "Üstünde"
+      },
+      {
+        "id": "under",
+        "en": "under",
+        "tr": "altında",
+        "trSik": "Altında"
+      },
+      {
+        "id": "next-to",
+        "en": "next to",
+        "tr": "yanında",
+        "trSik": "Yanında"
+      },
+      {
+        "id": "behind",
+        "en": "behind",
+        "tr": "arkasında",
+        "trSik": "Arkasında"
+      },
+      {
+        "id": "in-front-of",
+        "en": "in front of",
+        "tr": "önünde",
+        "trSik": "Önünde"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-3-3-kiyafetler",
+    "unit": "ing-3-3",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "hat",
+        "en": "hat",
+        "tr": "şapka",
+        "trSik": "Şapka"
+      },
+      {
+        "id": "shoes",
+        "en": "shoes",
+        "tr": "ayakkabı",
+        "trSik": "Ayakkabı"
+      },
+      {
+        "id": "dress",
+        "en": "dress",
+        "tr": "elbise",
+        "trSik": "Elbise"
+      },
+      {
+        "id": "skirt",
+        "en": "skirt",
+        "tr": "etek",
+        "trSik": "Etek"
+      },
+      {
+        "id": "trousers",
+        "en": "trousers",
+        "tr": "pantolon",
+        "trSik": "Pantolon"
+      },
+      {
+        "id": "jacket",
+        "en": "jacket",
+        "tr": "ceket",
+        "trSik": "Ceket"
+      },
+      {
+        "id": "socks",
+        "en": "socks",
+        "tr": "çorap",
+        "trSik": "Çorap"
+      },
+      {
+        "id": "gloves",
+        "en": "gloves",
+        "tr": "eldiven",
+        "trSik": "Eldiven"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-3-3-duygular",
+    "unit": "ing-3-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "happy",
+        "en": "happy",
+        "tr": "mutlu",
+        "trSik": "Mutlu"
+      },
+      {
+        "id": "sad",
+        "en": "sad",
+        "tr": "üzgün",
+        "trSik": "Üzgün"
+      },
+      {
+        "id": "angry",
+        "en": "angry",
+        "tr": "kızgın",
+        "trSik": "Kızgın"
+      },
+      {
+        "id": "tired",
+        "en": "tired",
+        "tr": "yorgun",
+        "trSik": "Yorgun"
+      },
+      {
+        "id": "hungry",
+        "en": "hungry",
+        "tr": "aç",
+        "trSik": "Aç"
+      },
+      {
+        "id": "thirsty",
+        "en": "thirsty",
+        "tr": "susamış",
+        "trSik": "Susamış"
+      },
+      {
+        "id": "surprised",
+        "en": "surprised",
+        "tr": "şaşkın",
+        "trSik": "Şaşkın"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-3-4-aile",
+    "unit": "ing-3-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "grandmother",
+        "en": "grandmother",
+        "tr": "büyükanne",
+        "trSik": "Büyükanne"
+      },
+      {
+        "id": "grandfather",
+        "en": "grandfather",
+        "tr": "büyükbaba",
+        "trSik": "Büyükbaba"
+      },
+      {
+        "id": "cousin",
+        "en": "cousin",
+        "tr": "kuzen",
+        "trSik": "Kuzen"
+      },
+      {
+        "id": "son",
+        "en": "son",
+        "tr": "erkek evlat",
+        "trSik": "Erkek evlat"
+      },
+      {
+        "id": "daughter",
+        "en": "daughter",
+        "tr": "kız evlat",
+        "trSik": "Kız evlat"
+      },
+      {
+        "id": "parents",
+        "en": "parents",
+        "tr": "anne ve baba",
+        "trSik": "Anne ve baba"
+      },
+      {
+        "id": "aunt",
+        "en": "aunt",
+        "tr": "teyze ya da hala",
+        "trSik": "Teyze ya da hala"
+      },
+      {
+        "id": "uncle",
+        "en": "uncle",
+        "tr": "amca ya da dayı",
+        "trSik": "Amca ya da dayı"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-3-5-ev-esyalari",
+    "unit": "ing-3-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "chair",
+        "en": "chair",
+        "tr": "sandalye",
+        "trSik": "Sandalye"
+      },
+      {
+        "id": "table",
+        "en": "table",
+        "tr": "masa",
+        "trSik": "Masa"
+      },
+      {
+        "id": "bed",
+        "en": "bed",
+        "tr": "yatak",
+        "trSik": "Yatak"
+      },
+      {
+        "id": "wardrobe",
+        "en": "wardrobe",
+        "tr": "gardırop",
+        "trSik": "Gardırop"
+      },
+      {
+        "id": "sofa",
+        "en": "sofa",
+        "tr": "kanepe",
+        "trSik": "Kanepe"
+      },
+      {
+        "id": "fridge",
+        "en": "fridge",
+        "tr": "buzdolabı",
+        "trSik": "Buzdolabı"
+      },
+      {
+        "id": "lamp",
+        "en": "lamp",
+        "tr": "lamba",
+        "trSik": "Lamba"
+      },
+      {
+        "id": "mirror",
+        "en": "mirror",
+        "tr": "ayna",
+        "trSik": "Ayna"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-3-6-tasitlar",
+    "unit": "ing-3-6",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "car",
+        "en": "car",
+        "tr": "araba",
+        "trSik": "Araba"
+      },
+      {
+        "id": "bus",
+        "en": "bus",
+        "tr": "otobüs",
+        "trSik": "Otobüs"
+      },
+      {
+        "id": "train",
+        "en": "train",
+        "tr": "tren",
+        "trSik": "Tren"
+      },
+      {
+        "id": "plane",
+        "en": "plane",
+        "tr": "uçak",
+        "trSik": "Uçak"
+      },
+      {
+        "id": "ship",
+        "en": "ship",
+        "tr": "gemi",
+        "trSik": "Gemi"
+      },
+      {
+        "id": "bike",
+        "en": "bike",
+        "tr": "bisiklet",
+        "trSik": "Bisiklet"
+      },
+      {
+        "id": "boat",
+        "en": "boat",
+        "tr": "tekne",
+        "trSik": "Tekne"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-3-6-hava-durumu",
+    "unit": "ing-3-6",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "sunny",
+        "en": "sunny",
+        "tr": "güneşli",
+        "trSik": "Güneşli"
+      },
+      {
+        "id": "rainy",
+        "en": "rainy",
+        "tr": "yağmurlu",
+        "trSik": "Yağmurlu"
+      },
+      {
+        "id": "snowy",
+        "en": "snowy",
+        "tr": "karlı",
+        "trSik": "Karlı"
+      },
+      {
+        "id": "windy",
+        "en": "windy",
+        "tr": "rüzgârlı",
+        "trSik": "Rüzgârlı"
+      },
+      {
+        "id": "cloudy",
+        "en": "cloudy",
+        "tr": "bulutlu",
+        "trSik": "Bulutlu"
+      },
+      {
+        "id": "hot",
+        "en": "hot",
+        "tr": "sıcak",
+        "trSik": "Sıcak"
+      },
+      {
+        "id": "cold",
+        "en": "cold",
+        "tr": "soğuk",
+        "trSik": "Soğuk"
+      }
+    ]
+  }
+]

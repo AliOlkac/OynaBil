@@ -1,6 +1,7 @@
 import { questionsFromCards, type CardSet } from "@/core/cards";
 import type { Grade, Question, Subject } from "@/core/model";
 import { dinKulturu } from "./din-kulturu/subject";
+import { ingilizce } from "./ingilizce/subject";
 
 /**
  * İçerik kaydı. Her ders ve sınıfın soruları ayrı parça olarak yüklenir:
@@ -14,7 +15,7 @@ import { dinKulturu } from "./din-kulturu/subject";
  * Yeni bir ders eklemek için `subject.ts` ile üniteleri tanımlayın, dosyaları koyun ve
  * aşağıdaki iki listeye ekleyin.
  */
-export const SUBJECTS: Subject[] = [dinKulturu];
+export const SUBJECTS: Subject[] = [dinKulturu, ingilizce];
 
 type Module = { default: unknown };
 type GradeFiles = {
@@ -33,6 +34,11 @@ export const CONTENT_FILES: Record<string, Partial<Record<Grade, GradeFiles>>> =
       cards: () => import("./din-kulturu/kartlar/8.json"),
       passages: () => import("./din-kulturu/sorular/8-lgs.json"),
     },
+  },
+  ingilizce: {
+    2: { questions: () => import("./ingilizce/sorular/2.json"), cards: () => import("./ingilizce/kartlar/2.json") },
+    3: { questions: () => import("./ingilizce/sorular/3.json"), cards: () => import("./ingilizce/kartlar/3.json") },
+    4: { questions: () => import("./ingilizce/sorular/4.json"), cards: () => import("./ingilizce/kartlar/4.json") },
   },
 };
 

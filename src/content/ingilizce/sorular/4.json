@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "ing-4-1-01",
+    "unit": "ing-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Be quiet, please.\" sözü ne demektir?",
+    "choices": [
+      "Lütfen ayağa kalkın.",
+      "Lütfen sessiz olun.",
+      "Lütfen kapıyı kapatın.",
+      "Lütfen oturun."
+    ],
+    "answer": 1,
+    "explanation": "\"Be quiet\" sessiz ol demektir. \"Please\" sözü isteği kibarlaştırır."
+  },
+  {
+    "id": "ing-4-1-02",
+    "unit": "ing-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Sınıfa girmek için izin isteyen öğrenci ne der?",
+    "choices": [
+      "May I come in?",
+      "May I go out?",
+      "How are you?",
+      "What is this?"
+    ],
+    "answer": 0,
+    "explanation": "\"May I come in?\" içeri girebilir miyim demektir. İzin isterken \"May I ...?\" kalıbı kullanılır."
+  },
+  {
+    "id": "ing-4-1-03",
+    "unit": "ing-4-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Open the window, please.\" cümlesi \"Lütfen pencereyi aç.\" demektir.",
+    "answer": true,
+    "explanation": "\"Open\" açmak, \"window\" pencere demektir. Kapatmak için \"close\" kullanılır."
+  },
+  {
+    "id": "ing-4-1-04",
+    "unit": "ing-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"May I go to the toilet?\" sorusuna hangisi olumlu bir cevaptır?",
+    "choices": [
+      "No, thanks.",
+      "Yes, I am.",
+      "Of course, you can.",
+      "I'm fine."
+    ],
+    "answer": 2,
+    "explanation": "\"Of course, you can.\" tabii ki gidebilirsin demektir. İzin verirken \"Sure.\" da denebilir."
+  },
+  {
+    "id": "ing-4-1-05",
+    "unit": "ing-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"forty\" hangi sayıdır?",
+    "choices": [
+      "14",
+      "4",
+      "44",
+      "40"
+    ],
+    "answer": 3,
+    "explanation": "\"Forty\" kırk demektir. On dört \"fourteen\", dört \"four\" diye söylenir."
+  },
+  {
+    "id": "ing-4-1-06",
+    "unit": "ing-4-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Clean the board, please.\" cümlesi \"Lütfen tahtaya bak.\" demektir.",
+    "answer": false,
+    "explanation": "\"Clean the board\" tahtayı sil demektir. Tahtaya bak demek için \"Look at the board.\" denir."
+  },
+  {
+    "id": "ing-4-1-07",
+    "unit": "ing-4-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "twenty + thirteen = ?",
+    "choices": [
+      "thirty",
+      "thirty-three",
+      "twenty-three",
+      "forty-three"
+    ],
+    "answer": 1,
+    "explanation": "\"Twenty\" 20, \"thirteen\" 13 demektir. 20 + 13 = 33 eder. Otuz üç \"thirty-three\" diye söylenir."
+  },
+  {
+    "id": "ing-4-1-08",
+    "unit": "ing-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Give me the book, please.\" diyen arkadaşına kitabı uzatırken ne dersin?",
+    "choices": [
+      "Here you are.",
+      "Good night.",
+      "I'm ten.",
+      "See you."
+    ],
+    "answer": 0,
+    "explanation": "\"Here you are.\" buyur demektir. Birine bir şey verirken söylenir."
+  },
+  {
+    "id": "ing-4-2-01",
+    "unit": "ing-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Where are you from?\" sorusunun cevabı hangisidir?",
+    "choices": [
+      "I'm ten years old.",
+      "I'm fine, thanks.",
+      "I'm from Türkiye.",
+      "I'm a student."
+    ],
+    "answer": 2,
+    "explanation": "\"Where are you from?\" nerelisin demektir. Cevap \"I'm from ...\" diye başlar."
+  },
+  {
+    "id": "ing-4-2-02",
+    "unit": "ing-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Japonya'dan olan bir kişi için hangisi söylenir?",
+    "choices": [
+      "Japanese",
+      "German",
+      "Russian",
+      "Spanish"
+    ],
+    "answer": 0,
+    "explanation": "Japonya \"Japan\", Japon \"Japanese\" diye söylenir."
+  },
+  {
+    "id": "ing-4-2-03",
+    "unit": "ing-4-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"German\" kelimesi Almanya'dan olan kişiyi anlatır.",
+    "answer": true,
+    "explanation": "Almanya \"Germany\", Alman \"German\" diye söylenir."
+  },
+  {
+    "id": "ing-4-2-04",
+    "unit": "ing-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "She is from Spain. She is ___.",
+    "choices": [
+      "Russian",
+      "British",
+      "Turkish",
+      "Spanish"
+    ],
+    "answer": 3,
+    "explanation": "İspanya \"Spain\", İspanyol \"Spanish\" diye söylenir."
+  },
+  {
+    "id": "ing-4-2-05",
+    "unit": "ing-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Are you American?\" sorusuna hangisi olumsuz bir cevaptır?",
+    "choices": [
+      "No, I can't.",
+      "No, I'm not.",
+      "No, I don't.",
+      "No, it isn't."
+    ],
+    "answer": 1,
+    "explanation": "\"Are you ...?\" sorusuna olumsuz cevap \"No, I'm not.\", olumlu cevap \"Yes, I am.\" olur."
+  },
+  {
+    "id": "ing-4-2-06",
+    "unit": "ing-4-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"He is from Russia. He is British.\" cümlelerinde ülke ile uyruk birbirine uygundur.",
+    "answer": false,
+    "explanation": "Rusya'dan olan kişi \"Russian\" olur. \"British\" ise Britanya'dan olan kişi için söylenir."
+  },
+  {
+    "id": "ing-4-2-07",
+    "unit": "ing-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Tom is from Britain. What nationality is he?",
+    "choices": [
+      "German",
+      "Pakistani",
+      "British",
+      "Iranian"
+    ],
+    "answer": 2,
+    "explanation": "\"Nationality\" uyruk demektir. Britanya \"Britain\", Britanyalı \"British\" diye söylenir."
+  },
+  {
+    "id": "ing-4-2-08",
+    "unit": "ing-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi bir ülke adıdır?",
+    "choices": [
+      "Germany",
+      "Japanese",
+      "Turkish",
+      "Spanish"
+    ],
+    "answer": 0,
+    "explanation": "\"Germany\" Almanya demektir ve bir ülke adıdır. Öteki kelimeler uyruk bildirir."
+  },
+  {
+    "id": "ing-4-3-01",
+    "unit": "ing-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"I can swim.\" cümlesi ne demektir?",
+    "choices": [
+      "Yüzmeyi severim.",
+      "Yüzebilirim.",
+      "Yüzemem.",
+      "Yüzüyorum."
+    ],
+    "answer": 1,
+    "explanation": "\"Can\" yapabilmek anlamı verir. \"I can swim.\" yüzebilirim demektir."
+  },
+  {
+    "id": "ing-4-3-02",
+    "unit": "ing-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Can you ride a bike?\" sorusuna hangisi olumlu bir cevaptır?",
+    "choices": [
+      "Yes, I can.",
+      "Yes, I am.",
+      "Yes, I do.",
+      "Yes, it is."
+    ],
+    "answer": 0,
+    "explanation": "\"Can you ...?\" sorusuna olumlu cevap \"Yes, I can.\", olumsuz cevap \"No, I can't.\" olur."
+  },
+  {
+    "id": "ing-4-3-03",
+    "unit": "ing-4-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"A fish can swim.\" cümlesi doğru bir bilgidir.",
+    "answer": true,
+    "explanation": "Cümle \"Balık yüzebilir.\" demektir. Balıklar suda yaşar ve yüzer."
+  },
+  {
+    "id": "ing-4-3-04",
+    "unit": "ing-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "A bird ___ fly.",
+    "choices": [
+      "is",
+      "are",
+      "can",
+      "can't"
+    ],
+    "answer": 2,
+    "explanation": "\"A bird can fly.\" kuş uçabilir demektir. Yapabildiğimiz işleri \"can\" ile anlatırız."
+  },
+  {
+    "id": "ing-4-3-05",
+    "unit": "ing-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"This is Ayşe's book.\" cümlesine göre kitap kimindir?",
+    "choices": [
+      "Benim",
+      "Senin",
+      "Öğretmenin",
+      "Ayşe'nin"
+    ],
+    "answer": 3,
+    "explanation": "İsmin sonuna gelen 's sahiplik bildirir. \"Ayşe's book\" Ayşe'nin kitabı demektir."
+  },
+  {
+    "id": "ing-4-3-06",
+    "unit": "ing-4-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"He can't play the piano.\" cümlesi \"O, piyano çalabilir.\" demektir.",
+    "answer": false,
+    "explanation": "\"Can't\" yapamamak anlamı verir. Cümle \"O, piyano çalamaz.\" demektir."
+  },
+  {
+    "id": "ing-4-3-07",
+    "unit": "ing-4-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "I have got a guitar. ___ guitar is new.",
+    "choices": [
+      "Your",
+      "My",
+      "His",
+      "Her"
+    ],
+    "answer": 1,
+    "explanation": "\"I\" ile konuşan kişi kendi eşyası için \"my\" kullanır. \"My guitar\" benim gitarım demektir."
+  },
+  {
+    "id": "ing-4-3-08",
+    "unit": "ing-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"play the guitar\" ne demektir?",
+    "choices": [
+      "Gitar çalmak",
+      "Ata binmek",
+      "Resim çizmek",
+      "İp atlamak"
+    ],
+    "answer": 0,
+    "explanation": "\"Play the guitar\" gitar çalmak demektir. Ata binmek \"ride a horse\" diye söylenir."
+  },
+  {
+    "id": "ing-4-3-09",
+    "unit": "ing-4-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Can a cat fly?\" sorusunun doğru cevabı hangisidir?",
+    "choices": [
+      "Yes, it can.",
+      "No, it isn't.",
+      "No, I can't.",
+      "No, it can't."
+    ],
+    "answer": 3,
+    "explanation": "Soru \"Kedi uçabilir mi?\" demektir. Kedi uçamaz. Hayvanlar için \"it\" kullanılır: \"No, it can't.\""
+  },
+  {
+    "id": "ing-4-4-01",
+    "unit": "ing-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"I like reading.\" cümlesi ne demektir?",
+    "choices": [
+      "Okumayı sevmem.",
+      "Okuyabilirim.",
+      "Okumayı severim.",
+      "Kitabım var."
+    ],
+    "answer": 2,
+    "explanation": "\"I like\" severim demektir. \"Reading\" okumak anlamına gelir."
+  },
+  {
+    "id": "ing-4-4-02",
+    "unit": "ing-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"play chess\" ne demektir?",
+    "choices": [
+      "Satranç oynamak",
+      "Futbol oynamak",
+      "Yüzmek",
+      "Şarkı söylemek"
+    ],
+    "answer": 0,
+    "explanation": "\"Chess\" satranç demektir. \"Play chess\" satranç oynamak anlamına gelir."
+  },
+  {
+    "id": "ing-4-4-03",
+    "unit": "ing-4-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"I dislike swimming.\" cümlesi \"Yüzmeyi sevmem.\" demektir.",
+    "answer": true,
+    "explanation": "\"Dislike\" sevmemek demektir. \"Like\" kelimesinin zıt anlamlısıdır."
+  },
+  {
+    "id": "ing-4-4-04",
+    "unit": "ing-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Do you like dancing?\" sorusuna hangisi olumlu bir cevaptır?",
+    "choices": [
+      "Yes, I can.",
+      "Yes, I do.",
+      "Yes, I am.",
+      "Yes, it is."
+    ],
+    "answer": 1,
+    "explanation": "\"Do you ...?\" sorusuna olumlu cevap \"Yes, I do.\", olumsuz cevap \"No, I don't.\" olur."
+  },
+  {
+    "id": "ing-4-4-05",
+    "unit": "ing-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "I ___ watching cartoons. They are fun.",
+    "choices": [
+      "dislike",
+      "can't",
+      "am",
+      "like"
+    ],
+    "answer": 3,
+    "explanation": "\"They are fun.\" onlar eğlenceli demektir. Eğlenceli bulduğumuz şeyi severiz, bu yüzden \"like\" kullanılır."
+  },
+  {
+    "id": "ing-4-4-06",
+    "unit": "ing-4-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"ride a bike\" sözü \"uçurtma uçurmak\" demektir.",
+    "answer": false,
+    "explanation": "\"Ride a bike\" bisiklete binmek demektir. Uçurtma uçurmak \"fly a kite\" diye söylenir."
+  },
+  {
+    "id": "ing-4-4-07",
+    "unit": "ing-4-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Can you say that again, please?\" cümlesini ne zaman söyleriz?",
+    "choices": [
+      "Söyleneni anlamadığımızda",
+      "Vedalaşırken",
+      "Teşekkür ederken",
+      "Tanışırken"
+    ],
+    "answer": 0,
+    "explanation": "Cümle \"Lütfen tekrar söyler misin?\" demektir. Söyleneni duymadığımızda ya da anlamadığımızda kullanılır."
+  },
+  {
+    "id": "ing-4-4-08",
+    "unit": "ing-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"drawing\" kelimesinin Türkçesi nedir?",
+    "choices": [
+      "Şarkı söylemek",
+      "Koşmak",
+      "Resim çizmek",
+      "Kitap okumak"
+    ],
+    "answer": 2,
+    "explanation": "\"Drawing\" resim çizmek demektir. \"I like drawing.\" resim çizmeyi severim anlamına gelir."
+  },
+  {
+    "id": "ing-4-5-01",
+    "unit": "ing-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"get up\" ne demektir?",
+    "choices": [
+      "Yatmak",
+      "Kalkmak",
+      "Yemek yemek",
+      "Oynamak"
+    ],
+    "answer": 1,
+    "explanation": "\"Get up\" yataktan kalkmak demektir. Yatmak için \"go to bed\" denir."
+  },
+  {
+    "id": "ing-4-5-02",
+    "unit": "ing-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"What time is it?\" sorusu ne demektir?",
+    "choices": [
+      "Bugün günlerden ne?",
+      "Hava nasıl?",
+      "Kaç yaşındasın?",
+      "Saat kaç?"
+    ],
+    "answer": 3,
+    "explanation": "\"What time is it?\" saat kaç demektir. Cevap \"It's ... o'clock.\" diye verilir."
+  },
+  {
+    "id": "ing-4-5-03",
+    "unit": "ing-4-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"I have breakfast in the morning.\" cümlesi \"Sabah kahvaltı yaparım.\" demektir.",
+    "answer": true,
+    "explanation": "\"Have breakfast\" kahvaltı yapmak, \"in the morning\" sabahleyin demektir."
+  },
+  {
+    "id": "ing-4-5-04",
+    "unit": "ing-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"It's seven o'clock.\" cümlesine göre saat kaçtır?",
+    "choices": [
+      "07.00",
+      "07.30",
+      "06.00",
+      "17.30"
+    ],
+    "answer": 0,
+    "explanation": "\"Seven\" yedi demektir. \"O'clock\" tam saatleri söylerken kullanılır."
+  },
+  {
+    "id": "ing-4-5-05",
+    "unit": "ing-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"After school, I do my homework.\" cümlesi ne demektir?",
+    "choices": [
+      "Okuldan önce ödevimi yaparım.",
+      "Okulda ödev yaparım.",
+      "Okuldan sonra ödevimi yaparım.",
+      "Okuldan sonra oyun oynarım."
+    ],
+    "answer": 2,
+    "explanation": "\"After school\" okuldan sonra, \"do homework\" ödev yapmak demektir."
+  },
+  {
+    "id": "ing-4-5-06",
+    "unit": "ing-4-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"at noon\" sözü \"gece yarısı\" demektir.",
+    "answer": false,
+    "explanation": "\"At noon\" öğle vakti demektir. Gece için \"at night\" kullanılır."
+  },
+  {
+    "id": "ing-4-5-07",
+    "unit": "ing-4-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "I go to bed ___ night.",
+    "choices": [
+      "in",
+      "on",
+      "to",
+      "at"
+    ],
+    "answer": 3,
+    "explanation": "\"Night\" kelimesiyle \"at\" kullanılır: \"at night\". Sabah için \"in the morning\" denir."
+  },
+  {
+    "id": "ing-4-5-08",
+    "unit": "ing-4-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir öğrenci hangisini sabah ilk olarak yapar?",
+    "choices": [
+      "go to bed",
+      "get up",
+      "have dinner",
+      "do homework"
+    ],
+    "answer": 1,
+    "explanation": "\"Get up\" kalkmak demektir ve güne böyle başlanır. \"Have dinner\" akşam yemeği yemek, \"go to bed\" yatmaya gitmek demektir."
+  },
+  {
+    "id": "ing-4-5-09",
+    "unit": "ing-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Tuesday\" gününden sonra hangi gün gelir?",
+    "choices": [
+      "Monday",
+      "Thursday",
+      "Wednesday",
+      "Sunday"
+    ],
+    "answer": 2,
+    "explanation": "\"Tuesday\" salı demektir. Salıdan sonra çarşamba gelir. Çarşamba \"Wednesday\" diye söylenir."
+  },
+  {
+    "id": "ing-4-6-01",
+    "unit": "ing-4-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Cut the paper.\" cümlesi ne demektir?",
+    "choices": [
+      "Kâğıdı kes.",
+      "Kâğıdı katla.",
+      "Kâğıdı boya.",
+      "Kâğıdı yapıştır."
+    ],
+    "answer": 0,
+    "explanation": "\"Cut\" kesmek, \"paper\" kâğıt demektir. Katlamak \"fold\" diye söylenir."
+  },
+  {
+    "id": "ing-4-6-02",
+    "unit": "ing-4-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Where is the ball?\" \"It's under the table.\" konuşmasına göre top nerededir?",
+    "choices": [
+      "Masanın üstünde",
+      "Masanın yanında",
+      "Masanın altında",
+      "Masanın önünde"
+    ],
+    "answer": 2,
+    "explanation": "\"Under\" altında demektir. \"Under the table\" masanın altında anlamına gelir."
+  },
+  {
+    "id": "ing-4-6-03",
+    "unit": "ing-4-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"mix\" kelimesi \"karıştırmak\" demektir.",
+    "answer": true,
+    "explanation": "\"Mix\" karıştırmak demektir. Deney yaparken \"Mix the water and salt.\" gibi yönergeler verilir."
+  },
+  {
+    "id": "ing-4-6-04",
+    "unit": "ing-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"in front of\" sözünün Türkçesi nedir?",
+    "choices": [
+      "Arkasında",
+      "Önünde",
+      "Yakınında",
+      "Üstünde"
+    ],
+    "answer": 1,
+    "explanation": "\"In front of\" önünde demektir. Arkasında demek için \"behind\" kullanılır."
+  },
+  {
+    "id": "ing-4-6-05",
+    "unit": "ing-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Pour the water into the glass.\" yönergesinde ne yapmamız istenir?",
+    "choices": [
+      "Suyu içmemiz",
+      "Bardağı yıkamamız",
+      "Suyu ısıtmamız",
+      "Suyu bardağa dökmemiz"
+    ],
+    "answer": 3,
+    "explanation": "\"Pour\" dökmek, \"glass\" bardak demektir. Yönerge \"Suyu bardağa dök.\" anlamına gelir."
+  },
+  {
+    "id": "ing-4-6-06",
+    "unit": "ing-4-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"behind\" kelimesi \"yanında\" demektir.",
+    "answer": false,
+    "explanation": "\"Behind\" arkasında demektir. Yanında ya da yakınında demek için \"near\" kullanılır."
+  },
+  {
+    "id": "ing-4-6-07",
+    "unit": "ing-4-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Plant the seed. Then, water it.\" yönergesine göre önce ne yapılır?",
+    "choices": [
+      "Tohum ekilir.",
+      "Tohum sulanır.",
+      "Tohum kesilir.",
+      "Tohum boyanır."
+    ],
+    "answer": 0,
+    "explanation": "\"Plant the seed.\" tohumu ek demektir. \"Then\" sonra anlamına gelir. Önce tohum ekilir, sonra sulanır."
+  },
+  {
+    "id": "ing-4-6-08",
+    "unit": "ing-4-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Deney\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "science",
+      "scientist",
+      "experiment",
+      "brush"
+    ],
+    "answer": 2,
+    "explanation": "\"Experiment\" deney demektir. \"Science\" bilim, \"scientist\" bilim insanı demektir."
+  },
+  {
+    "id": "ing-4-7-01",
+    "unit": "ing-4-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Aşçı\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "farmer",
+      "chef",
+      "nurse",
+      "driver"
+    ],
+    "answer": 1,
+    "explanation": "\"Chef\" aşçı demektir. \"Farmer\" çiftçi, \"nurse\" hemşire, \"driver\" sürücü demektir."
+  },
+  {
+    "id": "ing-4-7-02",
+    "unit": "ing-4-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Where does a teacher work?",
+    "choices": [
+      "At a hospital",
+      "On a farm",
+      "At a restaurant",
+      "At a school"
+    ],
+    "answer": 3,
+    "explanation": "Soru \"Öğretmen nerede çalışır?\" demektir. Öğretmen okulda çalışır: \"at a school\"."
+  },
+  {
+    "id": "ing-4-7-03",
+    "unit": "ing-4-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"A pilot flies a plane.\" cümlesi doğru bir bilgidir.",
+    "answer": true,
+    "explanation": "Cümle \"Pilot uçak uçurur.\" demektir. \"Fly\" uçmak ya da uçurmak anlamına gelir."
+  },
+  {
+    "id": "ing-4-7-04",
+    "unit": "ing-4-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "What does a chef do?",
+    "choices": [
+      "He cooks meals.",
+      "He flies planes.",
+      "He grows vegetables.",
+      "He helps sick people."
+    ],
+    "answer": 0,
+    "explanation": "Aşçı yemek pişirir. \"Cook\" pişirmek, \"meal\" yemek demektir."
+  },
+  {
+    "id": "ing-4-7-05",
+    "unit": "ing-4-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Where does a nurse work?",
+    "choices": [
+      "At a post office",
+      "At a hospital",
+      "At a police station",
+      "At a theatre"
+    ],
+    "answer": 1,
+    "explanation": "Hemşire hastanede çalışır. Hastane \"hospital\" diye söylenir."
+  },
+  {
+    "id": "ing-4-7-06",
+    "unit": "ing-4-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"A farmer works at a police station.\" cümlesi doğru bir bilgidir.",
+    "answer": false,
+    "explanation": "Çiftçi çiftlikte çalışır: \"A farmer works on a farm.\" Polis merkezinde polisler çalışır."
+  },
+  {
+    "id": "ing-4-7-07",
+    "unit": "ing-4-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "She helps sick animals. What is her job?",
+    "choices": [
+      "dentist",
+      "singer",
+      "vet",
+      "postman"
+    ],
+    "answer": 2,
+    "explanation": "Hasta hayvanlara veteriner yardım eder. Veteriner \"vet\" diye söylenir."
+  },
+  {
+    "id": "ing-4-7-08",
+    "unit": "ing-4-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"firefighter\" kelimesinin Türkçesi nedir?",
+    "choices": [
+      "Polis",
+      "Postacı",
+      "Garson",
+      "İtfaiyeci"
+    ],
+    "answer": 3,
+    "explanation": "\"Firefighter\" itfaiyeci demektir. İtfaiyeciler yangınları söndürür."
+  },
+  {
+    "id": "ing-4-8-01",
+    "unit": "ing-4-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Mont\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "coat",
+      "skirt",
+      "shorts",
+      "socks"
+    ],
+    "answer": 0,
+    "explanation": "\"Coat\" mont ya da palto demektir. Soğuk havalarda giyilir."
+  },
+  {
+    "id": "ing-4-8-02",
+    "unit": "ing-4-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "It's rainy. Take your ___.",
+    "choices": [
+      "sunglasses",
+      "shorts",
+      "umbrella",
+      "sandals"
+    ],
+    "answer": 2,
+    "explanation": "\"Rainy\" yağmurlu demektir. Yağmurlu havada şemsiye alırız. Şemsiye \"umbrella\" diye söylenir."
+  },
+  {
+    "id": "ing-4-8-03",
+    "unit": "ing-4-8",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"boots\" kelimesi \"çizme\" demektir.",
+    "answer": true,
+    "explanation": "\"Boots\" çizme ya da bot demektir. Karlı ve yağmurlu havalarda giyilir."
+  },
+  {
+    "id": "ing-4-8-04",
+    "unit": "ing-4-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"What's the weather like?\" sorusu neyi öğrenmek için sorulur?",
+    "choices": [
+      "Saatin kaç olduğunu",
+      "Havanın nasıl olduğunu",
+      "Ne giydiğimizi",
+      "Hangi mevsimi sevdiğimizi"
+    ],
+    "answer": 1,
+    "explanation": "\"Weather\" hava durumu demektir. Cevap \"It's sunny.\" ya da \"It's cold.\" gibi verilir."
+  },
+  {
+    "id": "ing-4-8-05",
+    "unit": "ing-4-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "It's hot and sunny today. I'm wearing ___.",
+    "choices": [
+      "a coat and boots",
+      "gloves and a scarf",
+      "a sweater and a coat",
+      "shorts and a T-shirt"
+    ],
+    "answer": 3,
+    "explanation": "\"Hot and sunny\" sıcak ve güneşli demektir. Sıcak havada şort ve tişört giyilir."
+  },
+  {
+    "id": "ing-4-8-06",
+    "unit": "ing-4-8",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"scarf\" kelimesi \"eldiven\" demektir.",
+    "answer": false,
+    "explanation": "\"Scarf\" atkı demektir. Eldiven ise \"gloves\" diye söylenir."
+  },
+  {
+    "id": "ing-4-8-07",
+    "unit": "ing-4-8",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Can I borrow your umbrella?\" diyen kişi ne istemektedir?",
+    "choices": [
+      "Şemsiyeyi ödünç almak",
+      "Şemsiye satın almak",
+      "Şemsiyeyi geri vermek",
+      "Şemsiyenin rengini öğrenmek"
+    ],
+    "answer": 0,
+    "explanation": "\"Borrow\" ödünç almak demektir. \"Can I borrow ...?\" bir şeyi ödünç isterken kullanılır."
+  },
+  {
+    "id": "ing-4-8-08",
+    "unit": "ing-4-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ülkemizde kar en çok hangi mevsimde yağar?",
+    "choices": [
+      "summer",
+      "spring",
+      "winter",
+      "autumn"
+    ],
+    "answer": 2,
+    "explanation": "Kar en çok kışın yağar. Kış \"winter\" diye söylenir. \"Summer\" yaz, \"spring\" ilkbahar, \"autumn\" sonbahar demektir."
+  },
+  {
+    "id": "ing-4-9-01",
+    "unit": "ing-4-9",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"tall\" kelimesinin Türkçesi nedir?",
+    "choices": [
+      "Kısa boylu",
+      "Genç",
+      "Uzun boylu",
+      "Güçlü"
+    ],
+    "answer": 2,
+    "explanation": "\"Tall\" uzun boylu demektir. Kısa boylu \"short\" diye söylenir."
+  },
+  {
+    "id": "ing-4-9-02",
+    "unit": "ing-4-9",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"She has got long hair.\" cümlesine göre saçı nasıldır?",
+    "choices": [
+      "Kısa",
+      "Uzun",
+      "Kıvırcık",
+      "Sarı"
+    ],
+    "answer": 1,
+    "explanation": "\"Long\" uzun, \"hair\" saç demektir. Cümle \"Onun uzun saçı var.\" anlamına gelir."
+  },
+  {
+    "id": "ing-4-9-03",
+    "unit": "ing-4-9",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"young\" kelimesinin zıt anlamlısı \"old\" kelimesidir.",
+    "answer": true,
+    "explanation": "\"Young\" genç, \"old\" yaşlı demektir. Bu iki kelime zıt anlamlıdır."
+  },
+  {
+    "id": "ing-4-9-04",
+    "unit": "ing-4-9",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "He is ___. He can lift heavy things.",
+    "choices": [
+      "strong",
+      "weak",
+      "short",
+      "young"
+    ],
+    "answer": 0,
+    "explanation": "\"Lift heavy things\" ağır şeyleri kaldırmak demektir. Bunu güçlü kişiler yapar. Güçlü \"strong\" diye söylenir."
+  },
+  {
+    "id": "ing-4-9-05",
+    "unit": "ing-4-9",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Whose bag is this?\" sorusunun cevabı hangisidir?",
+    "choices": [
+      "It's a bag.",
+      "It's blue.",
+      "It's on the desk.",
+      "It's Ali's."
+    ],
+    "answer": 3,
+    "explanation": "\"Whose\" kimin demektir. Cevapta sahiplik bildirilir: \"It's Ali's.\" o Ali'nin demektir."
+  },
+  {
+    "id": "ing-4-9-06",
+    "unit": "ing-4-9",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"short\" ve \"tall\" kelimeleri aynı anlama gelir.",
+    "answer": false,
+    "explanation": "\"Short\" kısa boylu, \"tall\" uzun boylu demektir. Bu iki kelime zıt anlamlıdır."
+  },
+  {
+    "id": "ing-4-9-07",
+    "unit": "ing-4-9",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"My friend has got blue eyes and curly hair.\" cümlesine göre hangisi doğrudur?",
+    "choices": [
+      "Gözleri yeşil, saçı düzdür.",
+      "Gözleri mavi, saçı düzdür.",
+      "Gözleri mavi, saçı kıvırcıktır.",
+      "Gözleri kahverengi, saçı kıvırcıktır."
+    ],
+    "answer": 2,
+    "explanation": "\"Blue eyes\" mavi gözler, \"curly hair\" kıvırcık saç demektir."
+  },
+  {
+    "id": "ing-4-9-08",
+    "unit": "ing-4-9",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"What does he look like?\" sorusu neyi öğrenmek için sorulur?",
+    "choices": [
+      "Mesleğini",
+      "Dış görünüşünü",
+      "Nereli olduğunu",
+      "Neyi sevdiğini"
+    ],
+    "answer": 1,
+    "explanation": "\"What does he look like?\" o nasıl görünüyor demektir. Cevapta boy, saç ve göz gibi özellikler anlatılır."
+  },
+  {
+    "id": "ing-4-10-01",
+    "unit": "ing-4-10",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Peynir\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "bread",
+      "honey",
+      "butter",
+      "cheese"
+    ],
+    "answer": 3,
+    "explanation": "\"Cheese\" peynir demektir. \"Bread\" ekmek, \"honey\" bal, \"butter\" tereyağı demektir."
+  },
+  {
+    "id": "ing-4-10-02",
+    "unit": "ing-4-10",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir içecektir?",
+    "choices": [
+      "lemonade",
+      "bread",
+      "cheese",
+      "honey"
+    ],
+    "answer": 0,
+    "explanation": "\"Lemonade\" limonata demektir ve bir içecektir. Öteki kelimeler yiyecek adıdır."
+  },
+  {
+    "id": "ing-4-10-03",
+    "unit": "ing-4-10",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"I'm hungry.\" cümlesi \"Açım.\" demektir.",
+    "answer": true,
+    "explanation": "\"Hungry\" aç demektir. Susadığımızda ise \"I'm thirsty.\" deriz."
+  },
+  {
+    "id": "ing-4-10-04",
+    "unit": "ing-4-10",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Do you want some milk?\" sorusuna hangisi kibar bir ret cevabıdır?",
+    "choices": [
+      "Yes, please.",
+      "No, thanks. I'm full.",
+      "Here you are.",
+      "You're welcome."
+    ],
+    "answer": 1,
+    "explanation": "\"No, thanks.\" hayır, teşekkürler demektir. \"I'm full.\" doydum anlamına gelir."
+  },
+  {
+    "id": "ing-4-10-05",
+    "unit": "ing-4-10",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "I'm thirsty. I want some ___.",
+    "choices": [
+      "bread",
+      "cheese",
+      "water",
+      "pasta"
+    ],
+    "answer": 2,
+    "explanation": "\"Thirsty\" susamış demektir. Susayan kişi su ister. Su \"water\" diye söylenir."
+  },
+  {
+    "id": "ing-4-10-06",
+    "unit": "ing-4-10",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"butter\" kelimesi \"bal\" demektir.",
+    "answer": false,
+    "explanation": "\"Butter\" tereyağı demektir. Bal ise \"honey\" diye söylenir."
+  },
+  {
+    "id": "ing-4-10-07",
+    "unit": "ing-4-10",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Would you like some cake?\" sorusuna hangisi kabul cevabıdır?",
+    "choices": [
+      "No, thanks.",
+      "I'm full.",
+      "Maybe later.",
+      "Yes, please."
+    ],
+    "answer": 3,
+    "explanation": "\"Would you like ...?\" ister misiniz demektir. Kabul ederken \"Yes, please.\" deriz."
+  },
+  {
+    "id": "ing-4-10-08",
+    "unit": "ing-4-10",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"breakfast\" kelimesinin Türkçesi nedir?",
+    "choices": [
+      "Kahvaltı",
+      "Öğle yemeği",
+      "Akşam yemeği",
+      "Tatlı"
+    ],
+    "answer": 0,
+    "explanation": "\"Breakfast\" kahvaltı demektir. Öğle yemeği \"lunch\", akşam yemeği \"dinner\" diye söylenir."
+  }
+]

@@ -1,0 +1,501 @@
+[
+  {
+    "kind": "pairs",
+    "id": "ing-2-2-renkler",
+    "unit": "ing-2-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" renginin İngilizcesi hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" hangi renktir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", \"{tr}\" demektir. Renkleri söylerken \"It is {en}.\" deriz.",
+    "items": [
+      {
+        "id": "red",
+        "en": "red",
+        "tr": "kırmızı",
+        "trSik": "Kırmızı"
+      },
+      {
+        "id": "blue",
+        "en": "blue",
+        "tr": "mavi",
+        "trSik": "Mavi"
+      },
+      {
+        "id": "green",
+        "en": "green",
+        "tr": "yeşil",
+        "trSik": "Yeşil"
+      },
+      {
+        "id": "yellow",
+        "en": "yellow",
+        "tr": "sarı",
+        "trSik": "Sarı"
+      },
+      {
+        "id": "black",
+        "en": "black",
+        "tr": "siyah",
+        "trSik": "Siyah"
+      },
+      {
+        "id": "white",
+        "en": "white",
+        "tr": "beyaz",
+        "trSik": "Beyaz"
+      },
+      {
+        "id": "pink",
+        "en": "pink",
+        "tr": "pembe",
+        "trSik": "Pembe"
+      },
+      {
+        "id": "purple",
+        "en": "purple",
+        "tr": "mor",
+        "trSik": "Mor"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-2-2-sayilar",
+    "unit": "ing-2-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{en}\" hangi sayıdır?",
+        "answer": "rakam"
+      },
+      {
+        "prompt": "{rakam} sayısının İngilizcesi hangisidir?",
+        "answer": "en"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\", {rakam} sayısının İngilizcesidir.",
+      "swap": "rakam"
+    },
+    "explanation": "{rakam} sayısı İngilizcede \"{en}\" diye söylenir.",
+    "items": [
+      {
+        "id": "one",
+        "en": "one",
+        "rakam": "1"
+      },
+      {
+        "id": "two",
+        "en": "two",
+        "rakam": "2"
+      },
+      {
+        "id": "three",
+        "en": "three",
+        "rakam": "3"
+      },
+      {
+        "id": "four",
+        "en": "four",
+        "rakam": "4"
+      },
+      {
+        "id": "five",
+        "en": "five",
+        "rakam": "5"
+      },
+      {
+        "id": "six",
+        "en": "six",
+        "rakam": "6"
+      },
+      {
+        "id": "seven",
+        "en": "seven",
+        "rakam": "7"
+      },
+      {
+        "id": "eight",
+        "en": "eight",
+        "rakam": "8"
+      },
+      {
+        "id": "nine",
+        "en": "nine",
+        "rakam": "9"
+      },
+      {
+        "id": "ten",
+        "en": "ten",
+        "rakam": "10"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-2-2-okul-esyalari",
+    "unit": "ing-2-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "pencil",
+        "en": "pencil",
+        "tr": "kurşun kalem",
+        "trSik": "Kurşun kalem"
+      },
+      {
+        "id": "book",
+        "en": "book",
+        "tr": "kitap",
+        "trSik": "Kitap"
+      },
+      {
+        "id": "bag",
+        "en": "bag",
+        "tr": "çanta",
+        "trSik": "Çanta"
+      },
+      {
+        "id": "eraser",
+        "en": "eraser",
+        "tr": "silgi",
+        "trSik": "Silgi"
+      },
+      {
+        "id": "notebook",
+        "en": "notebook",
+        "tr": "defter",
+        "trSik": "Defter"
+      },
+      {
+        "id": "ruler",
+        "en": "ruler",
+        "tr": "cetvel",
+        "trSik": "Cetvel"
+      },
+      {
+        "id": "scissors",
+        "en": "scissors",
+        "tr": "makas",
+        "trSik": "Makas"
+      },
+      {
+        "id": "desk",
+        "en": "desk",
+        "tr": "sıra",
+        "trSik": "Sıra"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-2-3-vucut",
+    "unit": "ing-2-3",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "head",
+        "en": "head",
+        "tr": "baş",
+        "trSik": "Baş"
+      },
+      {
+        "id": "eye",
+        "en": "eye",
+        "tr": "göz",
+        "trSik": "Göz"
+      },
+      {
+        "id": "ear",
+        "en": "ear",
+        "tr": "kulak",
+        "trSik": "Kulak"
+      },
+      {
+        "id": "nose",
+        "en": "nose",
+        "tr": "burun",
+        "trSik": "Burun"
+      },
+      {
+        "id": "mouth",
+        "en": "mouth",
+        "tr": "ağız",
+        "trSik": "Ağız"
+      },
+      {
+        "id": "hand",
+        "en": "hand",
+        "tr": "el",
+        "trSik": "El"
+      },
+      {
+        "id": "foot",
+        "en": "foot",
+        "tr": "ayak",
+        "trSik": "Ayak"
+      },
+      {
+        "id": "arm",
+        "en": "arm",
+        "tr": "kol",
+        "trSik": "Kol"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-2-4-aile",
+    "unit": "ing-2-4",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "mother",
+        "en": "mother",
+        "tr": "anne",
+        "trSik": "Anne"
+      },
+      {
+        "id": "father",
+        "en": "father",
+        "tr": "baba",
+        "trSik": "Baba"
+      },
+      {
+        "id": "sister",
+        "en": "sister",
+        "tr": "kız kardeş",
+        "trSik": "Kız kardeş"
+      },
+      {
+        "id": "brother",
+        "en": "brother",
+        "tr": "erkek kardeş",
+        "trSik": "Erkek kardeş"
+      },
+      {
+        "id": "grandmother",
+        "en": "grandmother",
+        "tr": "büyükanne",
+        "trSik": "Büyükanne"
+      },
+      {
+        "id": "grandfather",
+        "en": "grandfather",
+        "tr": "büyükbaba",
+        "trSik": "Büyükbaba"
+      },
+      {
+        "id": "baby",
+        "en": "baby",
+        "tr": "bebek",
+        "trSik": "Bebek"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-2-5-evin-bolumleri",
+    "unit": "ing-2-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "kitchen",
+        "en": "kitchen",
+        "tr": "mutfak",
+        "trSik": "Mutfak"
+      },
+      {
+        "id": "bedroom",
+        "en": "bedroom",
+        "tr": "yatak odası",
+        "trSik": "Yatak odası"
+      },
+      {
+        "id": "bathroom",
+        "en": "bathroom",
+        "tr": "banyo",
+        "trSik": "Banyo"
+      },
+      {
+        "id": "living-room",
+        "en": "living room",
+        "tr": "oturma odası",
+        "trSik": "Oturma odası"
+      },
+      {
+        "id": "garden",
+        "en": "garden",
+        "tr": "bahçe",
+        "trSik": "Bahçe"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-2-6-hayvanlar",
+    "unit": "ing-2-6",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "en"
+      },
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçesi nedir?",
+        "answer": "trSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" demektir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "cat",
+        "en": "cat",
+        "tr": "kedi",
+        "trSik": "Kedi"
+      },
+      {
+        "id": "dog",
+        "en": "dog",
+        "tr": "köpek",
+        "trSik": "Köpek"
+      },
+      {
+        "id": "bird",
+        "en": "bird",
+        "tr": "kuş",
+        "trSik": "Kuş"
+      },
+      {
+        "id": "fish",
+        "en": "fish",
+        "tr": "balık",
+        "trSik": "Balık"
+      },
+      {
+        "id": "horse",
+        "en": "horse",
+        "tr": "at",
+        "trSik": "At"
+      },
+      {
+        "id": "cow",
+        "en": "cow",
+        "tr": "inek",
+        "trSik": "İnek"
+      },
+      {
+        "id": "rabbit",
+        "en": "rabbit",
+        "tr": "tavşan",
+        "trSik": "Tavşan"
+      },
+      {
+        "id": "lion",
+        "en": "lion",
+        "tr": "aslan",
+        "trSik": "Aslan"
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "ing-2-6-meyveler",
+    "unit": "ing-2-6",
+    "difficulty": 2,
+    "positive": "Hangisi bir meyvedir?",
+    "negative": "Hangisi bir meyve değildir?",
+    "statement": "\"{item}\" bir meyve adıdır.",
+    "explanation": "Bu kelimelerden meyve adı olanlar şunlardır: {members}.",
+    "members": [
+      "apple",
+      "banana",
+      "orange",
+      "strawberry",
+      "watermelon"
+    ],
+    "nonMembers": [
+      "bus",
+      "table",
+      "pencil",
+      "rabbit",
+      "window"
+    ]
+  }
+]

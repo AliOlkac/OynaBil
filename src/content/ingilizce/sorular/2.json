@@ -1,0 +1,780 @@
+[
+  {
+    "id": "ing-2-1-01",
+    "unit": "ing-2-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Merhaba\" demek için hangisini söyleriz?",
+    "choices": [
+      "Goodbye",
+      "Hello",
+      "Thank you"
+    ],
+    "answer": 1,
+    "explanation": "\"Hello\" merhaba demektir. Biriyle karşılaşınca \"Hello\" ya da \"Hi\" deriz."
+  },
+  {
+    "id": "ing-2-1-02",
+    "unit": "ing-2-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Sabah okula gelince öğretmenimize ne deriz?",
+    "choices": [
+      "Good morning",
+      "Good night",
+      "Goodbye"
+    ],
+    "answer": 0,
+    "explanation": "\"Good morning\" günaydın demektir. Sabahları bu sözle selam veririz."
+  },
+  {
+    "id": "ing-2-1-03",
+    "unit": "ing-2-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Goodbye\" sözünü ayrılırken söyleriz.",
+    "answer": true,
+    "explanation": "\"Goodbye\" hoşça kal demektir. Birinden ayrılırken söylenir."
+  },
+  {
+    "id": "ing-2-1-04",
+    "unit": "ing-2-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"What is your name?\" sorusunun cevabı hangisidir?",
+    "choices": [
+      "I am fine.",
+      "I am seven.",
+      "My name is Ali."
+    ],
+    "answer": 2,
+    "explanation": "\"What is your name?\" adın ne demektir. Cevap verirken \"My name is ...\" deriz."
+  },
+  {
+    "id": "ing-2-1-05",
+    "unit": "ing-2-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Öğretmen\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "student",
+      "teacher",
+      "friend"
+    ],
+    "answer": 1,
+    "explanation": "\"Teacher\" öğretmen demektir. \"Student\" öğrenci, \"friend\" arkadaş demektir."
+  },
+  {
+    "id": "ing-2-1-06",
+    "unit": "ing-2-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"How are you?\" sorusuna hangi cevap verilir?",
+    "choices": [
+      "I'm fine, thank you.",
+      "My name is Ece.",
+      "Good night."
+    ],
+    "answer": 0,
+    "explanation": "\"How are you?\" nasılsın demektir. \"I'm fine, thank you.\" iyiyim, teşekkür ederim anlamına gelir."
+  },
+  {
+    "id": "ing-2-1-07",
+    "unit": "ing-2-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Good night\" sözünü sabah okula gelince söyleriz.",
+    "answer": false,
+    "explanation": "\"Good night\" iyi geceler demektir. Gece yatmadan önce söylenir. Sabah \"Good morning\" deriz."
+  },
+  {
+    "id": "ing-2-1-08",
+    "unit": "ing-2-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Teşekkür ederim\" demek için hangisini söyleriz?",
+    "choices": [
+      "Sorry",
+      "Please",
+      "Thank you"
+    ],
+    "answer": 2,
+    "explanation": "\"Thank you\" teşekkür ederim demektir. \"Sorry\" özür dilerim, \"please\" lütfen demektir."
+  },
+  {
+    "id": "ing-2-1-09",
+    "unit": "ing-2-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Nice to meet you.\" sözünü ne zaman söyleriz?",
+    "choices": [
+      "Uyumadan önce",
+      "Biriyle tanışınca",
+      "Yemek yerken"
+    ],
+    "answer": 1,
+    "explanation": "\"Nice to meet you.\" tanıştığıma sevindim demektir. Yeni biriyle tanışınca söylenir."
+  },
+  {
+    "id": "ing-2-1-10",
+    "unit": "ing-2-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"school\" kelimesi \"okul\" demektir.",
+    "answer": true,
+    "explanation": "\"School\" okul demektir. \"My school\" benim okulum anlamına gelir."
+  },
+  {
+    "id": "ing-2-2-01",
+    "unit": "ing-2-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Kitap\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "bag",
+      "pencil",
+      "book"
+    ],
+    "answer": 2,
+    "explanation": "\"Book\" kitap demektir. \"Bag\" çanta, \"pencil\" kurşun kalem demektir."
+  },
+  {
+    "id": "ing-2-2-02",
+    "unit": "ing-2-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir renktir?",
+    "choices": [
+      "blue",
+      "desk",
+      "five"
+    ],
+    "answer": 0,
+    "explanation": "\"Blue\" mavi demektir ve bir renktir. \"Desk\" sıra, \"five\" beş demektir."
+  },
+  {
+    "id": "ing-2-2-03",
+    "unit": "ing-2-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"three\" hangi sayıdır?",
+    "choices": [
+      "2",
+      "3",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "\"Three\" üç demektir. İki \"two\", beş \"five\" diye söylenir."
+  },
+  {
+    "id": "ing-2-2-04",
+    "unit": "ing-2-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"bag\" kelimesi \"çanta\" demektir.",
+    "answer": true,
+    "explanation": "\"Bag\" çanta demektir. \"My bag\" benim çantam anlamına gelir."
+  },
+  {
+    "id": "ing-2-2-05",
+    "unit": "ing-2-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Öğretmen \"Sit down.\" derse ne yaparız?",
+    "choices": [
+      "Ayağa kalkarız.",
+      "Kapıyı açarız.",
+      "Otururuz."
+    ],
+    "answer": 2,
+    "explanation": "\"Sit down\" otur demektir. \"Stand up\" ise ayağa kalk demektir."
+  },
+  {
+    "id": "ing-2-2-06",
+    "unit": "ing-2-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"seven\" sayısından sonra hangi sayı gelir?",
+    "choices": [
+      "six",
+      "eight",
+      "nine"
+    ],
+    "answer": 1,
+    "explanation": "\"Seven\" yedi demektir. Yediden sonra sekiz gelir. Sekiz \"eight\" diye söylenir."
+  },
+  {
+    "id": "ing-2-2-07",
+    "unit": "ing-2-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Open your book.\" sözü \"Kitabını kapat.\" demektir.",
+    "answer": false,
+    "explanation": "\"Open your book.\" kitabını aç demektir. Kitabını kapat demek için \"Close your book.\" deriz."
+  },
+  {
+    "id": "ing-2-2-08",
+    "unit": "ing-2-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Olgun bir muz ne renktir?",
+    "choices": [
+      "yellow",
+      "blue",
+      "purple"
+    ],
+    "answer": 0,
+    "explanation": "Olgun muz sarıdır. Sarı \"yellow\" diye söylenir. \"Blue\" mavi, \"purple\" mor demektir."
+  },
+  {
+    "id": "ing-2-2-09",
+    "unit": "ing-2-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"two\" ile \"three\" sayılarını toplarsak hangi sayıyı buluruz?",
+    "choices": [
+      "four",
+      "six",
+      "five"
+    ],
+    "answer": 2,
+    "explanation": "\"Two\" iki, \"three\" üç demektir. 2 + 3 = 5 eder. Beş \"five\" diye söylenir."
+  },
+  {
+    "id": "ing-2-2-10",
+    "unit": "ing-2-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yanlış yazdığımızı silmek için hangisini kullanırız?",
+    "choices": [
+      "ruler",
+      "eraser",
+      "scissors"
+    ],
+    "answer": 1,
+    "explanation": "\"Eraser\" silgi demektir. \"Ruler\" cetvel, \"scissors\" makas demektir."
+  },
+  {
+    "id": "ing-2-2-11",
+    "unit": "ing-2-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"red\" kelimesi \"mavi\" demektir.",
+    "answer": false,
+    "explanation": "\"Red\" kırmızı demektir. Mavi ise \"blue\" diye söylenir."
+  },
+  {
+    "id": "ing-2-3-01",
+    "unit": "ing-2-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Göz\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "eye",
+      "ear",
+      "nose"
+    ],
+    "answer": 0,
+    "explanation": "\"Eye\" göz demektir. \"Ear\" kulak, \"nose\" burun demektir."
+  },
+  {
+    "id": "ing-2-3-02",
+    "unit": "ing-2-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir oyuncaktır?",
+    "choices": [
+      "hand",
+      "milk",
+      "doll"
+    ],
+    "answer": 2,
+    "explanation": "\"Doll\" oyuncak bebek demektir. \"Hand\" el, \"milk\" süt demektir."
+  },
+  {
+    "id": "ing-2-3-03",
+    "unit": "ing-2-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"I am happy.\" cümlesi ne demektir?",
+    "choices": [
+      "Üzgünüm.",
+      "Mutluyum.",
+      "Açım."
+    ],
+    "answer": 1,
+    "explanation": "\"Happy\" mutlu demektir. \"I am happy.\" mutluyum anlamına gelir."
+  },
+  {
+    "id": "ing-2-3-04",
+    "unit": "ing-2-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"hand\" kelimesi \"el\" demektir.",
+    "answer": true,
+    "explanation": "\"Hand\" el demektir. \"My hands\" benim ellerim anlamına gelir."
+  },
+  {
+    "id": "ing-2-3-05",
+    "unit": "ing-2-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Çiçeği hangisiyle koklarız?",
+    "choices": [
+      "nose",
+      "ear",
+      "foot"
+    ],
+    "answer": 0,
+    "explanation": "Burnumuzla koklarız. Burun \"nose\" diye söylenir. \"Ear\" kulak, \"foot\" ayak demektir."
+  },
+  {
+    "id": "ing-2-3-06",
+    "unit": "ing-2-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"sad\" kelimesi \"mutlu\" demektir.",
+    "answer": false,
+    "explanation": "\"Sad\" üzgün demektir. Mutlu ise \"happy\" diye söylenir."
+  },
+  {
+    "id": "ing-2-3-07",
+    "unit": "ing-2-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"I like apples.\" cümlesi ne demektir?",
+    "choices": [
+      "Elmam yok.",
+      "Elmayı sevmem.",
+      "Elmayı severim."
+    ],
+    "answer": 2,
+    "explanation": "\"I like\" severim demektir. \"I like apples.\" elmayı severim anlamına gelir."
+  },
+  {
+    "id": "ing-2-3-08",
+    "unit": "ing-2-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Elif \"I am hungry.\" diyor. Elif ne yapmak ister?",
+    "choices": [
+      "Uyumak",
+      "Yemek yemek",
+      "Koşmak"
+    ],
+    "answer": 1,
+    "explanation": "\"Hungry\" aç demektir. \"I am hungry.\" açım anlamına gelir. Aç olan kişi yemek yemek ister."
+  },
+  {
+    "id": "ing-2-3-09",
+    "unit": "ing-2-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Uçurtma\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "car",
+      "robot",
+      "kite"
+    ],
+    "answer": 2,
+    "explanation": "\"Kite\" uçurtma demektir. \"Car\" araba demektir."
+  },
+  {
+    "id": "ing-2-3-10",
+    "unit": "ing-2-3",
+    "type": "true-false",
+    "difficulty": 3,
+    "prompt": "\"I don't like milk.\" cümlesi \"Sütü severim.\" demektir.",
+    "answer": false,
+    "explanation": "\"I don't like\" sevmem demektir. \"I don't like milk.\" sütü sevmem anlamına gelir."
+  },
+  {
+    "id": "ing-2-4-01",
+    "unit": "ing-2-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Anne\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "father",
+      "mother",
+      "sister"
+    ],
+    "answer": 1,
+    "explanation": "\"Mother\" anne demektir. \"Father\" baba, \"sister\" kız kardeş demektir."
+  },
+  {
+    "id": "ing-2-4-02",
+    "unit": "ing-2-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Erkek kardeş\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "brother",
+      "sister",
+      "baby"
+    ],
+    "answer": 0,
+    "explanation": "\"Brother\" erkek kardeş demektir. \"Sister\" kız kardeş demektir."
+  },
+  {
+    "id": "ing-2-4-03",
+    "unit": "ing-2-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"father\" kelimesi \"baba\" demektir.",
+    "answer": true,
+    "explanation": "\"Father\" baba demektir. Babamıza \"dad\" da diyebiliriz."
+  },
+  {
+    "id": "ing-2-4-04",
+    "unit": "ing-2-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"grandmother\" kelimesinin Türkçesi nedir?",
+    "choices": [
+      "Kız kardeş",
+      "Anne",
+      "Büyükanne"
+    ],
+    "answer": 2,
+    "explanation": "\"Grandmother\" büyükanne demektir. Anneanne ve babaanne için kullanılır."
+  },
+  {
+    "id": "ing-2-4-05",
+    "unit": "ing-2-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"This is my sister.\" cümlesi ne demektir?",
+    "choices": [
+      "Bu benim kız kardeşim.",
+      "Bu benim erkek kardeşim.",
+      "Bu benim annem."
+    ],
+    "answer": 0,
+    "explanation": "\"This is my ...\" bu benim ... demektir. \"Sister\" kız kardeş anlamına gelir."
+  },
+  {
+    "id": "ing-2-4-06",
+    "unit": "ing-2-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"grandfather\" kelimesi \"erkek kardeş\" demektir.",
+    "answer": false,
+    "explanation": "\"Grandfather\" büyükbaba demektir. Erkek kardeş ise \"brother\" diye söylenir."
+  },
+  {
+    "id": "ing-2-4-07",
+    "unit": "ing-2-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir aile üyesidir?",
+    "choices": [
+      "pencil",
+      "mother",
+      "door"
+    ],
+    "answer": 1,
+    "explanation": "\"Mother\" anne demektir ve bir aile üyesidir. \"Pencil\" kurşun kalem, \"door\" kapı demektir."
+  },
+  {
+    "id": "ing-2-4-08",
+    "unit": "ing-2-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Annemin annesi benim neyimdir?",
+    "choices": [
+      "sister",
+      "mother",
+      "grandmother"
+    ],
+    "answer": 2,
+    "explanation": "Annemizin annesi büyükannemizdir. Büyükanne \"grandmother\" diye söylenir."
+  },
+  {
+    "id": "ing-2-4-09",
+    "unit": "ing-2-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Who is he?\" sorusunun cevabı hangisi olabilir?",
+    "choices": [
+      "He is my father.",
+      "She is my mother.",
+      "She is my sister."
+    ],
+    "answer": 0,
+    "explanation": "\"He\" erkekler için kullanılır. Bu yüzden cevap \"He is my father.\" olur. \"She\" kadınlar ve kızlar içindir."
+  },
+  {
+    "id": "ing-2-4-10",
+    "unit": "ing-2-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"baby\" kelimesi \"bebek\" demektir.",
+    "answer": true,
+    "explanation": "\"Baby\" bebek demektir. \"My baby brother\" benim bebek kardeşim anlamına gelir."
+  },
+  {
+    "id": "ing-2-5-01",
+    "unit": "ing-2-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Ev\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "school",
+      "park",
+      "house"
+    ],
+    "answer": 2,
+    "explanation": "\"House\" ev demektir. \"School\" okul demektir."
+  },
+  {
+    "id": "ing-2-5-02",
+    "unit": "ing-2-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Mutfak\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "kitchen",
+      "bedroom",
+      "garden"
+    ],
+    "answer": 0,
+    "explanation": "\"Kitchen\" mutfak demektir. \"Bedroom\" yatak odası, \"garden\" bahçe demektir."
+  },
+  {
+    "id": "ing-2-5-03",
+    "unit": "ing-2-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Evin hangi odasında uyuruz?",
+    "choices": [
+      "kitchen",
+      "bedroom",
+      "bathroom"
+    ],
+    "answer": 1,
+    "explanation": "Yatak odasında uyuruz. Yatak odası \"bedroom\" diye söylenir."
+  },
+  {
+    "id": "ing-2-5-04",
+    "unit": "ing-2-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"door\" kelimesi \"kapı\" demektir.",
+    "answer": true,
+    "explanation": "\"Door\" kapı demektir. \"Open the door.\" kapıyı aç anlamına gelir."
+  },
+  {
+    "id": "ing-2-5-05",
+    "unit": "ing-2-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"bed\" kelimesinin Türkçesi nedir?",
+    "choices": [
+      "Masa",
+      "Sandalye",
+      "Yatak"
+    ],
+    "answer": 2,
+    "explanation": "\"Bed\" yatak demektir. Masa \"table\", sandalye \"chair\" diye söylenir."
+  },
+  {
+    "id": "ing-2-5-06",
+    "unit": "ing-2-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"bathroom\" kelimesi \"oturma odası\" demektir.",
+    "answer": false,
+    "explanation": "\"Bathroom\" banyo demektir. Oturma odası ise \"living room\" diye söylenir."
+  },
+  {
+    "id": "ing-2-5-07",
+    "unit": "ing-2-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"The cat is in the box.\" cümlesine göre kedi nerededir?",
+    "choices": [
+      "Kutunun üstünde",
+      "Kutunun içinde",
+      "Kutunun altında"
+    ],
+    "answer": 1,
+    "explanation": "\"In\" içinde demektir. \"In the box\" kutunun içinde anlamına gelir."
+  },
+  {
+    "id": "ing-2-5-08",
+    "unit": "ing-2-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Annem yemek pişiriyor. Annem evin hangi bölümündedir?",
+    "choices": [
+      "kitchen",
+      "garden",
+      "bedroom"
+    ],
+    "answer": 0,
+    "explanation": "Yemek mutfakta pişirilir. Mutfak \"kitchen\" diye söylenir."
+  },
+  {
+    "id": "ing-2-5-09",
+    "unit": "ing-2-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Pencere\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "table",
+      "window",
+      "chair"
+    ],
+    "answer": 1,
+    "explanation": "\"Window\" pencere demektir. \"Table\" masa, \"chair\" sandalye demektir."
+  },
+  {
+    "id": "ing-2-5-10",
+    "unit": "ing-2-5",
+    "type": "true-false",
+    "difficulty": 3,
+    "prompt": "\"The ball is under the table.\" cümlesine göre top masanın üstündedir.",
+    "answer": false,
+    "explanation": "\"Under\" altında demektir. Top masanın altındadır. Üstünde demek için \"on\" kullanılır."
+  },
+  {
+    "id": "ing-2-6-01",
+    "unit": "ing-2-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Kedi\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "dog",
+      "bird",
+      "cat"
+    ],
+    "answer": 2,
+    "explanation": "\"Cat\" kedi demektir. \"Dog\" köpek, \"bird\" kuş demektir."
+  },
+  {
+    "id": "ing-2-6-02",
+    "unit": "ing-2-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir hayvandır?",
+    "choices": [
+      "fish",
+      "bus",
+      "tree"
+    ],
+    "answer": 0,
+    "explanation": "\"Fish\" balık demektir ve bir hayvandır. \"Bus\" otobüs, \"tree\" ağaç demektir."
+  },
+  {
+    "id": "ing-2-6-03",
+    "unit": "ing-2-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"It is rainy.\" cümlesi ne demektir?",
+    "choices": [
+      "Hava güneşli.",
+      "Hava yağmurlu.",
+      "Hava karlı."
+    ],
+    "answer": 1,
+    "explanation": "\"Rainy\" yağmurlu demektir. Güneşli \"sunny\", karlı \"snowy\" diye söylenir."
+  },
+  {
+    "id": "ing-2-6-04",
+    "unit": "ing-2-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"bus\" kelimesi \"otobüs\" demektir.",
+    "answer": true,
+    "explanation": "\"Bus\" otobüs demektir. Otobüs şehirde çok kullanılan bir taşıttır."
+  },
+  {
+    "id": "ing-2-6-05",
+    "unit": "ing-2-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi hayvan uçabilir?",
+    "choices": [
+      "fish",
+      "dog",
+      "bird"
+    ],
+    "answer": 2,
+    "explanation": "\"Bird\" kuş demektir. Kuşlar kanatlarıyla uçar. \"Fish\" balık, \"dog\" köpek demektir."
+  },
+  {
+    "id": "ing-2-6-06",
+    "unit": "ing-2-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"sunny\" kelimesi \"karlı\" demektir.",
+    "answer": false,
+    "explanation": "\"Sunny\" güneşli demektir. Karlı ise \"snowy\" diye söylenir."
+  },
+  {
+    "id": "ing-2-6-07",
+    "unit": "ing-2-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Araba\" kelimesinin İngilizcesi hangisidir?",
+    "choices": [
+      "car",
+      "bike",
+      "train"
+    ],
+    "answer": 0,
+    "explanation": "\"Car\" araba demektir. \"Bike\" bisiklet, \"train\" tren demektir."
+  },
+  {
+    "id": "ing-2-6-08",
+    "unit": "ing-2-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Çok büyük, gri renkli ve uzun hortumlu hayvan hangisidir?",
+    "choices": [
+      "monkey",
+      "elephant",
+      "lion"
+    ],
+    "answer": 1,
+    "explanation": "\"Elephant\" fil demektir. Fil büyük, gri ve hortumlu bir hayvandır. \"Monkey\" maymun, \"lion\" aslan demektir."
+  },
+  {
+    "id": "ing-2-6-09",
+    "unit": "ing-2-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"banana\" kelimesinin Türkçesi nedir?",
+    "choices": [
+      "Elma",
+      "Çilek",
+      "Muz"
+    ],
+    "answer": 2,
+    "explanation": "\"Banana\" muz demektir. Elma \"apple\", çilek \"strawberry\" diye söylenir."
+  },
+  {
+    "id": "ing-2-6-10",
+    "unit": "ing-2-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"dog\" kelimesi \"kuş\" demektir.",
+    "answer": false,
+    "explanation": "\"Dog\" köpek demektir. Kuş ise \"bird\" diye söylenir."
+  },
+  {
+    "id": "ing-2-6-11",
+    "unit": "ing-2-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"I can see a big tree in the park.\" cümlesine göre ağaç nerededir?",
+    "choices": [
+      "Parkta",
+      "Okulda",
+      "Evde"
+    ],
+    "answer": 0,
+    "explanation": "\"In the park\" parkta demektir. Cümle \"Parkta büyük bir ağaç görebiliyorum.\" anlamına gelir."
+  }
+]
