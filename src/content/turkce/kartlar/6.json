@@ -1,0 +1,450 @@
+[
+  {
+    "kind": "pairs",
+    "id": "tr-6-1-deyimler",
+    "unit": "tr-6-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{deyim}” deyiminin anlamı nedir?",
+        "answer": "anlamSik"
+      },
+      {
+        "prompt": "“{anlam}” anlamına gelen deyim hangisidir?",
+        "answer": "deyim"
+      }
+    ],
+    "statement": {
+      "text": "“{deyim}” deyimi “{anlam}” anlamına gelir.",
+      "swap": "anlam"
+    },
+    "explanation": "“{deyim}” deyimi “{anlam}” anlamında kullanılır.",
+    "items": [
+      {
+        "id": "agzi-kulaklarina",
+        "deyim": "Ağzı kulaklarına varmak",
+        "anlam": "çok sevinmek",
+        "anlamSik": "Çok sevinmek"
+      },
+      {
+        "id": "gozu-yollarda",
+        "deyim": "Gözü yollarda kalmak",
+        "anlam": "birinin gelmesini özlemle beklemek",
+        "anlamSik": "Birinin gelmesini özlemle beklemek"
+      },
+      {
+        "id": "ipe-un",
+        "deyim": "İpe un sermek",
+        "anlam": "bir işi yapmamak için bahaneler ileri sürmek",
+        "anlamSik": "Bir işi yapmamak için bahaneler ileri sürmek"
+      },
+      {
+        "id": "kulak-ardi",
+        "deyim": "Kulak ardı etmek",
+        "anlam": "duyduğu sözü önemsememek",
+        "anlamSik": "Duyduğu sözü önemsememek"
+      },
+      {
+        "id": "pabucu-dama",
+        "deyim": "Pabucu dama atılmak",
+        "anlam": "gözden düşmek, değerini yitirmek",
+        "anlamSik": "Gözden düşmek, değerini yitirmek"
+      },
+      {
+        "id": "kili-kirk",
+        "deyim": "Kılı kırk yarmak",
+        "anlam": "çok titiz davranmak",
+        "anlamSik": "Çok titiz davranmak"
+      },
+      {
+        "id": "goz-boyamak",
+        "deyim": "Göz boyamak",
+        "anlam": "gösterişle aldatmak",
+        "anlamSik": "Gösterişle aldatmak"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-6-4-soz-sanatlari",
+    "unit": "tr-6-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{ornek}” cümlesinde hangi söz sanatı vardır?",
+        "answer": "sanat"
+      }
+    ],
+    "statement": {
+      "text": "“{ornek}” cümlesinde {sanatKucuk} sanatı vardır.",
+      "swap": "sanatKucuk"
+    },
+    "explanation": "Bu cümlede {sanatKucuk} sanatı vardır.",
+    "items": [
+      {
+        "id": "inci",
+        "ornek": "Dişleri inci gibi parlıyordu.",
+        "sanat": "Benzetme",
+        "sanatKucuk": "benzetme",
+        "not": "Dişler, parlaklık yönünden inciye benzetilmiştir."
+      },
+      {
+        "id": "sogut",
+        "ornek": "Yaşlı söğüt, dereye eğilmiş dertleşiyordu.",
+        "sanat": "Kişileştirme",
+        "sanatKucuk": "kişileştirme",
+        "not": "Dertleşmek insana özgüdür; söğüde insan özelliği verilmiştir."
+      },
+      {
+        "id": "gozyasi",
+        "ornek": "Gözyaşlarından odayı sel bastı.",
+        "sanat": "Abartma",
+        "sanatKucuk": "abartma",
+        "not": "Gözyaşının çokluğu olduğundan çok büyük gösterilmiştir."
+      },
+      {
+        "id": "karinca",
+        "ornek": "Karınca, ağustos böceğine ‘Yazın ne yaptın?’ diye sordu.",
+        "sanat": "Konuşturma",
+        "sanatKucuk": "konuşturma",
+        "not": "İnsan dışındaki varlıklar konuşturulmuştur."
+      },
+      {
+        "id": "ok",
+        "ornek": "Atlet, yaydan çıkmış ok gibi fırladı.",
+        "sanat": "Benzetme",
+        "sanatKucuk": "benzetme",
+        "not": "Atlet, hız yönünden oka benzetilmiştir."
+      },
+      {
+        "id": "ruzgar",
+        "ornek": "Rüzgâr kapımı çalıp içeri girmek istedi.",
+        "sanat": "Kişileştirme",
+        "sanatKucuk": "kişileştirme",
+        "not": "Kapı çalmak ve istemek insana özgüdür; rüzgâra insan özelliği verilmiştir."
+      },
+      {
+        "id": "canta",
+        "ornek": "Çantam o kadar ağır ki bir deve bile taşıyamaz.",
+        "sanat": "Abartma",
+        "sanatKucuk": "abartma",
+        "not": "Çantanın ağırlığı olduğundan çok büyük gösterilmiştir."
+      }
+    ],
+    "distractors": {
+      "sanat": [
+        "Benzetme",
+        "Kişileştirme",
+        "Abartma",
+        "Konuşturma"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-6-4-metin-turleri",
+    "unit": "tr-6-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ozellik} metin türü hangisidir?",
+        "answer": "tur"
+      }
+    ],
+    "statement": {
+      "text": "{tur}, {ozellikKucuk} metin türüdür.",
+      "swap": "tur"
+    },
+    "explanation": "{tur}, {ozellikKucuk} metin türüdür.",
+    "items": [
+      {
+        "id": "fabl",
+        "tur": "Fabl",
+        "ozellik": "Kahramanları insan gibi davranan hayvanlar olan ve ders veren",
+        "ozellikKucuk": "kahramanları insan gibi davranan hayvanlar olan ve ders veren"
+      },
+      {
+        "id": "ani",
+        "tur": "Anı",
+        "ozellik": "Yaşanmış olayları üzerinden zaman geçtikten sonra anlatan",
+        "ozellikKucuk": "yaşanmış olayları üzerinden zaman geçtikten sonra anlatan"
+      },
+      {
+        "id": "gunluk",
+        "tur": "Günlük",
+        "ozellik": "Yaşananları günü gününe, tarih atılarak anlatan",
+        "ozellikKucuk": "yaşananları günü gününe, tarih atılarak anlatan"
+      },
+      {
+        "id": "mektup",
+        "tur": "Mektup",
+        "ozellik": "Uzaktaki bir kişiye haber, duygu ve düşünce iletmek için yazılan",
+        "ozellikKucuk": "uzaktaki bir kişiye haber, duygu ve düşünce iletmek için yazılan"
+      },
+      {
+        "id": "masal",
+        "tur": "Masal",
+        "ozellik": "Olağanüstü olayları, yeri ve zamanı belirsiz biçimde anlatan",
+        "ozellikKucuk": "olağanüstü olayları, yeri ve zamanı belirsiz biçimde anlatan"
+      },
+      {
+        "id": "siir",
+        "tur": "Şiir",
+        "ozellik": "Duygu ve düşünceleri dizelerle, ahenkli bir dille anlatan",
+        "ozellikKucuk": "duygu ve düşünceleri dizelerle, ahenkli bir dille anlatan"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-6-6-isaretler",
+    "unit": "tr-6-6",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{gorev} hangi noktalama işareti kullanılır?",
+        "answer": "isaretSik"
+      }
+    ],
+    "statement": {
+      "text": "{gorev} {isaret} kullanılır.",
+      "swap": "isaret"
+    },
+    "explanation": "{gorev} {isaret} kullanılır.",
+    "items": [
+      {
+        "id": "noktali-virgul",
+        "gorev": "Kendi içinde virgülle ayrılmış sözcük gruplarını birbirinden ayırmak için",
+        "isaret": "noktalı virgül",
+        "isaretSik": "Noktalı virgül",
+        "not": "Örnek: Kızlardan Elif, Zeynep; erkeklerden Can, Mert seçildi."
+      },
+      {
+        "id": "kisa-cizgi",
+        "gorev": "Satır sonuna sığmayan sözcükleri bölerken",
+        "isaret": "kısa çizgi",
+        "isaretSik": "Kısa çizgi",
+        "not": "Sözcükler satır sonunda hecelerinden bölünür."
+      },
+      {
+        "id": "yay-ayrac",
+        "gorev": "Cümle içindeki bir sözün açıklamasını göstermek için",
+        "isaret": "yay ayraç",
+        "isaretSik": "Yay ayraç",
+        "not": "Örnek: Ankara'ya (başkentimize) ilk kez gidiyorum."
+      },
+      {
+        "id": "uc-nokta",
+        "gorev": "Tamamlanmamış cümlelerin sonunda",
+        "isaret": "üç nokta",
+        "isaretSik": "Üç nokta",
+        "not": "Örnek: Kapıyı açtım, karşımda…"
+      },
+      {
+        "id": "uzun-cizgi",
+        "gorev": "Karşılıklı konuşmalarda, konuşanın sözünün başında",
+        "isaret": "uzun çizgi",
+        "isaretSik": "Uzun çizgi",
+        "not": "Uzun çizgiye konuşma çizgisi de denir."
+      },
+      {
+        "id": "tirnak",
+        "gorev": "Başkasından aynen aktarılan sözleri belirtmek için",
+        "isaret": "tırnak işareti",
+        "isaretSik": "Tırnak işareti",
+        "not": "Örnek: Dedem, “Erken kalkan yol alır.” derdi."
+      },
+      {
+        "id": "iki-nokta",
+        "gorev": "Kendisinden sonra örnek verilecek cümlenin sonunda",
+        "isaret": "iki nokta",
+        "isaretSik": "İki nokta",
+        "not": "Örnek: Bahçede şunlar vardı: gül, lale, sümbül."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-6-7-zamirler",
+    "unit": "tr-6-7",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{sozcuk}” sözcüğü hangi zamir türüne örnektir?",
+        "answer": "tur"
+      }
+    ],
+    "statement": {
+      "text": "“{sozcuk}” sözcüğü {turCumle}.",
+      "swap": "turCumle"
+    },
+    "explanation": "“{sozcuk}” sözcüğü {turCumle}.",
+    "items": [
+      {
+        "id": "ben",
+        "sozcuk": "ben",
+        "tur": "Kişi zamiri",
+        "turCumle": "bir kişi zamiridir",
+        "not": "Kişi zamirleri: ben, sen, o, biz, siz, onlar."
+      },
+      {
+        "id": "siz",
+        "sozcuk": "siz",
+        "tur": "Kişi zamiri",
+        "turCumle": "bir kişi zamiridir",
+        "not": "Kişi zamirleri: ben, sen, o, biz, siz, onlar."
+      },
+      {
+        "id": "sunlar",
+        "sozcuk": "şunlar",
+        "tur": "İşaret zamiri",
+        "turCumle": "bir işaret zamiridir",
+        "not": "İşaret zamirleri varlıkları göstererek onların yerini tutar."
+      },
+      {
+        "id": "burasi",
+        "sozcuk": "burası",
+        "tur": "İşaret zamiri",
+        "turCumle": "bir işaret zamiridir",
+        "not": "İşaret zamirleri varlıkları göstererek onların yerini tutar."
+      },
+      {
+        "id": "kim",
+        "sozcuk": "kim",
+        "tur": "Soru zamiri",
+        "turCumle": "bir soru zamiridir",
+        "not": "Soru zamirleri isimlerin yerini soru yoluyla tutar."
+      },
+      {
+        "id": "hangisi",
+        "sozcuk": "hangisi",
+        "tur": "Soru zamiri",
+        "turCumle": "bir soru zamiridir",
+        "not": "Soru zamirleri isimlerin yerini soru yoluyla tutar."
+      },
+      {
+        "id": "herkes",
+        "sozcuk": "herkes",
+        "tur": "Belgisiz zamir",
+        "turCumle": "bir belgisiz zamirdir",
+        "not": "Belgisiz zamirler, hangi varlığın yerini tuttuğu tam belli olmayan zamirlerdir."
+      },
+      {
+        "id": "birkaci",
+        "sozcuk": "birkaçı",
+        "tur": "Belgisiz zamir",
+        "turCumle": "bir belgisiz zamirdir",
+        "not": "Belgisiz zamirler, hangi varlığın yerini tuttuğu tam belli olmayan zamirlerdir."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-6-7-sifatlar",
+    "unit": "tr-6-7",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{ornek}” söz grubundaki sıfatın türü hangisidir?",
+        "answer": "tur"
+      }
+    ],
+    "statement": {
+      "text": "“{ornek}” söz grubunda {turKucuk} vardır.",
+      "swap": "turKucuk"
+    },
+    "explanation": "“{ornek}” söz grubundaki “{sifat}” sözcüğü {aciklama}.",
+    "items": [
+      {
+        "id": "eksi",
+        "ornek": "ekşi limon",
+        "sifat": "ekşi",
+        "tur": "Niteleme sıfatı",
+        "turKucuk": "niteleme sıfatı",
+        "aciklama": "ismin nasıl olduğunu bildirdiği için niteleme sıfatıdır"
+      },
+      {
+        "id": "su",
+        "ornek": "şu ev",
+        "sifat": "şu",
+        "tur": "İşaret sıfatı",
+        "turKucuk": "işaret sıfatı",
+        "aciklama": "ismi işaret yoluyla belirttiği için işaret sıfatıdır"
+      },
+      {
+        "id": "uc",
+        "ornek": "üç kitap",
+        "sifat": "üç",
+        "tur": "Asıl sayı sıfatı",
+        "turKucuk": "asıl sayı sıfatı",
+        "aciklama": "ismin sayısını kesin olarak bildirdiği için asıl sayı sıfatıdır"
+      },
+      {
+        "id": "ikinci",
+        "ornek": "ikinci kat",
+        "sifat": "ikinci",
+        "tur": "Sıra sayı sıfatı",
+        "turKucuk": "sıra sayı sıfatı",
+        "aciklama": "ismin sırasını bildirdiği için sıra sayı sıfatıdır"
+      },
+      {
+        "id": "yarim",
+        "ornek": "yarım ekmek",
+        "sifat": "yarım",
+        "tur": "Kesir sayı sıfatı",
+        "turKucuk": "kesir sayı sıfatı",
+        "aciklama": "ismin parçasını bildirdiği için kesir sayı sıfatıdır"
+      },
+      {
+        "id": "ikiser",
+        "ornek": "ikişer kalem",
+        "sifat": "ikişer",
+        "tur": "Üleştirme sayı sıfatı",
+        "turKucuk": "üleştirme sayı sıfatı",
+        "aciklama": "ismin eşit bölümlere ayrıldığını bildirdiği için üleştirme sayı sıfatıdır"
+      },
+      {
+        "id": "birkac",
+        "ornek": "birkaç öğrenci",
+        "sifat": "birkaç",
+        "tur": "Belgisiz sıfat",
+        "turKucuk": "belgisiz sıfat",
+        "aciklama": "ismin sayısını kesin olmayan biçimde bildirdiği için belgisiz sıfattır"
+      },
+      {
+        "id": "hangi",
+        "ornek": "hangi renk",
+        "sifat": "hangi",
+        "tur": "Soru sıfatı",
+        "turKucuk": "soru sıfatı",
+        "aciklama": "ismi soru yoluyla belirttiği için soru sıfatıdır"
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "tr-6-7-edatlar",
+    "unit": "tr-6-7",
+    "difficulty": 2,
+    "positive": "Aşağıdaki sözcüklerden hangisi edattır?",
+    "negative": "Aşağıdaki sözcüklerden hangisi edat değildir?",
+    "statement": "“{item}” sözcüğü edattır.",
+    "explanation": "Edatlar tek başına anlam taşımaz, sözcükler arasında anlam ilgisi kurar: {members}. “Ama, fakat, çünkü, ve, veya, lakin” ise sözcükleri ve cümleleri bağlayan bağlaçlardır.",
+    "members": [
+      "gibi",
+      "için",
+      "kadar",
+      "göre",
+      "üzere",
+      "dolayı"
+    ],
+    "nonMembers": [
+      "ama",
+      "çünkü",
+      "fakat",
+      "ve",
+      "veya",
+      "lakin"
+    ]
+  }
+]

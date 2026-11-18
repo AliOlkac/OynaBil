@@ -1,0 +1,783 @@
+[
+  {
+    "id": "tr-6-1-01",
+    "unit": "tr-6-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Ağır” sözcüğü hangi cümlede mecaz anlamda kullanılmıştır?",
+    "choices": [
+      "Bu çanta çok ağır.",
+      "Ağır sözleri hepimizi üzdü.",
+      "Ağır kutuları birlikte taşıdık.",
+      "Terazi ağır tarafa eğildi."
+    ],
+    "answer": 1,
+    "explanation": "“Ağır söz”, insanı kıran, dokunaklı söz demektir. Sözcük burada tartıyla ilgili gerçek anlamından uzaklaşmıştır."
+  },
+  {
+    "id": "tr-6-1-02",
+    "unit": "tr-6-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi sözcük eş sesli (sesteş) olarak kullanılabilir?",
+    "choices": [
+      "kitap",
+      "pencere",
+      "gül",
+      "defter"
+    ],
+    "answer": 2,
+    "explanation": "“Gül” hem bir çiçeğin adıdır hem de “gülmek” fiilinin emir biçimidir. Yazılışı aynı, anlamı farklı sözcükler eş seslidir."
+  },
+  {
+    "id": "tr-6-1-03",
+    "unit": "tr-6-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Deyimlerdeki sözcüklerin yerine eş anlamlıları getirilemez.",
+    "answer": true,
+    "explanation": "Deyimler kalıplaşmış sözlerdir. “Yüzü gülmek” yerine “suratı gülmek” denemez; sözcükler değiştirilirse deyim bozulur."
+  },
+  {
+    "id": "tr-6-1-04",
+    "unit": "tr-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Baş” sözcüğü hangi cümlede yan anlamıyla kullanılmıştır?",
+    "choices": [
+      "Başını yastığa koyar koymaz uyudu.",
+      "Top hızla başına çarptı.",
+      "Çivinin başına çekiçle vurdu.",
+      "Başını iki yana salladı."
+    ],
+    "answer": 2,
+    "explanation": "Çivinin başı, insan başına benzetilerek adlandırılmıştır. Bir sözcüğün temel anlamıyla ilgili olarak kazandığı yeni anlamlar yan anlamdır."
+  },
+  {
+    "id": "tr-6-1-05",
+    "unit": "tr-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Çocuk, hastalığı atlatınca yeniden okula başladı.” cümlesinde “atlatmak” sözcüğünün anlamı hangisidir?",
+    "choices": [
+      "Kötü bir durumu geçirip kurtulmak",
+      "Bir engelin üzerinden sıçratmak",
+      "Birini oyalayıp başından savmak",
+      "Bir işi sonraya bırakmak"
+    ],
+    "answer": 0,
+    "explanation": "Hastalığı atlatmak, onu geçirip sağlığına kavuşmak demektir. Sözcüğün anlamı cümledeki kullanımına göre belirlenir."
+  },
+  {
+    "id": "tr-6-1-06",
+    "unit": "tr-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi seçenekte sözcükler genelden özele doğru sıralanmıştır?",
+    "choices": [
+      "serçe - kuş - hayvan - canlı",
+      "canlı - hayvan - kuş - serçe",
+      "kuş - canlı - serçe - hayvan",
+      "hayvan - canlı - kuş - serçe"
+    ],
+    "answer": 1,
+    "explanation": "En kapsamlı sözcük “canlı”, en dar kapsamlı sözcük “serçe”dir. Genelden özele sıralamada kapsam giderek daralır."
+  },
+  {
+    "id": "tr-6-1-07",
+    "unit": "tr-6-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Tatlı dil” söz grubunda “tatlı” sözcüğü gerçek anlamıyla kullanılmıştır.",
+    "answer": false,
+    "explanation": "“Tatlı” burada şekerli tadı değil, “hoşa giden, gönül okşayan” anlamını taşır. Bu nedenle mecaz anlamda kullanılmıştır."
+  },
+  {
+    "id": "tr-6-1-08",
+    "unit": "tr-6-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümledeki ikileme zıt anlamlı sözcüklerle kurulmuştur?",
+    "choices": [
+      "Yavaş yavaş yürüdük.",
+      "Eğri büğrü yollardan geçtik.",
+      "Yalan yanlış şeyler anlattı.",
+      "Aşağı yukarı bir saat bekledik."
+    ],
+    "answer": 3,
+    "explanation": "“Aşağı” ile “yukarı” zıt anlamlıdır. Ötekiler aynı sözcüğün tekrarı, biri anlamsız sözcükler ve yakın anlamlı sözcüklerle kurulmuştur."
+  },
+  {
+    "id": "tr-6-2-01",
+    "unit": "tr-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi cümle nesnel bir yargı bildirir?",
+    "choices": [
+      "Yazarın en etkileyici romanı bu.",
+      "Kapak tasarımı çok sevimli.",
+      "Roman 320 sayfadan oluşuyor.",
+      "Kitabın sonu biraz sıkıcıydı."
+    ],
+    "answer": 2,
+    "explanation": "Sayfa sayısı sayılarak kanıtlanabilir. Doğruluğu herkesçe kabul edilen, kanıtlanabilen yargılar nesneldir."
+  },
+  {
+    "id": "tr-6-2-02",
+    "unit": "tr-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Kar yağdığı için yollar kapandı.” cümlesinde hangi anlam ilişkisi vardır?",
+    "choices": [
+      "Amaç-sonuç",
+      "Neden-sonuç",
+      "Koşul-sonuç",
+      "Karşılaştırma"
+    ],
+    "answer": 1,
+    "explanation": "Yolların kapanmasının nedeni karın yağmasıdır. Sonuca “Neden?” sorusu sorulduğunda cevap alınabiliyorsa neden-sonuç ilişkisi vardır."
+  },
+  {
+    "id": "tr-6-2-03",
+    "unit": "tr-6-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "“Hasta olmasına rağmen okula geldi.” cümlesi, beklenenin tersine bir durum bildirir.",
+    "answer": true,
+    "explanation": "Hasta olan birinin okula gelmemesi beklenir. “Rağmen, karşın, -diği hâlde” gibi sözler beklenenin tersini anlatmak için kullanılır."
+  },
+  {
+    "id": "tr-6-2-04",
+    "unit": "tr-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede amaç-sonuç ilişkisi vardır?",
+    "choices": [
+      "Çok çalıştığı için sınavı kazandı.",
+      "Çalışırsa sınavı kazanır.",
+      "Sınavı kazanmak için gece gündüz çalıştı.",
+      "Çalıştı ama sınavı kazanamadı."
+    ],
+    "answer": 2,
+    "explanation": "Çalışmanın amacı sınavı kazanmaktır ve bu amaç henüz gerçekleşmemiştir. Neden-sonuçta ise neden gerçekleşmiş bir olaydır."
+  },
+  {
+    "id": "tr-6-2-05",
+    "unit": "tr-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede varsayım anlamı vardır?",
+    "choices": [
+      "Yarışmayı kazandığına çok sevindim.",
+      "Tut ki yarışmayı sen kazandın.",
+      "Yarışma haftaya yapılacak.",
+      "Yarışmaya otuz kişi katıldı."
+    ],
+    "answer": 1,
+    "explanation": "Varsayım, gerçekleşmemiş bir durumu bir an için olmuş gibi kabul etmektir. “Tut ki, diyelim ki, farz edelim” sözleri varsayım bildirir."
+  },
+  {
+    "id": "tr-6-2-06",
+    "unit": "tr-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Öğretmenimiz yarın gelmeyebilir.” cümlesinde hangi anlam vardır?",
+    "choices": [
+      "Kesinlik",
+      "Pişmanlık",
+      "Şaşırma",
+      "Olasılık"
+    ],
+    "answer": 3,
+    "explanation": "Öğretmenin gelip gelmeyeceği kesin değildir. Gerçekleşmesi kesin olmayan durumları anlatan cümleler olasılık (ihtimal) bildirir."
+  },
+  {
+    "id": "tr-6-2-07",
+    "unit": "tr-6-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Bence bu şehrin en lezzetli yemeği mantıdır.” cümlesi kanıtlanabilir bir yargı içerir.",
+    "answer": false,
+    "explanation": "Hangi yemeğin en lezzetli olduğu kişiden kişiye değişir. “Bence” sözü de yargının kişisel, yani öznel olduğunu gösterir."
+  },
+  {
+    "id": "tr-6-2-08",
+    "unit": "tr-6-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Kerem bu yıl da okul takımına seçildi.” cümlesinden hangi yargı kesin olarak çıkarılır?",
+    "choices": [
+      "Kerem takımın kaptanıdır.",
+      "Kerem ilk kez takıma seçilmiştir.",
+      "Takıma yalnızca Kerem seçilmiştir.",
+      "Kerem daha önce de takıma seçilmiştir."
+    ],
+    "answer": 3,
+    "explanation": "“Bu yıl da” sözündeki “da”, aynı olayın daha önce de yaşandığını sezdirir. Cümlede açıkça söylenmeyip sezdirilen bu anlama örtülü anlam denir."
+  },
+  {
+    "id": "tr-6-3-01",
+    "unit": "tr-6-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Dedem her sabah bahçeye çıkar, domateslerini sular. ‘Toprakla uğraşan insan yaşlanmaz.’ der.” Bu metne göre dede için hangisi söylenebilir?",
+    "choices": [
+      "Toprakla uğraşmayı sever.",
+      "Şehirde yaşamak ister.",
+      "Sabahları geç kalkar.",
+      "Bahçe işlerinden yorulur."
+    ],
+    "answer": 0,
+    "explanation": "Dedenin her sabah bahçeyle ilgilenmesi ve söylediği söz, toprakla uğraşmaktan hoşlandığını gösterir."
+  },
+  {
+    "id": "tr-6-3-02",
+    "unit": "tr-6-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Bisiklet hem ucuz hem de sağlıklı bir ulaşım aracıdır. Üstelik havayı kirletmez.” Bu metinde bisikletin hangi özelliğine değinilmemiştir?",
+    "choices": [
+      "Ucuz olmasına",
+      "Sağlıklı olmasına",
+      "Hızlı olmasına",
+      "Çevreyi kirletmemesine"
+    ],
+    "answer": 2,
+    "explanation": "Metinde bisikletin ucuz, sağlıklı ve çevreci olduğu söylenmiş; hızıyla ilgili bir bilgi verilmemiştir."
+  },
+  {
+    "id": "tr-6-3-03",
+    "unit": "tr-6-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "“Okumak, başka hayatlara açılan bir kapıdır. İyi okur, tek ömre pek çok hayat sığdırır.” Bu metnin konusu, okumanın insana kattıklarıdır.",
+    "answer": true,
+    "explanation": "Metinde okumanın insana başka hayatları tanıma imkânı verdiği anlatılıyor. Konu, metinde üzerinde durulan şeydir."
+  },
+  {
+    "id": "tr-6-3-04",
+    "unit": "tr-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Gökyüzü kurşuni bulutlarla kaplıydı. Islak kaldırımlarda sarı yapraklar uçuşuyordu.” Bu metinde hangi anlatım biçimi kullanılmıştır?",
+    "choices": [
+      "Tartışma",
+      "Betimleme",
+      "Açıklama",
+      "Öyküleme"
+    ],
+    "answer": 1,
+    "explanation": "Yazar gördüklerini renkleriyle, ayrıntılarıyla okurun gözünde canlandırıyor. Varlıkları sözcüklerle resmetmeye betimleme denir."
+  },
+  {
+    "id": "tr-6-3-05",
+    "unit": "tr-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Şehirlerde gürültü giderek artıyor. Bu durum insanların uykusunu ve dikkatini bozuyor.” Bu metne göre gürültünün sonucu hangisidir?",
+    "choices": [
+      "Trafik kazaları",
+      "Hava kirliliği",
+      "İşitme kaybı",
+      "Uyku ve dikkat sorunları"
+    ],
+    "answer": 3,
+    "explanation": "İkinci cümlede gürültünün insanların uykusunu ve dikkatini bozduğu açıkça söylenmiştir."
+  },
+  {
+    "id": "tr-6-3-06",
+    "unit": "tr-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Başarı tesadüf değildir. Her gün atılan küçük adımlar, bir gün insanı zirveye taşır.” Bu metnin ana düşüncesi hangisidir?",
+    "choices": [
+      "Başarı, düzenli çalışmayla gelir.",
+      "Zirveye çıkmak tehlikelidir.",
+      "Yalnızca şanslı olanlar başarır.",
+      "Küçük adımlar insanı yorar."
+    ],
+    "answer": 0,
+    "explanation": "Yazar, başarının rastlantı olmadığını ve her gün düzenli çalışmanın insanı hedefine ulaştıracağını anlatıyor."
+  },
+  {
+    "id": "tr-6-3-07",
+    "unit": "tr-6-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Karıncalar yazın yiyecek toplar. Kışı yuvalarında bu yiyeceklerle geçirir.” Bu metne göre karıncalar kışın da yiyecek toplamaya çıkar.",
+    "answer": false,
+    "explanation": "Metne göre karıncalar kışı yuvalarında, yazın topladıkları yiyeceklerle geçirir. Kışın yiyecek topladıkları söylenmemiştir."
+  },
+  {
+    "id": "tr-6-3-08",
+    "unit": "tr-6-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Eskiden mektuplar haftalarca beklenirdi. Bugün iletiler saniyeler içinde ulaşıyor.” Bu metinde hangi düşünceyi geliştirme yolu kullanılmıştır?",
+    "choices": [
+      "Tanımlama",
+      "Örnekleme",
+      "Karşılaştırma",
+      "Tanık gösterme"
+    ],
+    "answer": 2,
+    "explanation": "Eski ile yeni iletişim, hız yönünden kıyaslanmıştır. İki şeyin benzer ya da farklı yönlerini ortaya koymaya karşılaştırma denir."
+  },
+  {
+    "id": "tr-6-4-01",
+    "unit": "tr-6-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Aslan gibi güçlü bir çocuktu.” cümlesinde hangi söz sanatı vardır?",
+    "choices": [
+      "Benzetme",
+      "Kişileştirme",
+      "Abartma",
+      "Konuşturma"
+    ],
+    "answer": 0,
+    "explanation": "Çocuk, güç yönünden aslana benzetilmiştir. Aralarında ortak özellik bulunan iki varlıktan zayıf olanı güçlü olana benzetmek benzetme sanatıdır."
+  },
+  {
+    "id": "tr-6-4-02",
+    "unit": "tr-6-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Olağanüstü olayların anlatıldığı, çoğunlukla “Bir varmış, bir yokmuş” diye başlayan metin türü hangisidir?",
+    "choices": [
+      "Anı",
+      "Masal",
+      "Haber yazısı",
+      "Mektup"
+    ],
+    "answer": 1,
+    "explanation": "Masallarda yer ve zaman belirsizdir, olağanüstü kişiler ve olaylar bulunur. Masal, tekerlemeyle başlar ve çoğunlukla iyilerin kazanmasıyla biter."
+  },
+  {
+    "id": "tr-6-4-03",
+    "unit": "tr-6-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Fabllarda kahramanlar çoğunlukla insan gibi konuşan hayvanlardır ve metnin sonunda bir ders verilir.",
+    "answer": true,
+    "explanation": "Fabl, insan özellikleri verilmiş hayvan ya da bitkilerin başından geçen olayları anlatır ve bir öğütle biter."
+  },
+  {
+    "id": "tr-6-4-04",
+    "unit": "tr-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Menekşeler boynunu bükmüş, ağlıyordu.” cümlesinde hangi söz sanatı vardır?",
+    "choices": [
+      "Benzetme",
+      "Abartma",
+      "Karşıtlık",
+      "Kişileştirme"
+    ],
+    "answer": 3,
+    "explanation": "Boyun bükmek ve ağlamak insana özgüdür. İnsan dışındaki varlıklara insan özelliği vermek kişileştirmedir."
+  },
+  {
+    "id": "tr-6-4-05",
+    "unit": "tr-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir kişinin yaşadığı olayları üzerinden zaman geçtikten sonra anlattığı yazı türü hangisidir?",
+    "choices": [
+      "Günlük",
+      "Masal",
+      "Anı",
+      "Fabl"
+    ],
+    "answer": 2,
+    "explanation": "Anı (hatıra), yaşanmış olayların sonradan hatırlanarak yazılmasıdır. Günlük ise olayların yaşandığı gün yazılır."
+  },
+  {
+    "id": "tr-6-4-06",
+    "unit": "tr-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede abartma sanatı vardır?",
+    "choices": [
+      "Gözleri deniz gibi maviydi.",
+      "Bir gülüşüyle bütün şehri aydınlatırdı.",
+      "Yapraklar rüzgârla dans ediyordu.",
+      "Akşam olunca eve döndük."
+    ],
+    "answer": 1,
+    "explanation": "Bir gülüşün şehri aydınlatması olanaksızdır; gülüşün etkisi olduğundan çok büyük gösterilmiştir."
+  },
+  {
+    "id": "tr-6-4-07",
+    "unit": "tr-6-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Şiirde dizelerin bir araya gelmesiyle oluşan bölümlere paragraf denir.",
+    "answer": false,
+    "explanation": "Şiirde dizelerin oluşturduğu bölümlere kıta (bent) denir; dörder dizeli bölümlere dörtlük adı verilir. Paragraf, düzyazıdaki bölümlerin adıdır."
+  },
+  {
+    "id": "tr-6-4-08",
+    "unit": "tr-6-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Tilki, kargaya ‘Ne güzel sesin var!’ demiş.” cümlesinde hangi söz sanatı vardır?",
+    "choices": [
+      "Abartma",
+      "Benzetme",
+      "Konuşturma",
+      "Karşıtlık"
+    ],
+    "answer": 2,
+    "explanation": "İnsan dışındaki varlıkları insan gibi konuşturmaya konuşturma (intak) denir. Fabllarda bu sanata sıkça başvurulur."
+  },
+  {
+    "id": "tr-6-5-01",
+    "unit": "tr-6-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi cümlede soru ekinin yazımı yanlıştır?",
+    "choices": [
+      "Sen de geliyor musun?",
+      "Bu kitabı okudunmu?",
+      "Hava güzel mi?",
+      "Ödevini yaptın mı?"
+    ],
+    "answer": 1,
+    "explanation": "Soru eki kendinden önceki sözcükten ayrı yazılır: “okudun mu?” Kendinden sonra gelen ekler ise soru ekine bitişir."
+  },
+  {
+    "id": "tr-6-5-02",
+    "unit": "tr-6-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi sözcüğün yazımı yanlıştır?",
+    "choices": [
+      "tıraş",
+      "yalnız",
+      "eşofman",
+      "orjinal"
+    ],
+    "answer": 3,
+    "explanation": "Sözcüğün doğru yazımı “orijinal” biçimindedir. “Tıraş, yalnız, eşofman” sözcükleri doğru yazılmıştır."
+  },
+  {
+    "id": "tr-6-5-03",
+    "unit": "tr-6-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Yer adlarında yön bildiren sözcükler özel addan önce gelirse büyük harfle başlar: “Doğu Anadolu”.",
+    "answer": true,
+    "explanation": "Yön adı özel addan önce gelirse büyük harfle (Doğu Anadolu, Güney Kore), sonra gelirse küçük harfle yazılır (Anadolu'nun doğusu)."
+  },
+  {
+    "id": "tr-6-5-04",
+    "unit": "tr-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi sözcük doğru yazılmıştır?",
+    "choices": [
+      "hergün",
+      "birşey",
+      "hiçbiri",
+      "pekçok"
+    ],
+    "answer": 2,
+    "explanation": "“Hiçbiri” bitişik yazılır. Ötekilerin doğrusu “her gün”, “bir şey” ve “pek çok” biçimindedir."
+  },
+  {
+    "id": "tr-6-5-05",
+    "unit": "tr-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede “ki”nin yazımı doğrudur?",
+    "choices": [
+      "Evde ki hesap çarşıya uymaz.",
+      "Sokakta ki çocuklar oynuyor.",
+      "Bir şey biliyor ki konuşuyor.",
+      "Benim ki daha yeni."
+    ],
+    "answer": 2,
+    "explanation": "Bağlaç olan “ki” ayrı yazılır. “Evdeki, sokaktaki, benimki” sözcüklerindeki “-ki” ise ektir ve bitişik yazılır."
+  },
+  {
+    "id": "tr-6-5-06",
+    "unit": "tr-6-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Yalnız” sözcüğü “yanlız” biçiminde yazılır.",
+    "answer": false,
+    "explanation": "Sözcük “yalın” kökünden gelir ve “yalnız” biçiminde yazılır. “Yanlış” sözcüğü ise “yanılmak” fiiliyle ilgilidir."
+  },
+  {
+    "id": "tr-6-5-07",
+    "unit": "tr-6-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede kısaltmaya getirilen ek yanlış yazılmıştır?",
+    "choices": [
+      "TBMM'nin açılışını kutladık.",
+      "TRT'de güzel bir belgesel vardı.",
+      "TDK'nın yeni sözlüğü çıktı.",
+      "PTT'ye gidip kargo gönderdim."
+    ],
+    "answer": 2,
+    "explanation": "Büyük harfli kısaltmalara gelen ekler, son harfin okunuşuna göre yazılır. “K” harfi “ke” okunduğu için doğrusu “TDK'nin” biçimindedir."
+  },
+  {
+    "id": "tr-6-5-08",
+    "unit": "tr-6-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede yazım yanlışı vardır?",
+    "choices": [
+      "Tatil 20 Haziran'da başlıyor.",
+      "Saat 9.30'da yola çıktık.",
+      "Toplantı 14 Mart'da yapılacak.",
+      "Dedem 1960'ta doğmuş."
+    ],
+    "answer": 2,
+    "explanation": "“Mart” sözcüğü sert ünsüzle bittiği için ek de sertleşir: “14 Mart'ta”. Bu kurala ünsüz benzeşmesi denir."
+  },
+  {
+    "id": "tr-6-6-01",
+    "unit": "tr-6-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Akşam yemeğinde çorba( ) pilav ve salata vardı.” cümlesinde ayraçlı yere hangi işaret konmalıdır?",
+    "choices": [
+      "Nokta",
+      "Virgül",
+      "İki nokta",
+      "Ünlem işareti"
+    ],
+    "answer": 1,
+    "explanation": "Birbiri ardınca sıralanan eş görevli sözcükler arasına virgül konur."
+  },
+  {
+    "id": "tr-6-6-02",
+    "unit": "tr-6-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Dr( ) Ayşe Hanım yarın izinli.” cümlesinde ayraçlı yere hangi işaret konmalıdır?",
+    "choices": [
+      "Virgül",
+      "Kesme işareti",
+      "Nokta",
+      "Kısa çizgi"
+    ],
+    "answer": 2,
+    "explanation": "Bazı kısaltmaların sonuna nokta konur: Dr. (doktor), Prof. (profesör), vb. (ve benzeri)."
+  },
+  {
+    "id": "tr-6-6-03",
+    "unit": "tr-6-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Seslenme, sevinç, korku gibi duyguları anlatan cümlelerin sonuna ünlem işareti konur.",
+    "answer": true,
+    "explanation": "Ünlem işareti duygu ve heyecan bildiren cümlelerle seslenme sözlerinden sonra kullanılır: “Yaşasın!”, “Hey, buraya gel!”"
+  },
+  {
+    "id": "tr-6-6-04",
+    "unit": "tr-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Öğrencilerden Ali, Can( ) öğretmenlerden Aylin Hanım, Murat Bey törene katıldı.” cümlesinde ayraçlı yere hangi işaret konmalıdır?",
+    "choices": [
+      "Noktalı virgül",
+      "İki nokta",
+      "Nokta",
+      "Üç nokta"
+    ],
+    "answer": 0,
+    "explanation": "Noktalı virgül, kendi içinde virgülle ayrılmış sözcük gruplarını birbirinden ayırmak için kullanılır."
+  },
+  {
+    "id": "tr-6-6-05",
+    "unit": "tr-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Cümle içindeki bir sözün açıklaması hangi noktalama işaretinin içine yazılır?",
+    "choices": [
+      "Tırnak işareti",
+      "Yay ayraç",
+      "Kesme işareti",
+      "Kısa çizgi"
+    ],
+    "answer": 1,
+    "explanation": "Yay ayraç, cümlenin yapısıyla doğrudan ilgili olmayan açıklamalar için kullanılır: “Bu konuyu geçen yıl (5. sınıfta) öğrenmiştik.”"
+  },
+  {
+    "id": "tr-6-6-06",
+    "unit": "tr-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Satır sonuna sığmayan sözcükler bölünürken hangi işaret kullanılır?",
+    "choices": [
+      "Uzun çizgi",
+      "Eğik çizgi",
+      "Üç nokta",
+      "Kısa çizgi"
+    ],
+    "answer": 3,
+    "explanation": "Satıra sığmayan sözcükler hecelerinden bölünür ve satır sonuna kısa çizgi konur."
+  },
+  {
+    "id": "tr-6-6-07",
+    "unit": "tr-6-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Ne zaman geleceğini bilmiyorum” cümlesinin sonuna soru işareti konur.",
+    "answer": false,
+    "explanation": "Cümlede “ne zaman” soru sözü bulunsa da cümlenin bütünü soru sormuyor, bir durumu bildiriyor. Bu yüzden sonuna nokta konur."
+  },
+  {
+    "id": "tr-6-6-08",
+    "unit": "tr-6-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede noktalama yanlışı vardır?",
+    "choices": [
+      "Ne güzel bir gün!",
+      "Yarın bize gelir misin?",
+      "Okula ne zaman başladığını hatırlamıyorum?",
+      "Eyvah, geç kaldım!"
+    ],
+    "answer": 2,
+    "explanation": "Bu cümle soru anlamı taşımaz, bir durumu bildirir. İçinde soru sözü bulunsa da soru bildirmeyen cümlelerin sonuna nokta konur."
+  },
+  {
+    "id": "tr-6-7-01",
+    "unit": "tr-6-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi sözcük özel isimdir?",
+    "choices": [
+      "şehir",
+      "nehir",
+      "Fırat",
+      "dağ"
+    ],
+    "answer": 2,
+    "explanation": "Fırat, belli bir nehrin adıdır. Tek olan, benzeri bulunmayan varlıkları karşılayan adlar özel isimdir ve büyük harfle başlar."
+  },
+  {
+    "id": "tr-6-7-02",
+    "unit": "tr-6-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Kırmızı balon gökyüzüne yükseldi.” cümlesinde hangi sözcük sıfattır?",
+    "choices": [
+      "kırmızı",
+      "balon",
+      "gökyüzüne",
+      "yükseldi"
+    ],
+    "answer": 0,
+    "explanation": "“Kırmızı” sözcüğü “balon” ismini renk yönünden nitelemiştir. İsimleri niteleyen ya da belirten sözcükler sıfattır."
+  },
+  {
+    "id": "tr-6-7-03",
+    "unit": "tr-6-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Zamirler, isimlerin yerini tutan sözcüklerdir.",
+    "answer": true,
+    "explanation": "“Ben, sen, o, bu, şu, kim, herkes” gibi sözcükler isim değildir ama isimlerin yerine kullanılır; bunlara zamir (adıl) denir."
+  },
+  {
+    "id": "tr-6-7-04",
+    "unit": "tr-6-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi sözcük topluluk ismidir?",
+    "choices": [
+      "askerler",
+      "kitaplar",
+      "ağaç",
+      "ordu"
+    ],
+    "answer": 3,
+    "explanation": "“Ordu” sözcüğü çoğul eki almadığı hâlde birçok askerden oluşan bir bütünü anlatır. Böyle sözcüklere topluluk ismi denir."
+  },
+  {
+    "id": "tr-6-7-05",
+    "unit": "tr-6-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede “bu” sözcüğü işaret sıfatı olarak kullanılmıştır?",
+    "choices": [
+      "Bunu çok sevdim.",
+      "Bu, benim en sevdiğim kitap.",
+      "Bu kitabı çok sevdim.",
+      "Bunlar benim kitaplarım."
+    ],
+    "answer": 2,
+    "explanation": "“Bu” sözcüğü “kitap” ismini işaret yoluyla belirttiği için sıfattır. İsmin yerini tuttuğunda ise işaret zamiri olur."
+  },
+  {
+    "id": "tr-6-7-06",
+    "unit": "tr-6-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi belirtili isim tamlamasıdır?",
+    "choices": [
+      "okul bahçesi",
+      "okulun bahçesi",
+      "taş köprü",
+      "bahçe kapısı"
+    ],
+    "answer": 1,
+    "explanation": "Belirtili isim tamlamasında tamlayan “-ın, -in” ekini, tamlanan ise iyelik ekini alır: okul-un bahçe-si."
+  },
+  {
+    "id": "tr-6-7-07",
+    "unit": "tr-6-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Ama, fakat, çünkü” sözcükleri zamirdir.",
+    "answer": false,
+    "explanation": "Bu sözcükler cümleleri ve sözcükleri birbirine bağlayan bağlaçlardır. Zamirler ise isimlerin yerini tutar."
+  },
+  {
+    "id": "tr-6-7-08",
+    "unit": "tr-6-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Gibi, için, kadar” sözcükleri tek başına anlam taşımaz, cümlede sözcükler arasında ilgi kurar.",
+    "answer": true,
+    "explanation": "Bu sözcükler edattır (ilgeç). Tek başlarına anlamları yoktur; cümleye benzerlik, amaç, neden gibi anlamlar katarlar."
+  },
+  {
+    "id": "tr-6-7-09",
+    "unit": "tr-6-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Bunu sana kim verdi?” cümlesinde kaç zamir vardır?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "explanation": "“Bunu” işaret zamiri, “sana” kişi zamiri, “kim” ise soru zamiridir. Cümlede üç zamir bulunur.",
+    "keepOrder": true
+  },
+  {
+    "id": "tr-6-7-10",
+    "unit": "tr-6-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede “ile” sözcüğü bağlaç olarak kullanılmıştır?",
+    "choices": [
+      "Okula otobüs ile geldim.",
+      "Mektubu dolma kalem ile yazdı.",
+      "Ali ile Veli sinemaya gitti.",
+      "Haberi sevinç ile karşıladı."
+    ],
+    "answer": 2,
+    "explanation": "“İle” yerine “ve” getirilebiliyorsa bağlaçtır: “Ali ve Veli”. Öteki cümlelerde “ile” araç ve durum anlamı katan bir edattır."
+  }
+]

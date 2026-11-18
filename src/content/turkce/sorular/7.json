@@ -1,0 +1,804 @@
+[
+  {
+    "id": "tr-7-1-01",
+    "unit": "tr-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Keskin” sözcüğü hangi cümlede mecaz anlamda kullanılmıştır?",
+    "choices": [
+      "Keskin bıçakla ekmeği dilimledi.",
+      "Makasın ucu çok keskin.",
+      "Keskin taşlar ayağını kesti.",
+      "Keskin zekâsıyla herkesi şaşırttı."
+    ],
+    "answer": 3,
+    "explanation": "“Keskin zekâ”, çabuk kavrayan, güçlü zekâ demektir. Sözcük “iyi kesen” anlamından uzaklaşıp mecaz anlam kazanmıştır."
+  },
+  {
+    "id": "tr-7-1-02",
+    "unit": "tr-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Burnu havada” deyimi nasıl bir kişiyi anlatır?",
+    "choices": [
+      "Meraklı",
+      "Kibirli",
+      "Dalgın",
+      "Unutkan"
+    ],
+    "answer": 1,
+    "explanation": "Burnu havada olan kişi kendini başkalarından üstün görür. Deyimler kalıplaşmış, çoğunlukla mecaz anlamlı söz gruplarıdır."
+  },
+  {
+    "id": "tr-7-1-03",
+    "unit": "tr-7-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bir bilim, sanat ya da meslek dalına özgü kavramları karşılayan sözcüklere terim denir.",
+    "answer": true,
+    "explanation": "“Üçgen” matematiğin, “hücre” fen bilimlerinin, “perde” tiyatronun terimidir. Terimler tek ve kesin bir anlam taşır."
+  },
+  {
+    "id": "tr-7-1-04",
+    "unit": "tr-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi sözcük soyut anlamlıdır?",
+    "choices": [
+      "rüzgâr",
+      "ışık",
+      "özlem",
+      "ses"
+    ],
+    "answer": 2,
+    "explanation": "Özlem, beş duyudan herhangi biriyle algılanamaz. Rüzgâr dokunmayla, ışık görmeyle, ses işitmeyle algılandığı için somuttur."
+  },
+  {
+    "id": "tr-7-1-05",
+    "unit": "tr-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Dalmak” sözcüğü hangi cümlede “düşünceye kapılıp çevresini fark etmemek” anlamındadır?",
+    "choices": [
+      "Balıkadam denize daldı.",
+      "Yorgunluktan hemen uykuya daldı.",
+      "Eski fotoğraflara bakarken uzaklara daldı.",
+      "Kapıyı çalmadan içeri daldı."
+    ],
+    "answer": 2,
+    "explanation": "Bu cümlede kişi düşüncelere kapılmıştır. Çok anlamlı sözcüklerin hangi anlamda kullanıldığı cümleden anlaşılır."
+  },
+  {
+    "id": "tr-7-1-06",
+    "unit": "tr-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Dün beyaz perdenin ünlü oyuncusuyla tanıştım.” cümlesinde “beyaz perde” sözü neyin yerine kullanılmıştır?",
+    "choices": [
+      "Tiyatro",
+      "Televizyon",
+      "Sinema",
+      "Resim"
+    ],
+    "answer": 2,
+    "explanation": "Tek sözcükle anlatılabilecek bir kavramı birden çok sözcükle anlatmaya dolaylama denir: beyaz perde (sinema), file bekçisi (kaleci)."
+  },
+  {
+    "id": "tr-7-1-07",
+    "unit": "tr-7-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Çürük” ile “sağlam” yakın anlamlı sözcüklerdir.",
+    "answer": false,
+    "explanation": "Bu iki sözcük anlamca birbirinin karşıtıdır, yani zıt anlamlıdır. Yakın anlamlı sözcüklerin anlamları birbirine benzer: “dost - arkadaş”."
+  },
+  {
+    "id": "tr-7-1-08",
+    "unit": "tr-7-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede deyim, açıklamasıyla birlikte verilmiştir?",
+    "choices": [
+      "Haberi duyunca küplere bindi.",
+      "Kimseye para vermez, çok eli sıkıdır.",
+      "Bu işte onun parmağı olduğunu biliyordum.",
+      "Dün gece gözüme uyku girmedi."
+    ],
+    "answer": 1,
+    "explanation": "“Eli sıkı” deyimi cimri demektir; cümledeki “kimseye para vermez” sözü bu deyimin açıklamasıdır."
+  },
+  {
+    "id": "tr-7-2-01",
+    "unit": "tr-7-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi cümle bir tanım cümlesidir?",
+    "choices": [
+      "Bu romanı bir günde bitirdim.",
+      "Romanın kahramanı küçük bir çocuk.",
+      "Roman, olayları geniş biçimde anlatan uzun yazı türüdür.",
+      "Roman okumayı çok severim."
+    ],
+    "answer": 2,
+    "explanation": "Tanım cümleleri bir kavramın ne olduğunu açıklar ve “Bu nedir?” sorusuna cevap verir."
+  },
+  {
+    "id": "tr-7-2-02",
+    "unit": "tr-7-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Akşama kadar çalıştı ama konuyu bitiremedi.” cümlesinde “ama” sözcüğü cümleye hangi anlamı katmıştır?",
+    "choices": [
+      "Karşıtlık",
+      "Neden",
+      "Amaç",
+      "Koşul"
+    ],
+    "answer": 0,
+    "explanation": "“Ama” bağlacı, birbirine karşıt iki durumu bağlamıştır: çok çalışmak ve bitirememek."
+  },
+  {
+    "id": "tr-7-2-03",
+    "unit": "tr-7-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Öznel yargılar kişiden kişiye değişir ve kanıtlanamaz.",
+    "answer": true,
+    "explanation": "“Bu film çok güzel.” gibi cümleler söyleyenin beğenisini yansıtır. Kanıtlanabilen, herkes için aynı olan yargılar ise nesneldir."
+  },
+  {
+    "id": "tr-7-2-04",
+    "unit": "tr-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Yazar, kısa ve yalın cümlelerle yazmış.” cümlesi eserin hangi yönüyle ilgilidir?",
+    "choices": [
+      "İçerik",
+      "Üslup",
+      "Konu",
+      "Ana düşünce"
+    ],
+    "answer": 1,
+    "explanation": "Üslup (biçem), yazarın anlatış biçimidir: dil, cümle yapısı, sözcük seçimi. İçerik ise eserde ne anlatıldığıyla ilgilidir."
+  },
+  {
+    "id": "tr-7-2-05",
+    "unit": "tr-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede öz eleştiri vardır?",
+    "choices": [
+      "Sen hiç kimseyi dinlemiyorsun.",
+      "Takım bu maçta kötü oynadı.",
+      "O gün sana haksızlık ettim, öyle konuşmamalıydım.",
+      "Yazarın son kitabı beklentiyi karşılamadı."
+    ],
+    "answer": 2,
+    "explanation": "Öz eleştiri, kişinin kendi hatasını görüp dile getirmesidir. Öteki cümlelerde başkaları eleştirilmiştir."
+  },
+  {
+    "id": "tr-7-2-06",
+    "unit": "tr-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede dolaylı anlatım vardır?",
+    "choices": [
+      "Öğretmen, “Sınav ertelendi.” dedi.",
+      "Sınav ne zaman yapılacak?",
+      "Sınav haftaya ertelendi.",
+      "Öğretmen, sınavın ertelendiğini söyledi."
+    ],
+    "answer": 3,
+    "explanation": "Başkasının sözü değiştirilerek aktarılırsa dolaylı anlatım olur. Söz hiç değiştirilmeden, tırnak içinde verilirse doğrudan anlatımdır."
+  },
+  {
+    "id": "tr-7-2-07",
+    "unit": "tr-7-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Bu yaz Ege'ye mi gitsek, Karadeniz'e mi?” cümlesinde kesinlik anlamı vardır.",
+    "answer": false,
+    "explanation": "Konuşan kişi iki seçenek arasında karar verememiştir. Cümlede kesinlik değil, kararsızlık anlamı vardır."
+  },
+  {
+    "id": "tr-7-2-08",
+    "unit": "tr-7-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Kitap okumayan insan, penceresi olmayan eve benzer.” cümlesinden hangi yargı çıkarılabilir?",
+    "choices": [
+      "Evlerde mutlaka pencere olmalıdır.",
+      "Kitap, insanın dünyaya bakışını genişletir.",
+      "Kitap okumak zor bir iştir.",
+      "Herkes aynı kitapları okumalıdır."
+    ],
+    "answer": 1,
+    "explanation": "Pencere, evin dışarıya açılan yeridir. Cümlede kitap pencereye benzetilerek okumanın insana geniş bir görüş kazandırdığı anlatılmıştır."
+  },
+  {
+    "id": "tr-7-3-01",
+    "unit": "tr-7-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Ormanlar yalnızca ağaç topluluğu değildir. Binlerce canlıya yuva olur, havayı temizler, toprağı tutar.” Bu metnin konusu nedir?",
+    "choices": [
+      "Ağaç türleri",
+      "Ormanların yararları",
+      "Orman yangınları",
+      "Ormanda yaşayan hayvanlar"
+    ],
+    "answer": 1,
+    "explanation": "Metinde ormanların canlılara yuva olduğu, havayı temizlediği ve toprağı tuttuğu, yani yararları anlatılmıştır."
+  },
+  {
+    "id": "tr-7-3-02",
+    "unit": "tr-7-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Şiir yazmak için önce çok şiir okumak gerekir. Usta şairlerin dizeleri, genç şaire yol gösterir.” Bu metne göre şiir yazmak isteyen kişi ne yapmalıdır?",
+    "choices": [
+      "Usta şairleri okumalıdır.",
+      "Her gün bir şiir yazmalıdır.",
+      "Yalnız kalmayı öğrenmelidir.",
+      "Önce roman yazmalıdır."
+    ],
+    "answer": 0,
+    "explanation": "Metinde şiir yazmanın ön koşulu olarak çok şiir okumak gösterilmiş, usta şairlerin yol gösterici olduğu belirtilmiştir."
+  },
+  {
+    "id": "tr-7-3-03",
+    "unit": "tr-7-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "“Çay yaprakları toplandıktan sonra soldurulur, kıvrılır ve kurutulur. Ardından paketlenip satışa sunulur.” Bu metinde çayın işlenme aşamaları sırasıyla verilmiştir.",
+    "answer": true,
+    "explanation": "Metinde soldurma, kıvırma, kurutma ve paketleme işlemleri oluş sırasına göre anlatılmıştır."
+  },
+  {
+    "id": "tr-7-3-04",
+    "unit": "tr-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Dil, bir milletin aynasıdır. O milletin tarihini, kültürünü ve düşünce dünyasını yansıtır.” Bu metinde hangi düşünceyi geliştirme yolu kullanılmıştır?",
+    "choices": [
+      "Sayısal verilerden yararlanma",
+      "Tanık gösterme",
+      "Benzetme",
+      "Örnekleme"
+    ],
+    "answer": 2,
+    "explanation": "Dil, yansıtma özelliği yönünden aynaya benzetilmiştir. Yazar düşüncesini bu benzetmeyle daha anlaşılır kılmıştır."
+  },
+  {
+    "id": "tr-7-3-05",
+    "unit": "tr-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Bir araştırmaya göre günde yedi saatten az uyuyan öğrencilerin ders başarısı yüzde yirmi düşüyor.” Bu cümlede düşünce hangi yolla desteklenmiştir?",
+    "choices": [
+      "Sayısal verilerden yararlanma",
+      "Karşılaştırma",
+      "Tanımlama",
+      "Benzetme"
+    ],
+    "answer": 0,
+    "explanation": "Yazar düşüncesini “yedi saat” ve “yüzde yirmi” gibi rakamlarla desteklemiştir. Sayısal veriler anlatımı inandırıcı kılar."
+  },
+  {
+    "id": "tr-7-3-06",
+    "unit": "tr-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Teknoloji hayatı kolaylaştırıyor. Ancak ekran başında geçen saatler arttıkça insanlar birbirinden uzaklaşıyor.” Yazar bu metinde hangi durumdan yakınmaktadır?",
+    "choices": [
+      "Teknolojinin pahalı olmasından",
+      "Hayatın zorlaşmasından",
+      "İnsanların birbirinden uzaklaşmasından",
+      "Ekranların küçülmesinden"
+    ],
+    "answer": 2,
+    "explanation": "Yazar teknolojinin yararını kabul etmekte, “ancak” sözünden sonra asıl şikâyetini, insanların birbirinden uzaklaşmasını dile getirmektedir."
+  },
+  {
+    "id": "tr-7-3-07",
+    "unit": "tr-7-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Yaşlı çınar, meydanın ortasında yüzyıllardır duruyordu. Kalın gövdesi, geniş dallarıyla bütün köye gölge olurdu.” Bu metinde tartışmacı anlatım kullanılmıştır.",
+    "answer": false,
+    "explanation": "Metinde çınarın görünüşü okurun gözünde canlandırılmıştır; bu betimlemedir. Tartışmada ise bir görüş savunulur, karşıt görüş çürütülür."
+  },
+  {
+    "id": "tr-7-3-08",
+    "unit": "tr-7-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“(1) Kediler çok temiz hayvanlardır. (2) Günün büyük bölümünde tüylerini yalarlar. (3) Köpekler ise sahiplerine çok bağlıdır. (4) Kediler kumlarını bile örter.” Kaç numaralı cümle düşüncenin akışını bozmaktadır?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "explanation": "Metin kedilerin temizliğini anlatmaktadır. Üçüncü cümle köpeklerden söz ettiği için konunun dışına çıkmış, akışı bozmuştur.",
+    "keepOrder": true
+  },
+  {
+    "id": "tr-7-4-01",
+    "unit": "tr-7-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Kalabalığın ortasında yapayalnızdı.” cümlesinde hangi söz sanatı vardır?",
+    "choices": [
+      "Karşıtlık (tezat)",
+      "Konuşturma",
+      "Benzetme",
+      "Kişileştirme"
+    ],
+    "answer": 0,
+    "explanation": "Kalabalık içinde olmak ile yalnız olmak birbirine karşıt durumlardır. Karşıt kavramların bir arada kullanılmasına karşıtlık (tezat) denir."
+  },
+  {
+    "id": "tr-7-4-02",
+    "unit": "tr-7-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir kişinin kendi hayatını kendisinin anlattığı metin türü hangisidir?",
+    "choices": [
+      "Biyografi",
+      "Otobiyografi",
+      "Söyleşi",
+      "Fabl"
+    ],
+    "answer": 1,
+    "explanation": "Otobiyografi (öz yaşam öyküsü), kişinin kendi hayatını anlattığı yazıdır. Biyografide ise bir kişinin hayatını başkası anlatır."
+  },
+  {
+    "id": "tr-7-4-03",
+    "unit": "tr-7-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Biyografide yazar, başka bir kişinin hayatını anlatır.",
+    "answer": true,
+    "explanation": "Biyografi (yaşam öyküsü), tanınmış bir kişinin hayatının araştırılarak başka biri tarafından yazılmasıdır."
+  },
+  {
+    "id": "tr-7-4-04",
+    "unit": "tr-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Güneş, dağların ardından bize göz kırptı.” cümlesinde hangi söz sanatı vardır?",
+    "choices": [
+      "Abartma",
+      "Benzetme",
+      "Kişileştirme",
+      "Karşıtlık (tezat)"
+    ],
+    "answer": 2,
+    "explanation": "Göz kırpmak insana özgü bir davranıştır. Güneşe insan özelliği verildiği için kişileştirme yapılmıştır."
+  },
+  {
+    "id": "tr-7-4-05",
+    "unit": "tr-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yazarın bir konudaki kişisel görüşlerini, kanıtlama kaygısı gütmeden içtenlikle anlattığı metin türü hangisidir?",
+    "choices": [
+      "Makale",
+      "Haber yazısı",
+      "Biyografi",
+      "Deneme"
+    ],
+    "answer": 3,
+    "explanation": "Denemede yazar kendi kendisiyle konuşur gibi yazar ve düşüncelerini kanıtlamak zorunda değildir. Makalede ise düşünceler kanıtlarla savunulur."
+  },
+  {
+    "id": "tr-7-4-06",
+    "unit": "tr-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“O kadar çok ağladı ki gözyaşları sel oldu.” cümlesinde hangi söz sanatı vardır?",
+    "choices": [
+      "Abartma",
+      "Konuşturma",
+      "Karşıtlık (tezat)",
+      "Kişileştirme"
+    ],
+    "answer": 0,
+    "explanation": "Gözyaşlarının sel olması olanaksızdır. Bir durumu olduğundan çok büyük ya da çok küçük göstermek abartmadır."
+  },
+  {
+    "id": "tr-7-4-07",
+    "unit": "tr-7-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Gezi yazısı, yazarın hiç görmediği yerleri hayal ederek anlattığı metin türüdür.",
+    "answer": false,
+    "explanation": "Gezi yazısında yazar, gezip gördüğü yerleri gözlemlerine ve izlenimlerine dayanarak anlatır."
+  },
+  {
+    "id": "tr-7-4-08",
+    "unit": "tr-7-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Yalnızlık, akşamları kapımı çalan eski bir dosttur.” cümlesinde hangi iki söz sanatı birlikte kullanılmıştır?",
+    "choices": [
+      "Abartma - Karşıtlık",
+      "Benzetme - Kişileştirme",
+      "Konuşturma - Abartma",
+      "Karşıtlık - Konuşturma"
+    ],
+    "answer": 1,
+    "explanation": "Yalnızlık bir dosta benzetilmiş, ayrıca ona kapı çalmak gibi insana özgü bir davranış yüklenerek kişileştirme yapılmıştır."
+  },
+  {
+    "id": "tr-7-5-01",
+    "unit": "tr-7-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi cümlede yazım yanlışı vardır?",
+    "choices": [
+      "Yalnız kalmak istemiyorum.",
+      "Sınavda yalnış şıkkı işaretlemiş.",
+      "Şoför bizi kapıda bekliyordu.",
+      "Herkes toplantıya katıldı."
+    ],
+    "answer": 1,
+    "explanation": "Sözcüğün doğrusu “yanlış” biçimindedir; “yanılmak” fiilinden gelir. “Yalnız” ise “yalın” kökünden türemiştir."
+  },
+  {
+    "id": "tr-7-5-02",
+    "unit": "tr-7-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi cümlede “de”nin yazımı doğrudur?",
+    "choices": [
+      "Kitabı okudumda beğenmedim.",
+      "Sende mi geleceksin?",
+      "Evde kimse yoktu.",
+      "O da biliyorda söylemiyor."
+    ],
+    "answer": 2,
+    "explanation": "“Evde” sözcüğündeki “-de” bulunma hâl ekidir ve bitişik yazılır. Öteki cümlelerdeki “de” bağlaçtır, ayrı yazılmalıdır."
+  },
+  {
+    "id": "tr-7-5-03",
+    "unit": "tr-7-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "“Masmavi, tertemiz, yemyeşil” gibi pekiştirmeli sözcükler bitişik yazılır.",
+    "answer": true,
+    "explanation": "Pekiştirmeli sözcükler ilk hecenin “m, p, r, s” ünsüzlerinden biriyle kapatılmasıyla oluşur ve bitişik yazılır."
+  },
+  {
+    "id": "tr-7-5-04",
+    "unit": "tr-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi sözcüğün yazımı yanlıştır?",
+    "choices": [
+      "hissetmek",
+      "yardım etmek",
+      "kaybolmak",
+      "farketmek"
+    ],
+    "answer": 3,
+    "explanation": "“Etmek, olmak” ile kurulan birleşik fiillerde ses düşmesi ya da türemesi yoksa sözcükler ayrı yazılır: “fark etmek”. “His-hissetmek, kayıp-kaybolmak” ise bitişiktir."
+  },
+  {
+    "id": "tr-7-5-05",
+    "unit": "tr-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede sayıların yazımı doğrudur?",
+    "choices": [
+      "Onaltı yaşına girdi.",
+      "Kırkbeş dakika bekledik.",
+      "Öğrenciler ikişer ikişer sıraya girdi.",
+      "Yüzyirmi sayfa okudum."
+    ],
+    "answer": 2,
+    "explanation": "Üleştirme sayıları yazıyla yazılır. Birden çok sözcükten oluşan sayılar ise ayrı yazılır: on altı, kırk beş, yüz yirmi."
+  },
+  {
+    "id": "tr-7-5-06",
+    "unit": "tr-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede büyük harflerin kullanımıyla ilgili yazım yanlışı vardır?",
+    "choices": [
+      "Bu yaz Ağrı dağına tırmanacağız.",
+      "Kurtuluş Savaşı 1922'de sona erdi.",
+      "Ramazan Bayramı'nda dedemi ziyaret ettik.",
+      "Türkçe dersinde şiir okuduk."
+    ],
+    "answer": 0,
+    "explanation": "Yer adlarındaki “dağ, göl, nehir” gibi sözcükler özel ada dâhilse büyük harfle başlar: “Ağrı Dağı'na”."
+  },
+  {
+    "id": "tr-7-5-07",
+    "unit": "tr-7-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Art arda” sözü “ard arda” biçiminde yazılır.",
+    "answer": false,
+    "explanation": "Doğru yazım “art arda” biçimindedir. İlk sözcük “art” olarak kalır, ikincisinde ünlüyle başlayan ek geldiği için “t” yumuşayarak “d” olur."
+  },
+  {
+    "id": "tr-7-5-08",
+    "unit": "tr-7-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede yazım yanlışı yoktur?",
+    "choices": [
+      "Akşam üstü yürüyüşe çıktık.",
+      "Her hangi bir sorun yok.",
+      "Bir kaç dakika bekler misin?",
+      "Bugün kendimi çok iyi hissediyorum."
+    ],
+    "answer": 3,
+    "explanation": "“Bugün” ve “hissetmek” bitişik yazılır. Ötekilerin doğrusu “akşamüstü”, “herhangi” ve “birkaç” biçimindedir."
+  },
+  {
+    "id": "tr-7-6-01",
+    "unit": "tr-7-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Sınava hazırlanırken şunlara dikkat et( ) düzenli uyu, tekrar yap, erken kalk.” cümlesinde ayraçlı yere hangi işaret konmalıdır?",
+    "choices": [
+      "Noktalı virgül",
+      "İki nokta",
+      "Üç nokta",
+      "Kısa çizgi"
+    ],
+    "answer": 1,
+    "explanation": "Kendisinden sonra açıklama yapılacak ya da örnek sıralanacak cümlenin sonuna iki nokta konur."
+  },
+  {
+    "id": "tr-7-6-02",
+    "unit": "tr-7-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Cümle içinde özellikle belirtilmek istenen sözler ile kitap, şiir gibi eser adları hangi işaretin içine alınabilir?",
+    "choices": [
+      "Yay ayraç",
+      "Kesme işareti",
+      "Tırnak işareti",
+      "Eğik çizgi"
+    ],
+    "answer": 2,
+    "explanation": "Tırnak işareti, aktarılan sözlerin yanı sıra özellikle vurgulanmak istenen sözleri ve eser adlarını göstermek için de kullanılır."
+  },
+  {
+    "id": "tr-7-6-03",
+    "unit": "tr-7-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Cümle içinde art arda sıralanan eş görevli sözcükler arasına virgül konur.",
+    "answer": true,
+    "explanation": "“Bahçede gül, lale, karanfil vardı.” cümlesinde olduğu gibi eş görevli sözcükler virgülle ayrılır."
+  },
+  {
+    "id": "tr-7-6-04",
+    "unit": "tr-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Kapıyı açtı, içeri baktı ve( )” cümlesi tamamlanmadan bırakılmıştır. Ayraçlı yere hangi işaret konmalıdır?",
+    "choices": [
+      "Nokta",
+      "Ünlem işareti",
+      "Virgül",
+      "Üç nokta"
+    ],
+    "answer": 3,
+    "explanation": "Anlatım bakımından tamamlanmamış cümlelerin sonuna üç nokta konur. Okur, cümlenin devamını kendisi düşünür."
+  },
+  {
+    "id": "tr-7-6-05",
+    "unit": "tr-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Genç, doktora teşekkür etti.” cümlesinde virgül hangi amaçla kullanılmıştır?",
+    "choices": [
+      "Eş görevli sözcükleri ayırmak",
+      "Anlam karışıklığını önlemek",
+      "Sıralı cümleleri ayırmak",
+      "Seslenme bildirmek"
+    ],
+    "answer": 1,
+    "explanation": "Virgül olmasa “genç doktor” diye okunabilir ve anlam değişirdi. Virgül, teşekkür edenin “genç” olduğunu belirtir."
+  },
+  {
+    "id": "tr-7-6-06",
+    "unit": "tr-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede virgül yanlış kullanılmıştır?",
+    "choices": [
+      "Koştu, yoruldu, oturdu.",
+      "Evet, yarın geliyorum.",
+      "Kitap, ve defter aldım.",
+      "Arkadaşlar, biraz sessiz olalım."
+    ],
+    "answer": 2,
+    "explanation": "“Ve, veya, ya da” bağlaçlarından önce de sonra da virgül konmaz."
+  },
+  {
+    "id": "tr-7-6-07",
+    "unit": "tr-7-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Kesme işareti, özel adlara getirilen yapım eklerini ayırmak için kullanılır.",
+    "answer": false,
+    "explanation": "Kesme işareti özel adlara gelen çekim eklerini ayırır: “Ankara'ya”. Yapım ekleri ve onlardan sonra gelen ekler ayrılmaz: “Ankaralı, Ankaralılar”."
+  },
+  {
+    "id": "tr-7-6-08",
+    "unit": "tr-7-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Şair 1240 (?) yılında doğmuştur.” cümlesinde ayraç içindeki soru işareti hangi amaçla kullanılmıştır?",
+    "choices": [
+      "Okura soru sormak",
+      "Şaşkınlık bildirmek",
+      "Bilginin kesin olmadığını göstermek",
+      "Cümleyi yarıda bırakmak"
+    ],
+    "answer": 2,
+    "explanation": "Kesin olmayan, şüpheyle karşılanan bilgilerden sonra ayraç içinde soru işareti konur."
+  },
+  {
+    "id": "tr-7-7-01",
+    "unit": "tr-7-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi iş (kılış) fiilidir?",
+    "choices": [
+      "uyumak",
+      "büyümek",
+      "yazmak",
+      "sararmak"
+    ],
+    "answer": 2,
+    "explanation": "İş (kılış) fiilleri nesne alabilir: “Neyi yazmak?” sorusuna cevap verilebilir. “Uyumak” durum, “büyümek” ve “sararmak” ise oluş fiilidir."
+  },
+  {
+    "id": "tr-7-7-02",
+    "unit": "tr-7-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Yarın sabah erkenden yola çıkacağız.” cümlesindeki fiil hangi kiple çekimlenmiştir?",
+    "choices": [
+      "Şimdiki zaman",
+      "Geniş zaman",
+      "Görülen geçmiş zaman",
+      "Gelecek zaman"
+    ],
+    "answer": 3,
+    "explanation": "“Çık-acağ-ız” fiilindeki “-acak” eki gelecek zaman ekidir. İşin henüz yapılmadığını, ileride yapılacağını bildirir."
+  },
+  {
+    "id": "tr-7-7-03",
+    "unit": "tr-7-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "“Gelmiş” fiilindeki “-miş” eki duyulan (öğrenilen) geçmiş zaman ekidir.",
+    "answer": true,
+    "explanation": "“-mış, -miş, -muş, -müş” eki, işin başkasından duyulduğunu ya da sonradan fark edildiğini bildirir."
+  },
+  {
+    "id": "tr-7-7-04",
+    "unit": "tr-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi fiil dilek kiplerinden biriyle çekimlenmiştir?",
+    "choices": [
+      "geliyor",
+      "gelse",
+      "gelecek",
+      "geldi"
+    ],
+    "answer": 1,
+    "explanation": "“Gel-se” fiili dilek-şart kipindedir. Dilek kipleri gereklilik, istek, dilek-şart ve emirdir; ötekiler haber (bildirme) kipleridir."
+  },
+  {
+    "id": "tr-7-7-05",
+    "unit": "tr-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Okumalıyım” fiilinin kipi ve kişisi hangisidir?",
+    "choices": [
+      "İstek kipi, 1. tekil kişi",
+      "Gereklilik kipi, 1. çoğul kişi",
+      "Gereklilik kipi, 1. tekil kişi",
+      "Emir kipi, 2. tekil kişi"
+    ],
+    "answer": 2,
+    "explanation": "“Oku-malı-y-ım” fiilinde “-malı” gereklilik kipi eki, “-ım” ise 1. tekil kişi (ben) ekidir."
+  },
+  {
+    "id": "tr-7-7-06",
+    "unit": "tr-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi oluş fiilidir?",
+    "choices": [
+      "kırmak",
+      "sararmak",
+      "oturmak",
+      "okumak"
+    ],
+    "answer": 1,
+    "explanation": "Oluş fiilleri, öznenin isteği dışında zamanla kendiliğinden gerçekleşen değişimleri anlatır: sararmak, büyümek, paslanmak."
+  },
+  {
+    "id": "tr-7-7-07",
+    "unit": "tr-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Çocuk hızlı koştu.” cümlesinde “hızlı” sözcüğü hangi zarf türüdür?",
+    "choices": [
+      "Durum zarfı",
+      "Zaman zarfı",
+      "Yer-yön zarfı",
+      "Miktar zarfı"
+    ],
+    "answer": 0,
+    "explanation": "“Hızlı” sözcüğü fiile sorulan “Nasıl koştu?” sorusuna cevap verir. Fiilin nasıl yapıldığını bildiren zarflar durum zarfıdır."
+  },
+  {
+    "id": "tr-7-7-08",
+    "unit": "tr-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede ek fiil, bir ismi yüklem yapmıştır?",
+    "choices": [
+      "Çocuk hızlı koştu.",
+      "Yarın size geleceğim.",
+      "Hava bugün çok güzeldi.",
+      "Kitabı dün bitirdim."
+    ],
+    "answer": 2,
+    "explanation": "“Güzel-di” sözcüğünde “güzel” isim soylu bir sözcüktür; ek fiil (“idi”) onu yüklem yapmıştır."
+  },
+  {
+    "id": "tr-7-7-09",
+    "unit": "tr-7-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Geliyordu” fiili basit zamanlı bir fiildir.",
+    "answer": false,
+    "explanation": "“Gel-iyor-du” fiili hem şimdiki zaman ekini hem de ek fiili almıştır. İki kip eki taşıyan fiiller birleşik zamanlıdır."
+  },
+  {
+    "id": "tr-7-7-10",
+    "unit": "tr-7-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede fiilin kipinde anlam (zaman) kayması vardır?",
+    "choices": [
+      "Şu an kitap okuyorum.",
+      "Dün sinemaya gittik.",
+      "Haftaya sınav olacağız.",
+      "Yarın sabah Ankara'ya gidiyorum."
+    ],
+    "answer": 3,
+    "explanation": "“Gidiyorum” şimdiki zaman ekiyle çekimlenmiş ama gelecek zaman anlamında kullanılmıştır. Bir kipin başka bir kip yerine kullanılmasına anlam kayması denir."
+  },
+  {
+    "id": "tr-7-7-11",
+    "unit": "tr-7-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede yer-yön zarfı vardır?",
+    "choices": [
+      "Çocuk içeriye girdi.",
+      "İçerisi çok sıcak.",
+      "Çocuk içeri girdi.",
+      "İçeriden sesler geliyor."
+    ],
+    "answer": 2,
+    "explanation": "Yer-yön zarfları ek almadan fiilin yönünü bildirir. “İçeriye, içerisi, içeriden” sözcükleri ek aldığı için isim olarak kullanılmıştır."
+  }
+]

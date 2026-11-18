@@ -1,0 +1,404 @@
+[
+  {
+    "kind": "pairs",
+    "id": "tr-7-1-deyimler",
+    "unit": "tr-7-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{deyim}” deyiminin anlamı nedir?",
+        "answer": "anlamSik"
+      },
+      {
+        "prompt": "“{anlam}” anlamına gelen deyim hangisidir?",
+        "answer": "deyim"
+      }
+    ],
+    "statement": {
+      "text": "“{deyim}” deyimi “{anlam}” anlamına gelir.",
+      "swap": "anlam"
+    },
+    "explanation": "“{deyim}” deyimi “{anlam}” anlamında kullanılır.",
+    "items": [
+      {
+        "id": "kulagina-kupe",
+        "deyim": "Kulağına küpe olmak",
+        "anlam": "başından geçen bir olaydan ders almak",
+        "anlamSik": "Başından geçen bir olaydan ders almak"
+      },
+      {
+        "id": "gozden-dusmek",
+        "deyim": "Gözden düşmek",
+        "anlam": "değerini ve saygınlığını yitirmek",
+        "anlamSik": "Değerini ve saygınlığını yitirmek"
+      },
+      {
+        "id": "agzindan-bakla",
+        "deyim": "Ağzındaki baklayı çıkarmak",
+        "anlam": "sakladığı bir şeyi sonunda söylemek",
+        "anlamSik": "Sakladığı bir şeyi sonunda söylemek"
+      },
+      {
+        "id": "bin-dereden",
+        "deyim": "Bin dereden su getirmek",
+        "anlam": "bir işi yapmamak için türlü bahaneler bulmak",
+        "anlamSik": "Bir işi yapmamak için türlü bahaneler bulmak"
+      },
+      {
+        "id": "burnundan-solumak",
+        "deyim": "Burnundan solumak",
+        "anlam": "çok öfkelenmek",
+        "anlamSik": "Çok öfkelenmek"
+      },
+      {
+        "id": "dilinde-tuy",
+        "deyim": "Dilinde tüy bitmek",
+        "anlam": "aynı şeyi söylemekten usanmak",
+        "anlamSik": "Aynı şeyi söylemekten usanmak"
+      },
+      {
+        "id": "ici-icine",
+        "deyim": "İçi içine sığmamak",
+        "anlam": "sevincini, heyecanını gizleyememek",
+        "anlamSik": "Sevincini, heyecanını gizleyememek"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-7-4-soz-sanatlari",
+    "unit": "tr-7-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{ornek}” cümlesinde hangi söz sanatı vardır?",
+        "answer": "sanat"
+      }
+    ],
+    "statement": {
+      "text": "“{ornek}” cümlesinde {sanatKucuk} sanatı vardır.",
+      "swap": "sanatKucuk"
+    },
+    "explanation": "Bu cümlede {sanatKucuk} sanatı vardır.",
+    "items": [
+      {
+        "id": "cam",
+        "ornek": "Göl, ayna gibi pırıl pırıldı.",
+        "sanat": "Benzetme",
+        "sanatKucuk": "benzetme",
+        "not": "Göl, parlaklık yönünden aynaya benzetilmiştir."
+      },
+      {
+        "id": "yildiz",
+        "ornek": "Yıldızlar, gece boyunca bize göz kırptı.",
+        "sanat": "Kişileştirme",
+        "sanatKucuk": "kişileştirme",
+        "not": "Göz kırpmak insana özgüdür; yıldızlara insan özelliği verilmiştir."
+      },
+      {
+        "id": "dunya",
+        "ornek": "Bavulum o kadar ağırdı ki onu on kişi kaldıramazdı.",
+        "sanat": "Abartma",
+        "sanatKucuk": "abartma",
+        "not": "Bavulun ağırlığı olduğundan çok büyük gösterilmiştir."
+      },
+      {
+        "id": "papatya",
+        "ornek": "Papatya, ‘Beni koparma!’ diye yalvardı.",
+        "sanat": "Konuşturma",
+        "sanatKucuk": "konuşturma",
+        "not": "İnsan dışındaki bir varlık konuşturulmuştur."
+      },
+      {
+        "id": "aglarken",
+        "ornek": "Ağlarken gülüyor, gülerken ağlıyordu.",
+        "sanat": "Karşıtlık",
+        "sanatKucuk": "karşıtlık",
+        "not": "Ağlamak ve gülmek gibi karşıt kavramlar bir arada kullanılmıştır."
+      },
+      {
+        "id": "buz",
+        "ornek": "Elleri buz gibi olmuştu.",
+        "sanat": "Benzetme",
+        "sanatKucuk": "benzetme",
+        "not": "Eller, soğukluk yönünden buza benzetilmiştir."
+      },
+      {
+        "id": "yaz-kis",
+        "ornek": "Yazın ortasında içinde kış vardı.",
+        "sanat": "Karşıtlık",
+        "sanatKucuk": "karşıtlık",
+        "not": "Yaz ve kış gibi karşıt kavramlar bir arada kullanılmıştır."
+      },
+      {
+        "id": "kedi",
+        "ornek": "Kedi, ‘Bugün de balık yok mu?’ diye söylendi.",
+        "sanat": "Konuşturma",
+        "sanatKucuk": "konuşturma",
+        "not": "İnsan dışındaki bir varlık konuşturulmuştur."
+      }
+    ],
+    "distractors": {
+      "sanat": [
+        "Benzetme",
+        "Kişileştirme",
+        "Abartma",
+        "Konuşturma",
+        "Karşıtlık"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-7-4-metin-turleri",
+    "unit": "tr-7-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ozellik} metin türü hangisidir?",
+        "answer": "tur"
+      }
+    ],
+    "statement": {
+      "text": "{tur}, {ozellikKucuk} metin türüdür.",
+      "swap": "tur"
+    },
+    "explanation": "{tur}, {ozellikKucuk} metin türüdür.",
+    "items": [
+      {
+        "id": "deneme",
+        "tur": "Deneme",
+        "ozellik": "Yazarın görüşlerini kanıtlama kaygısı gütmeden içtenlikle anlattığı",
+        "ozellikKucuk": "yazarın görüşlerini kanıtlama kaygısı gütmeden içtenlikle anlattığı"
+      },
+      {
+        "id": "biyografi",
+        "tur": "Biyografi",
+        "ozellik": "Tanınmış bir kişinin hayatını başka birinin anlattığı",
+        "ozellikKucuk": "tanınmış bir kişinin hayatını başka birinin anlattığı"
+      },
+      {
+        "id": "gunluk",
+        "tur": "Günlük",
+        "ozellik": "Yaşananların günü gününe, tarih atılarak yazıldığı",
+        "ozellikKucuk": "yaşananların günü gününe, tarih atılarak yazıldığı"
+      },
+      {
+        "id": "gezi",
+        "tur": "Gezi yazısı",
+        "ozellik": "Yazarın gezip gördüğü yerleri izlenimleriyle anlattığı",
+        "ozellikKucuk": "yazarın gezip gördüğü yerleri izlenimleriyle anlattığı"
+      },
+      {
+        "id": "soylesi",
+        "tur": "Söyleşi",
+        "ozellik": "Yazarın okurla konuşuyormuş gibi sorular sorup cevapladığı",
+        "ozellikKucuk": "yazarın okurla konuşuyormuş gibi sorular sorup cevapladığı"
+      },
+      {
+        "id": "otobiyografi",
+        "tur": "Otobiyografi",
+        "ozellik": "Kişinin kendi hayatını kendisinin anlattığı",
+        "ozellikKucuk": "kişinin kendi hayatını kendisinin anlattığı"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-7-7-kipler",
+    "unit": "tr-7-7",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{fiil}” fiili hangi kiple çekimlenmiştir?",
+        "answer": "kip"
+      },
+      {
+        "prompt": "Hangi fiil {kipIle} çekimlenmiştir?",
+        "answer": "fiil"
+      }
+    ],
+    "statement": {
+      "text": "“{fiil}” fiili {kipIle} çekimlenmiştir.",
+      "swap": "kipIle"
+    },
+    "explanation": "“{fiil}” fiili “{ek}” ekini almıştır; bu ek {kipin} ekidir.",
+    "items": [
+      {
+        "id": "simdiki",
+        "fiil": "okuyorum",
+        "kip": "Şimdiki zaman",
+        "kipIle": "şimdiki zaman kipiyle",
+        "ek": "-yor",
+        "kipin": "şimdiki zamanın"
+      },
+      {
+        "id": "gorulen",
+        "fiil": "okudum",
+        "kip": "Görülen geçmiş zaman",
+        "kipIle": "görülen geçmiş zaman kipiyle",
+        "ek": "-du",
+        "kipin": "görülen geçmiş zamanın"
+      },
+      {
+        "id": "duyulan",
+        "fiil": "okumuşum",
+        "kip": "Duyulan geçmiş zaman",
+        "kipIle": "duyulan geçmiş zaman kipiyle",
+        "ek": "-muş",
+        "kipin": "duyulan geçmiş zamanın"
+      },
+      {
+        "id": "gelecek",
+        "fiil": "okuyacağım",
+        "kip": "Gelecek zaman",
+        "kipIle": "gelecek zaman kipiyle",
+        "ek": "-acak",
+        "kipin": "gelecek zamanın"
+      },
+      {
+        "id": "genis",
+        "fiil": "okurum",
+        "kip": "Geniş zaman",
+        "kipIle": "geniş zaman kipiyle",
+        "ek": "-r",
+        "kipin": "geniş zamanın"
+      },
+      {
+        "id": "gereklilik",
+        "fiil": "okumalıyım",
+        "kip": "Gereklilik kipi",
+        "kipIle": "gereklilik kipiyle",
+        "ek": "-malı",
+        "kipin": "gereklilik kipinin"
+      },
+      {
+        "id": "sart",
+        "fiil": "okusam",
+        "kip": "Dilek-şart kipi",
+        "kipIle": "dilek-şart kipiyle",
+        "ek": "-sa",
+        "kipin": "dilek-şart kipinin"
+      },
+      {
+        "id": "istek",
+        "fiil": "okuyayım",
+        "kip": "İstek kipi",
+        "kipIle": "istek kipiyle",
+        "ek": "-a",
+        "kipin": "istek kipinin"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-7-7-zarflar",
+    "unit": "tr-7-7",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{cumle}” cümlesindeki “{zarf}” sözcüğü hangi zarf türüdür?",
+        "answer": "tur"
+      }
+    ],
+    "statement": {
+      "text": "“{cumle}” cümlesindeki “{zarf}” sözcüğü {turKucuk}dır.",
+      "swap": "turKucuk"
+    },
+    "explanation": "“{zarf}” sözcüğü fiile sorulan “{soru}” sorusuna cevap verdiği için {turKucuk}dır.",
+    "items": [
+      {
+        "id": "bugun",
+        "cumle": "Bugün erken kalktım.",
+        "zarf": "bugün",
+        "tur": "Zaman zarfı",
+        "turKucuk": "zaman zarfı",
+        "soru": "Ne zaman?"
+      },
+      {
+        "id": "yavas",
+        "cumle": "Çocuk yavaş yürüyor.",
+        "zarf": "yavaş",
+        "tur": "Durum zarfı",
+        "turKucuk": "durum zarfı",
+        "soru": "Nasıl?"
+      },
+      {
+        "id": "iceri",
+        "cumle": "Kedi içeri girdi.",
+        "zarf": "içeri",
+        "tur": "Yer-yön zarfı",
+        "turKucuk": "yer-yön zarfı",
+        "soru": "Nereye?"
+      },
+      {
+        "id": "cok",
+        "cumle": "Maçta çok yoruldum.",
+        "zarf": "çok",
+        "tur": "Miktar zarfı",
+        "turKucuk": "miktar zarfı",
+        "soru": "Ne kadar?"
+      },
+      {
+        "id": "yarin",
+        "cumle": "Yarın döneceğiz.",
+        "zarf": "yarın",
+        "tur": "Zaman zarfı",
+        "turKucuk": "zaman zarfı",
+        "soru": "Ne zaman?"
+      },
+      {
+        "id": "kolayca",
+        "cumle": "Soruları kolayca çözdü.",
+        "zarf": "kolayca",
+        "tur": "Durum zarfı",
+        "turKucuk": "durum zarfı",
+        "soru": "Nasıl?"
+      },
+      {
+        "id": "yukari",
+        "cumle": "Kuşlar yukarı uçtu.",
+        "zarf": "yukarı",
+        "tur": "Yer-yön zarfı",
+        "turKucuk": "yer-yön zarfı",
+        "soru": "Nereye?"
+      },
+      {
+        "id": "biraz",
+        "cumle": "Biraz dinlenelim.",
+        "zarf": "biraz",
+        "tur": "Miktar zarfı",
+        "turKucuk": "miktar zarfı",
+        "soru": "Ne kadar?"
+      }
+    ],
+    "distractors": {
+      "tur": [
+        "Soru zarfı"
+      ]
+    }
+  },
+  {
+    "kind": "list",
+    "id": "tr-7-7-haber-kipleri",
+    "unit": "tr-7-7",
+    "difficulty": 2,
+    "positive": "Aşağıdaki fiillerden hangisi haber (bildirme) kipiyle çekimlenmiştir?",
+    "negative": "Aşağıdaki fiillerden hangisi haber (bildirme) kipiyle çekimlenmemiştir?",
+    "statement": "“{item}” fiili haber (bildirme) kipiyle çekimlenmiştir.",
+    "explanation": "Haber kipleri zaman bildirir: {members}. Gereklilik, istek, dilek-şart ve emir kipleri ise zaman değil, dilek ve tasarı bildiren dilek kipleridir.",
+    "members": [
+      "geldi",
+      "gelmiş",
+      "geliyor",
+      "gelecek",
+      "gelir"
+    ],
+    "nonMembers": [
+      "gelse",
+      "gele",
+      "gelmeli",
+      "gelsin"
+    ]
+  }
+]

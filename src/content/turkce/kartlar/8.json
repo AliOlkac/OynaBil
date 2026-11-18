@@ -1,0 +1,491 @@
+[
+  {
+    "kind": "pairs",
+    "id": "tr-8-1-deyimler",
+    "unit": "tr-8-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{deyim}” deyiminin anlamı nedir?",
+        "answer": "anlamSik"
+      },
+      {
+        "prompt": "“{anlam}” anlamına gelen deyim hangisidir?",
+        "answer": "deyim"
+      }
+    ],
+    "statement": {
+      "text": "“{deyim}” deyimi “{anlam}” anlamına gelir.",
+      "swap": "anlam"
+    },
+    "explanation": "“{deyim}” deyimi “{anlam}” anlamında kullanılır.",
+    "items": [
+      {
+        "id": "ates-puskurmek",
+        "deyim": "Ateş püskürmek",
+        "anlam": "çok öfkelenmek",
+        "anlamSik": "Çok öfkelenmek"
+      },
+      {
+        "id": "kara-sular",
+        "deyim": "Ayağına kara sular inmek",
+        "anlam": "ayakta çok bekleyip yorulmak",
+        "anlamSik": "Ayakta çok bekleyip yorulmak"
+      },
+      {
+        "id": "disini-tirnagina",
+        "deyim": "Dişini tırnağına takmak",
+        "anlam": "her güçlüğe katlanarak bütün gücüyle çalışmak",
+        "anlamSik": "Her güçlüğe katlanarak bütün gücüyle çalışmak"
+      },
+      {
+        "id": "goz-kulak",
+        "deyim": "Göz kulak olmak",
+        "anlam": "koruyup gözetmek",
+        "anlamSik": "Koruyup gözetmek"
+      },
+      {
+        "id": "sirra-kadem",
+        "deyim": "Sırra kadem basmak",
+        "anlam": "ortadan kaybolmak",
+        "anlamSik": "Ortadan kaybolmak"
+      },
+      {
+        "id": "yuregi-agzina",
+        "deyim": "Yüreği ağzına gelmek",
+        "anlam": "birdenbire çok korkmak",
+        "anlamSik": "Birdenbire çok korkmak"
+      },
+      {
+        "id": "cam-devirmek",
+        "deyim": "Çam devirmek",
+        "anlam": "karşısındakine dokunacak bir sözü istemeden söylemek",
+        "anlamSik": "Karşısındakine dokunacak bir sözü istemeden söylemek"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-8-3-soz-sanatlari",
+    "unit": "tr-8-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{ornek}” cümlesinde hangi söz sanatı vardır?",
+        "answer": "sanat"
+      }
+    ],
+    "statement": {
+      "text": "“{ornek}” cümlesinde {sanatKucuk} sanatı vardır.",
+      "swap": "sanatKucuk"
+    },
+    "explanation": "Bu cümlede {sanatKucuk} sanatı vardır.",
+    "items": [
+      {
+        "id": "sac",
+        "ornek": "Saçları ipek gibi yumuşaktı.",
+        "sanat": "Benzetme",
+        "sanatKucuk": "benzetme",
+        "not": "Saçlar, yumuşaklık yönünden ipeğe benzetilmiştir."
+      },
+      {
+        "id": "deniz",
+        "ornek": "Deniz, kıyıdaki çocuklara kollarını açtı.",
+        "sanat": "Kişileştirme",
+        "sanatKucuk": "kişileştirme",
+        "not": "Kollarını açmak insana özgüdür; denize insan özelliği verilmiştir."
+      },
+      {
+        "id": "yuz-yil",
+        "ornek": "Seni bir asırdır bekliyorum.",
+        "sanat": "Abartma",
+        "sanatKucuk": "abartma",
+        "not": "Bekleme süresi olduğundan çok uzun gösterilmiştir."
+      },
+      {
+        "id": "aci-tatli",
+        "ornek": "Bu şehrin acısı da tatlıdır bana.",
+        "sanat": "Karşıtlık",
+        "sanatKucuk": "karşıtlık",
+        "not": "Acı ve tatlı gibi karşıt kavramlar bir arada kullanılmıştır."
+      },
+      {
+        "id": "dere",
+        "ornek": "Dere, ‘Beni kirletmeyin!’ diye haykırdı.",
+        "sanat": "Konuşturma",
+        "sanatKucuk": "konuşturma",
+        "not": "İnsan dışındaki bir varlık konuşturulmuştur."
+      },
+      {
+        "id": "cocuk",
+        "ornek": "Çocuk, ceylan gibi sekerek yürüyordu.",
+        "sanat": "Benzetme",
+        "sanatKucuk": "benzetme",
+        "not": "Çocuk, yürüyüşü yönünden ceylana benzetilmiştir."
+      },
+      {
+        "id": "sokak",
+        "ornek": "Sokak lambaları yorgun gözlerle bizi izliyordu.",
+        "sanat": "Kişileştirme",
+        "sanatKucuk": "kişileştirme",
+        "not": "Yorulmak ve izlemek insana özgüdür; lambalara insan özelliği verilmiştir."
+      },
+      {
+        "id": "kapi",
+        "ornek": "Gülerek girdiği kapıdan ağlayarak çıktı.",
+        "sanat": "Karşıtlık",
+        "sanatKucuk": "karşıtlık",
+        "not": "Gülmek ve ağlamak, girmek ve çıkmak gibi karşıt kavramlar bir arada kullanılmıştır."
+      }
+    ],
+    "distractors": {
+      "sanat": [
+        "Benzetme",
+        "Kişileştirme",
+        "Abartma",
+        "Konuşturma",
+        "Karşıtlık"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-8-2-anlatim-bicimleri",
+    "unit": "tr-8-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ozellik} anlatım biçimi hangisidir?",
+        "answer": "tur"
+      }
+    ],
+    "statement": {
+      "text": "{tur}, {ozellikKucuk} anlatım biçimidir.",
+      "swap": "tur"
+    },
+    "explanation": "{tur}, {ozellikKucuk} anlatım biçimidir.",
+    "items": [
+      {
+        "id": "aciklama",
+        "tur": "Açıklama",
+        "ozellik": "Okura bir konuda bilgi vermek amacıyla kullanılan",
+        "ozellikKucuk": "okura bir konuda bilgi vermek amacıyla kullanılan"
+      },
+      {
+        "id": "betimleme",
+        "tur": "Betimleme",
+        "ozellik": "Varlıkları sözcüklerle resmeder gibi göz önünde canlandıran",
+        "ozellikKucuk": "varlıkları sözcüklerle resmeder gibi göz önünde canlandıran"
+      },
+      {
+        "id": "tartisma",
+        "tur": "Tartışma",
+        "ozellik": "Bir görüşü çürütüp okurun düşüncesini değiştirmeyi amaçlayan",
+        "ozellikKucuk": "bir görüşü çürütüp okurun düşüncesini değiştirmeyi amaçlayan"
+      },
+      {
+        "id": "oykuleme",
+        "tur": "Öyküleme",
+        "ozellik": "Olayları yer, zaman ve kişilere bağlı olarak oluş sırasıyla anlatan",
+        "ozellikKucuk": "olayları yer, zaman ve kişilere bağlı olarak oluş sırasıyla anlatan"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-8-2-dusunceyi-gelistirme",
+    "unit": "tr-8-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ozellik} düşünceyi geliştirme yolu hangisidir?",
+        "answer": "yol"
+      }
+    ],
+    "statement": {
+      "text": "{yol}, {ozellikKucuk} düşünceyi geliştirme yoludur.",
+      "swap": "yol"
+    },
+    "explanation": "{yol}, {ozellikKucuk} düşünceyi geliştirme yoludur.",
+    "items": [
+      {
+        "id": "tanimlama",
+        "yol": "Tanımlama",
+        "ozellik": "Bir kavramın ne olduğunu açıklayan, “Bu nedir?” sorusuna cevap veren",
+        "ozellikKucuk": "bir kavramın ne olduğunu açıklayan, “Bu nedir?” sorusuna cevap veren"
+      },
+      {
+        "id": "karsilastirma",
+        "yol": "Karşılaştırma",
+        "ozellik": "İki varlık ya da kavramın benzer ve farklı yönlerini ortaya koyan",
+        "ozellikKucuk": "iki varlık ya da kavramın benzer ve farklı yönlerini ortaya koyan"
+      },
+      {
+        "id": "tanik",
+        "yol": "Tanık gösterme",
+        "ozellik": "Alanında tanınmış bir kişinin sözünü aktararak düşünceyi destekleyen",
+        "ozellikKucuk": "alanında tanınmış bir kişinin sözünü aktararak düşünceyi destekleyen"
+      },
+      {
+        "id": "ornekleme",
+        "yol": "Örnekleme",
+        "ozellik": "Soyut bir düşünceyi somut örneklerle anlaşılır kılan",
+        "ozellikKucuk": "soyut bir düşünceyi somut örneklerle anlaşılır kılan"
+      },
+      {
+        "id": "sayisal",
+        "yol": "Sayısal verilerden yararlanma",
+        "ozellik": "Düşünceyi rakamlar ve istatistiklerle destekleyen",
+        "ozellikKucuk": "düşünceyi rakamlar ve istatistiklerle destekleyen"
+      },
+      {
+        "id": "benzetme",
+        "yol": "Benzetme",
+        "ozellik": "Bir kavramı, ortak yönü bulunan başka bir kavrama benzeterek anlatan",
+        "ozellikKucuk": "bir kavramı, ortak yönü bulunan başka bir kavrama benzeterek anlatan"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-8-5-fiilimsi-turleri",
+    "unit": "tr-8-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{cumle}” cümlesindeki “{sozcuk}” sözcüğü hangi türdendir?",
+        "answer": "tur"
+      }
+    ],
+    "statement": {
+      "text": "“{cumle}” cümlesindeki “{sozcuk}” sözcüğü {turKucuk}dir.",
+      "swap": "turKucuk"
+    },
+    "explanation": "“{sozcuk}” sözcüğü “{ek}” ekini almış bir {turKucuk}dir.",
+    "items": [
+      {
+        "id": "yuzmeyi",
+        "cumle": "Yüzmeyi çok severim.",
+        "sozcuk": "yüzmeyi",
+        "tur": "İsim-fiil",
+        "turKucuk": "isim-fiil",
+        "ek": "-me",
+        "not": "İsim-fiil ekleri “-ma, -ış, -mak” ekleridir."
+      },
+      {
+        "id": "gelen",
+        "cumle": "Gelen misafirleri karşıladık.",
+        "sozcuk": "gelen",
+        "tur": "Sıfat-fiil",
+        "turKucuk": "sıfat-fiil",
+        "ek": "-en",
+        "not": "Sıfat-fiiller isimleri niteler."
+      },
+      {
+        "id": "dogunca",
+        "cumle": "Güneş doğunca yola çıktık.",
+        "sozcuk": "doğunca",
+        "tur": "Zarf-fiil",
+        "turKucuk": "zarf-fiil",
+        "ek": "-unca",
+        "not": "Zarf-fiiller yüklemi zaman ya da durum yönünden etkiler."
+      },
+      {
+        "id": "okumak",
+        "cumle": "Okumak ufkumuzu açar.",
+        "sozcuk": "okumak",
+        "tur": "İsim-fiil",
+        "turKucuk": "isim-fiil",
+        "ek": "-mak",
+        "not": "İsim-fiil ekleri “-ma, -ış, -mak” ekleridir."
+      },
+      {
+        "id": "yapilacak",
+        "cumle": "Yapılacak işleri sıraladı.",
+        "sozcuk": "yapılacak",
+        "tur": "Sıfat-fiil",
+        "turKucuk": "sıfat-fiil",
+        "ek": "-acak",
+        "not": "Sıfat-fiiller isimleri niteler."
+      },
+      {
+        "id": "kosarak",
+        "cumle": "Koşarak yanıma geldi.",
+        "sozcuk": "koşarak",
+        "tur": "Zarf-fiil",
+        "turKucuk": "zarf-fiil",
+        "ek": "-arak",
+        "not": "Zarf-fiiller yüklemi zaman ya da durum yönünden etkiler."
+      },
+      {
+        "id": "gulusu",
+        "cumle": "Bu gülüşü hiç unutmam.",
+        "sozcuk": "gülüşü",
+        "tur": "İsim-fiil",
+        "turKucuk": "isim-fiil",
+        "ek": "-üş",
+        "not": "İsim-fiil ekleri “-ma, -ış, -mak” ekleridir."
+      },
+      {
+        "id": "kirilmis",
+        "cumle": "Kırılmış vazoyu yapıştırdı.",
+        "sozcuk": "kırılmış",
+        "tur": "Sıfat-fiil",
+        "turKucuk": "sıfat-fiil",
+        "ek": "-mış",
+        "not": "Sıfat-fiiller isimleri niteler."
+      },
+      {
+        "id": "calisirken",
+        "cumle": "Ders çalışırken müzik dinlemem.",
+        "sozcuk": "çalışırken",
+        "tur": "Zarf-fiil",
+        "turKucuk": "zarf-fiil",
+        "ek": "-ken",
+        "not": "Zarf-fiiller yüklemi zaman ya da durum yönünden etkiler."
+      }
+    ],
+    "distractors": {
+      "tur": [
+        "Çekimli fiil"
+      ]
+    }
+  },
+  {
+    "kind": "list",
+    "id": "tr-8-5-sifat-fiiller",
+    "unit": "tr-8-5",
+    "difficulty": 2,
+    "positive": "Aşağıdaki söz gruplarının hangisinde sıfat-fiil vardır?",
+    "negative": "Aşağıdaki söz gruplarının hangisinde sıfat-fiil yoktur?",
+    "statement": "“{item}” söz grubunda sıfat-fiil vardır.",
+    "explanation": "Sıfat-fiiller “-an, -ası, -mez, -ar, -dik, -ecek, -miş” eklerini alır ve isimleri niteler: {members}. “-mak, -ma, -ış” isim-fiil; “-arak, -ınca, -ıp” ise zarf-fiil ekleridir.",
+    "members": [
+      "koşan çocuk",
+      "okunacak kitap",
+      "tanıdığım kişi",
+      "yıkanmış bardak",
+      "tükenmez umut"
+    ],
+    "nonMembers": [
+      "gülerek anlatmak",
+      "kitap okumak",
+      "eve gelince",
+      "yüzmeyi sevmek",
+      "koşup gelmek"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-8-6-oge-sorulari",
+    "unit": "tr-8-6",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "Yükleme sorulan “{soru}” soruları cümlenin hangi ögesini buldurur?",
+        "answer": "oge"
+      }
+    ],
+    "statement": {
+      "text": "Yükleme sorulan “{soru}” soruları {ogeyi} buldurur.",
+      "swap": "ogeyi"
+    },
+    "explanation": "Yükleme sorulan “{soru}” soruları {ogeyi} buldurur.",
+    "items": [
+      {
+        "id": "ozne",
+        "soru": "yapan kim, olan ne",
+        "oge": "Özne",
+        "ogeyi": "özneyi",
+        "not": "Özne, yüklemin bildirdiği işi yapan ya da oluşa konu olan ögedir."
+      },
+      {
+        "id": "belirtili-nesne",
+        "soru": "neyi, kimi",
+        "oge": "Belirtili nesne",
+        "ogeyi": "belirtili nesneyi",
+        "not": "Nesne, öznenin yaptığı işten etkilenen ögedir."
+      },
+      {
+        "id": "yer-tamlayicisi",
+        "soru": "nereye, nerede, nereden",
+        "oge": "Yer tamlayıcısı",
+        "ogeyi": "yer tamlayıcısını",
+        "not": "Yer tamlayıcısı (dolaylı tümleç) yönelme, bulunma ve ayrılma hâl eklerini alır."
+      },
+      {
+        "id": "zarf-tamlayicisi",
+        "soru": "nasıl, ne zaman, niçin",
+        "oge": "Zarf tamlayıcısı",
+        "ogeyi": "zarf tamlayıcısını",
+        "not": "Zarf tamlayıcısı yüklemi durum, zaman, neden gibi yönlerden tamamlar."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-8-7-cati",
+    "unit": "tr-8-7",
+    "difficulty": 3,
+    "questions": [
+      {
+        "prompt": "“{cumle}” cümlesinin yüklemi özne-yüklem ilişkisine göre hangi çatıdadır?",
+        "answer": "cati"
+      }
+    ],
+    "statement": {
+      "text": "“{cumle}” cümlesinin yüklemi {catiKucuk} çatılıdır.",
+      "swap": "catiKucuk"
+    },
+    "explanation": "“{cumle}” cümlesinin yüklemi {catiKucuk} çatılıdır.",
+    "items": [
+      {
+        "id": "aciklandi",
+        "cumle": "Sınav sonuçları dün açıklandı.",
+        "cati": "Edilgen",
+        "catiKucuk": "edilgen",
+        "not": "İşi yapan belli değildir; “sınav sonuçları” sözde öznedir."
+      },
+      {
+        "id": "giyindi",
+        "cumle": "Dedem sabah erkenden giyindi.",
+        "cati": "Dönüşlü",
+        "catiKucuk": "dönüşlü",
+        "not": "Özne işi kendi üzerinde yapmıştır."
+      },
+      {
+        "id": "bakisti",
+        "cumle": "İki arkadaş uzun uzun bakıştı.",
+        "cati": "İşteş",
+        "catiKucuk": "işteş",
+        "not": "İş, özneler tarafından karşılıklı yapılmıştır."
+      },
+      {
+        "id": "cozuldu",
+        "cumle": "Bütün sorular çözüldü.",
+        "cati": "Edilgen",
+        "catiKucuk": "edilgen",
+        "not": "İşi yapan belli değildir; “bütün sorular” sözde öznedir."
+      },
+      {
+        "id": "suslendi",
+        "cumle": "Kardeşim bayram için süslendi.",
+        "cati": "Dönüşlü",
+        "catiKucuk": "dönüşlü",
+        "not": "Özne işi kendi üzerinde yapmıştır."
+      },
+      {
+        "id": "ucustu",
+        "cumle": "Kuşlar hep birlikte uçuştu.",
+        "cati": "İşteş",
+        "catiKucuk": "işteş",
+        "not": "İş, özneler tarafından birlikte yapılmıştır."
+      }
+    ],
+    "distractors": {
+      "cati": [
+        "Ettirgen"
+      ]
+    }
+  }
+]

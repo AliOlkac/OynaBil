@@ -35,6 +35,10 @@ export const CONTENT_FILES: Record<string, Partial<Record<Grade, GradeFiles>>> =
     2: { questions: () => import("./turkce/sorular/2.json"), cards: () => import("./turkce/kartlar/2.json") },
     3: { questions: () => import("./turkce/sorular/3.json"), cards: () => import("./turkce/kartlar/3.json") },
     4: { questions: () => import("./turkce/sorular/4.json"), cards: () => import("./turkce/kartlar/4.json") },
+    5: { questions: () => import("./turkce/sorular/5.json"), cards: () => import("./turkce/kartlar/5.json") },
+    6: { questions: () => import("./turkce/sorular/6.json"), cards: () => import("./turkce/kartlar/6.json") },
+    7: { questions: () => import("./turkce/sorular/7.json"), cards: () => import("./turkce/kartlar/7.json") },
+    8: { questions: () => import("./turkce/sorular/8.json"), cards: () => import("./turkce/kartlar/8.json"), passages: () => import("./turkce/sorular/8-lgs.json") },
   },
   matematik: {
     1: { questions: () => import("./matematik/sorular/1.json"), cards: () => import("./matematik/kartlar/1.json") },

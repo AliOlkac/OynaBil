@@ -1,0 +1,407 @@
+[
+  {
+    "id": "tr-8-2-lgs-01",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Bir dili öğrenmek yalnızca sözcük ezberlemek değildir. Her dil, onu konuşan insanların dünyaya nasıl baktığını da taşır. Bazı dillerde kar için pek çok ayrı sözcük bulunurken bazılarında akrabalık adları şaşırtıcı ölçüde ayrıntılıdır. Yeni bir dil öğrenen kişi, farkında olmadan o toplumun neye önem verdiğini, neye güldüğünü, neyi ayıp saydığını da öğrenir. Bu yüzden her yeni dil, insana yeni bir pencere açar.",
+    "prompt": "Bu metnin ana düşüncesi aşağıdakilerden hangisidir?",
+    "choices": [
+      "Bir dili öğrenmenin en iyi yolu sözcük ezberlemektir.",
+      "Dil öğrenmek, o dili konuşan toplumun kültürünü ve bakış açısını da tanımaktır.",
+      "Bütün dillerde akrabalık adları ayrıntılı biçimde yer alır.",
+      "Yabancı dil öğrenmek küçük yaşlarda daha kolaydır."
+    ],
+    "answer": 1,
+    "explanation": "Metnin bütününde dilin bir toplumun bakışını taşıdığı, dil öğrenenin o toplumu da tanıdığı anlatılıyor. Öteki seçenekler metinde ya hiç geçmiyor ya da metinle çelişiyor.",
+    "tags": [
+      "LGS",
+      "ana düşünce"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-02",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Anadolu'nun birçok köyünde imece geleneği hâlâ yaşar. Bir ailenin harmanı kalkacaksa, evi yapılacaksa ya da düğünü varsa komşular çağrılmayı beklemeden toplanır. Kimse yaptığı iş için para istemez; çünkü herkes bilir ki sıra bir gün kendisine de gelecektir. İş bitince hep birlikte sofraya oturulur, türküler söylenir. Böylece hem iş kolaylaşır hem de komşuluk bağları güçlenir.",
+    "prompt": "Bu metinde imeceyle ilgili aşağıdakilerden hangisine değinilmemiştir?",
+    "choices": [
+      "Hangi işler için yapıldığına",
+      "Karşılığında ücret alınmadığına",
+      "İlk kez hangi yörede ortaya çıktığına",
+      "İnsanlar arasındaki bağı güçlendirdiğine"
+    ],
+    "answer": 2,
+    "explanation": "Metinde imecenin harman, ev yapımı ve düğün için yapıldığı, para istenmediği ve komşuluğu güçlendirdiği söyleniyor. Geleneğin ilk nerede doğduğuna dair bilgi yoktur.",
+    "tags": [
+      "LGS",
+      "yardımcı düşünce"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-03",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Şehrin ortasındaki eski çınar, yüz yıldan fazladır aynı yerde duruyor. Altından tramvaylar, at arabaları, otomobiller geçti. Gövdesine yaslanıp gazete okuyan dedeler, dallarına salıncak kuran çocuklar oldu. Çevresindeki binalar yıkıldı, yenileri yapıldı; dükkânların tabelaları defalarca değişti. O ise her bahar yeniden yeşerdi. Bugün meydandan geçenlerin çoğu başını kaldırıp bakmıyor bile; oysa bu şehrin en eski sakini, olup biteni sessizce izlemeyi sürdürüyor.",
+    "prompt": "Bu metne en uygun başlık aşağıdakilerden hangisidir?",
+    "choices": [
+      "Şehrin Sessiz Tanığı",
+      "Çınar Ağacının Bakımı",
+      "Eski Ulaşım Araçları",
+      "Meydandaki Dükkânlar"
+    ],
+    "answer": 0,
+    "explanation": "Metinde çınarın yüz yılı aşkın süredir şehirdeki değişimi sessizce izlediği anlatılıyor. Başlık, metnin konusunu ve ana düşüncesini yansıtmalıdır.",
+    "tags": [
+      "LGS",
+      "başlık"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-04",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Arılar, kovana döndüklerinde buldukları çiçeklerin yerini arkadaşlarına bir tür dansla anlatır. Dansın yönü, besinin Güneş'e göre hangi tarafta olduğunu; süresi ise kovana uzaklığını bildirir. Besin kaynağı ne kadar zenginse dans o kadar coşkulu olur. Diğer arılar bu hareketleri izleyerek daha önce hiç gitmedikleri bir çiçek tarlasını kolayca bulabilir.",
+    "prompt": "Bu metinden aşağıdakilerden hangisi çıkarılamaz?",
+    "choices": [
+      "Arılar birbirleriyle hareketler yoluyla iletişim kurar.",
+      "Dansın süresi, besinin uzaklığı hakkında bilgi verir.",
+      "Dansı izleyen arılar, besinin yerini kendileri görmeden öğrenir.",
+      "Arılar yalnızca kovana yakın çiçeklerden besin toplar."
+    ],
+    "answer": 3,
+    "explanation": "Metinde dansın süresinin uzaklığı bildirdiği söyleniyor; demek ki arılar farklı uzaklıklardaki kaynaklara gider. Yalnızca yakın çiçeklere gittikleri sonucu çıkarılamaz.",
+    "tags": [
+      "LGS",
+      "çıkarım"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-05",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Asya, Bora, Cem, Defne ve Ege bir koşu yarışına katılmış ve yarışı farklı sıralarda bitirmiştir. Yarışla ilgili şunlar bilinmektedir: Defne yarışı birinci bitirmiştir. Bora, Cem'den hemen sonra bitirmiştir. Ege sonuncu olmamıştır. Asya, Ege'den önce bitirmiştir.",
+    "prompt": "Bu bilgilere göre yarışı üçüncü sırada bitiren kimdir?",
+    "choices": [
+      "Asya",
+      "Bora",
+      "Cem",
+      "Ege"
+    ],
+    "answer": 3,
+    "explanation": "Cem ve Bora art arda geldiği ve Ege sonuncu olmadığı için Cem ile Bora ancak dördüncü ve beşinci olabilir. Asya Ege'den önce olduğuna göre sıralama Defne, Asya, Ege, Cem, Bora biçimindedir.",
+    "tags": [
+      "LGS",
+      "sözel mantık"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-06",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir okulda pazartesiden cumaya kadar her gün farklı bir kulüp çalışması yapılmaktadır: satranç, resim, müzik, drama ve robotik. Resim çalışması çarşamba günüdür. Satranç, müzikten hemen sonraki gün yapılır. Müzik çalışması pazartesi günü değildir. Robotik, dramadan önceki bir gündedir.",
+    "prompt": "Bu bilgilere göre salı günü hangi kulüp çalışması yapılmaktadır?",
+    "choices": [
+      "Satranç",
+      "Müzik",
+      "Drama",
+      "Robotik"
+    ],
+    "answer": 2,
+    "explanation": "Çarşamba resim olduğu ve müzik pazartesi olmadığı için müzik perşembe, satranç cuma günüdür. Kalan iki günde robotik dramadan önce geldiğine göre pazartesi robotik, salı drama yapılır.",
+    "tags": [
+      "LGS",
+      "sözel mantık"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-07",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Kaan, Lale, Mert ve Nil; roman, şiir, öykü ve deneme türlerinden birer kitap okumaktadır. Her biri farklı bir tür seçmiştir. Kaan şiir de deneme de okumamaktadır. Lale'nin okuduğu kitap öykü değildir. Mert deneme okumaktadır. Nil roman okumamaktadır.",
+    "prompt": "Kaan'ın roman okuduğu bilindiğine göre Nil hangi türde kitap okumaktadır?",
+    "choices": [
+      "Roman",
+      "Şiir",
+      "Öykü",
+      "Deneme"
+    ],
+    "answer": 2,
+    "explanation": "Kaan roman, Mert deneme okuyorsa Lale ile Nil'e şiir ve öykü kalır. Lale öykü okumadığına göre şiir okur; öykü ise Nil'e kalır.",
+    "tags": [
+      "LGS",
+      "sözel mantık"
+    ],
+    "keepOrder": true
+  },
+  {
+    "id": "tr-8-2-lgs-08",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Dört katlı bir apartmanın her katında bir aile oturmaktadır: Aksoy, Bulut, Çelik ve Demir. Çelik ailesi, Bulut ailesinin hemen üst katındadır. Aksoy ailesi en üst katta oturmamaktadır. Demir ailesi, Aksoy ailesinden daha alt bir katta oturmaktadır.",
+    "prompt": "Bu bilgilere göre aşağıdakilerden hangisi doğrudur?",
+    "choices": [
+      "Bulut ailesi birinci katta oturmaktadır.",
+      "Aksoy ailesi ikinci katta oturmaktadır.",
+      "Demir ailesi üçüncü katta oturmaktadır.",
+      "Çelik ailesi ikinci katta oturmaktadır."
+    ],
+    "answer": 1,
+    "explanation": "Bulut ve Çelik art arda iki kattadır. Demir, Aksoy'un altında ve Aksoy en üstte olmadığından bu koşullar yalnızca şu dizilişle sağlanır: 1. kat Demir, 2. kat Aksoy, 3. kat Bulut, 4. kat Çelik.",
+    "tags": [
+      "LGS",
+      "sözel mantık"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-09",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Kasabaya vardığımızda güneş batmak üzereydi. Taş döşeli dar sokağın iki yanında, cumbaları birbirine değecek kadar yakın ahşap evler sıralanıyordu. Pencerelerin önündeki sardunyalar kırmızının her tonundaydı. Sokağın sonunda, kubbesi kurşun rengine çalan küçük bir cami ile yanında yosun tutmuş bir çeşme vardı. Çeşmenin yalağından taşan su, taşların arasında ince bir çizgi hâlinde aşağıya süzülüyordu.",
+    "prompt": "Bu metnin anlatımında aşağıdakilerden hangisi ağır basmaktadır?",
+    "choices": [
+      "Tartışma",
+      "Açıklama",
+      "Betimleme",
+      "Öyküleme"
+    ],
+    "answer": 2,
+    "explanation": "Yazar sokağı, evleri, çiçekleri ve çeşmeyi renkleri ve ayrıntılarıyla okurun gözünde canlandırıyor. Varlıkları sözcüklerle resmetmeye betimleme denir.",
+    "tags": [
+      "LGS",
+      "anlatım biçimi"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-10",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Roman ile öykü çoğu zaman birbirine karıştırılır. Roman, olayları geniş bir zaman dilimine yayar ve pek çok kişiyi ayrıntılarıyla tanıtır; öykü ise hayatın kısa bir kesitini birkaç kişiyle anlatır. Romancı kahramanının çocukluğundan yaşlılığına uzanabilir, öykücü tek bir akşamüstüyle yetinir. Romanda yan olaylar ana olayı besler; öyküde ise her cümle tek bir etkiye hizmet eder.",
+    "prompt": "Bu metinde aşağıdaki düşünceyi geliştirme yollarından hangisi kullanılmıştır?",
+    "choices": [
+      "Karşılaştırma",
+      "Tanık gösterme",
+      "Sayısal verilerden yararlanma",
+      "Benzetme"
+    ],
+    "answer": 0,
+    "explanation": "Metinde roman ile öykü; zaman, kişi sayısı ve olay örgüsü yönünden kıyaslanmıştır. İki kavramın farklı ya da benzer yönlerini ortaya koymak karşılaştırmadır.",
+    "tags": [
+      "LGS",
+      "düşünceyi geliştirme yolları"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-11",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Hata yapmaktan korkan çocuk, denemekten de vazgeçer. Oysa bisiklete binmeyi düşmeden, yüzmeyi su yutmadan öğrenen yoktur. Laboratuvarda yüzlerce başarısız deneyin ardından gelen buluşlar, yanlışın doğruya giden yolun bir parçası olduğunu gösterir. Çocuğa her yanlışında kızmak yerine, o yanlıştan ne öğrendiğini sormak gerekir. Çünkü hatasından ders çıkarabilen insan, aynı yere bir daha takılmaz.",
+    "prompt": "Bu metinde asıl anlatılmak istenen aşağıdakilerden hangisidir?",
+    "choices": [
+      "Çocuklar hata yaptıklarında mutlaka uyarılmalıdır.",
+      "Bilim insanları deneylerinde hiç hata yapmaz.",
+      "Bisiklete binmek, yüzmekten daha kolay öğrenilir.",
+      "Hatalar, öğrenmenin doğal ve gerekli bir parçası olarak görülmelidir."
+    ],
+    "answer": 3,
+    "explanation": "Yazar bisiklet, yüzme ve deney örnekleriyle yanlışın öğrenme yolunun parçası olduğunu savunuyor. Ana düşünce, örneklerin hepsini kapsayan yargıdır.",
+    "tags": [
+      "LGS",
+      "ana düşünce"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-12",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Eskiden bir kitabı almak için haftalarca harçlık biriktirir, sonra onu defalarca okurdum. Sayfalarının kokusunu, kapağındaki resmi bugün bile hatırlarım. Şimdi gençlerin elinin altında binlerce kitap var; tek tuşla istedikleri esere ulaşabiliyorlar. Ne var ki bu bolluk, sabırla okuma alışkanlığını beraberinde getirmedi. Birkaç sayfa okunup yarım bırakılan kitaplar, sanal raflarda birikip duruyor.",
+    "prompt": "Yazar bu metinde aşağıdakilerin hangisinden yakınmaktadır?",
+    "choices": [
+      "Kitap fiyatlarının eskiye göre artmasından",
+      "Kitaplara ulaşmak kolaylaştığı hâlde kitapların sabırla okunmamasından",
+      "Gençlerin istedikleri kitaplara ulaşamamasından",
+      "Basılı kitapların artık üretilmemesinden"
+    ],
+    "answer": 1,
+    "explanation": "“Ne var ki” sözünden sonra yazar asıl şikâyetini dile getiriyor: kitap bolluğu sabırla okuma alışkanlığı kazandırmamış, kitaplar yarım bırakılmaktadır.",
+    "tags": [
+      "LGS",
+      "yardımcı düşünce"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-13",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Bir yazarın ilk kitabını okurken onu ustalarla kıyaslamak haksızlıktır. İlk kitap, bir sesin kendini arayışıdır; pürüzleri, taklitleri, aşırılıkları olur. Eleştirmenin görevi bu pürüzleri sayıp dökmek değil, o sesin içindeki özgün tınıyı fark edip göstermektir. Kusur bulmak kolaydır; zor olan, henüz olgunlaşmamış bir yetenekteki cevheri görebilmektir. Bugün usta dediğimiz pek çok yazar, vaktiyle ilk kitabındaki ışığı gören birkaç dikkatli okur sayesinde yazmayı sürdürmüştür.",
+    "prompt": "Bu metne göre eleştirmenden beklenen aşağıdakilerden hangisidir?",
+    "choices": [
+      "İlk kitapları usta yazarların eserleriyle karşılaştırması",
+      "Yalnızca tanınmış yazarların kitaplarını değerlendirmesi",
+      "Genç yazarın eksiklerinden çok özgün yanlarını ortaya çıkarması",
+      "Kusurlu bulduğu kitapları okura önermemesi"
+    ],
+    "answer": 2,
+    "explanation": "Metne göre eleştirmenin görevi pürüzleri saymak değil, “özgün tınıyı fark edip göstermek”tir. Ustalarla kıyaslamak ise yazarın haksızlık saydığı bir tutumdur.",
+    "tags": [
+      "LGS",
+      "çıkarım"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-14",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Kâşgarlı Mahmud, 11. yüzyılda Türk boylarını dolaşarak sözcükler, deyimler, atasözleri ve şiirler derledi. Bu derlemelerden yararlanarak Araplara Türkçe öğretmek amacıyla Dîvânu Lugâti't-Türk'ü yazdı. Eserde Türkçe sözcüklerin Arapça karşılıkları verilmiş, anlamları örnek cümlelerle açıklanmıştır. Kitapta ayrıca Türklerin yaşadığı bölgeleri gösteren bir harita da yer alır.",
+    "prompt": "Bu metinde Dîvânu Lugâti't-Türk ile ilgili aşağıdaki sorulardan hangisinin cevabı yoktur?",
+    "choices": [
+      "Hangi amaçla yazılmıştır?",
+      "İçinde hangi tür dil malzemeleri bulunur?",
+      "Hangi yüzyılda yazılmıştır?",
+      "Yazılması kaç yıl sürmüştür?"
+    ],
+    "answer": 3,
+    "explanation": "Metinde eserin 11. yüzyılda, Araplara Türkçe öğretmek için yazıldığı ve sözcük, deyim, atasözü, şiir içerdiği söyleniyor. Yazımının ne kadar sürdüğü belirtilmemiştir.",
+    "tags": [
+      "LGS",
+      "yardımcı düşünce"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-15",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Kimileri, çocukların okuyacağı kitapların mutlaka bir öğüt vermesi gerektiğini savunur. Bu görüşe katılmıyorum. Çocuk, parmak sallayan bir kitabı hemen tanır ve ondan uzaklaşır. İyi çocuk kitabı ders vermez; merak uyandırır, güldürür, düşündürür. Değerler, okurun kahramanla birlikte yaşadığı serüvenin içinden kendiliğinden süzülür. Öğüt yığını hâline gelmiş bir metin ise çocuğu okumaktan soğutmaktan başka bir işe yaramaz.",
+    "prompt": "Yazar bu metinde aşağıdaki görüşlerden hangisine karşı çıkmaktadır?",
+    "choices": [
+      "Çocuk kitapları okurda merak uyandırmalıdır.",
+      "Çocuk kitapları doğrudan öğüt vermelidir.",
+      "Değerler, olayların içinde sezdirilmelidir.",
+      "Çocuklar öğüt veren kitaplardan uzaklaşır."
+    ],
+    "answer": 1,
+    "explanation": "Yazar ilk cümlede bu görüşü aktarıp “Bu görüşe katılmıyorum.” diyerek açıkça karşı çıkıyor. Öteki seçenekler yazarın kendi savunduğu düşüncelerdir.",
+    "tags": [
+      "LGS",
+      "tartışma",
+      "yazarın tutumu"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-16",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Uzmanlık, bir alanda derinleşmek demektir; ancak derinleşmek, çevreye kör olmayı gerektirmez. Yalnızca kendi alanının kitaplarını okuyan bir mühendis, köprünün hesabını kusursuz yapar ama o köprünün şehre ne katacağını göremeyebilir. Şiir okuyan bir hekim, hastasını dinlemeyi daha iyi bilir. Tarih bilen bir mimar, yapısını geçmişle konuşturur. Demek ki ----.",
+    "prompt": "Bu metinde boş bırakılan yere düşüncenin akışına göre aşağıdakilerden hangisi getirilmelidir?",
+    "choices": [
+      "herkes yalnızca kendi alanındaki kitapları okumalıdır",
+      "mühendislik en zor mesleklerden biridir",
+      "uzmanlaşmak günümüzde önemini yitirmiştir",
+      "farklı alanlara ilgi duymak, insanın kendi işini de zenginleştirir"
+    ],
+    "answer": 3,
+    "explanation": "Şiir okuyan hekim ve tarih bilen mimar örnekleri, başka alanlarla ilgilenmenin kişinin işine katkı sağladığını gösteriyor. Sonuç cümlesi bu örnekleri toparlamalıdır.",
+    "tags": [
+      "LGS",
+      "paragraf tamamlama"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-17",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Selim Usta, dükkânına getirilen eski saati uzun uzun inceledi. Sahibi, “Bununla uğraşmaya değmez, yenisini alırım.” dedi. Usta başını iki yana salladı, saati tezgâhın en aydınlık köşesine koydu. Üç gün boyunca dişlileri tek tek temizledi, kırık yayı kendi eliyle yeniden yaptı. Saat tıkırdamaya başladığında müşteriden aldığı ücret, harcadığı emeğin yarısını bile karşılamıyordu. Yine de o akşam dükkânı kapatırken yüzünde bir gülümseme vardı.",
+    "prompt": "Bu metne göre Selim Usta ile ilgili aşağıdakilerden hangisi söylenebilir?",
+    "choices": [
+      "İşini kazanç için değil, severek ve özenle yapmaktadır.",
+      "Müşterilerinin isteklerini önemsememektedir.",
+      "Yeni saatleri eskilerinden üstün bulmaktadır.",
+      "Onarım işlerini çıraklarına yaptırmaktadır."
+    ],
+    "answer": 0,
+    "explanation": "Usta, emeğinin karşılığını almadığı hâlde saati üç gün uğraşarak onarmış ve bundan mutluluk duymuştur. Bu, işini severek yaptığını gösterir.",
+    "tags": [
+      "LGS",
+      "çıkarım",
+      "öyküleme"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-18",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir okulun kütüphanesinde yapılan sayıma göre eylül ayında 120, ekimde 180, kasımda 240 kitap ödünç alınmıştır. Kasım ayında ödünç alınan kitapların yarısı romandır. Okul yönetimi, artışın nedenini ekim başında başlatılan “Her Sınıfa Bir Okuma Saati” uygulamasına bağlamaktadır.",
+    "prompt": "Bu metne göre aşağıdakilerden hangisi söylenemez?",
+    "choices": [
+      "Ödünç alınan kitap sayısı her ay bir öncekine göre 60 artmıştır.",
+      "Kasım ayında 120 roman ödünç alınmıştır.",
+      "Okuma saati uygulaması eylül ayında başlamıştır.",
+      "Üç ayda toplam 540 kitap ödünç alınmıştır."
+    ],
+    "answer": 2,
+    "explanation": "Uygulama ekim başında başlamıştır. Öteki bilgiler doğrudur: 180 − 120 = 60 ve 240 − 180 = 60; 240'ın yarısı 120; 120 + 180 + 240 = 540.",
+    "tags": [
+      "LGS",
+      "sayısal veri",
+      "çıkarım"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-19",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Otogarda otobüsün kalkmasını beklerken annemin camın ardından el sallayışını izledim. Valizimde kışlık kazaklar, bir kavanoz reçel ve çocukluk fotoğraflarım vardı. Otobüs hareket edince şehrin ışıkları birer birer geride kaldı. Yeni okulumu, yeni arkadaşlarımı düşünmeye çalıştım ama aklım hep mutfaktaki çay kokusunda, bahçedeki erik ağacındaydı. Daha ilk kilometrede, döneceğim günü hesaplamaya başlamıştım.",
+    "prompt": "Bu metinde anlatıcıya hâkim olan duygu aşağıdakilerden hangisidir?",
+    "choices": [
+      "Öfke",
+      "Kıskançlık",
+      "Özlem",
+      "Pişmanlık"
+    ],
+    "answer": 2,
+    "explanation": "Anlatıcı evinden yeni ayrılmıştır; aklı evin kokusunda ve bahçesindedir, dönüş gününü hesaplamaktadır. Bunlar özlem duygusunu gösterir.",
+    "tags": [
+      "LGS",
+      "duygu"
+    ]
+  },
+  {
+    "id": "tr-8-2-lgs-20",
+    "unit": "tr-8-2",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "(I) Çay, dünyada en çok tüketilen içeceklerden biridir. (II) Yaprakları toplandıktan sonra soldurulur, kıvrılır ve kurutulur. (III) Bu işlemlerin biçimi ve süresi, çayın siyah mı yeşil mi olacağını belirler. (IV) Türkiye'de çay tarımı Doğu Karadeniz kıyılarında yapılır. (V) Bölgenin bol yağışlı ve ılıman iklimi, çay bitkisinin yetişmesi için elverişlidir. (VI) Bu nedenle yamaçlar boydan boya çay bahçeleriyle kaplıdır.",
+    "prompt": "Bu metin iki paragrafa ayrılmak istense ikinci paragraf numaralanmış cümlelerin hangisiyle başlar?",
+    "choices": [
+      "III",
+      "IV",
+      "V",
+      "VI"
+    ],
+    "answer": 1,
+    "explanation": "İlk üç cümle çayın tüketimini ve işlenmesini anlatır. IV. cümleyle birlikte konu Türkiye'de çayın yetiştirildiği bölgeye geçer; yeni paragraf burada başlar.",
+    "tags": [
+      "LGS",
+      "paragraf yapısı"
+    ],
+    "keepOrder": true
+  }
+]

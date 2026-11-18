@@ -1,0 +1,804 @@
+[
+  {
+    "id": "tr-8-1-01",
+    "unit": "tr-8-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“İnce” sözcüğü hangi cümlede mecaz anlamda kullanılmıştır?",
+    "choices": [
+      "İnce bir kitap aldım.",
+      "Bize karşı çok ince davrandı.",
+      "İnce ipi hemen kopardı.",
+      "İnce dallar rüzgârda kırıldı."
+    ],
+    "answer": 1,
+    "explanation": "“İnce davranmak”, nazik ve düşünceli davranmak demektir. Sözcük kalınlıkla ilgili gerçek anlamından uzaklaşmıştır."
+  },
+  {
+    "id": "tr-8-1-02",
+    "unit": "tr-8-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi cümlede neden-sonuç ilişkisi vardır?",
+    "choices": [
+      "Kitap almak üzere çarşıya çıktı.",
+      "Erken yatarsan dinç kalkarsın.",
+      "Trafik sıkıştığından toplantıya geç kaldı.",
+      "Hem çalışıyor hem okuyor."
+    ],
+    "answer": 2,
+    "explanation": "Geç kalmanın nedeni trafiğin sıkışmasıdır. Öteki cümlelerde sırasıyla amaç, koşul ve birlikte yapılan işler anlatılmıştır."
+  },
+  {
+    "id": "tr-8-1-03",
+    "unit": "tr-8-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "“Kitabın dili sade ve akıcıdır.” cümlesi eserin üslubuyla ilgilidir.",
+    "answer": true,
+    "explanation": "Dil ve anlatım özellikleri eserin nasıl yazıldığını, yani üslubunu gösterir. Eserde ne anlatıldığı ise içerikle ilgilidir."
+  },
+  {
+    "id": "tr-8-1-04",
+    "unit": "tr-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Gözden düşmek” deyiminin anlamı hangisidir?",
+    "choices": [
+      "Görme yeteneğini kaybetmek",
+      "Ortadan kaybolmak",
+      "Çok yorulmak",
+      "Eski değerini ve saygınlığını yitirmek"
+    ],
+    "answer": 3,
+    "explanation": "Gözden düşen kişi ya da şey, eskiden gördüğü ilgiyi ve değeri artık görmez."
+  },
+  {
+    "id": "tr-8-1-05",
+    "unit": "tr-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede azımsama anlamı vardır?",
+    "choices": [
+      "Salon tıklım tıklım doluydu.",
+      "Topu topu üç kişi geldi.",
+      "Herkes zamanında geldi.",
+      "Toplantıya otuz kişi katıldı."
+    ],
+    "answer": 1,
+    "explanation": "“Topu topu” sözü, gelenlerin sayısının beklenenden az bulunduğunu gösterir. Bir şeyi az bulmaya azımsama denir."
+  },
+  {
+    "id": "tr-8-1-06",
+    "unit": "tr-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Annem artık kahve içmiyor.” cümlesinden hangi yargı kesin olarak çıkarılır?",
+    "choices": [
+      "Annem eskiden kahve içiyordu.",
+      "Annem kahveyi hiç sevmez.",
+      "Annem artık çay içiyor.",
+      "Annem hastalandığı için kahveyi bıraktı."
+    ],
+    "answer": 0,
+    "explanation": "“Artık” sözcüğü, bir durumun değiştiğini sezdirir. Cümlede açıkça söylenmeyen bu anlama örtülü anlam denir."
+  },
+  {
+    "id": "tr-8-1-07",
+    "unit": "tr-8-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Sınava çalışmadığı hâlde yüksek not aldı.” cümlesinde koşul-sonuç ilişkisi vardır.",
+    "answer": false,
+    "explanation": "Cümlede bir şart değil, beklenenin tersine gerçekleşen bir durum anlatılmıştır. Koşul cümlelerinde bir işin olması başka bir işe bağlanır."
+  },
+  {
+    "id": "tr-8-1-08",
+    "unit": "tr-8-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Başarı, hazırlık ile fırsatın buluştuğu yerdir.” cümlesine anlamca en yakın yargı hangisidir?",
+    "choices": [
+      "Fırsatlar herkese eşit dağıtılır.",
+      "Başarı için şanslı olmak yeterlidir.",
+      "Hazırlıklı olan, fırsatı değerlendirip başarır.",
+      "Hazırlık yapmak zaman kaybıdır."
+    ],
+    "answer": 2,
+    "explanation": "Cümleye göre başarı için hem hazırlıklı olmak hem de fırsatın çıkması gerekir. Fırsatı ancak hazırlıklı olan değerlendirebilir."
+  },
+  {
+    "id": "tr-8-2-01",
+    "unit": "tr-8-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Müzeler, geçmişle bugün arasında kurulan köprülerdir. Bir müzeyi gezen kişi, atalarının nasıl yaşadığını görür.” Bu metinde müzelerin hangi işlevi vurgulanmıştır?",
+    "choices": [
+      "Sanatçıları tanıtması",
+      "Geçmişi bugüne taşıması",
+      "Turist çekmesi",
+      "Eski eserleri onarması"
+    ],
+    "answer": 1,
+    "explanation": "Müzeler köprüye benzetilmiş, geçmişteki yaşamı bugünün insanına gösterdiği anlatılmıştır."
+  },
+  {
+    "id": "tr-8-2-02",
+    "unit": "tr-8-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Meyve olgunlaşmadan koparılırsa tadı olmaz. İnsan da emeğinin karşılığını almak için beklemeyi bilmelidir.” Bu metnin ana düşüncesi hangisidir?",
+    "choices": [
+      "Meyveler mevsiminde yenmelidir.",
+      "Emek vermeden kazanılmaz.",
+      "Sabırlı olan, emeğinin karşılığını alır.",
+      "Beklemek insanı yorar."
+    ],
+    "answer": 2,
+    "explanation": "Yazar, olgunlaşmayı bekleyen meyve örneğiyle sabretmenin önemini anlatmaktadır."
+  },
+  {
+    "id": "tr-8-2-03",
+    "unit": "tr-8-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "“Yazar, eserinde köy hayatını anlatmış. Kahramanlarını gerçek hayattan seçmiş.” Bu metinde eserin içeriği hakkında bilgi verilmiştir.",
+    "answer": true,
+    "explanation": "Eserde neyin anlatıldığı ve kahramanların kimler olduğu içerikle ilgilidir. Dil ve anlatım özellikleri ise üslupla ilgilidir."
+  },
+  {
+    "id": "tr-8-2-04",
+    "unit": "tr-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Bana göre iyi kitap, bittiğinde okuru aynı yerde bırakmayan kitaptır. Okur, son sayfada ilk sayfadaki kişi olmamalıdır.” Yazara göre iyi kitabın özelliği hangisidir?",
+    "choices": [
+      "Kısa olması",
+      "Kolay okunması",
+      "Çok satması",
+      "Okuru değiştirmesi"
+    ],
+    "answer": 3,
+    "explanation": "Yazar, iyi kitabın okuru değiştirmesi, ona yeni bir şeyler katması gerektiğini söylüyor."
+  },
+  {
+    "id": "tr-8-2-05",
+    "unit": "tr-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Kimileri sanatın yalnızca toplum için olduğunu savunur. Oysa sanatçı önce kendi iç dünyasını anlatır; dayatma sanatı öldürür.” Bu metinde hangi anlatım biçimi kullanılmıştır?",
+    "choices": [
+      "Tartışma",
+      "Betimleme",
+      "Öyküleme",
+      "Açıklama"
+    ],
+    "answer": 0,
+    "explanation": "Yazar bir görüşü aktarıp “oysa” diyerek ona karşı çıkıyor ve kendi görüşünü savunuyor. Bu, tartışmacı anlatımın özelliğidir."
+  },
+  {
+    "id": "tr-8-2-06",
+    "unit": "tr-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Atatürk, ‘Hayatta en hakiki mürşit ilimdir.’ der. Demek ki yolumuzu bilim aydınlatmalıdır.” Bu metinde hangi düşünceyi geliştirme yolu kullanılmıştır?",
+    "choices": [
+      "Karşılaştırma",
+      "Tanık gösterme",
+      "Tanımlama",
+      "Sayısal verilerden yararlanma"
+    ],
+    "answer": 1,
+    "explanation": "Yazar düşüncesini güçlendirmek için tanınmış bir kişinin sözünü aktarmıştır. Buna tanık gösterme denir."
+  },
+  {
+    "id": "tr-8-2-07",
+    "unit": "tr-8-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Göl kıyısındaki ev beyaz badanalı ve mavi pencereliydi. Bahçesinde iki yaşlı ceviz ağacı vardı.” Bu metinde öyküleyici anlatım ağır basar.",
+    "answer": false,
+    "explanation": "Metinde olay anlatılmıyor, bir evin görünüşü ayrıntılarıyla veriliyor. Bu nedenle betimleyici anlatım kullanılmıştır."
+  },
+  {
+    "id": "tr-8-2-08",
+    "unit": "tr-8-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Eleştirmen, bir yapıtı değerlendirirken yazarın kişiliğini değil, yapıtın kendisini ölçüt almalıdır.” Bu cümleye göre eleştirmen nasıl olmalıdır?",
+    "choices": [
+      "Nesnel davranmalıdır.",
+      "Yazarı yakından tanımalıdır.",
+      "Duygularıyla hareket etmelidir.",
+      "Yalnızca ünlü yazarları okumalıdır."
+    ],
+    "answer": 0,
+    "explanation": "Yazarın kişiliğine göre değil, yapıta bakarak karar vermek tarafsız, yani nesnel davranmaktır."
+  },
+  {
+    "id": "tr-8-3-01",
+    "unit": "tr-8-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Gözlerin kömür gibi kara.” cümlesinde hangi söz sanatı vardır?",
+    "choices": [
+      "Kişileştirme",
+      "Abartma",
+      "Benzetme",
+      "Karşıtlık (tezat)"
+    ],
+    "answer": 2,
+    "explanation": "Gözler, karalık yönünden kömüre benzetilmiştir. “Gibi” edatı benzetmeyi kuran sözcüktür."
+  },
+  {
+    "id": "tr-8-3-02",
+    "unit": "tr-8-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Ağaçlar sonbaharda soyunup uykuya daldı.” cümlesinde hangi söz sanatı vardır?",
+    "choices": [
+      "Kişileştirme",
+      "Benzetme",
+      "Konuşturma",
+      "Karşıtlık (tezat)"
+    ],
+    "answer": 0,
+    "explanation": "Soyunmak ve uykuya dalmak insana özgüdür. Ağaçlara insan özelliği verilerek kişileştirme yapılmıştır."
+  },
+  {
+    "id": "tr-8-3-03",
+    "unit": "tr-8-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Makale, bir düşünceyi kanıtlarla savunan, nesnel anlatımlı bir bilgilendirici metin türüdür.",
+    "answer": true,
+    "explanation": "Makalede yazar ileri sürdüğü görüşü belgelerle, kanıtlarla destekler. Dili ciddi ve nesneldir."
+  },
+  {
+    "id": "tr-8-3-04",
+    "unit": "tr-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Gündüzüm gece oldu sensiz.” cümlesinde hangi söz sanatı vardır?",
+    "choices": [
+      "Konuşturma",
+      "Karşıtlık (tezat)",
+      "Kişileştirme",
+      "Abartma"
+    ],
+    "answer": 1,
+    "explanation": "“Gündüz” ve “gece” karşıt kavramlardır. Karşıt kavramların bir arada kullanılmasına karşıtlık (tezat) denir."
+  },
+  {
+    "id": "tr-8-3-05",
+    "unit": "tr-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Gazete ve dergilerde güncel bir konunun kısa ve kişisel bir bakışla, kanıtlama kaygısı gütmeden işlendiği tür hangisidir?",
+    "choices": [
+      "Makale",
+      "Destan",
+      "Roman",
+      "Fıkra (köşe yazısı)"
+    ],
+    "answer": 3,
+    "explanation": "Fıkra, güncel olayların yazarın kişisel görüşüyle yorumlandığı kısa gazete yazısıdır. Makalede ise düşünce kanıtlarla savunulur."
+  },
+  {
+    "id": "tr-8-3-06",
+    "unit": "tr-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir milletin hayatını derinden etkileyen savaş, göç gibi olayları olağanüstü ögelerle anlatan uzun, manzum tür hangisidir?",
+    "choices": [
+      "Masal",
+      "Destan",
+      "Fabl",
+      "Hikâye"
+    ],
+    "answer": 1,
+    "explanation": "Destanlar toplumu derinden etkileyen olaylardan doğar; kahramanları olağanüstü güçlere sahiptir ve millî özellikler taşır."
+  },
+  {
+    "id": "tr-8-3-07",
+    "unit": "tr-8-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Bir of çeksem karşıki dağlar yıkılır.” dizesinde abartma (mübalağa) sanatı vardır.",
+    "answer": true,
+    "explanation": "Bir iç çekişle dağların yıkılması olanaksızdır. Duygunun büyüklüğü abartılarak anlatılmıştır."
+  },
+  {
+    "id": "tr-8-3-08",
+    "unit": "tr-8-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede benzetme ve abartma birlikte kullanılmıştır?",
+    "choices": [
+      "Rüzgâr kulağıma eski bir şarkı fısıldadı.",
+      "Kışın ortasında yüreğinde bahar vardı.",
+      "Mektubunu bin kere okudum, her satırı ateş gibi yaktı.",
+      "Bulutlar pamuk tarlasına benziyordu."
+    ],
+    "answer": 2,
+    "explanation": "“Bin kere okudum” sözünde abartma, “ateş gibi yaktı” sözünde benzetme vardır."
+  },
+  {
+    "id": "tr-8-4-01",
+    "unit": "tr-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi cümlede yazım yanlışı vardır?",
+    "choices": [
+      "Türk Dil Kurumu 1932'de kuruldu.",
+      "Yarın Ahmet beyle görüşeceğim.",
+      "Van Gölü'nü gördün mü?",
+      "Dedem Erzurumlu bir öğretmendi."
+    ],
+    "answer": 1,
+    "explanation": "Kişi adlarından sonra gelen unvanlar büyük harfle başlar ve ek kesmeyle ayrılır: “Ahmet Bey'le”."
+  },
+  {
+    "id": "tr-8-4-02",
+    "unit": "tr-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Eve geldim( ) çantamı bıraktım( ) hemen ödevime başladım.” cümlesinde ayraçlı yerlere hangi işaret konmalıdır?",
+    "choices": [
+      "Noktalı virgül",
+      "İki nokta",
+      "Virgül",
+      "Üç nokta"
+    ],
+    "answer": 2,
+    "explanation": "Sıralı cümleleri birbirinden ayırmak için virgül kullanılır."
+  },
+  {
+    "id": "tr-8-4-03",
+    "unit": "tr-8-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "“Hiçbir, birkaç, birçok” sözcükleri bitişik yazılır.",
+    "answer": true,
+    "explanation": "Bu sözcükler kalıplaşmış birleşik sözcüklerdir ve bitişik yazılır. “Her şey, bir şey, pek çok” ise ayrı yazılır."
+  },
+  {
+    "id": "tr-8-4-04",
+    "unit": "tr-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede “ki”nin yazımı yanlıştır?",
+    "choices": [
+      "Sendeki kalem kimin?",
+      "Yarınki sınava hazır mısın?",
+      "Baktım ki kimse yok.",
+      "Öyle bir güldüki herkes baktı."
+    ],
+    "answer": 3,
+    "explanation": "Bağlaç olan “ki” ayrı yazılır: “Öyle bir güldü ki…” “Sendeki, yarınki” sözcüklerindeki “-ki” ise ektir ve bitişik yazılır."
+  },
+  {
+    "id": "tr-8-4-05",
+    "unit": "tr-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“At ölür, meydan kalır( ) yiğit ölür, şan kalır.” atasözünde ayraçlı yere hangi işaret konmalıdır?",
+    "choices": [
+      "Virgül",
+      "Noktalı virgül",
+      "İki nokta",
+      "Nokta"
+    ],
+    "answer": 1,
+    "explanation": "Ögeleri arasında virgül bulunan sıralı cümleleri birbirinden ayırmak için noktalı virgül kullanılır."
+  },
+  {
+    "id": "tr-8-4-06",
+    "unit": "tr-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi sözcüğün yazımı yanlıştır?",
+    "choices": [
+      "kılavuz",
+      "sürpriz",
+      "makina",
+      "tişört"
+    ],
+    "answer": 2,
+    "explanation": "Sözcüğün doğru yazımı “makine” biçimindedir. “Kılavuz, sürpriz, tişört” sözcükleri doğru yazılmıştır."
+  },
+  {
+    "id": "tr-8-4-07",
+    "unit": "tr-8-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Tırnak içinde aktarılan cümlenin sonundaki nokta, tırnak işaretinin dışına konur.",
+    "answer": false,
+    "explanation": "Alıntının sonundaki nokta, soru işareti ya da ünlem tırnak içinde kalır: Öğretmen, “Yarın sınav var.” dedi."
+  },
+  {
+    "id": "tr-8-4-08",
+    "unit": "tr-8-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede noktalama yanlışı vardır?",
+    "choices": [
+      "Atatürk, “Ne mutlu Türk'üm diyene!” demiştir.",
+      "Evet, bu konuda haklısın.",
+      "Bana ne zaman, geleceğini söylemedi.",
+      "Tiyatro, sinema, müzik… Hepsi ilgimi çeker."
+    ],
+    "answer": 2,
+    "explanation": "“Ne zaman geleceğini” söz grubu bir bütündür; araya virgül konması anlamı ve yapıyı bozar."
+  },
+  {
+    "id": "tr-8-5-01",
+    "unit": "tr-8-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi cümlede fiilimsi vardır?",
+    "choices": [
+      "Çocuk hızlı koştu.",
+      "Koşan çocuk yere düştü.",
+      "Çocuk okula gitti.",
+      "Çocuk çok yoruldu."
+    ],
+    "answer": 1,
+    "explanation": "“Koş-an” sözcüğü fiilden türemiş ama kip ve kişi eki almamış, “çocuk” ismini nitelemiştir. Böyle sözcüklere fiilimsi denir."
+  },
+  {
+    "id": "tr-8-5-02",
+    "unit": "tr-8-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Gülmek insana iyi gelir.” cümlesindeki “gülmek” sözcüğü hangi fiilimsi türüdür?",
+    "choices": [
+      "İsim-fiil",
+      "Sıfat-fiil",
+      "Zarf-fiil",
+      "Bağ-fiil"
+    ],
+    "answer": 0,
+    "explanation": "İsim-fiiller “-ma, -ış, -mak” ekleriyle türetilir ve cümlede isim gibi kullanılır. Zarf-fiil ile bağ-fiil aynı türün iki adıdır."
+  },
+  {
+    "id": "tr-8-5-03",
+    "unit": "tr-8-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Sıfat-fiil ekleri “-an, -ası, -mez, -ar, -dik, -ecek, -miş” ekleridir.",
+    "answer": true,
+    "explanation": "Bu ekleri alan fiilimsiler isimleri niteler: “gelen misafir, tanıdık yüz, gelecek yıl, okunmuş kitap”."
+  },
+  {
+    "id": "tr-8-5-04",
+    "unit": "tr-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Eve gelince seni ararım.” cümlesindeki “gelince” sözcüğü hangi fiilimsi türüdür?",
+    "choices": [
+      "İsim-fiil",
+      "Sıfat-fiil",
+      "Zarf-fiil",
+      "Çekimli fiil"
+    ],
+    "answer": 2,
+    "explanation": "“-ınca” ekiyle türetilen “gelince” sözcüğü yüklemi zaman yönünden etkiler. Fiilleri zaman ve durum yönünden niteleyen fiilimsiler zarf-fiildir."
+  },
+  {
+    "id": "tr-8-5-05",
+    "unit": "tr-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede “-mak / -mek” eki alan sözcük fiilimsi değildir?",
+    "choices": [
+      "Seni görmek istiyorum.",
+      "Okumak en büyük zevkim.",
+      "Çakmak masanın üstünde duruyor.",
+      "Yüzmek sağlığa yararlıdır."
+    ],
+    "answer": 2,
+    "explanation": "“Çakmak” burada bir eşyanın adıdır. Fiilimsi eki aldığı hâlde fiil anlamını yitirip kalıcı ad olan sözcükler fiilimsi sayılmaz."
+  },
+  {
+    "id": "tr-8-5-06",
+    "unit": "tr-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlede sıfat-fiil vardır?",
+    "choices": [
+      "Çamaşırları yıkayıp astı.",
+      "Çamaşır yıkamayı sevmez.",
+      "Çamaşırlar dün yıkandı.",
+      "Yıkanmış çamaşırları astı."
+    ],
+    "answer": 3,
+    "explanation": "“Yıkan-mış” sözcüğü “çamaşırlar” ismini nitelediği için sıfat-fiildir. “Yıkayıp” zarf-fiil, “yıkamayı” isim-fiil, “yıkandı” çekimli fiildir."
+  },
+  {
+    "id": "tr-8-5-07",
+    "unit": "tr-8-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Fiilimsiler, fiiller gibi kip ve kişi ekleriyle çekimlenir.",
+    "answer": false,
+    "explanation": "Fiilimsiler fiilden türer ama kip ve kişi eki almaz; cümlede isim, sıfat ya da zarf görevinde kullanılır."
+  },
+  {
+    "id": "tr-8-5-08",
+    "unit": "tr-8-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Okula giderken düşen kalemini aramaya başladı.” cümlesinde kaç fiilimsi vardır?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "explanation": "“Giderken” zarf-fiil, “düşen” sıfat-fiil, “aramaya” isim-fiildir. “Başladı” ise çekimli fiildir.",
+    "keepOrder": true
+  },
+  {
+    "id": "tr-8-5-09",
+    "unit": "tr-8-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangi cümlede sıfat-fiil, nitelediği isim düştüğü için isim gibi kullanılmıştır?",
+    "choices": [
+      "Çalışan insan kazanır.",
+      "Çalışarak kazandı.",
+      "Çalışan kazanır.",
+      "Çalışmak güzeldir."
+    ],
+    "answer": 2,
+    "explanation": "“Çalışan insan” söz grubundaki “insan” ismi düşmüş, “çalışan” sözcüğü onun yerini tutmuştur. Buna adlaşmış sıfat-fiil denir."
+  },
+  {
+    "id": "tr-8-6-01",
+    "unit": "tr-8-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Kuşlar sabah erkenden ötüyordu.” cümlesinin yüklemi hangisidir?",
+    "choices": [
+      "kuşlar",
+      "sabah",
+      "erkenden",
+      "ötüyordu"
+    ],
+    "answer": 3,
+    "explanation": "Yüklem, cümlede işi, oluşu ya da durumu bildiren temel ögedir ve çoğunlukla cümlenin sonunda bulunur."
+  },
+  {
+    "id": "tr-8-6-02",
+    "unit": "tr-8-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "“Ali kitabı masaya koydu.” cümlesinde belirtili nesne hangisidir?",
+    "choices": [
+      "Ali",
+      "kitabı",
+      "masaya",
+      "koydu"
+    ],
+    "answer": 1,
+    "explanation": "Yükleme sorulan “Neyi koydu?” sorusunun cevabı “kitabı” sözcüğüdür. Belirtme hâl eki (-ı, -i, -u, -ü) alan nesne belirtili nesnedir."
+  },
+  {
+    "id": "tr-8-6-03",
+    "unit": "tr-8-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Yüklemi isim soylu bir sözcük olan cümlelere isim cümlesi denir.",
+    "answer": true,
+    "explanation": "“Bugün hava çok güzel.” cümlesinin yüklemi “güzel” sözcüğüdür ve isim soyludur. Yüklemi çekimli fiil olan cümleler ise fiil cümlesidir."
+  },
+  {
+    "id": "tr-8-6-04",
+    "unit": "tr-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi devrik bir cümledir?",
+    "choices": [
+      "Dün geceki konser çok güzeldi.",
+      "Konsere birlikte gittik.",
+      "Çok güzeldi dün geceki konser.",
+      "Bilet almayı unutmuşum."
+    ],
+    "answer": 2,
+    "explanation": "Yüklemi sonda olmayan cümleler devriktir. Bu cümlede yüklem (“çok güzeldi”) başta yer almıştır."
+  },
+  {
+    "id": "tr-8-6-05",
+    "unit": "tr-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Kitap okuyan çocuk başarılı olur.” cümlesi yapısına göre hangi türdendir?",
+    "choices": [
+      "Basit cümle",
+      "Sıralı cümle",
+      "Bağlı cümle",
+      "Birleşik cümle"
+    ],
+    "answer": 3,
+    "explanation": "Cümlede “okuyan” fiilimsisi bir yan cümle kurmuştur. Bir temel cümle ile en az bir yan cümleden oluşan cümleler birleşik cümledir."
+  },
+  {
+    "id": "tr-8-6-06",
+    "unit": "tr-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi sıralı cümledir?",
+    "choices": [
+      "Kapıyı açtı ve içeri girdi.",
+      "Kapıyı açtı, içeri girdi.",
+      "Kapıyı açınca içeri girdi.",
+      "Kapıyı yavaşça açtı."
+    ],
+    "answer": 1,
+    "explanation": "Sıralı cümlede birden fazla yüklem bulunur ve cümleler virgül ya da noktalı virgülle bağlanır. Bağlaçla bağlanırsa bağlı cümle olur."
+  },
+  {
+    "id": "tr-8-6-07",
+    "unit": "tr-8-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Bahçedeki güller açmış.” cümlesi bir isim cümlesidir.",
+    "answer": false,
+    "explanation": "Cümlenin yüklemi “açmış” sözcüğüdür ve çekimli bir fiildir. Bu nedenle cümle fiil cümlesidir."
+  },
+  {
+    "id": "tr-8-6-08",
+    "unit": "tr-8-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Dün akşam annem bize börek yaptı.” cümlesinin ögeleri hangi seçenekte doğru sıralanmıştır?",
+    "choices": [
+      "Özne - zarf tamlayıcısı - nesne - yer tamlayıcısı - yüklem",
+      "Zarf tamlayıcısı - özne - nesne - yer tamlayıcısı - yüklem",
+      "Zarf tamlayıcısı - özne - yer tamlayıcısı - nesne - yüklem",
+      "Özne - yer tamlayıcısı - zarf tamlayıcısı - nesne - yüklem"
+    ],
+    "answer": 2,
+    "explanation": "“Dün akşam” zarf tamlayıcısı, “annem” özne, “bize” yer tamlayıcısı (dolaylı tümleç), “börek” belirtisiz nesne, “yaptı” yüklemdir."
+  },
+  {
+    "id": "tr-8-6-09",
+    "unit": "tr-8-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Babam yarın İzmir'e gidecek.” cümlesinde hangi öge vurgulanmıştır?",
+    "choices": [
+      "Özne",
+      "Zarf tamlayıcısı",
+      "Yer tamlayıcısı",
+      "Nesne"
+    ],
+    "answer": 2,
+    "explanation": "Fiil cümlelerinde vurgu, yüklemden hemen önceki ögededir. Bu cümlede yüklemden önce “İzmir'e” yer tamlayıcısı gelmiştir."
+  },
+  {
+    "id": "tr-8-7-01",
+    "unit": "tr-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi fiil geçişlidir?",
+    "choices": [
+      "uyudu",
+      "güldü",
+      "okudu",
+      "yürüdü"
+    ],
+    "answer": 2,
+    "explanation": "Geçişli fiiller nesne alabilir: “Neyi okudu?” sorusuna cevap verilebilir. “Uyudu, güldü, yürüdü” fiilleri nesne almaz, geçişsizdir."
+  },
+  {
+    "id": "tr-8-7-02",
+    "unit": "tr-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi cümlede gereksiz sözcük kullanımından kaynaklanan bir anlatım bozukluğu vardır?",
+    "choices": [
+      "Aldığı gömleği mağazaya geri iade etti.",
+      "Aldığı gömleği çok beğendi.",
+      "Mağaza saat onda açılıyor.",
+      "Gömleğin rengi solmuş."
+    ],
+    "answer": 0,
+    "explanation": "“İade etmek” zaten “geri vermek” demektir. “Geri” sözcüğü gereksiz kullanılmıştır."
+  },
+  {
+    "id": "tr-8-7-03",
+    "unit": "tr-8-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "“Cam kırıldı.” cümlesinde işi yapan belli değildir; fiil edilgen çatılıdır.",
+    "answer": true,
+    "explanation": "Edilgen fiillerde işi yapan söylenmez; işten etkilenen varlık özne gibi görünür. Bu özneye sözde özne denir."
+  },
+  {
+    "id": "tr-8-7-04",
+    "unit": "tr-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlenin yüklemi dönüşlü çatılıdır?",
+    "choices": [
+      "Sokaklar bayraklarla süslendi.",
+      "Ayşe sabah erkenden süslendi.",
+      "Annem pastayı süsledi.",
+      "Odayı birlikte süsledik."
+    ],
+    "answer": 1,
+    "explanation": "Dönüşlü fiilde özne işi kendi üzerinde yapar: Ayşe kendini süslemiştir. “Sokaklar süslendi” cümlesinde ise işi başkaları yapmıştır, fiil edilgendir."
+  },
+  {
+    "id": "tr-8-7-05",
+    "unit": "tr-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangi cümlenin yüklemi işteş çatılıdır?",
+    "choices": [
+      "Bebek sabaha kadar ağladı.",
+      "Kapı yavaşça açıldı.",
+      "Eski dostlar yıllar sonra kucaklaştı.",
+      "Elini yüzünü yıkadı."
+    ],
+    "answer": 2,
+    "explanation": "İşteş fiiller, işin birden çok özne tarafından karşılıklı ya da birlikte yapıldığını bildirir ve “-ş” ekiyle kurulur."
+  },
+  {
+    "id": "tr-8-7-06",
+    "unit": "tr-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "“Yarın kesinlikle gelebilirim.” cümlesindeki anlatım bozukluğunun nedeni hangisidir?",
+    "choices": [
+      "Gereksiz sözcük kullanılması",
+      "Öznenin eksik olması",
+      "Deyimin yanlış kullanılması",
+      "Anlamca çelişen sözlerin birlikte kullanılması"
+    ],
+    "answer": 3,
+    "explanation": "“Kesinlikle” kesinlik, “gelebilirim” ise olasılık bildirir. Bu iki söz anlamca çeliştiği için birlikte kullanılamaz."
+  },
+  {
+    "id": "tr-8-7-07",
+    "unit": "tr-8-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "“Yaklaşık üç dört saat kadar bekledik.” cümlesinde anlatım bozukluğu yoktur.",
+    "answer": false,
+    "explanation": "“Yaklaşık”, “üç dört” ve “kadar” sözleri aynı anlamı verir. Aynı anlamdaki sözlerin birlikte kullanılması anlatım bozukluğuna yol açar."
+  },
+  {
+    "id": "tr-8-7-08",
+    "unit": "tr-8-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Annem bebeği uyuttu.” cümlesinin yüklemi nesne-yüklem ilişkisine göre hangi çatıdadır?",
+    "choices": [
+      "Geçişsiz",
+      "Oldurgan",
+      "Ettirgen",
+      "Edilgen"
+    ],
+    "answer": 1,
+    "explanation": "“Uyu-” fiili geçişsizdir. “-t” ekiyle geçişli hâle gelmiştir. Geçişsiz bir fiilin ek alarak geçişli olmasıyla oldurgan fiil oluşur."
+  },
+  {
+    "id": "tr-8-7-09",
+    "unit": "tr-8-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "“Arkadaşını çok sever, her zaman güvenirdi.” cümlesindeki anlatım bozukluğunun nedeni hangisidir?",
+    "choices": [
+      "Gereksiz sözcük kullanılması",
+      "Yer tamlayıcısının (ona) eksik olması",
+      "Çelişen sözlerin kullanılması",
+      "Öznenin eksik olması"
+    ],
+    "answer": 1,
+    "explanation": "“Arkadaşını” sözcüğü “sever” yüklemine uyar ama “güvenirdi” yüklemine uymaz. Doğrusu “ona her zaman güvenirdi” olmalıdır."
+  }
+]

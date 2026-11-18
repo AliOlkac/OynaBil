@@ -1,0 +1,393 @@
+[
+  {
+    "kind": "pairs",
+    "id": "tr-5-2-deyimler",
+    "unit": "tr-5-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "“{deyim}” deyiminin anlamı nedir?",
+        "answer": "anlamSik"
+      },
+      {
+        "prompt": "“{anlam}” anlamına gelen deyim hangisidir?",
+        "answer": "deyim"
+      }
+    ],
+    "statement": {
+      "text": "“{deyim}” deyimi “{anlam}” anlamına gelir.",
+      "swap": "anlam"
+    },
+    "explanation": "“{deyim}” deyimi “{anlam}” anlamında kullanılır.",
+    "items": [
+      {
+        "id": "kulak-kesilmek",
+        "deyim": "Kulak kesilmek",
+        "anlam": "dikkatle dinlemek",
+        "anlamSik": "Dikkatle dinlemek"
+      },
+      {
+        "id": "goz-atmak",
+        "deyim": "Göz atmak",
+        "anlam": "kısaca bakmak",
+        "anlamSik": "Kısaca bakmak"
+      },
+      {
+        "id": "dil-dokmek",
+        "deyim": "Dil dökmek",
+        "anlam": "birini kandırmak için tatlı sözler söylemek",
+        "anlamSik": "Birini kandırmak için tatlı sözler söylemek"
+      },
+      {
+        "id": "ayak-surumek",
+        "deyim": "Ayak sürümek",
+        "anlam": "bir işi isteksizce yapmak, ağırdan almak",
+        "anlamSik": "Bir işi isteksizce yapmak, ağırdan almak"
+      },
+      {
+        "id": "burun-kivirmak",
+        "deyim": "Burun kıvırmak",
+        "anlam": "beğenmemek, küçümsemek",
+        "anlamSik": "Beğenmemek, küçümsemek"
+      },
+      {
+        "id": "el-uzatmak",
+        "deyim": "El uzatmak",
+        "anlam": "yardım etmek",
+        "anlamSik": "Yardım etmek"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-5-2-atasozleri",
+    "unit": "tr-5-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{atasozu}” atasözü hangi konuyla ilgilidir?",
+        "answer": "konu"
+      }
+    ],
+    "statement": {
+      "text": "“{atasozu}” atasözü {konuIle} ilgilidir.",
+      "swap": "konuIle"
+    },
+    "explanation": "“{atasozu}” atasözü {konuIle} ilgilidir.",
+    "items": [
+      {
+        "id": "damlaya",
+        "atasozu": "Damlaya damlaya göl olur.",
+        "konu": "Tutumluluk",
+        "konuIle": "tutumlulukla",
+        "not": "Küçük birikimler zamanla büyük bir varlığa dönüşür."
+      },
+      {
+        "id": "bir-elin",
+        "atasozu": "Bir elin nesi var, iki elin sesi var.",
+        "konu": "Yardımlaşma",
+        "konuIle": "yardımlaşmayla",
+        "not": "İnsanlar güçlerini birleştirince işler daha kolay başarılır."
+      },
+      {
+        "id": "agac-yasken",
+        "atasozu": "Ağaç yaşken eğilir.",
+        "konu": "Eğitim",
+        "konuIle": "eğitimle",
+        "not": "İnsan en kolay küçük yaşta eğitilir."
+      },
+      {
+        "id": "dost",
+        "atasozu": "Dost kara günde belli olur.",
+        "konu": "Dostluk",
+        "konuIle": "dostlukla",
+        "not": "Gerçek dost, insanı zor zamanında yalnız bırakmayan kişidir."
+      },
+      {
+        "id": "yalancinin",
+        "atasozu": "Yalancının mumu yatsıya kadar yanar.",
+        "konu": "Dürüstlük",
+        "konuIle": "dürüstlükle",
+        "not": "Yalan kısa sürede ortaya çıkar; doğru sözlü olmak gerekir."
+      },
+      {
+        "id": "isleyen",
+        "atasozu": "İşleyen demir ışıldar.",
+        "konu": "Çalışkanlık",
+        "konuIle": "çalışkanlıkla",
+        "not": "Çalışan insan becerisini geliştirir, durgun kalan ise körelir."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-5-2-soz-sanatlari",
+    "unit": "tr-5-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "“{ornek}” cümlesinde hangi söz sanatı vardır?",
+        "answer": "sanat"
+      }
+    ],
+    "statement": {
+      "text": "“{ornek}” cümlesinde {sanatKucuk} sanatı vardır.",
+      "swap": "sanatKucuk"
+    },
+    "explanation": "Bu cümlede {sanatKucuk} sanatı vardır.",
+    "items": [
+      {
+        "id": "yanak",
+        "ornek": "Çocuğun yanakları elma gibi kızarmıştı.",
+        "sanat": "Benzetme",
+        "sanatKucuk": "benzetme",
+        "not": "Yanaklar, kızarıklık yönünden elmaya benzetilmiştir."
+      },
+      {
+        "id": "bulut",
+        "ornek": "Yorgun bulutlar dağların omzuna yaslandı.",
+        "sanat": "Kişileştirme",
+        "sanatKucuk": "kişileştirme",
+        "not": "Yorulmak ve yaslanmak insana özgüdür; bulutlara insan özelliği verilmiştir."
+      },
+      {
+        "id": "bin-kere",
+        "ornek": "Sana bunu bin kere söyledim.",
+        "sanat": "Abartma",
+        "sanatKucuk": "abartma",
+        "not": "Söyleme sayısı olduğundan çok fazla gösterilmiştir."
+      },
+      {
+        "id": "kus",
+        "ornek": "Kardeşim kuş gibi hafifti.",
+        "sanat": "Benzetme",
+        "sanatKucuk": "benzetme",
+        "not": "Kardeş, hafiflik yönünden kuşa benzetilmiştir."
+      },
+      {
+        "id": "gunes",
+        "ornek": "Güneş, sabahleyin bize gülümsedi.",
+        "sanat": "Kişileştirme",
+        "sanatKucuk": "kişileştirme",
+        "not": "Gülümsemek insana özgüdür; güneşe insan özelliği verilmiştir."
+      },
+      {
+        "id": "firin",
+        "ornek": "Açlıktan bir fırın ekmeği tek başıma yerim.",
+        "sanat": "Abartma",
+        "sanatKucuk": "abartma",
+        "not": "Yenebilecek ekmek miktarı olduğundan çok büyük gösterilmiştir."
+      }
+    ],
+    "distractors": {
+      "sanat": [
+        "Benzetme",
+        "Kişileştirme",
+        "Abartma",
+        "Konuşturma"
+      ]
+    }
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-5-1-es-anlam",
+    "unit": "tr-5-1",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "“{sozcuk}” sözcüğünün eş anlamlısı hangisidir?",
+        "answer": "es"
+      }
+    ],
+    "statement": {
+      "text": "“{sozcuk}” ile “{es}” eş anlamlı sözcüklerdir.",
+      "swap": "es"
+    },
+    "explanation": "“{sozcuk}” ile “{es}” aynı anlama gelir. Yazılışları farklı, anlamları aynı olan sözcükler eş anlamlıdır.",
+    "items": [
+      {
+        "id": "yanit",
+        "sozcuk": "yanıt",
+        "es": "cevap"
+      },
+      {
+        "id": "sozcuk",
+        "sozcuk": "sözcük",
+        "es": "kelime"
+      },
+      {
+        "id": "oyku",
+        "sozcuk": "öykü",
+        "es": "hikâye"
+      },
+      {
+        "id": "konuk",
+        "sozcuk": "konuk",
+        "es": "misafir"
+      },
+      {
+        "id": "armagan",
+        "sozcuk": "armağan",
+        "es": "hediye"
+      },
+      {
+        "id": "uygarlik",
+        "sozcuk": "uygarlık",
+        "es": "medeniyet"
+      },
+      {
+        "id": "okul",
+        "sozcuk": "okul",
+        "es": "mektep"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-5-1-zit-anlam",
+    "unit": "tr-5-1",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "“{sozcuk}” sözcüğünün zıt anlamlısı hangisidir?",
+        "answer": "zit"
+      }
+    ],
+    "statement": {
+      "text": "“{sozcuk}” ile “{zit}” zıt anlamlı sözcüklerdir.",
+      "swap": "zit"
+    },
+    "explanation": "“{sozcuk}” sözcüğünün zıt anlamlısı “{zit}” sözcüğüdür. Anlamca birbirinin karşıtı olan sözcükler zıt anlamlıdır.",
+    "items": [
+      {
+        "id": "taze",
+        "sozcuk": "taze",
+        "zit": "bayat"
+      },
+      {
+        "id": "genis",
+        "sozcuk": "geniş",
+        "zit": "dar"
+      },
+      {
+        "id": "odul",
+        "sozcuk": "ödül",
+        "zit": "ceza"
+      },
+      {
+        "id": "ileri",
+        "sozcuk": "ileri",
+        "zit": "geri"
+      },
+      {
+        "id": "yokus",
+        "sozcuk": "yokuş",
+        "zit": "iniş"
+      },
+      {
+        "id": "acemi",
+        "sozcuk": "acemi",
+        "zit": "usta"
+      },
+      {
+        "id": "dogal",
+        "sozcuk": "doğal",
+        "zit": "yapay"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "tr-5-6-isaretler",
+    "unit": "tr-5-6",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{gorev} hangi noktalama işareti konur?",
+        "answer": "isaretSik"
+      }
+    ],
+    "statement": {
+      "text": "{gorev} {isaret} konur.",
+      "swap": "isaret"
+    },
+    "explanation": "{gorev} {isaret} konur.",
+    "items": [
+      {
+        "id": "nokta",
+        "gorev": "Tamamlanmış cümlelerin sonuna",
+        "isaret": "nokta",
+        "isaretSik": "Nokta",
+        "not": "Örnek: Bugün hava çok güzel."
+      },
+      {
+        "id": "soru",
+        "gorev": "Soru bildiren cümlelerin sonuna",
+        "isaret": "soru işareti",
+        "isaretSik": "Soru işareti",
+        "not": "Örnek: Yarın bize gelir misin?"
+      },
+      {
+        "id": "unlem",
+        "gorev": "Sevinç, korku ve şaşkınlık anlatan cümlelerin sonuna",
+        "isaret": "ünlem işareti",
+        "isaretSik": "Ünlem işareti",
+        "not": "Örnek: Yaşasın, kar yağıyor!"
+      },
+      {
+        "id": "virgul",
+        "gorev": "Art arda sıralanan eş görevli sözcüklerin arasına",
+        "isaret": "virgül",
+        "isaretSik": "Virgül",
+        "not": "Örnek: Çantamda kalem, defter, silgi var."
+      },
+      {
+        "id": "kesme",
+        "gorev": "Özel adlara gelen çekim eklerini ayırmak için",
+        "isaret": "kesme işareti",
+        "isaretSik": "Kesme işareti",
+        "not": "Örnek: Yarın İzmir'e gidiyoruz."
+      },
+      {
+        "id": "tirnak",
+        "gorev": "Başkasından aynen aktarılan sözlerin başına ve sonuna",
+        "isaret": "tırnak işareti",
+        "isaretSik": "Tırnak işareti",
+        "not": "Örnek: Annem, “Erken gel.” dedi."
+      },
+      {
+        "id": "iki-nokta",
+        "gorev": "Kendisinden sonra örnek verilecek cümlenin sonuna",
+        "isaret": "iki nokta",
+        "isaretSik": "İki nokta",
+        "not": "Örnek: Üç meyve aldım: elma, armut, muz."
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "tr-5-7-yapim-eki",
+    "unit": "tr-5-7",
+    "difficulty": 2,
+    "positive": "Aşağıdaki sözcüklerden hangisi yapım eki almıştır?",
+    "negative": "Aşağıdaki sözcüklerden hangisi yapım eki almamıştır?",
+    "statement": "“{item}” sözcüğü yapım eki almıştır.",
+    "explanation": "Yapım eki alan sözcükler yeni bir anlam kazanır: {members}. Çoğul, hâl ve iyelik ekleri ise çekim ekidir; sözcüğün anlamını değiştirmez.",
+    "members": [
+      "gözlük",
+      "kitapçı",
+      "tuzlu",
+      "bilgi",
+      "yolcu",
+      "sevgi"
+    ],
+    "nonMembers": [
+      "evler",
+      "kalemim",
+      "okulda",
+      "çiçeği",
+      "masadan",
+      "defterler"
+    ]
+  }
+]
