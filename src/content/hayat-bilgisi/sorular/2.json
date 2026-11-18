@@ -1,0 +1,683 @@
+[
+  {
+    "id": "hb-2-1-01",
+    "unit": "hb-2-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Okul kütüphanesinden aldığımız kitabı ne yapmalıyız?",
+    "choices": [
+      "Temiz tutup zamanında geri vermeliyiz",
+      "Evde saklamalıyız",
+      "Sayfalarını boyamalıyız",
+      "Arkadaşımıza hediye etmeliyiz"
+    ],
+    "answer": 0,
+    "explanation": "Kütüphane kitapları herkesindir. Kitabı temiz kullanıp zamanında geri verirsek başka arkadaşlarımız da okuyabilir."
+  },
+  {
+    "id": "hb-2-1-02",
+    "unit": "hb-2-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Sınıf başkanı nasıl belirlenir?",
+    "choices": [
+      "En uzun boylu öğrenci olur",
+      "Oylama yapılarak seçilir",
+      "Sınıfa ilk gelen öğrenci olur",
+      "En çok konuşan öğrenci olur"
+    ],
+    "answer": 1,
+    "explanation": "Sınıf başkanı oylama ile seçilir. Herkes oyunu kullanır, en çok oyu alan aday başkan olur."
+  },
+  {
+    "id": "hb-2-1-03",
+    "unit": "hb-2-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Arkadaşımızın sevdiği oyun bizim sevdiğimiz oyundan farklı olabilir.",
+    "answer": true,
+    "explanation": "İnsanların sevdikleri ve ilgi duydukları şeyler farklı olabilir. Bu farklılıklara saygı duyarız."
+  },
+  {
+    "id": "hb-2-1-04",
+    "unit": "hb-2-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Arkadaşımızla aynı fikirde olmadığımızda ne yapmalıyız?",
+    "choices": [
+      "Ona küsmeliyiz",
+      "Bağırmalıyız",
+      "Onu dinleyip düşüncemizi kibarca söylemeliyiz",
+      "Onunla alay etmeliyiz"
+    ],
+    "answer": 2,
+    "explanation": "Farklı düşünebiliriz. Birbirimizi dinler ve düşüncemizi kırmadan söylersek sorunları konuşarak çözeriz."
+  },
+  {
+    "id": "hb-2-1-05",
+    "unit": "hb-2-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Okulda hangi davranış güvenlidir?",
+    "choices": [
+      "Merdivenlerden koşarak inmek",
+      "Koridorda itişmek",
+      "Merdivenlerden tutunarak inmek",
+      "Pencereden sarkmak"
+    ],
+    "answer": 2,
+    "explanation": "Merdivenlerde koşmak ve itişmek düşmeye yol açabilir. Tırabzana tutunarak, sırayla inip çıkarız."
+  },
+  {
+    "id": "hb-2-1-06",
+    "unit": "hb-2-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ders çalışırken zamanı iyi kullanmak için ne yaparız?",
+    "choices": [
+      "Günlük plan yaparız",
+      "Ödevi son ana bırakırız",
+      "Çalışırken televizyon izleriz",
+      "Masamızı dağınık bırakırız"
+    ],
+    "answer": 0,
+    "explanation": "Plan yapan öğrenci hem ödevine hem oyuna zaman ayırabilir. Plan, zamanı boşa harcamamızı önler."
+  },
+  {
+    "id": "hb-2-1-07",
+    "unit": "hb-2-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Grup çalışmasında yalnızca kendi istediğimiz yapılmalıdır.",
+    "answer": false,
+    "explanation": "Grup çalışmasında herkes fikrini söyler, görev paylaşılır ve karar birlikte alınır."
+  },
+  {
+    "id": "hb-2-1-08",
+    "unit": "hb-2-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Sınıfta bir konuda oylama yapılmasının nedeni nedir?",
+    "choices": [
+      "Dersi kısaltmak",
+      "Öğretmeni sevindirmek",
+      "En güçlü olanı seçmek",
+      "Kararı herkesin katılımıyla almak"
+    ],
+    "answer": 3,
+    "explanation": "Oylamada herkes düşüncesini oyuyla belirtir. Böylece karar, sınıftaki herkesin katılımıyla alınır."
+  },
+  {
+    "id": "hb-2-2-01",
+    "unit": "hb-2-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Dişlerimizi günde en az kaç kez fırçalamalıyız?",
+    "choices": [
+      "Hiç",
+      "2",
+      "7",
+      "10"
+    ],
+    "answer": 1,
+    "explanation": "Dişlerimizi günde en az iki kez, sabah ve akşam yatmadan önce fırçalamalıyız."
+  },
+  {
+    "id": "hb-2-2-02",
+    "unit": "hb-2-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi yalnızca kendimizin kullanması gereken bir eşyadır?",
+    "choices": [
+      "Top",
+      "Kitap",
+      "Boya kalemi",
+      "Diş fırçası"
+    ],
+    "answer": 3,
+    "explanation": "Diş fırçası, tarak ve havlu kişisel bakım eşyalarıdır. Mikrop bulaşmaması için başkasıyla paylaşılmaz."
+  },
+  {
+    "id": "hb-2-2-03",
+    "unit": "hb-2-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Meyve ve sebzeleri yemeden önce yıkamalıyız.",
+    "answer": true,
+    "explanation": "Meyve ve sebzelerin üzerinde toz, toprak ve mikrop olabilir. Bol suyla yıkayınca temizlenir."
+  },
+  {
+    "id": "hb-2-2-04",
+    "unit": "hb-2-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Okul servisinde nasıl yolculuk etmeliyiz?",
+    "choices": [
+      "Yerimizde oturup kemerimizi takarak",
+      "Ayakta durarak",
+      "Camdan elimizi çıkararak",
+      "Koltuklar arasında koşarak"
+    ],
+    "answer": 0,
+    "explanation": "Serviste yerimizde oturur ve emniyet kemerimizi takarız. Böylece ani frende yaralanmayız."
+  },
+  {
+    "id": "hb-2-2-05",
+    "unit": "hb-2-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Deprem sırasında sınıftaysak ne yapmalıyız?",
+    "choices": [
+      "Pencereye koşmalıyız",
+      "Sıranın yanında çök, kapan, tutun yapmalıyız",
+      "Merdivenlere koşmalıyız",
+      "Asansöre binmeliyiz"
+    ],
+    "answer": 1,
+    "explanation": "Depremde sağlam bir eşyanın yanına çöker, başımızı koruyup kapanır ve tutunuruz. Sarsıntı bitince sakin şekilde dışarı çıkarız."
+  },
+  {
+    "id": "hb-2-2-06",
+    "unit": "hb-2-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi dengeli bir kahvaltıda bulunur?",
+    "choices": [
+      "Cips ve gazlı içecek",
+      "Yumurta, peynir ve süt",
+      "Şeker ve çikolata",
+      "Yalnızca pasta"
+    ],
+    "answer": 1,
+    "explanation": "Yumurta, peynir ve süt büyümemize yardım eder. Cips, şeker ve gazlı içecek ise sağlığımız için az tüketilmelidir."
+  },
+  {
+    "id": "hb-2-2-07",
+    "unit": "hb-2-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Park etmiş iki arabanın arasından karşıya geçmek güvenlidir.",
+    "answer": false,
+    "explanation": "Park etmiş arabaların arasından çıkan yayayı sürücüler göremeyebilir. Karşıya yaya geçidinden geçeriz."
+  },
+  {
+    "id": "hb-2-2-08",
+    "unit": "hb-2-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Trafik ışığı olmayan bir yolda karşıya geçmeden önce ne yapmalıyız?",
+    "choices": [
+      "Koşarak geçmeliyiz",
+      "Yolun ortasında beklemeliyiz",
+      "Önce sola, sonra sağa, sonra yine sola bakmalıyız",
+      "Telefonumuza bakmalıyız"
+    ],
+    "answer": 2,
+    "explanation": "Karşıya geçmeden önce durur; önce sola, sonra sağa, sonra tekrar sola bakarız. Yol boşsa hızlı adımlarla geçeriz."
+  },
+  {
+    "id": "hb-2-2-09",
+    "unit": "hb-2-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kaldırım olmayan yolda yayalar yolun hangi kenarından yürümelidir?",
+    "choices": [
+      "Sol kenarından",
+      "Sağ kenarından",
+      "Tam ortasından",
+      "Şeritlerin arasından"
+    ],
+    "answer": 0,
+    "explanation": "Kaldırım yoksa yolun sol kenarından yürürüz. Böylece karşıdan gelen taşıtları görebiliriz."
+  },
+  {
+    "id": "hb-2-3-01",
+    "unit": "hb-2-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Misafirliğe gittiğimizde nasıl davranmalıyız?",
+    "choices": [
+      "Eşyaları izinsiz karıştırmalıyız",
+      "Kibar ve saygılı olmalıyız",
+      "Yüksek sesle bağırmalıyız",
+      "Koltukların üzerinde zıplamalıyız"
+    ],
+    "answer": 1,
+    "explanation": "Misafirlikte ev sahibini rahatsız etmeyiz. Kibar davranır, eşyaları izinsiz almayız."
+  },
+  {
+    "id": "hb-2-3-02",
+    "unit": "hb-2-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir ihtiyaçtır?",
+    "choices": [
+      "Su",
+      "Oyuncak araba",
+      "Çikolata",
+      "Bilgisayar oyunu"
+    ],
+    "answer": 0,
+    "explanation": "İhtiyaç, yaşamak için gerekli olan şeydir. Su, yiyecek, giysi ve barınma temel ihtiyaçlarımızdır."
+  },
+  {
+    "id": "hb-2-3-03",
+    "unit": "hb-2-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Ailemizdeki herkesin evde sorumlulukları vardır.",
+    "answer": true,
+    "explanation": "Evde işler paylaşılır. Çocuklar da odasını toplamak gibi yaşına uygun sorumluluklar alır."
+  },
+  {
+    "id": "hb-2-3-04",
+    "unit": "hb-2-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Komşumuzla karşılaştığımızda ne yaparız?",
+    "choices": [
+      "Görmezden geliriz",
+      "Kapıyı hızla kapatırız",
+      "Selam verip hatırını sorarız",
+      "Arkamızı döneriz"
+    ],
+    "answer": 2,
+    "explanation": "Komşularımızla selamlaşır, hatırlarını sorarız. İyi komşuluk yardımlaşmayı ve güveni artırır."
+  },
+  {
+    "id": "hb-2-3-05",
+    "unit": "hb-2-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi bir istektir, ihtiyaç değildir?",
+    "choices": [
+      "Ekmek",
+      "Kışlık mont",
+      "Su",
+      "Yeni bir oyuncak"
+    ],
+    "answer": 3,
+    "explanation": "Oyuncak olmadan da yaşayabiliriz; bu bir istektir. Ekmek, su ve mont ise ihtiyaçtır."
+  },
+  {
+    "id": "hb-2-3-06",
+    "unit": "hb-2-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Alışverişe çıkmadan önce ihtiyaç listesi yapmak gereksiz harcamayı azaltır.",
+    "answer": true,
+    "explanation": "Liste, neye ihtiyacımız olduğunu gösterir. Listeye uyarsak gereksiz şeyler almayız."
+  },
+  {
+    "id": "hb-2-3-07",
+    "unit": "hb-2-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Ev işlerini yalnızca anneler yapmalıdır.",
+    "answer": false,
+    "explanation": "Ev, ailedeki herkesindir. Anne, baba ve çocuklar işleri paylaşarak birlikte yapar."
+  },
+  {
+    "id": "hb-2-3-08",
+    "unit": "hb-2-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Ailenin parası sınırlıysa alışverişte önce hangisi alınmalıdır?",
+    "choices": [
+      "En pahalı oyuncak",
+      "Temel ihtiyaçlar",
+      "Süs eşyaları",
+      "Şekerlemeler"
+    ],
+    "answer": 1,
+    "explanation": "Para sınırlı olduğunda önce yiyecek ve giysi gibi ihtiyaçlar alınır. İstekler daha sonraya bırakılır."
+  },
+  {
+    "id": "hb-2-4-01",
+    "unit": "hb-2-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ülkemizin başkenti neresidir?",
+    "choices": [
+      "İstanbul",
+      "Ankara",
+      "İzmir",
+      "Bursa"
+    ],
+    "answer": 1,
+    "explanation": "Türkiye'nin başkenti Ankara'dır. Türkiye Büyük Millet Meclisi de Ankara'dadır."
+  },
+  {
+    "id": "hb-2-4-02",
+    "unit": "hb-2-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Evimizin bulunduğu yeri tarif eden bilgiye ne denir?",
+    "choices": [
+      "Adres",
+      "Harita",
+      "Takvim",
+      "Karne"
+    ],
+    "answer": 0,
+    "explanation": "Adres; il, ilçe, mahalle, sokak ve kapı numarasından oluşur. Evimizin yerini gösterir."
+  },
+  {
+    "id": "hb-2-4-03",
+    "unit": "hb-2-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Cumhuriyet Bayramı'nı 29 Ekim'de kutlarız.",
+    "answer": true,
+    "explanation": "Cumhuriyet 29 Ekim 1923'te ilan edilmiştir. Bu yüzden her yıl 29 Ekim'de Cumhuriyet Bayramı'nı kutlarız."
+  },
+  {
+    "id": "hb-2-4-04",
+    "unit": "hb-2-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İstiklal Marşı'mızı kim yazmıştır?",
+    "choices": [
+      "Namık Kemal",
+      "Yunus Emre",
+      "Mehmet Âkif Ersoy",
+      "Ziya Gökalp"
+    ],
+    "answer": 2,
+    "explanation": "İstiklal Marşı'nın şairi Mehmet Âkif Ersoy'dur."
+  },
+  {
+    "id": "hb-2-4-05",
+    "unit": "hb-2-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Atatürk'ün anıt mezarı olan Anıtkabir hangi şehrimizdedir?",
+    "choices": [
+      "İstanbul",
+      "Samsun",
+      "İzmir",
+      "Ankara"
+    ],
+    "answer": 3,
+    "explanation": "Anıtkabir, başkentimiz Ankara'dadır."
+  },
+  {
+    "id": "hb-2-4-06",
+    "unit": "hb-2-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Atatürk hangi tarihte hayatını kaybetmiştir?",
+    "choices": [
+      "10 Kasım 1938",
+      "29 Ekim 1923",
+      "23 Nisan 1920",
+      "19 Mayıs 1919"
+    ],
+    "answer": 0,
+    "explanation": "Atatürk 10 Kasım 1938'de hayatını kaybetmiştir. Her yıl 10 Kasım'da saat 09.05'te onu saygıyla anarız."
+  },
+  {
+    "id": "hb-2-4-07",
+    "unit": "hb-2-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi dinî bayramlarımızdan biridir?",
+    "choices": [
+      "Zafer Bayramı",
+      "Cumhuriyet Bayramı",
+      "Kurban Bayramı",
+      "Ulusal Egemenlik ve Çocuk Bayramı"
+    ],
+    "answer": 2,
+    "explanation": "Ramazan Bayramı ve Kurban Bayramı dinî bayramlarımızdır. Öteki üçü millî bayramdır."
+  },
+  {
+    "id": "hb-2-4-08",
+    "unit": "hb-2-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Ramazan Bayramı millî bayramlarımızdan biridir.",
+    "answer": false,
+    "explanation": "Ramazan Bayramı dinî bir bayramdır. Cumhuriyet Bayramı ve Zafer Bayramı gibi bayramlar ise millî bayramdır."
+  },
+  {
+    "id": "hb-2-4-09",
+    "unit": "hb-2-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Atatürk, 23 Nisan'ı kimlere armağan etmiştir?",
+    "choices": [
+      "Gençlere",
+      "Çocuklara",
+      "Öğretmenlere",
+      "Askerlere"
+    ],
+    "answer": 1,
+    "explanation": "Atatürk, 23 Nisan Ulusal Egemenlik ve Çocuk Bayramı'nı çocuklara armağan etmiştir."
+  },
+  {
+    "id": "hb-2-5-01",
+    "unit": "hb-2-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi yabani bir hayvandır?",
+    "choices": [
+      "Tavuk",
+      "İnek",
+      "Aslan",
+      "Koyun"
+    ],
+    "answer": 2,
+    "explanation": "Aslan doğada kendi başına yaşayan yabani bir hayvandır. Tavuk, inek ve koyun evcil hayvanlardır."
+  },
+  {
+    "id": "hb-2-5-02",
+    "unit": "hb-2-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Gökyüzü bulutlarla kaplıysa hava nasıldır?",
+    "choices": [
+      "Güneşli",
+      "Bulutlu",
+      "Karlı",
+      "Sisli"
+    ],
+    "answer": 1,
+    "explanation": "Gökyüzünü bulutlar kapladığında hava bulutludur. Bulutlu havada güneş az görünür."
+  },
+  {
+    "id": "hb-2-5-03",
+    "unit": "hb-2-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bitkiler de canlıdır.",
+    "answer": true,
+    "explanation": "Bitkiler beslenir, büyür ve çoğalır. Bu yüzden onlar da canlıdır."
+  },
+  {
+    "id": "hb-2-5-04",
+    "unit": "hb-2-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Rüzgârlı havada ağaçların dalları sallanır.",
+    "answer": true,
+    "explanation": "Rüzgâr havanın hareket etmesidir. Rüzgâr estiğinde dallar ve yapraklar sallanır."
+  },
+  {
+    "id": "hb-2-5-05",
+    "unit": "hb-2-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi suyu tasarruflu kullanmaktır?",
+    "choices": [
+      "Dişleri fırçalarken musluğu kapatmak",
+      "Musluğu açık bırakmak",
+      "Bahçeyi saatlerce sulamak",
+      "Damlayan musluğu öylece bırakmak"
+    ],
+    "answer": 0,
+    "explanation": "Diş fırçalarken musluğu kapatırsak litrelerce su boşa akmaz. Su sınırlı bir kaynaktır."
+  },
+  {
+    "id": "hb-2-5-06",
+    "unit": "hb-2-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hava durumunu öğrenmek bize ne sağlar?",
+    "choices": [
+      "Daha hızlı koşmamızı",
+      "Daha çok uyumamızı",
+      "Havaya uygun giyinmemizi",
+      "Ödevimizi bitirmemizi"
+    ],
+    "answer": 2,
+    "explanation": "Hava durumunu bilirsek giysimizi ve planımızı buna göre seçeriz. Yağmur bekleniyorsa şemsiye alırız."
+  },
+  {
+    "id": "hb-2-5-07",
+    "unit": "hb-2-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Evde beslediğimiz hayvan için hangisini yapmalıyız?",
+    "choices": [
+      "Onu günlerce yalnız bırakmalıyız",
+      "Kuyruğunu çekmeliyiz",
+      "Ona yalnızca şeker vermeliyiz",
+      "Yemini, suyunu ve temizliğini sağlamalıyız"
+    ],
+    "answer": 3,
+    "explanation": "Hayvan beslemek sorumluluk ister. Yemini ve suyunu verir, yerini temiz tutar, ona sevgiyle davranırız."
+  },
+  {
+    "id": "hb-2-5-08",
+    "unit": "hb-2-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bitmiş pilleri öteki çöplerle birlikte çöp kutusuna atmalıyız.",
+    "answer": false,
+    "explanation": "Piller toprağa ve suya zarar veren maddeler içerir. Bitmiş piller atık pil kutusuna atılır."
+  },
+  {
+    "id": "hb-2-5-09",
+    "unit": "hb-2-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Geri dönüşümün doğaya yararı hangisidir?",
+    "choices": [
+      "Çöp miktarını artırır",
+      "Doğal kaynakların korunmasını sağlar",
+      "Havayı kirletir",
+      "Suları azaltır"
+    ],
+    "answer": 1,
+    "explanation": "Geri dönüşümde atıklar yeniden kullanılır. Böylece daha az ağaç kesilir, daha az kaynak harcanır."
+  },
+  {
+    "id": "hb-2-6-01",
+    "unit": "hb-2-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir teknolojik üründür?",
+    "choices": [
+      "Taş",
+      "Bilgisayar",
+      "Ağaç",
+      "Bulut"
+    ],
+    "answer": 1,
+    "explanation": "Bilgisayar, insanların işlerini kolaylaştırmak için ürettiği teknolojik bir üründür. Taş, ağaç ve bulut doğada kendiliğinden bulunur."
+  },
+  {
+    "id": "hb-2-6-02",
+    "unit": "hb-2-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Resim yapan sanatçıya ne denir?",
+    "choices": [
+      "Ressam",
+      "Heykeltıraş",
+      "Müzisyen",
+      "Yazar"
+    ],
+    "answer": 0,
+    "explanation": "Resim yapan sanatçıya ressam denir. Heykeltıraş heykel yapar, müzisyen müzik yapar, yazar kitap yazar."
+  },
+  {
+    "id": "hb-2-6-03",
+    "unit": "hb-2-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bilim insanları merak eder, gözlem ve deney yapar.",
+    "answer": true,
+    "explanation": "Bilim insanları sorular sorar, gözlem ve deney yaparak cevap arar."
+  },
+  {
+    "id": "hb-2-6-04",
+    "unit": "hb-2-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Eskiden çamaşırlar elde yıkanırdı. Bugün bu işi hangi teknolojik ürün kolaylaştırır?",
+    "choices": [
+      "Ütü",
+      "Fırın",
+      "Çamaşır makinesi",
+      "Buzdolabı"
+    ],
+    "answer": 2,
+    "explanation": "Çamaşır makinesi çamaşırları kısa sürede yıkar. Teknolojik ürünler işlerimizi kolaylaştırır."
+  },
+  {
+    "id": "hb-2-6-05",
+    "unit": "hb-2-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İnternette tanımadığımız biri adresimizi sorarsa ne yapmalıyız?",
+    "choices": [
+      "Hemen söylemeliyiz",
+      "Fotoğrafımızı göndermeliyiz",
+      "Okulumuzun adını yazmalıyız",
+      "Söylememeli, büyüklerimize haber vermeliyiz"
+    ],
+    "answer": 3,
+    "explanation": "Adres, telefon ve fotoğraf kişisel bilgilerimizdir. Tanımadığımız kişilerle paylaşmaz, durumu büyüklerimize anlatırız."
+  },
+  {
+    "id": "hb-2-6-06",
+    "unit": "hb-2-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Tiyatroda sahnede rol yapan kişilere ne denir?",
+    "choices": [
+      "Oyuncu",
+      "Ressam",
+      "Hakem",
+      "Garson"
+    ],
+    "answer": 0,
+    "explanation": "Tiyatroda sahneye çıkıp rol yapan kişilere oyuncu denir."
+  },
+  {
+    "id": "hb-2-6-07",
+    "unit": "hb-2-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "İlk telefonlar bugünkü akıllı telefonlarla aynı özelliklere sahipti.",
+    "answer": false,
+    "explanation": "İlk telefonlarla yalnızca konuşulabiliyordu. Teknolojik ürünler zamanla değişir ve gelişir."
+  },
+  {
+    "id": "hb-2-6-08",
+    "unit": "hb-2-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangisi teknolojinin doğru kullanımına örnektir?",
+    "choices": [
+      "Saatlerce oyun oynamak",
+      "Ödev için araştırma yapmak",
+      "Gece geç saate kadar video izlemek",
+      "Yemek yerken tablete bakmak"
+    ],
+    "answer": 1,
+    "explanation": "Teknolojiyi öğrenmek ve araştırmak için, belirli bir süre kullanmak doğrudur. Uzun süre ekrana bakmak sağlığa zarar verir."
+  }
+]

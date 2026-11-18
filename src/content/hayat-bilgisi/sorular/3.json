@@ -1,0 +1,809 @@
+[
+  {
+    "id": "hb-3-1-01",
+    "unit": "hb-3-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Okulda bir sorunumuz olduğunda önce kime başvururuz?",
+    "choices": [
+      "Bakkala",
+      "Postacıya",
+      "Öğretmenimize",
+      "Şoföre"
+    ],
+    "answer": 2,
+    "explanation": "Okuldaki sorunlarımızı önce öğretmenimize anlatırız. Öğretmenimiz çözüm bulmamıza yardım eder."
+  },
+  {
+    "id": "hb-3-1-02",
+    "unit": "hb-3-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi arkadaşlık ilişkilerini güçlendirir?",
+    "choices": [
+      "Lakap takmak",
+      "Sır tutmamak",
+      "Dışlamak",
+      "Yardımlaşmak"
+    ],
+    "answer": 3,
+    "explanation": "Yardımlaşmak, paylaşmak ve güvenilir olmak arkadaşlığı güçlendirir. Lakap takmak ve dışlamak ise arkadaşlığı bozar."
+  },
+  {
+    "id": "hb-3-1-03",
+    "unit": "hb-3-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "İnsanların ilgi alanları ve yetenekleri birbirinden farklı olabilir.",
+    "answer": true,
+    "explanation": "Kimi resimde, kimi sporda, kimi müzikte başarılıdır. Farklılıklarımız bizi zenginleştirir."
+  },
+  {
+    "id": "hb-3-1-04",
+    "unit": "hb-3-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Ders çalışma planı yapmak zamanı verimli kullanmamıza yardım eder.",
+    "answer": true,
+    "explanation": "Plan, ne zaman ders çalışıp ne zaman dinleneceğimizi gösterir. Böylece işlerimiz son ana kalmaz."
+  },
+  {
+    "id": "hb-3-1-05",
+    "unit": "hb-3-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Güçlü ve zayıf yönlerimizi bilmek bize ne sağlar?",
+    "choices": [
+      "Kendimizi geliştirmemizi",
+      "Arkadaşlarımızı kıskanmamızı",
+      "Derslerden kaçmamızı",
+      "İşlerimizi başkasına bırakmamızı"
+    ],
+    "answer": 0,
+    "explanation": "Kendini tanıyan kişi neyi iyi yaptığını ve neyi geliştirmesi gerektiğini bilir. Buna göre çalışarak kendini geliştirir."
+  },
+  {
+    "id": "hb-3-1-06",
+    "unit": "hb-3-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Arkadaşımız yanlışlıkla bize çarptı ve özür diledi. En uygun davranış hangisidir?",
+    "choices": [
+      "Ona da çarpmak",
+      "Özrünü kabul etmek",
+      "Onunla bir daha konuşmamak",
+      "Herkese şikâyet etmek"
+    ],
+    "answer": 1,
+    "explanation": "Herkes yanlışlıkla hata yapabilir. Özrü kabul etmek hoşgörülü bir davranıştır ve arkadaşlığı korur."
+  },
+  {
+    "id": "hb-3-1-07",
+    "unit": "hb-3-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Okulda suyu, elektriği ve kâğıdı dikkatli kullanmaya ne denir?",
+    "choices": [
+      "Tasarruf",
+      "İsraf",
+      "Tüketim",
+      "Üretim"
+    ],
+    "answer": 0,
+    "explanation": "Kaynakları gerektiği kadar kullanmaya tasarruf denir. Gereksiz yere harcamak ise israftır."
+  },
+  {
+    "id": "hb-3-1-08",
+    "unit": "hb-3-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Arkadaşımıza lakap takmak onu üzmez.",
+    "answer": false,
+    "explanation": "Lakap takmak ve alay etmek karşımızdakini üzer. Arkadaşlarımıza adlarıyla sesleniriz."
+  },
+  {
+    "id": "hb-3-1-09",
+    "unit": "hb-3-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Okulla ilgili kararlara öğrencilerin de oy vererek katılması hangi kavramla ilgilidir?",
+    "choices": [
+      "Tasarruf",
+      "Reklam",
+      "Demokrasi",
+      "Rekabet"
+    ],
+    "answer": 2,
+    "explanation": "Demokraside kararlar birlikte alınır ve herkesin söz hakkı vardır. Sınıf başkanı seçimi buna bir örnektir."
+  },
+  {
+    "id": "hb-3-2-01",
+    "unit": "hb-3-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Büyümek ve hastalıklardan korunmak için nasıl beslenmeliyiz?",
+    "choices": [
+      "Yalnızca tatlı yiyerek",
+      "Dengeli ve düzenli",
+      "Günde bir öğün yiyerek",
+      "Yalnızca et yiyerek"
+    ],
+    "answer": 1,
+    "explanation": "Dengeli beslenmek, her besin türünden yeterince yemektir. Öğün atlamamak da sağlığımız için önemlidir."
+  },
+  {
+    "id": "hb-3-2-02",
+    "unit": "hb-3-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangi besinler kemik ve dişlerimizi güçlendirir?",
+    "choices": [
+      "Süt ve süt ürünleri",
+      "Şekerlemeler",
+      "Gazlı içecekler",
+      "Cipsler"
+    ],
+    "answer": 0,
+    "explanation": "Süt, yoğurt ve peynir kalsiyum içerir. Kalsiyum kemik ve dişlerimizi güçlendirir."
+  },
+  {
+    "id": "hb-3-2-03",
+    "unit": "hb-3-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Paketli yiyecek alırken son kullanma tarihine bakmalıyız.",
+    "answer": true,
+    "explanation": "Son kullanma tarihi geçmiş yiyecekler bozulmuş olabilir ve bizi hasta edebilir."
+  },
+  {
+    "id": "hb-3-2-04",
+    "unit": "hb-3-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bisiklet sürerken güvenliğimiz için hangisini takmalıyız?",
+    "choices": [
+      "Kolye",
+      "Kulaklık",
+      "Kask",
+      "Atkı"
+    ],
+    "answer": 2,
+    "explanation": "Kask, düşme ve çarpma anında başımızı korur. Dizlik ve dirseklik de yaralanmayı azaltır."
+  },
+  {
+    "id": "hb-3-2-05",
+    "unit": "hb-3-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Evde gaz kokusu aldığımızda ne yapmalıyız?",
+    "choices": [
+      "Lambayı yakmalıyız",
+      "Kibrit çakmalıyız",
+      "Kapıları sıkıca kapatmalıyız",
+      "Pencereleri açıp büyüklerimize haber vermeliyiz"
+    ],
+    "answer": 3,
+    "explanation": "Gaz kaçağında kıvılcım patlamaya yol açabilir. Bu yüzden düğmelere ve ateşe dokunmaz, pencereleri açıp büyüklerimize haber veririz."
+  },
+  {
+    "id": "hb-3-2-06",
+    "unit": "hb-3-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi mikropların bulaşmasını önler?",
+    "choices": [
+      "Elleri su ve sabunla yıkamak",
+      "Ortak bardak kullanmak",
+      "Tırnakları uzatmak",
+      "Kirli elle göze dokunmak"
+    ],
+    "answer": 0,
+    "explanation": "Mikroplar en çok ellerle taşınır. Elleri su ve sabunla en az 20 saniye yıkamak mikropları uzaklaştırır."
+  },
+  {
+    "id": "hb-3-2-07",
+    "unit": "hb-3-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Gereksiz yere 112'yi aramak, gerçekten yardıma ihtiyacı olanların yardım almasını geciktirebilir.",
+    "answer": true,
+    "explanation": "112 hattı gereksiz yere meşgul edilirse acil durumdaki kişiler hatta ulaşamayabilir."
+  },
+  {
+    "id": "hb-3-2-08",
+    "unit": "hb-3-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Trafik kuralları yalnızca sürücüler için konulmuştur.",
+    "answer": false,
+    "explanation": "Trafik kurallarına sürücüler, yolcular ve yayalar birlikte uyar. Yayalar da ışıklara ve yaya geçitlerine dikkat eder."
+  },
+  {
+    "id": "hb-3-2-09",
+    "unit": "hb-3-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "112'yi arayan kişi görevliye öncelikle hangi bilgiyi vermelidir?",
+    "choices": [
+      "En sevdiği dersi",
+      "Olayın ne olduğunu ve adresi",
+      "Hava durumunu",
+      "Okul numarasını"
+    ],
+    "answer": 1,
+    "explanation": "Görevliye sakin bir sesle ne olduğunu ve olayın adresini söyleriz. Böylece doğru ekip doğru yere hızla ulaşır."
+  },
+  {
+    "id": "hb-3-2-10",
+    "unit": "hb-3-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Yangında bulunduğumuz yer dumanla dolmuşsa nasıl ilerlemeliyiz?",
+    "choices": [
+      "Ayakta ve koşarak",
+      "Asansöre binerek",
+      "Eğilerek, ağzımızı ve burnumuzu kapatarak",
+      "Derin nefes alarak"
+    ],
+    "answer": 2,
+    "explanation": "Duman yukarı doğru yükselir, yere yakın hava daha temizdir. Eğilerek ilerler, ağzımızı ve burnumuzu bir bezle kapatırız."
+  },
+  {
+    "id": "hb-3-3-01",
+    "unit": "hb-3-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Alışverişten sonra satıcıdan hangisini almalıyız?",
+    "choices": [
+      "İmza",
+      "Fiş ya da fatura",
+      "Fotoğraf",
+      "Mektup"
+    ],
+    "answer": 1,
+    "explanation": "Fiş ya da fatura, ürünü satın aldığımızı gösterir. Ürün bozuk çıkarsa değiştirmek için gereklidir."
+  },
+  {
+    "id": "hb-3-3-02",
+    "unit": "hb-3-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi toplumda yardımlaşmaya örnektir?",
+    "choices": [
+      "Sırada öne geçmek",
+      "Yere çöp atmak",
+      "İhtiyacı olanlara giysi bağışlamak",
+      "Gürültü yapmak"
+    ],
+    "answer": 2,
+    "explanation": "Yardımlaşma, ihtiyacı olanlara destek olmaktır. Giysi, kitap ve oyuncak bağışlamak buna örnektir."
+  },
+  {
+    "id": "hb-3-3-03",
+    "unit": "hb-3-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Evimizin yakınında oturan kişilere ne denir?",
+    "choices": [
+      "Akraba",
+      "Müşteri",
+      "Yolcu",
+      "Komşu"
+    ],
+    "answer": 3,
+    "explanation": "Evimizin yakınında oturan kişiler komşularımızdır. Komşular birbirine saygılı davranır ve yardım eder."
+  },
+  {
+    "id": "hb-3-3-04",
+    "unit": "hb-3-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Otobüste yaşlı bir yolcu ayakta kalmışsa ne yaparız?",
+    "choices": [
+      "Yerimizi veririz",
+      "Görmezden geliriz",
+      "Camdan dışarı bakarız",
+      "Uyuyormuş gibi yaparız"
+    ],
+    "answer": 0,
+    "explanation": "Yaşlılara, hastalara ve küçük çocuğu olanlara yer vermek saygılı ve duyarlı bir davranıştır."
+  },
+  {
+    "id": "hb-3-3-05",
+    "unit": "hb-3-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "İstediğimiz her şeyi satın almak bilinçli tüketici davranışıdır.",
+    "answer": false,
+    "explanation": "Bilinçli tüketici önce ihtiyaçlarını belirler ve parasını buna göre harcar."
+  },
+  {
+    "id": "hb-3-3-06",
+    "unit": "hb-3-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir ürünü ya da hizmeti satın alıp kullanan kişiye ne denir?",
+    "choices": [
+      "Tüketici",
+      "Üretici",
+      "Satıcı",
+      "Kasiyer"
+    ],
+    "answer": 0,
+    "explanation": "Satın alıp kullanan kişi tüketicidir. Ürünü yapan ya da yetiştiren kişi ise üreticidir."
+  },
+  {
+    "id": "hb-3-3-07",
+    "unit": "hb-3-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi bilinçli tüketici davranışıdır?",
+    "choices": [
+      "Reklamda gördüğü her şeyi almak",
+      "Ürünün fiyatını ve kalitesini karşılaştırmak",
+      "Son kullanma tarihine bakmamak",
+      "İhtiyacından fazlasını almak"
+    ],
+    "answer": 1,
+    "explanation": "Bilinçli tüketici fiyat ve kaliteyi karşılaştırır, son kullanma tarihine bakar ve ihtiyacı kadar alır."
+  },
+  {
+    "id": "hb-3-3-08",
+    "unit": "hb-3-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Aile bütçesi, ailenin gelir ve giderlerinin planlanmasıdır.",
+    "answer": true,
+    "explanation": "Bütçe yapan aile, kazandığı parayı ihtiyaçlarına göre planlar ve gelirinden fazlasını harcamamaya çalışır."
+  },
+  {
+    "id": "hb-3-3-09",
+    "unit": "hb-3-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bozuk çıkan bir ürünü fişiyle birlikte satıcıya geri götürebiliriz.",
+    "answer": true,
+    "explanation": "Tüketicinin hakları vardır. Bozuk ürün fiş ya da fatura ile değiştirilebilir ya da geri verilebilir."
+  },
+  {
+    "id": "hb-3-3-10",
+    "unit": "hb-3-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Anne ve babamızın çalışarak kazandığı paraya ne denir?",
+    "choices": [
+      "Gider",
+      "Borç",
+      "Gelir",
+      "Bağış"
+    ],
+    "answer": 2,
+    "explanation": "Çalışarak kazanılan para gelirdir. Kira, fatura ve mutfak masrafı gibi harcamalar ise giderdir."
+  },
+  {
+    "id": "hb-3-4-01",
+    "unit": "hb-3-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yön bulmamıza yarayan alet hangisidir?",
+    "choices": [
+      "Termometre",
+      "Pusula",
+      "Saat",
+      "Cetvel"
+    ],
+    "answer": 1,
+    "explanation": "Pusula yön bulmaya yarar. Pusulanın ibresi kuzey-güney doğrultusunu gösterir."
+  },
+  {
+    "id": "hb-3-4-02",
+    "unit": "hb-3-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir ülkenin yönetim merkezi olan şehre ne denir?",
+    "choices": [
+      "Köy",
+      "Liman",
+      "Başkent",
+      "İlçe"
+    ],
+    "answer": 2,
+    "explanation": "Ülkenin yönetildiği şehre başkent denir. Türkiye'nin başkenti Ankara'dır."
+  },
+  {
+    "id": "hb-3-4-03",
+    "unit": "hb-3-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Güneş doğudan doğar, batıdan batar.",
+    "answer": true,
+    "explanation": "Güneş sabah doğudan doğar, akşam batıdan batar. Bu bilgi yönleri bulmamıza yardım eder."
+  },
+  {
+    "id": "hb-3-4-04",
+    "unit": "hb-3-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir ilin en yetkili yöneticisi kimdir?",
+    "choices": [
+      "Vali",
+      "Muhtar",
+      "Kaymakam",
+      "Belediye başkanı"
+    ],
+    "answer": 0,
+    "explanation": "İlleri vali yönetir. İlçeleri kaymakam, mahalle ve köyleri muhtar yönetir."
+  },
+  {
+    "id": "hb-3-4-05",
+    "unit": "hb-3-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Mahalle ve köyleri kim yönetir?",
+    "choices": [
+      "Vali",
+      "Muhtar",
+      "Kaymakam",
+      "Öğretmen"
+    ],
+    "answer": 1,
+    "explanation": "Mahalleyi ve köyü, orada yaşayanların seçtiği muhtar yönetir."
+  },
+  {
+    "id": "hb-3-4-06",
+    "unit": "hb-3-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Şehrin temizlik, su ve ulaşım hizmetlerini hangi kurum yürütür?",
+    "choices": [
+      "Okul",
+      "Hastane",
+      "Belediye",
+      "Postane"
+    ],
+    "answer": 2,
+    "explanation": "Belediye; çöplerin toplanması, su, park ve toplu taşıma gibi hizmetleri yürütür."
+  },
+  {
+    "id": "hb-3-4-07",
+    "unit": "hb-3-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Türkiye Büyük Millet Meclisi hangi şehirde açılmıştır?",
+    "choices": [
+      "İstanbul",
+      "Sivas",
+      "Erzurum",
+      "Ankara"
+    ],
+    "answer": 3,
+    "explanation": "Türkiye Büyük Millet Meclisi 23 Nisan 1920'de Ankara'da açılmıştır."
+  },
+  {
+    "id": "hb-3-4-08",
+    "unit": "hb-3-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Matematik öğretmeni, Mustafa'ya hangi adı vermiştir?",
+    "choices": [
+      "Kemal",
+      "Ali",
+      "Rıza",
+      "Cemal"
+    ],
+    "answer": 0,
+    "explanation": "Mustafa matematikte çok başarılıydı. Öğretmeni ona \"olgunluk\" anlamına gelen Kemal adını verdi."
+  },
+  {
+    "id": "hb-3-4-09",
+    "unit": "hb-3-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Atatürk 1881 yılında Ankara'da doğmuştur.",
+    "answer": false,
+    "explanation": "Atatürk 1881'de Selanik'te doğmuştur. Ankara ise başkentimizdir ve Anıtkabir oradadır."
+  },
+  {
+    "id": "hb-3-4-10",
+    "unit": "hb-3-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Pusulanın renkli ucu kuzeyi gösterir.",
+    "answer": true,
+    "explanation": "Pusulanın ibresinin renkli ucu kuzeyi gösterir. Kuzeyi bulunca öteki yönleri de belirleyebiliriz."
+  },
+  {
+    "id": "hb-3-4-11",
+    "unit": "hb-3-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Mustafa Kemal'e \"Atatürk\" soyadını kim vermiştir?",
+    "choices": [
+      "Türkiye Büyük Millet Meclisi",
+      "Öğretmeni",
+      "Annesi",
+      "Arkadaşları"
+    ],
+    "answer": 0,
+    "explanation": "1934'te Soyadı Kanunu çıkınca Türkiye Büyük Millet Meclisi, Mustafa Kemal'e \"Atatürk\" soyadını verdi."
+  },
+  {
+    "id": "hb-3-5-01",
+    "unit": "hb-3-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi geri dönüştürülebilen bir atıktır?",
+    "choices": [
+      "Kullanılmış peçete",
+      "Islak mendil",
+      "Cam şişe",
+      "Sakız"
+    ],
+    "answer": 2,
+    "explanation": "Cam, kâğıt, plastik ve metal atıklar geri dönüştürülerek yeniden kullanılabilir."
+  },
+  {
+    "id": "hb-3-5-02",
+    "unit": "hb-3-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi bir doğal afettir?",
+    "choices": [
+      "Trafik kazası",
+      "Deprem",
+      "Elektrik kesintisi",
+      "Musluğun bozulması"
+    ],
+    "answer": 1,
+    "explanation": "Deprem, sel, çığ ve heyelan doğal afetlerdir. Doğa olayları sonucunda meydana gelirler."
+  },
+  {
+    "id": "hb-3-5-03",
+    "unit": "hb-3-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Havanın sıcaklığını ölçen alet hangisidir?",
+    "choices": [
+      "Termometre",
+      "Pusula",
+      "Terazi",
+      "Cetvel"
+    ],
+    "answer": 0,
+    "explanation": "Sıcaklık termometre ile ölçülür. Pusula yön bulmaya, terazi tartmaya, cetvel uzunluk ölçmeye yarar."
+  },
+  {
+    "id": "hb-3-5-04",
+    "unit": "hb-3-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Ormanlar birçok canlıya yuva olur.",
+    "answer": true,
+    "explanation": "Ormanlarda kuşlar, böcekler, memeliler ve pek çok bitki yaşar. Ormanlar havayı da temizler."
+  },
+  {
+    "id": "hb-3-5-05",
+    "unit": "hb-3-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Toprağın yağmur ve rüzgârla taşınmasını önlemek için en etkili yol hangisidir?",
+    "choices": [
+      "Ormanları kesmek",
+      "Anız yakmak",
+      "Tarlaları boş bırakmak",
+      "Ağaç dikmek"
+    ],
+    "answer": 3,
+    "explanation": "Toprağın su ve rüzgârla taşınmasına erozyon denir. Ağaç ve bitki kökleri toprağı tutarak erozyonu önler."
+  },
+  {
+    "id": "hb-3-5-06",
+    "unit": "hb-3-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Alışverişte plastik poşet yerine bez çanta kullanmak neyi azaltır?",
+    "choices": [
+      "Ürünlerin fiyatını",
+      "Atık miktarını",
+      "Alışveriş süresini",
+      "Ürünlerin ağırlığını"
+    ],
+    "answer": 1,
+    "explanation": "Bez çanta defalarca kullanılır. Böylece daha az plastik poşet çöpe gider ve atık azalır."
+  },
+  {
+    "id": "hb-3-5-07",
+    "unit": "hb-3-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Deprem çantasında hangisinin bulunması gerekir?",
+    "choices": [
+      "Oyun konsolu",
+      "Vazo",
+      "Su, el feneri ve düdük",
+      "Halı"
+    ],
+    "answer": 2,
+    "explanation": "Deprem çantasında su, dayanıklı yiyecek, el feneri, düdük, radyo ve ilk yardım malzemesi bulunur."
+  },
+  {
+    "id": "hb-3-5-08",
+    "unit": "hb-3-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Plastik bir şişe doğada kısa sürede kendiliğinden yok olur.",
+    "answer": false,
+    "explanation": "Plastik doğada yüzlerce yıl yok olmadan kalabilir. Bu yüzden plastik atıklar geri dönüşüm kutusuna atılır."
+  },
+  {
+    "id": "hb-3-5-09",
+    "unit": "hb-3-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Kutup ayısının kalın kürkü ve yağ tabakası soğuktan korunmasını sağlar.",
+    "answer": true,
+    "explanation": "Canlılar yaşadıkları yere uygun özellikler taşır. Kalın kürk ve yağ tabakası vücut ısısını korur."
+  },
+  {
+    "id": "hb-3-5-10",
+    "unit": "hb-3-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hava olaylarını inceleyip hava tahmini yapan bilim dalı hangisidir?",
+    "choices": [
+      "Meteoroloji",
+      "Astronomi",
+      "Arkeoloji",
+      "Biyoloji"
+    ],
+    "answer": 0,
+    "explanation": "Meteoroloji hava olaylarını inceler. Meteoroloji uzmanları hava tahmini yaparak bizi önceden bilgilendirir."
+  },
+  {
+    "id": "hb-3-5-11",
+    "unit": "hb-3-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kâğıt atıkların geri dönüştürülmesi en çok hangisinin korunmasını sağlar?",
+    "choices": [
+      "Madenlerin",
+      "Ormanların",
+      "Kayaların",
+      "Çöllerin"
+    ],
+    "answer": 1,
+    "explanation": "Kâğıt ağaçtan üretilir. Kâğıt geri dönüştürülünce daha az ağaç kesilir ve ormanlar korunur."
+  },
+  {
+    "id": "hb-3-6-01",
+    "unit": "hb-3-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir bilim insanında bulunması beklenen özellik hangisidir?",
+    "choices": [
+      "Çabuk vazgeçmek",
+      "Soru sormaktan kaçınmak",
+      "Meraklı ve sabırlı olmak",
+      "Gözlem yapmamak"
+    ],
+    "answer": 2,
+    "explanation": "Bilim insanları meraklı, sabırlı ve dikkatlidir. Başarısız olsalar da denemekten vazgeçmezler."
+  },
+  {
+    "id": "hb-3-6-02",
+    "unit": "hb-3-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Müze ve sergilerde nasıl davranmalıyız?",
+    "choices": [
+      "Eserlere dokunmadan, sessizce gezmeliyiz",
+      "Koşmalıyız",
+      "Eserlerin üzerine yazı yazmalıyız",
+      "Yüksek sesle konuşmalıyız"
+    ],
+    "answer": 0,
+    "explanation": "Müzedeki eserler çok değerlidir. Onlara dokunmaz, başkalarını rahatsız etmeden gezeriz."
+  },
+  {
+    "id": "hb-3-6-03",
+    "unit": "hb-3-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Teknolojik ürünler zaman içinde değişir ve gelişir.",
+    "answer": true,
+    "explanation": "Telefon, televizyon ve bilgisayar ilk hâllerinden çok farklıdır. İhtiyaçlar değiştikçe ürünler de gelişir."
+  },
+  {
+    "id": "hb-3-6-04",
+    "unit": "hb-3-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "İnternette okuduğumuz her bilgi doğrudur.",
+    "answer": false,
+    "explanation": "İnternette yanlış ve yanıltıcı bilgiler de bulunur. Bilgiyi güvenilir kaynaklardan kontrol etmeliyiz."
+  },
+  {
+    "id": "hb-3-6-05",
+    "unit": "hb-3-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Telefonu kim icat etmiştir?",
+    "choices": [
+      "Thomas Edison",
+      "Alexander Graham Bell",
+      "Isaac Newton",
+      "Albert Einstein"
+    ],
+    "answer": 1,
+    "explanation": "Telefonun mucidi olarak Alexander Graham Bell bilinir. Bell, telefonun patentini 1876'da almıştır."
+  },
+  {
+    "id": "hb-3-6-06",
+    "unit": "hb-3-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hangisi en eski haberleşme yoludur?",
+    "choices": [
+      "Akıllı telefon",
+      "E-posta",
+      "Televizyon",
+      "Mektup"
+    ],
+    "answer": 3,
+    "explanation": "İnsanlar yüzyıllar boyunca mektupla haberleşmiştir. Televizyon, e-posta ve akıllı telefon çok daha yenidir."
+  },
+  {
+    "id": "hb-3-6-07",
+    "unit": "hb-3-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Geleneksel el sanatlarımızdan biri hangisidir?",
+    "choices": [
+      "Bale",
+      "Ebru",
+      "Opera",
+      "Sinema"
+    ],
+    "answer": 1,
+    "explanation": "Ebru, su üzerine boyalarla desen yapılıp kâğıda geçirilen geleneksel bir sanatımızdır."
+  },
+  {
+    "id": "hb-3-6-08",
+    "unit": "hb-3-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Ampulün icadı geceleri aydınlanmayı kolaylaştırmıştır.",
+    "answer": true,
+    "explanation": "Ampulden önce insanlar mum ve gaz lambası kullanırdı. Elektrikli ampul aydınlanmayı kolay ve güvenli hâle getirdi."
+  },
+  {
+    "id": "hb-3-6-09",
+    "unit": "hb-3-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "2015 yılında Nobel Kimya Ödülü'nü alan Türk bilim insanı kimdir?",
+    "choices": [
+      "Aziz Sancar",
+      "Cahit Arf",
+      "Ali Kuşçu",
+      "Piri Reis"
+    ],
+    "answer": 0,
+    "explanation": "Aziz Sancar, hücrelerin hasar gören DNA'yı nasıl onardığını açıklayan çalışmalarıyla 2015'te Nobel Kimya Ödülü'nü almıştır."
+  },
+  {
+    "id": "hb-3-6-10",
+    "unit": "hb-3-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "İnternette bulduğumuz bir bilginin doğruluğundan emin olmak için ne yapmalıyız?",
+    "choices": [
+      "Hemen paylaşmalıyız",
+      "İlk gördüğümüze inanmalıyız",
+      "Yalnızca başlığını okumalıyız",
+      "Güvenilir başka kaynaklardan kontrol etmeliyiz"
+    ],
+    "answer": 3,
+    "explanation": "Bir bilgiyi kitap, ansiklopedi ve resmî kurum siteleri gibi güvenilir kaynaklardan karşılaştırarak doğrularız."
+  }
+]

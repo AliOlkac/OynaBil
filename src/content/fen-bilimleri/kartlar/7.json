@@ -1,0 +1,115 @@
+[
+  {
+    "kind": "pairs",
+    "id": "fen-7-2-enerji-donusumu",
+    "unit": "fen-7-2",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{aracta} kullanım amacına uygun olarak gerçekleşen enerji dönüşümü hangisidir?", "answer": "donusum" },
+      { "prompt": "Kullanım amacına uygun olarak {donusturen} araç hangisidir?", "answer": "arac" }
+    ],
+    "statement": { "text": "{aracta} kullanım amacına uygun olarak {donusur}.", "swap": "donusur" },
+    "explanation": "{aracta} kullanım amacına uygun olarak {donusur}. Enerji yok olmaz, bir türden başka bir türe dönüşür.",
+    "items": [
+      { "id": "utu", "arac": "Ütü", "aracta": "Ütüde", "donusum": "Elektrik enerjisi → ısı enerjisi", "donusturen": "elektrik enerjisini ısı enerjisine dönüştüren", "donusur": "elektrik enerjisi ısı enerjisine dönüşür" },
+      { "id": "vantilator", "arac": "Vantilatör", "aracta": "Vantilatörde", "donusum": "Elektrik enerjisi → hareket enerjisi", "donusturen": "elektrik enerjisini hareket enerjisine dönüştüren", "donusur": "elektrik enerjisi hareket enerjisine dönüşür" },
+      { "id": "ampul", "arac": "Ampul", "aracta": "Ampulde", "donusum": "Elektrik enerjisi → ışık enerjisi", "donusturen": "elektrik enerjisini ışık enerjisine dönüştüren", "donusur": "elektrik enerjisi ışık enerjisine dönüşür" },
+      { "id": "gunes-paneli", "arac": "Güneş paneli", "aracta": "Güneş panelinde", "donusum": "Işık enerjisi → elektrik enerjisi", "donusturen": "ışık enerjisini elektrik enerjisine dönüştüren", "donusur": "ışık enerjisi elektrik enerjisine dönüşür" },
+      { "id": "hoparlor", "arac": "Hoparlör", "aracta": "Hoparlörde", "donusum": "Elektrik enerjisi → ses enerjisi", "donusturen": "elektrik enerjisini ses enerjisine dönüştüren", "donusur": "elektrik enerjisi ses enerjisine dönüşür" },
+      { "id": "pil", "arac": "Pil", "aracta": "Pilde", "donusum": "Kimyasal enerji → elektrik enerjisi", "donusturen": "kimyasal enerjiyi elektrik enerjisine dönüştüren", "donusur": "kimyasal enerji elektrik enerjisine dönüşür" },
+      { "id": "ruzgar-turbini", "arac": "Rüzgâr türbini", "aracta": "Rüzgâr türbininde", "donusum": "Hareket enerjisi → elektrik enerjisi", "donusturen": "hareket enerjisini elektrik enerjisine dönüştüren", "donusur": "hareket enerjisi elektrik enerjisine dönüşür" }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-7-3-organ-sistem",
+    "unit": "fen-7-3",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{organ} hangi sistemin yapılarından biridir?", "answer": "sistem" },
+      { "prompt": "{gorevi} yapı hangisidir?", "answer": "organ" }
+    ],
+    "statement": { "text": "{organ}, {sistemin} yapılarından biridir.", "swap": "sistemin" },
+    "explanation": "{organ}, {sistemin} yapılarından biridir.",
+    "items": [
+      { "id": "mide", "organ": "Mide", "sistem": "Sindirim sistemi", "sistemin": "sindirim sisteminin", "gorevi": "Besinleri kasılıp gevşeyerek ve öz suyuyla bulamaç hâline getiren", "not": "Proteinlerin kimyasal sindirimi midede başlar." },
+      { "id": "kalp", "organ": "Kalp", "sistem": "Dolaşım sistemi", "sistemin": "dolaşım sisteminin", "gorevi": "Kasılıp gevşeyerek kanı vücuda pompalayan", "not": "Kalp, kanı damarlar aracılığıyla bütün vücuda pompalar." },
+      { "id": "akciger", "organ": "Akciğer", "sistem": "Solunum sistemi", "sistemin": "solunum sisteminin", "gorevi": "Kan ile hava arasındaki gaz alışverişinin gerçekleştiği", "not": "Akciğerlerdeki alveollerde oksijen kana, karbondioksit havaya geçer." },
+      { "id": "bobrek", "organ": "Böbrek", "sistem": "Boşaltım sistemi", "sistemin": "boşaltım sisteminin", "gorevi": "Kanı süzerek idrarı oluşturan", "not": "Böbrekler kandaki atık maddeleri süzerek idrarı oluşturur." },
+      { "id": "ince-bagirsak", "organ": "İnce bağırsak", "sistem": "Sindirim sistemi", "sistemin": "sindirim sisteminin", "gorevi": "Sindirimin tamamlandığı ve besinlerin kana emildiği", "not": "Sindirim ince bağırsakta tamamlanır ve besinler buradan kana geçer." },
+      { "id": "soluk-borusu", "organ": "Soluk borusu", "sistem": "Solunum sistemi", "sistemin": "solunum sisteminin", "gorevi": "Havayı gırtlaktan bronşlara ileten", "not": "Soluk borusu havayı akciğerlere giden bronşlara iletir." },
+      { "id": "idrar-kesesi", "organ": "İdrar kesesi", "sistem": "Boşaltım sistemi", "sistemin": "boşaltım sisteminin", "gorevi": "İdrarın vücuttan atılana kadar depolandığı", "not": "Böbreklerde oluşan idrar, idrar kesesinde biriktirilir." },
+      { "id": "damar", "organ": "Atardamar", "sistem": "Dolaşım sistemi", "sistemin": "dolaşım sisteminin", "gorevi": "Kanı kalpten vücuda götüren", "not": "Atardamarlar kanı kalpten vücuda götürür." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "fen-7-4-ince-kenarli-mercek",
+    "unit": "fen-7-4",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerin hangisinde ince kenarlı mercek kullanılır?",
+    "negative": "Aşağıdakilerin hangisinde ince kenarlı mercek kullanılmaz?",
+    "statement": "{item}, ince kenarlı merceğin kullanıldığı yerlerden biridir.",
+    "explanation": "İnce kenarlı mercek ışınları toplar ve cisimleri büyük gösterebilir. Kullanıldığı yerler: {members}. Miyop gözlüğünde ve kapı dürbününde ise kalın kenarlı mercek bulunur.",
+    "members": ["Büyüteç", "Mikroskop", "Teleskop", "Hipermetrop gözlüğü"],
+    "nonMembers": ["Miyop gözlüğü", "Kapı dürbünü", "Boy aynası", "Araçların yan aynası"]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-7-5-element-sembol-1",
+    "unit": "fen-7-5",
+    "difficulty": 1,
+    "questions": [
+      { "prompt": "{element} elementinin sembolü hangisidir?", "answer": "sembol" },
+      { "prompt": "Sembolü {sembol} olan element hangisidir?", "answer": "element" }
+    ],
+    "statement": { "text": "{element} elementinin sembolü {sembol} olarak yazılır.", "swap": "sembol" },
+    "explanation": "{element} elementinin sembolü {sembol} olarak yazılır. {element}, periyodik tablonun {no} numaralı elementidir.",
+    "items": [
+      { "id": "hidrojen", "element": "Hidrojen", "sembol": "H", "no": "1" },
+      { "id": "helyum", "element": "Helyum", "sembol": "He", "no": "2" },
+      { "id": "lityum", "element": "Lityum", "sembol": "Li", "no": "3" },
+      { "id": "berilyum", "element": "Berilyum", "sembol": "Be", "no": "4" },
+      { "id": "bor", "element": "Bor", "sembol": "B", "no": "5" },
+      { "id": "karbon", "element": "Karbon", "sembol": "C", "no": "6" },
+      { "id": "azot", "element": "Azot", "sembol": "N", "no": "7" },
+      { "id": "oksijen", "element": "Oksijen", "sembol": "O", "no": "8" },
+      { "id": "flor", "element": "Flor", "sembol": "F", "no": "9" }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-7-5-element-sembol-2",
+    "unit": "fen-7-5",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{element} elementinin sembolü hangisidir?", "answer": "sembol" },
+      { "prompt": "Sembolü {sembol} olan element hangisidir?", "answer": "element" }
+    ],
+    "statement": { "text": "{element} elementinin sembolü {sembol} olarak yazılır.", "swap": "sembol" },
+    "explanation": "{element} elementinin sembolü {sembol} olarak yazılır. {element}, periyodik tablonun {no} numaralı elementidir.",
+    "items": [
+      { "id": "neon", "element": "Neon", "sembol": "Ne", "no": "10" },
+      { "id": "sodyum", "element": "Sodyum", "sembol": "Na", "no": "11" },
+      { "id": "magnezyum", "element": "Magnezyum", "sembol": "Mg", "no": "12" },
+      { "id": "aluminyum", "element": "Alüminyum", "sembol": "Al", "no": "13" },
+      { "id": "silisyum", "element": "Silisyum", "sembol": "Si", "no": "14" },
+      { "id": "fosfor", "element": "Fosfor", "sembol": "P", "no": "15" },
+      { "id": "kukurt", "element": "Kükürt", "sembol": "S", "no": "16" },
+      { "id": "klor", "element": "Klor", "sembol": "Cl", "no": "17" },
+      { "id": "argon", "element": "Argon", "sembol": "Ar", "no": "18" }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "fen-7-7-yenilenebilir",
+    "unit": "fen-7-7",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi yenilenebilir enerji kaynağıdır?",
+    "negative": "Aşağıdakilerden hangisi yenilenebilir enerji kaynağı değildir?",
+    "statement": "{item}, yenilenebilir enerji kaynaklarından biridir.",
+    "explanation": "Yenilenebilir enerji kaynakları doğada sürekli yenilenir: {members}. Kömür, petrol, doğal gaz ve uranyum ise kullanıldıkça tükenen yenilenemez kaynaklardır.",
+    "members": ["Güneş enerjisi", "Rüzgâr enerjisi", "Jeotermal enerji", "Hidroelektrik enerji", "Biyokütle enerjisi"],
+    "nonMembers": ["Kömür", "Petrol", "Doğal gaz", "Uranyum"]
+  }
+]

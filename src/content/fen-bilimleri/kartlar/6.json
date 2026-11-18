@@ -1,0 +1,90 @@
+[
+  {
+    "kind": "pairs",
+    "id": "fen-6-1-gezegen-sirasi",
+    "unit": "fen-6-1",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Güneş'e yakınlık bakımından {sira} sırada yer alan gezegen hangisidir?", "answer": "gezegen" },
+      { "prompt": "{gezegen}, Güneş'e yakınlık bakımından kaçıncı sıradadır?", "answer": "siraSik" }
+    ],
+    "statement": { "text": "{gezegen}, Güneş'e yakınlık bakımından {sira} sıradaki gezegendir.", "swap": "sira" },
+    "explanation": "{gezegen}, Güneş'e yakınlık bakımından {sira} sıradadır. Sıralama: Merkür, Venüs, Dünya, Mars, Jüpiter, Satürn, Uranüs, Neptün.",
+    "items": [
+      { "id": "merkur", "gezegen": "Merkür", "sira": "birinci", "siraSik": "Birinci" },
+      { "id": "venus", "gezegen": "Venüs", "sira": "ikinci", "siraSik": "İkinci" },
+      { "id": "dunya", "gezegen": "Dünya", "sira": "üçüncü", "siraSik": "Üçüncü" },
+      { "id": "mars", "gezegen": "Mars", "sira": "dördüncü", "siraSik": "Dördüncü" },
+      { "id": "jupiter", "gezegen": "Jüpiter", "sira": "beşinci", "siraSik": "Beşinci" },
+      { "id": "saturn", "gezegen": "Satürn", "sira": "altıncı", "siraSik": "Altıncı" },
+      { "id": "uranus", "gezegen": "Uranüs", "sira": "yedinci", "siraSik": "Yedinci" },
+      { "id": "neptun", "gezegen": "Neptün", "sira": "sekizinci", "siraSik": "Sekizinci" }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "fen-6-1-ic-gezegenler",
+    "unit": "fen-6-1",
+    "difficulty": 1,
+    "positive": "Aşağıdakilerden hangisi iç (karasal) gezegenlerden biridir?",
+    "negative": "Aşağıdakilerden hangisi iç (karasal) gezegenlerden biri değildir?",
+    "statement": "{item}, iç (karasal) gezegenlerden biridir.",
+    "explanation": "İç gezegenler Güneş'e yakın, kayalık yapılı gezegenlerdir: {members}. Jüpiter, Satürn, Uranüs ve Neptün ise dış (gazsal) gezegenlerdir.",
+    "members": ["Merkür", "Venüs", "Dünya", "Mars"],
+    "nonMembers": ["Jüpiter", "Satürn", "Uranüs", "Neptün"]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-6-3-ic-salgi-bezleri",
+    "unit": "fen-6-3",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "Vücudumuzda {hormonu} salgılayan bez hangisidir?", "answer": "bez" },
+      { "prompt": "{bez} için aşağıdakilerden hangisi doğrudur?", "answer": "gorev" }
+    ],
+    "statement": { "text": "{bez}, {hormonu} salgılar.", "swap": "hormonu" },
+    "explanation": "{bez}, {hormonu} salgılar. {gorev}.",
+    "items": [
+      { "id": "hipofiz", "bez": "Hipofiz bezi", "hormonu": "büyüme hormonunu", "gorev": "Büyümeyi ve diğer iç salgı bezlerinin çalışmasını düzenler" },
+      { "id": "tiroit", "bez": "Tiroit bezi", "hormonu": "tiroksin hormonunu", "gorev": "Vücudun metabolizma hızını düzenler" },
+      { "id": "pankreas", "bez": "Pankreas", "hormonu": "insülin ve glukagon hormonlarını", "gorev": "Kandaki şeker miktarını düzenler" },
+      { "id": "bobrek-ustu", "bez": "Böbrek üstü bezi", "hormonu": "adrenalin hormonunu", "gorev": "Korku, heyecan ve öfke anında vücudu harekete hazırlar" }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "fen-6-4-cukur-ayna",
+    "unit": "fen-6-4",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerin hangisinde çukur ayna kullanılır?",
+    "negative": "Aşağıdakilerin hangisinde çukur ayna kullanılmaz?",
+    "statement": "{item}, çukur aynanın kullanıldığı yerlerden biridir.",
+    "explanation": "Çukur ayna ışığı toplar ve yakındaki cisimleri büyük gösterir. Kullanıldığı yerler: {members}. Tümsek ayna geniş alan gösterir, düz ayna ise görüntüyü aynı boyda verir.",
+    "members": ["Diş hekimi aynası", "Makyaj aynası", "Araba farı", "El feneri"],
+    "nonMembers": ["Mağaza güvenlik aynası", "Araçların yan aynası", "Boy aynası", "Viraj aynası"]
+  },
+  {
+    "kind": "list",
+    "id": "fen-6-5-ayirt-edici",
+    "unit": "fen-6-5",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi maddeler için ayırt edici bir özelliktir?",
+    "negative": "Aşağıdakilerden hangisi maddeler için ayırt edici bir özellik değildir?",
+    "statement": "{item}, maddeler için ayırt edici bir özelliktir.",
+    "explanation": "Ayırt edici özellikler madde miktarına bağlı değildir ve maddeyi tanımamızı sağlar: {members}. Kütle, hacim, sıcaklık ve ağırlık her madde için değişebilen ortak özelliklerdir.",
+    "members": ["Yoğunluk", "Erime noktası", "Kaynama noktası", "Donma noktası"],
+    "nonMembers": ["Kütle", "Hacim", "Sıcaklık", "Ağırlık"]
+  },
+  {
+    "kind": "list",
+    "id": "fen-6-6-iletkenler",
+    "unit": "fen-6-6",
+    "difficulty": 1,
+    "positive": "Aşağıdaki maddelerden hangisi elektriği iletir?",
+    "negative": "Aşağıdaki maddelerden hangisi elektriği iletmez?",
+    "statement": "{item}, elektriği ileten bir maddedir.",
+    "explanation": "Metaller elektriği iyi iletir: {members}. Plastik, cam, kuru tahta, kauçuk ve porselen ise yalıtkandır.",
+    "members": ["Bakır", "Demir", "Alüminyum", "Gümüş", "Altın"],
+    "nonMembers": ["Plastik", "Cam", "Kuru tahta", "Kauçuk", "Porselen"]
+  }
+]

@@ -1,0 +1,1148 @@
+[
+  {
+    "id": "fen-8-1-01",
+    "unit": "fen-8-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Mevsimlerin oluşmasının temel nedeni aşağıdakilerden hangisidir?",
+    "choices": [
+      "Dünya'nın Güneş'e yaklaşıp uzaklaşması",
+      "Dünya'nın kendi ekseni çevresinde dönmesi",
+      "Ay'ın Dünya çevresinde dolanması",
+      "Dünya'nın eksen eğikliği ve Güneş çevresinde dolanması"
+    ],
+    "answer": 3,
+    "explanation": "Dünya'nın dönme ekseni eğik olduğu için Güneş çevresinde dolanırken ışınların geliş açısı yıl içinde değişir ve mevsimler oluşur."
+  },
+  {
+    "id": "fen-8-1-02",
+    "unit": "fen-8-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Dünya'nın kendi ekseni çevresinde dönmesi gece ile gündüzün oluşmasını sağlar.",
+    "answer": true,
+    "explanation": "Dünya kendi ekseni çevresindeki bir turunu 24 saatte tamamlar. Güneş'e dönük yüzde gündüz, öteki yüzde gece yaşanır."
+  },
+  {
+    "id": "fen-8-1-03",
+    "unit": "fen-8-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Dar bir bölgede kısa süre içinde görülen atmosfer olaylarına ne ad verilir?",
+    "choices": [
+      "İklim",
+      "Hava olayları",
+      "Mevsim",
+      "Ekinoks"
+    ],
+    "answer": 1,
+    "explanation": "Hava olayları kısa süreli ve değişkendir. İklim ise geniş bir bölgede uzun yıllar boyunca görülen hava olaylarının ortalamasıdır."
+  },
+  {
+    "id": "fen-8-1-04",
+    "unit": "fen-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "21 Haziran tarihinde Kuzey Yarım Küre'de aşağıdakilerden hangisi yaşanır?",
+    "choices": [
+      "Yılın en uzun gündüzü",
+      "Yılın en uzun gecesi",
+      "Gece ile gündüzün eşitliği",
+      "Kış mevsiminin başlangıcı"
+    ],
+    "answer": 0,
+    "explanation": "21 Haziran'da Güneş ışınları Kuzey Yarım Küre'ye en dik açıyla gelir. Bu yarım kürede yaz başlar ve en uzun gündüz yaşanır."
+  },
+  {
+    "id": "fen-8-1-05",
+    "unit": "fen-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Dünya'nın her yerinde gece ile gündüz sürelerinin eşit olduğu tarihler hangileridir?",
+    "choices": [
+      "21 Haziran ve 21 Aralık",
+      "21 Mart ve 21 Haziran",
+      "23 Eylül ve 21 Aralık",
+      "21 Mart ve 23 Eylül"
+    ],
+    "answer": 3,
+    "explanation": "21 Mart ve 23 Eylül'de Güneş ışınları Ekvator'a dik gelir. Bu tarihlerde gece ve gündüz süreleri eşit olur."
+  },
+  {
+    "id": "fen-8-1-06",
+    "unit": "fen-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "21 Aralık tarihinde Güney Yarım Küre'de hangi mevsim başlar?",
+    "choices": [
+      "Kış",
+      "İlkbahar",
+      "Yaz",
+      "Sonbahar"
+    ],
+    "answer": 2,
+    "explanation": "21 Aralık'ta Güneş ışınları Güney Yarım Küre'ye dik gelir. Bu yarım kürede yaz, Kuzey Yarım Küre'de kış başlar."
+  },
+  {
+    "id": "fen-8-1-07",
+    "unit": "fen-8-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Kuzey Yarım Küre'de yaz mevsimi yaşanırken Güney Yarım Küre'de de yaz mevsimi yaşanır.",
+    "answer": false,
+    "explanation": "Eksen eğikliği nedeniyle iki yarım kürede aynı anda zıt mevsimler yaşanır. Kuzeyde yaz varken güneyde kış yaşanır."
+  },
+  {
+    "id": "fen-8-1-08",
+    "unit": "fen-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İklimi ve iklim olaylarını inceleyen bilim dalı hangisidir?",
+    "choices": [
+      "Klimatoloji",
+      "Meteoroloji",
+      "Jeoloji",
+      "Astronomi"
+    ],
+    "answer": 0,
+    "explanation": "İklim bilimine klimatoloji, iklim bilimcilere klimatolog denir. Meteoroloji ise günlük hava olaylarını inceler."
+  },
+  {
+    "id": "fen-8-1-09",
+    "unit": "fen-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Rüzgârlar hangi yönde eser?",
+    "choices": [
+      "Alçak basınç alanından yüksek basınç alanına",
+      "Sıcak bölgeden soğuk bölgeye",
+      "Nemli bölgeden kurak bölgeye",
+      "Yüksek basınç alanından alçak basınç alanına"
+    ],
+    "answer": 3,
+    "explanation": "Rüzgâr, yüksek basınç alanından alçak basınç alanına doğru olan yatay hava hareketidir."
+  },
+  {
+    "id": "fen-8-1-10",
+    "unit": "fen-8-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Türkiye'de yaz aylarında havanın daha sıcak olmasının nedeni nedir?",
+    "choices": [
+      "Dünya'nın Güneş'e en yakın konumda olması",
+      "Güneş ışınlarının yeryüzüne daha dik açıyla gelmesi",
+      "Dünya'nın kendi ekseni çevresinde daha yavaş dönmesi",
+      "Ay'ın Dünya'ya daha yakın olması"
+    ],
+    "answer": 1,
+    "explanation": "Işınlar dik geldiğinde birim yüzeye düşen enerji artar ve hava ısınır. Dünya'nın Güneş'e uzaklığı mevsimleri belirlemez."
+  },
+  {
+    "id": "fen-8-1-11",
+    "unit": "fen-8-1",
+    "type": "true-false",
+    "difficulty": 3,
+    "prompt": "Dünya'nın dönme ekseni eğik olmasaydı mevsimler oluşmazdı.",
+    "answer": true,
+    "explanation": "Eksen eğik olmasaydı Güneş ışınlarının bir bölgeye geliş açısı yıl boyunca değişmezdi; mevsim farkı ortaya çıkmazdı."
+  },
+  {
+    "id": "fen-8-2-01",
+    "unit": "fen-8-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "DNA'nın kendini eşlemesine replikasyon denir.",
+    "answer": true,
+    "explanation": "Hücre bölünmeden önce DNA kendini eşler. Böylece yeni hücrelere aynı kalıtsal bilgi aktarılır."
+  },
+  {
+    "id": "fen-8-2-02",
+    "unit": "fen-8-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Aşağıdakilerden hangisi kalıtsal olmayan bir değişikliktir?",
+    "choices": [
+      "Altı parmaklı doğmak",
+      "Orak hücreli anemi hastası olmak",
+      "Düzenli spor yapan kişinin kaslarının gelişmesi",
+      "Albino olarak doğmak"
+    ],
+    "answer": 2,
+    "explanation": "Kasların sporla gelişmesi çevrenin etkisiyle ortaya çıkan bir modifikasyondur ve yavrulara aktarılmaz. Diğerleri mutasyon örneğidir."
+  },
+  {
+    "id": "fen-8-2-03",
+    "unit": "fen-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kalıtsal yapılar küçükten büyüğe doğru nasıl sıralanır?",
+    "choices": [
+      "Gen - nükleotit - DNA - kromozom",
+      "Nükleotit - DNA - gen - kromozom",
+      "Kromozom - DNA - gen - nükleotit",
+      "Nükleotit - gen - DNA - kromozom"
+    ],
+    "answer": 3,
+    "explanation": "Nükleotitler birleşerek genleri, genler DNA'yı oluşturur. DNA da proteinlerle birlikte kromozomları meydana getirir."
+  },
+  {
+    "id": "fen-8-2-04",
+    "unit": "fen-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "DNA'nın yapısında aşağıdaki organik bazlardan hangisi bulunmaz?",
+    "choices": [
+      "Urasil",
+      "Adenin",
+      "Timin",
+      "Guanin"
+    ],
+    "answer": 0,
+    "explanation": "DNA'da adenin, timin, guanin ve sitozin bazları bulunur. Urasil DNA'nın yapısında yer almaz."
+  },
+  {
+    "id": "fen-8-2-05",
+    "unit": "fen-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir DNA molekülünde 300 adenin nükleotidi varsa timin nükleotidi sayısı kaçtır?",
+    "choices": [
+      "150",
+      "300",
+      "600",
+      "100"
+    ],
+    "answer": 1,
+    "explanation": "DNA'da adenin her zaman timinle eşleşir. Bu nedenle adenin sayısı timin sayısına eşittir."
+  },
+  {
+    "id": "fen-8-2-06",
+    "unit": "fen-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Saf döl uzun boylu (UU) bezelye ile kısa boylu (uu) bezelye çaprazlanıyor. Oluşan yavrular için hangisi doğrudur?",
+    "choices": [
+      "Tamamı kısa boyludur",
+      "Yarısı uzun, yarısı kısa boyludur",
+      "Tamamı melez uzun boyludur",
+      "Tamamı saf döl uzun boyludur"
+    ],
+    "answer": 2,
+    "explanation": "UU × uu çaprazlamasında bütün yavrular Uu genotipindedir. Uzun boy geni baskın olduğu için hepsi melez uzun boylu olur."
+  },
+  {
+    "id": "fen-8-2-07",
+    "unit": "fen-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sağlıklı bir erkeğin vücut hücresindeki kromozomlar nasıl gösterilir?",
+    "choices": [
+      "44 + XX",
+      "22 + X",
+      "22 + Y",
+      "44 + XY"
+    ],
+    "answer": 3,
+    "explanation": "İnsanın vücut hücrelerinde 46 kromozom vardır: 44 vücut kromozomu ve 2 eşey kromozomu. Erkeklerde eşey kromozomları XY'dir."
+  },
+  {
+    "id": "fen-8-2-08",
+    "unit": "fen-8-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Modifikasyonlar kalıtsaldır ve sonraki nesillere aktarılır.",
+    "answer": false,
+    "explanation": "Modifikasyon, çevre etkisiyle yalnızca genlerin işleyişinde ortaya çıkan değişikliktir. Kalıtsal değildir, yavrulara aktarılmaz."
+  },
+  {
+    "id": "fen-8-2-09",
+    "unit": "fen-8-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "İnsanda doğacak çocuğun cinsiyetini babadan gelen eşey kromozomu belirler.",
+    "answer": true,
+    "explanation": "Anneden her zaman X kromozomu gelir. Babadan X gelirse çocuk kız (XX), Y gelirse erkek (XY) olur."
+  },
+  {
+    "id": "fen-8-2-10",
+    "unit": "fen-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İnsülin hormonunun, insan geni aktarılan bakterilere ürettirilmesi hangi çalışma alanına örnektir?",
+    "choices": [
+      "Yapay seçilim",
+      "Modifikasyon",
+      "Genetik mühendisliği",
+      "Adaptasyon"
+    ],
+    "answer": 2,
+    "explanation": "Genetik mühendisliğinde canlıların genleri üzerinde değişiklik yapılır. Gen aktarımıyla bakterilere insülin ürettirilmesi buna örnektir."
+  },
+  {
+    "id": "fen-8-2-11",
+    "unit": "fen-8-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "1000 nükleotitten oluşan bir DNA molekülünde 200 adenin varsa guanin sayısı kaçtır?",
+    "choices": [
+      "200",
+      "300",
+      "400",
+      "600"
+    ],
+    "answer": 1,
+    "explanation": "Adenin = timin = 200, toplam 400 eder. Kalan 600 nükleotidin yarısı guanin, yarısı sitozindir: 600 ÷ 2 = 300."
+  },
+  {
+    "id": "fen-8-2-12",
+    "unit": "fen-8-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Melez uzun boylu iki bezelye (Uu × Uu) çaprazlanıyor. Kısa boylu yavru oluşma olasılığı yüzde kaçtır?",
+    "choices": [
+      "%25",
+      "%50",
+      "%75",
+      "%100"
+    ],
+    "answer": 0,
+    "explanation": "Uu × Uu çaprazlamasında UU, Uu, Uu ve uu oluşur. Yalnızca uu kısa boyludur: 4 olasılıktan 1'i, yani %25."
+  },
+  {
+    "id": "fen-8-3-01",
+    "unit": "fen-8-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Birim yüzeye dik olarak etki eden kuvvete ne denir?",
+    "choices": [
+      "Ağırlık",
+      "Basınç",
+      "Yoğunluk",
+      "Sürtünme"
+    ],
+    "answer": 1,
+    "explanation": "Basınç, yüzeye dik etki eden kuvvetin yüzey alanına bölünmesiyle bulunur."
+  },
+  {
+    "id": "fen-8-3-02",
+    "unit": "fen-8-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Basıncın birimi aşağıdakilerden hangisidir?",
+    "choices": [
+      "Pascal",
+      "Newton",
+      "Joule",
+      "Watt"
+    ],
+    "answer": 0,
+    "explanation": "Basınç birimi pascaldır (Pa). 1 Pa, 1 m² yüzeye 1 N kuvvet etki ettiğinde oluşan basınçtır."
+  },
+  {
+    "id": "fen-8-3-03",
+    "unit": "fen-8-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bıçağın keskin tarafının ince yapılması basıncı artırmak içindir.",
+    "answer": true,
+    "explanation": "Yüzey alanı küçüldükçe basınç artar. İnce kenar kuvveti küçük bir yüzeye yoğunlaştırdığı için bıçak kolay keser."
+  },
+  {
+    "id": "fen-8-3-04",
+    "unit": "fen-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ağırlığı 600 N olan bir sandığın yere temas eden yüzey alanı 2 m²'dir. Sandığın yere yaptığı basınç kaç Pa'dır?",
+    "choices": [
+      "1200 Pa",
+      "598 Pa",
+      "300 Pa",
+      "602 Pa"
+    ],
+    "answer": 2,
+    "explanation": "Basınç = kuvvet ÷ yüzey alanı. 600 ÷ 2 = 300 Pa."
+  },
+  {
+    "id": "fen-8-3-05",
+    "unit": "fen-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Geniş yüzeyi üzerinde duran bir tuğla dar yüzeyi üzerine çevrilirse yere yaptığı basınç nasıl değişir?",
+    "choices": [
+      "Azalır",
+      "Artar",
+      "Değişmez",
+      "Sıfır olur"
+    ],
+    "answer": 1,
+    "explanation": "Tuğlanın ağırlığı değişmez ama yere temas eden yüzey küçülür. Yüzey alanı küçüldüğü için basınç artar."
+  },
+  {
+    "id": "fen-8-3-06",
+    "unit": "fen-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Durgun bir sıvının kabın tabanına yaptığı basınç aşağıdakilerden hangilerine bağlıdır?",
+    "choices": [
+      "Sıvının derinliğine ve yoğunluğuna",
+      "Kabın şekline ve rengine",
+      "Sıvının toplam hacmine",
+      "Kabın taban alanına"
+    ],
+    "answer": 0,
+    "explanation": "Sıvı basıncı sıvının derinliği ve yoğunluğu arttıkça artar. Kabın şekli ve sıvının miktarı basıncı etkilemez."
+  },
+  {
+    "id": "fen-8-3-07",
+    "unit": "fen-8-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Sıvı basıncı, sıvının bulunduğu kabın şekline bağlıdır.",
+    "answer": false,
+    "explanation": "Sıvı basıncı sıvının derinliğine, yoğunluğuna ve yer çekimine bağlıdır. Kabın şekli basıncı değiştirmez."
+  },
+  {
+    "id": "fen-8-3-08",
+    "unit": "fen-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Açık hava basıncını ölçmek için kullanılan araç hangisidir?",
+    "choices": [
+      "Termometre",
+      "Dinamometre",
+      "Barometre",
+      "Elektroskop"
+    ],
+    "answer": 2,
+    "explanation": "Açık hava (atmosfer) basıncı barometre ile ölçülür. Açık hava basıncını ilk ölçen bilim insanı Torricelli'dir."
+  },
+  {
+    "id": "fen-8-3-09",
+    "unit": "fen-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Deniz seviyesinden yükseklere çıkıldıkça açık hava basıncı nasıl değişir?",
+    "choices": [
+      "Artar",
+      "Azalır",
+      "Değişmez",
+      "Önce artar, sonra azalır"
+    ],
+    "answer": 1,
+    "explanation": "Yükseldikçe üzerimizdeki hava tabakası incelir ve havanın yoğunluğu azalır. Bu nedenle açık hava basıncı düşer."
+  },
+  {
+    "id": "fen-8-3-10",
+    "unit": "fen-8-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Ağırlığı 40 N olan bir cismin yere temas eden yüzey alanı 0,02 m²'dir. Cismin yere yaptığı basınç kaç Pa'dır?",
+    "choices": [
+      "800 Pa",
+      "200 Pa",
+      "0,8 Pa",
+      "2000 Pa"
+    ],
+    "answer": 3,
+    "explanation": "Basınç = kuvvet ÷ yüzey alanı. 40 ÷ 0,02 = 2000 Pa."
+  },
+  {
+    "id": "fen-8-3-11",
+    "unit": "fen-8-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Aşağıdakilerden hangisi sıvıların basıncı iletme özelliğinden yararlanılarak yapılmıştır?",
+    "choices": [
+      "Hidrolik fren sistemi",
+      "Barometre",
+      "Kar ayakkabısı",
+      "Çivi"
+    ],
+    "answer": 0,
+    "explanation": "Kapalı kaptaki sıvılar üzerlerine uygulanan basıncı her yöne aynen iletir (Pascal prensibi). Hidrolik frenler bu ilkeyle çalışır."
+  },
+  {
+    "id": "fen-8-3-12",
+    "unit": "fen-8-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Aşağıdakilerin hangisinde basıncı azaltmak amaçlanmıştır?",
+    "choices": [
+      "Çivilerin ucunun sivri yapılması",
+      "İş makinelerine palet takılması",
+      "Bıçakların bilenmesi",
+      "Futbol ayakkabılarının altına diş konması"
+    ],
+    "answer": 1,
+    "explanation": "Palet, ağırlığı geniş bir yüzeye yayarak basıncı azaltır ve aracın yumuşak zemine batmasını önler. Diğerlerinde basınç artırılır."
+  },
+  {
+    "id": "fen-8-3-13",
+    "unit": "fen-8-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Baraj duvarlarının alt kısımları neden üst kısımlarından daha kalın yapılır?",
+    "choices": [
+      "Derinlik arttıkça sıvı basıncı azaldığı için",
+      "Alt kısımda su daha soğuk olduğu için",
+      "Derinlik arttıkça sıvı basıncı arttığı için",
+      "Üst kısımda su daha yoğun olduğu için"
+    ],
+    "answer": 2,
+    "explanation": "Sıvı basıncı derinlikle artar. Barajın tabanına yakın yerlerde basınç en büyük olduğu için duvar altta daha kalın yapılır."
+  },
+  {
+    "id": "fen-8-4-01",
+    "unit": "fen-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Periyodik tablodaki yatay sıralara ne ad verilir?",
+    "choices": [
+      "Grup",
+      "Sütun",
+      "Katman",
+      "Periyot"
+    ],
+    "answer": 3,
+    "explanation": "Periyodik tabloda yatay sıralara periyot, düşey sütunlara grup denir."
+  },
+  {
+    "id": "fen-8-4-02",
+    "unit": "fen-8-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Periyodik tabloda 7 periyot ve 18 grup bulunur.",
+    "answer": true,
+    "explanation": "Periyodik tabloda 7 yatay sıra (periyot) ve 18 düşey sütun (grup) vardır."
+  },
+  {
+    "id": "fen-8-4-03",
+    "unit": "fen-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "pH değeri 3 olan bir çözelti için aşağıdakilerden hangisi doğrudur?",
+    "choices": [
+      "Asidiktir",
+      "Baziktir",
+      "Nötrdür",
+      "Saf sudur"
+    ],
+    "answer": 0,
+    "explanation": "pH değeri 7'den küçük olan çözeltiler asidik, 7 olanlar nötr, 7'den büyük olanlar baziktir."
+  },
+  {
+    "id": "fen-8-4-04",
+    "unit": "fen-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Günümüzde kullanılan periyodik tabloda elementler neye göre sıralanmıştır?",
+    "choices": [
+      "Azalan atom numarasına göre",
+      "Artan atom numarasına göre",
+      "Keşfedildikleri tarihe göre",
+      "Adlarının alfabetik sırasına göre"
+    ],
+    "answer": 1,
+    "explanation": "Modern periyodik tabloda elementler artan atom numarasına (proton sayısına) göre sıralanır."
+  },
+  {
+    "id": "fen-8-4-05",
+    "unit": "fen-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Aşağıdakilerden hangisi fiziksel değişimdir?",
+    "choices": [
+      "Sütün ekşimesi",
+      "Demirin paslanması",
+      "Buzun erimesi",
+      "Kâğıdın yanması"
+    ],
+    "answer": 2,
+    "explanation": "Buz eridiğinde yalnızca hâli değişir, madde yine sudur. Ekşime, paslanma ve yanmada yeni maddeler oluşur; bunlar kimyasal değişimdir."
+  },
+  {
+    "id": "fen-8-4-06",
+    "unit": "fen-8-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Kimyasal tepkimelerde toplam kütle korunur.",
+    "answer": true,
+    "explanation": "Tepkimeye giren maddelerin kütleleri toplamı, oluşan ürünlerin kütleleri toplamına eşittir. Atomlar yok olmaz, yeniden düzenlenir."
+  },
+  {
+    "id": "fen-8-4-07",
+    "unit": "fen-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "12 g karbon, 32 g oksijenle artansız tepkimeye girerek karbondioksit oluşturuyor. Oluşan karbondioksit kaç gramdır?",
+    "choices": [
+      "44 g",
+      "20 g",
+      "32 g",
+      "12 g"
+    ],
+    "answer": 0,
+    "explanation": "Kütle korunur: girenlerin toplam kütlesi ürünün kütlesine eşittir. 12 + 32 = 44 g."
+  },
+  {
+    "id": "fen-8-4-08",
+    "unit": "fen-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir asit ile bir bazın tepkimeye girerek tuz ve su oluşturmasına ne denir?",
+    "choices": [
+      "Yanma tepkimesi",
+      "Nötralleşme tepkimesi",
+      "Fiziksel değişim",
+      "Buharlaşma"
+    ],
+    "answer": 1,
+    "explanation": "Asit ile bazın tepkimesine nötralleşme denir. Tepkime sonunda tuz ve su oluşur."
+  },
+  {
+    "id": "fen-8-4-09",
+    "unit": "fen-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Asit yağmurlarının oluşmasına hangi gazlar neden olur?",
+    "choices": [
+      "Oksijen ve azot",
+      "Helyum ve neon",
+      "Kükürt dioksit ve azot dioksit",
+      "Hidrojen ve oksijen"
+    ],
+    "answer": 2,
+    "explanation": "Fosil yakıtların yanmasıyla çıkan kükürt dioksit, azot dioksit gibi gazlar havadaki su buharıyla birleşerek asit yağmurlarını oluşturur."
+  },
+  {
+    "id": "fen-8-4-10",
+    "unit": "fen-8-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Saf bir katı erirken sıcaklığı sürekli artar.",
+    "answer": false,
+    "explanation": "Hâl değişimi sırasında saf maddelerin sıcaklığı sabit kalır. Alınan ısı, tanecikler arasındaki bağların zayıflaması için harcanır."
+  },
+  {
+    "id": "fen-8-4-11",
+    "unit": "fen-8-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "20 g X ile 15 g Y tepkimeye sokuluyor. X'in tamamı harcanırken 5 g Y artıyor. Oluşan ürün kaç gramdır?",
+    "choices": [
+      "35 g",
+      "25 g",
+      "40 g",
+      "30 g"
+    ],
+    "answer": 3,
+    "explanation": "Y'nin 15 − 5 = 10 gramı tepkimeye girmiştir. Kütle korunduğu için ürün 20 + 10 = 30 g olur."
+  },
+  {
+    "id": "fen-8-4-12",
+    "unit": "fen-8-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Eşit kütleli su ve zeytinyağına eşit ısı verildiğinde zeytinyağının sıcaklığı daha çok artıyor. Bu durum nasıl açıklanır?",
+    "choices": [
+      "Zeytinyağının öz ısısı suyunkinden büyüktür",
+      "İki sıvının öz ısıları eşittir",
+      "Suyun öz ısısı zeytinyağınınkinden büyüktür",
+      "Zeytinyağının kütlesi daha küçüktür"
+    ],
+    "answer": 2,
+    "explanation": "Öz ısısı büyük olan madde aynı ısıyla daha az ısınır. Su daha az ısındığına göre öz ısısı zeytinyağınınkinden büyüktür."
+  },
+  {
+    "id": "fen-8-4-13",
+    "unit": "fen-8-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Ele sürülen kolonyanın serinlik hissi vermesinin nedeni nedir?",
+    "choices": [
+      "Kolonya buharlaşırken ele ısı verir",
+      "Kolonya buharlaşırken elden ısı alır",
+      "Kolonya ciltte donarak katılaşır",
+      "Kolonya havadaki nemi yoğuşturur"
+    ],
+    "answer": 1,
+    "explanation": "Buharlaşma ısı alan bir olaydır. Kolonya buharlaşmak için gereken ısıyı elden aldığı için el serinler."
+  },
+  {
+    "id": "fen-8-5-01",
+    "unit": "fen-8-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Basit makineler işten kazanç sağlamaz.",
+    "answer": true,
+    "explanation": "Basit makineler iş yapma kolaylığı sağlar ama işten kazanç sağlamaz. Kuvvetten kazanç varsa aynı oranda yoldan kayıp olur."
+  },
+  {
+    "id": "fen-8-5-02",
+    "unit": "fen-8-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Sabit makaranın sağladığı kolaylık aşağıdakilerden hangisidir?",
+    "choices": [
+      "Kuvvetten kazanç sağlar",
+      "İşten kazanç sağlar",
+      "Kuvvetin yönünü değiştirir",
+      "Yoldan kazanç sağlar"
+    ],
+    "answer": 2,
+    "explanation": "Sabit makarada yük kadar kuvvet uygulanır. Kuvvetten ya da yoldan kazanç yoktur, yalnızca kuvvetin yönü değişir."
+  },
+  {
+    "id": "fen-8-5-03",
+    "unit": "fen-8-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Sabit makara kuvvetten kazanç sağlar.",
+    "answer": false,
+    "explanation": "Sabit makarada uygulanan kuvvet yükün ağırlığına eşittir. Sabit makara yalnızca kuvvetin yönünü değiştirir."
+  },
+  {
+    "id": "fen-8-5-04",
+    "unit": "fen-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ağırlığı önemsiz bir hareketli makarayla 80 N'lik yükü dengede tutmak için kaç N kuvvet gerekir?",
+    "choices": [
+      "40 N",
+      "80 N",
+      "160 N",
+      "20 N"
+    ],
+    "answer": 0,
+    "explanation": "Hareketli makarada yük iki ip tarafından taşınır. Gereken kuvvet yükün yarısıdır: 80 ÷ 2 = 40 N."
+  },
+  {
+    "id": "fen-8-5-05",
+    "unit": "fen-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hareketli makarayla bir yükü 2 m yükseltmek için ipin kaç metre çekilmesi gerekir?",
+    "choices": [
+      "2 m",
+      "1 m",
+      "8 m",
+      "4 m"
+    ],
+    "answer": 3,
+    "explanation": "Hareketli makarada kuvvetten 2 kat kazanç, yoldan 2 kat kayıp vardır. İp 2 × 2 = 4 m çekilmelidir."
+  },
+  {
+    "id": "fen-8-5-06",
+    "unit": "fen-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Desteği ortada olan bir kaldıraçta 60 N'lik yük desteğe 1 m, kuvvet ise desteğe 3 m uzaklıktadır. Dengeyi sağlayan kuvvet kaç N'dir?",
+    "choices": [
+      "180 N",
+      "60 N",
+      "20 N",
+      "30 N"
+    ],
+    "answer": 2,
+    "explanation": "Kuvvet × kuvvet kolu = yük × yük kolu. Kuvvet × 3 = 60 × 1 olduğundan kuvvet 20 N olur."
+  },
+  {
+    "id": "fen-8-5-07",
+    "unit": "fen-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Aşağıdaki araçların hangisinde kuvvetten kazanç sağlanmaz?",
+    "choices": [
+      "El arabası",
+      "Cımbız",
+      "Ceviz kıracağı",
+      "Gazoz açacağı"
+    ],
+    "answer": 1,
+    "explanation": "Cımbızda kuvvet ortadadır ve kuvvet kolu yük kolundan kısadır. Bu yüzden kuvvetten kayıp, yoldan kazanç vardır."
+  },
+  {
+    "id": "fen-8-5-08",
+    "unit": "fen-8-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Birbirine doğrudan temas eden iki dişli çark aynı yönde döner.",
+    "answer": false,
+    "explanation": "Dişleri birbirine geçen iki çark zıt yönlerde döner. Biri saat yönünde dönerken öteki saat yönünün tersine döner."
+  },
+  {
+    "id": "fen-8-5-09",
+    "unit": "fen-8-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Yüksekliği 2 m, uzunluğu 8 m olan sürtünmesiz eğik düzlemde 400 N'lik yükü çıkarmak için en az kaç N kuvvet gerekir?",
+    "choices": [
+      "200 N",
+      "50 N",
+      "1600 N",
+      "100 N"
+    ],
+    "answer": 3,
+    "explanation": "Kuvvet × eğik düzlemin boyu = yük × yükseklik. Kuvvet × 8 = 400 × 2 olduğundan kuvvet 100 N olur."
+  },
+  {
+    "id": "fen-8-5-10",
+    "unit": "fen-8-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir çıkrıkta kolun yarıçapı 40 cm, silindirin yarıçapı 10 cm'dir. 200 N'lik yükü çekmek için kola en az kaç N kuvvet uygulanmalıdır?",
+    "choices": [
+      "800 N",
+      "50 N",
+      "100 N",
+      "25 N"
+    ],
+    "answer": 1,
+    "explanation": "Kuvvet × kol yarıçapı = yük × silindir yarıçapı. Kuvvet × 40 = 200 × 10 olduğundan kuvvet 50 N olur."
+  },
+  {
+    "id": "fen-8-5-11",
+    "unit": "fen-8-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "20 dişli bir çark, birbirine geçtiği 10 dişli çarkı döndürüyor. Büyük çark 3 tur atarsa küçük çark kaç tur atar?",
+    "choices": [
+      "3",
+      "1,5",
+      "6",
+      "30"
+    ],
+    "answer": 2,
+    "explanation": "Geçen diş sayıları eşittir: 20 × 3 = 60 diş. Küçük çark 60 ÷ 10 = 6 tur atar. Diş sayısı az olan çark daha çok döner."
+  },
+  {
+    "id": "fen-8-6-01",
+    "unit": "fen-8-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bitki hücrelerinde fotosentez hangi organelde gerçekleşir?",
+    "choices": [
+      "Kloroplast",
+      "Mitokondri",
+      "Ribozom",
+      "Koful"
+    ],
+    "answer": 0,
+    "explanation": "Fotosentez, yapısında klorofil bulunan kloroplastlarda gerçekleşir."
+  },
+  {
+    "id": "fen-8-6-02",
+    "unit": "fen-8-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Fotosentez sonucunda hangi maddeler üretilir?",
+    "choices": [
+      "Karbondioksit ve su",
+      "Besin ve oksijen",
+      "Su ve mineraller",
+      "Karbondioksit ve azot"
+    ],
+    "answer": 1,
+    "explanation": "Bitkiler ışık enerjisini kullanarak karbondioksit ve sudan besin (glikoz) ve oksijen üretir."
+  },
+  {
+    "id": "fen-8-6-03",
+    "unit": "fen-8-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Sera etkisini artırarak küresel iklim değişikliğine yol açan gazlardan biri hangisidir?",
+    "choices": [
+      "Oksijen",
+      "Azot",
+      "Karbondioksit",
+      "Helyum"
+    ],
+    "answer": 2,
+    "explanation": "Karbondioksit bir sera gazıdır. Atmosferdeki miktarı arttıkça Dünya'nın ortalama sıcaklığı yükselir."
+  },
+  {
+    "id": "fen-8-6-04",
+    "unit": "fen-8-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Fotosentez hızı ışık şiddeti, karbondioksit miktarı ve sıcaklık gibi etkenlere bağlıdır.",
+    "answer": true,
+    "explanation": "Işık şiddeti, ışığın rengi, karbondioksit ve su miktarı ile sıcaklık fotosentez hızını etkileyen etkenlerdir."
+  },
+  {
+    "id": "fen-8-6-05",
+    "unit": "fen-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Oksijenli solunum hücrenin hangi organelinde gerçekleşir?",
+    "choices": [
+      "Mitokondri",
+      "Kloroplast",
+      "Ribozom",
+      "Golgi cisimciği"
+    ],
+    "answer": 0,
+    "explanation": "Oksijenli solunum mitokondride gerçekleşir. Besinler oksijenle parçalanır ve hücre için enerji üretilir."
+  },
+  {
+    "id": "fen-8-6-06",
+    "unit": "fen-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Oksijenli solunum sonucunda aşağıdakilerden hangileri açığa çıkar?",
+    "choices": [
+      "Besin ve oksijen",
+      "Karbondioksit, su ve enerji",
+      "Yalnızca oksijen",
+      "Azot ve su"
+    ],
+    "answer": 1,
+    "explanation": "Oksijenli solunumda besin oksijenle parçalanır; karbondioksit, su ve enerji (ATP) oluşur."
+  },
+  {
+    "id": "fen-8-6-07",
+    "unit": "fen-8-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bitkiler yalnızca geceleri solunum yapar.",
+    "answer": false,
+    "explanation": "Bitkiler gece gündüz sürekli solunum yapar. Fotosentez ise yalnızca ışık varken gerçekleşir."
+  },
+  {
+    "id": "fen-8-6-08",
+    "unit": "fen-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hamurun mayalanması ve sütten yoğurt oluşması hangi olaya örnektir?",
+    "choices": [
+      "Oksijenli solunum",
+      "Fotosentez",
+      "Terleme",
+      "Oksijensiz solunum"
+    ],
+    "answer": 3,
+    "explanation": "Maya mantarları ve bazı bakteriler besinleri oksijen kullanmadan parçalar. Bu olaya oksijensiz solunum (fermantasyon) denir."
+  },
+  {
+    "id": "fen-8-6-09",
+    "unit": "fen-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Havadaki serbest azotun toprağa bağlanmasını sağlayan canlılar hangileridir?",
+    "choices": [
+      "Azot bağlayıcı bakteriler",
+      "Yeşil bitkiler",
+      "Otçul hayvanlar",
+      "Şapkalı mantarlar"
+    ],
+    "answer": 0,
+    "explanation": "Baklagillerin köklerinde ve toprakta yaşayan bazı bakteriler havadaki azotu bitkilerin kullanabileceği bileşiklere dönüştürür."
+  },
+  {
+    "id": "fen-8-6-10",
+    "unit": "fen-8-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Karbon döngüsünde atmosferdeki karbondioksit miktarını azaltan olay hangisidir?",
+    "choices": [
+      "Solunum",
+      "Yanma",
+      "Fotosentez",
+      "Çürüme"
+    ],
+    "answer": 2,
+    "explanation": "Üreticiler fotosentez sırasında havadan karbondioksit alır. Solunum, yanma ve çürüme ise havaya karbondioksit verir."
+  },
+  {
+    "id": "fen-8-6-11",
+    "unit": "fen-8-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir besin zincirinde üreticilerdeki enerji 10 000 birimdir. Her basamakta enerjinin %10'u aktarıldığına göre ikincil tüketicilere kaç birim ulaşır?",
+    "choices": [
+      "1000",
+      "100",
+      "10",
+      "9000"
+    ],
+    "answer": 1,
+    "explanation": "Birincil tüketicilere 10 000'in %10'u, yani 1000 birim; ikincil tüketicilere 1000'in %10'u, yani 100 birim aktarılır."
+  },
+  {
+    "id": "fen-8-6-12",
+    "unit": "fen-8-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Besin zincirinin üst basamaklarına doğru çıkıldıkça aşağıdakilerden hangisi artar?",
+    "choices": [
+      "Vücutta biriken zararlı madde miktarı",
+      "Aktarılan enerji miktarı",
+      "Canlı sayısı",
+      "Toplam canlı kütlesi"
+    ],
+    "answer": 0,
+    "explanation": "Zararlı maddeler vücuttan atılamaz ve her basamakta birikerek artar (biyolojik birikim). Enerji, canlı sayısı ve kütle ise azalır."
+  },
+  {
+    "id": "fen-8-7-01",
+    "unit": "fen-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Aşağıdaki araçlardan hangisi elektrik enerjisini hareket enerjisine dönüştürür?",
+    "choices": [
+      "Ütü",
+      "Vantilatör",
+      "Ampul",
+      "Elektrikli soba"
+    ],
+    "answer": 1,
+    "explanation": "Vantilatörün motoru elektrik enerjisini hareket enerjisine dönüştürür. Ütü ve soba ısı, ampul ışık enerjisi üretir."
+  },
+  {
+    "id": "fen-8-7-02",
+    "unit": "fen-8-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Evlerde tüketilen elektrik enerjisi kilovatsaat (kWh) birimiyle ölçülür.",
+    "answer": true,
+    "explanation": "Elektrik sayaçları tüketilen enerjiyi kilovatsaat (kWh) olarak ölçer. Faturalar bu değere göre hesaplanır."
+  },
+  {
+    "id": "fen-8-7-03",
+    "unit": "fen-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Elektron sayısı proton sayısından fazla olan bir cismin yük durumu nedir?",
+    "choices": [
+      "Pozitif yüklüdür",
+      "Nötrdür",
+      "Yüksüzdür",
+      "Negatif yüklüdür"
+    ],
+    "answer": 3,
+    "explanation": "Elektronlar negatif yüklüdür. Elektron sayısı proton sayısından fazla olan cisim negatif yüklü olur."
+  },
+  {
+    "id": "fen-8-7-04",
+    "unit": "fen-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Negatif yüklü bir cisme dokundurulan nötr iletken küre hangi yükle yüklenir?",
+    "choices": [
+      "Pozitif",
+      "Nötr kalır",
+      "Negatif",
+      "Önce pozitif, sonra negatif"
+    ],
+    "answer": 2,
+    "explanation": "Dokunma ile elektriklenmede cisimler aynı cins yükle yüklenir. Negatif cisimden küreye elektron geçer ve küre negatif yüklenir."
+  },
+  {
+    "id": "fen-8-7-05",
+    "unit": "fen-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yüklü bir cismin nötr bir iletkene dokunmadan yaklaştırılmasıyla oluşan elektriklenme hangisidir?",
+    "choices": [
+      "Dokunma ile elektriklenme",
+      "Etki ile elektriklenme",
+      "Sürtünme ile elektriklenme",
+      "Topraklama"
+    ],
+    "answer": 1,
+    "explanation": "Etki ile elektriklenmede cisimler birbirine değmez. Yaklaştırılan yüklü cisim, iletkendeki yüklerin yer değiştirmesine neden olur."
+  },
+  {
+    "id": "fen-8-7-06",
+    "unit": "fen-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Aşağıdaki santrallerden hangisi yenilenemez enerji kaynağı kullanır?",
+    "choices": [
+      "Termik santral",
+      "Hidroelektrik santral",
+      "Rüzgâr santrali",
+      "Jeotermal santral"
+    ],
+    "answer": 0,
+    "explanation": "Termik santrallerde kömür, doğal gaz gibi fosil yakıtlar yakılır. Fosil yakıtlar yenilenemez enerji kaynaklarıdır."
+  },
+  {
+    "id": "fen-8-7-07",
+    "unit": "fen-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Evlerdeki elektrik tesisatında sigortanın görevi nedir?",
+    "choices": [
+      "Tüketilen elektrik enerjisini ölçmek",
+      "Elektrik enerjisini depolamak",
+      "Lambaların daha parlak yanmasını sağlamak",
+      "Aşırı akımda devreyi keserek tesisatı korumak"
+    ],
+    "answer": 3,
+    "explanation": "Devreden yüksek akım geçtiğinde sigorta devreyi açar. Böylece kablolar aşırı ısınmaz, yangın ve kazalar önlenir."
+  },
+  {
+    "id": "fen-8-7-08",
+    "unit": "fen-8-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Sürtünme ile elektriklenmede cisimler arasında proton alışverişi olur.",
+    "answer": false,
+    "explanation": "Elektriklenmede cisimler arasında yalnızca elektron alışverişi olur. Protonlar atomun çekirdeğinde bulunur ve yer değiştirmez."
+  },
+  {
+    "id": "fen-8-7-09",
+    "unit": "fen-8-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Topraklama, elektrikli araçlardaki kaçak akımın toprağa aktarılarak güvenliğin sağlanmasıdır.",
+    "answer": true,
+    "explanation": "Topraklama hattı, cihazın gövdesine geçen kaçak akımı toprağa iletir. Böylece cihaza dokunan kişi çarpılmaktan korunur."
+  },
+  {
+    "id": "fen-8-7-10",
+    "unit": "fen-8-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Nötr bir elektroskobun topuzuna negatif yüklü bir çubuk dokundurulmadan yaklaştırılıyor. Yapraklar hangi yükle yüklenir?",
+    "choices": [
+      "Negatif",
+      "Pozitif",
+      "Nötr kalır",
+      "Bir yaprak pozitif, diğeri negatif"
+    ],
+    "answer": 0,
+    "explanation": "Negatif çubuk, topuzdaki elektronları yapraklara doğru iter. Topuz pozitif, yapraklar negatif yüklenir ve yapraklar açılır."
+  },
+  {
+    "id": "fen-8-7-11",
+    "unit": "fen-8-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Yükleri +8 ve −2 birim olan özdeş iki iletken küre birbirine dokundurulup ayrılıyor. Kürelerin son yükleri kaçar birimdir?",
+    "choices": [
+      "+5 ve +5",
+      "+3 ve +3",
+      "+6 ve 0",
+      "+8 ve −2"
+    ],
+    "answer": 1,
+    "explanation": "Toplam yük (+8) + (−2) = +6 birimdir. Özdeş küreler toplam yükü eşit paylaşır: 6 ÷ 2 = +3 birim."
+  },
+  {
+    "id": "fen-8-7-12",
+    "unit": "fen-8-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Üçü de yüklü K, L ve M cisimlerinden K, L'yi itiyor; L ise M'yi çekiyor. K pozitif yüklü olduğuna göre M'nin yükü nedir?",
+    "choices": [
+      "Pozitif",
+      "Nötr",
+      "Negatif",
+      "Belirlenemez"
+    ],
+    "answer": 2,
+    "explanation": "K, L'yi ittiğine göre L de pozitiftir. L, M'yi çektiğine ve M yüklü olduğuna göre M negatif yüklüdür."
+  }
+]

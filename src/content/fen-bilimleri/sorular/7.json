@@ -1,0 +1,986 @@
+[
+  {
+    "id": "fen-7-1-01",
+    "unit": "fen-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Gök cisimlerini gözlemlemek için kullanılan araç hangisidir?",
+    "choices": [
+      "Teleskop",
+      "Mikroskop",
+      "Periskop",
+      "Termometre"
+    ],
+    "answer": 0,
+    "explanation": "Teleskop, uzaktaki gök cisimlerini daha yakın ve ayrıntılı görmemizi sağlayan gözlem aracıdır."
+  },
+  {
+    "id": "fen-7-1-02",
+    "unit": "fen-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İnsanlar tarafından yapılıp bir gök cisminin çevresinde dolanması için uzaya gönderilen araçlara ne denir?",
+    "choices": [
+      "Doğal uydu",
+      "Yapay uydu",
+      "Meteor",
+      "Gezegen"
+    ],
+    "answer": 1,
+    "explanation": "Yapay uydular haberleşme, hava tahmini, gözlem ve konum belirleme gibi amaçlarla uzaya gönderilir."
+  },
+  {
+    "id": "fen-7-1-03",
+    "unit": "fen-7-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Türkiye'nin Türksat uyduları haberleşme amacıyla kullanılır.",
+    "answer": true,
+    "explanation": "Türksat uyduları televizyon yayını ve iletişim için kullanılan haberleşme uydularıdır. Göktürk uyduları ise gözlem uydusudur."
+  },
+  {
+    "id": "fen-7-1-04",
+    "unit": "fen-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Güneş sisteminin içinde bulunduğu galaksi hangisidir?",
+    "choices": [
+      "Andromeda",
+      "Büyük Macellan Bulutu",
+      "Üçgen Galaksisi",
+      "Samanyolu"
+    ],
+    "answer": 3,
+    "explanation": "Güneş ve gezegenleri, milyarlarca yıldızdan oluşan Samanyolu galaksisinde yer alır."
+  },
+  {
+    "id": "fen-7-1-05",
+    "unit": "fen-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Görevini tamamlamış uydular ve roket parçaları gibi uzayda kalan atıkların oluşturduğu soruna ne denir?",
+    "choices": [
+      "Uzay kirliliği",
+      "Işık kirliliği",
+      "Hava kirliliği",
+      "Küresel ısınma"
+    ],
+    "answer": 0,
+    "explanation": "Kullanılmayan uydular, roket parçaları ve çarpışma kalıntıları uzay kirliliğini oluşturur ve çalışan uydular için tehlikelidir."
+  },
+  {
+    "id": "fen-7-1-06",
+    "unit": "fen-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Teleskopların bulunduğu, gök cisimlerinin gözlemlendiği yerlere ne ad verilir?",
+    "choices": [
+      "Planetaryum",
+      "Gözlemevi",
+      "Uzay istasyonu",
+      "Laboratuvar"
+    ],
+    "answer": 1,
+    "explanation": "Gözlemevlerine rasathane de denir. Gök bilimciler burada teleskoplarla gözlem yapar."
+  },
+  {
+    "id": "fen-7-1-07",
+    "unit": "fen-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ay'a ilk ayak basan insan kimdir?",
+    "choices": [
+      "Yuri Gagarin",
+      "Galileo Galilei",
+      "Neil Armstrong",
+      "Ali Kuşçu"
+    ],
+    "answer": 2,
+    "explanation": "Neil Armstrong 1969'da Apollo 11 göreviyle Ay'a ayak basan ilk insan olmuştur. Yuri Gagarin ise uzaya çıkan ilk insandır."
+  },
+  {
+    "id": "fen-7-1-08",
+    "unit": "fen-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yıldızların içinde doğduğu gaz ve toz bulutlarına ne denir?",
+    "choices": [
+      "Kara delik",
+      "Galaksi",
+      "Kuyruklu yıldız",
+      "Bulutsu"
+    ],
+    "answer": 3,
+    "explanation": "Bulutsular (nebulalar) gaz ve tozdan oluşur. Yıldızlar bu bulutların içinde oluşur."
+  },
+  {
+    "id": "fen-7-1-09",
+    "unit": "fen-7-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Işık yılı bir zaman birimidir.",
+    "answer": false,
+    "explanation": "Işık yılı, ışığın bir yılda aldığı yoldur. Gök cisimleri arasındaki çok büyük uzaklıkları anlatmak için kullanılan bir uzaklık birimidir."
+  },
+  {
+    "id": "fen-7-1-10",
+    "unit": "fen-7-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Gözlemevlerinin şehirlerden uzak, yüksek ve havası kuru yerlere kurulmasının temel nedeni nedir?",
+    "choices": [
+      "Bu yerlerde yer çekiminin daha az olması",
+      "Yıldızlara belirgin biçimde yaklaşılması",
+      "Işık kirliliğinin ve atmosferin olumsuz etkisinin az olması",
+      "Bu yerlerde gecelerin daha uzun sürmesi"
+    ],
+    "answer": 2,
+    "explanation": "Şehir ışıkları ve nemli, kirli hava gözlemi zorlaştırır. Yüksek ve kuru yerlerde gökyüzü daha net görünür."
+  },
+  {
+    "id": "fen-7-2-01",
+    "unit": "fen-7-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Fen bilimlerinde işin birimi aşağıdakilerden hangisidir?",
+    "choices": [
+      "Newton",
+      "Pascal",
+      "Kilogram",
+      "Joule"
+    ],
+    "answer": 3,
+    "explanation": "İş ve enerjinin birimi joule (J) olarak kullanılır. Newton kuvvetin birimidir."
+  },
+  {
+    "id": "fen-7-2-02",
+    "unit": "fen-7-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Duvarı iten ama hareket ettiremeyen bir kişi fen anlamında iş yapmamıştır.",
+    "answer": true,
+    "explanation": "Fen anlamında iş yapılması için cismin, uygulanan kuvvet doğrultusunda yol alması gerekir. Duvar hareket etmediği için iş yapılmaz."
+  },
+  {
+    "id": "fen-7-2-03",
+    "unit": "fen-7-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hareket hâlindeki cisimlerin sahip olduğu enerjiye ne denir?",
+    "choices": [
+      "Çekim potansiyel enerjisi",
+      "Kinetik enerji",
+      "Esneklik potansiyel enerjisi",
+      "Isı enerjisi"
+    ],
+    "answer": 1,
+    "explanation": "Kinetik enerji hareket enerjisidir. Cismin kütlesi ve sürati arttıkça kinetik enerjisi de artar."
+  },
+  {
+    "id": "fen-7-2-04",
+    "unit": "fen-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir sandık 20 N büyüklüğündeki kuvvetle kuvvet doğrultusunda 5 m çekiliyor. Yapılan iş kaç jouledür?",
+    "choices": [
+      "100 J",
+      "4 J",
+      "25 J",
+      "15 J"
+    ],
+    "answer": 0,
+    "explanation": "İş = kuvvet × alınan yol. 20 × 5 = 100 J."
+  },
+  {
+    "id": "fen-7-2-05",
+    "unit": "fen-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir cismin çekim potansiyel enerjisi aşağıdakilerden hangilerine bağlıdır?",
+    "choices": [
+      "Cismin süratine ve kütlesine",
+      "Cismin rengine ve hacmine",
+      "Yalnızca cismin süratine",
+      "Cismin ağırlığına ve yüksekliğine"
+    ],
+    "answer": 3,
+    "explanation": "Çekim potansiyel enerjisi cismin ağırlığı ve yerden yüksekliği arttıkça artar."
+  },
+  {
+    "id": "fen-7-2-06",
+    "unit": "fen-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Gerilmiş bir yayda ya da sıkıştırılmış bir süngerde depolanan enerji hangisidir?",
+    "choices": [
+      "Çekim potansiyel enerjisi",
+      "Kinetik enerji",
+      "Esneklik potansiyel enerjisi",
+      "Kimyasal enerji"
+    ],
+    "answer": 2,
+    "explanation": "Esnek cisimler gerildiğinde ya da sıkıştırıldığında esneklik potansiyel enerjisi depolar."
+  },
+  {
+    "id": "fen-7-2-07",
+    "unit": "fen-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yüksekten serbest bırakılan bir top düşerken enerjisi nasıl değişir? (Sürtünme önemsiz.)",
+    "choices": [
+      "Potansiyel enerjisi artar, kinetik enerjisi azalır",
+      "Potansiyel enerjisi azalır, kinetik enerjisi artar",
+      "İki enerji de artar",
+      "İki enerji de azalır"
+    ],
+    "answer": 1,
+    "explanation": "Top düşerken yüksekliği azalır, sürati artar. Çekim potansiyel enerjisi kinetik enerjiye dönüşür."
+  },
+  {
+    "id": "fen-7-2-08",
+    "unit": "fen-7-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Aynı süratle giden bir kamyon ile bir bisikletin kinetik enerjileri eşittir.",
+    "answer": false,
+    "explanation": "Kinetik enerji sürate olduğu kadar kütleye de bağlıdır. Süratler eşitken kütlesi büyük olan kamyonun kinetik enerjisi daha büyüktür."
+  },
+  {
+    "id": "fen-7-2-09",
+    "unit": "fen-7-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Ağırlığı 50 N olan bir çanta yerden 2 m yükseklikteki rafa kaldırılıyor. Yer çekimine karşı yapılan iş kaç jouledür?",
+    "choices": [
+      "25 J",
+      "52 J",
+      "48 J",
+      "100 J"
+    ],
+    "answer": 3,
+    "explanation": "İş = kuvvet × yol. Çantayı kaldırmak için ağırlığı kadar kuvvet gerekir: 50 × 2 = 100 J."
+  },
+  {
+    "id": "fen-7-2-10",
+    "unit": "fen-7-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Aşağıdakilerin hangisinde fen anlamında iş yapılmıştır?",
+    "choices": [
+      "Duvarı itip hareket ettiremeyen çocuk",
+      "Yerdeki kutuyu masanın üzerine kaldıran çocuk",
+      "Elinde çantayla durakta bekleyen yolcu",
+      "Halteri başının üstünde hareketsiz tutan sporcu"
+    ],
+    "answer": 1,
+    "explanation": "Kutu, uygulanan kuvvet doğrultusunda yukarı doğru yol almıştır. Diğer durumlarda cisim hareket etmediği için iş yapılmamıştır."
+  },
+  {
+    "id": "fen-7-3-01",
+    "unit": "fen-7-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Besinlerin kana geçebilecek kadar küçük parçalara ayrılmasına ne denir?",
+    "choices": [
+      "Solunum",
+      "Boşaltım",
+      "Sindirim",
+      "Dolaşım"
+    ],
+    "answer": 2,
+    "explanation": "Sindirim, büyük besin moleküllerinin hücrelere girebilecek kadar küçük parçalara ayrılmasıdır."
+  },
+  {
+    "id": "fen-7-3-02",
+    "unit": "fen-7-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kimyasal sindirimi ağızda başlayan besin grubu hangisidir?",
+    "choices": [
+      "Proteinler",
+      "Yağlar",
+      "Vitaminler",
+      "Karbonhidratlar"
+    ],
+    "answer": 3,
+    "explanation": "Karbonhidratların kimyasal sindirimi ağızda tükürükle başlar. Proteinlerinki midede, yağlarınki ince bağırsakta başlar."
+  },
+  {
+    "id": "fen-7-3-03",
+    "unit": "fen-7-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Akyuvarlar vücudu mikroplara karşı savunan kan hücreleridir.",
+    "answer": true,
+    "explanation": "Akyuvarlar vücuda giren mikroplarla savaşır. Alyuvarlar oksijen taşır, kan pulcukları ise kanın pıhtılaşmasını sağlar."
+  },
+  {
+    "id": "fen-7-3-04",
+    "unit": "fen-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yağların mekanik sindirimini sağlayan safra sıvısı hangi organda üretilir?",
+    "choices": [
+      "Safra kesesi",
+      "Karaciğer",
+      "Pankreas",
+      "Mide"
+    ],
+    "answer": 1,
+    "explanation": "Safra karaciğerde üretilir, safra kesesinde depolanır ve ince bağırsağa dökülerek yağları küçük damlacıklara ayırır."
+  },
+  {
+    "id": "fen-7-3-05",
+    "unit": "fen-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kanda oksijen taşıyan kan hücreleri hangileridir?",
+    "choices": [
+      "Akyuvarlar",
+      "Kan pulcukları",
+      "Alyuvarlar",
+      "Sinir hücreleri"
+    ],
+    "answer": 2,
+    "explanation": "Alyuvarlar, yapılarındaki hemoglobin sayesinde oksijeni akciğerlerden hücrelere taşır ve kana kırmızı rengini verir."
+  },
+  {
+    "id": "fen-7-3-06",
+    "unit": "fen-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Akciğerlerde kan ile hava arasındaki gaz alışverişi hangi yapıda gerçekleşir?",
+    "choices": [
+      "Bronş",
+      "Gırtlak",
+      "Yutak",
+      "Alveol"
+    ],
+    "answer": 3,
+    "explanation": "Alveoller (hava kesecikleri) kılcal damarlarla sarılıdır. Oksijen kana, karbondioksit alveollere burada geçer."
+  },
+  {
+    "id": "fen-7-3-07",
+    "unit": "fen-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Böbreklerde kanın süzülmesini sağlayan yapı birimi hangisidir?",
+    "choices": [
+      "Nefron",
+      "Alveol",
+      "Nöron",
+      "Villus"
+    ],
+    "answer": 0,
+    "explanation": "Her böbrekte yaklaşık bir milyon nefron bulunur. Nefronlar kanı süzerek idrarı oluşturur."
+  },
+  {
+    "id": "fen-7-3-08",
+    "unit": "fen-7-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Atardamarlar, kanı vücuttan kalbe getiren damarlardır.",
+    "answer": false,
+    "explanation": "Atardamarlar kanı kalpten vücuda götürür. Kanı vücuttan kalbe getiren damarlar toplardamarlardır."
+  },
+  {
+    "id": "fen-7-3-09",
+    "unit": "fen-7-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Küçük kan dolaşımının görevi aşağıdakilerden hangisidir?",
+    "choices": [
+      "Besinleri bütün vücut hücrelerine taşımak",
+      "Kanı böbreklerde süzerek temizlemek",
+      "Kanın akciğerlerde oksijence zenginleşmesini sağlamak",
+      "Sindirilen besinleri kana geçirmek"
+    ],
+    "answer": 2,
+    "explanation": "Küçük kan dolaşımı kalp ile akciğerler arasındadır. Kirli kan akciğerlerde karbondioksiti bırakır ve oksijen alır."
+  },
+  {
+    "id": "fen-7-3-10",
+    "unit": "fen-7-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Soluk alma sırasında aşağıdakilerden hangisi gerçekleşir?",
+    "choices": [
+      "Diyafram kasılarak düzleşir",
+      "Diyafram gevşeyerek kubbeleşir",
+      "Göğüs boşluğu daralır",
+      "Akciğerlerin hacmi küçülür"
+    ],
+    "answer": 0,
+    "explanation": "Soluk alırken diyafram kasılıp düzleşir, göğüs boşluğu genişler ve akciğerlere hava dolar."
+  },
+  {
+    "id": "fen-7-4-01",
+    "unit": "fen-7-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Işığın saydam bir ortamdan başka bir saydam ortama geçerken doğrultu değiştirmesine ne denir?",
+    "choices": [
+      "Yansıma",
+      "Kırılma",
+      "Soğurulma",
+      "Tutulma"
+    ],
+    "answer": 1,
+    "explanation": "Işık farklı yoğunluktaki saydam bir ortama eğik geçerken doğrultu değiştirir. Bu olaya ışığın kırılması denir."
+  },
+  {
+    "id": "fen-7-4-02",
+    "unit": "fen-7-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Su dolu bardaktaki kalemin kırık gibi görünmesi ışığın kırılmasıyla açıklanır.",
+    "answer": true,
+    "explanation": "Kalemden gelen ışınlar sudan havaya geçerken kırılır. Bu yüzden kalem su yüzeyinde kırılmış gibi görünür."
+  },
+  {
+    "id": "fen-7-4-03",
+    "unit": "fen-7-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Üzerine gelen paralel ışınları kırarak bir noktada toplayan mercek türü hangisidir?",
+    "choices": [
+      "Kalın kenarlı mercek",
+      "Düz ayna",
+      "Tümsek ayna",
+      "İnce kenarlı mercek"
+    ],
+    "answer": 3,
+    "explanation": "İnce kenarlı (yakınsak) mercek ışınları bir noktada toplar. Kalın kenarlı (ıraksak) mercek ise ışınları dağıtır."
+  },
+  {
+    "id": "fen-7-4-04",
+    "unit": "fen-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Havadan suya eğik olarak geçen bir ışın nasıl kırılır?",
+    "choices": [
+      "Normalden uzaklaşarak",
+      "Doğrultu değiştirmeden",
+      "Normale yaklaşarak",
+      "Geldiği yoldan geri dönerek"
+    ],
+    "answer": 2,
+    "explanation": "Işık az yoğun ortamdan çok yoğun ortama geçerken normale yaklaşarak kırılır. Su, havadan daha yoğun bir ortamdır."
+  },
+  {
+    "id": "fen-7-4-05",
+    "unit": "fen-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sudan havaya eğik olarak geçen bir ışın nasıl kırılır?",
+    "choices": [
+      "Normale yaklaşarak",
+      "Normalden uzaklaşarak",
+      "Doğrultu değiştirmeden",
+      "Normalin üzerinden giderek"
+    ],
+    "answer": 1,
+    "explanation": "Işık çok yoğun ortamdan az yoğun ortama geçerken normalden uzaklaşarak kırılır."
+  },
+  {
+    "id": "fen-7-4-06",
+    "unit": "fen-7-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Kalın kenarlı mercekler üzerlerine gelen paralel ışınları bir noktada toplar.",
+    "answer": false,
+    "explanation": "Kalın kenarlı mercekler ışınları dağıtır. Işınları bir noktada toplayan mercek ince kenarlı mercektir."
+  },
+  {
+    "id": "fen-7-4-07",
+    "unit": "fen-7-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "İki saydam ortamı ayıran yüzeye dik gelen ışın kırılmadan yoluna devam eder.",
+    "answer": true,
+    "explanation": "Yüzeye dik (normal doğrultusunda) gelen ışınlar doğrultu değiştirmez; yalnızca hızları değişir."
+  },
+  {
+    "id": "fen-7-4-08",
+    "unit": "fen-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Işık bir saydam ortamdan diğerine geçerken kırılmasının nedeni nedir?",
+    "choices": [
+      "Işığın saydam maddelerden geçememesi",
+      "Işığın bütün ortamlarda aynı hızla yayılması",
+      "Işığın farklı ortamlarda farklı hızlarda yayılması",
+      "Işığın renginin ortamda değişmesi"
+    ],
+    "answer": 2,
+    "explanation": "Işığın hızı ortamın yoğunluğuna göre değişir. Hızın değişmesi, eğik gelen ışının doğrultu değiştirmesine yol açar."
+  },
+  {
+    "id": "fen-7-4-09",
+    "unit": "fen-7-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Ormanlara atılan cam şişe ve cam kırıkları neden yangına yol açabilir?",
+    "choices": [
+      "Kalın kenarlı mercek gibi güneş ışınlarını dağıtır",
+      "İnce kenarlı mercek gibi güneş ışınlarını bir noktada toplar",
+      "Düz ayna gibi güneş ışınlarını yansıtır",
+      "Güneş ışınlarını soğurarak kendiliğinden tutuşur"
+    ],
+    "answer": 1,
+    "explanation": "Cam parçaları ince kenarlı mercek gibi davranarak güneş ışınlarını bir noktada toplayabilir. Toplanan ışınlar kuru otları tutuşturabilir."
+  },
+  {
+    "id": "fen-7-4-10",
+    "unit": "fen-7-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Göl kenarından suya bakan biri sudaki balığı nerede görür?",
+    "choices": [
+      "Bulunduğu yerden daha derinde",
+      "Tam bulunduğu yerde",
+      "Baş aşağı dönmüş olarak",
+      "Bulunduğu yerden daha yakında"
+    ],
+    "answer": 3,
+    "explanation": "Balıktan gelen ışınlar sudan havaya geçerken kırılır. Bu yüzden balık olduğundan daha yakında, yüzeye yakın görünür."
+  },
+  {
+    "id": "fen-7-5-01",
+    "unit": "fen-7-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir elementin özelliklerini taşıyan en küçük yapı taşı hangisidir?",
+    "choices": [
+      "Atom",
+      "Molekül",
+      "Hücre",
+      "Bileşik"
+    ],
+    "answer": 0,
+    "explanation": "Atom, maddenin en küçük yapı taşıdır. Her elementin atomu kendine özgüdür."
+  },
+  {
+    "id": "fen-7-5-02",
+    "unit": "fen-7-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Atomun çekirdeğinde bulunan pozitif yüklü tanecik hangisidir?",
+    "choices": [
+      "Elektron",
+      "Proton",
+      "Nötron",
+      "Molekül"
+    ],
+    "answer": 1,
+    "explanation": "Çekirdekte pozitif yüklü protonlar ve yüksüz nötronlar bulunur. Negatif yüklü elektronlar çekirdeğin çevresindedir."
+  },
+  {
+    "id": "fen-7-5-03",
+    "unit": "fen-7-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Elektronlar atomun çekirdeğinde bulunur.",
+    "answer": false,
+    "explanation": "Elektronlar çekirdeğin çevresindeki katmanlarda bulunur. Çekirdekte protonlar ve nötronlar yer alır."
+  },
+  {
+    "id": "fen-7-5-04",
+    "unit": "fen-7-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Molekül, en az iki atomun bağ yaparak oluşturduğu yapıdır.",
+    "answer": true,
+    "explanation": "Aynı ya da farklı cins atomlar birbirine bağlanarak molekülleri oluşturur. Oksijen gazı (O₂) ve su (H₂O) moleküllerden oluşur."
+  },
+  {
+    "id": "fen-7-5-05",
+    "unit": "fen-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Aynı cins atomlardan oluşan saf maddelere ne ad verilir?",
+    "choices": [
+      "Element",
+      "Bileşik",
+      "Karışım",
+      "Çözelti"
+    ],
+    "answer": 0,
+    "explanation": "Elementler tek cins atomdan oluşur. Demir, altın ve oksijen birer elementtir."
+  },
+  {
+    "id": "fen-7-5-06",
+    "unit": "fen-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Aşağıdakilerden hangisi bir bileşiktir?",
+    "choices": [
+      "Oksijen gazı",
+      "Su",
+      "Demir",
+      "Hava"
+    ],
+    "answer": 1,
+    "explanation": "Su (H₂O), hidrojen ve oksijen atomlarının belirli oranda birleşmesiyle oluşan bir bileşiktir. Oksijen ve demir element, hava karışımdır."
+  },
+  {
+    "id": "fen-7-5-07",
+    "unit": "fen-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir su molekülünde (H₂O) toplam kaç atom bulunur?",
+    "choices": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "explanation": "H₂O molekülünde 2 hidrojen ve 1 oksijen atomu vardır: 2 + 1 = 3 atom."
+  },
+  {
+    "id": "fen-7-5-08",
+    "unit": "fen-7-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Karışımı oluşturan maddeler kendi özelliklerini korur.",
+    "answer": true,
+    "explanation": "Karışımlarda maddeler kimyasal olarak değişmez, kendi özelliklerini korur. Bileşiklerde ise maddeler özelliklerini kaybeder."
+  },
+  {
+    "id": "fen-7-5-09",
+    "unit": "fen-7-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Proton sayısı 11 olan nötr bir sodyum atomunun elektron sayısı kaçtır?",
+    "choices": [
+      "11",
+      "10",
+      "12",
+      "23"
+    ],
+    "answer": 0,
+    "explanation": "Nötr atomlarda proton sayısı elektron sayısına eşittir. Bu nedenle elektron sayısı da 11'dir."
+  },
+  {
+    "id": "fen-7-5-10",
+    "unit": "fen-7-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Bir karbondioksit molekülü (CO₂) için aşağıdakilerden hangisi doğrudur?",
+    "choices": [
+      "2 karbon ve 1 oksijen atomundan oluşur",
+      "Tek cins atomdan oluşur",
+      "1 karbon ve 2 oksijen atomundan oluşur",
+      "Toplam 2 atomdan oluşur"
+    ],
+    "answer": 2,
+    "explanation": "CO₂ formülünde C'nin yanında sayı yoktur, yani 1 karbon atomu vardır. O'nun yanındaki 2, iki oksijen atomu olduğunu gösterir."
+  },
+  {
+    "id": "fen-7-5-11",
+    "unit": "fen-7-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Aşağıdaki karışımlardan hangisi homojendir (çözeltidir)?",
+    "choices": [
+      "Ayran",
+      "Tuzlu su",
+      "Zeytinyağı-su karışımı",
+      "Kum-su karışımı"
+    ],
+    "answer": 1,
+    "explanation": "Tuzlu suda tuz her yere eşit dağılır ve karışım tek bir madde gibi görünür. Diğerleri heterojen karışımdır."
+  },
+  {
+    "id": "fen-7-6-01",
+    "unit": "fen-7-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yünlü kazağa sürtülen bir balonun küçük kâğıt parçalarını çekmesi hangi olayla açıklanır?",
+    "choices": [
+      "Dokunma ile elektriklenme",
+      "Mıknatıslanma",
+      "Yer çekimi",
+      "Sürtünme ile elektriklenme"
+    ],
+    "answer": 3,
+    "explanation": "Balon ile kazak birbirine sürtülünce aralarında elektron alışverişi olur ve balon yüklenir. Yüklü balon hafif cisimleri çeker."
+  },
+  {
+    "id": "fen-7-6-02",
+    "unit": "fen-7-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Aynı cins elektrik yükleri birbirini çeker.",
+    "answer": false,
+    "explanation": "Aynı cins yükler birbirini iter, farklı cins yükler birbirini çeker."
+  },
+  {
+    "id": "fen-7-6-03",
+    "unit": "fen-7-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yüklü bir cismin toprağa bağlanarak yükünün boşaltılmasına ne denir?",
+    "choices": [
+      "Yalıtım",
+      "Topraklama",
+      "Kısa devre",
+      "Sürtünme"
+    ],
+    "answer": 1,
+    "explanation": "Topraklamada yüklü cisim ile yer arasında yük alışverişi olur ve cisim nötr hâle gelir."
+  },
+  {
+    "id": "fen-7-6-04",
+    "unit": "fen-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir cismin elektrik yüklü olup olmadığını anlamak için kullanılan araç hangisidir?",
+    "choices": [
+      "Elektroskop",
+      "Ampermetre",
+      "Dinamometre",
+      "Barometre"
+    ],
+    "answer": 0,
+    "explanation": "Elektroskop, bir cismin yüklü olup olmadığını ve yükünün cinsini belirlemeye yarar."
+  },
+  {
+    "id": "fen-7-6-05",
+    "unit": "fen-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Nötr bir cisim için aşağıdakilerden hangisi doğrudur?",
+    "choices": [
+      "Hiç elektrik yükü bulunmaz",
+      "Yalnızca pozitif yükleri vardır",
+      "Negatif yükleri pozitif yüklerinden fazladır",
+      "Pozitif ve negatif yük sayıları eşittir"
+    ],
+    "answer": 3,
+    "explanation": "Nötr cisimlerde pozitif ve negatif yük sayıları eşittir. Nötr olmak yüksüz olmak demek değildir."
+  },
+  {
+    "id": "fen-7-6-06",
+    "unit": "fen-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sürtünme ile elektriklenmede cisimler arasında hangi tanecikler aktarılır?",
+    "choices": [
+      "Protonlar",
+      "Nötronlar",
+      "Elektronlar",
+      "Atom çekirdekleri"
+    ],
+    "answer": 2,
+    "explanation": "Elektriklenmede yalnızca elektronlar bir cisimden diğerine geçer. Protonlar çekirdekte olduğu için yer değiştirmez."
+  },
+  {
+    "id": "fen-7-6-07",
+    "unit": "fen-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Nötr bir cisim elektron kaybederse yük durumu ne olur?",
+    "choices": [
+      "Negatif yüklenir",
+      "Pozitif yüklenir",
+      "Nötr kalır",
+      "Yüklerinin tamamını kaybeder"
+    ],
+    "answer": 1,
+    "explanation": "Elektron kaybeden cisimde pozitif yükler negatif yüklerden fazla olur. Cisim pozitif yüklenir."
+  },
+  {
+    "id": "fen-7-6-08",
+    "unit": "fen-7-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Yıldırım, yüklü bir bulut ile yer arasındaki elektrik boşalmasıdır.",
+    "answer": true,
+    "explanation": "Bulut ile yer arasındaki yük boşalmasına yıldırım, bulutlar arasındaki yük boşalmasına şimşek denir."
+  },
+  {
+    "id": "fen-7-6-09",
+    "unit": "fen-7-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "İpek kumaşa sürtülen cam çubuk pozitif yükleniyor. Bu olayda ne gerçekleşmiştir?",
+    "choices": [
+      "İpekten cama elektron geçmiştir",
+      "İpekten cama proton geçmiştir",
+      "Camdan ipeğe proton geçmiştir",
+      "Camdan ipeğe elektron geçmiştir"
+    ],
+    "answer": 3,
+    "explanation": "Cam çubuk elektron kaybettiği için pozitif yüklenmiştir. Kaybettiği elektronları alan ipek kumaş negatif yüklenir."
+  },
+  {
+    "id": "fen-7-6-10",
+    "unit": "fen-7-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Negatif yüklü bir elektroskobun topuzuna negatif yüklü bir çubuk yaklaştırılırsa yapraklarda ne gözlenir?",
+    "choices": [
+      "Yapraklar biraz kapanır",
+      "Yapraklar biraz daha açılır",
+      "Yapraklar tamamen kapanır",
+      "Yapraklarda değişiklik olmaz"
+    ],
+    "answer": 1,
+    "explanation": "Çubuk, topuzdaki negatif yükleri yapraklara doğru iter. Yapraklardaki negatif yük arttığı için yapraklar daha çok açılır."
+  },
+  {
+    "id": "fen-7-6-11",
+    "unit": "fen-7-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Akaryakıt tankerlerinin arkasında yere değen bir zincir bulunmasının nedeni nedir?",
+    "choices": [
+      "Tankerin dengesini sağlamak",
+      "Tankerin yakıt tüketimini azaltmak",
+      "Sürtünmeyle biriken yükleri toprağa aktarmak",
+      "Tekerleklerin yola tutunmasını artırmak"
+    ],
+    "answer": 2,
+    "explanation": "Tanker hareket ederken sürtünmeyle yüklenir. Zincir bu yükleri toprağa aktarır; böylece kıvılcım ve yangın tehlikesi önlenir."
+  },
+  {
+    "id": "fen-7-7-01",
+    "unit": "fen-7-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Doğada kendini sürekli yenileyen, kullanıldıkça tükenmeyen enerji kaynaklarına ne denir?",
+    "choices": [
+      "Yenilenemez enerji kaynakları",
+      "Fosil yakıtlar",
+      "Nükleer yakıtlar",
+      "Yenilenebilir enerji kaynakları"
+    ],
+    "answer": 3,
+    "explanation": "Güneş, rüzgâr ve akarsu gibi kaynaklar doğada sürekli yenilenir. Bu nedenle yenilenebilir enerji kaynağı sayılırlar."
+  },
+  {
+    "id": "fen-7-7-02",
+    "unit": "fen-7-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yer altındaki sıcak su ve buhardan elde edilen enerji hangisidir?",
+    "choices": [
+      "Jeotermal enerji",
+      "Rüzgâr enerjisi",
+      "Güneş enerjisi",
+      "Hidroelektrik enerji"
+    ],
+    "answer": 0,
+    "explanation": "Jeotermal enerji yerin derinliklerindeki ısıdan gelir. Sıcak su ve buhar, ısınmada ve elektrik üretiminde kullanılır."
+  },
+  {
+    "id": "fen-7-7-03",
+    "unit": "fen-7-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Fosil yakıtların kullanılması atmosferdeki karbondioksit miktarını artırır.",
+    "answer": true,
+    "explanation": "Kömür, petrol ve doğal gaz yandığında karbondioksit açığa çıkar. Bu gaz sera etkisini güçlendirir."
+  },
+  {
+    "id": "fen-7-7-04",
+    "unit": "fen-7-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Aşağıdakilerden hangisi evde enerji tasarrufu sağlar?",
+    "choices": [
+      "Buzdolabının kapağını uzun süre açık tutmak",
+      "Kullanılmayan odaların ışığını kapatmak",
+      "Çamaşır makinesini yarı boş çalıştırmak",
+      "Gündüz perdeleri kapatıp lamba yakmak"
+    ],
+    "answer": 1,
+    "explanation": "Gereksiz yanan lambaları kapatmak elektrik tüketimini azaltır. Diğer davranışlar enerjinin boşa harcanmasına neden olur."
+  },
+  {
+    "id": "fen-7-7-05",
+    "unit": "fen-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Akarsuların üzerine kurulan barajlarda suyun enerjisinden üretilen elektriğe ne ad verilir?",
+    "choices": [
+      "Jeotermal enerji",
+      "Nükleer enerji",
+      "Hidroelektrik enerji",
+      "Biyokütle enerjisi"
+    ],
+    "answer": 2,
+    "explanation": "Barajda biriken su yüksekten akıtılarak türbinleri döndürür. Böylece suyun enerjisi elektrik enerjisine dönüştürülür."
+  },
+  {
+    "id": "fen-7-7-06",
+    "unit": "fen-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Fosil yakıtlar için aşağıdakilerden hangisi doğrudur?",
+    "choices": [
+      "Kullanıldıkça kısa sürede kendini yeniler",
+      "Yanarken çevreye hiç gaz salmaz",
+      "Güneş ışığından doğrudan elektrik üretir",
+      "Oluşumları milyonlarca yıl sürdüğü için yenilenemez sayılır"
+    ],
+    "answer": 3,
+    "explanation": "Kömür, petrol ve doğal gaz canlı kalıntılarından milyonlarca yılda oluşur. Tüketim hızı oluşum hızından çok büyük olduğu için tükenir."
+  },
+  {
+    "id": "fen-7-7-07",
+    "unit": "fen-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bitki ve hayvan atıklarından elde edilen enerji hangisidir?",
+    "choices": [
+      "Biyokütle enerjisi",
+      "Jeotermal enerji",
+      "Rüzgâr enerjisi",
+      "Nükleer enerji"
+    ],
+    "answer": 0,
+    "explanation": "Odun, bitki artıkları ve hayvan gübresi gibi organik atıklardan elde edilen enerjiye biyokütle enerjisi denir."
+  },
+  {
+    "id": "fen-7-7-08",
+    "unit": "fen-7-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Rüzgâr türbinleri elektrik üretirken havaya karbondioksit salar.",
+    "answer": false,
+    "explanation": "Rüzgâr türbinlerinde yakıt yakılmaz; rüzgârın hareket enerjisi elektrik enerjisine dönüştürülür. Bu sırada karbondioksit salınmaz."
+  },
+  {
+    "id": "fen-7-7-09",
+    "unit": "fen-7-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Güneş enerjisinden elektrik üretiminin sınırlılığı aşağıdakilerden hangisidir?",
+    "choices": [
+      "Güneş'in birkaç yıl içinde tükenecek olması",
+      "Üretim sırasında çok miktarda duman çıkması",
+      "Üretimin gün ışığına ve hava koşullarına bağlı olması",
+      "Güneş ışığının yalnızca kışın yeterli olması"
+    ],
+    "answer": 2,
+    "explanation": "Güneş panelleri gece elektrik üretemez, bulutlu havalarda ise üretimleri azalır. Bu nedenle üretim süreklilik göstermez."
+  },
+  {
+    "id": "fen-7-7-10",
+    "unit": "fen-7-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Fosil yakıt tüketiminin artmasıyla güçlenen sera etkisi hangi küresel soruna yol açar?",
+    "choices": [
+      "Küresel ısınma",
+      "Depremler",
+      "Gelgit olayı",
+      "Ay tutulması"
+    ],
+    "answer": 0,
+    "explanation": "Atmosferde artan karbondioksit ısının uzaya geri dönmesini zorlaştırır. Dünya'nın ortalama sıcaklığı artar; buna küresel ısınma denir."
+  }
+]

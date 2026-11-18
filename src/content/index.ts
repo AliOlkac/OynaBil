@@ -1,7 +1,9 @@
 import { questionsFromCards, type CardSet } from "@/core/cards";
 import type { Grade, Question, Subject } from "@/core/model";
-import { dinKulturu } from "./din-kulturu/subject";
+import { hayatBilgisi } from "./hayat-bilgisi/subject";
+import { fenBilimleri } from "./fen-bilimleri/subject";
 import { ingilizce } from "./ingilizce/subject";
+import { dinKulturu } from "./din-kulturu/subject";
 
 /**
  * İçerik kaydı. Her ders ve sınıfın soruları ayrı parça olarak yüklenir:
@@ -15,7 +17,7 @@ import { ingilizce } from "./ingilizce/subject";
  * Yeni bir ders eklemek için `subject.ts` ile üniteleri tanımlayın, dosyaları koyun ve
  * aşağıdaki iki listeye ekleyin.
  */
-export const SUBJECTS: Subject[] = [dinKulturu, ingilizce];
+export const SUBJECTS: Subject[] = [hayatBilgisi, fenBilimleri, ingilizce, dinKulturu];
 
 type Module = { default: unknown };
 type GradeFiles = {
@@ -25,20 +27,26 @@ type GradeFiles = {
 };
 
 export const CONTENT_FILES: Record<string, Partial<Record<Grade, GradeFiles>>> = {
-  "din-kulturu": {
-    5: { questions: () => import("./din-kulturu/sorular/5.json"), cards: () => import("./din-kulturu/kartlar/5.json") },
-    6: { questions: () => import("./din-kulturu/sorular/6.json"), cards: () => import("./din-kulturu/kartlar/6.json") },
-    7: { questions: () => import("./din-kulturu/sorular/7.json"), cards: () => import("./din-kulturu/kartlar/7.json") },
-    8: {
-      questions: () => import("./din-kulturu/sorular/8.json"),
-      cards: () => import("./din-kulturu/kartlar/8.json"),
-      passages: () => import("./din-kulturu/sorular/8-lgs.json"),
-    },
+  "hayat-bilgisi": {
+    1: { questions: () => import("./hayat-bilgisi/sorular/1.json"), cards: () => import("./hayat-bilgisi/kartlar/1.json") },
+    2: { questions: () => import("./hayat-bilgisi/sorular/2.json"), cards: () => import("./hayat-bilgisi/kartlar/2.json") },
+    3: { questions: () => import("./hayat-bilgisi/sorular/3.json"), cards: () => import("./hayat-bilgisi/kartlar/3.json") },
+  },
+  "fen-bilimleri": {
+    6: { questions: () => import("./fen-bilimleri/sorular/6.json"), cards: () => import("./fen-bilimleri/kartlar/6.json") },
+    7: { questions: () => import("./fen-bilimleri/sorular/7.json"), cards: () => import("./fen-bilimleri/kartlar/7.json") },
+    8: { questions: () => import("./fen-bilimleri/sorular/8.json"), cards: () => import("./fen-bilimleri/kartlar/8.json"), passages: () => import("./fen-bilimleri/sorular/8-lgs.json") },
   },
   ingilizce: {
     2: { questions: () => import("./ingilizce/sorular/2.json"), cards: () => import("./ingilizce/kartlar/2.json") },
     3: { questions: () => import("./ingilizce/sorular/3.json"), cards: () => import("./ingilizce/kartlar/3.json") },
     4: { questions: () => import("./ingilizce/sorular/4.json"), cards: () => import("./ingilizce/kartlar/4.json") },
+  },
+  "din-kulturu": {
+    5: { questions: () => import("./din-kulturu/sorular/5.json"), cards: () => import("./din-kulturu/kartlar/5.json") },
+    6: { questions: () => import("./din-kulturu/sorular/6.json"), cards: () => import("./din-kulturu/kartlar/6.json") },
+    7: { questions: () => import("./din-kulturu/sorular/7.json"), cards: () => import("./din-kulturu/kartlar/7.json") },
+    8: { questions: () => import("./din-kulturu/sorular/8.json"), cards: () => import("./din-kulturu/kartlar/8.json"), passages: () => import("./din-kulturu/sorular/8-lgs.json") },
   },
 };
 

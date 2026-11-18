@@ -1,0 +1,131 @@
+[
+  {
+    "kind": "pairs",
+    "id": "fen-8-2-dna-kavramlari",
+    "unit": "fen-8-2",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{tanima} ne ad verilir?", "answer": "kavram" },
+      { "prompt": "{kavram} nedir?", "answer": "tanimSik" }
+    ],
+    "statement": { "text": "{tanima} {kavramKucuk} denir.", "swap": "kavramKucuk" },
+    "explanation": "{tanima} {kavramKucuk} denir.",
+    "items": [
+      { "id": "nukleotit", "kavram": "Nükleotit", "kavramKucuk": "nükleotit", "tanima": "DNA'nın en küçük yapı birimine", "tanimSik": "DNA'nın en küçük yapı birimi", "not": "Bir nükleotit; fosfat, şeker ve organik bazdan oluşur." },
+      { "id": "gen", "kavram": "Gen", "kavramKucuk": "gen", "tanima": "DNA'nın belirli bir özelliği belirleyen görev birimine", "tanimSik": "DNA'nın belirli bir özelliği belirleyen görev birimi", "not": "Genler çok sayıda nükleotidin birleşmesiyle oluşur." },
+      { "id": "kromozom", "kavram": "Kromozom", "kavramKucuk": "kromozom", "tanima": "DNA'nın proteinlerle birlikte sarılıp paketlenmesiyle oluşan yapıya", "tanimSik": "DNA'nın proteinlerle sarılıp paketlenmesiyle oluşan yapı", "not": "İnsanın vücut hücrelerinde 46 kromozom bulunur." },
+      { "id": "mutasyon", "kavram": "Mutasyon", "kavramKucuk": "mutasyon", "tanima": "DNA'nın yapısında meydana gelen ani değişikliklere", "tanimSik": "DNA'nın yapısında meydana gelen ani değişiklik", "not": "Üreme hücrelerindeki mutasyonlar sonraki nesillere aktarılabilir." },
+      { "id": "modifikasyon", "kavram": "Modifikasyon", "kavramKucuk": "modifikasyon", "tanima": "Çevre etkisiyle genlerin işleyişinde oluşan, kalıtsal olmayan değişikliklere", "tanimSik": "Çevre etkisiyle genlerin işleyişinde oluşan, kalıtsal olmayan değişiklik", "not": "Güneşte tenin bronzlaşması bir modifikasyondur." },
+      { "id": "adaptasyon", "kavram": "Adaptasyon", "kavramKucuk": "adaptasyon", "tanima": "Canlının yaşadığı ortamda yaşama ve üreme şansını artıran kalıtsal özelliklere", "tanimSik": "Canlının yaşama ve üreme şansını artıran kalıtsal özellik", "not": "Kutup ayısının beyaz kürkü ve kaktüsün diken yaprakları adaptasyondur." },
+      { "id": "genotip", "kavram": "Genotip", "kavramKucuk": "genotip", "tanima": "Bir canlının sahip olduğu genlerin toplamına", "tanimSik": "Bir canlının sahip olduğu genlerin toplamı", "not": "Genotip harflerle gösterilir: UU, Uu ya da uu gibi." },
+      { "id": "fenotip", "kavram": "Fenotip", "kavramKucuk": "fenotip", "tanima": "Genlerin ve çevrenin etkisiyle ortaya çıkan dış görünüşe", "tanimSik": "Genlerin ve çevrenin etkisiyle ortaya çıkan dış görünüş", "not": "Uzun boylu ya da mavi gözlü olmak fenotiptir." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-8-2-baz-eslesmesi",
+    "unit": "fen-8-2",
+    "difficulty": 1,
+    "questions": [{ "prompt": "DNA'da {bazKucuk} bazının karşısına hangi baz gelir?", "answer": "karsi" }],
+    "statement": { "text": "DNA'da {bazKucuk} ile {karsiKucuk} karşılıklı eşleşir.", "swap": "karsiKucuk" },
+    "explanation": "DNA'da {bazKucuk} ile {karsiKucuk} karşılıklı eşleşir. Adenin her zaman timinle, guanin her zaman sitozinle eşleşir.",
+    "items": [
+      { "id": "adenin", "baz": "Adenin", "bazKucuk": "adenin", "karsi": "Timin", "karsiKucuk": "timin" },
+      { "id": "guanin", "baz": "Guanin", "bazKucuk": "guanin", "karsi": "Sitozin", "karsiKucuk": "sitozin" },
+      { "id": "timin", "baz": "Timin", "bazKucuk": "timin", "karsi": "Adenin", "karsiKucuk": "adenin" },
+      { "id": "sitozin", "baz": "Sitozin", "bazKucuk": "sitozin", "karsi": "Guanin", "karsiKucuk": "guanin" }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-8-4-element-siniflari",
+    "unit": "fen-8-4",
+    "difficulty": 2,
+    "questions": [{ "prompt": "{sinif} için aşağıdakilerden hangisi doğrudur?", "answer": "ozellik" }],
+    "explanation": "{sinif}: {ozellik}.",
+    "items": [
+      { "id": "metaller", "sinif": "Metaller", "ozellik": "Parlaktır, tel ve levha hâline gelir, ısı ve elektriği iyi iletir", "not": "Metaller periyodik tablonun sol tarafında ve ortasında yer alır." },
+      { "id": "ametaller", "sinif": "Ametaller", "ozellik": "Mattır, katı olanları kırılgandır, ısı ve elektriği iyi iletmez", "not": "Ametaller periyodik tablonun sağ tarafında yer alır." },
+      { "id": "yari-metaller", "sinif": "Yarı metaller", "ozellik": "Bazı özellikleri metallere, bazı özellikleri ametallere benzer", "not": "Bor ve silisyum yarı metaldir." },
+      { "id": "soy-gazlar", "sinif": "Soy gazlar", "ozellik": "Kararlıdır, oda sıcaklığında tek atomlu gaz hâlinde bulunur", "not": "Soy gazlar periyodik tablonun en sağındaki 8A grubunda yer alır." }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-8-4-gruplar",
+    "unit": "fen-8-4",
+    "difficulty": 3,
+    "questions": [
+      { "prompt": "{element} elementi periyodik tabloda hangi grupta yer alır?", "answer": "grup" },
+      { "prompt": "Aşağıdaki elementlerden hangisi periyodik tablonun {grup} grubunda yer alır?", "answer": "element" }
+    ],
+    "statement": { "text": "{element} elementi periyodik tablonun {grup} grubunda yer alır.", "swap": "grup" },
+    "explanation": "{element} ({sembol}), atom numarası {no} olan elementtir ve periyodik tablonun {grup} grubunda yer alır.",
+    "items": [
+      { "id": "lityum", "element": "Lityum", "sembol": "Li", "no": "3", "grup": "1A" },
+      { "id": "magnezyum", "element": "Magnezyum", "sembol": "Mg", "no": "12", "grup": "2A" },
+      { "id": "aluminyum", "element": "Alüminyum", "sembol": "Al", "no": "13", "grup": "3A" },
+      { "id": "karbon", "element": "Karbon", "sembol": "C", "no": "6", "grup": "4A" },
+      { "id": "azot", "element": "Azot", "sembol": "N", "no": "7", "grup": "5A" },
+      { "id": "oksijen", "element": "Oksijen", "sembol": "O", "no": "8", "grup": "6A" },
+      { "id": "klor", "element": "Klor", "sembol": "Cl", "no": "17", "grup": "7A" },
+      { "id": "neon", "element": "Neon", "sembol": "Ne", "no": "10", "grup": "8A" }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "fen-8-4-asit-ozellikleri",
+    "unit": "fen-8-4",
+    "difficulty": 2,
+    "positive": "Aşağıdakilerden hangisi asitlerin özelliklerinden biridir?",
+    "negative": "Aşağıdakilerden hangisi asitlerin özelliklerinden biri değildir?",
+    "explanation": "Asitlerin özellikleri: {members}. Tadının acı olması, ele kayganlık hissi vermesi, kırmızı turnusolu maviye çevirmesi ve pH'ının 7'den büyük olması bazlara aittir.",
+    "members": ["Tatları ekşidir", "Mavi turnusol kâğıdını kırmızıya çevirir", "pH değerleri 7'den küçüktür", "Suda çözündüklerinde H⁺ iyonu verir"],
+    "nonMembers": ["Tatları acıdır", "Ele kayganlık hissi verir", "Kırmızı turnusol kâğıdını maviye çevirir", "pH değerleri 7'den büyüktür", "Suda çözündüklerinde OH⁻ iyonu verir"]
+  },
+  {
+    "kind": "list",
+    "id": "fen-8-4-asidik-maddeler",
+    "unit": "fen-8-4",
+    "difficulty": 1,
+    "positive": "Aşağıdaki maddelerden hangisi asidiktir?",
+    "negative": "Aşağıdaki maddelerden hangisi asidik değildir?",
+    "statement": "{item} asidik bir maddedir.",
+    "explanation": "Günlük yaşamdaki asidik maddeler: {members}. Sabun, çamaşır suyu, diş macunu, deterjan ve kabartma tozu ise bazik maddelerdir.",
+    "members": ["Limon suyu", "Sirke", "Portakal suyu", "Mide öz suyu"],
+    "nonMembers": ["Sabun", "Çamaşır suyu", "Diş macunu", "Deterjan", "Kabartma tozu"]
+  },
+  {
+    "kind": "pairs",
+    "id": "fen-8-5-basit-makine-ornek",
+    "unit": "fen-8-5",
+    "difficulty": 2,
+    "questions": [
+      { "prompt": "{ornek} hangi basit makineye örnektir?", "answer": "makine" },
+      { "prompt": "Aşağıdakilerden hangisi {makineye} örnektir?", "answer": "ornek" }
+    ],
+    "statement": { "text": "{ornek}, {makineye} örnektir.", "swap": "makineye" },
+    "explanation": "{ornek}, {makineye} örnektir.",
+    "items": [
+      { "id": "tahterevalli", "ornek": "Tahterevalli", "makine": "Destek ortada olan kaldıraç", "makineye": "desteğin ortada olduğu kaldıraca", "not": "Makas ve pense de bu tür kaldıraçlardır." },
+      { "id": "el-arabasi", "ornek": "El arabası", "makine": "Yük ortada olan kaldıraç", "makineye": "yükün ortada olduğu kaldıraca", "not": "Bu tür kaldıraçlarda kuvvetten kazanç sağlanır." },
+      { "id": "cimbiz", "ornek": "Cımbız", "makine": "Kuvvet ortada olan kaldıraç", "makineye": "kuvvetin ortada olduğu kaldıraca", "not": "Bu tür kaldıraçlarda kuvvetten kayıp, yoldan kazanç vardır." },
+      { "id": "rampa", "ornek": "Engelli rampası", "makine": "Eğik düzlem", "makineye": "eğik düzleme", "not": "Eğik düzlem, yükü daha az kuvvetle yükseğe çıkarmayı sağlar." },
+      { "id": "kapi-kolu", "ornek": "Kapı kolu", "makine": "Çıkrık", "makineye": "çıkrığa", "not": "Çıkrık, aynı eksen çevresinde dönen farklı yarıçaplı iki silindirden oluşur." },
+      { "id": "bayrak-diregi", "ornek": "Bayrak direğinin tepesindeki düzenek", "makine": "Sabit makara", "makineye": "sabit makaraya", "not": "Sabit makara yalnızca kuvvetin yönünü değiştirir." },
+      { "id": "saat-carklari", "ornek": "Kurmalı saatin içindeki çarklar", "makine": "Dişli çark", "makineye": "dişli çarklara", "not": "Dişli çarklar hareketi ve kuvveti bir çarktan diğerine aktarır." }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "fen-8-7-isi-donusumu",
+    "unit": "fen-8-7",
+    "difficulty": 1,
+    "positive": "Aşağıdaki araçlardan hangisi elektrik enerjisini kullanım amacına uygun olarak ısı enerjisine dönüştürür?",
+    "negative": "Aşağıdaki araçlardan hangisinin kullanım amacı elektrik enerjisini ısı enerjisine dönüştürmek değildir?",
+    "statement": "{item}, elektrik enerjisini kullanım amacına uygun olarak ısı enerjisine dönüştürür.",
+    "explanation": "Elektrik enerjisini ısıya dönüştürmek için yapılan araçlar: {members}. Vantilatör, mikser ve matkap hareket; hoparlör ve kapı zili ses enerjisi üretmek için kullanılır.",
+    "members": ["Ütü", "Elektrikli fırın", "Su ısıtıcısı", "Tost makinesi", "Elektrikli soba"],
+    "nonMembers": ["Vantilatör", "Hoparlör", "Mikser", "Matkap", "Kapı zili"]
+  }
+]

@@ -1,0 +1,351 @@
+[
+  {
+    "kind": "list",
+    "id": "hb-1-1-sinif-davranislari",
+    "unit": "hb-1-1",
+    "difficulty": 1,
+    "positive": "Hangisi sınıfta doğru bir davranıştır?",
+    "negative": "Hangisi sınıfta doğru bir davranış değildir?",
+    "statement": "{item}, sınıfta doğru bir davranıştır.",
+    "explanation": "Sınıfta söz almak için parmak kaldırır, konuşanı dinler, eşyaları özenle kullanırız. Koşmak, söz kesmek ve izinsiz eşya almak doğru değildir.",
+    "members": [
+      "Parmak kaldırarak söz almak",
+      "Konuşan arkadaşını dinlemek",
+      "Sırasını temiz tutmak",
+      "Eşyalarını paylaşmak"
+    ],
+    "nonMembers": [
+      "Arkadaşının sözünü kesmek",
+      "Sınıfta koşmak",
+      "Sıraların üzerini çizmek",
+      "İzin almadan başkasının eşyasını almak"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-1-2-duyu-organlari",
+    "unit": "hb-1-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{organla} ne yaparız?",
+        "answer": "isSik"
+      },
+      {
+        "prompt": "{duyu} duyu organımız hangisidir?",
+        "answer": "organ"
+      }
+    ],
+    "statement": {
+      "text": "{organ}, {duyuKucuk} duyu organımızdır.",
+      "swap": "duyuKucuk"
+    },
+    "explanation": "{organ}, {duyuKucuk} duyu organımızdır. {organla} {is}.",
+    "items": [
+      {
+        "id": "goz",
+        "organ": "Göz",
+        "organla": "Gözümüzle",
+        "duyu": "Görme",
+        "duyuKucuk": "görme",
+        "is": "çevremizi görürüz",
+        "isSik": "Görürüz"
+      },
+      {
+        "id": "kulak",
+        "organ": "Kulak",
+        "organla": "Kulağımızla",
+        "duyu": "İşitme",
+        "duyuKucuk": "işitme",
+        "is": "sesleri işitiriz",
+        "isSik": "Sesleri işitiriz"
+      },
+      {
+        "id": "burun",
+        "organ": "Burun",
+        "organla": "Burnumuzla",
+        "duyu": "Koklama",
+        "duyuKucuk": "koklama",
+        "is": "kokuları alırız",
+        "isSik": "Koku alırız"
+      },
+      {
+        "id": "dil",
+        "organ": "Dil",
+        "organla": "Dilimizle",
+        "duyu": "Tat alma",
+        "duyuKucuk": "tat alma",
+        "is": "yiyeceklerin tadını alırız",
+        "isSik": "Tat alırız"
+      },
+      {
+        "id": "deri",
+        "organ": "Deri",
+        "organla": "Derimizle",
+        "duyu": "Dokunma",
+        "duyuKucuk": "dokunma",
+        "is": "sıcağı, soğuğu, sertliği ve yumuşaklığı hissederiz",
+        "isSik": "Sıcağı ve soğuğu hissederiz"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-1-2-acil-yardim",
+    "unit": "hb-1-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{durum} yardıma hangisi gelir?",
+        "answer": "ekip"
+      }
+    ],
+    "statement": {
+      "text": "{durum} yardıma {ekipKucuk} gelir.",
+      "swap": "ekipKucuk"
+    },
+    "explanation": "{durum} yardıma {ekipKucuk} gelir. Bütün acil durumlarda 112 aranır.",
+    "distractors": {
+      "ekip": [
+        "Postacı",
+        "Çöp kamyonu"
+      ]
+    },
+    "items": [
+      {
+        "id": "yangin",
+        "durum": "Bir yerde yangın çıktığında",
+        "ekip": "İtfaiye",
+        "ekipKucuk": "itfaiye"
+      },
+      {
+        "id": "hasta",
+        "durum": "Biri kazada yaralandığında",
+        "ekip": "Ambulans",
+        "ekipKucuk": "ambulans"
+      },
+      {
+        "id": "hirsiz",
+        "durum": "Bir eve hırsız girdiğinde",
+        "ekip": "Polis",
+        "ekipKucuk": "polis"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-1-3-meslekler",
+    "unit": "hb-1-3",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{meslek} ne iş yapar?",
+        "answer": "isSik"
+      },
+      {
+        "prompt": "Hangisi {is}?",
+        "answer": "meslek"
+      }
+    ],
+    "statement": {
+      "text": "{meslek}, {is}.",
+      "swap": "is"
+    },
+    "explanation": "{meslek}, {is}. Her meslek toplum için gereklidir.",
+    "items": [
+      {
+        "id": "ogretmen",
+        "meslek": "Öğretmen",
+        "is": "öğrencilere ders anlatır",
+        "isSik": "Öğrencilere ders anlatır"
+      },
+      {
+        "id": "doktor",
+        "meslek": "Doktor",
+        "is": "hastaları muayene eder",
+        "isSik": "Hastaları muayene eder"
+      },
+      {
+        "id": "firinci",
+        "meslek": "Fırıncı",
+        "is": "ekmek pişirir",
+        "isSik": "Ekmek pişirir"
+      },
+      {
+        "id": "itfaiyeci",
+        "meslek": "İtfaiyeci",
+        "is": "yangınları söndürür",
+        "isSik": "Yangınları söndürür"
+      },
+      {
+        "id": "terzi",
+        "meslek": "Terzi",
+        "is": "giysi diker",
+        "isSik": "Giysi diker"
+      },
+      {
+        "id": "ciftci",
+        "meslek": "Çiftçi",
+        "is": "tarlada ürün yetiştirir",
+        "isSik": "Tarlada ürün yetiştirir"
+      },
+      {
+        "id": "postaci",
+        "meslek": "Postacı",
+        "is": "mektupları evlere dağıtır",
+        "isSik": "Mektupları evlere dağıtır"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-1-4-milli-bayramlar",
+    "unit": "hb-1-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{bayram} hangi gün kutlanır?",
+        "answer": "tarih"
+      },
+      {
+        "prompt": "{tarihte} hangi bayramı kutlarız?",
+        "answer": "bayram"
+      }
+    ],
+    "statement": {
+      "text": "{bayram} {tarihte} kutlanır.",
+      "swap": "tarihte"
+    },
+    "explanation": "{bayram} her yıl {tarihte} kutlanır. Bu bayram millî bayramlarımızdandır.",
+    "items": [
+      {
+        "id": "cumhuriyet",
+        "bayram": "Cumhuriyet Bayramı",
+        "tarih": "29 Ekim",
+        "tarihte": "29 Ekim'de"
+      },
+      {
+        "id": "cocuk",
+        "bayram": "Ulusal Egemenlik ve Çocuk Bayramı",
+        "tarih": "23 Nisan",
+        "tarihte": "23 Nisan'da"
+      },
+      {
+        "id": "genclik",
+        "bayram": "Atatürk'ü Anma, Gençlik ve Spor Bayramı",
+        "tarih": "19 Mayıs",
+        "tarihte": "19 Mayıs'ta"
+      },
+      {
+        "id": "zafer",
+        "bayram": "Zafer Bayramı",
+        "tarih": "30 Ağustos",
+        "tarihte": "30 Ağustos'ta"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-1-5-mevsimler",
+    "unit": "hb-1-5",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{mevsimde} ne olur?",
+        "answer": "ozellikSik"
+      },
+      {
+        "prompt": "Hangi mevsimde {ozellik}?",
+        "answer": "mevsim"
+      }
+    ],
+    "statement": {
+      "text": "{mevsimde} {ozellik}.",
+      "swap": "ozellik"
+    },
+    "explanation": "{mevsimde} {ozellik}. Bir yılda dört mevsim vardır: ilkbahar, yaz, sonbahar ve kış.",
+    "items": [
+      {
+        "id": "kis",
+        "mevsim": "Kış",
+        "mevsimde": "Kışın",
+        "ozellik": "kar yağar",
+        "ozellikSik": "Kar yağar"
+      },
+      {
+        "id": "sonbahar",
+        "mevsim": "Sonbahar",
+        "mevsimde": "Sonbaharda",
+        "ozellik": "yapraklar sararıp dökülür",
+        "ozellikSik": "Yapraklar sararıp dökülür"
+      },
+      {
+        "id": "ilkbahar",
+        "mevsim": "İlkbahar",
+        "mevsimde": "İlkbaharda",
+        "ozellik": "ağaçlar çiçek açar",
+        "ozellikSik": "Ağaçlar çiçek açar"
+      },
+      {
+        "id": "yaz",
+        "mevsim": "Yaz",
+        "mevsimde": "Yazın",
+        "ozellik": "hava çok sıcak olur, denize gireriz",
+        "ozellikSik": "Hava çok sıcak olur, denize gireriz"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-1-5-atik-kutulari",
+    "unit": "hb-1-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{atik} hangi geri dönüşüm kutusuna atılır?",
+        "answer": "kutu"
+      },
+      {
+        "prompt": "Hangisi {kutuya} atılır?",
+        "answer": "atik"
+      }
+    ],
+    "statement": {
+      "text": "{atik}, {kutuya} atılır.",
+      "swap": "kutuya"
+    },
+    "explanation": "{atik}, {kutuya} atılır. Atıkları ayrı kutulara atarsak yeniden kullanılabilirler.",
+    "items": [
+      {
+        "id": "kagit",
+        "atik": "Eski gazete",
+        "kutu": "Kâğıt kutusu",
+        "kutuya": "kâğıt kutusuna"
+      },
+      {
+        "id": "plastik",
+        "atik": "Plastik su şişesi",
+        "kutu": "Plastik kutusu",
+        "kutuya": "plastik kutusuna"
+      },
+      {
+        "id": "cam",
+        "atik": "Cam kavanoz",
+        "kutu": "Cam kutusu",
+        "kutuya": "cam kutusuna"
+      },
+      {
+        "id": "metal",
+        "atik": "Boş konserve kutusu",
+        "kutu": "Metal kutusu",
+        "kutuya": "metal kutusuna"
+      },
+      {
+        "id": "pil",
+        "atik": "Bitmiş pil",
+        "kutu": "Atık pil kutusu",
+        "kutuya": "atık pil kutusuna"
+      }
+    ]
+  }
+]

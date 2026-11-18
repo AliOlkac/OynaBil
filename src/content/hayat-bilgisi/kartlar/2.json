@@ -1,0 +1,404 @@
+[
+  {
+    "kind": "pairs",
+    "id": "hb-2-1-okul-calisanlari",
+    "unit": "hb-2-1",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "Okulda {gorevli} ne iş yapar?",
+        "answer": "isSik"
+      },
+      {
+        "prompt": "Okulda hangisi {is}?",
+        "answer": "gorevliSik"
+      }
+    ],
+    "statement": {
+      "text": "Okulda {gorevli} {is}.",
+      "swap": "is"
+    },
+    "explanation": "Okulda {gorevli} {is}. Okul çalışanlarının hepsi bizim için çalışır.",
+    "items": [
+      {
+        "id": "mudur",
+        "gorevli": "müdür",
+        "gorevliSik": "Müdür",
+        "is": "okulu yönetir",
+        "isSik": "Okulu yönetir"
+      },
+      {
+        "id": "ogretmen",
+        "gorevli": "öğretmen",
+        "gorevliSik": "Öğretmen",
+        "is": "ders anlatır",
+        "isSik": "Ders anlatır"
+      },
+      {
+        "id": "kutuphane",
+        "gorevli": "kütüphane görevlisi",
+        "gorevliSik": "Kütüphane görevlisi",
+        "is": "kitapları ödünç verir",
+        "isSik": "Kitapları ödünç verir"
+      },
+      {
+        "id": "kantin",
+        "gorevli": "kantin görevlisi",
+        "gorevliSik": "Kantin görevlisi",
+        "is": "yiyecek ve içecek satar",
+        "isSik": "Yiyecek ve içecek satar"
+      },
+      {
+        "id": "temizlik",
+        "gorevli": "temizlik görevlisi",
+        "gorevliSik": "Temizlik görevlisi",
+        "is": "sınıfları ve koridorları temizler",
+        "isSik": "Sınıfları ve koridorları temizler"
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "hb-2-2-saglikli-besinler",
+    "unit": "hb-2-2",
+    "difficulty": 1,
+    "positive": "Hangisi sağlığımız için yararlı bir besindir?",
+    "negative": "Hangisini sağlığımız için az tüketmeliyiz?",
+    "statement": "{item}, sağlığımız için yararlı bir besindir.",
+    "explanation": "Süt, yoğurt, yumurta, meyve ve çorba gibi besinler büyümemize yardım eder. Cips, şekerleme ve gazlı içecek gibi abur cuburlar az tüketilmelidir.",
+    "members": [
+      "Süt",
+      "Yumurta",
+      "Elma",
+      "Mercimek çorbası",
+      "Yoğurt"
+    ],
+    "nonMembers": [
+      "Cips",
+      "Gazlı içecek",
+      "Şekerleme",
+      "Kremalı bisküvi"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-2-2-trafik-isiklari",
+    "unit": "hb-2-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "Trafik ışıklarında {renk} ışık ne anlama gelir?",
+        "answer": "anlam"
+      },
+      {
+        "prompt": "Trafik ışıklarında \"{anlam}\" anlamına gelen ışık hangi renktir?",
+        "answer": "renkSik"
+      }
+    ],
+    "statement": {
+      "text": "Trafik ışıklarında {renk} ışık \"{anlam}\" demektir.",
+      "swap": "anlam"
+    },
+    "explanation": "Trafik ışıklarında {renk} ışık \"{anlam}\" demektir. Kırmızıda durulur, sarıda hazırlanılır, yeşilde geçilir.",
+    "distractors": {
+      "anlam": [
+        "Koş",
+        "Geri dön"
+      ],
+      "renkSik": [
+        "Mavi",
+        "Mor"
+      ]
+    },
+    "items": [
+      {
+        "id": "kirmizi",
+        "renk": "kırmızı",
+        "renkSik": "Kırmızı",
+        "anlam": "Dur"
+      },
+      {
+        "id": "sari",
+        "renk": "sarı",
+        "renkSik": "Sarı",
+        "anlam": "Hazırlan"
+      },
+      {
+        "id": "yesil",
+        "renk": "yeşil",
+        "renkSik": "Yeşil",
+        "anlam": "Geç"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-2-3-akrabalar",
+    "unit": "hb-2-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{tanim} bizim neyimiz olur?",
+        "answer": "ad"
+      },
+      {
+        "prompt": "{adimiz} kimdir?",
+        "answer": "tanim"
+      }
+    ],
+    "statement": {
+      "text": "{tanim} bizim {adimizKucuk} olur.",
+      "swap": "adimizKucuk"
+    },
+    "explanation": "{tanim} bizim {adimizKucuk} olur.",
+    "items": [
+      {
+        "id": "babaanne",
+        "tanim": "Babamızın annesi",
+        "ad": "Babaanne",
+        "adimiz": "Babaannemiz",
+        "adimizKucuk": "babaannemiz"
+      },
+      {
+        "id": "anneanne",
+        "tanim": "Annemizin annesi",
+        "ad": "Anneanne",
+        "adimiz": "Anneannemiz",
+        "adimizKucuk": "anneannemiz"
+      },
+      {
+        "id": "amca",
+        "tanim": "Babamızın erkek kardeşi",
+        "ad": "Amca",
+        "adimiz": "Amcamız",
+        "adimizKucuk": "amcamız"
+      },
+      {
+        "id": "hala",
+        "tanim": "Babamızın kız kardeşi",
+        "ad": "Hala",
+        "adimiz": "Halamız",
+        "adimizKucuk": "halamız"
+      },
+      {
+        "id": "dayi",
+        "tanim": "Annemizin erkek kardeşi",
+        "ad": "Dayı",
+        "adimiz": "Dayımız",
+        "adimizKucuk": "dayımız"
+      },
+      {
+        "id": "teyze",
+        "tanim": "Annemizin kız kardeşi",
+        "ad": "Teyze",
+        "adimiz": "Teyzemiz",
+        "adimizKucuk": "teyzemiz"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-2-4-ataturkun-ailesi",
+    "unit": "hb-2-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "Atatürk'ün {yakin} adı nedir?",
+        "answer": "ad"
+      },
+      {
+        "prompt": "{ad}, Atatürk'ün neyidir?",
+        "answer": "yakinSik"
+      }
+    ],
+    "explanation": "Atatürk'ün annesi Zübeyde Hanım, babası Ali Rıza Efendi, kız kardeşi Makbule Hanım'dır.",
+    "distractors": {
+      "ad": [
+        "Fatma Hanım",
+        "Ahmet Efendi"
+      ],
+      "yakinSik": [
+        "Teyzesi",
+        "Dedesi"
+      ]
+    },
+    "items": [
+      {
+        "id": "anne",
+        "yakin": "annesinin",
+        "yakinSik": "Annesi",
+        "ad": "Zübeyde Hanım"
+      },
+      {
+        "id": "baba",
+        "yakin": "babasının",
+        "yakinSik": "Babası",
+        "ad": "Ali Rıza Efendi"
+      },
+      {
+        "id": "kardes",
+        "yakin": "kız kardeşinin",
+        "yakinSik": "Kız kardeşi",
+        "ad": "Makbule Hanım"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-2-5-mevsim-aylari",
+    "unit": "hb-2-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{aylar} ayları hangi mevsimdedir?",
+        "answer": "mevsim"
+      },
+      {
+        "prompt": "{mevsim} mevsiminin ayları hangileridir?",
+        "answer": "aylar"
+      }
+    ],
+    "statement": {
+      "text": "{aylar} ayları {mevsimKucuk} mevsimindedir.",
+      "swap": "mevsimKucuk"
+    },
+    "explanation": "{aylar} ayları {mevsimKucuk} mevsimindedir. Her mevsim üç ay sürer.",
+    "items": [
+      {
+        "id": "ilkbahar",
+        "aylar": "Mart, nisan ve mayıs",
+        "mevsim": "İlkbahar",
+        "mevsimKucuk": "ilkbahar"
+      },
+      {
+        "id": "yaz",
+        "aylar": "Haziran, temmuz ve ağustos",
+        "mevsim": "Yaz",
+        "mevsimKucuk": "yaz"
+      },
+      {
+        "id": "sonbahar",
+        "aylar": "Eylül, ekim ve kasım",
+        "mevsim": "Sonbahar",
+        "mevsimKucuk": "sonbahar"
+      },
+      {
+        "id": "kis",
+        "aylar": "Aralık, ocak ve şubat",
+        "mevsim": "Kış",
+        "mevsimKucuk": "kış"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-2-5-hayvan-yavrulari",
+    "unit": "hb-2-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{hayvanin} yavrusuna ne denir?",
+        "answer": "yavru"
+      },
+      {
+        "prompt": "{yavru} hangi hayvanın yavrusudur?",
+        "answer": "hayvan"
+      }
+    ],
+    "statement": {
+      "text": "{hayvanin} yavrusuna {yavruKucuk} denir.",
+      "swap": "yavruKucuk"
+    },
+    "explanation": "{hayvanin} yavrusuna {yavruKucuk} denir.",
+    "items": [
+      {
+        "id": "inek",
+        "hayvan": "İnek",
+        "hayvanin": "İneğin",
+        "yavru": "Buzağı",
+        "yavruKucuk": "buzağı"
+      },
+      {
+        "id": "koyun",
+        "hayvan": "Koyun",
+        "hayvanin": "Koyunun",
+        "yavru": "Kuzu",
+        "yavruKucuk": "kuzu"
+      },
+      {
+        "id": "keci",
+        "hayvan": "Keçi",
+        "hayvanin": "Keçinin",
+        "yavru": "Oğlak",
+        "yavruKucuk": "oğlak"
+      },
+      {
+        "id": "at",
+        "hayvan": "At",
+        "hayvanin": "Atın",
+        "yavru": "Tay",
+        "yavruKucuk": "tay"
+      },
+      {
+        "id": "tavuk",
+        "hayvan": "Tavuk",
+        "hayvanin": "Tavuğun",
+        "yavru": "Civciv",
+        "yavruKucuk": "civciv"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-2-6-teknolojik-urunler",
+    "unit": "hb-2-6",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{urun} ne işe yarar?",
+        "answer": "isSik"
+      },
+      {
+        "prompt": "Hangi teknolojik ürün {is}?",
+        "answer": "urun"
+      }
+    ],
+    "statement": {
+      "text": "{urun}, {is}.",
+      "swap": "is"
+    },
+    "explanation": "{urun}, {is}. Teknolojik ürünler hayatımızı kolaylaştırır.",
+    "items": [
+      {
+        "id": "buzdolabi",
+        "urun": "Buzdolabı",
+        "is": "yiyecekleri soğuk tutar",
+        "isSik": "Yiyecekleri soğuk tutar"
+      },
+      {
+        "id": "camasir",
+        "urun": "Çamaşır makinesi",
+        "is": "çamaşırları yıkar",
+        "isSik": "Çamaşırları yıkar"
+      },
+      {
+        "id": "supurge",
+        "urun": "Elektrik süpürgesi",
+        "is": "yerdeki tozları çeker",
+        "isSik": "Yerdeki tozları çeker"
+      },
+      {
+        "id": "utu",
+        "urun": "Ütü",
+        "is": "giysilerin kırışıklığını giderir",
+        "isSik": "Giysilerin kırışıklığını giderir"
+      },
+      {
+        "id": "telefon",
+        "urun": "Telefon",
+        "is": "uzaktaki kişilerle konuşmamızı sağlar",
+        "isSik": "Uzaktaki kişilerle konuşmamızı sağlar"
+      }
+    ]
+  }
+]

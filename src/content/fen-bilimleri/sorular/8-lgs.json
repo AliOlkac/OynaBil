@@ -1,0 +1,344 @@
+[
+  {
+    "id": "fen-8-1-lgs-01",
+    "unit": "fen-8-1",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "K ve L şehirleri aynı boylam üzerindedir. K şehri Kuzey Yarım Küre'de, L şehri Güney Yarım Küre'de yer alır. Bir öğrenci yıl boyunca bu iki şehrin gündüz sürelerini kaydediyor ve belirli bir tarihte K şehrinde yılın en uzun gündüzünün yaşandığını görüyor.",
+    "prompt": "Buna göre aynı tarihle ilgili aşağıdakilerden hangisi doğrudur?",
+    "choices": [
+      "L şehrinde yaz mevsimi başlar.",
+      "İki şehirde de gece ve gündüz süreleri eşittir.",
+      "L şehrinde yılın en uzun gecesi yaşanır.",
+      "Güneş ışınları L şehrine yılın en dik açısıyla gelir."
+    ],
+    "answer": 2,
+    "explanation": "Kuzey Yarım Küre'de en uzun gündüz 21 Haziran'da yaşanır. Bu tarihte Güney Yarım Küre'de kış başlar, ışınlar en eğik açıyla gelir ve en uzun gece yaşanır.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-1-lgs-02",
+    "unit": "fen-8-1",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir öğrenci karanlık bir odada özdeş iki el fenerini aynı uzaklıktan masadaki kâğıtlara tutuyor. Birinci feneri kâğıda dik, ikinci feneri eğik tutuyor. Dik tutulan fenerin kâğıtta küçük ve parlak, eğik tutulan fenerin ise geniş ve soluk bir alan aydınlattığını gözlemliyor.",
+    "prompt": "Öğrencinin kurduğu model aşağıdakilerden hangisini açıklamak için kullanılabilir?",
+    "choices": [
+      "Dünya Güneş'e yaklaştığında yaz mevsiminin yaşanmasını",
+      "Dünya'nın kendi ekseni çevresinde dönmesiyle gece ve gündüzün oluşmasını",
+      "Yükseklere çıkıldıkça hava sıcaklığının azalmasını",
+      "Güneş ışınlarının dik geldiği bölgelerde birim yüzeye düşen enerjinin daha fazla olmasını"
+    ],
+    "answer": 3,
+    "explanation": "Fenerler özdeş olduğundan yaydıkları enerji eşittir. Dik gelen ışık küçük alana düştüğü için birim yüzeye düşen enerji fazladır; yazın havanın sıcak olması böyle açıklanır.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-2-lgs-01",
+    "unit": "fen-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir DNA molekülünün karşılıklı iki zincirinden birindeki nükleotitlerin baz dizilimi şöyledir: A - T - G - G - S - A. (A: adenin, T: timin, G: guanin, S: sitozin)",
+    "prompt": "Buna göre bu zincirin karşısındaki zincirin baz dizilimi aşağıdakilerden hangisidir?",
+    "choices": [
+      "A - T - G - G - S - A",
+      "T - A - S - S - G - T",
+      "T - A - G - G - S - T",
+      "S - G - A - A - T - S"
+    ],
+    "answer": 1,
+    "explanation": "DNA'da adenin timinle, guanin sitozinle eşleşir. Sırayla A→T, T→A, G→S, G→S, S→G, A→T yazılır: T - A - S - S - G - T.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-2-lgs-02",
+    "unit": "fen-8-2",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Bezelyelerde sarı tohum rengi (S), yeşil tohum rengine (s) baskındır. Sarı tohumlu iki bezelye bitkisi çaprazlandığında oluşan 400 tohumun yaklaşık 300'ünün sarı, 100'ünün yeşil olduğu görülüyor.",
+    "prompt": "Buna göre çaprazlanan bezelyeler için aşağıdakilerden hangisi doğrudur?",
+    "choices": [
+      "İkisi de melez sarıdır (Ss).",
+      "İkisi de saf döl sarıdır (SS).",
+      "Biri saf döl sarı (SS), diğeri melez sarıdır (Ss).",
+      "Yeşil tohum geni yalnızca birinde bulunur."
+    ],
+    "answer": 0,
+    "explanation": "Yeşil tohumlu (ss) yavru oluşması için iki ebeveyn de s geni taşımalıdır. İkisi de sarı olduğundan genotipleri Ss'dir. Ss × Ss çaprazlamasında 3 sarı : 1 yeşil oranı çıkar.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-2-lgs-03",
+    "unit": "fen-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Çuha çiçeği 15-25 °C sıcaklıkta yetiştirildiğinde kırmızı, 30-35 °C sıcaklıkta yetiştirildiğinde beyaz çiçek açar. Beyaz çiçek açan bitkilerden alınan tohumlar 20 °C'de yetiştirildiğinde oluşan bitkiler kırmızı çiçek açar.",
+    "prompt": "Bu durumla ilgili aşağıdaki çıkarımlardan hangisi yapılabilir?",
+    "choices": [
+      "Sıcaklık, bitkinin genlerinin yapısını kalıcı olarak değiştirmiştir.",
+      "Beyaz çiçek rengi sonraki nesillere aktarılan bir mutasyondur.",
+      "Çiçek rengi çevre koşullarından etkilenmeyen bir özelliktir.",
+      "Çiçek rengindeki değişim çevre etkisiyle ortaya çıkmıştır ve kalıtsal değildir."
+    ],
+    "answer": 3,
+    "explanation": "Renk değişimi sıcaklığa bağlıdır ve tohumlarla sonraki nesle aktarılmamıştır. Çevre etkisiyle genlerin işleyişinde oluşan, kalıtsal olmayan bu değişim modifikasyondur.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-3-lgs-01",
+    "unit": "fen-8-3",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Ağırlığı 120 N olan dikdörtgenler prizması biçimindeki bir tuğlanın üç farklı yüzeyinin alanları 0,06 m², 0,03 m² ve 0,02 m²'dir. Tuğla, yatay ve düz bir zemine sırasıyla bu üç yüzeyi üzerine konuluyor.",
+    "prompt": "Buna göre tuğlanın zemine yaptığı en büyük basınç ile en küçük basınç arasındaki fark kaç Pa'dır?",
+    "choices": [
+      "4000",
+      "2000",
+      "6000",
+      "8000"
+    ],
+    "answer": 0,
+    "explanation": "Basınç = ağırlık ÷ yüzey alanı. En büyük basınç 120 ÷ 0,02 = 6000 Pa, en küçük basınç 120 ÷ 0,06 = 2000 Pa'dır. Fark 6000 − 2000 = 4000 Pa olur.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-3-lgs-02",
+    "unit": "fen-8-3",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Özdeş üç kaptan K kabına 10 cm yüksekliğinde saf su, L kabına 20 cm yüksekliğinde saf su, M kabına 20 cm yüksekliğinde tuzlu su konuluyor. Sıvıların sıcaklıkları eşittir.",
+    "prompt": "Buna göre kapların tabanına etki eden sıvı basınçları arasındaki ilişki aşağıdakilerden hangisidir?",
+    "choices": [
+      "K > L > M",
+      "M > L > K",
+      "L = M > K",
+      "K = L = M"
+    ],
+    "answer": 1,
+    "explanation": "Sıvı basıncı derinlik ve yoğunlukla artar. L'de derinlik K'den fazladır. M ile L'nin derinliği eşittir ama tuzlu su daha yoğundur. Sıralama M > L > K olur.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-3-lgs-03",
+    "unit": "fen-8-3",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir dağcı, dağın zirvesinde boş bir plastik şişenin kapağını sıkıca kapatıyor. Dağın eteğine indiğinde şişenin içe doğru büzüldüğünü görüyor. İniş boyunca şişenin sıcaklığı değişmemiştir.",
+    "prompt": "Bu gözlem aşağıdakilerden hangisiyle açıklanır?",
+    "choices": [
+      "Dağın eteğinde açık hava basıncı zirvedekinden küçüktür.",
+      "Aşağı inildikçe şişenin içindeki hava miktarı azalmıştır.",
+      "Dağın eteğinde açık hava basıncı zirvedekinden büyüktür.",
+      "Açık hava basıncı yükseklikle değişmez."
+    ],
+    "answer": 2,
+    "explanation": "Şişenin içinde zirvedeki düşük basınçlı hava vardır. Aşağı inildikçe açık hava basıncı artar ve dışarıdaki basınç içeridekinden büyük olduğu için şişe büzülür.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-4-lgs-01",
+    "unit": "fen-8-4",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Kapalı bir kapta 24 g magnezyum, 16 g oksijenle artansız tepkimeye girerek magnezyum oksit oluşturuyor. İkinci deneyde aynı koşullarda kaba 48 g magnezyum ve 40 g oksijen konularak tepkime gerçekleştiriliyor ve magnezyumun tamamı harcanıyor.",
+    "prompt": "İkinci deneyle ilgili aşağıdakilerden hangisi doğrudur?",
+    "choices": [
+      "88 g magnezyum oksit oluşur, artan madde olmaz.",
+      "80 g magnezyum oksit oluşur, 8 g magnezyum artar.",
+      "64 g magnezyum oksit oluşur, 24 g oksijen artar.",
+      "80 g magnezyum oksit oluşur, 8 g oksijen artar."
+    ],
+    "answer": 3,
+    "explanation": "24 g magnezyum 16 g oksijenle birleştiğine göre 48 g magnezyum 32 g oksijenle birleşir. 40 − 32 = 8 g oksijen artar; ürün 48 + 32 = 80 g olur.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-4-lgs-02",
+    "unit": "fen-8-4",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir öğrenci K, L ve M çözeltilerine turnusol kâğıdı batırıyor. K çözeltisi mavi turnusol kâğıdını kırmızıya çeviriyor. L çözeltisi kırmızı turnusol kâğıdını maviye çeviriyor. M çözeltisi ise iki turnusol kâğıdının da rengini değiştirmiyor.",
+    "prompt": "Buna göre çözeltilerin pH değerleri arasındaki ilişki aşağıdakilerden hangisidir?",
+    "choices": [
+      "K > M > L",
+      "M > L > K",
+      "L > M > K",
+      "K = L > M"
+    ],
+    "answer": 2,
+    "explanation": "K asidiktir (pH 7'den küçük), L baziktir (pH 7'den büyük), M nötrdür (pH 7). Bu nedenle pH sıralaması L > M > K olur.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-4-lgs-03",
+    "unit": "fen-8-4",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Eşit kütleli X, Y ve Z sıvıları özdeş ısıtıcılarla eşit süre ısıtılıyor. Başlangıçta hepsinin sıcaklığı 20 °C'dir. Isıtma sonunda X'in sıcaklığı 30 °C, Y'nin 50 °C, Z'nin 40 °C olarak ölçülüyor. Bu sürede sıvılar hâl değiştirmiyor.",
+    "prompt": "Buna göre sıvıların öz ısıları arasındaki ilişki aşağıdakilerden hangisidir?",
+    "choices": [
+      "Y > Z > X",
+      "X > Z > Y",
+      "X > Y > Z",
+      "X = Y = Z"
+    ],
+    "answer": 1,
+    "explanation": "Kütleler ve alınan ısılar eşittir. Sıcaklığı en az artan sıvının öz ısısı en büyüktür. Artışlar X: 10 °C, Z: 20 °C, Y: 30 °C olduğundan sıralama X > Z > Y'dir.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-5-lgs-01",
+    "unit": "fen-8-5",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Ağırlığı 20 N olan bir hareketli makarayla 100 N ağırlığındaki yük, ipin ucundan düşey yukarı çekilerek sabit süratle 3 m yükseltiliyor. Sürtünmeler ve ipin ağırlığı önemsizdir.",
+    "prompt": "Buna göre uygulanan kuvvet ve ipin çekilen ucunun aldığı yol aşağıdakilerden hangisidir?",
+    "choices": [
+      "50 N kuvvet uygulanır, ip 6 m çekilir.",
+      "60 N kuvvet uygulanır, ip 3 m çekilir.",
+      "60 N kuvvet uygulanır, ip 6 m çekilir.",
+      "120 N kuvvet uygulanır, ip 1,5 m çekilir."
+    ],
+    "answer": 2,
+    "explanation": "Hareketli makarada yük ve makaranın toplam ağırlığını iki ip taşır: (100 + 20) ÷ 2 = 60 N. Kuvvetten kazanç olduğu için yoldan kayıp vardır: 2 × 3 = 6 m.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-5-lgs-02",
+    "unit": "fen-8-5",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Ağırlığı önemsiz, 4 m uzunluğundaki düzgün bir çubuk kaldıraç olarak kullanılıyor. Çubuğun bir ucuna 300 N ağırlığında yük asılıyor. Destek, yükün asıldığı uçtan 1 m uzaklığa yerleştiriliyor ve kuvvet çubuğun diğer ucundan düşey olarak uygulanıyor.",
+    "prompt": "Buna göre yükü dengede tutmak için uygulanması gereken kuvvet kaç N'dir?",
+    "choices": [
+      "75",
+      "150",
+      "900",
+      "100"
+    ],
+    "answer": 3,
+    "explanation": "Yük kolu 1 m, kuvvet kolu 4 − 1 = 3 m'dir. Kuvvet × kuvvet kolu = yük × yük kolu: Kuvvet × 3 = 300 × 1, kuvvet 100 N olur.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-5-lgs-03",
+    "unit": "fen-8-5",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "K, L ve M dişli çarkları sırasıyla birbirine temas edecek biçimde yerleştirilmiştir: K, L'ye; L de M'ye değmektedir. K çarkının 30, L çarkının 10, M çarkının 20 dişi vardır. K çarkı saat yönünde 2 tur döndürülüyor.",
+    "prompt": "Buna göre M çarkının dönme yönü ve tur sayısı aşağıdakilerden hangisidir?",
+    "choices": [
+      "Saat yönünde 3 tur",
+      "Saat yönünün tersine 3 tur",
+      "Saat yönünde 6 tur",
+      "Saat yönünün tersine 6 tur"
+    ],
+    "answer": 0,
+    "explanation": "Temas eden çarklar zıt yönde döner: L saat yönünün tersine, M yine saat yönünde döner. Geçen diş sayısı 30 × 2 = 60'tır; M çarkı 60 ÷ 20 = 3 tur atar.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-6-lgs-01",
+    "unit": "fen-8-6",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir gölün yakınındaki tarlalarda kullanılan tarım ilacı yağmur sularıyla göle karışıyor. Göldeki besin zinciri şöyledir: su bitkisi → küçük balık → büyük balık → balıkçıl kuşu. Bu tarım ilacı canlıların vücudundan atılamamaktadır.",
+    "prompt": "Buna göre dokularında en fazla tarım ilacı birikmesi beklenen canlı hangisidir?",
+    "choices": [
+      "Su bitkisi",
+      "Balıkçıl kuşu",
+      "Küçük balık",
+      "Büyük balık"
+    ],
+    "answer": 1,
+    "explanation": "Vücuttan atılamayan zararlı maddeler besin zincirinin her basamağında birikerek artar. Bu biyolojik birikim nedeniyle en fazla ilaç son tüketici olan balıkçıl kuşunda bulunur.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-6-lgs-02",
+    "unit": "fen-8-6",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Bir öğrenci özdeş üç su bitkisini eşit miktarda su bulunan özdeş kaplara koyuyor. K kabını lambadan 10 cm, L kabını 30 cm, M kabını 50 cm uzağa yerleştiriyor. Bir dakikada bitkilerden çıkan gaz kabarcıklarını sayıyor: K'de 40, L'de 18, M'de 7 kabarcık.",
+    "prompt": "Bu deneyle ilgili aşağıdakilerden hangisi doğrudur?",
+    "choices": [
+      "Bağımsız değişken ışık şiddeti, bağımlı değişken fotosentez hızıdır.",
+      "Bağımsız değişken fotosentez hızı, bağımlı değişken ışık şiddetidir.",
+      "Bağımsız değişken bitki türü, bağımlı değişken su miktarıdır.",
+      "Deneyde ışık şiddeti sabit tutulan değişkendir."
+    ],
+    "answer": 0,
+    "explanation": "Öğrencinin değiştirdiği etken lambaya uzaklık, yani ışık şiddetidir (bağımsız değişken). Buna bağlı olarak değişen kabarcık sayısı fotosentez hızını gösterir (bağımlı değişken).",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-7-lgs-01",
+    "unit": "fen-8-7",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Üçü de elektrik yüklü olan K, L ve M küreleri yalıtkan iplerle asılmıştır. K ile L birbirine yaklaştırıldığında birbirini itiyor. L ile M birbirine yaklaştırıldığında ise birbirini çekiyor. M küresinin negatif yüklü olduğu biliniyor.",
+    "prompt": "Buna göre K ve L kürelerinin yük cinsleri aşağıdakilerden hangisidir?",
+    "choices": [
+      "K negatif, L negatif",
+      "K pozitif, L pozitif",
+      "K pozitif, L negatif",
+      "K negatif, L pozitif"
+    ],
+    "answer": 1,
+    "explanation": "L, negatif yüklü M'yi çektiğine ve yüklü olduğuna göre L pozitiftir. K ile L birbirini ittiğine göre aynı cins yüklüdür; K de pozitiftir.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "fen-8-7-lgs-02",
+    "unit": "fen-8-7",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Özdeş iletken K, L ve M kürelerinden K'nin yükü −10 birim, L'nin yükü +2 birimdir; M ise nötrdür. Önce K ile L birbirine dokundurulup ayrılıyor. Ardından L, M'ye dokundurulup ayrılıyor.",
+    "prompt": "Buna göre kürelerin son yükleri aşağıdakilerden hangisidir?",
+    "choices": [
+      "K: −4, L: −4, M: 0",
+      "K: −8, L: 0, M: 0",
+      "K: −4, L: −2, M: −2",
+      "K: −4, L: −4, M: −4"
+    ],
+    "answer": 2,
+    "explanation": "K ile L'nin toplam yükü −10 + 2 = −8 birimdir; her biri −4 birim alır. Sonra L (−4) ile M (0) toplam −4 birimi paylaşır; her biri −2 birim olur.",
+    "tags": [
+      "LGS"
+    ]
+  }
+]

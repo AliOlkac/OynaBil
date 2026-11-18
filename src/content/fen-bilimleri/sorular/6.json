@@ -1,0 +1,941 @@
+[
+  {
+    "id": "fen-6-1-01",
+    "unit": "fen-6-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Güneş sisteminde kaç gezegen bulunur?",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 1,
+    "explanation": "Güneş sisteminde sekiz gezegen vardır: Merkür, Venüs, Dünya, Mars, Jüpiter, Satürn, Uranüs ve Neptün."
+  },
+  {
+    "id": "fen-6-1-02",
+    "unit": "fen-6-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Güneş sisteminin en büyük gezegeni hangisidir?",
+    "choices": [
+      "Jüpiter",
+      "Satürn",
+      "Neptün",
+      "Dünya"
+    ],
+    "answer": 0,
+    "explanation": "Jüpiter, Güneş sisteminin en büyük gezegenidir. Büyük ölçüde gazlardan oluşan bir dış gezegendir."
+  },
+  {
+    "id": "fen-6-1-03",
+    "unit": "fen-6-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Güneş tutulması sırasında Ay, Güneş ile Dünya'nın arasına girer.",
+    "answer": true,
+    "explanation": "Güneş tutulmasında Ay, Güneş ile Dünya'nın arasına girer ve gölgesi Dünya'nın üzerine düşer."
+  },
+  {
+    "id": "fen-6-1-04",
+    "unit": "fen-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ay tutulması, Ay'ın hangi evresinde gerçekleşir?",
+    "choices": [
+      "Yeni ay",
+      "İlk dördün",
+      "Dolunay",
+      "Son dördün"
+    ],
+    "answer": 2,
+    "explanation": "Ay tutulmasında Dünya, Güneş ile Ay'ın arasındadır. Bu diziliş yalnızca dolunay evresinde oluşur."
+  },
+  {
+    "id": "fen-6-1-05",
+    "unit": "fen-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Belirgin halkalarıyla tanınan, Güneş sisteminin ikinci büyük gezegeni hangisidir?",
+    "choices": [
+      "Jüpiter",
+      "Satürn",
+      "Uranüs",
+      "Mars"
+    ],
+    "answer": 1,
+    "explanation": "Satürn, Jüpiter'den sonra ikinci büyük gezegendir ve belirgin halkalarıyla tanınır."
+  },
+  {
+    "id": "fen-6-1-06",
+    "unit": "fen-6-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Güneş tutulması, Ay'ın dolunay evresinde gerçekleşir.",
+    "answer": false,
+    "explanation": "Güneş tutulması yeni ay evresinde gerçekleşir; çünkü Ay ancak bu evrede Güneş ile Dünya'nın arasında bulunur."
+  },
+  {
+    "id": "fen-6-1-07",
+    "unit": "fen-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Güneş tutulması sırasında Dünya'nın üzerine hangi gök cisminin gölgesi düşer?",
+    "choices": [
+      "Güneş'in",
+      "Mars'ın",
+      "Venüs'ün",
+      "Ay'ın"
+    ],
+    "answer": 3,
+    "explanation": "Güneş tutulmasında Ay, Güneş'ten gelen ışınları engeller ve Ay'ın gölgesi Dünya'nın bir bölümüne düşer."
+  },
+  {
+    "id": "fen-6-1-08",
+    "unit": "fen-6-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Ay tutulması sırasında gök cisimleri hangi sırayla dizilir?",
+    "choices": [
+      "Güneş - Ay - Dünya",
+      "Dünya - Güneş - Ay",
+      "Güneş - Dünya - Ay",
+      "Ay - Güneş - Dünya"
+    ],
+    "answer": 2,
+    "explanation": "Ay tutulmasında Dünya ortadadır. Dünya'nın gölgesi Ay'ın üzerine düştüğü için Ay kararır."
+  },
+  {
+    "id": "fen-6-1-09",
+    "unit": "fen-6-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Dış gezegenlerin ortak özelliği aşağıdakilerden hangisidir?",
+    "choices": [
+      "Yüzeylerinin kayalık olması",
+      "Büyük ölçüde gazlardan oluşmaları ve halkalarının bulunması",
+      "Güneş'e Dünya'dan daha yakın olmaları",
+      "Hiç uydularının bulunmaması"
+    ],
+    "answer": 1,
+    "explanation": "Jüpiter, Satürn, Uranüs ve Neptün dış gezegenlerdir. Büyük ölçüde gazlardan oluşurlar, halkaları ve çok sayıda uyduları vardır."
+  },
+  {
+    "id": "fen-6-2-01",
+    "unit": "fen-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir cisme etki eden birden fazla kuvvetin yaptığı etkiyi tek başına yapan kuvvete ne denir?",
+    "choices": [
+      "Sürtünme kuvveti",
+      "Temas kuvveti",
+      "Bileşke kuvvet",
+      "Yer çekimi kuvveti"
+    ],
+    "answer": 2,
+    "explanation": "Bileşke (net) kuvvet, cisme etki eden bütün kuvvetlerin etkisini tek başına gösteren kuvvettir."
+  },
+  {
+    "id": "fen-6-2-02",
+    "unit": "fen-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kuvvetin birimi aşağıdakilerden hangisidir?",
+    "choices": [
+      "Kilogram",
+      "Metre",
+      "Joule",
+      "Newton"
+    ],
+    "answer": 3,
+    "explanation": "Kuvvet dinamometre ile ölçülür ve birimi newtondur (N)."
+  },
+  {
+    "id": "fen-6-2-03",
+    "unit": "fen-6-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Dengelenmiş kuvvetlerin etkisindeki duran bir cisim durmaya devam eder.",
+    "answer": true,
+    "explanation": "Dengelenmiş kuvvetlerde bileşke kuvvet sıfırdır. Duran cisim durmaya, sabit süratle giden cisim de aynı süratle gitmeye devam eder."
+  },
+  {
+    "id": "fen-6-2-04",
+    "unit": "fen-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir sandığa aynı yönde 12 N ve 8 N büyüklüğünde iki kuvvet uygulanıyor. Bileşke kuvvet kaç N olur?",
+    "choices": [
+      "4 N",
+      "20 N",
+      "96 N",
+      "12 N"
+    ],
+    "answer": 1,
+    "explanation": "Aynı yönlü kuvvetlerin bileşkesi kuvvetlerin toplamıdır: 12 + 8 = 20 N."
+  },
+  {
+    "id": "fen-6-2-05",
+    "unit": "fen-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir cisme doğu yönünde 15 N, batı yönünde 9 N kuvvet uygulanıyor. Bileşke kuvvet için hangisi doğrudur?",
+    "choices": [
+      "Batı yönünde 6 N",
+      "Doğu yönünde 24 N",
+      "Doğu yönünde 6 N",
+      "Batı yönünde 24 N"
+    ],
+    "answer": 2,
+    "explanation": "Zıt yönlü kuvvetlerde büyük kuvvetten küçük kuvvet çıkarılır: 15 − 9 = 6 N. Bileşke, büyük kuvvetin yönünde yani doğuya doğrudur."
+  },
+  {
+    "id": "fen-6-2-06",
+    "unit": "fen-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "120 metrelik yolu sabit süratle 20 saniyede alan bir bisikletlinin sürati kaç m/s'dir?",
+    "choices": [
+      "5 m/s",
+      "8 m/s",
+      "100 m/s",
+      "6 m/s"
+    ],
+    "answer": 3,
+    "explanation": "Sürat, alınan yolun geçen zamana bölümüdür: 120 ÷ 20 = 6 m/s."
+  },
+  {
+    "id": "fen-6-2-07",
+    "unit": "fen-6-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Bir cisme etki eden bileşke kuvvet sıfırsa cisim dengelenmemiş kuvvetlerin etkisindedir.",
+    "answer": false,
+    "explanation": "Bileşke kuvvetin sıfır olması, kuvvetlerin birbirini dengelediğini gösterir. Bu cisim dengelenmiş kuvvetlerin etkisindedir."
+  },
+  {
+    "id": "fen-6-2-08",
+    "unit": "fen-6-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Saatte 60 km sabit süratle giden bir araç 2,5 saatte kaç km yol alır?",
+    "choices": [
+      "120 km",
+      "150 km",
+      "135 km",
+      "180 km"
+    ],
+    "answer": 1,
+    "explanation": "Alınan yol, sürat ile zamanın çarpımıdır: 60 × 2,5 = 150 km."
+  },
+  {
+    "id": "fen-6-2-09",
+    "unit": "fen-6-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Düz bir yolda sabit süratle ilerleyen bir arabaya etki eden bileşke kuvvet için ne söylenebilir?",
+    "choices": [
+      "Hareket yönündedir",
+      "Hareket yönüne zıttır",
+      "Sıfırdır",
+      "Sürekli artmaktadır"
+    ],
+    "answer": 2,
+    "explanation": "Sürati ve yönü değişmeyen cisme etki eden kuvvetler dengelenmiştir. Bu nedenle bileşke kuvvet sıfırdır."
+  },
+  {
+    "id": "fen-6-3-01",
+    "unit": "fen-6-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Sinir sisteminin temel yapı birimi olan hücre hangisidir?",
+    "choices": [
+      "Alyuvar",
+      "Akyuvar",
+      "Kas hücresi",
+      "Nöron"
+    ],
+    "answer": 3,
+    "explanation": "Sinir hücrelerine nöron denir. Nöronlar uyarıları alır ve iletir."
+  },
+  {
+    "id": "fen-6-3-02",
+    "unit": "fen-6-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Merkezî sinir sistemi hangi iki yapıdan oluşur?",
+    "choices": [
+      "Beyin ve kalp",
+      "Omurilik ve akciğer",
+      "Beyin ve omurilik",
+      "Kalp ve damarlar"
+    ],
+    "answer": 2,
+    "explanation": "Merkezî sinir sistemi beyin ve omurilikten oluşur. Vücuda yayılan sinirler ise çevresel sinir sistemini oluşturur."
+  },
+  {
+    "id": "fen-6-3-03",
+    "unit": "fen-6-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Çiçekli bitkilerde polenlerin erkek organdan dişi organın tepeciğine taşınmasına tozlaşma denir.",
+    "answer": true,
+    "explanation": "Tozlaşma rüzgâr, su, böcekler ve kuşlar yardımıyla gerçekleşir. Tozlaşmadan sonra döllenme olur ve tohum oluşur."
+  },
+  {
+    "id": "fen-6-3-04",
+    "unit": "fen-6-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Ergenlik döneminde vücutta görülen değişimlerde hormonlar etkilidir.",
+    "answer": true,
+    "explanation": "Ergenlikte hipofiz bezi ve eşeysel bezlerin salgıladığı hormonlar bedensel ve ruhsal değişimleri başlatır."
+  },
+  {
+    "id": "fen-6-3-05",
+    "unit": "fen-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Vücudun dengesini sağlayan ve kasların uyumlu çalışmasını düzenleyen yapı hangisidir?",
+    "choices": [
+      "Omurilik soğanı",
+      "Omurilik",
+      "Hipofiz bezi",
+      "Beyincik"
+    ],
+    "answer": 3,
+    "explanation": "Beyincik, kol ve bacak kaslarının birbiriyle uyumlu çalışmasını ve vücudun dengesini sağlar."
+  },
+  {
+    "id": "fen-6-3-06",
+    "unit": "fen-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Solunum ve dolaşım gibi isteğimiz dışında gerçekleşen olayları denetleyen yapı hangisidir?",
+    "choices": [
+      "Beyincik",
+      "Tiroit bezi",
+      "Omurilik soğanı",
+      "Pankreas"
+    ],
+    "answer": 2,
+    "explanation": "Omurilik soğanı solunum, dolaşım, boşaltım gibi sistemlerin çalışmasını; yutma, hapşırma, öksürme gibi olayları denetler."
+  },
+  {
+    "id": "fen-6-3-07",
+    "unit": "fen-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sıcak bir cisme dokununca elimizi aniden çekmemiz gibi refleksleri hangi yapı yönetir?",
+    "choices": [
+      "Beyincik",
+      "Omurilik",
+      "Pankreas",
+      "Tiroit bezi"
+    ],
+    "answer": 1,
+    "explanation": "Refleksler omurilik tarafından yönetilir. Böylece vücut tehlikelere karşı çok hızlı tepki verir."
+  },
+  {
+    "id": "fen-6-3-08",
+    "unit": "fen-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir tohumun çimlenmesi için aşağıdakilerden hangisi gerekli değildir?",
+    "choices": [
+      "Işık",
+      "Su",
+      "Uygun sıcaklık",
+      "Oksijen"
+    ],
+    "answer": 0,
+    "explanation": "Çimlenme için su, uygun sıcaklık ve oksijen gerekir. Tohum içindeki yedek besini kullandığı için çimlenirken ışığa gerek duymaz."
+  },
+  {
+    "id": "fen-6-3-09",
+    "unit": "fen-6-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Kurbağalar başkalaşım geçirmeden gelişen canlılardır.",
+    "answer": false,
+    "explanation": "Kurbağalar başkalaşım geçirir: yumurtadan çıkan larva (iribaş) zamanla ergin kurbağaya dönüşür."
+  },
+  {
+    "id": "fen-6-3-10",
+    "unit": "fen-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İnsanda sperm ile yumurtanın birleşmesiyle oluşan ilk hücreye ne denir?",
+    "choices": [
+      "Embriyo",
+      "Zigot",
+      "Fetüs",
+      "Tohum"
+    ],
+    "answer": 1,
+    "explanation": "Sperm ile yumurtanın birleşmesine döllenme, oluşan döllenmiş yumurtaya zigot denir."
+  },
+  {
+    "id": "fen-6-3-11",
+    "unit": "fen-6-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "İnsanın gelişim evreleri hangi seçenekte doğru sırayla verilmiştir?",
+    "choices": [
+      "Embriyo - zigot - fetüs - bebek",
+      "Zigot - fetüs - embriyo - bebek",
+      "Zigot - embriyo - fetüs - bebek",
+      "Fetüs - embriyo - zigot - bebek"
+    ],
+    "answer": 2,
+    "explanation": "Döllenmeyle zigot oluşur; zigot bölünerek embriyoya, embriyo gelişerek fetüse dönüşür ve doğumla bebek dünyaya gelir."
+  },
+  {
+    "id": "fen-6-3-12",
+    "unit": "fen-6-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Denetleyici ve düzenleyici sistem hangi iki yapıdan oluşur?",
+    "choices": [
+      "Sindirim sistemi ve dolaşım sistemi",
+      "Solunum sistemi ve boşaltım sistemi",
+      "İskelet ve kaslar",
+      "Sinir sistemi ve iç salgı bezleri"
+    ],
+    "answer": 3,
+    "explanation": "Sinir sistemi ve iç salgı bezleri birlikte çalışarak vücuttaki bütün sistemlerin düzenli ve uyumlu işlemesini sağlar."
+  },
+  {
+    "id": "fen-6-4-01",
+    "unit": "fen-6-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Işığın bir yüzeye çarpıp geri dönmesine ne denir?",
+    "choices": [
+      "Yansıma",
+      "Kırılma",
+      "Soğurulma",
+      "Gölge"
+    ],
+    "answer": 0,
+    "explanation": "Işığın bir yüzeye çarptıktan sonra geldiği ortama geri dönmesine yansıma denir."
+  },
+  {
+    "id": "fen-6-4-02",
+    "unit": "fen-6-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Işığın yansımasında gelme açısı ile yansıma açısı birbirine eşittir.",
+    "answer": true,
+    "explanation": "Yansıma kanununa göre gelme açısı yansıma açısına eşittir. Bu kural her tür yüzeyde geçerlidir."
+  },
+  {
+    "id": "fen-6-4-03",
+    "unit": "fen-6-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Araçların yan aynalarında ve mağazalardaki güvenlik aynalarında hangi ayna türü kullanılır?",
+    "choices": [
+      "Düz ayna",
+      "Çukur ayna",
+      "Tümsek ayna",
+      "İnce kenarlı mercek"
+    ],
+    "answer": 2,
+    "explanation": "Tümsek ayna görüntüyü küçültür ama geniş bir alanı gösterir. Bu yüzden araçlarda ve güvenlik aynalarında kullanılır."
+  },
+  {
+    "id": "fen-6-4-04",
+    "unit": "fen-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Düz aynaya gelen bir ışın yüzeyin normaliyle 35° açı yapıyor. Yansıma açısı kaç derecedir?",
+    "choices": [
+      "55°",
+      "70°",
+      "145°",
+      "35°"
+    ],
+    "answer": 3,
+    "explanation": "Gelme açısı, gelen ışın ile normal arasındaki açıdır. Yansıma açısı gelme açısına eşit olduğundan 35° olur."
+  },
+  {
+    "id": "fen-6-4-05",
+    "unit": "fen-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Işığın pürüzlü bir yüzeyden farklı yönlere dağılarak yansımasına ne denir?",
+    "choices": [
+      "Dağınık yansıma",
+      "Düzgün yansıma",
+      "Soğurulma",
+      "Kırılma"
+    ],
+    "answer": 0,
+    "explanation": "Pürüzlü yüzeylerde ışınlar farklı yönlere yansır; buna dağınık yansıma denir. Cisimleri her yönden görmemizi sağlar."
+  },
+  {
+    "id": "fen-6-4-06",
+    "unit": "fen-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Beyaz ışık altında kırmızı görünen bir elma hangi renkteki ışığı yansıtır?",
+    "choices": [
+      "Yeşil",
+      "Kırmızı",
+      "Mavi",
+      "Bütün renkleri"
+    ],
+    "answer": 1,
+    "explanation": "Cisimler yansıttıkları ışığın renginde görünür. Kırmızı elma kırmızı ışığı yansıtır, öteki renkleri soğurur."
+  },
+  {
+    "id": "fen-6-4-07",
+    "unit": "fen-6-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Siyah cisimler üzerlerine düşen ışığın neredeyse tamamını yansıtır.",
+    "answer": false,
+    "explanation": "Siyah cisimler ışığın neredeyse tamamını soğurur. Işığın tamamına yakınını yansıtan cisimler beyaz görünür."
+  },
+  {
+    "id": "fen-6-4-08",
+    "unit": "fen-6-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Gelen ışın düz aynanın yüzeyiyle 30° açı yapıyor. Yansıma açısı kaç derecedir?",
+    "choices": [
+      "30°",
+      "90°",
+      "120°",
+      "60°"
+    ],
+    "answer": 3,
+    "explanation": "Normal yüzeye diktir. Gelme açısı 90° − 30° = 60° olur. Yansıma açısı gelme açısına eşit olduğundan o da 60° olur."
+  },
+  {
+    "id": "fen-6-4-09",
+    "unit": "fen-6-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Güneşli bir günde koyu renkli giysiler neden açık renklilere göre daha çok ısınır?",
+    "choices": [
+      "Koyu renkler ışığı daha çok soğurur",
+      "Koyu renkler ışığı daha çok yansıtır",
+      "Koyu renkler ışığı daha çok geçirir",
+      "Koyu renkli kumaşlar daha kalındır"
+    ],
+    "answer": 0,
+    "explanation": "Koyu renkli yüzeyler ışığın büyük bölümünü soğurur. Soğurulan ışık ısıya dönüştüğü için koyu giysiler daha çok ısınır."
+  },
+  {
+    "id": "fen-6-4-10",
+    "unit": "fen-6-4",
+    "type": "true-false",
+    "difficulty": 3,
+    "prompt": "Yalnızca yeşil ışıkla aydınlatılan kırmızı bir cisim siyah görünür.",
+    "answer": true,
+    "explanation": "Kırmızı cisim yalnızca kırmızı ışığı yansıtır. Yeşil ışığı soğurduğu için göze ışık ulaşmaz ve cisim siyah görünür."
+  },
+  {
+    "id": "fen-6-5-01",
+    "unit": "fen-6-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir maddenin birim hacminin kütlesine ne denir?",
+    "choices": [
+      "Hacim",
+      "Yoğunluk",
+      "Ağırlık",
+      "Sıcaklık"
+    ],
+    "answer": 1,
+    "explanation": "Yoğunluk, kütlenin hacme bölünmesiyle bulunur. Birimi g/cm³ olarak kullanılır."
+  },
+  {
+    "id": "fen-6-5-02",
+    "unit": "fen-6-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Saf su deniz seviyesinde kaç °C'de kaynar?",
+    "choices": [
+      "100 °C",
+      "0 °C",
+      "50 °C",
+      "37 °C"
+    ],
+    "answer": 0,
+    "explanation": "Saf su deniz seviyesinde 100 °C'de kaynar. Kaynama noktası maddeler için ayırt edici bir özelliktir."
+  },
+  {
+    "id": "fen-6-5-03",
+    "unit": "fen-6-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Suda yüzen bir cismin yoğunluğu suyun yoğunluğundan küçüktür.",
+    "answer": true,
+    "explanation": "Yoğunluğu sıvının yoğunluğundan küçük olan cisimler yüzer, büyük olanlar batar."
+  },
+  {
+    "id": "fen-6-5-04",
+    "unit": "fen-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kütlesi 60 g, hacmi 20 cm³ olan bir cismin yoğunluğu kaçtır?",
+    "choices": [
+      "40 g/cm³",
+      "80 g/cm³",
+      "3 g/cm³",
+      "1/3 g/cm³"
+    ],
+    "answer": 2,
+    "explanation": "Yoğunluk = kütle ÷ hacim. 60 ÷ 20 = 3 g/cm³."
+  },
+  {
+    "id": "fen-6-5-05",
+    "unit": "fen-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Yoğunluğu 2 g/cm³ olan bir maddenin 50 cm³'ünün kütlesi kaç gramdır?",
+    "choices": [
+      "25 g",
+      "100 g",
+      "52 g",
+      "48 g"
+    ],
+    "answer": 1,
+    "explanation": "Kütle = yoğunluk × hacim. 2 × 50 = 100 g."
+  },
+  {
+    "id": "fen-6-5-06",
+    "unit": "fen-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Suyun yoğunluğu 1 g/cm³'tür. Hangi yoğunluktaki katı cisim suya bırakıldığında dibe batar?",
+    "choices": [
+      "2,7 g/cm³",
+      "0,9 g/cm³",
+      "0,5 g/cm³",
+      "0,7 g/cm³"
+    ],
+    "answer": 0,
+    "explanation": "Yoğunluğu suyun yoğunluğundan (1 g/cm³) büyük olan cisimler batar. 2,7 g/cm³, 1'den büyüktür."
+  },
+  {
+    "id": "fen-6-5-07",
+    "unit": "fen-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Saf bir katı erirken sıcaklığı nasıl değişir?",
+    "choices": [
+      "Sürekli artar",
+      "Sürekli azalır",
+      "Önce artar, sonra azalır",
+      "Sabit kalır"
+    ],
+    "answer": 3,
+    "explanation": "Saf maddeler hâl değiştirirken sıcaklıkları sabit kalır. Alınan ısı, maddenin hâl değiştirmesi için harcanır."
+  },
+  {
+    "id": "fen-6-5-08",
+    "unit": "fen-6-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Aynı sıcaklıkta bir maddenin miktarı artırılırsa yoğunluğu da artar.",
+    "answer": false,
+    "explanation": "Yoğunluk madde miktarına bağlı değildir. Kütle artarken hacim de aynı oranda arttığı için yoğunluk değişmez."
+  },
+  {
+    "id": "fen-6-5-09",
+    "unit": "fen-6-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Yoğunluğu 0,8 g/cm³ olan bir sıvının 200 gramı kaç cm³ hacim kaplar?",
+    "choices": [
+      "160 cm³",
+      "250 cm³",
+      "208 cm³",
+      "1600 cm³"
+    ],
+    "answer": 1,
+    "explanation": "Hacim = kütle ÷ yoğunluk. 200 ÷ 0,8 = 250 cm³."
+  },
+  {
+    "id": "fen-6-5-10",
+    "unit": "fen-6-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kışın göllerin yüzeyden donması ve buzun suyun üstünde kalması nasıl açıklanır?",
+    "choices": [
+      "Buzun yoğunluğu suyun yoğunluğundan büyüktür",
+      "Buzun kütlesi suyun kütlesinden küçüktür",
+      "Buz ile suyun yoğunlukları eşittir",
+      "Buzun yoğunluğu suyun yoğunluğundan küçüktür"
+    ],
+    "answer": 3,
+    "explanation": "Su donarken hacmi artar ve yoğunluğu azalır. Yoğunluğu sudan küçük olan buz suyun üstünde yüzer; alttaki canlılar yaşamını sürdürür."
+  },
+  {
+    "id": "fen-6-6-01",
+    "unit": "fen-6-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Elektrik akımını ileten maddelere ne ad verilir?",
+    "choices": [
+      "Yalıtkan",
+      "Saydam",
+      "İletken",
+      "Manyetik"
+    ],
+    "answer": 2,
+    "explanation": "Elektriği ileten maddelere iletken, iletmeyenlere yalıtkan denir. Metaller iyi iletkendir."
+  },
+  {
+    "id": "fen-6-6-02",
+    "unit": "fen-6-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Elektrik kablolarının dışı neden plastikle kaplanır?",
+    "choices": [
+      "Plastik elektriği daha hızlı iletir",
+      "Plastik kablonun direncini sıfırlar",
+      "Plastik ampulü daha parlak yakar",
+      "Plastik yalıtkan olduğu için çarpılmayı önler"
+    ],
+    "answer": 3,
+    "explanation": "Plastik yalıtkandır, elektriği iletmez. Kablonun dışındaki plastik kaplama, tele dokunanları elektrik çarpmasından korur."
+  },
+  {
+    "id": "fen-6-6-03",
+    "unit": "fen-6-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Elektriksel direncin birimi aşağıdakilerden hangisidir?",
+    "choices": [
+      "Ohm",
+      "Volt",
+      "Amper",
+      "Watt"
+    ],
+    "answer": 0,
+    "explanation": "Direnç, maddenin elektrik akımına karşı gösterdiği zorluktur. Birimi ohmdur (Ω)."
+  },
+  {
+    "id": "fen-6-6-04",
+    "unit": "fen-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir iletken telin kalınlığı ve cinsi değiştirilmeden boyu uzatılırsa direnci nasıl değişir?",
+    "choices": [
+      "Azalır",
+      "Artar",
+      "Değişmez",
+      "Sıfır olur"
+    ],
+    "answer": 1,
+    "explanation": "Telin boyu uzadıkça akımın karşılaştığı zorluk artar. Bu nedenle uzun telin direnci daha büyüktür."
+  },
+  {
+    "id": "fen-6-6-05",
+    "unit": "fen-6-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Aynı maddeden yapılmış, aynı uzunluktaki iki telden kalın olanın direnci daha büyüktür.",
+    "answer": false,
+    "explanation": "Telin kesit alanı büyüdükçe direnci azalır. Kalın telin direnci ince telden küçüktür."
+  },
+  {
+    "id": "fen-6-6-06",
+    "unit": "fen-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Basit bir elektrik devresindeki bağlantı telinin direnci artırılırsa ampulün parlaklığı nasıl değişir?",
+    "choices": [
+      "Artar",
+      "Değişmez",
+      "Önce artar, sonra azalır",
+      "Azalır"
+    ],
+    "answer": 3,
+    "explanation": "Direnç arttıkça devreden geçen akım azalır. Akım azaldığı için ampul daha sönük yanar."
+  },
+  {
+    "id": "fen-6-6-07",
+    "unit": "fen-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bir iletken telin direnci aşağıdakilerden hangisine bağlı değildir?",
+    "choices": [
+      "Telin rengine",
+      "Telin uzunluğuna",
+      "Telin kesit alanına",
+      "Telin yapıldığı maddeye"
+    ],
+    "answer": 0,
+    "explanation": "Bir telin direnci uzunluğuna, kesit alanına (kalınlığına) ve yapıldığı maddenin cinsine bağlıdır. Renk direnci etkilemez."
+  },
+  {
+    "id": "fen-6-6-08",
+    "unit": "fen-6-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Ampulün içindeki ince telin (filamanın) direnci yüksektir; bu nedenle tel ısınarak ışık verir.",
+    "answer": true,
+    "explanation": "Direnci yüksek olan filamandan akım geçerken tel çok ısınır ve akkor hâle gelerek ışık yayar."
+  },
+  {
+    "id": "fen-6-6-09",
+    "unit": "fen-6-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Telin boyunun dirence etkisini araştıran bir öğrenci hangi iki teli karşılaştırmalıdır?",
+    "choices": [
+      "Farklı madde ve kalınlıkta, aynı uzunlukta iki tel",
+      "Aynı madde ve uzunlukta, farklı kalınlıkta iki tel",
+      "Aynı madde ve kalınlıkta, farklı uzunlukta iki tel",
+      "Maddesi, kalınlığı ve uzunluğu farklı iki tel"
+    ],
+    "answer": 2,
+    "explanation": "Bir deneyde yalnızca etkisi araştırılan değişken değiştirilir. Burada uzunluk değişmeli; telin cinsi ve kalınlığı aynı kalmalıdır."
+  },
+  {
+    "id": "fen-6-6-10",
+    "unit": "fen-6-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Aynı maddeden K (1 m, ince), L (2 m, ince) ve M (1 m, kalın) telleri veriliyor. Direnci en büyük olan hangisidir?",
+    "choices": [
+      "L teli",
+      "K teli",
+      "M teli",
+      "K ile M eşit ve en büyüktür"
+    ],
+    "answer": 0,
+    "explanation": "Direnç, tel uzadıkça ve inceldikçe artar. L hem en uzun hem ince tel olduğu için direnci en büyüktür."
+  },
+  {
+    "id": "fen-6-7-01",
+    "unit": "fen-6-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Besin zincirinde kendi besinini kendi üreten canlılara ne ad verilir?",
+    "choices": [
+      "Tüketiciler",
+      "Ayrıştırıcılar",
+      "Avcılar",
+      "Üreticiler"
+    ],
+    "answer": 3,
+    "explanation": "Yeşil bitkiler gibi fotosentez yapan canlılar kendi besinini üretir. Besin zincirleri üreticilerle başlar."
+  },
+  {
+    "id": "fen-6-7-02",
+    "unit": "fen-6-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ölü bitki ve hayvan kalıntılarını parçalayarak toprağa kazandıran canlılar hangileridir?",
+    "choices": [
+      "Üreticiler",
+      "Otçullar",
+      "Ayrıştırıcılar",
+      "Etçiller"
+    ],
+    "answer": 2,
+    "explanation": "Bakteri ve mantar gibi ayrıştırıcılar canlı kalıntılarını parçalar. Böylece maddeler toprağa geri döner."
+  },
+  {
+    "id": "fen-6-7-03",
+    "unit": "fen-6-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Bir bölgedeki canlı türlerinin çeşitliliğine biyoçeşitlilik denir.",
+    "answer": true,
+    "explanation": "Biyoçeşitlilik, bir bölgedeki bitki, hayvan ve diğer canlı türlerinin zenginliğidir. Ekosistemlerin dengesi için önemlidir."
+  },
+  {
+    "id": "fen-6-7-04",
+    "unit": "fen-6-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Aşağıdaki davranışlardan hangisi sürdürülebilir yaşama katkı sağlamaz?",
+    "choices": [
+      "Yürünebilecek kısa mesafelere otomobille gitmek",
+      "Muslukları boşa akıtmamak",
+      "Atıkları türlerine göre ayırmak",
+      "Alışverişte bez çanta kullanmak"
+    ],
+    "answer": 0,
+    "explanation": "Gereksiz otomobil kullanımı yakıt tüketimini ve hava kirliliğini artırır. Diğer davranışlar doğal kaynakları korur."
+  },
+  {
+    "id": "fen-6-7-05",
+    "unit": "fen-6-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Ot → çekirge → kurbağa → yılan\" besin zincirinde kurbağaların sayısı azalırsa ilk olarak ne beklenir?",
+    "choices": [
+      "Çekirge sayısı azalır",
+      "Yılan sayısı artar",
+      "Ot miktarı artar",
+      "Çekirge sayısı artar"
+    ],
+    "answer": 3,
+    "explanation": "Kurbağalar çekirgeyle beslenir. Kurbağa azalınca çekirgeleri yiyen canlı azalır ve çekirge sayısı artar."
+  },
+  {
+    "id": "fen-6-7-06",
+    "unit": "fen-6-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Doğal kaynakların, gelecek nesillerin ihtiyaçları da gözetilerek kullanılmasına ne denir?",
+    "choices": [
+      "Küresel ısınma",
+      "Tüketim",
+      "Sürdürülebilirlik",
+      "Erozyon"
+    ],
+    "answer": 2,
+    "explanation": "Sürdürülebilirlik, bugünün ihtiyaçlarını karşılarken kaynakları gelecek nesillere de bırakacak biçimde kullanmaktır."
+  },
+  {
+    "id": "fen-6-7-07",
+    "unit": "fen-6-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Aşağıdakilerden hangisi biyoçeşitliliği tehdit eden etkenlerden biridir?",
+    "choices": [
+      "Millî parkların kurulması",
+      "Ormanların tahrip edilmesi",
+      "Ağaçlandırma çalışmaları",
+      "Tohum bankalarının kurulması"
+    ],
+    "answer": 1,
+    "explanation": "Ormanların yok edilmesi canlıların yaşam alanlarını ortadan kaldırır. Diğer seçenekler biyoçeşitliliği korumaya yöneliktir."
+  },
+  {
+    "id": "fen-6-7-08",
+    "unit": "fen-6-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Besin zincirlerinde enerji, tüketicilerden üreticilere doğru aktarılır.",
+    "answer": false,
+    "explanation": "Enerji üreticilerden tüketicilere doğru aktarılır. Üreticiler güneş enerjisini besine dönüştürür, tüketiciler bu besinle beslenir."
+  },
+  {
+    "id": "fen-6-7-09",
+    "unit": "fen-6-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "\"Ot → tavşan → tilki → kartal\" besin zincirinde hem avcı hem de av olan canlı hangisidir?",
+    "choices": [
+      "Ot",
+      "Tavşan",
+      "Kartal",
+      "Tilki"
+    ],
+    "answer": 3,
+    "explanation": "Tilki tavşanı avlar, kendisi de kartala av olur. Tavşan otçuldur, kartal ise zincirin son halkasıdır."
+  }
+]

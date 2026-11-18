@@ -1,0 +1,320 @@
+[
+  {
+    "kind": "list",
+    "id": "hb-3-2-acil-durumlar",
+    "unit": "hb-3-2",
+    "difficulty": 2,
+    "positive": "Hangi durumda 112 Acil Çağrı Merkezi aranmalıdır?",
+    "negative": "Hangi durumda 112 Acil Çağrı Merkezi aranmaz?",
+    "statement": "{item} durumunda 112 aranır.",
+    "explanation": "112 yalnızca yangın, kaza, yaralanma ve ani hastalık gibi acil durumlarda aranır. Gereksiz aramalar hattı meşgul eder.",
+    "members": [
+      "Evde yangın çıkması",
+      "Trafik kazası olması",
+      "Bir kişinin bayılması",
+      "Birinin yüksekten düşüp yaralanması"
+    ],
+    "nonMembers": [
+      "Ödev defterinin kaybolması",
+      "Canının sıkılması",
+      "Televizyon kumandasının bulunamaması",
+      "Oyuncağın kırılması"
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-3-3-kurumlar",
+    "unit": "hb-3-3",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{amac} nereye gideriz?",
+        "answer": "yer"
+      }
+    ],
+    "statement": {
+      "text": "{amac} {yere} gideriz.",
+      "swap": "yere"
+    },
+    "explanation": "{amac} {yere} gideriz. Çevremizdeki kurumlar farklı ihtiyaçlarımızı karşılar.",
+    "items": [
+      {
+        "id": "hastane",
+        "amac": "Hastalandığımızda muayene olmak için",
+        "yer": "Hastane",
+        "yere": "hastaneye"
+      },
+      {
+        "id": "eczane",
+        "amac": "Doktorun yazdığı ilacı almak için",
+        "yer": "Eczane",
+        "yere": "eczaneye"
+      },
+      {
+        "id": "kutuphane",
+        "amac": "Ödünç kitap almak için",
+        "yer": "Kütüphane",
+        "yere": "kütüphaneye"
+      },
+      {
+        "id": "postane",
+        "amac": "Mektup ya da koli göndermek için",
+        "yer": "Postane",
+        "yere": "postaneye"
+      },
+      {
+        "id": "muze",
+        "amac": "Eski çağlardan kalan eserleri görmek için",
+        "yer": "Müze",
+        "yere": "müzeye"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-3-4-yonler",
+    "unit": "hb-3-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{tanim} hangisidir?",
+        "answer": "yon"
+      }
+    ],
+    "statement": {
+      "text": "{tanim}, {yonKucuk} olarak adlandırılır.",
+      "swap": "yonKucuk"
+    },
+    "explanation": "{tanim}, {yonKucuk} olarak adlandırılır. Sağ kolumuzu Güneş'in doğduğu yöne uzatırsak önümüz kuzeyi, arkamız güneyi, solumuz batıyı gösterir.",
+    "items": [
+      {
+        "id": "dogu",
+        "tanim": "Güneş'in doğduğu yön",
+        "yon": "Doğu",
+        "yonKucuk": "doğu"
+      },
+      {
+        "id": "bati",
+        "tanim": "Güneş'in battığı yön",
+        "yon": "Batı",
+        "yonKucuk": "batı"
+      },
+      {
+        "id": "kuzey",
+        "tanim": "Sağ kolumuz doğuyu gösterirken önümüzde kalan yön",
+        "yon": "Kuzey",
+        "yonKucuk": "kuzey"
+      },
+      {
+        "id": "guney",
+        "tanim": "Sağ kolumuz doğuyu gösterirken arkamızda kalan yön",
+        "yon": "Güney",
+        "yonKucuk": "güney"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-3-4-bayram-olaylari",
+    "unit": "hb-3-4",
+    "difficulty": 3,
+    "questions": [
+      {
+        "prompt": "{bayram} hangi olayın yıl dönümünde kutlanır?",
+        "answer": "olay"
+      },
+      {
+        "prompt": "{olay} hangi tarihte gerçekleşmiştir?",
+        "answer": "tarih"
+      }
+    ],
+    "statement": {
+      "text": "{bayram}, {olayin} yıl dönümünde kutlanır.",
+      "swap": "olayin"
+    },
+    "explanation": "{olay} {tarih} tarihinde gerçekleşmiştir. {bayram} bu olayın yıl dönümünde kutlanır.",
+    "items": [
+      {
+        "id": "cumhuriyet",
+        "bayram": "Cumhuriyet Bayramı",
+        "olay": "Cumhuriyet'in ilanı",
+        "olayin": "Cumhuriyet'in ilanının",
+        "tarih": "29 Ekim 1923"
+      },
+      {
+        "id": "cocuk",
+        "bayram": "Ulusal Egemenlik ve Çocuk Bayramı",
+        "olay": "Türkiye Büyük Millet Meclisinin açılışı",
+        "olayin": "Türkiye Büyük Millet Meclisinin açılışının",
+        "tarih": "23 Nisan 1920"
+      },
+      {
+        "id": "genclik",
+        "bayram": "Atatürk'ü Anma, Gençlik ve Spor Bayramı",
+        "olay": "Atatürk'ün Samsun'a çıkışı",
+        "olayin": "Atatürk'ün Samsun'a çıkışının",
+        "tarih": "19 Mayıs 1919"
+      },
+      {
+        "id": "zafer",
+        "bayram": "Zafer Bayramı",
+        "olay": "Büyük Taarruz'un zaferle sonuçlanması",
+        "olayin": "Büyük Taarruz'un zaferle sonuçlanmasının",
+        "tarih": "30 Ağustos 1922"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-3-5-atik-kutu-renkleri",
+    "unit": "hb-3-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{atik} atıklar hangi renkli geri dönüşüm kutusuna atılır?",
+        "answer": "renk"
+      },
+      {
+        "prompt": "{renk} renkli geri dönüşüm kutusuna hangi atıklar atılır?",
+        "answer": "atikSik"
+      }
+    ],
+    "statement": {
+      "text": "{atik} atıklar {renkKucuk} renkli geri dönüşüm kutusuna atılır.",
+      "swap": "renkKucuk"
+    },
+    "explanation": "Sıfır Atık uygulamasında {atikKucuk} atıklar {renkKucuk} renkli kutuya atılır.",
+    "items": [
+      {
+        "id": "kagit",
+        "atik": "Kâğıt",
+        "atikKucuk": "kâğıt",
+        "atikSik": "Kâğıt atıklar",
+        "renk": "Mavi",
+        "renkKucuk": "mavi"
+      },
+      {
+        "id": "plastik",
+        "atik": "Plastik",
+        "atikKucuk": "plastik",
+        "atikSik": "Plastik atıklar",
+        "renk": "Sarı",
+        "renkKucuk": "sarı"
+      },
+      {
+        "id": "cam",
+        "atik": "Cam",
+        "atikKucuk": "cam",
+        "atikSik": "Cam atıklar",
+        "renk": "Yeşil",
+        "renkKucuk": "yeşil"
+      },
+      {
+        "id": "metal",
+        "atik": "Metal",
+        "atikKucuk": "metal",
+        "atikSik": "Metal atıklar",
+        "renk": "Gri",
+        "renkKucuk": "gri"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-3-5-bitkinin-bolumleri",
+    "unit": "hb-3-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "Bitkide {bolumKucuk} ne işe yarar?",
+        "answer": "gorevSik"
+      },
+      {
+        "prompt": "Bitkinin hangi bölümü {gorev}?",
+        "answer": "bolum"
+      }
+    ],
+    "statement": {
+      "text": "Bitkide {bolumKucuk}, {gorev}.",
+      "swap": "gorev"
+    },
+    "explanation": "Bitkide {bolumKucuk}, {gorev}. Bitkinin kök, gövde, yaprak ve çiçek gibi bölümleri vardır.",
+    "items": [
+      {
+        "id": "kok",
+        "bolum": "Kök",
+        "bolumKucuk": "kök",
+        "gorev": "bitkiyi toprağa bağlar",
+        "gorevSik": "Bitkiyi toprağa bağlar"
+      },
+      {
+        "id": "govde",
+        "bolum": "Gövde",
+        "bolumKucuk": "gövde",
+        "gorev": "bitkiyi dik tutar",
+        "gorevSik": "Bitkiyi dik tutar"
+      },
+      {
+        "id": "yaprak",
+        "bolum": "Yaprak",
+        "bolumKucuk": "yaprak",
+        "gorev": "besin üretir",
+        "gorevSik": "Besin üretir"
+      },
+      {
+        "id": "cicek",
+        "bolum": "Çiçek",
+        "bolumKucuk": "çiçek",
+        "gorev": "tohumun oluşmasını sağlar",
+        "gorevSik": "Tohumun oluşmasını sağlar"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "hb-3-6-bilim-insanlari",
+    "unit": "hb-3-6",
+    "difficulty": 3,
+    "questions": [
+      {
+        "prompt": "{kisi} hangi alandaki çalışmalarıyla tanınır?",
+        "answer": "alan"
+      }
+    ],
+    "statement": {
+      "text": "{kisi}, {alanKucuk} alanındaki çalışmalarıyla tanınır.",
+      "swap": "alanKucuk"
+    },
+    "explanation": "{kisi}, {alanKucuk} alanındaki çalışmalarıyla tanınır.",
+    "items": [
+      {
+        "id": "ibni-sina",
+        "kisi": "İbn-i Sina",
+        "alan": "Tıp",
+        "alanKucuk": "tıp",
+        "not": "Yazdığı tıp kitabı yüzyıllarca ders kitabı olarak okutulmuştur."
+      },
+      {
+        "id": "ali-kuscu",
+        "kisi": "Ali Kuşçu",
+        "alan": "Astronomi",
+        "alanKucuk": "astronomi",
+        "not": "Gök cisimlerini ve hareketlerini incelemiştir."
+      },
+      {
+        "id": "piri-reis",
+        "kisi": "Piri Reis",
+        "alan": "Haritacılık",
+        "alanKucuk": "haritacılık",
+        "not": "Çizdiği dünya haritası çok ünlüdür."
+      },
+      {
+        "id": "mimar-sinan",
+        "kisi": "Mimar Sinan",
+        "alan": "Mimarlık",
+        "alanKucuk": "mimarlık",
+        "not": "Süleymaniye ve Selimiye camilerini yapmıştır."
+      }
+    ]
+  }
+]
