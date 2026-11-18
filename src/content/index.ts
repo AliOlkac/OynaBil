@@ -59,6 +59,10 @@ export const CONTENT_FILES: Record<string, Partial<Record<Grade, GradeFiles>>> =
     2: { questions: () => import("./ingilizce/sorular/2.json"), cards: () => import("./ingilizce/kartlar/2.json") },
     3: { questions: () => import("./ingilizce/sorular/3.json"), cards: () => import("./ingilizce/kartlar/3.json") },
     4: { questions: () => import("./ingilizce/sorular/4.json"), cards: () => import("./ingilizce/kartlar/4.json") },
+    5: { questions: () => import("./ingilizce/sorular/5.json"), cards: () => import("./ingilizce/kartlar/5.json") },
+    6: { questions: () => import("./ingilizce/sorular/6.json"), cards: () => import("./ingilizce/kartlar/6.json") },
+    7: { questions: () => import("./ingilizce/sorular/7.json"), cards: () => import("./ingilizce/kartlar/7.json") },
+    8: { questions: () => import("./ingilizce/sorular/8.json"), cards: () => import("./ingilizce/kartlar/8.json"), passages: () => import("./ingilizce/sorular/8-lgs.json") },
   },
   "din-kulturu": {
     5: { questions: () => import("./din-kulturu/sorular/5.json"), cards: () => import("./din-kulturu/kartlar/5.json") },

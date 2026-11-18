@@ -1,0 +1,746 @@
+[
+  {
+    "id": "ing-6-1-01",
+    "unit": "ing-6-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "A _____ teaches students at school.",
+    "choices": [
+      "nurse",
+      "teacher",
+      "driver",
+      "cook"
+    ],
+    "answer": 1,
+    "explanation": "\"Teach\" öğretmek demektir. Okulda öğrencilere ders anlatan kişi öğretmendir (teacher)."
+  },
+  {
+    "id": "ing-6-1-02",
+    "unit": "ing-6-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Students should _____ their homework on time.",
+    "choices": [
+      "make",
+      "play",
+      "go",
+      "do"
+    ],
+    "answer": 3,
+    "explanation": "Ödev yapmak İngilizcede \"do homework\" kalıbıyla söylenir; \"make homework\" denmez. \"On time\" zamanında demektir."
+  },
+  {
+    "id": "ing-6-1-03",
+    "unit": "ing-6-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "23rd April is National Sovereignty and Children's Day in Türkiye.",
+    "answer": true,
+    "explanation": "\"National Sovereignty and Children's Day\" Ulusal Egemenlik ve Çocuk Bayramı'dır ve 23 Nisan'da (23rd April) kutlanır."
+  },
+  {
+    "id": "ing-6-1-04",
+    "unit": "ing-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Our school _____ at half past eight every morning.",
+    "choices": [
+      "starts",
+      "start",
+      "starting",
+      "is start"
+    ],
+    "answer": 0,
+    "explanation": "\"Every morning\" her sabah tekrarlanan bir işi gösterir, bu yüzden geniş zaman kullanılır. Özne \"our school\" (it) olduğu için fiile -s gelir: starts."
+  },
+  {
+    "id": "ing-6-1-05",
+    "unit": "ing-6-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Class president: We _____ be respectful to our teachers and friends.",
+    "choices": [
+      "shouldn't",
+      "can't",
+      "should",
+      "mustn't"
+    ],
+    "answer": 2,
+    "explanation": "\"Should\" yapılması doğru olan davranışı anlatır. \"Be respectful\" saygılı olmak demektir; saygılı olmalıyız: We should be respectful."
+  },
+  {
+    "id": "ing-6-1-06",
+    "unit": "ing-6-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"You mustn't use your phone in class\" means you can use your phone in class.",
+    "answer": false,
+    "explanation": "\"Mustn't\" yasak bildirir. Cümle, derste telefon kullanmanın yasak olduğunu söyler; \"can\" ise izin anlamı taşır."
+  },
+  {
+    "id": "ing-6-1-07",
+    "unit": "ing-6-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kerem _____ late for school. He comes on time every day.",
+    "choices": [
+      "is always",
+      "is never",
+      "never is",
+      "always is"
+    ],
+    "answer": 1,
+    "explanation": "Her gün zamanında geldiğine göre hiç geç kalmaz: never. Sıklık zarfları \"am, is, are\" fiilinden sonra gelir: He is never late."
+  },
+  {
+    "id": "ing-6-2-01",
+    "unit": "ing-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Listen! The teacher _____ now.",
+    "choices": [
+      "talk",
+      "talks",
+      "is talking",
+      "talked"
+    ],
+    "answer": 2,
+    "explanation": "\"Listen!\" ve \"now\" işin şu anda olduğunu gösterir. Şimdiki zaman \"am, is, are\" + fiil-ing ile kurulur: is talking."
+  },
+  {
+    "id": "ing-6-2-02",
+    "unit": "ing-6-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Can I borrow your _____? I want to draw a straight line.",
+    "choices": [
+      "ruler",
+      "eraser",
+      "sharpener",
+      "glue"
+    ],
+    "answer": 0,
+    "explanation": "\"Draw a straight line\" düz çizgi çizmek demektir; bunun için cetvel (ruler) gerekir. \"Eraser\" silgi, \"sharpener\" kalemtıraş, \"glue\" yapıştırıcıdır."
+  },
+  {
+    "id": "ing-6-2-03",
+    "unit": "ing-6-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"We are doing a project now\" tells us about an action happening at the moment.",
+    "answer": true,
+    "explanation": "Cümle şimdiki zamandadır (are doing) ve \"now\" içerir. Şu anda yapılmakta olan bir işi anlatır: Şu an proje yapıyoruz."
+  },
+  {
+    "id": "ing-6-2-04",
+    "unit": "ing-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "What are the students doing at the moment? They _____ a test.",
+    "choices": [
+      "take",
+      "takes",
+      "taking",
+      "are taking"
+    ],
+    "answer": 3,
+    "explanation": "Soru şimdiki zamanla sorulmuştur (are ... doing). Cevap da aynı zamanda olur: They are taking a test (Sınav oluyorlar)."
+  },
+  {
+    "id": "ing-6-2-05",
+    "unit": "ing-6-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Teacher: Why are you late? Student: _____",
+    "choices": [
+      "Yes, I am late.",
+      "I'm sorry. I missed the bus.",
+      "I'm eleven.",
+      "It's nine o'clock."
+    ],
+    "answer": 1,
+    "explanation": "\"Why\" neden diye sorar; cevapta sebep söylenir. \"I missed the bus\" otobüsü kaçırdım demektir, \"I'm sorry\" ile de özür dilenir."
+  },
+  {
+    "id": "ing-6-2-06",
+    "unit": "ing-6-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"She is read a book now\" is a correct sentence.",
+    "answer": false,
+    "explanation": "Şimdiki zamanda fiile -ing eklenir. Doğru cümle: She is reading a book now (Şu an kitap okuyor)."
+  },
+  {
+    "id": "ing-6-2-07",
+    "unit": "ing-6-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Which sentence is about a routine, not about now?",
+    "choices": [
+      "We are having Maths now.",
+      "Look! He is writing on the board.",
+      "We have Maths on Mondays.",
+      "I am listening to the teacher at the moment."
+    ],
+    "answer": 2,
+    "explanation": "\"On Mondays\" (pazartesi günleri) düzenli tekrarlanan bir işi gösterir ve geniş zamanla söylenir: We have Maths. Öteki cümleler şu anı anlatır."
+  },
+  {
+    "id": "ing-6-3-01",
+    "unit": "ing-6-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "I have a toothache. I should see a _____.",
+    "choices": [
+      "dentist",
+      "farmer",
+      "pilot",
+      "waiter"
+    ],
+    "answer": 0,
+    "explanation": "\"Toothache\" diş ağrısı demektir. Dişi ağrıyan kişi diş hekimine (dentist) gider."
+  },
+  {
+    "id": "ing-6-3-02",
+    "unit": "ing-6-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "She is crying. She feels _____.",
+    "choices": [
+      "happy",
+      "excited",
+      "sad",
+      "hungry"
+    ],
+    "answer": 2,
+    "explanation": "\"Cry\" ağlamak demektir. Ağlayan kişi genellikle üzgündür: sad. \"Happy\" mutlu, \"excited\" heyecanlı, \"hungry\" aç demektir."
+  },
+  {
+    "id": "ing-6-3-03",
+    "unit": "ing-6-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"I'm interested in music\" means I like music.",
+    "answer": true,
+    "explanation": "\"Be interested in\" bir şeye ilgi duymak demektir. Müziğe ilgi duyan kişi müziği sever."
+  },
+  {
+    "id": "ing-6-3-04",
+    "unit": "ing-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ahmet has a cold. He _____ drink cold water.",
+    "choices": [
+      "should",
+      "shouldn't",
+      "is",
+      "does"
+    ],
+    "answer": 1,
+    "explanation": "\"Have a cold\" üşütmek, nezle olmak demektir. Yapılmaması gereken şey için \"shouldn't\" kullanılır: Soğuk su içmemeli."
+  },
+  {
+    "id": "ing-6-3-05",
+    "unit": "ing-6-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Selin: What do you do in your free time? Mert: _____",
+    "choices": [
+      "I'm doing my homework now.",
+      "I'm twelve years old.",
+      "Yes, I do.",
+      "I usually ride my bike."
+    ],
+    "answer": 3,
+    "explanation": "\"Free time\" boş zaman demektir. Soru geniş zamanda olduğu için alışkanlık bildiren cevap uygundur: I usually ride my bike (Genellikle bisiklete binerim)."
+  },
+  {
+    "id": "ing-6-3-06",
+    "unit": "ing-6-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "If you have a headache, you should listen to loud music.",
+    "answer": false,
+    "explanation": "\"Headache\" baş ağrısı, \"loud music\" yüksek sesli müzik demektir. Başı ağrıyan kişi dinlenmelidir: You should rest."
+  },
+  {
+    "id": "ing-6-3-07",
+    "unit": "ing-6-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Burak is good _____ playing basketball, and he is interested _____ music.",
+    "choices": [
+      "in / at",
+      "at / on",
+      "at / in",
+      "on / in"
+    ],
+    "answer": 2,
+    "explanation": "Bu sıfatlar belirli edatlarla kullanılır: \"good at\" (bir şeyde iyi) ve \"interested in\" (bir şeye ilgili)."
+  },
+  {
+    "id": "ing-6-4-01",
+    "unit": "ing-6-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "We sleep in the _____.",
+    "choices": [
+      "kitchen",
+      "bedroom",
+      "bathroom",
+      "garage"
+    ],
+    "answer": 1,
+    "explanation": "\"Sleep\" uyumak demektir. Yatak odası İngilizcede \"bedroom\" olur. \"Kitchen\" mutfak, \"bathroom\" banyodur."
+  },
+  {
+    "id": "ing-6-4-02",
+    "unit": "ing-6-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Last Sunday, we _____ our grandparents.",
+    "choices": [
+      "visit",
+      "visits",
+      "visiting",
+      "visited"
+    ],
+    "answer": 3,
+    "explanation": "\"Last Sunday\" (geçen pazar) geçmişi gösterir. Düzenli fiiller geçmiş zamanda -ed alır: visit, visited."
+  },
+  {
+    "id": "ing-6-4-03",
+    "unit": "ing-6-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Yesterday\" is a time expression for the past.",
+    "answer": true,
+    "explanation": "\"Yesterday\" dün demektir ve geçmiş zaman cümlelerinde kullanılır: I played football yesterday."
+  },
+  {
+    "id": "ing-6-4-04",
+    "unit": "ing-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Where _____ you yesterday evening? — I was at home with my family.",
+    "choices": [
+      "were",
+      "was",
+      "are",
+      "did"
+    ],
+    "answer": 0,
+    "explanation": "\"Be\" fiilinin geçmiş hâli \"you\" öznesiyle \"were\" olur: Where were you? I, he, she ve it ile \"was\" kullanılır."
+  },
+  {
+    "id": "ing-6-4-05",
+    "unit": "ing-6-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "My brother and I _____ the table before dinner every day.",
+    "choices": [
+      "sets",
+      "setting",
+      "set",
+      "are set"
+    ],
+    "answer": 2,
+    "explanation": "\"Set the table\" sofrayı kurmak demektir. Özne \"my brother and I\" (we) olduğu için fiil ek almaz: set."
+  },
+  {
+    "id": "ing-6-4-06",
+    "unit": "ing-6-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"We was at the park yesterday\" is a correct sentence.",
+    "answer": false,
+    "explanation": "\"We\" öznesiyle \"were\" kullanılır. Doğru cümle: We were at the park yesterday (Dün parktaydık)."
+  },
+  {
+    "id": "ing-6-4-07",
+    "unit": "ing-6-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Did your father cook dinner last night? — _____",
+    "choices": [
+      "No, he doesn't. My mother cooks it.",
+      "No, he didn't. My mother cooked it.",
+      "Yes, he does. It was delicious.",
+      "No, he wasn't. My mother cooked it."
+    ],
+    "answer": 1,
+    "explanation": "\"Did ...?\" sorularına \"Yes, he did\" ya da \"No, he didn't\" diye cevap verilir. Devamındaki cümle de geçmiş zamandadır: cooked."
+  },
+  {
+    "id": "ing-6-5-01",
+    "unit": "ing-6-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "A city is _____ than a village.",
+    "choices": [
+      "big",
+      "bigger",
+      "biggest",
+      "more big"
+    ],
+    "answer": 1,
+    "explanation": "İki şeyi karşılaştırırken kısa sıfatlara -er eklenir ve \"than\" kullanılır: bigger than (-den daha büyük). \"Big\" sözcüğünde son harf çift yazılır."
+  },
+  {
+    "id": "ing-6-5-02",
+    "unit": "ing-6-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "There _____ a big shopping mall in our neighbourhood.",
+    "choices": [
+      "are",
+      "have",
+      "is",
+      "be"
+    ],
+    "answer": 2,
+    "explanation": "Tekil adlarla \"There is\", çoğul adlarla \"There are\" kullanılır. \"A big shopping mall\" tekildir: There is."
+  },
+  {
+    "id": "ing-6-5-03",
+    "unit": "ing-6-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Villages are usually quieter than cities.",
+    "answer": true,
+    "explanation": "\"Quiet\" sessiz demektir; karşılaştırma hâli \"quieter\" olur. Köyler çoğunlukla şehirlerden daha sessizdir."
+  },
+  {
+    "id": "ing-6-5-04",
+    "unit": "ing-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Life in a city is _____ than life in a village.",
+    "choices": [
+      "expensiver",
+      "expensive",
+      "most expensive",
+      "more expensive"
+    ],
+    "answer": 3,
+    "explanation": "Uzun sıfatlar karşılaştırma yaparken -er almaz; önlerine \"more\" gelir: more expensive than (-den daha pahalı)."
+  },
+  {
+    "id": "ing-6-5-05",
+    "unit": "ing-6-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Customer: How much is this T-shirt? Shop assistant: _____",
+    "choices": [
+      "It's 200 liras.",
+      "It's blue.",
+      "It's medium size.",
+      "It's on the shelf."
+    ],
+    "answer": 0,
+    "explanation": "\"How much is ...?\" fiyat sormak için kullanılır. Cevapta fiyat söylenir: It's 200 liras. Öteki cevaplar rengi, bedeni ve yeri bildirir."
+  },
+  {
+    "id": "ing-6-5-06",
+    "unit": "ing-6-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "The comparative form of \"good\" is \"gooder\".",
+    "answer": false,
+    "explanation": "\"Good\" düzensiz bir sıfattır; karşılaştırma hâli \"better\" olur: This park is better than the old one."
+  },
+  {
+    "id": "ing-6-5-07",
+    "unit": "ing-6-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "There aren't _____ parks in my town, but there are a lot of cafés.",
+    "choices": [
+      "much",
+      "a",
+      "many",
+      "a little"
+    ],
+    "answer": 2,
+    "explanation": "Sayılabilen çoğul adlarla olumsuz cümlelerde \"many\" kullanılır: There aren't many parks (Çok park yok). \"Much\" sayılamayan adlarla kullanılır."
+  },
+  {
+    "id": "ing-6-6-01",
+    "unit": "ing-6-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "People in Japan speak _____.",
+    "choices": [
+      "Japan",
+      "Japanese",
+      "Chinese",
+      "Spanish"
+    ],
+    "answer": 1,
+    "explanation": "Ülke adı \"Japan\", dil ve milliyet adı \"Japanese\" olur. Japonya'da Japonca konuşulur."
+  },
+  {
+    "id": "ing-6-6-02",
+    "unit": "ing-6-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Pizza and pasta are famous _____ dishes.",
+    "choices": [
+      "Italian",
+      "Japanese",
+      "Mexican",
+      "Indian"
+    ],
+    "answer": 0,
+    "explanation": "\"Dish\" yemek demektir. Pizza ve makarna (pasta) İtalyan mutfağının (Italian) ünlü yemekleridir."
+  },
+  {
+    "id": "ing-6-6-03",
+    "unit": "ing-6-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Paris is the capital city of France.",
+    "answer": true,
+    "explanation": "\"Capital city\" başkent demektir. Fransa'nın (France) başkenti Paris'tir."
+  },
+  {
+    "id": "ing-6-6-04",
+    "unit": "ing-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "We _____ to Italy last summer and ate delicious pizza.",
+    "choices": [
+      "go",
+      "goes",
+      "going",
+      "went"
+    ],
+    "answer": 3,
+    "explanation": "\"Last summer\" geçmişi gösterir. \"Go\" düzensiz bir fiildir; geçmiş zaman hâli \"went\" olur. Cümledeki \"ate\" de \"eat\" fiilinin geçmiş hâlidir."
+  },
+  {
+    "id": "ing-6-6-05",
+    "unit": "ing-6-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Tourists _____ many traditional dances at the festival yesterday.",
+    "choices": [
+      "see",
+      "sees",
+      "saw",
+      "seeing"
+    ],
+    "answer": 2,
+    "explanation": "\"Yesterday\" geçmiş zamanı gösterir. \"See\" düzensiz bir fiildir; geçmiş zaman hâli \"saw\" olur."
+  },
+  {
+    "id": "ing-6-6-06",
+    "unit": "ing-6-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Did you enjoyed the festival?\" is a correct question.",
+    "answer": false,
+    "explanation": "\"Did\" ile kurulan sorularda fiil yalın hâlde kalır. Doğru soru: Did you enjoy the festival?"
+  },
+  {
+    "id": "ing-6-6-07",
+    "unit": "ing-6-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "A: _____ did you stay in London? B: For two weeks.",
+    "choices": [
+      "Where",
+      "How long",
+      "When",
+      "Who"
+    ],
+    "answer": 1,
+    "explanation": "Cevap bir süre bildiriyor: for two weeks (iki hafta boyunca). Süre sormak için \"How long\" kullanılır."
+  },
+  {
+    "id": "ing-6-7-01",
+    "unit": "ing-6-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Take your umbrella. It is _____ today.",
+    "choices": [
+      "sunny",
+      "hot",
+      "rainy",
+      "dry"
+    ],
+    "answer": 2,
+    "explanation": "\"Umbrella\" şemsiye demektir. Şemsiye yağmurlu (rainy) havada gerekir. \"Sunny\" güneşli, \"dry\" kuru demektir."
+  },
+  {
+    "id": "ing-6-7-02",
+    "unit": "ing-6-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "We should _____ paper, glass and plastic.",
+    "choices": [
+      "recycle",
+      "burn",
+      "waste",
+      "throw"
+    ],
+    "answer": 0,
+    "explanation": "\"Recycle\" geri dönüştürmek demektir. Kâğıt (paper), cam (glass) ve plastik geri dönüştürülerek yeniden kullanılır."
+  },
+  {
+    "id": "ing-6-7-03",
+    "unit": "ing-6-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Cutting down trees is good for the environment.",
+    "answer": false,
+    "explanation": "\"Cut down trees\" ağaç kesmek, \"environment\" çevre demektir. Ağaç kesmek çevreye zarar verir; ağaç dikmek (plant trees) yararlıdır."
+  },
+  {
+    "id": "ing-6-7-04",
+    "unit": "ing-6-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "We _____ waste water. It is very important for life.",
+    "choices": [
+      "should",
+      "can",
+      "are",
+      "shouldn't"
+    ],
+    "answer": 3,
+    "explanation": "\"Waste water\" suyu boşa harcamak demektir. Yapılmaması gereken davranış için \"shouldn't\" kullanılır: Suyu israf etmemeliyiz."
+  },
+  {
+    "id": "ing-6-7-05",
+    "unit": "ing-6-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "What is the weather like in Antalya in summer?",
+    "choices": [
+      "It likes summer.",
+      "It's hot and sunny.",
+      "It's cold and snowy.",
+      "Yes, it is."
+    ],
+    "answer": 1,
+    "explanation": "\"What is the weather like?\" hava nasıl demektir. Antalya'da yazın hava sıcak ve güneşlidir: hot and sunny."
+  },
+  {
+    "id": "ing-6-7-06",
+    "unit": "ing-6-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"It's freezing\" means the weather is very cold.",
+    "answer": true,
+    "explanation": "\"Freezing\" dondurucu soğuk demektir. Hava çok soğuk olduğunda \"It's freezing\" denir."
+  },
+  {
+    "id": "ing-6-7-07",
+    "unit": "ing-6-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Factories and cars cause air _____.",
+    "choices": [
+      "weather",
+      "energy",
+      "pollution",
+      "recycling"
+    ],
+    "answer": 2,
+    "explanation": "\"Air pollution\" hava kirliliği demektir. Fabrikalar ve arabalar havayı kirletir. \"Cause\" neden olmak anlamına gelir."
+  },
+  {
+    "id": "ing-6-8-01",
+    "unit": "ing-6-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "The Earth is a _____.",
+    "choices": [
+      "planet",
+      "star",
+      "moon",
+      "comet"
+    ],
+    "answer": 0,
+    "explanation": "Dünya (the Earth) bir gezegendir: planet. \"Star\" yıldız, \"moon\" uydu ya da ay, \"comet\" kuyruklu yıldız demektir."
+  },
+  {
+    "id": "ing-6-8-02",
+    "unit": "ing-6-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "An _____ travels in space.",
+    "choices": [
+      "engineer",
+      "artist",
+      "actor",
+      "astronaut"
+    ],
+    "answer": 3,
+    "explanation": "\"Space\" uzay demektir. Uzaya giden kişiye astronot (astronaut) denir."
+  },
+  {
+    "id": "ing-6-8-03",
+    "unit": "ing-6-8",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "We use \"will\" to talk about the future.",
+    "answer": true,
+    "explanation": "\"Will\" gelecek zaman yardımcı fiilidir. Gelecekle ilgili tahminleri anlatır: People will travel to Mars."
+  },
+  {
+    "id": "ing-6-8-04",
+    "unit": "ing-6-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "I think people _____ live on Mars in the future.",
+    "choices": [
+      "did",
+      "will",
+      "was",
+      "are"
+    ],
+    "answer": 1,
+    "explanation": "\"In the future\" (gelecekte) ifadesi gelecek zamanı gösterir. Tahmin bildirirken \"will\" + yalın fiil kullanılır: will live."
+  },
+  {
+    "id": "ing-6-8-05",
+    "unit": "ing-6-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "In the future, cars _____ use petrol. They will use electricity.",
+    "choices": [
+      "will",
+      "don't",
+      "won't",
+      "aren't"
+    ],
+    "answer": 2,
+    "explanation": "\"Won't\" (will not) gelecek zamanın olumsuzudur. İkinci cümle elektrik kullanacaklarını söylüyor; demek ki benzin kullanmayacaklar."
+  },
+  {
+    "id": "ing-6-8-06",
+    "unit": "ing-6-8",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"I will to be a doctor\" is a correct sentence.",
+    "answer": false,
+    "explanation": "\"Will\" yardımcı fiilinden sonra fiil \"to\" almadan, yalın hâlde gelir. Doğru cümle: I will be a doctor."
+  },
+  {
+    "id": "ing-6-8-07",
+    "unit": "ing-6-8",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Will students go to school in 2100? — _____ They will study at home.",
+    "choices": [
+      "Yes, they will.",
+      "No, they don't.",
+      "Yes, they do.",
+      "No, they won't."
+    ],
+    "answer": 3,
+    "explanation": "\"Will ...?\" sorularına \"Yes, they will\" ya da \"No, they won't\" diye cevap verilir. Evde ders çalışacakları için cevap olumsuzdur."
+  }
+]

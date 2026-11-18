@@ -1,0 +1,382 @@
+[
+  {
+    "id": "ing-8-1-lgs-01",
+    "unit": "ing-8-1",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Dear Mert, I'm having a birthday party on Saturday, 14th May. It starts at 5 p.m. at Blue Café. There will be a magic show and lots of games. Please let me know by Thursday if you can come. Best wishes, Ali",
+    "prompt": "Which question does the invitation card not answer?",
+    "choices": [
+      "When is the party?",
+      "Where is the party?",
+      "How many guests are coming?",
+      "What will the guests do at the party?"
+    ],
+    "answer": 2,
+    "explanation": "Davetiyede tarih (14th May), yer (Blue Café) ve etkinlikler (magic show, games) yazıyor. Kaç konuğun geleceği (how many guests) hakkında bilgi yok.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-1-lgs-02",
+    "unit": "ing-8-1",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Zeynep: Hi, Deniz. We are going on a picnic on Sunday. Would you like to join us? Deniz: I'd love to, but my cousins are visiting us on Sunday. Maybe next time. Zeynep: That's OK. See you at school, then.",
+    "prompt": "What does Deniz do in this conversation?",
+    "choices": [
+      "She accepts the invitation happily.",
+      "She refuses the invitation and gives an excuse.",
+      "She invites Zeynep to her house.",
+      "She apologizes for being late."
+    ],
+    "answer": 1,
+    "explanation": "\"I'd love to, but ...\" daveti kibarca reddetme kalıbıdır. Deniz, kuzenlerinin geleceğini söyleyerek mazeret (excuse) bildiriyor.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-1-lgs-03",
+    "unit": "ing-8-1",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Hi, Burak! Thanks a lot for inviting me to your slumber party. It sounds like great fun, and I really want to see your new games. But I have a basketball match on Saturday morning, so I must go to bed early on Friday. I hope you all have a good time. Emre",
+    "prompt": "Why can't Emre come to the party?",
+    "choices": [
+      "He doesn't like slumber parties.",
+      "He has to study for an exam.",
+      "He is going to another party.",
+      "He has a match the next morning."
+    ],
+    "answer": 3,
+    "explanation": "Emre cumartesi sabahı basketbol maçı olduğunu, bu yüzden cuma gecesi erken yatması gerektiğini söylüyor. \"So\" sonuç bildirir.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-2-lgs-01",
+    "unit": "ing-8-2",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Cem is fourteen. On weekdays, he gets up early, goes to school and does his homework in the evening. On Saturdays, he meets his friends and plays basketball. He never plays computer games because he thinks they are a waste of time. He prefers hip-hop to pop music.",
+    "prompt": "Which one is true about Cem?",
+    "choices": [
+      "He doesn't spend time on computer games.",
+      "He likes pop music more than hip-hop.",
+      "He plays basketball every day.",
+      "He does his homework in the morning."
+    ],
+    "answer": 0,
+    "explanation": "Metinde \"He never plays computer games\" deniyor. Cem hip-hop'u pop müziğe tercih eder, basketbolu cumartesi oynar ve ödevini akşam yapar.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-2-lgs-02",
+    "unit": "ing-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "There are thirty students in class 8-B. They answered a question about their favourite music. Fifteen students like pop music. Eight students like rap, five students like rock, and only two students like classical music.",
+    "prompt": "Which one is correct according to the text?",
+    "choices": [
+      "Rock is more popular than rap in the class.",
+      "Most students prefer classical music.",
+      "Half of the students like pop music.",
+      "Nobody likes classical music."
+    ],
+    "answer": 2,
+    "explanation": "Sınıfta 30 öğrenci var ve 15'i pop müzik seviyor; 15, 30'un yarısıdır (half). Rap (8) rock'tan (5) daha çok seviliyor, klasik müziği 2 kişi seviyor.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-3-lgs-01",
+    "unit": "ing-8-3",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Vegetable omelette: First, chop an onion and two peppers. Then, heat some oil in a pan and fry the onion and peppers for three minutes. After that, add two sliced tomatoes and cook for five minutes. Next, beat three eggs and pour them into the pan. Finally, add some salt and serve hot.",
+    "prompt": "What do you do just after you fry the onion and peppers?",
+    "choices": [
+      "You beat the eggs.",
+      "You add the tomatoes.",
+      "You heat the oil.",
+      "You add some salt."
+    ],
+    "answer": 1,
+    "explanation": "Sıra bildiren sözcüklere bakılır: Soğan ve biber kızartıldıktan sonra \"After that\" ile domateslerin eklendiği söylenir. Yumurta daha sonra, tuz en son gelir.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-3-lgs-02",
+    "unit": "ing-8-3",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Pancakes: You need two eggs, a glass of milk, a glass of flour and a pinch of salt. First, mix the eggs and milk in a bowl. Then, add the flour and salt and stir well. After that, melt some butter in a pan and pour in some of the mixture. Cook each side for two minutes. Finally, serve with honey.",
+    "prompt": "Which one is correct according to the recipe?",
+    "choices": [
+      "You add the flour before the milk.",
+      "You need sugar for this recipe.",
+      "You serve the pancakes with jam.",
+      "You cook both sides of the pancake."
+    ],
+    "answer": 3,
+    "explanation": "\"Cook each side for two minutes\" her iki yüzü de ikişer dakika pişir demektir. Un sütten sonra eklenir, tarifte şeker yoktur ve bal (honey) ile servis edilir.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-4-lgs-01",
+    "unit": "ing-8-4",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Secretary: Good morning. Star Company. How can I help you? Mr Hill: Hello. This is Jack Hill. May I speak to Mr Brown, please? Secretary: I'm afraid he is in a meeting right now. Would you like to leave a message? Mr Hill: Yes, please. Could you tell him to call me back this afternoon?",
+    "prompt": "Why can't Mr Brown come to the phone?",
+    "choices": [
+      "He is on holiday.",
+      "He is talking on another line.",
+      "He is in a meeting.",
+      "He left the office early."
+    ],
+    "answer": 2,
+    "explanation": "Sekreter \"he is in a meeting right now\" diyor; yani Bay Brown şu anda toplantıda. Bu yüzden Bay Hill mesaj bırakıyor.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-4-lgs-02",
+    "unit": "ing-8-4",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Hi, Selin. I called you three times, but you didn't answer. Our project meeting is at four o'clock, not at three. We are meeting at the library again. Don't forget to bring your laptop. Call me back when you see this message. Ece",
+    "prompt": "Why did Ece write this message?",
+    "choices": [
+      "To tell Selin about a change in the meeting time",
+      "To invite Selin to her birthday party",
+      "To ask Selin for her laptop",
+      "To cancel the project meeting"
+    ],
+    "answer": 0,
+    "explanation": "Ece toplantının saat üçte değil dörtte olduğunu bildiriyor; yani saat değişikliğini haber veriyor. Toplantı iptal edilmemiştir, yer yine kütüphanedir.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-5-lgs-01",
+    "unit": "ing-8-5",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Ali uses the Internet for two hours a day. He mostly does research for his homework and watches educational videos. He sometimes chats with his cousins in Germany. He never plays online games, and he doesn't shop online because he thinks it isn't safe.",
+    "prompt": "Which one does Ali do on the Internet?",
+    "choices": [
+      "He buys clothes online.",
+      "He plays online games with friends.",
+      "He talks to his relatives.",
+      "He downloads music."
+    ],
+    "answer": 2,
+    "explanation": "\"He sometimes chats with his cousins\" cümlesi akrabalarıyla (relatives) sohbet ettiğini gösterir. Çevrim içi oyun oynamaz ve alışveriş yapmaz; müzikten söz edilmez.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-5-lgs-02",
+    "unit": "ing-8-5",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Never share your password with anyone, even your best friend. Don't accept friend requests from strangers. Don't give your address or phone number on websites. If something makes you feel uncomfortable online, tell your parents or your teacher at once.",
+    "prompt": "What is the best title for this text?",
+    "choices": [
+      "How to Find Information Quickly",
+      "How to Stay Safe Online",
+      "How to Make New Friends",
+      "How to Design a Website"
+    ],
+    "answer": 1,
+    "explanation": "Metin şifre paylaşmamak, yabancıları kabul etmemek ve kişisel bilgi vermemek gibi güvenlik kurallarını sıralıyor. En uygun başlık: How to Stay Safe Online.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-6-lgs-01",
+    "unit": "ing-8-6",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Mark loves water sports. He prefers rafting to kayaking because he thinks it is more exciting. His sister Lucy is afraid of water, so she never joins him. She would rather do something on land. She thinks climbing is the most enjoyable sport of all.",
+    "prompt": "Which activity would Lucy probably choose for the weekend?",
+    "choices": [
+      "Rafting",
+      "Kayaking",
+      "Scuba diving",
+      "Rock climbing"
+    ],
+    "answer": 3,
+    "explanation": "Lucy sudan korkuyor ve karada bir şey yapmayı tercih ediyor; en çok tırmanışı seviyor. Rafting, kano ve tüplü dalış su sporlarıdır.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-6-lgs-02",
+    "unit": "ing-8-6",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Green Valley Adventure Camp is for teenagers aged 12 to 16. The camp lasts five days. You can try caving, zip-lining and horse riding with expert guides. All meals are included in the price, but transport is not. You must bring your own boots and a raincoat.",
+    "prompt": "Which one is true about the camp?",
+    "choices": [
+      "Campers pay extra for transport.",
+      "It is open to people of all ages.",
+      "Campers must pay for their meals.",
+      "The camp gives boots to everyone."
+    ],
+    "answer": 0,
+    "explanation": "\"Transport is not included\" ulaşımın ücrete dâhil olmadığını, yani ayrıca ödendiğini gösterir. Kamp 12-16 yaş içindir, yemekler dâhildir ve botları katılımcı getirir.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-7-lgs-01",
+    "unit": "ing-8-7",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Hi, Mum! Cappadocia is amazing. We have visited an underground city and I have ridden a horse in a valley. The fairy chimneys look fascinating. I haven't tried the famous pottery kebab yet, but we are going to eat it tonight. Tomorrow morning we are going on a hot-air balloon tour. Love, Defne",
+    "prompt": "Which one has Defne already done?",
+    "choices": [
+      "She has eaten pottery kebab.",
+      "She has ridden a horse.",
+      "She has flown in a hot-air balloon.",
+      "She has returned home."
+    ],
+    "answer": 1,
+    "explanation": "\"I have ridden a horse\" ata bindiğini gösterir. Testi kebabını henüz denemedi (haven't tried ... yet), balon turu ise yarın sabah yapılacak.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-7-lgs-02",
+    "unit": "ing-8-7",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Greenhill is a small town by a lake. It has a 500-year-old castle, a history museum and old stone houses. There are no beaches or big shopping centres. Visitors usually walk in the forest, take photos of the castle and taste local dishes in small family restaurants.",
+    "prompt": "Who would enjoy a holiday in Greenhill most?",
+    "choices": [
+      "Someone who likes swimming in the sea",
+      "Someone who loves shopping in big malls",
+      "Someone who is interested in history and nature",
+      "Someone who wants to go to lively night clubs"
+    ],
+    "answer": 2,
+    "explanation": "Kasabada kale, tarih müzesi, eski taş evler ve orman var; plaj ve alışveriş merkezi yok. Burası tarih ve doğaya ilgi duyan biri için uygundur.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-8-lgs-01",
+    "unit": "ing-8-8",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Everyone helps at home in the Kaya family. Mr Kaya cooks dinner, and Mrs Kaya does the shopping. Their daughter Elif sets the table and loads the dishwasher. Their son Can takes out the rubbish and feeds the dog. Nobody likes ironing, so they take turns.",
+    "prompt": "Who is responsible for the pet in the Kaya family?",
+    "choices": [
+      "Mr Kaya",
+      "Mrs Kaya",
+      "Elif",
+      "Can"
+    ],
+    "answer": 3,
+    "explanation": "\"Can takes out the rubbish and feeds the dog\" cümlesine göre köpeği besleyen Can'dır. \"Pet\" evcil hayvan, \"responsible for\" sorumlu demektir.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-8-lgs-02",
+    "unit": "ing-8-8",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Mum: Mert, where are you going? Mert: To the park, Mum. My friends are waiting for me. Mum: Not yet. Your room is very messy. You must tidy it first. Mert: But I've already made my bed. Mum: That's not enough. Pick up your clothes and empty the bin, too. Then you can go.",
+    "prompt": "What does Mert have to do before he goes to the park?",
+    "choices": [
+      "Tidy his room",
+      "Make his bed again",
+      "Do his homework",
+      "Call his friends"
+    ],
+    "answer": 0,
+    "explanation": "Annesi \"You must tidy it first\" diyor; yani Mert önce odasını toplamak zorunda. Yatağını zaten toplamış (already made my bed); ödevden söz edilmiyor.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-9-lgs-01",
+    "unit": "ing-8-9",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Aziz Sancar is a Turkish scientist. He was born in Savur, Mardin, in 1946. He studied medicine at İstanbul University and worked as a doctor for a short time. Then he went to the USA to do research. In 2015, he won the Nobel Prize in Chemistry for his studies on DNA repair.",
+    "prompt": "Why did Aziz Sancar win the Nobel Prize?",
+    "choices": [
+      "Because he worked as a doctor in Mardin",
+      "Because of his research on DNA repair",
+      "Because he studied medicine in İstanbul",
+      "Because he moved to the USA"
+    ],
+    "answer": 1,
+    "explanation": "Son cümlede ödülü \"for his studies on DNA repair\" yani DNA onarımı üzerine çalışmaları için kazandığı söyleniyor. \"For\" burada sebep bildirir.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-10-lgs-01",
+    "unit": "ing-8-10",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Scientists warn us about the future of our planet. If we keep burning fossil fuels, temperatures will rise and there will be more droughts and floods. To stop this, we should use solar and wind energy, plant more trees and save water at home.",
+    "prompt": "Which suggestion is not mentioned in the text?",
+    "choices": [
+      "Planting more trees",
+      "Saving water at home",
+      "Using public transport",
+      "Using solar and wind energy"
+    ],
+    "answer": 2,
+    "explanation": "Metinde güneş ve rüzgâr enerjisi kullanmak, ağaç dikmek ve su tasarrufu yapmak öneriliyor. Toplu taşıma (public transport) kullanmaktan söz edilmiyor.",
+    "tags": [
+      "LGS"
+    ]
+  },
+  {
+    "id": "ing-8-10-lgs-02",
+    "unit": "ing-8-10",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "What should you do during an earthquake? First of all, stay calm. If you are inside, get under a strong table and protect your head. Stay away from windows. Don't use the lift. If you are outside, move to an open area, away from buildings and trees.",
+    "prompt": "According to the text, what should you do if you are inside during an earthquake?",
+    "choices": [
+      "Run to the lift quickly",
+      "Stand next to the window",
+      "Go outside at once",
+      "Get under a strong table"
+    ],
+    "answer": 3,
+    "explanation": "Metne göre içerideyseniz sağlam bir masanın altına girip başınızı korumalısınız. Asansör (lift) kullanılmaz ve pencerelerden uzak durulur.",
+    "tags": [
+      "LGS"
+    ]
+  }
+]

@@ -1,0 +1,746 @@
+[
+  {
+    "id": "ing-5-1-01",
+    "unit": "ing-5-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Where do students borrow books at school?",
+    "choices": [
+      "In the canteen",
+      "In the library",
+      "In the gym",
+      "In the schoolyard"
+    ],
+    "answer": 1,
+    "explanation": "\"Library\" kütüphane demektir; kitap ödünç almak (borrow books) için kütüphaneye gidilir. \"Canteen\" kantin, \"gym\" spor salonu, \"schoolyard\" okul bahçesidir."
+  },
+  {
+    "id": "ing-5-1-02",
+    "unit": "ing-5-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Kenji is from Japan. He is _____.",
+    "choices": [
+      "German",
+      "Spanish",
+      "Japanese",
+      "Turkish"
+    ],
+    "answer": 2,
+    "explanation": "Ülke adı \"Japan\" (Japonya), milliyet sıfatı \"Japanese\" (Japon) olur. Milliyet bildirirken \"He is Japanese\" deriz."
+  },
+  {
+    "id": "ing-5-1-03",
+    "unit": "ing-5-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "In Türkiye, people celebrate Republic Day on 29th October.",
+    "answer": true,
+    "explanation": "\"Republic Day\" Cumhuriyet Bayramı demektir ve her yıl 29 Ekim'de (29th October) kutlanır."
+  },
+  {
+    "id": "ing-5-1-04",
+    "unit": "ing-5-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Elif likes singing and playing the guitar. Which school club is good for her?",
+    "choices": [
+      "Music club",
+      "Chess club",
+      "Science club",
+      "Sports club"
+    ],
+    "answer": 0,
+    "explanation": "\"Singing\" şarkı söylemek, \"playing the guitar\" gitar çalmak demektir. Bu etkinlikler müzik kulübünde (music club) yapılır."
+  },
+  {
+    "id": "ing-5-1-05",
+    "unit": "ing-5-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Which one is a school rule?",
+    "choices": [
+      "Be late for school.",
+      "Shout in the library.",
+      "Run in the corridors.",
+      "Keep the school clean."
+    ],
+    "answer": 3,
+    "explanation": "\"Keep the school clean\" okulu temiz tut demektir ve bir okul kuralıdır. Okula geç kalmak, kütüphanede bağırmak ve koridorda koşmak kurallara uymaz."
+  },
+  {
+    "id": "ing-5-1-06",
+    "unit": "ing-5-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "A canteen is a place for doing science experiments.",
+    "answer": false,
+    "explanation": "\"Canteen\" kantindir; orada yiyecek ve içecek alınır. Fen deneyleri \"science lab\" yani fen laboratuvarında yapılır."
+  },
+  {
+    "id": "ing-5-1-07",
+    "unit": "ing-5-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Tom: Where are you from, Maria? Maria: _____",
+    "choices": [
+      "I'm eleven years old.",
+      "I'm in the music club.",
+      "I'm from Spain.",
+      "I'm fine, thanks."
+    ],
+    "answer": 2,
+    "explanation": "\"Where are you from?\" nerelisin demektir. Cevapta ülke söylenir: \"I'm from Spain\" (İspanyalıyım). Öteki cevaplar yaş, kulüp ve hâl hatır bildirir."
+  },
+  {
+    "id": "ing-5-2-01",
+    "unit": "ing-5-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Which day comes after Tuesday?",
+    "choices": [
+      "Monday",
+      "Thursday",
+      "Sunday",
+      "Wednesday"
+    ],
+    "answer": 3,
+    "explanation": "Günlerin sırası: Monday, Tuesday, Wednesday, Thursday... Salıdan (Tuesday) sonra çarşamba (Wednesday) gelir."
+  },
+  {
+    "id": "ing-5-2-02",
+    "unit": "ing-5-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "We learn about numbers and shapes in _____ class.",
+    "choices": [
+      "Maths",
+      "Music",
+      "History",
+      "Art"
+    ],
+    "answer": 0,
+    "explanation": "\"Numbers\" sayılar, \"shapes\" şekiller demektir. Bunlar matematik (Maths) dersinde öğrenilir."
+  },
+  {
+    "id": "ing-5-2-03",
+    "unit": "ing-5-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Raise your hand\" means \"Elini kaldır\".",
+    "answer": true,
+    "explanation": "\"Raise\" kaldırmak, \"hand\" el demektir. Sınıfta söz almak için el kaldırılır: Raise your hand."
+  },
+  {
+    "id": "ing-5-2-04",
+    "unit": "ing-5-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "It is 7:30. What time is it?",
+    "choices": [
+      "It's quarter past seven.",
+      "It's half past seven.",
+      "It's half past eight.",
+      "It's seven o'clock."
+    ],
+    "answer": 1,
+    "explanation": "\"Half past\" buçuk demektir ve geçen saatle söylenir: 7.30 = half past seven. \"Quarter past seven\" 7.15'tir."
+  },
+  {
+    "id": "ing-5-2-05",
+    "unit": "ing-5-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Student: _____ Teacher: Yes, you may. But come back quickly.",
+    "choices": [
+      "What's your name?",
+      "How are you today?",
+      "May I go out, please?",
+      "Where is my book?"
+    ],
+    "answer": 2,
+    "explanation": "İzin istemek için \"May I ...?\" kalıbı kullanılır. \"May I go out, please?\" dışarı çıkabilir miyim demektir; öğretmen de izin vermiştir."
+  },
+  {
+    "id": "ing-5-2-06",
+    "unit": "ing-5-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"It's quarter to nine\" means the time is 9:15.",
+    "answer": false,
+    "explanation": "\"Quarter to nine\" dokuza çeyrek var, yani 8.45 demektir. 9.15 için \"quarter past nine\" (dokuzu çeyrek geçiyor) denir."
+  },
+  {
+    "id": "ing-5-2-07",
+    "unit": "ing-5-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Our English lesson starts at 9:00 and finishes at 9:40. How long is the lesson?",
+    "choices": [
+      "Fourteen minutes",
+      "Four hours",
+      "Nine minutes",
+      "Forty minutes"
+    ],
+    "answer": 3,
+    "explanation": "9.00'dan 9.40'a kadar 40 dakika geçer. 40 \"forty\", 14 ise \"fourteen\" diye yazılır; bu iki sayı sık karıştırılır."
+  },
+  {
+    "id": "ing-5-3-01",
+    "unit": "ing-5-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "We see with our _____.",
+    "choices": [
+      "ears",
+      "eyes",
+      "hands",
+      "feet"
+    ],
+    "answer": 1,
+    "explanation": "\"See\" görmek demektir; gözlerimizle (eyes) görürüz. \"Ears\" kulaklar, \"hands\" eller, \"feet\" ayaklardır."
+  },
+  {
+    "id": "ing-5-3-02",
+    "unit": "ing-5-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "It is very cold today. Put on your _____.",
+    "choices": [
+      "shorts",
+      "sandals",
+      "coat",
+      "T-shirt"
+    ],
+    "answer": 2,
+    "explanation": "\"Cold\" soğuk demektir. Soğuk havada mont ya da kaban (coat) giyilir. Şort, sandalet ve tişört sıcak hava giysileridir."
+  },
+  {
+    "id": "ing-5-3-03",
+    "unit": "ing-5-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "We wear gloves on our feet.",
+    "answer": false,
+    "explanation": "\"Gloves\" eldiven demektir ve ellere (hands) giyilir. Ayaklara (feet) çorap (socks) ve ayakkabı (shoes) giyilir."
+  },
+  {
+    "id": "ing-5-3-04",
+    "unit": "ing-5-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Mert _____ up at seven o'clock every morning.",
+    "choices": [
+      "gets",
+      "get",
+      "getting",
+      "is get"
+    ],
+    "answer": 0,
+    "explanation": "Geniş zamanda (simple present) özne he, she ya da it ise fiile -s eklenir: Mert gets up. \"Every morning\" her sabah yapılan bir işi gösterir."
+  },
+  {
+    "id": "ing-5-3-05",
+    "unit": "ing-5-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "My sister has got long, _____ hair.",
+    "choices": [
+      "tall",
+      "slim",
+      "old",
+      "curly"
+    ],
+    "answer": 3,
+    "explanation": "Saçı anlatırken \"curly\" (kıvırcık), \"straight\" (düz) ve \"wavy\" (dalgalı) sıfatları kullanılır. \"Tall\" ve \"slim\" boyu ve vücudu anlatır."
+  },
+  {
+    "id": "ing-5-3-06",
+    "unit": "ing-5-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"He have breakfast at eight\" is a correct sentence.",
+    "answer": false,
+    "explanation": "Özne \"he\" olduğunda \"have\" fiili \"has\" olur. Doğru cümle: He has breakfast at eight (Sekizde kahvaltı eder)."
+  },
+  {
+    "id": "ing-5-3-07",
+    "unit": "ing-5-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Selin: What time do you go to bed? Can: _____",
+    "choices": [
+      "I go to school by bus.",
+      "I go to bed at ten o'clock.",
+      "Yes, I do.",
+      "I get up at ten o'clock."
+    ],
+    "answer": 1,
+    "explanation": "\"What time do you go to bed?\" saat kaçta yatarsın demektir. Cevapta yatma saati söylenir: I go to bed at ten o'clock. \"Get up\" ise kalkmak demektir."
+  },
+  {
+    "id": "ing-5-4-01",
+    "unit": "ing-5-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "My mother's brother is my _____.",
+    "choices": [
+      "cousin",
+      "grandfather",
+      "uncle",
+      "nephew"
+    ],
+    "answer": 2,
+    "explanation": "Annemizin ya da babamızın erkek kardeşine İngilizcede \"uncle\" denir. Bu kelime hem dayı hem amca anlamına gelir."
+  },
+  {
+    "id": "ing-5-4-02",
+    "unit": "ing-5-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "My father's mother is my _____.",
+    "choices": [
+      "grandmother",
+      "aunt",
+      "sister",
+      "cousin"
+    ],
+    "answer": 0,
+    "explanation": "Babamızın ya da annemizin annesi \"grandmother\" olur. Bu kelime hem babaanne hem anneanne demektir."
+  },
+  {
+    "id": "ing-5-4-03",
+    "unit": "ing-5-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Your aunt's son is your cousin.",
+    "answer": true,
+    "explanation": "\"Aunt\" teyze ya da hala, \"son\" erkek çocuk demektir. Teyzemizin ya da halamızın çocuğu kuzenimizdir (cousin)."
+  },
+  {
+    "id": "ing-5-4-04",
+    "unit": "ing-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "My father _____ fishing at weekends.",
+    "choices": [
+      "go",
+      "going",
+      "gone",
+      "goes"
+    ],
+    "answer": 3,
+    "explanation": "Özne \"my father\" (he) olduğu için fiile -es eklenir: goes. \"Go fishing\" balık tutmaya gitmek demektir."
+  },
+  {
+    "id": "ing-5-4-05",
+    "unit": "ing-5-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Zeynep: Does your brother like playing chess? Emre: _____",
+    "choices": [
+      "Yes, he do.",
+      "Yes, he does.",
+      "Yes, he is.",
+      "No, he don't."
+    ],
+    "answer": 1,
+    "explanation": "\"Does ...?\" ile başlayan sorulara \"Yes, he does\" ya da \"No, he doesn't\" diye kısa cevap verilir."
+  },
+  {
+    "id": "ing-5-4-06",
+    "unit": "ing-5-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"I enjoy reading books\" means \"Kitap okumaktan hoşlanmam\".",
+    "answer": false,
+    "explanation": "\"Enjoy\" hoşlanmak, keyif almak demektir. Cümle olumludur: Kitap okumaktan hoşlanırım."
+  },
+  {
+    "id": "ing-5-4-07",
+    "unit": "ing-5-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "My mum loves cooking, but she _____ like washing the dishes.",
+    "choices": [
+      "don't",
+      "isn't",
+      "doesn't",
+      "aren't"
+    ],
+    "answer": 2,
+    "explanation": "\"But\" (ama) zıtlık bildirir, bu yüzden ikinci bölüm olumsuzdur. Özne \"she\" olduğunda olumsuzluk \"doesn't\" ile yapılır."
+  },
+  {
+    "id": "ing-5-5-01",
+    "unit": "ing-5-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "You can buy bread at the _____.",
+    "choices": [
+      "bakery",
+      "bank",
+      "library",
+      "museum"
+    ],
+    "answer": 0,
+    "explanation": "\"Bakery\" fırın demektir; ekmek (bread) fırından alınır. \"Bank\" banka, \"library\" kütüphane, \"museum\" müzedir."
+  },
+  {
+    "id": "ing-5-5-02",
+    "unit": "ing-5-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Where can you see a doctor?",
+    "choices": [
+      "At the cinema",
+      "At the post office",
+      "At the bakery",
+      "At the hospital"
+    ],
+    "answer": 3,
+    "explanation": "Doktorlar hastanede (hospital) çalışır. \"See a doctor\" doktora görünmek demektir."
+  },
+  {
+    "id": "ing-5-5-03",
+    "unit": "ing-5-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "We go to the pharmacy to buy medicine.",
+    "answer": true,
+    "explanation": "\"Pharmacy\" eczane, \"medicine\" ilaç demektir. İlaçlar eczaneden alınır."
+  },
+  {
+    "id": "ing-5-5-04",
+    "unit": "ing-5-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "The bank is _____ the post office and the school. (Banka, postane ile okulun arasında.)",
+    "choices": [
+      "under",
+      "between",
+      "on",
+      "in"
+    ],
+    "answer": 1,
+    "explanation": "\"Between\" arasında demektir ve iki şeyin ortasındaki yeri gösterir: between the post office and the school."
+  },
+  {
+    "id": "ing-5-5-05",
+    "unit": "ing-5-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Tourist: Excuse me, how can I get to the museum? Man: _____",
+    "choices": [
+      "It's ten o'clock.",
+      "Yes, I can.",
+      "Go straight ahead and turn left.",
+      "I like museums."
+    ],
+    "answer": 2,
+    "explanation": "\"How can I get to ...?\" yol sormak için kullanılır. Cevapta yol tarif edilir: Go straight ahead and turn left (Düz git ve sola dön)."
+  },
+  {
+    "id": "ing-5-5-06",
+    "unit": "ing-5-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Turn right\" means \"Sola dön\".",
+    "answer": false,
+    "explanation": "\"Right\" sağ, \"left\" sol demektir. \"Turn right\" sağa dön, \"turn left\" sola dön anlamına gelir."
+  },
+  {
+    "id": "ing-5-5-07",
+    "unit": "ing-5-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "The school is opposite the library. Which sentence is also true?",
+    "choices": [
+      "The library is opposite the school.",
+      "The library is behind the school.",
+      "The library is in the school.",
+      "The library is under the school."
+    ],
+    "answer": 0,
+    "explanation": "\"Opposite\" karşısında demektir. Okul kütüphanenin karşısındaysa kütüphane de okulun karşısındadır."
+  },
+  {
+    "id": "ing-5-6-01",
+    "unit": "ing-5-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Which one is a drink?",
+    "choices": [
+      "Cheese",
+      "Lemonade",
+      "Rice",
+      "Chicken"
+    ],
+    "answer": 1,
+    "explanation": "\"Drink\" içecek demektir. \"Lemonade\" limonatadır. \"Cheese\" peynir, \"rice\" pirinç ya da pilav, \"chicken\" tavuktur; bunlar yiyecektir."
+  },
+  {
+    "id": "ing-5-6-02",
+    "unit": "ing-5-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "I'm thirsty. I want some _____.",
+    "choices": [
+      "bread",
+      "cheese",
+      "chicken",
+      "water"
+    ],
+    "answer": 3,
+    "explanation": "\"Thirsty\" susamış demektir. Susayan kişi su (water) ister. Acıkan kişi ise \"I'm hungry\" der."
+  },
+  {
+    "id": "ing-5-6-03",
+    "unit": "ing-5-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Carrots and potatoes are vegetables.",
+    "answer": true,
+    "explanation": "\"Carrot\" havuç, \"potato\" patates demektir. İkisi de sebzedir (vegetables)."
+  },
+  {
+    "id": "ing-5-6-04",
+    "unit": "ing-5-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Waiter: What would you like to eat? Customer: _____",
+    "choices": [
+      "I'm fine, thank you.",
+      "Here you are.",
+      "I'd like a chicken sandwich, please.",
+      "You're welcome."
+    ],
+    "answer": 2,
+    "explanation": "\"What would you like?\" ne istersiniz demektir. Sipariş verirken \"I'd like ..., please\" (... istiyorum, lütfen) kalıbı kullanılır."
+  },
+  {
+    "id": "ing-5-6-05",
+    "unit": "ing-5-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Waiter: _____ Customer: Yes, please. An orange juice.",
+    "choices": [
+      "Would you like anything to drink?",
+      "Where is the restaurant?",
+      "Do you like cooking?",
+      "What is your favourite food?"
+    ],
+    "answer": 0,
+    "explanation": "Müşteri portakal suyu istediğine göre garson içecek sormuştur: Would you like anything to drink? (İçecek bir şey ister misiniz?)"
+  },
+  {
+    "id": "ing-5-6-06",
+    "unit": "ing-5-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "A customer says \"Can I have the menu, please?\" to pay for the meal.",
+    "answer": false,
+    "explanation": "\"Can I have the menu, please?\" menüyü istemek için söylenir. Hesabı istemek için \"Can I have the bill, please?\" denir."
+  },
+  {
+    "id": "ing-5-6-07",
+    "unit": "ing-5-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Which sentence is correct?",
+    "choices": [
+      "I likes fish, but I don't like meat.",
+      "I like fish, but I don't like meat.",
+      "I like fish, but I doesn't like meat.",
+      "I am like fish, but I not like meat."
+    ],
+    "answer": 1,
+    "explanation": "\"I\" öznesiyle fiil yalın kalır (like) ve olumsuzluk \"don't\" ile yapılır: I like fish, but I don't like meat (Balık severim ama et sevmem)."
+  },
+  {
+    "id": "ing-5-7-01",
+    "unit": "ing-5-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Which animal lives in the sea?",
+    "choices": [
+      "Giraffe",
+      "Camel",
+      "Dolphin",
+      "Monkey"
+    ],
+    "answer": 2,
+    "explanation": "\"Dolphin\" yunus demektir ve denizde (sea) yaşar. Zürafa (giraffe), deve (camel) ve maymun (monkey) karada yaşar."
+  },
+  {
+    "id": "ing-5-7-02",
+    "unit": "ing-5-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "A _____ has got a very long neck.",
+    "choices": [
+      "snake",
+      "bear",
+      "rabbit",
+      "giraffe"
+    ],
+    "answer": 3,
+    "explanation": "\"Long neck\" uzun boyun demektir. Uzun boynuyla tanınan hayvan zürafadır (giraffe)."
+  },
+  {
+    "id": "ing-5-7-03",
+    "unit": "ing-5-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Lions are wild animals.",
+    "answer": true,
+    "explanation": "\"Wild animals\" yabani hayvanlar demektir. Aslan (lion) doğada yaşayan yabani bir hayvandır; kedi ve köpek ise evcil (pet) hayvanlardır."
+  },
+  {
+    "id": "ing-5-7-04",
+    "unit": "ing-5-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Camels live in the _____.",
+    "choices": [
+      "desert",
+      "ocean",
+      "river",
+      "rainforest"
+    ],
+    "answer": 0,
+    "explanation": "\"Desert\" çöl demektir. Develer (camels) çöllerde yaşar ve uzun süre susuz kalabilir."
+  },
+  {
+    "id": "ing-5-7-05",
+    "unit": "ing-5-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Penguins can swim, but they _____ fly.",
+    "choices": [
+      "can",
+      "can't",
+      "are",
+      "do"
+    ],
+    "answer": 1,
+    "explanation": "\"Can\" yapabilmeyi, \"can't\" yapamamayı anlatır. Penguenler yüzebilir ama uçamaz: they can't fly."
+  },
+  {
+    "id": "ing-5-7-06",
+    "unit": "ing-5-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Polar bears live in hot deserts.",
+    "answer": false,
+    "explanation": "\"Polar bear\" kutup ayısıdır ve soğuk kutup bölgelerinde yaşar. \"Hot desert\" sıcak çöl demektir."
+  },
+  {
+    "id": "ing-5-7-07",
+    "unit": "ing-5-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "It is a very big bird. It can't fly, but it can run very fast. What is it?",
+    "choices": [
+      "An eagle",
+      "A parrot",
+      "An ostrich",
+      "An owl"
+    ],
+    "answer": 2,
+    "explanation": "Uçamayan ama çok hızlı koşan büyük kuş devekuşudur (ostrich). Kartal (eagle), papağan (parrot) ve baykuş (owl) uçabilir."
+  },
+  {
+    "id": "ing-5-8-01",
+    "unit": "ing-5-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "We live on planet _____.",
+    "choices": [
+      "Mars",
+      "Earth",
+      "Moon",
+      "Sun"
+    ],
+    "answer": 1,
+    "explanation": "Üzerinde yaşadığımız gezegen Dünya'dır (Earth). \"Moon\" Ay, \"Sun\" Güneş demektir; bunlar gezegen değildir."
+  },
+  {
+    "id": "ing-5-8-02",
+    "unit": "ing-5-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "The _____ gives us light and heat.",
+    "choices": [
+      "Sun",
+      "Moon",
+      "sea",
+      "cloud"
+    ],
+    "answer": 0,
+    "explanation": "\"Light\" ışık, \"heat\" ısı demektir. Dünya'ya ışık ve ısı veren Güneş'tir (the Sun)."
+  },
+  {
+    "id": "ing-5-8-03",
+    "unit": "ing-5-8",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "The Moon is bigger than the Earth.",
+    "answer": false,
+    "explanation": "Ay (the Moon) Dünya'dan (the Earth) küçüktür. \"Bigger than\" -den daha büyük demektir; doğrusu: The Earth is bigger than the Moon."
+  },
+  {
+    "id": "ing-5-8-04",
+    "unit": "ing-5-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "In summer, we go to the seaside and _____ in the sea.",
+    "choices": [
+      "ski",
+      "skate",
+      "climb",
+      "swim"
+    ],
+    "answer": 3,
+    "explanation": "\"Seaside\" deniz kıyısı demektir. Denizde yüzülür (swim). \"Ski\" kayak yapmak, \"skate\" paten kaymak, \"climb\" tırmanmaktır."
+  },
+  {
+    "id": "ing-5-8-05",
+    "unit": "ing-5-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Deniz: Where do you go on holiday? Ece: _____",
+    "choices": [
+      "I go in July.",
+      "I go by car.",
+      "I go to my grandparents' village.",
+      "I go with my family."
+    ],
+    "answer": 2,
+    "explanation": "\"Where\" nereye diye sorar, cevapta yer söylenir: my grandparents' village (dedemlerin köyü). Öteki cevaplar zamanı, aracı ve kiminle gidildiğini söyler."
+  },
+  {
+    "id": "ing-5-8-06",
+    "unit": "ing-5-8",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "We should turn off the lights to save energy.",
+    "answer": true,
+    "explanation": "\"Turn off the lights\" ışıkları kapatmak, \"save energy\" enerji tasarrufu yapmak demektir. \"Should\" yapılması iyi olan şeyi anlatır."
+  },
+  {
+    "id": "ing-5-8-07",
+    "unit": "ing-5-8",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Which one is good for our planet?",
+    "choices": [
+      "Cutting down trees",
+      "Planting trees",
+      "Wasting water",
+      "Throwing rubbish into the sea"
+    ],
+    "answer": 1,
+    "explanation": "\"Planting trees\" ağaç dikmek demektir ve gezegenimize yararlıdır. Ağaç kesmek, suyu boşa harcamak ve denize çöp atmak doğaya zarar verir."
+  }
+]

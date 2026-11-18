@@ -1,0 +1,489 @@
+[
+  {
+    "kind": "pairs",
+    "id": "ing-5-1-ulkeler",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "People from {ulke} are _____.",
+        "answer": "milliyet"
+      },
+      {
+        "prompt": "{milliyet} people are from _____.",
+        "answer": "ulke"
+      }
+    ],
+    "statement": {
+      "text": "People from {ulke} are {milliyet}.",
+      "swap": "milliyet"
+    },
+    "explanation": "Ülke adı \"{ulke}\", milliyet sıfatı \"{milliyet}\" olur: People from {ulke} are {milliyet}.",
+    "items": [
+      {
+        "id": "turkiye",
+        "ulke": "Türkiye",
+        "ulkeTr": "Türkiye",
+        "milliyet": "Turkish"
+      },
+      {
+        "id": "germany",
+        "ulke": "Germany",
+        "ulkeTr": "Almanya",
+        "milliyet": "German"
+      },
+      {
+        "id": "france",
+        "ulke": "France",
+        "ulkeTr": "Fransa",
+        "milliyet": "French"
+      },
+      {
+        "id": "spain",
+        "ulke": "Spain",
+        "ulkeTr": "İspanya",
+        "milliyet": "Spanish"
+      },
+      {
+        "id": "japan",
+        "ulke": "Japan",
+        "ulkeTr": "Japonya",
+        "milliyet": "Japanese"
+      },
+      {
+        "id": "italy",
+        "ulke": "Italy",
+        "ulkeTr": "İtalya",
+        "milliyet": "Italian"
+      },
+      {
+        "id": "china",
+        "ulke": "China",
+        "ulkeTr": "Çin",
+        "milliyet": "Chinese"
+      },
+      {
+        "id": "britain",
+        "ulke": "Britain",
+        "ulkeTr": "Britanya",
+        "milliyet": "British"
+      }
+    ],
+    "unit": "ing-5-1"
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-5-2-dersler",
+    "unit": "ing-5-2",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "maths",
+        "en": "Maths",
+        "tr": "matematik",
+        "enSik": "Maths",
+        "trSik": "Matematik"
+      },
+      {
+        "id": "science",
+        "en": "Science",
+        "tr": "fen bilimleri",
+        "enSik": "Science",
+        "trSik": "Fen bilimleri"
+      },
+      {
+        "id": "history",
+        "en": "History",
+        "tr": "tarih",
+        "enSik": "History",
+        "trSik": "Tarih"
+      },
+      {
+        "id": "geography",
+        "en": "Geography",
+        "tr": "coğrafya",
+        "enSik": "Geography",
+        "trSik": "Coğrafya"
+      },
+      {
+        "id": "art",
+        "en": "Art",
+        "tr": "görsel sanatlar",
+        "enSik": "Art",
+        "trSik": "Görsel sanatlar"
+      },
+      {
+        "id": "music",
+        "en": "Music",
+        "tr": "müzik",
+        "enSik": "Music",
+        "trSik": "Müzik"
+      },
+      {
+        "id": "pe",
+        "en": "Physical Education",
+        "tr": "beden eğitimi",
+        "enSik": "Physical Education",
+        "trSik": "Beden eğitimi",
+        "not": "Kısaca P.E. diye yazılır."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-5-3-vucut",
+    "unit": "ing-5-3",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "head",
+        "en": "head",
+        "tr": "baş",
+        "enSik": "Head",
+        "trSik": "Baş"
+      },
+      {
+        "id": "shoulder",
+        "en": "shoulder",
+        "tr": "omuz",
+        "enSik": "Shoulder",
+        "trSik": "Omuz"
+      },
+      {
+        "id": "knee",
+        "en": "knee",
+        "tr": "diz",
+        "enSik": "Knee",
+        "trSik": "Diz"
+      },
+      {
+        "id": "finger",
+        "en": "finger",
+        "tr": "parmak",
+        "enSik": "Finger",
+        "trSik": "Parmak"
+      },
+      {
+        "id": "tooth",
+        "en": "tooth",
+        "tr": "diş",
+        "enSik": "Tooth",
+        "trSik": "Diş",
+        "not": "Çoğulu düzensizdir: teeth."
+      },
+      {
+        "id": "stomach",
+        "en": "stomach",
+        "tr": "mide",
+        "enSik": "Stomach",
+        "trSik": "Mide"
+      },
+      {
+        "id": "neck",
+        "en": "neck",
+        "tr": "boyun",
+        "enSik": "Neck",
+        "trSik": "Boyun"
+      },
+      {
+        "id": "arm",
+        "en": "arm",
+        "tr": "kol",
+        "enSik": "Arm",
+        "trSik": "Kol"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-5-5-yerler",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "Where can you {eylem}?",
+        "answer": "yerSik"
+      },
+      {
+        "prompt": "What can you do {yer}?",
+        "answer": "eylemSik"
+      }
+    ],
+    "statement": {
+      "text": "You can {eylem} {yer}.",
+      "swap": "yer"
+    },
+    "explanation": "\"{place}\" {tr} demektir: You can {eylem} {yer}.",
+    "items": [
+      {
+        "id": "bakery",
+        "place": "Bakery",
+        "tr": "fırın",
+        "eylem": "buy bread",
+        "eylemSik": "Buy bread",
+        "yer": "at the bakery",
+        "yerSik": "At the bakery"
+      },
+      {
+        "id": "library",
+        "place": "Library",
+        "tr": "kütüphane",
+        "eylem": "borrow books",
+        "eylemSik": "Borrow books",
+        "yer": "at the library",
+        "yerSik": "At the library"
+      },
+      {
+        "id": "pharmacy",
+        "place": "Pharmacy",
+        "tr": "eczane",
+        "eylem": "buy medicine",
+        "eylemSik": "Buy medicine",
+        "yer": "at the pharmacy",
+        "yerSik": "At the pharmacy"
+      },
+      {
+        "id": "cinema",
+        "place": "Cinema",
+        "tr": "sinema",
+        "eylem": "watch a film",
+        "eylemSik": "Watch a film",
+        "yer": "at the cinema",
+        "yerSik": "At the cinema"
+      },
+      {
+        "id": "post-office",
+        "place": "Post office",
+        "tr": "postane",
+        "eylem": "send a letter",
+        "eylemSik": "Send a letter",
+        "yer": "at the post office",
+        "yerSik": "At the post office"
+      },
+      {
+        "id": "bus-stop",
+        "place": "Bus stop",
+        "tr": "otobüs durağı",
+        "eylem": "wait for the bus",
+        "eylemSik": "Wait for the bus",
+        "yer": "at the bus stop",
+        "yerSik": "At the bus stop"
+      },
+      {
+        "id": "swimming-pool",
+        "place": "Swimming pool",
+        "tr": "yüzme havuzu",
+        "eylem": "swim",
+        "eylemSik": "Swim",
+        "yer": "at the swimming pool",
+        "yerSik": "At the swimming pool"
+      }
+    ],
+    "unit": "ing-5-5"
+  },
+  {
+    "kind": "list",
+    "id": "ing-5-6-meyveler",
+    "difficulty": 1,
+    "positive": "Which word is the name of a fruit?",
+    "negative": "Which word is not the name of a fruit?",
+    "statement": "The word \"{item}\" is the name of a fruit.",
+    "explanation": "\"Fruit\" meyve demektir. Bu kümedeki meyveler: {members}. Öteki kelimeler sebze ya da başka yiyecek adlarıdır.",
+    "members": [
+      "apple",
+      "banana",
+      "orange",
+      "strawberry",
+      "watermelon",
+      "cherry"
+    ],
+    "nonMembers": [
+      "carrot",
+      "potato",
+      "onion",
+      "cheese",
+      "bread",
+      "chicken"
+    ],
+    "unit": "ing-5-6"
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-5-7-hayvanlar",
+    "unit": "ing-5-7",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "giraffe",
+        "en": "giraffe",
+        "tr": "zürafa",
+        "enSik": "Giraffe",
+        "trSik": "Zürafa"
+      },
+      {
+        "id": "elephant",
+        "en": "elephant",
+        "tr": "fil",
+        "enSik": "Elephant",
+        "trSik": "Fil"
+      },
+      {
+        "id": "monkey",
+        "en": "monkey",
+        "tr": "maymun",
+        "enSik": "Monkey",
+        "trSik": "Maymun"
+      },
+      {
+        "id": "snake",
+        "en": "snake",
+        "tr": "yılan",
+        "enSik": "Snake",
+        "trSik": "Yılan"
+      },
+      {
+        "id": "bear",
+        "en": "bear",
+        "tr": "ayı",
+        "enSik": "Bear",
+        "trSik": "Ayı"
+      },
+      {
+        "id": "eagle",
+        "en": "eagle",
+        "tr": "kartal",
+        "enSik": "Eagle",
+        "trSik": "Kartal"
+      },
+      {
+        "id": "wolf",
+        "en": "wolf",
+        "tr": "kurt",
+        "enSik": "Wolf",
+        "trSik": "Kurt"
+      },
+      {
+        "id": "whale",
+        "en": "whale",
+        "tr": "balina",
+        "enSik": "Whale",
+        "trSik": "Balina"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-5-7-yasam-alanlari",
+    "unit": "ing-5-7",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "desert",
+        "en": "desert",
+        "tr": "çöl",
+        "enSik": "Desert",
+        "trSik": "Çöl"
+      },
+      {
+        "id": "forest",
+        "en": "forest",
+        "tr": "orman",
+        "enSik": "Forest",
+        "trSik": "Orman"
+      },
+      {
+        "id": "ocean",
+        "en": "ocean",
+        "tr": "okyanus",
+        "enSik": "Ocean",
+        "trSik": "Okyanus"
+      },
+      {
+        "id": "river",
+        "en": "river",
+        "tr": "nehir",
+        "enSik": "River",
+        "trSik": "Nehir"
+      },
+      {
+        "id": "mountain",
+        "en": "mountain",
+        "tr": "dağ",
+        "enSik": "Mountain",
+        "trSik": "Dağ"
+      },
+      {
+        "id": "lake",
+        "en": "lake",
+        "tr": "göl",
+        "enSik": "Lake",
+        "trSik": "Göl"
+      },
+      {
+        "id": "cave",
+        "en": "cave",
+        "tr": "mağara",
+        "enSik": "Cave",
+        "trSik": "Mağara"
+      }
+    ]
+  }
+]

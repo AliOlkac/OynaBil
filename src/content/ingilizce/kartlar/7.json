@@ -1,0 +1,414 @@
+[
+  {
+    "kind": "pairs",
+    "id": "ing-7-6-ifadeler",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{ifade}\" diyen kişi ne yapmaktadır?",
+        "answer": "islev"
+      },
+      {
+        "prompt": "Hangi cümle {amac} için kullanılır?",
+        "answer": "ifade"
+      }
+    ],
+    "statement": {
+      "text": "\"{ifade}\" cümlesi {amac} için kullanılır.",
+      "swap": "amac"
+    },
+    "explanation": "\"{ifade}\" cümlesi {amac} için kullanılır. Türkçesi: {tr}",
+    "items": [
+      {
+        "id": "offer",
+        "ifade": "Would you like some tea?",
+        "islev": "İkramda bulunuyor",
+        "amac": "ikramda bulunmak",
+        "tr": "Biraz çay ister misiniz?"
+      },
+      {
+        "id": "permission",
+        "ifade": "Can I borrow your pen?",
+        "islev": "İzin istiyor",
+        "amac": "izin istemek",
+        "tr": "Kalemini ödünç alabilir miyim?"
+      },
+      {
+        "id": "apology",
+        "ifade": "I'm sorry I'm late.",
+        "islev": "Özür diliyor",
+        "amac": "özür dilemek",
+        "tr": "Geç kaldığım için üzgünüm."
+      },
+      {
+        "id": "suggestion",
+        "ifade": "Why don't we go to the cinema?",
+        "islev": "Öneride bulunuyor",
+        "amac": "öneride bulunmak",
+        "tr": "Neden sinemaya gitmiyoruz?"
+      },
+      {
+        "id": "thanks",
+        "ifade": "Thank you very much.",
+        "islev": "Teşekkür ediyor",
+        "amac": "teşekkür etmek",
+        "tr": "Çok teşekkür ederim."
+      },
+      {
+        "id": "advice",
+        "ifade": "You should see a doctor.",
+        "islev": "Tavsiye veriyor",
+        "amac": "tavsiye vermek",
+        "tr": "Doktora görünmelisin."
+      }
+    ],
+    "unit": "ing-7-6"
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-7-3-kisilik",
+    "unit": "ing-7-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "generous",
+        "en": "generous",
+        "tr": "cömert",
+        "enSik": "Generous",
+        "trSik": "Cömert"
+      },
+      {
+        "id": "stubborn",
+        "en": "stubborn",
+        "tr": "inatçı",
+        "enSik": "Stubborn",
+        "trSik": "İnatçı"
+      },
+      {
+        "id": "honest",
+        "en": "honest",
+        "tr": "dürüst",
+        "enSik": "Honest",
+        "trSik": "Dürüst"
+      },
+      {
+        "id": "shy",
+        "en": "shy",
+        "tr": "utangaç",
+        "enSik": "Shy",
+        "trSik": "Utangaç"
+      },
+      {
+        "id": "hardworking",
+        "en": "hardworking",
+        "tr": "çalışkan",
+        "enSik": "Hardworking",
+        "trSik": "Çalışkan"
+      },
+      {
+        "id": "lazy",
+        "en": "lazy",
+        "tr": "tembel",
+        "enSik": "Lazy",
+        "trSik": "Tembel"
+      },
+      {
+        "id": "clumsy",
+        "en": "clumsy",
+        "tr": "sakar",
+        "enSik": "Clumsy",
+        "trSik": "Sakar"
+      },
+      {
+        "id": "selfish",
+        "en": "selfish",
+        "tr": "bencil",
+        "enSik": "Selfish",
+        "trSik": "Bencil"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-7-4-fiiller",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{v1}\" fiilinin geçmiş zaman (past simple) hâli hangisidir?",
+        "answer": "v2"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen geçmiş zaman fiili hangisidir?",
+        "answer": "v2"
+      }
+    ],
+    "statement": {
+      "text": "\"{v1}\" fiilinin geçmiş zaman hâli \"{v2}\" biçimindedir.",
+      "swap": "v2"
+    },
+    "explanation": "\"{v1}\" düzensiz bir fiildir; geçmiş zaman hâli \"{v2}\" ({tr}) olur.",
+    "distractors": {
+      "v2": [
+        "taked",
+        "writed",
+        "winned",
+        "maked",
+        "gived",
+        "finded"
+      ]
+    },
+    "items": [
+      {
+        "id": "take",
+        "v1": "take",
+        "v2": "took",
+        "tr": "aldı"
+      },
+      {
+        "id": "write",
+        "v1": "write",
+        "v2": "wrote",
+        "tr": "yazdı"
+      },
+      {
+        "id": "win",
+        "v1": "win",
+        "v2": "won",
+        "tr": "kazandı"
+      },
+      {
+        "id": "make",
+        "v1": "make",
+        "v2": "made",
+        "tr": "yaptı"
+      },
+      {
+        "id": "give",
+        "v1": "give",
+        "v2": "gave",
+        "tr": "verdi"
+      },
+      {
+        "id": "find",
+        "v1": "find",
+        "v2": "found",
+        "tr": "buldu"
+      },
+      {
+        "id": "meet",
+        "v1": "meet",
+        "v2": "met",
+        "tr": "tanıştı"
+      },
+      {
+        "id": "begin",
+        "v1": "begin",
+        "v2": "began",
+        "tr": "başladı"
+      }
+    ],
+    "unit": "ing-7-4"
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-7-5-ustunluk",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{adj}\" sıfatının üstünlük (superlative) hâli hangisidir?",
+        "answer": "sup"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen ifade hangisidir?",
+        "answer": "sup"
+      }
+    ],
+    "statement": {
+      "text": "\"{adj}\" sıfatının üstünlük hâli \"{sup}\" biçimindedir.",
+      "swap": "sup"
+    },
+    "explanation": "\"{adj}\" sıfatının üstünlük hâli \"{sup}\" ({tr}) olur. {kural}",
+    "distractors": {
+      "sup": [
+        "the goodest",
+        "the baddest",
+        "the most big",
+        "the beautifulest",
+        "the dangerousest",
+        "the most tall"
+      ]
+    },
+    "items": [
+      {
+        "id": "tall",
+        "adj": "tall",
+        "sup": "the tallest",
+        "tr": "en uzun boylu",
+        "kural": "Kısa sıfatlar \"the\" ve -est alır."
+      },
+      {
+        "id": "big",
+        "adj": "big",
+        "sup": "the biggest",
+        "tr": "en büyük",
+        "kural": "Kısa sıfatlar -est alır; \"big\" sözcüğünde son harf çift yazılır."
+      },
+      {
+        "id": "good",
+        "adj": "good",
+        "sup": "the best",
+        "tr": "en iyi",
+        "kural": "Bu sıfat düzensizdir."
+      },
+      {
+        "id": "bad",
+        "adj": "bad",
+        "sup": "the worst",
+        "tr": "en kötü",
+        "kural": "Bu sıfat düzensizdir."
+      },
+      {
+        "id": "beautiful",
+        "adj": "beautiful",
+        "sup": "the most beautiful",
+        "tr": "en güzel",
+        "kural": "Uzun sıfatların önüne \"the most\" gelir."
+      },
+      {
+        "id": "fast",
+        "adj": "fast",
+        "sup": "the fastest",
+        "tr": "en hızlı",
+        "kural": "Kısa sıfatlar \"the\" ve -est alır."
+      },
+      {
+        "id": "heavy",
+        "adj": "heavy",
+        "sup": "the heaviest",
+        "tr": "en ağır",
+        "kural": "-y ile biten sıfatlarda y düşer, -iest gelir."
+      },
+      {
+        "id": "dangerous",
+        "adj": "dangerous",
+        "sup": "the most dangerous",
+        "tr": "en tehlikeli",
+        "kural": "Uzun sıfatların önüne \"the most\" gelir."
+      }
+    ],
+    "unit": "ing-7-5"
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-7-7-cevre",
+    "unit": "ing-7-7",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{en}\" ifadesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce ifade hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" ifadesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "pollution",
+        "en": "pollution",
+        "tr": "kirlilik",
+        "enSik": "Pollution",
+        "trSik": "Kirlilik"
+      },
+      {
+        "id": "recycling",
+        "en": "recycling",
+        "tr": "geri dönüşüm",
+        "enSik": "Recycling",
+        "trSik": "Geri dönüşüm"
+      },
+      {
+        "id": "global-warming",
+        "en": "global warming",
+        "tr": "küresel ısınma",
+        "enSik": "Global warming",
+        "trSik": "Küresel ısınma"
+      },
+      {
+        "id": "rubbish",
+        "en": "rubbish",
+        "tr": "çöp",
+        "enSik": "Rubbish",
+        "trSik": "Çöp"
+      },
+      {
+        "id": "deforestation",
+        "en": "deforestation",
+        "tr": "ormansızlaşma",
+        "enSik": "Deforestation",
+        "trSik": "Ormansızlaşma"
+      },
+      {
+        "id": "renewable-energy",
+        "en": "renewable energy",
+        "tr": "yenilenebilir enerji",
+        "enSik": "Renewable energy",
+        "trSik": "Yenilenebilir enerji"
+      },
+      {
+        "id": "habitat",
+        "en": "habitat",
+        "tr": "yaşam alanı",
+        "enSik": "Habitat",
+        "trSik": "Yaşam alanı"
+      }
+    ]
+  },
+  {
+    "kind": "list",
+    "id": "ing-7-5-sayilamayan",
+    "difficulty": 2,
+    "positive": "Which word is an uncountable noun (sayılamayan ad)?",
+    "negative": "Which word is a countable noun (sayılabilen ad)?",
+    "statement": "\"{item}\" is an uncountable noun.",
+    "explanation": "Sayılamayan adlar çoğul eki almaz ve \"much\", \"a little\" ile kullanılır. Bu kümedeki sayılamayan adlar: {members}. Öteki adlar sayılabilir.",
+    "members": [
+      "water",
+      "milk",
+      "traffic",
+      "money",
+      "bread",
+      "sugar"
+    ],
+    "nonMembers": [
+      "car",
+      "shop",
+      "apple",
+      "street",
+      "bus",
+      "house"
+    ],
+    "unit": "ing-7-5"
+  }
+]

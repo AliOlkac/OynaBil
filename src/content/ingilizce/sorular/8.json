@@ -1,0 +1,923 @@
+[
+  {
+    "id": "ing-8-1-01",
+    "unit": "ing-8-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ali: Would you like to come to my birthday party? Can: _____ What time does it start?",
+    "choices": [
+      "I'm sorry, I can't.",
+      "Sure, I'd love to.",
+      "No, thanks.",
+      "I'm afraid I'm busy."
+    ],
+    "answer": 1,
+    "explanation": "Can partinin saatini sorduğuna göre daveti kabul ediyor (accepting). Kabul ederken \"Sure, I'd love to\" (Elbette, çok isterim) denir."
+  },
+  {
+    "id": "ing-8-1-02",
+    "unit": "ing-8-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"I'm sorry, but I can't\" is used to accept an invitation.",
+    "answer": false,
+    "explanation": "\"I'm sorry, but I can't\" (Üzgünüm ama gelemem) daveti reddetmek (refusing) için kullanılır. Kabul etmek için \"I'd love to\" ya da \"That sounds great\" denir."
+  },
+  {
+    "id": "ing-8-1-03",
+    "unit": "ing-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sue: How about going to the cinema tonight? Tim: _____ I must study for the exam.",
+    "choices": [
+      "Yeah, why not?",
+      "That sounds awesome.",
+      "I'd love to, but I can't.",
+      "Sure, see you there."
+    ],
+    "answer": 2,
+    "explanation": "Tim sınava çalışması gerektiğini söyleyerek mazeret bildiriyor. Teklifi kibarca reddetmek için \"I'd love to, but I can't\" kalıbı kullanılır."
+  },
+  {
+    "id": "ing-8-1-04",
+    "unit": "ing-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"My buddy and I get on well with each other.\" Buradaki \"get on well\" ne demektir?",
+    "choices": [
+      "İyi geçinmek",
+      "Tartışmak",
+      "Yarışmak",
+      "Tanışmak"
+    ],
+    "answer": 0,
+    "explanation": "\"Get on well with\" biriyle iyi geçinmek demektir. \"Buddy\" yakın arkadaş anlamına gelir."
+  },
+  {
+    "id": "ing-8-1-05",
+    "unit": "ing-8-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "A \"buddy\" is a close friend.",
+    "answer": true,
+    "explanation": "\"Buddy\" günlük dilde yakın arkadaş, dost demektir. \"Mate\" ve \"pal\" sözcükleri de aynı anlamda kullanılır."
+  },
+  {
+    "id": "ing-8-1-06",
+    "unit": "ing-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Real friends always back each other up. Buradaki \"back up\" ne demektir?",
+    "choices": [
+      "Eleştirmek",
+      "Unutmak",
+      "Kıskanmak",
+      "Desteklemek"
+    ],
+    "answer": 3,
+    "explanation": "\"Back up\" desteklemek, arka çıkmak demektir. Gerçek arkadaşlar zor zamanlarda birbirini destekler."
+  },
+  {
+    "id": "ing-8-1-07",
+    "unit": "ing-8-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Jane: I'm having a slumber party on Saturday. Would you like to join us? Kate: Yeah, why not? In this dialogue, Kate _____ the invitation.",
+    "choices": [
+      "refuses",
+      "accepts",
+      "makes",
+      "cancels"
+    ],
+    "answer": 1,
+    "explanation": "\"Yeah, why not?\" (Evet, neden olmasın?) bir kabul ifadesidir. Kate daveti kabul ediyor: accepts the invitation."
+  },
+  {
+    "id": "ing-8-2-01",
+    "unit": "ing-8-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"I can't stand rap music.\" Buradaki \"can't stand\" ne demektir?",
+    "choices": [
+      "Çok sevmek",
+      "Tercih etmek",
+      "Hiç hoşlanmamak",
+      "Merak etmek"
+    ],
+    "answer": 2,
+    "explanation": "\"Can't stand\" katlanamamak, hiç hoşlanmamak demektir. Sevilmeyen şeyler için \"hate\" ve \"dislike\" de kullanılır."
+  },
+  {
+    "id": "ing-8-2-02",
+    "unit": "ing-8-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Teenagers usually _____ time with their friends at weekends.",
+    "choices": [
+      "spend",
+      "do",
+      "make",
+      "take"
+    ],
+    "answer": 0,
+    "explanation": "Zaman geçirmek İngilizcede \"spend time\" kalıbıyla söylenir: spend time with friends (arkadaşlarla zaman geçirmek)."
+  },
+  {
+    "id": "ing-8-2-03",
+    "unit": "ing-8-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"I prefer tea to coffee\" means I like coffee more.",
+    "answer": false,
+    "explanation": "\"Prefer A to B\" kalıbında tercih edilen ilk söylenendir. Cümle çayı kahveye tercih ettiğini, yani çayı daha çok sevdiğini anlatır."
+  },
+  {
+    "id": "ing-8-2-04",
+    "unit": "ing-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Jack thinks classical music is unbearable, so he _____ listens to it.",
+    "choices": [
+      "always",
+      "usually",
+      "often",
+      "never"
+    ],
+    "answer": 3,
+    "explanation": "\"Unbearable\" katlanılmaz demektir. Jack klasik müziği katlanılmaz bulduğu için onu hiç dinlemez: never."
+  },
+  {
+    "id": "ing-8-2-05",
+    "unit": "ing-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Mia: What kind of music do you like? Leo: _____",
+    "choices": [
+      "I play the guitar twice a week.",
+      "I'm keen on pop music.",
+      "Yes, I do.",
+      "I never go to concerts."
+    ],
+    "answer": 1,
+    "explanation": "\"What kind of music\" ne tür müzik diye sorar. \"Be keen on\" bir şeye düşkün olmak demektir: Pop müziğe bayılırım."
+  },
+  {
+    "id": "ing-8-2-06",
+    "unit": "ing-8-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Rarely\" means \"not often\".",
+    "answer": true,
+    "explanation": "\"Rarely\" nadiren, seyrek olarak demektir. Sıklık sırası: always, usually, often, sometimes, rarely, never."
+  },
+  {
+    "id": "ing-8-2-07",
+    "unit": "ing-8-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "I prefer reading books _____ watching TV.",
+    "choices": [
+      "than",
+      "from",
+      "to",
+      "of"
+    ],
+    "answer": 2,
+    "explanation": "\"Prefer\" fiiliyle iki şey karşılaştırılırken \"to\" kullanılır: prefer reading to watching. \"Than\" ise \"would rather\" kalıbıyla kullanılır."
+  },
+  {
+    "id": "ing-8-3-01",
+    "unit": "ing-8-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "_____ the onions into small pieces with a knife.",
+    "choices": [
+      "Chop",
+      "Boil",
+      "Pour",
+      "Bake"
+    ],
+    "answer": 0,
+    "explanation": "\"Chop\" doğramak demektir; bıçakla (knife) yapılır. \"Boil\" kaynatmak, \"pour\" dökmek, \"bake\" fırında pişirmektir."
+  },
+  {
+    "id": "ing-8-3-02",
+    "unit": "ing-8-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "First, wash the tomatoes. _____, slice them. Finally, add some salt.",
+    "choices": [
+      "First",
+      "Then",
+      "Finally",
+      "Last"
+    ],
+    "answer": 1,
+    "explanation": "Tarif adımları sırayla söylenir: First (önce), then (sonra), finally (son olarak). İkinci adım için \"Then\" kullanılır."
+  },
+  {
+    "id": "ing-8-3-03",
+    "unit": "ing-8-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Peel\" means \"rendelemek\".",
+    "answer": false,
+    "explanation": "\"Peel\" kabuğunu soymak demektir: peel the potatoes. Rendelemek \"grate\" fiiliyle söylenir: grate the cheese."
+  },
+  {
+    "id": "ing-8-3-04",
+    "unit": "ing-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Put the cake in the oven and _____ it for 40 minutes.",
+    "choices": [
+      "fry",
+      "boil",
+      "chop",
+      "bake"
+    ],
+    "answer": 3,
+    "explanation": "\"Oven\" fırın demektir. Fırında pişirmek \"bake\" fiiliyle söylenir. \"Fry\" yağda kızartmak, \"boil\" haşlamak demektir."
+  },
+  {
+    "id": "ing-8-3-05",
+    "unit": "ing-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Which word shows the last step of a recipe?",
+    "choices": [
+      "First",
+      "Next",
+      "Finally",
+      "Second"
+    ],
+    "answer": 2,
+    "explanation": "\"Finally\" son olarak demektir ve tarifin (recipe) son adımını gösterir. \"First\" ilk adımı, \"next\" ve \"second\" ara adımları gösterir."
+  },
+  {
+    "id": "ing-8-3-06",
+    "unit": "ing-8-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "We use a frying pan to fry eggs.",
+    "answer": true,
+    "explanation": "\"Frying pan\" tava demektir. Yumurta tavada kızartılır: fry eggs in a frying pan."
+  },
+  {
+    "id": "ing-8-3-07",
+    "unit": "ing-8-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Put the steps in order to make tea. I. Pour the tea into the glasses. II. Boil some water. III. Add the tea leaves to the hot water and wait.",
+    "choices": [
+      "I – II – III",
+      "II – III – I",
+      "III – II – I",
+      "II – I – III"
+    ],
+    "answer": 1,
+    "explanation": "Önce su kaynatılır (boil), sonra çay yaprakları sıcak suya eklenip beklenir, en son çay bardaklara doldurulur (pour)."
+  },
+  {
+    "id": "ing-8-4-01",
+    "unit": "ing-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hello, _____ Ayşe speaking. Can I talk to Mr Demir, please?",
+    "choices": [
+      "I am",
+      "she is",
+      "this is",
+      "here"
+    ],
+    "answer": 2,
+    "explanation": "Telefonda kendimizi tanıtırken \"I am\" yerine \"This is ... speaking\" kalıbı kullanılır."
+  },
+  {
+    "id": "ing-8-4-02",
+    "unit": "ing-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Secretary: I'm afraid he isn't available at the moment. Would you like to leave a _____?",
+    "choices": [
+      "message",
+      "number",
+      "line",
+      "call"
+    ],
+    "answer": 0,
+    "explanation": "\"Leave a message\" mesaj bırakmak demektir. Aranan kişi müsait değilse (not available) arayana mesaj bırakmak isteyip istemediği sorulur."
+  },
+  {
+    "id": "ing-8-4-03",
+    "unit": "ing-8-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Hang on a minute, please\" means \"Lütfen bir dakika bekleyin\".",
+    "answer": true,
+    "explanation": "\"Hang on\" ve \"hold on\" telefonda beklemek demektir. Karşı taraftan kısa bir süre beklemesi istenir."
+  },
+  {
+    "id": "ing-8-4-04",
+    "unit": "ing-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Caller: May I speak to Dr Kaya, please? Secretary: _____ I'll put you through.",
+    "choices": [
+      "He isn't here.",
+      "Wrong number.",
+      "Call back later.",
+      "Hold on, please."
+    ],
+    "answer": 3,
+    "explanation": "\"I'll put you through\" sizi bağlıyorum demektir. Bağlamadan önce arayandan beklemesi istenir: Hold on, please."
+  },
+  {
+    "id": "ing-8-4-05",
+    "unit": "ing-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"The line is busy\" ne demektir?",
+    "choices": [
+      "Hat kesildi.",
+      "Hat meşgul.",
+      "Telefon kapalı.",
+      "Yanlış numara."
+    ],
+    "answer": 1,
+    "explanation": "\"Line\" telefon hattı, \"busy\" meşgul demektir. Aranan kişi o sırada başkasıyla konuşuyorsa hat meşguldür."
+  },
+  {
+    "id": "ing-8-4-06",
+    "unit": "ing-8-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "A: Could you tell him to call me back? B: Sure. _____ A: It's 555 01 23.",
+    "choices": [
+      "Who is calling?",
+      "Can you hold on?",
+      "Can I have your number?",
+      "Is he available?"
+    ],
+    "answer": 2,
+    "explanation": "A kişisi bir telefon numarası söylüyor; demek ki B numarasını sormuştur: Can I have your number? \"Call back\" geri aramak demektir."
+  },
+  {
+    "id": "ing-8-5-01",
+    "unit": "ing-8-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "I use a search _____ to find information on the Net.",
+    "choices": [
+      "machine",
+      "engine",
+      "screen",
+      "account"
+    ],
+    "answer": 1,
+    "explanation": "\"Search engine\" arama motoru demektir. İnternette bilgi bulmak için arama motoru kullanılır."
+  },
+  {
+    "id": "ing-8-5-02",
+    "unit": "ing-8-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "You need a username and a _____ to sign in.",
+    "choices": [
+      "password",
+      "website",
+      "keyboard",
+      "message"
+    ],
+    "answer": 0,
+    "explanation": "\"Sign in\" oturum açmak demektir. Bunun için kullanıcı adı (username) ve şifre (password) gerekir."
+  },
+  {
+    "id": "ing-8-5-03",
+    "unit": "ing-8-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Download\" means to send a file from your computer to the Internet.",
+    "answer": false,
+    "explanation": "Bu tanım \"upload\" (yüklemek) sözcüğüne aittir. \"Download\" bir dosyayı internetten kendi cihazına indirmek demektir."
+  },
+  {
+    "id": "ing-8-5-04",
+    "unit": "ing-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "My brother is an Internet _____. He spends ten hours online every day.",
+    "choices": [
+      "user",
+      "browser",
+      "connection",
+      "addict"
+    ],
+    "answer": 3,
+    "explanation": "\"Addict\" bağımlı demektir. Her gün on saat çevrim içi olan kişi internet bağımlısıdır: Internet addict."
+  },
+  {
+    "id": "ing-8-5-05",
+    "unit": "ing-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Don't share your personal information with strangers online.\" This advice is about Internet _____.",
+    "choices": [
+      "speed",
+      "games",
+      "safety",
+      "shopping"
+    ],
+    "answer": 2,
+    "explanation": "\"Personal information\" kişisel bilgi, \"stranger\" yabancı demektir. Bu tavsiye internet güvenliğiyle (Internet safety) ilgilidir."
+  },
+  {
+    "id": "ing-8-5-06",
+    "unit": "ing-8-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "You need an Internet connection to send an e-mail.",
+    "answer": true,
+    "explanation": "\"Connection\" bağlantı demektir. E-posta göndermek için internet bağlantısı gerekir."
+  },
+  {
+    "id": "ing-8-5-07",
+    "unit": "ing-8-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Tina: Do you often go online? Sam: _____ I only check my e-mails once a week.",
+    "choices": [
+      "Yes, all the time.",
+      "Not really.",
+      "Yes, I'm always online.",
+      "I can't live without it."
+    ],
+    "answer": 1,
+    "explanation": "Sam e-postalarına yalnızca haftada bir baktığını söylüyor. Sık çevrim içi olmadığı için cevap \"Not really\" (Pek sayılmaz) olur."
+  },
+  {
+    "id": "ing-8-6-01",
+    "unit": "ing-8-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "_____ is a water sport. You travel down a fast river in a rubber boat.",
+    "choices": [
+      "Caving",
+      "Paragliding",
+      "Rafting",
+      "Skydiving"
+    ],
+    "answer": 2,
+    "explanation": "\"Rafting\" hızlı akan nehirde şişme botla yapılan bir su sporudur. \"Caving\" mağaracılık, \"paragliding\" yamaç paraşütüdür."
+  },
+  {
+    "id": "ing-8-6-02",
+    "unit": "ing-8-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "I think skydiving is _____ than cycling.",
+    "choices": [
+      "more dangerous",
+      "dangerous",
+      "most dangerous",
+      "dangerouser"
+    ],
+    "answer": 0,
+    "explanation": "İki şey karşılaştırılırken uzun sıfatların önüne \"more\" gelir ve \"than\" kullanılır: more dangerous than (-den daha tehlikeli)."
+  },
+  {
+    "id": "ing-8-6-03",
+    "unit": "ing-8-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Caving is a sport done in the sky.",
+    "answer": false,
+    "explanation": "\"Caving\" mağaracılıktır ve yer altındaki mağaralarda (cave) yapılır. Gökyüzünde yapılan sporlar \"skydiving\" ve \"paragliding\" gibi sporlardır."
+  },
+  {
+    "id": "ing-8-6-04",
+    "unit": "ing-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "I would rather go kayaking _____ go hang-gliding.",
+    "choices": [
+      "to",
+      "from",
+      "of",
+      "than"
+    ],
+    "answer": 3,
+    "explanation": "\"Would rather\" kalıbında iki seçenek arasına \"than\" gelir: would rather do A than do B. \"Prefer\" kalıbında ise \"to\" kullanılır."
+  },
+  {
+    "id": "ing-8-6-05",
+    "unit": "ing-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Bungee jumping is _____ sport I know. Nothing else is so hard.",
+    "choices": [
+      "challenging",
+      "the most challenging",
+      "more challenging",
+      "most challenging than"
+    ],
+    "answer": 1,
+    "explanation": "\"Challenging\" zorlayıcı demektir. Bilinen bütün sporlar içinde en zorlayıcı olanı anlatırken \"the most\" kullanılır."
+  },
+  {
+    "id": "ing-8-6-06",
+    "unit": "ing-8-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Fascinating\" means very interesting.",
+    "answer": true,
+    "explanation": "\"Fascinating\" büyüleyici, çok ilgi çekici demektir. Macera sporlarını anlatırken sık kullanılır."
+  },
+  {
+    "id": "ing-8-6-07",
+    "unit": "ing-8-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "I prefer trekking _____ canoeing because it is _____.",
+    "choices": [
+      "than / safe",
+      "to / safest",
+      "to / safer",
+      "than / more safe"
+    ],
+    "answer": 2,
+    "explanation": "\"Prefer A to B\" kalıbında \"to\" kullanılır. İki spor karşılaştırıldığı için sıfat karşılaştırma hâlinde olur: safer (daha güvenli)."
+  },
+  {
+    "id": "ing-8-7-01",
+    "unit": "ing-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Cappadocia is famous for its fairy _____.",
+    "choices": [
+      "chimneys",
+      "bridges",
+      "castles",
+      "beaches"
+    ],
+    "answer": 0,
+    "explanation": "\"Fairy chimneys\" peribacaları demektir. Kapadokya peribacalarıyla ünlüdür. \"Famous for\" bir şeyle ünlü olmak anlamına gelir."
+  },
+  {
+    "id": "ing-8-7-02",
+    "unit": "ing-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "We stayed at an all-inclusive _____ near the beach.",
+    "choices": [
+      "museum",
+      "resort",
+      "bazaar",
+      "palace"
+    ],
+    "answer": 1,
+    "explanation": "\"Resort\" tatil köyü demektir. \"All-inclusive\" her şey dâhil anlamına gelir. \"Stay\" konaklamak demektir; müzede ya da çarşıda konaklanmaz."
+  },
+  {
+    "id": "ing-8-7-03",
+    "unit": "ing-8-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "An \"ancient city\" is a very old city.",
+    "answer": true,
+    "explanation": "\"Ancient\" çok eski, antik demektir. \"Ancient city\" antik kent anlamına gelir."
+  },
+  {
+    "id": "ing-8-7-04",
+    "unit": "ing-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Have you ever _____ to Paris?",
+    "choices": [
+      "be",
+      "was",
+      "went",
+      "been"
+    ],
+    "answer": 3,
+    "explanation": "Deneyimler \"Have you ever ...?\" kalıbıyla sorulur ve fiilin üçüncü hâli kullanılır. \"Be\" fiilinin üçüncü hâli \"been\" olur."
+  },
+  {
+    "id": "ing-8-7-05",
+    "unit": "ing-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "I have _____ tried Italian food, but I want to try it one day.",
+    "choices": [
+      "ever",
+      "always",
+      "never",
+      "yet"
+    ],
+    "answer": 2,
+    "explanation": "\"Never\" hiç demektir ve cümleyi olumsuz yapar: Hiç İtalyan yemeği denemedim. \"Ever\" ise sorularda kullanılır."
+  },
+  {
+    "id": "ing-8-7-06",
+    "unit": "ing-8-7",
+    "type": "true-false",
+    "difficulty": 3,
+    "prompt": "\"I have visited Rome last year\" is a correct sentence.",
+    "answer": false,
+    "explanation": "\"Last year\" gibi belirli bir geçmiş zaman ifadesi varsa geçmiş zaman kullanılır. Doğru cümle: I visited Rome last year."
+  },
+  {
+    "id": "ing-8-7-07",
+    "unit": "ing-8-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Sam: Which do you prefer, historic sites or seaside resorts? Lily: I'd rather visit historic sites because _____.",
+    "choices": [
+      "I love swimming and sunbathing",
+      "I'm interested in ancient cultures",
+      "I can't stand museums",
+      "history is boring for me"
+    ],
+    "answer": 1,
+    "explanation": "Lily tarihî yerleri tercih ediyor. Sebebi bu tercihe uygun olmalıdır: I'm interested in ancient cultures (Eski kültürlere ilgi duyuyorum)."
+  },
+  {
+    "id": "ing-8-8-01",
+    "unit": "ing-8-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "It's my responsibility to _____ the rubbish every evening.",
+    "choices": [
+      "do",
+      "set",
+      "take out",
+      "make"
+    ],
+    "answer": 2,
+    "explanation": "\"Take out the rubbish\" çöpü dışarı çıkarmak demektir. \"Responsibility\" sorumluluk anlamına gelir."
+  },
+  {
+    "id": "ing-8-8-02",
+    "unit": "ing-8-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "You _____ tidy your room. It's very messy.",
+    "choices": [
+      "must",
+      "mustn't",
+      "don't have to",
+      "can't"
+    ],
+    "answer": 0,
+    "explanation": "\"Messy\" dağınık demektir. Oda çok dağınık olduğu için toplamak zorunludur: You must tidy your room."
+  },
+  {
+    "id": "ing-8-8-03",
+    "unit": "ing-8-8",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Do the laundry\" means \"çamaşır yıkamak\".",
+    "answer": true,
+    "explanation": "\"Laundry\" çamaşır demektir. \"Do the laundry\" çamaşır yıkamak, \"do the dishes\" bulaşık yıkamak anlamına gelir."
+  },
+  {
+    "id": "ing-8-8-04",
+    "unit": "ing-8-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Mum: Can you set the table, please? Son: _____ I'm doing my homework.",
+    "choices": [
+      "Sure, no problem.",
+      "Of course, Mum.",
+      "Yes, right away.",
+      "Sorry, I can't right now."
+    ],
+    "answer": 3,
+    "explanation": "Çocuk ödev yaptığını söyleyerek mazeret bildiriyor; yani ricayı reddediyor: Sorry, I can't right now (Üzgünüm, şu an yapamam)."
+  },
+  {
+    "id": "ing-8-8-05",
+    "unit": "ing-8-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"I'm in charge of feeding the cat.\" Buradaki \"in charge of\" ne demektir?",
+    "choices": [
+      "Bir şeyden korkmak",
+      "Bir şeyden sorumlu olmak",
+      "Bir şeyden bıkmak",
+      "Bir şeyden hoşlanmak"
+    ],
+    "answer": 1,
+    "explanation": "\"Be in charge of\" bir işten sorumlu olmak demektir: Kediyi beslemekten ben sorumluyum. \"Be responsible for\" da aynı anlamdadır."
+  },
+  {
+    "id": "ing-8-8-06",
+    "unit": "ing-8-8",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"You don't have to do the dishes\" means you mustn't do them.",
+    "answer": false,
+    "explanation": "\"Don't have to\" zorunda değilsin demektir; yapmak serbesttir. \"Mustn't\" ise yasak bildirir. İkisi aynı anlama gelmez."
+  },
+  {
+    "id": "ing-8-8-07",
+    "unit": "ing-8-8",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Which sentence expresses an obligation?",
+    "choices": [
+      "I like ironing my shirts.",
+      "I can iron my shirts.",
+      "I have to iron my shirt before school.",
+      "I ironed my shirt yesterday."
+    ],
+    "answer": 2,
+    "explanation": "Zorunluluk (obligation) \"have to\" ve \"must\" ile anlatılır: I have to iron my shirt (Gömleğimi ütülemek zorundayım)."
+  },
+  {
+    "id": "ing-8-9-01",
+    "unit": "ing-8-9",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Scientists do _____ in laboratories.",
+    "choices": [
+      "experiments",
+      "chores",
+      "sports",
+      "invitations"
+    ],
+    "answer": 0,
+    "explanation": "\"Experiment\" deney demektir. Bilim insanları (scientists) laboratuvarlarda deney yapar: do experiments."
+  },
+  {
+    "id": "ing-8-9-02",
+    "unit": "ing-8-9",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Alexander Graham Bell _____ the telephone.",
+    "choices": [
+      "discovered",
+      "invented",
+      "explored",
+      "found"
+    ],
+    "answer": 1,
+    "explanation": "Daha önce var olmayan bir şeyi icat etmek \"invent\" fiiliyle söylenir. Telefon bir icattır; Graham Bell telefonu icat etti."
+  },
+  {
+    "id": "ing-8-9-03",
+    "unit": "ing-8-9",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "A laboratory is a place where people watch films.",
+    "answer": false,
+    "explanation": "\"Laboratory\" laboratuvar demektir; bilimsel deney ve araştırmalar orada yapılır. Film izlenen yer sinemadır (cinema)."
+  },
+  {
+    "id": "ing-8-9-04",
+    "unit": "ing-8-9",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Marie Curie _____ the Nobel Prize in Physics in 1903.",
+    "choices": [
+      "wins",
+      "is winning",
+      "will win",
+      "won"
+    ],
+    "answer": 3,
+    "explanation": "1903 geçmişte kaldığı için geçmiş zaman kullanılır. \"Win\" düzensiz bir fiildir; geçmiş zaman hâli \"won\" olur."
+  },
+  {
+    "id": "ing-8-9-05",
+    "unit": "ing-8-9",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Which sentence is about an action happening now?",
+    "choices": [
+      "Scientists discovered a new planet.",
+      "Scientists will find a cure soon.",
+      "Scientists are working on a new vaccine at the moment.",
+      "Scientists do experiments every day."
+    ],
+    "answer": 2,
+    "explanation": "\"At the moment\" şu anda demektir. Şimdiki zaman \"are working\" biçiminde kurulur. Öteki cümleler geçmişi, geleceği ve genel durumu anlatır."
+  },
+  {
+    "id": "ing-8-9-06",
+    "unit": "ing-8-9",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "A \"discovery\" is finding something that already exists for the first time.",
+    "answer": true,
+    "explanation": "\"Discovery\" keşif demektir; zaten var olan bir şeyin ilk kez bulunmasıdır. \"Invention\" (icat) ise yeni bir şey üretmektir."
+  },
+  {
+    "id": "ing-8-9-07",
+    "unit": "ing-8-9",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Isaac Newton is famous for his _____ of gravity.",
+    "choices": [
+      "invention",
+      "discovery",
+      "design",
+      "production"
+    ],
+    "answer": 1,
+    "explanation": "Yer çekimi (gravity) doğada zaten vardı; Newton onu keşfetti. Var olan bir şeyi bulmak \"discovery\", yeni bir şey yapmak \"invention\" olur."
+  },
+  {
+    "id": "ing-8-10-01",
+    "unit": "ing-8-10",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "A _____ happens when there is no rain for a long time.",
+    "choices": [
+      "flood",
+      "drought",
+      "tornado",
+      "landslide"
+    ],
+    "answer": 1,
+    "explanation": "\"Drought\" kuraklık demektir; uzun süre yağmur yağmayınca olur. \"Flood\" sel, \"landslide\" heyelan demektir."
+  },
+  {
+    "id": "ing-8-10-02",
+    "unit": "ing-8-10",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "A lot of snow suddenly falls down a mountain. This is an _____.",
+    "choices": [
+      "earthquake",
+      "eruption",
+      "avalanche",
+      "erosion"
+    ],
+    "answer": 2,
+    "explanation": "\"Avalanche\" çığ demektir; dağdan aniden büyük kar kütlesinin kaymasıdır. \"Earthquake\" deprem, \"eruption\" yanardağ patlamasıdır."
+  },
+  {
+    "id": "ing-8-10-03",
+    "unit": "ing-8-10",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "A flood happens when there is too much water on land.",
+    "answer": true,
+    "explanation": "\"Flood\" sel demektir. Aşırı yağış ya da taşan nehirler yüzünden kara parçası sular altında kalır."
+  },
+  {
+    "id": "ing-8-10-04",
+    "unit": "ing-8-10",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "I think temperatures _____ rise in the future because of global warming.",
+    "choices": [
+      "will",
+      "did",
+      "were",
+      "have"
+    ],
+    "answer": 0,
+    "explanation": "Gelecekle ilgili tahminlerde \"will\" kullanılır: Temperatures will rise (Sıcaklıklar artacak). \"Global warming\" küresel ısınmadır."
+  },
+  {
+    "id": "ing-8-10-05",
+    "unit": "ing-8-10",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "We should use renewable energy sources such as _____ energy.",
+    "choices": [
+      "coal",
+      "petrol",
+      "natural gas",
+      "solar"
+    ],
+    "answer": 3,
+    "explanation": "\"Renewable\" yenilenebilir demektir. Güneş enerjisi (solar energy) yenilenebilir bir kaynaktır; kömür, petrol ve doğal gaz ise tükenen fosil yakıtlardır."
+  },
+  {
+    "id": "ing-8-10-06",
+    "unit": "ing-8-10",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Throwing rubbish on the ground causes earthquakes.",
+    "answer": false,
+    "explanation": "Deprem (earthquake) yer kabuğundaki hareketler sonucu oluşan bir doğa olayıdır. Yere çöp atmak çevreyi kirletir ama depreme yol açmaz."
+  },
+  {
+    "id": "ing-8-10-07",
+    "unit": "ing-8-10",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "If we don't stop cutting down trees, there _____ more landslides.",
+    "choices": [
+      "are being",
+      "will be",
+      "was",
+      "be"
+    ],
+    "answer": 1,
+    "explanation": "\"If\" ile kurulan koşul cümlesinde koşul geniş zamanla, sonuç \"will\" ile söylenir: there will be more landslides (daha çok heyelan olacak)."
+  }
+]

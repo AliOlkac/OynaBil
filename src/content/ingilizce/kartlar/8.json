@@ -1,0 +1,525 @@
+[
+  {
+    "kind": "pairs",
+    "id": "ing-8-1-ifadeler",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{ifade}\" diyen kişi ne yapmaktadır?",
+        "answer": "islev"
+      },
+      {
+        "prompt": "Hangi cümle {amac} için kullanılır?",
+        "answer": "ifade"
+      }
+    ],
+    "statement": {
+      "text": "\"{ifade}\" cümlesi {amac} için kullanılır.",
+      "swap": "amac"
+    },
+    "explanation": "\"{ifade}\" cümlesi {amac} ({en}) için kullanılır. Türkçesi: {tr}",
+    "items": [
+      {
+        "id": "inviting",
+        "ifade": "Would you like to come to my party?",
+        "islev": "Davet ediyor",
+        "amac": "davet etmek",
+        "en": "inviting",
+        "tr": "Partime gelmek ister misin?"
+      },
+      {
+        "id": "accepting",
+        "ifade": "Yes, I'd love to. That sounds great.",
+        "islev": "Daveti kabul ediyor",
+        "amac": "daveti kabul etmek",
+        "en": "accepting",
+        "tr": "Evet, çok isterim. Harika olur."
+      },
+      {
+        "id": "refusing",
+        "ifade": "I'd love to, but I can't. I'm busy.",
+        "islev": "Daveti reddediyor",
+        "amac": "daveti reddetmek",
+        "en": "refusing",
+        "tr": "Çok isterdim ama gelemem. Meşgulüm."
+      },
+      {
+        "id": "apologizing",
+        "ifade": "I apologize for being late.",
+        "islev": "Özür diliyor",
+        "amac": "özür dilemek",
+        "en": "apologizing",
+        "tr": "Geç kaldığım için özür dilerim."
+      },
+      {
+        "id": "repetition",
+        "ifade": "Could you say that again, please?",
+        "islev": "Tekrar edilmesini istiyor",
+        "amac": "tekrar edilmesini istemek",
+        "en": "asking for repetition",
+        "tr": "Tekrar söyler misiniz, lütfen?"
+      }
+    ],
+    "unit": "ing-8-1"
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-8-3-mutfak",
+    "unit": "ing-8-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{en}\" fiilinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce fiil hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" fiili Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "chop",
+        "en": "chop",
+        "tr": "doğramak",
+        "enSik": "Chop",
+        "trSik": "Doğramak"
+      },
+      {
+        "id": "boil",
+        "en": "boil",
+        "tr": "kaynatmak",
+        "enSik": "Boil",
+        "trSik": "Kaynatmak"
+      },
+      {
+        "id": "fry",
+        "en": "fry",
+        "tr": "kızartmak",
+        "enSik": "Fry",
+        "trSik": "Kızartmak"
+      },
+      {
+        "id": "peel",
+        "en": "peel",
+        "tr": "soymak",
+        "enSik": "Peel",
+        "trSik": "Soymak"
+      },
+      {
+        "id": "stir",
+        "en": "stir",
+        "tr": "karıştırmak",
+        "enSik": "Stir",
+        "trSik": "Karıştırmak"
+      },
+      {
+        "id": "pour",
+        "en": "pour",
+        "tr": "dökmek",
+        "enSik": "Pour",
+        "trSik": "Dökmek"
+      },
+      {
+        "id": "grate",
+        "en": "grate",
+        "tr": "rendelemek",
+        "enSik": "Grate",
+        "trSik": "Rendelemek"
+      },
+      {
+        "id": "slice",
+        "en": "slice",
+        "tr": "dilimlemek",
+        "enSik": "Slice",
+        "trSik": "Dilimlemek"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-8-5-internet",
+    "unit": "ing-8-5",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{en}\" ifadesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce ifade hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" ifadesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "download",
+        "en": "download",
+        "tr": "indirmek",
+        "enSik": "Download",
+        "trSik": "İndirmek"
+      },
+      {
+        "id": "upload",
+        "en": "upload",
+        "tr": "yüklemek",
+        "enSik": "Upload",
+        "trSik": "Yüklemek"
+      },
+      {
+        "id": "password",
+        "en": "password",
+        "tr": "şifre",
+        "enSik": "Password",
+        "trSik": "Şifre"
+      },
+      {
+        "id": "account",
+        "en": "account",
+        "tr": "hesap",
+        "enSik": "Account",
+        "trSik": "Hesap"
+      },
+      {
+        "id": "connection",
+        "en": "connection",
+        "tr": "bağlantı",
+        "enSik": "Connection",
+        "trSik": "Bağlantı"
+      },
+      {
+        "id": "search-engine",
+        "en": "search engine",
+        "tr": "arama motoru",
+        "enSik": "Search engine",
+        "trSik": "Arama motoru"
+      },
+      {
+        "id": "sign-up",
+        "en": "sign up",
+        "tr": "kaydolmak",
+        "enSik": "Sign up",
+        "trSik": "Kaydolmak"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-8-6-sporlar",
+    "unit": "ing-8-6",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{en}\" ifadesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce ifade hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" ifadesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "paragliding",
+        "en": "paragliding",
+        "tr": "yamaç paraşütü",
+        "enSik": "Paragliding",
+        "trSik": "Yamaç paraşütü"
+      },
+      {
+        "id": "scuba-diving",
+        "en": "scuba diving",
+        "tr": "tüplü dalış",
+        "enSik": "Scuba diving",
+        "trSik": "Tüplü dalış"
+      },
+      {
+        "id": "caving",
+        "en": "caving",
+        "tr": "mağaracılık",
+        "enSik": "Caving",
+        "trSik": "Mağaracılık"
+      },
+      {
+        "id": "rock-climbing",
+        "en": "rock climbing",
+        "tr": "kaya tırmanışı",
+        "enSik": "Rock climbing",
+        "trSik": "Kaya tırmanışı"
+      },
+      {
+        "id": "horse-riding",
+        "en": "horse riding",
+        "tr": "ata binme",
+        "enSik": "Horse riding",
+        "trSik": "Ata binme"
+      },
+      {
+        "id": "skateboarding",
+        "en": "skateboarding",
+        "tr": "kaykay yapma",
+        "enSik": "Skateboarding",
+        "trSik": "Kaykay yapma"
+      },
+      {
+        "id": "motor-racing",
+        "en": "motor racing",
+        "tr": "motor yarışı",
+        "enSik": "Motor racing",
+        "trSik": "Motor yarışı"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-8-8-ev-isleri",
+    "unit": "ing-8-8",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{en}\" ifadesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce ifade hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" ifadesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "laundry",
+        "en": "do the laundry",
+        "tr": "çamaşır yıkamak",
+        "enSik": "Do the laundry",
+        "trSik": "Çamaşır yıkamak"
+      },
+      {
+        "id": "set-table",
+        "en": "set the table",
+        "tr": "sofrayı kurmak",
+        "enSik": "Set the table",
+        "trSik": "Sofrayı kurmak"
+      },
+      {
+        "id": "dishes",
+        "en": "wash the dishes",
+        "tr": "bulaşık yıkamak",
+        "enSik": "Wash the dishes",
+        "trSik": "Bulaşık yıkamak"
+      },
+      {
+        "id": "rubbish",
+        "en": "take out the rubbish",
+        "tr": "çöpü çıkarmak",
+        "enSik": "Take out the rubbish",
+        "trSik": "Çöpü çıkarmak"
+      },
+      {
+        "id": "bed",
+        "en": "make the bed",
+        "tr": "yatağı toplamak",
+        "enSik": "Make the bed",
+        "trSik": "Yatağı toplamak"
+      },
+      {
+        "id": "plants",
+        "en": "water the plants",
+        "tr": "çiçekleri sulamak",
+        "enSik": "Water the plants",
+        "trSik": "Çiçekleri sulamak"
+      },
+      {
+        "id": "iron",
+        "en": "iron the clothes",
+        "tr": "giysileri ütülemek",
+        "enSik": "Iron the clothes",
+        "trSik": "Giysileri ütülemek"
+      },
+      {
+        "id": "dust",
+        "en": "dust the furniture",
+        "tr": "mobilyaların tozunu almak",
+        "enSik": "Dust the furniture",
+        "trSik": "Mobilyaların tozunu almak"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-8-9-bilim",
+    "unit": "ing-8-9",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "experiment",
+        "en": "experiment",
+        "tr": "deney",
+        "enSik": "Experiment",
+        "trSik": "Deney"
+      },
+      {
+        "id": "invention",
+        "en": "invention",
+        "tr": "icat",
+        "enSik": "Invention",
+        "trSik": "İcat"
+      },
+      {
+        "id": "discovery",
+        "en": "discovery",
+        "tr": "keşif",
+        "enSik": "Discovery",
+        "trSik": "Keşif"
+      },
+      {
+        "id": "scientist",
+        "en": "scientist",
+        "tr": "bilim insanı",
+        "enSik": "Scientist",
+        "trSik": "Bilim insanı"
+      },
+      {
+        "id": "research",
+        "en": "research",
+        "tr": "araştırma",
+        "enSik": "Research",
+        "trSik": "Araştırma"
+      },
+      {
+        "id": "cell",
+        "en": "cell",
+        "tr": "hücre",
+        "enSik": "Cell",
+        "trSik": "Hücre"
+      },
+      {
+        "id": "vaccine",
+        "en": "vaccine",
+        "tr": "aşı",
+        "enSik": "Vaccine",
+        "trSik": "Aşı"
+      },
+      {
+        "id": "cure",
+        "en": "cure",
+        "tr": "tedavi",
+        "enSik": "Cure",
+        "trSik": "Tedavi"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-8-10-afetler",
+    "unit": "ing-8-10",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{en}\" ifadesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce ifade hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" ifadesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "earthquake",
+        "en": "earthquake",
+        "tr": "deprem",
+        "enSik": "Earthquake",
+        "trSik": "Deprem"
+      },
+      {
+        "id": "flood",
+        "en": "flood",
+        "tr": "sel",
+        "enSik": "Flood",
+        "trSik": "Sel"
+      },
+      {
+        "id": "drought",
+        "en": "drought",
+        "tr": "kuraklık",
+        "enSik": "Drought",
+        "trSik": "Kuraklık"
+      },
+      {
+        "id": "landslide",
+        "en": "landslide",
+        "tr": "heyelan",
+        "enSik": "Landslide",
+        "trSik": "Heyelan"
+      },
+      {
+        "id": "avalanche",
+        "en": "avalanche",
+        "tr": "çığ",
+        "enSik": "Avalanche",
+        "trSik": "Çığ"
+      },
+      {
+        "id": "hurricane",
+        "en": "hurricane",
+        "tr": "kasırga",
+        "enSik": "Hurricane",
+        "trSik": "Kasırga"
+      },
+      {
+        "id": "tornado",
+        "en": "tornado",
+        "tr": "hortum",
+        "enSik": "Tornado",
+        "trSik": "Hortum"
+      },
+      {
+        "id": "eruption",
+        "en": "volcanic eruption",
+        "tr": "yanardağ patlaması",
+        "enSik": "Volcanic eruption",
+        "trSik": "Yanardağ patlaması"
+      }
+    ]
+  }
+]

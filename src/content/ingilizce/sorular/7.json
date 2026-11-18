@@ -1,0 +1,746 @@
+[
+  {
+    "id": "ing-7-1-01",
+    "unit": "ing-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Ali gets the highest marks in our class. He is _____ student in the class.",
+    "choices": [
+      "successful",
+      "more successful",
+      "the most successful",
+      "most successfuler"
+    ],
+    "answer": 2,
+    "explanation": "Bir grubun içinde en üstün olanı anlatırken üstünlük derecesi kullanılır. Uzun sıfatlarda \"the most\" gelir: the most successful (en başarılı)."
+  },
+  {
+    "id": "ing-7-1-02",
+    "unit": "ing-7-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "We _____ wear a uniform at our school. It is a rule.",
+    "choices": [
+      "must",
+      "mustn't",
+      "can't",
+      "shouldn't"
+    ],
+    "answer": 0,
+    "explanation": "\"Must\" zorunluluk bildirir. Üniforma giymek bir kural olduğuna göre zorunludur: We must wear a uniform."
+  },
+  {
+    "id": "ing-7-1-03",
+    "unit": "ing-7-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"You don't have to bring a dictionary\" means it is not necessary to bring one.",
+    "answer": true,
+    "explanation": "\"Don't have to\" zorunda olmamak demektir. Sözlük getirmek gerekli değildir ama getirmek yasak da değildir."
+  },
+  {
+    "id": "ing-7-1-04",
+    "unit": "ing-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Zehra is _____ at Maths than her friends.",
+    "choices": [
+      "good",
+      "best",
+      "the best",
+      "better"
+    ],
+    "answer": 3,
+    "explanation": "\"Than\" sözcüğü iki tarafın karşılaştırıldığını gösterir. \"Good\" düzensizdir; karşılaştırma hâli \"better\", üstünlük hâli \"the best\" olur."
+  },
+  {
+    "id": "ing-7-1-05",
+    "unit": "ing-7-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ece: Would you like to join the science club? Kaan: _____ I love doing experiments.",
+    "choices": [
+      "No, thanks.",
+      "Sure, that sounds great.",
+      "I'm sorry, I can't.",
+      "I'm afraid I'm busy."
+    ],
+    "answer": 1,
+    "explanation": "Kaan deney yapmayı sevdiğini söylüyor, yani teklifi kabul ediyor. Kabul ederken \"Sure, that sounds great\" (Elbette, harika olur) denir."
+  },
+  {
+    "id": "ing-7-1-06",
+    "unit": "ing-7-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Attend a ceremony\" means \"töreni iptal etmek\".",
+    "answer": false,
+    "explanation": "\"Attend\" katılmak, \"ceremony\" tören demektir. \"Attend a ceremony\" törene katılmak anlamına gelir; iptal etmek \"cancel\" fiiliyle söylenir."
+  },
+  {
+    "id": "ing-7-1-07",
+    "unit": "ing-7-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "You _____ be late for the exam. It starts at nine o'clock and the doors close.",
+    "choices": [
+      "don't have to",
+      "should",
+      "mustn't",
+      "have to"
+    ],
+    "answer": 2,
+    "explanation": "\"Mustn't\" yapılmaması gereken, yasak olan şeyi anlatır: Sınava geç kalmamalısın. \"Don't have to\" ise yalnızca gerekli olmadığını söyler."
+  },
+  {
+    "id": "ing-7-2-01",
+    "unit": "ing-7-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Could you _____ the window, please? It's very hot in here.",
+    "choices": [
+      "open",
+      "close",
+      "break",
+      "paint"
+    ],
+    "answer": 0,
+    "explanation": "\"It's very hot in here\" burası çok sıcak demektir. Sıcak bir sınıfta pencerenin açılması (open) istenir."
+  },
+  {
+    "id": "ing-7-2-02",
+    "unit": "ing-7-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "We _____ a quiz last Friday.",
+    "choices": [
+      "have",
+      "has",
+      "having",
+      "had"
+    ],
+    "answer": 3,
+    "explanation": "\"Last Friday\" (geçen cuma) geçmişi gösterir. \"Have\" fiilinin geçmiş zaman hâli \"had\" olur."
+  },
+  {
+    "id": "ing-7-2-03",
+    "unit": "ing-7-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Could you repeat that, please?\" is a polite request.",
+    "answer": true,
+    "explanation": "\"Could you ...?\" kibarca bir şey rica etmek için kullanılır. Cümle, söylenenin tekrar edilmesini rica eder: Tekrar eder misiniz, lütfen?"
+  },
+  {
+    "id": "ing-7-2-04",
+    "unit": "ing-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "I couldn't answer the last question because it was too _____.",
+    "choices": [
+      "easy",
+      "difficult",
+      "clear",
+      "simple"
+    ],
+    "answer": 1,
+    "explanation": "\"Couldn't answer\" cevaplayamadım demektir. Soruyu cevaplayamamanın sebebi sorunun çok zor olmasıdır: too difficult."
+  },
+  {
+    "id": "ing-7-2-05",
+    "unit": "ing-7-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Student: I don't know the meaning of this word. Teacher: _____",
+    "choices": [
+      "You should look it up in a dictionary.",
+      "You shouldn't learn new words.",
+      "You should close your book.",
+      "You shouldn't ask questions."
+    ],
+    "answer": 0,
+    "explanation": "Tavsiye verirken \"should\" kullanılır. \"Look up in a dictionary\" sözlükten bakmak demektir; anlamı bilinmeyen kelime için en uygun tavsiye budur."
+  },
+  {
+    "id": "ing-7-2-06",
+    "unit": "ing-7-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"He didn't went to school yesterday\" is a correct sentence.",
+    "answer": false,
+    "explanation": "\"Didn't\" yardımcı fiilinden sonra fiil yalın hâlde kalır. Doğru cümle: He didn't go to school yesterday."
+  },
+  {
+    "id": "ing-7-2-07",
+    "unit": "ing-7-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Which sentence gives advice?",
+    "choices": [
+      "You revised before the exam.",
+      "Did you revise before the exam?",
+      "You are revising for the exam.",
+      "You should revise before the exam."
+    ],
+    "answer": 3,
+    "explanation": "Tavsiye (advice) \"should\" ile verilir: Sınavdan önce tekrar yapmalısın. Öteki cümleler geçmişi anlatır, soru sorar ya da şu anı anlatır."
+  },
+  {
+    "id": "ing-7-3-01",
+    "unit": "ing-7-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "My best friend always tells the truth. He is very _____.",
+    "choices": [
+      "lazy",
+      "honest",
+      "shy",
+      "clumsy"
+    ],
+    "answer": 1,
+    "explanation": "\"Tell the truth\" doğruyu söylemek demektir. Doğruyu söyleyen kişi dürüsttür: honest. \"Lazy\" tembel, \"shy\" utangaç, \"clumsy\" sakar demektir."
+  },
+  {
+    "id": "ing-7-3-02",
+    "unit": "ing-7-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"Selim has got short, straight hair and green eyes.\" This sentence describes his _____.",
+    "choices": [
+      "personality",
+      "hobby",
+      "appearance",
+      "job"
+    ],
+    "answer": 2,
+    "explanation": "Saç ve göz rengi dış görünüşü (appearance) anlatır. Kişilik (personality) ise \"honest\", \"generous\" gibi sıfatlarla anlatılır."
+  },
+  {
+    "id": "ing-7-3-03",
+    "unit": "ing-7-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "A generous person likes sharing things with others.",
+    "answer": true,
+    "explanation": "\"Generous\" cömert demektir. Cömert insanlar sahip olduklarını başkalarıyla paylaşmayı (share) sever."
+  },
+  {
+    "id": "ing-7-3-04",
+    "unit": "ing-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ayşe goes jogging _____ a week: on Mondays and Fridays.",
+    "choices": [
+      "once",
+      "three times",
+      "every day",
+      "twice"
+    ],
+    "answer": 3,
+    "explanation": "Pazartesi ve cuma iki gün eder. Haftada iki kez \"twice a week\" diye söylenir. \"Once\" bir kez, \"three times\" üç kez demektir."
+  },
+  {
+    "id": "ing-7-3-05",
+    "unit": "ing-7-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Mete never helps anyone and thinks only about himself. He is _____.",
+    "choices": [
+      "selfish",
+      "generous",
+      "friendly",
+      "helpful"
+    ],
+    "answer": 0,
+    "explanation": "Yalnızca kendini düşünen kişiye bencil (selfish) denir. \"Generous\" cömert, \"friendly\" cana yakın, \"helpful\" yardımsever demektir."
+  },
+  {
+    "id": "ing-7-3-06",
+    "unit": "ing-7-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "A stubborn person changes his or her ideas easily.",
+    "answer": false,
+    "explanation": "\"Stubborn\" inatçı demektir. İnatçı insanlar fikirlerini kolay kolay değiştirmez."
+  },
+  {
+    "id": "ing-7-3-07",
+    "unit": "ing-7-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Deniz trains hard every day _____ she wants to win the race.",
+    "choices": [
+      "but",
+      "because",
+      "so",
+      "or"
+    ],
+    "answer": 1,
+    "explanation": "\"Because\" (çünkü) sebep bildirir. Deniz yarışı kazanmak istediği için her gün çok çalışır. \"So\" ise sonuç bildirir."
+  },
+  {
+    "id": "ing-7-4-01",
+    "unit": "ing-7-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "My grandfather _____ born in 1950.",
+    "choices": [
+      "is",
+      "were",
+      "was",
+      "did"
+    ],
+    "answer": 2,
+    "explanation": "Doğmak \"be born\" kalıbıyla söylenir ve geçmişte olduğu için \"was\" ya da \"were\" alır. \"My grandfather\" tekildir: was born."
+  },
+  {
+    "id": "ing-7-4-02",
+    "unit": "ing-7-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "When I was a child, we _____ in a small village.",
+    "choices": [
+      "live",
+      "lives",
+      "living",
+      "lived"
+    ],
+    "answer": 3,
+    "explanation": "\"When I was a child\" (ben çocukken) geçmişi gösterir. Düzenli fiiller geçmiş zamanda -ed ya da -d alır: live, lived."
+  },
+  {
+    "id": "ing-7-4-03",
+    "unit": "ing-7-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Two years ago\" tells us about the future.",
+    "answer": false,
+    "explanation": "\"Ago\" önce demektir ve geçmişi gösterir: two years ago (iki yıl önce). Gelecek için \"in two years\" ya da \"two years later\" denir."
+  },
+  {
+    "id": "ing-7-4-04",
+    "unit": "ing-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "My parents got married in 2005. Buradaki \"get married\" ne demektir?",
+    "choices": [
+      "Evlenmek",
+      "Mezun olmak",
+      "Taşınmak",
+      "Emekli olmak"
+    ],
+    "answer": 0,
+    "explanation": "\"Get married\" evlenmek demektir. \"Graduate\" mezun olmak, \"move\" taşınmak, \"retire\" emekli olmak anlamına gelir."
+  },
+  {
+    "id": "ing-7-4-05",
+    "unit": "ing-7-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Did your grandmother work when she was young? — Yes, she _____. She was a teacher.",
+    "choices": [
+      "was",
+      "did",
+      "does",
+      "worked"
+    ],
+    "answer": 1,
+    "explanation": "\"Did ...?\" ile sorulan sorulara kısa cevap yine \"did\" ile verilir: Yes, she did."
+  },
+  {
+    "id": "ing-7-4-06",
+    "unit": "ing-7-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "The past form of \"grow up\" is \"grew up\".",
+    "answer": true,
+    "explanation": "\"Grow up\" büyümek demektir. \"Grow\" düzensiz bir fiildir; geçmiş zaman hâli \"grew\" olur: I grew up in İzmir."
+  },
+  {
+    "id": "ing-7-4-07",
+    "unit": "ing-7-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "My uncle _____ from university in 1998, and then he _____ to Ankara.",
+    "choices": [
+      "graduates / moves",
+      "graduated / move",
+      "graduated / moved",
+      "graduate / moved"
+    ],
+    "answer": 2,
+    "explanation": "1998 geçmişte kaldığı için iki fiil de geçmiş zamanda olmalıdır: graduated (mezun oldu) ve moved (taşındı)."
+  },
+  {
+    "id": "ing-7-5-01",
+    "unit": "ing-7-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İstanbul is _____ city in Türkiye.",
+    "choices": [
+      "crowded",
+      "more crowded",
+      "the crowdedest",
+      "the most crowded"
+    ],
+    "answer": 3,
+    "explanation": "Bir ülkedeki bütün şehirler içinde en üstün olanı anlatırken \"the most\" kullanılır: the most crowded city (en kalabalık şehir)."
+  },
+  {
+    "id": "ing-7-5-02",
+    "unit": "ing-7-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "There is _____ traffic in big cities.",
+    "choices": [
+      "a lot of",
+      "many",
+      "a few",
+      "a"
+    ],
+    "answer": 0,
+    "explanation": "\"Traffic\" sayılamayan bir addır. Sayılamayan adlarla \"a lot of\" kullanılır; \"many\" ve \"a few\" sayılabilen çoğul adlarla kullanılır."
+  },
+  {
+    "id": "ing-7-5-03",
+    "unit": "ing-7-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "We use \"many\" with countable nouns like \"cars\".",
+    "answer": true,
+    "explanation": "\"Many\" sayılabilen çoğul adlarla kullanılır: many cars, many shops. Sayılamayan adlarla \"much\" kullanılır: much water."
+  },
+  {
+    "id": "ing-7-5-04",
+    "unit": "ing-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "How _____ people live in your village?",
+    "choices": [
+      "much",
+      "many",
+      "long",
+      "often"
+    ],
+    "answer": 1,
+    "explanation": "\"People\" sayılabilen çoğul bir addır. Sayı sorarken \"How many\" kullanılır. \"How much\" sayılamayan adlar ve fiyat için kullanılır."
+  },
+  {
+    "id": "ing-7-5-05",
+    "unit": "ing-7-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "I prefer living in a village _____ it is quiet and peaceful.",
+    "choices": [
+      "but",
+      "or",
+      "because",
+      "so"
+    ],
+    "answer": 2,
+    "explanation": "\"Because\" (çünkü) tercihin sebebini açıklar: Köyde yaşamayı tercih ederim çünkü sessiz ve huzurludur."
+  },
+  {
+    "id": "ing-7-5-06",
+    "unit": "ing-7-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"There isn't some milk in the fridge\" is a correct sentence.",
+    "answer": false,
+    "explanation": "Olumsuz cümlelerde \"some\" yerine \"any\" kullanılır. Doğru cümle: There isn't any milk in the fridge."
+  },
+  {
+    "id": "ing-7-5-07",
+    "unit": "ing-7-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "There are only _____ shops in our village, so we go to the town for shopping.",
+    "choices": [
+      "a little",
+      "much",
+      "any",
+      "a few"
+    ],
+    "answer": 3,
+    "explanation": "\"A few\" birkaç demektir ve sayılabilen çoğul adlarla kullanılır: a few shops. \"A little\" sayılamayan adlarla kullanılır: a little milk."
+  },
+  {
+    "id": "ing-7-6-01",
+    "unit": "ing-7-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Host: Would you like some cake? Guest: _____ It looks delicious.",
+    "choices": [
+      "Yes, please.",
+      "No, thanks.",
+      "I'm full.",
+      "I don't like cake."
+    ],
+    "answer": 0,
+    "explanation": "\"Would you like ...?\" ikram ederken kullanılır. Konuk pastanın lezzetli göründüğünü söylediğine göre ikramı kabul eder: Yes, please."
+  },
+  {
+    "id": "ing-7-6-02",
+    "unit": "ing-7-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Mount Everest is _____ mountain in the world.",
+    "choices": [
+      "high",
+      "higher",
+      "the highest",
+      "the most high"
+    ],
+    "answer": 2,
+    "explanation": "Dünyadaki bütün dağlar içinde en yükseği anlatılıyor. Kısa sıfatlar üstünlük derecesinde \"the\" ve -est alır: the highest."
+  },
+  {
+    "id": "ing-7-6-03",
+    "unit": "ing-7-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "\"Why don't we organize a party?\" is a suggestion.",
+    "answer": true,
+    "explanation": "\"Why don't we ...?\" öneride bulunmak için kullanılan bir kalıptır: Neden bir parti düzenlemiyoruz?"
+  },
+  {
+    "id": "ing-7-6-04",
+    "unit": "ing-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "We need _____ balloons and _____ fruit juice for the party.",
+    "choices": [
+      "a / a",
+      "some / some",
+      "any / a",
+      "a / an"
+    ],
+    "answer": 1,
+    "explanation": "Olumlu cümlelerde hem sayılabilen çoğul adlarla (balloons) hem sayılamayan adlarla (fruit juice) \"some\" kullanılır."
+  },
+  {
+    "id": "ing-7-6-05",
+    "unit": "ing-7-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Ali: Shall we visit the museum tomorrow? Veli: _____ I have to study for my exam.",
+    "choices": [
+      "That's a great idea.",
+      "Sure, why not?",
+      "I'd love to.",
+      "I'm sorry, but I can't."
+    ],
+    "answer": 3,
+    "explanation": "Veli sınava çalışmak zorunda olduğunu söylüyor; bu bir mazerettir. Teklifi kibarca reddetmek için \"I'm sorry, but I can't\" denir."
+  },
+  {
+    "id": "ing-7-6-06",
+    "unit": "ing-7-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Guest\" means \"ev sahibi\" in Turkish.",
+    "answer": false,
+    "explanation": "\"Guest\" konuk, misafir demektir. Ev sahibi ise \"host\" sözcüğüyle söylenir."
+  },
+  {
+    "id": "ing-7-6-07",
+    "unit": "ing-7-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Which sentence is a polite refusal of an invitation?",
+    "choices": [
+      "Yes, I'd love to come.",
+      "That sounds like fun!",
+      "I'd love to, but I'm busy that day.",
+      "What time does it start?"
+    ],
+    "answer": 2,
+    "explanation": "\"I'd love to, but ...\" (Çok isterdim ama ...) kalıbı daveti kibarca reddeder (refusal). İlk iki cümle daveti kabul eder, sonuncusu bilgi ister."
+  },
+  {
+    "id": "ing-7-7-01",
+    "unit": "ing-7-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Pandas are in danger. They are an _____ species.",
+    "choices": [
+      "expensive",
+      "endangered",
+      "excited",
+      "enormous"
+    ],
+    "answer": 1,
+    "explanation": "\"In danger\" tehlikede demektir. Nesli tehlike altında olan türlere \"endangered species\" denir."
+  },
+  {
+    "id": "ing-7-7-02",
+    "unit": "ing-7-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "We should use public transport to reduce air _____.",
+    "choices": [
+      "pollution",
+      "weather",
+      "habitat",
+      "energy"
+    ],
+    "answer": 0,
+    "explanation": "\"Reduce\" azaltmak, \"air pollution\" hava kirliliği demektir. Toplu taşıma (public transport) kullanmak hava kirliliğini azaltır."
+  },
+  {
+    "id": "ing-7-7-03",
+    "unit": "ing-7-7",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Turning off the tap while brushing your teeth saves water.",
+    "answer": true,
+    "explanation": "\"Turn off the tap\" musluğu kapatmak, \"save water\" su tasarrufu yapmak demektir. Diş fırçalarken musluğu kapatmak suyu korur."
+  },
+  {
+    "id": "ing-7-7-04",
+    "unit": "ing-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Dinosaurs became _____ millions of years ago.",
+    "choices": [
+      "endangered",
+      "dangerous",
+      "wild",
+      "extinct"
+    ],
+    "answer": 3,
+    "explanation": "\"Extinct\" nesli tükenmiş demektir. Dinozorlar milyonlarca yıl önce yok oldu. \"Endangered\" ise nesli tehlikede olan, henüz yok olmamış türler için kullanılır."
+  },
+  {
+    "id": "ing-7-7-05",
+    "unit": "ing-7-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "People _____ hunt wild animals. It is harmful to nature.",
+    "choices": [
+      "should",
+      "have to",
+      "shouldn't",
+      "must"
+    ],
+    "answer": 2,
+    "explanation": "\"Hunt\" avlamak, \"harmful\" zararlı demektir. Zararlı bir davranışın yapılmaması gerektiği \"shouldn't\" ile söylenir."
+  },
+  {
+    "id": "ing-7-7-06",
+    "unit": "ing-7-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Global warming makes the Earth colder.",
+    "answer": false,
+    "explanation": "\"Global warming\" küresel ısınma demektir; Dünya'nın sıcaklığı artar. \"Colder\" daha soğuk, \"warmer\" daha sıcak anlamına gelir."
+  },
+  {
+    "id": "ing-7-7-07",
+    "unit": "ing-7-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "If we cut down forests, many animals _____ their habitats.",
+    "choices": [
+      "lost",
+      "will lose",
+      "losing",
+      "are lost"
+    ],
+    "answer": 1,
+    "explanation": "\"If\" ile kurulan koşul cümlelerinde koşul geniş zamanla (cut down), sonuç \"will\" ile söylenir: will lose (kaybedecekler). \"Habitat\" yaşam alanıdır."
+  },
+  {
+    "id": "ing-7-8-01",
+    "unit": "ing-7-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "I am going to _____ medicine at university and become a doctor.",
+    "choices": [
+      "study",
+      "studies",
+      "studying",
+      "studied"
+    ],
+    "answer": 0,
+    "explanation": "\"Be going to\" kalıbından sonra fiil yalın hâlde gelir: I am going to study (okuyacağım). Bu kalıp gelecek planlarını anlatır."
+  },
+  {
+    "id": "ing-7-8-02",
+    "unit": "ing-7-8",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Scientists use a _____ to look at the stars.",
+    "choices": [
+      "microscope",
+      "calculator",
+      "telescope",
+      "compass"
+    ],
+    "answer": 2,
+    "explanation": "Yıldızlara teleskopla (telescope) bakılır. \"Microscope\" mikroskop, \"calculator\" hesap makinesi, \"compass\" pusula demektir."
+  },
+  {
+    "id": "ing-7-8-03",
+    "unit": "ing-7-8",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "The Sun is a star.",
+    "answer": true,
+    "explanation": "Güneş (the Sun) bir yıldızdır (star). Dünya ise onun çevresinde dönen bir gezegendir (planet)."
+  },
+  {
+    "id": "ing-7-8-04",
+    "unit": "ing-7-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Look at those dark clouds! It _____ rain.",
+    "choices": [
+      "went to",
+      "goes to",
+      "did",
+      "is going to"
+    ],
+    "answer": 3,
+    "explanation": "Gördüğümüz bir kanıta dayanarak tahmin yaparken \"be going to\" kullanılır. Kara bulutlar yağmurun yağacağını gösterir: It is going to rain."
+  },
+  {
+    "id": "ing-7-8-05",
+    "unit": "ing-7-8",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "I think robots _____ teach lessons in the future.",
+    "choices": [
+      "did",
+      "will",
+      "was",
+      "were"
+    ],
+    "answer": 1,
+    "explanation": "\"I think\" ve \"in the future\" gelecekle ilgili bir tahmini gösterir. Tahminlerde \"will\" + yalın fiil kullanılır: will teach."
+  },
+  {
+    "id": "ing-7-8-06",
+    "unit": "ing-7-8",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"She is going to visits Mars\" is a correct sentence.",
+    "answer": false,
+    "explanation": "\"Be going to\" kalıbından sonra fiil ek almaz. Doğru cümle: She is going to visit Mars."
+  },
+  {
+    "id": "ing-7-8-07",
+    "unit": "ing-7-8",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Which planet is the closest to the Sun?",
+    "choices": [
+      "Venus",
+      "Jupiter",
+      "Mercury",
+      "Mars"
+    ],
+    "answer": 2,
+    "explanation": "Güneş'e en yakın gezegen Merkür'dür (Mercury). \"The closest\" en yakın demektir; sıra Mercury, Venus, Earth, Mars diye devam eder."
+  }
+]

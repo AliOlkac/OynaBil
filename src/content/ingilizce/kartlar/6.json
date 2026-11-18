@@ -1,0 +1,538 @@
+[
+  {
+    "kind": "pairs",
+    "id": "ing-6-1-okul-gorevlileri",
+    "unit": "ing-6-1",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{en}\" ifadesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce ifade hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" ifadesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "principal",
+        "en": "principal",
+        "tr": "okul müdürü",
+        "enSik": "Principal",
+        "trSik": "Okul müdürü"
+      },
+      {
+        "id": "teacher",
+        "en": "teacher",
+        "tr": "öğretmen",
+        "enSik": "Teacher",
+        "trSik": "Öğretmen"
+      },
+      {
+        "id": "student",
+        "en": "student",
+        "tr": "öğrenci",
+        "enSik": "Student",
+        "trSik": "Öğrenci"
+      },
+      {
+        "id": "librarian",
+        "en": "librarian",
+        "tr": "kütüphaneci",
+        "enSik": "Librarian",
+        "trSik": "Kütüphaneci"
+      },
+      {
+        "id": "school-nurse",
+        "en": "school nurse",
+        "tr": "okul hemşiresi",
+        "enSik": "School nurse",
+        "trSik": "Okul hemşiresi"
+      },
+      {
+        "id": "cleaner",
+        "en": "cleaner",
+        "tr": "temizlik görevlisi",
+        "enSik": "Cleaner",
+        "trSik": "Temizlik görevlisi"
+      },
+      {
+        "id": "security-guard",
+        "en": "security guard",
+        "tr": "güvenlik görevlisi",
+        "enSik": "Security guard",
+        "trSik": "Güvenlik görevlisi"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-6-3-duygular",
+    "unit": "ing-6-3",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "happy",
+        "en": "happy",
+        "tr": "mutlu",
+        "enSik": "Happy",
+        "trSik": "Mutlu"
+      },
+      {
+        "id": "sad",
+        "en": "sad",
+        "tr": "üzgün",
+        "enSik": "Sad",
+        "trSik": "Üzgün"
+      },
+      {
+        "id": "angry",
+        "en": "angry",
+        "tr": "kızgın",
+        "enSik": "Angry",
+        "trSik": "Kızgın"
+      },
+      {
+        "id": "tired",
+        "en": "tired",
+        "tr": "yorgun",
+        "enSik": "Tired",
+        "trSik": "Yorgun"
+      },
+      {
+        "id": "scared",
+        "en": "scared",
+        "tr": "korkmuş",
+        "enSik": "Scared",
+        "trSik": "Korkmuş"
+      },
+      {
+        "id": "surprised",
+        "en": "surprised",
+        "tr": "şaşırmış",
+        "enSik": "Surprised",
+        "trSik": "Şaşırmış"
+      },
+      {
+        "id": "bored",
+        "en": "bored",
+        "tr": "sıkılmış",
+        "enSik": "Bored",
+        "trSik": "Sıkılmış"
+      },
+      {
+        "id": "excited",
+        "en": "excited",
+        "tr": "heyecanlı",
+        "enSik": "Excited",
+        "trSik": "Heyecanlı"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-6-4-fiiller",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{v1}\" fiilinin geçmiş zaman (past simple) hâli hangisidir?",
+        "answer": "v2"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen geçmiş zaman fiili hangisidir?",
+        "answer": "v2"
+      }
+    ],
+    "statement": {
+      "text": "\"{v1}\" fiilinin geçmiş zaman hâli \"{v2}\" biçimindedir.",
+      "swap": "v2"
+    },
+    "explanation": "\"{v1}\" düzensiz bir fiildir; geçmiş zaman hâli \"{v2}\" ({tr}) olur.",
+    "distractors": {
+      "v2": [
+        "goed",
+        "eated",
+        "comed",
+        "buyed",
+        "haved",
+        "seed"
+      ]
+    },
+    "items": [
+      {
+        "id": "go",
+        "v1": "go",
+        "v2": "went",
+        "tr": "gitti"
+      },
+      {
+        "id": "see",
+        "v1": "see",
+        "v2": "saw",
+        "tr": "gördü"
+      },
+      {
+        "id": "eat",
+        "v1": "eat",
+        "v2": "ate",
+        "tr": "yedi"
+      },
+      {
+        "id": "have",
+        "v1": "have",
+        "v2": "had",
+        "tr": "sahip oldu"
+      },
+      {
+        "id": "come",
+        "v1": "come",
+        "v2": "came",
+        "tr": "geldi"
+      },
+      {
+        "id": "buy",
+        "v1": "buy",
+        "v2": "bought",
+        "tr": "satın aldı"
+      },
+      {
+        "id": "drink",
+        "v1": "drink",
+        "v2": "drank",
+        "tr": "içti"
+      }
+    ],
+    "unit": "ing-6-4"
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-6-5-karsilastirma",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{adj}\" sıfatının karşılaştırma (comparative) hâli hangisidir?",
+        "answer": "comp"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen ifade hangisidir?",
+        "answer": "comp"
+      }
+    ],
+    "statement": {
+      "text": "\"{adj}\" sıfatının karşılaştırma hâli \"{comp}\" biçimindedir.",
+      "swap": "comp"
+    },
+    "explanation": "\"{adj}\" sıfatının karşılaştırma hâli \"{comp}\" ({tr}) olur. {kural}",
+    "distractors": {
+      "comp": [
+        "gooder",
+        "badder",
+        "more big",
+        "expensiver",
+        "noisyer",
+        "crowdeder"
+      ]
+    },
+    "items": [
+      {
+        "id": "big",
+        "adj": "big",
+        "comp": "bigger",
+        "tr": "daha büyük",
+        "kural": "Kısa sıfatlar -er alır; \"big\" sözcüğünde son harf çift yazılır."
+      },
+      {
+        "id": "small",
+        "adj": "small",
+        "comp": "smaller",
+        "tr": "daha küçük",
+        "kural": "Kısa sıfatlar -er alır."
+      },
+      {
+        "id": "noisy",
+        "adj": "noisy",
+        "comp": "noisier",
+        "tr": "daha gürültülü",
+        "kural": "-y ile biten sıfatlarda y düşer, -ier gelir."
+      },
+      {
+        "id": "crowded",
+        "adj": "crowded",
+        "comp": "more crowded",
+        "tr": "daha kalabalık",
+        "kural": "Bu sıfat \"more\" ile karşılaştırılır."
+      },
+      {
+        "id": "expensive",
+        "adj": "expensive",
+        "comp": "more expensive",
+        "tr": "daha pahalı",
+        "kural": "Uzun sıfatların önüne \"more\" gelir."
+      },
+      {
+        "id": "good",
+        "adj": "good",
+        "comp": "better",
+        "tr": "daha iyi",
+        "kural": "Bu sıfat düzensizdir."
+      },
+      {
+        "id": "bad",
+        "adj": "bad",
+        "comp": "worse",
+        "tr": "daha kötü",
+        "kural": "Bu sıfat düzensizdir."
+      },
+      {
+        "id": "cheap",
+        "adj": "cheap",
+        "comp": "cheaper",
+        "tr": "daha ucuz",
+        "kural": "Kısa sıfatlar -er alır."
+      }
+    ],
+    "unit": "ing-6-5"
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-6-5-meslekler",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "Where does a {job} work?",
+        "answer": "yerSik"
+      },
+      {
+        "prompt": "Who works {yer}?",
+        "answer": "jobSik"
+      }
+    ],
+    "statement": {
+      "text": "A {job} works {yer}.",
+      "swap": "yer"
+    },
+    "explanation": "\"{job}\" {trJob} demektir ve {trYer} çalışır: A {job} works {yer}.",
+    "items": [
+      {
+        "id": "baker",
+        "job": "baker",
+        "jobSik": "ABaker",
+        "yer": "at a bakery",
+        "yerSik": "At a bakery",
+        "trJob": "fırıncı",
+        "trYer": "fırında"
+      },
+      {
+        "id": "nurse",
+        "job": "nurse",
+        "jobSik": "ANurse",
+        "yer": "at a hospital",
+        "yerSik": "At a hospital",
+        "trJob": "hemşire",
+        "trYer": "hastanede"
+      },
+      {
+        "id": "waiter",
+        "job": "waiter",
+        "jobSik": "AWaiter",
+        "yer": "at a restaurant",
+        "yerSik": "At a restaurant",
+        "trJob": "garson",
+        "trYer": "restoranda"
+      },
+      {
+        "id": "farmer",
+        "job": "farmer",
+        "jobSik": "AFarmer",
+        "yer": "on a farm",
+        "yerSik": "On a farm",
+        "trJob": "çiftçi",
+        "trYer": "çiftlikte"
+      },
+      {
+        "id": "pharmacist",
+        "job": "pharmacist",
+        "jobSik": "APharmacist",
+        "yer": "at a pharmacy",
+        "yerSik": "At a pharmacy",
+        "trJob": "eczacı",
+        "trYer": "eczanede"
+      },
+      {
+        "id": "mechanic",
+        "job": "mechanic",
+        "jobSik": "AMechanic",
+        "yer": "at a garage",
+        "yerSik": "At a garage",
+        "trJob": "tamirci",
+        "trYer": "tamirhanede"
+      }
+    ],
+    "unit": "ing-6-5"
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-6-7-hava-durumu",
+    "unit": "ing-6-7",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "sunny",
+        "en": "sunny",
+        "tr": "güneşli",
+        "enSik": "Sunny",
+        "trSik": "Güneşli"
+      },
+      {
+        "id": "rainy",
+        "en": "rainy",
+        "tr": "yağmurlu",
+        "enSik": "Rainy",
+        "trSik": "Yağmurlu"
+      },
+      {
+        "id": "snowy",
+        "en": "snowy",
+        "tr": "karlı",
+        "enSik": "Snowy",
+        "trSik": "Karlı"
+      },
+      {
+        "id": "windy",
+        "en": "windy",
+        "tr": "rüzgârlı",
+        "enSik": "Windy",
+        "trSik": "Rüzgârlı"
+      },
+      {
+        "id": "foggy",
+        "en": "foggy",
+        "tr": "sisli",
+        "enSik": "Foggy",
+        "trSik": "Sisli"
+      },
+      {
+        "id": "cloudy",
+        "en": "cloudy",
+        "tr": "bulutlu",
+        "enSik": "Cloudy",
+        "trSik": "Bulutlu"
+      },
+      {
+        "id": "stormy",
+        "en": "stormy",
+        "tr": "fırtınalı",
+        "enSik": "Stormy",
+        "trSik": "Fırtınalı"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ing-6-8-uzay",
+    "unit": "ing-6-8",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{en}\" kelimesinin Türkçe karşılığı hangisidir?",
+        "answer": "trSik"
+      },
+      {
+        "prompt": "\"{tr}\" anlamına gelen İngilizce kelime hangisidir?",
+        "answer": "enSik"
+      }
+    ],
+    "statement": {
+      "text": "\"{en}\" kelimesi Türkçede \"{tr}\" anlamına gelir.",
+      "swap": "tr"
+    },
+    "explanation": "\"{en}\", Türkçede \"{tr}\" demektir.",
+    "items": [
+      {
+        "id": "planet",
+        "en": "planet",
+        "tr": "gezegen",
+        "enSik": "Planet",
+        "trSik": "Gezegen"
+      },
+      {
+        "id": "star",
+        "en": "star",
+        "tr": "yıldız",
+        "enSik": "Star",
+        "trSik": "Yıldız"
+      },
+      {
+        "id": "space",
+        "en": "space",
+        "tr": "uzay",
+        "enSik": "Space",
+        "trSik": "Uzay"
+      },
+      {
+        "id": "rocket",
+        "en": "rocket",
+        "tr": "roket",
+        "enSik": "Rocket",
+        "trSik": "Roket"
+      },
+      {
+        "id": "spaceship",
+        "en": "spaceship",
+        "tr": "uzay gemisi",
+        "enSik": "Spaceship",
+        "trSik": "Uzay gemisi"
+      },
+      {
+        "id": "satellite",
+        "en": "satellite",
+        "tr": "uydu",
+        "enSik": "Satellite",
+        "trSik": "Uydu"
+      },
+      {
+        "id": "galaxy",
+        "en": "galaxy",
+        "tr": "galaksi",
+        "enSik": "Galaxy",
+        "trSik": "Galaksi"
+      }
+    ]
+  }
+]
