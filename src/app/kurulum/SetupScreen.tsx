@@ -191,7 +191,7 @@ export function SetupScreen() {
           )}
         </Panel>
 
-        <Panel title={subject.name} delay={0.05}>
+        <Panel title={SUBJECTS.length > 1 ? "Ders ve sınıf" : subject.name} delay={0.05}>
           <div className={SUBJECTS.length > 1 ? "mb-3" : ""}>
             <SubjectPicker subjects={SUBJECTS} value={subjectId} onChange={changeSubject} size="lg" />
           </div>
