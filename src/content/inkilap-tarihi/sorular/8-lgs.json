@@ -1,0 +1,406 @@
+[
+  {
+    "id": "ink-8-1-lgs-01",
+    "unit": "ink-8-1",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Mustafa Kemal'in annesi Zübeyde Hanım, oğlunun geleneksel eğitim veren mahalle mektebinde okumasını istiyordu. Babası Ali Rıza Efendi ise yeni yöntemlerle eğitim veren Şemsi Efendi Okulu'nu tercih ediyordu. Aile önce annenin isteğine uydu, kısa bir süre sonra da Mustafa Kemal'i Şemsi Efendi Okulu'na gönderdi.",
+    "prompt": "Bu metne göre Mustafa Kemal'in eğitim hayatıyla ilgili hangisi söylenebilir?",
+    "choices": [
+      "Askerî okula ailesinin isteğiyle başlamıştır.",
+      "Eğitim hayatına hiç ara vermeden yurt dışında devam etmiştir.",
+      "İlk eğitiminde hem geleneksel hem yeni yöntemlerle tanışmıştır.",
+      "Okul seçiminde ailesi baştan beri aynı görüşteydi."
+    ],
+    "answer": 2,
+    "explanation": "Mustafa Kemal önce mahalle mektebine, ardından yeni yöntemlerle eğitim veren Şemsi Efendi Okulu'na gitti. Böylece iki farklı eğitim anlayışını da tanıdı.",
+    "tags": [
+      "LGS",
+      "Mustafa Kemal'in eğitim hayatı"
+    ]
+  },
+  {
+    "id": "ink-8-1-lgs-02",
+    "unit": "ink-8-1",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Mustafa Kemal, Manastır Askerî İdadisinde okurken edebiyata ve hitabete merak sardı. Fransızca öğrenmek için yaz tatillerinde özel ders aldı. Bu dil sayesinde Fransız düşünürlerinin özgürlük, eşitlik ve millet egemenliği üzerine yazdığı eserleri okuyabildi. Yıllar sonra kurduğu yeni devlette bu düşüncelerin izleri görüldü.",
+    "prompt": "Bu metinden hangi sonuca ulaşılabilir?",
+    "choices": [
+      "Mustafa Kemal'in gençlik yıllarındaki okumaları düşünce dünyasını etkilemiştir.",
+      "Mustafa Kemal yabancı dil öğrenmeyi gereksiz görmüştür.",
+      "Manastır Askerî İdadisinde yalnızca askerlik dersleri okutulmuştur.",
+      "Mustafa Kemal'in düşüncelerini yalnızca ailesi şekillendirmiştir."
+    ],
+    "answer": 0,
+    "explanation": "Metin, Mustafa Kemal'in Fransızca öğrenerek özgürlük ve millet egemenliği üzerine yazılmış eserleri okuduğunu ve bu fikirlerin kurduğu devlete yansıdığını anlatıyor.",
+    "tags": [
+      "LGS",
+      "Mustafa Kemal'in fikir hayatı"
+    ]
+  },
+  {
+    "id": "ink-8-1-lgs-03",
+    "unit": "ink-8-1",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "1789 Fransız İhtilali; özgürlük, eşitlik ve milliyetçilik gibi düşünceleri bütün Avrupa'ya yaydı. Bu düşünceler, içinde pek çok farklı milleti barındıran imparatorlukları zor durumda bıraktı. Osmanlı Devleti'nde de Sırplar ve Yunanlar başta olmak üzere bazı topluluklar bağımsızlık için ayaklandı. Devlet, bu dağılmayı önlemek için farklı fikirlere başvurdu.",
+    "prompt": "Bu metne göre milliyetçilik düşüncesi en çok hangi devletleri zor durumda bırakmıştır?",
+    "choices": [
+      "Sanayisi gelişmiş devletleri",
+      "Çok uluslu yapıya sahip devletleri",
+      "Denizlere kıyısı olmayan devletleri",
+      "Nüfusu az olan devletleri"
+    ],
+    "answer": 1,
+    "explanation": "Milliyetçilik her milletin kendi devletini kurma isteğini güçlendirdi. Bu yüzden Osmanlı gibi çok uluslu imparatorluklarda isyanlar çıktı.",
+    "tags": [
+      "LGS",
+      "Fransız İhtilali"
+    ]
+  },
+  {
+    "id": "ink-8-2-lgs-01",
+    "unit": "ink-8-2",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Mondros Ateşkes Antlaşması imzalandıktan sonra İtilaf Devletleri, antlaşmanın 7. maddesine dayanarak Anadolu'nun pek çok yerini işgal etmeye başladı. Musul, İskenderun, Antep ve Antalya kısa sürede işgal edildi. Osmanlı ordusunun silahları ellerinden alınıyor, askerler terhis ediliyordu. Halk ise kendi bölgesini korumak için cemiyetler kurmaya ve silahlı direnişe başladı.",
+    "prompt": "Bu metne göre halkın cemiyetler kurmasının temel nedeni nedir?",
+    "choices": [
+      "Osmanlı ordusunun güçlenmiş olması",
+      "İstanbul Hükûmetinin halkı silahlandırması",
+      "Ordunun terhis edilmesi ve işgallerin yayılması",
+      "İtilaf Devletleri'nin Anadolu'dan çekilmesi"
+    ],
+    "answer": 2,
+    "explanation": "Ordu silahsızlandırılıp işgaller yayılınca halk kendini savunacak bir güç bulamadı. Bu yüzden bölgesel cemiyetler kurup Kuva-yi Milliye birlikleri oluşturdu.",
+    "tags": [
+      "LGS",
+      "Mondros Ateşkes Antlaşması",
+      "cemiyetler"
+    ]
+  },
+  {
+    "id": "ink-8-2-lgs-02",
+    "unit": "ink-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Amasya Genelgesi'nde \"Vatanın bütünlüğü ve milletin bağımsızlığı tehlikededir.\" denildi. İstanbul Hükûmetinin üzerine düşen görevi yapamadığı belirtildi. Genelge, milletin bağımsızlığını yine milletin azim ve kararının kurtaracağını ilan etti. Ayrıca her türlü baskıdan uzak bir millî kurulun oluşturulması için Sivas'ta bir kongre toplanacağı duyuruldu.",
+    "prompt": "Genelgedeki hangi ifade millî egemenlik anlayışını en açık biçimde yansıtır?",
+    "choices": [
+      "Vatanın bütünlüğü tehlikededir.",
+      "İstanbul Hükûmeti görevini yapamamaktadır.",
+      "Milletin bağımsızlığını yine milletin azim ve kararı kurtaracaktır.",
+      "Sivas'ta bir kongre toplanacaktır."
+    ],
+    "answer": 2,
+    "explanation": "Millî egemenlik, karar verme gücünün millette olmasıdır. Bağımsızlığı milletin kendi kararının kurtaracağını söyleyen ifade bu anlayışı yansıtır.",
+    "tags": [
+      "LGS",
+      "Amasya Genelgesi",
+      "millî egemenlik"
+    ]
+  },
+  {
+    "id": "ink-8-2-lgs-03",
+    "unit": "ink-8-2",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Sivas Kongresi'nde bazı delegeler, Türkiye'nin tek başına kurtulamayacağını düşünerek Amerika'nın himayesini istemeyi önerdi. Mustafa Kemal ise bağımsızlığın pazarlık konusu olamayacağını söyledi. Uzun tartışmalardan sonra manda ve himaye kesin olarak reddedildi. Kongrede ayrıca bütün yararlı cemiyetler tek çatı altında birleştirildi.",
+    "prompt": "Bu metne göre Sivas Kongresi'nde alınan kararlar hangisini amaçlamaktadır?",
+    "choices": [
+      "Bağımsızlığı korumayı ve millî gücü birleştirmeyi",
+      "İstanbul Hükûmetine destek vermeyi",
+      "Amerika ile ittifak kurmayı",
+      "Kongrenin bölgesel kalmasını sağlamayı"
+    ],
+    "answer": 0,
+    "explanation": "Manda ve himayenin reddi bağımsızlığı, cemiyetlerin birleştirilmesi ise millî gücün tek merkezden yönetilmesini amaçlar.",
+    "tags": [
+      "LGS",
+      "Sivas Kongresi"
+    ]
+  },
+  {
+    "id": "ink-8-3-lgs-01",
+    "unit": "ink-8-3",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Birinci TBMM'nin içinde farklı görüşlerden milletvekilleri vardı. Bazıları padişaha bağlı kalınması gerektiğini düşünüyor, bazıları ise yeni bir yönetim istiyordu. Ancak hepsi vatanın düşman işgalinden kurtarılması gerektiği konusunda birleşiyordu. Meclis, savaş şartlarında hızlı karar alabilmek için yasama ve yürütme yetkisini kendinde topladı.",
+    "prompt": "Bu metne göre Birinci TBMM ile ilgili hangisi söylenebilir?",
+    "choices": [
+      "Milletvekillerinin hepsi aynı yönetim biçimini savunmuştur.",
+      "Ortak amaç vatanın kurtarılmasıdır.",
+      "Meclis yürütme yetkisini padişaha bırakmıştır.",
+      "Meclis yalnızca barış zamanında toplanmıştır."
+    ],
+    "answer": 1,
+    "explanation": "Metne göre milletvekillerinin yönetim konusundaki görüşleri farklıydı ama vatanın kurtarılması hepsinin ortak amacıydı.",
+    "tags": [
+      "LGS",
+      "TBMM"
+    ]
+  },
+  {
+    "id": "ink-8-3-lgs-02",
+    "unit": "ink-8-3",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Kütahya-Eskişehir Savaşları'ndan sonra ordu Sakarya Nehri'nin doğusuna çekildi. Mecliste endişe büyüyünce Mustafa Kemal'e başkomutanlık görevi verildi. Mustafa Kemal ordunun ihtiyaçlarını karşılamak için Tekâlif-i Milliye Emirleri'ni yayımladı. Her aile ordu için bir kat çamaşır hazırladı; halk elindeki yiyeceğin, giyeceğin ve taşıtların bir bölümünü orduya verdi.",
+    "prompt": "Bu metinde en çok vurgulanan durum hangisidir?",
+    "choices": [
+      "Savaşın yalnızca ordu tarafından yürütüldüğü",
+      "Halkın orduyla dayanışma içinde olduğu",
+      "Orduya dışarıdan yardım geldiği",
+      "Meclisin savaşa karşı olduğu"
+    ],
+    "answer": 1,
+    "explanation": "Tekâlif-i Milliye Emirleri ile halk elindekini orduyla paylaştı. Bu, Millî Mücadele'nin bütün milletin katıldığı bir mücadele olduğunu gösterir.",
+    "tags": [
+      "LGS",
+      "Tekâlif-i Milliye"
+    ]
+  },
+  {
+    "id": "ink-8-3-lgs-03",
+    "unit": "ink-8-3",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Güney Cephesi'nde Maraş, Antep ve Urfa halkı, işgalci Fransızlara ve onlarla birlikte hareket eden Ermeni birliklerine karşı aylarca direndi. Bu şehirlerde düzenli ordu yoktu; mücadeleyi Kuva-yi Milliye birlikleri ve şehir halkı yürüttü. Kahramanlıkları yıllar sonra da unutulmadı ve bu şehirlere Kahraman, Gazi ve Şanlı unvanları verildi.",
+    "prompt": "Bu metne göre şehirlerimize verilen unvanlar hangisinin göstergesidir?",
+    "choices": [
+      "Düzenli ordunun bu şehirlerde kazandığı zaferlerin",
+      "Fransızların bölgeden kendi isteğiyle çekilmesinin",
+      "Halkın bağımsızlık için gösterdiği fedakârlığın",
+      "Bu şehirlerin işgale hiç uğramamasının"
+    ],
+    "answer": 2,
+    "explanation": "Bu şehirlerde düzenli ordu yokken halk, Kuva-yi Milliye ile birlikte direndi. Verilen unvanlar halkın fedakârlığını onurlandırır.",
+    "tags": [
+      "LGS",
+      "Güney Cephesi"
+    ]
+  },
+  {
+    "id": "ink-8-3-lgs-04",
+    "unit": "ink-8-3",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Mehmet Akif Ersoy, İstiklal Marşı yarışmasına para ödülü olduğu için katılmak istemedi. Ödülü almak zorunda olmadığı söylenince şiirini yazıp gönderdi. Yarışmayı kazanınca da ödülü kabul etmeyip yardım kuruluşuna bağışladı. Şiirini hiçbir zaman eserleri arasına almadı; onun milletin malı olduğunu söyledi.",
+    "prompt": "Bu metinde Mehmet Akif Ersoy'un hangi özelliği öne çıkmaktadır?",
+    "choices": [
+      "Şöhrete düşkün olması",
+      "Ödülleri önemsemesi",
+      "Yarışmalardan hoşlanması",
+      "Çıkar gözetmeden davranması"
+    ],
+    "answer": 3,
+    "explanation": "Akif ödülü kabul etmedi ve şiirini kendi eseri gibi görmedi. Bu davranışları onun çıkar gözetmeyen, fedakâr bir kişi olduğunu gösterir.",
+    "tags": [
+      "LGS",
+      "İstiklal Marşı"
+    ]
+  },
+  {
+    "id": "ink-8-4-lgs-01",
+    "unit": "ink-8-4",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Cumhuriyetin ilk yıllarında okuma yazma bilenlerin oranı oldukça düşüktü. Arap harflerinin Türkçenin seslerine uymaması, okuma yazma öğrenmeyi zorlaştırıyordu. 1928'de Latin harflerine dayanan yeni Türk alfabesi kabul edildi. Ardından Millet Mektepleri açıldı ve kısa sürede yüz binlerce yetişkin okuma yazma öğrendi.",
+    "prompt": "Bu metne göre Harf İnkılabı'nın temel amacı nedir?",
+    "choices": [
+      "Okuma yazmayı kolaylaştırıp yaygınlaştırmak",
+      "Yabancı dil öğretimini artırmak",
+      "Okulları din adamlarına bağlamak",
+      "Yetişkinleri eğitimden uzak tutmak"
+    ],
+    "answer": 0,
+    "explanation": "Yeni harfler Türkçenin seslerine daha uygundu. Böylece okuma yazma öğrenmek kolaylaştı ve okuryazar sayısı hızla arttı.",
+    "tags": [
+      "LGS",
+      "Harf İnkılabı"
+    ]
+  },
+  {
+    "id": "ink-8-4-lgs-02",
+    "unit": "ink-8-4",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Osmanlı Devleti'nde aynı anda medreseler, Batı tarzı okullar ve yabancı okullar bulunuyordu. Bu okullarda yetişen gençler birbirinden çok farklı düşüncelere sahip oluyordu. 3 Mart 1924'te çıkarılan bir kanunla bütün okullar tek bir bakanlığa bağlandı.",
+    "prompt": "Metinde sözü edilen kanunla hangisi amaçlanmıştır?",
+    "choices": [
+      "Okul sayısını azaltmak",
+      "Eğitimde birliği sağlamak",
+      "Yabancı dil eğitimini kaldırmak",
+      "Okulları yalnızca büyük şehirlerde açmak"
+    ],
+    "answer": 1,
+    "explanation": "Metinde anlatılan kanun Tevhid-i Tedrisat Kanunu'dur. Farklı okulların tek bakanlığa bağlanmasıyla eğitimde birlik sağlandı.",
+    "tags": [
+      "LGS",
+      "Tevhid-i Tedrisat"
+    ]
+  },
+  {
+    "id": "ink-8-4-lgs-03",
+    "unit": "ink-8-4",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Cumhuriyetin ilk yıllarında ülkede sermaye birikimi azdı ve özel girişimciler büyük fabrikalar kuracak güçte değildi. Bu nedenle devlet; dokuma, demir-çelik ve madencilik gibi alanlarda fabrikalar kurdu. Sümerbank ve Etibank bu dönemde kuruldu. Devlet, özel girişimi de destekleyerek ekonomiyi canlandırmaya çalıştı.",
+    "prompt": "Bu metinde Atatürk'ün hangi ilkesinin uygulamasına yer verilmiştir?",
+    "choices": [
+      "Laiklik",
+      "Milliyetçilik",
+      "Devletçilik",
+      "Cumhuriyetçilik"
+    ],
+    "answer": 2,
+    "explanation": "Özel girişimin yetersiz kaldığı alanlarda devletin yatırım yapması devletçilik ilkesinin gereğidir. Sümerbank ve Etibank bu anlayışla kuruldu.",
+    "tags": [
+      "LGS",
+      "Atatürk ilkeleri",
+      "devletçilik"
+    ]
+  },
+  {
+    "id": "ink-8-4-lgs-04",
+    "unit": "ink-8-4",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Türk Medeni Kanunu ile birden fazla kadınla evlenme yasaklandı ve resmî nikâh zorunlu oldu. Kadınlar boşanma, mirastan pay alma ve mahkemede tanıklık konularında erkeklerle eşit haklar kazandı. Sonraki yıllarda kadınlara önce belediye, ardından milletvekili seçimlerinde seçme ve seçilme hakkı tanındı.",
+    "prompt": "Bu metne göre hangisi söylenebilir?",
+    "choices": [
+      "Kadınlar siyasi haklarını Medeni Kanun'dan önce kazanmıştır.",
+      "Medeni Kanun yalnızca ekonomik konuları düzenlemiştir.",
+      "Kadınların siyasi hakları tek seferde verilmiştir.",
+      "Kadınlar önce sosyal ve hukuki, sonra siyasi haklar kazanmıştır."
+    ],
+    "answer": 3,
+    "explanation": "Metin, kadınların önce Medeni Kanun ile aile ve miras gibi konularda eşit haklar kazandığını, siyasi hakların ise sonraki yıllarda adım adım verildiğini anlatıyor.",
+    "tags": [
+      "LGS",
+      "kadın hakları"
+    ]
+  },
+  {
+    "id": "ink-8-5-lgs-01",
+    "unit": "ink-8-5",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Atatürk, tek partili bir mecliste hükûmetin yeterince denetlenemeyeceğini düşünüyordu. Bu yüzden yakın arkadaşı Ali Fethi Okyar'dan yeni bir parti kurmasını istedi. 1930'da kurulan Serbest Cumhuriyet Fırkası kısa sürede büyük ilgi gördü. Ancak rejime karşı olanların bu partinin çevresinde toplanmaya başlaması üzerine parti kendini kapattı.",
+    "prompt": "Bu metne göre Serbest Cumhuriyet Fırkası'nın kurulmasının amacı nedir?",
+    "choices": [
+      "Meclisteki denetimi güçlendirmek",
+      "Cumhuriyeti kaldırmak",
+      "Seçimleri ertelemek",
+      "Halk Fırkası'nı kapatmak"
+    ],
+    "answer": 0,
+    "explanation": "Atatürk, hükûmetin mecliste denetlenmesini ve demokrasinin gelişmesini istiyordu. Parti bu amaçla kuruldu.",
+    "tags": [
+      "LGS",
+      "çok partili hayat"
+    ]
+  },
+  {
+    "id": "ink-8-5-lgs-02",
+    "unit": "ink-8-5",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "Cumhuriyet Dönemi'nde çok partili hayata geçmek için iki kez deneme yapıldı. 1924'te kurulan Terakkiperver Cumhuriyet Fırkası, 1925'teki Şeyh Sait İsyanı'ndan sonra kapatıldı. 1930'da kurulan Serbest Cumhuriyet Fırkası ise birkaç ay sonra kendini kapattı. Her iki denemede de partilerin çevresinde rejime karşı olan grupların toplanması dikkat çekti.",
+    "prompt": "Bu metne göre çok partili hayata geçiş denemelerinin başarısız olmasında hangisi etkili olmuştur?",
+    "choices": [
+      "Halkın seçimlere ilgi göstermemesi",
+      "Partilerin yabancı devletlerce kurulması",
+      "Rejim karşıtlarının bu partileri kullanmak istemesi",
+      "Meclisin o yıllarda kapalı olması"
+    ],
+    "answer": 2,
+    "explanation": "Metin, iki denemede de rejime karşı grupların partilerin çevresinde toplandığını vurguluyor. Bu durum denemelerin sona ermesinde etkili oldu.",
+    "tags": [
+      "LGS",
+      "çok partili hayat"
+    ]
+  },
+  {
+    "id": "ink-8-6-lgs-01",
+    "unit": "ink-8-6",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "Lozan'da Boğazlar'ın yönetimi, başkanı Türk olan uluslararası bir komisyona bırakılmış, Boğazlar'ın iki yakası askersiz hâle getirilmişti. 1930'larda Avrupa'da savaş tehlikesi artınca Türkiye bu durumun güvenliğini tehdit ettiğini belirtti ve ilgili devletleri görüşmeye çağırdı. 1936'da Montrö'de imzalanan sözleşmeyle Türkiye, Boğazlar'da tam egemenlik kazandı.",
+    "prompt": "Bu metne göre Türkiye, Boğazlar sorununu çözerken hangi yolu izlemiştir?",
+    "choices": [
+      "Savaş ilan etmiştir.",
+      "Sorunu görmezden gelmiştir.",
+      "Antlaşmayı tek taraflı olarak bozmuştur.",
+      "Barışçı yollarla görüşmeyi seçmiştir."
+    ],
+    "answer": 3,
+    "explanation": "Türkiye haklı gerekçesini açıklayıp devletleri görüşmeye çağırdı ve sonucu masada aldı. Bu, \"Yurtta sulh, cihanda sulh\" anlayışına uygundur.",
+    "tags": [
+      "LGS",
+      "Boğazlar sorunu"
+    ]
+  },
+  {
+    "id": "ink-8-6-lgs-02",
+    "unit": "ink-8-6",
+    "type": "passage",
+    "difficulty": 3,
+    "context": "1930'larda İtalya'nın Akdeniz ve Balkanlar'daki yayılmacı politikası bölge ülkelerini kaygılandırdı. Bunun üzerine Türkiye, Yunanistan, Yugoslavya ve Romanya 1934'te Balkan Antantı'nı kurdu. Türkiye 1937'de de doğu komşuları İran, Irak ve Afganistan ile Sadabat Paktı'nı imzaladı.",
+    "prompt": "Bu metne göre Türkiye'nin kurduğu ittifakların ortak amacı nedir?",
+    "choices": [
+      "Komşu ülkelerin topraklarını almak",
+      "Bölgede barış ve güvenliği korumak",
+      "Milletler Cemiyeti'nden ayrılmak",
+      "Avrupa'daki savaşa katılmak"
+    ],
+    "answer": 1,
+    "explanation": "Türkiye hem batıda hem doğuda komşularıyla iş birliği yaparak olası tehlikelere karşı bölgesel barışı ve güvenliği korumaya çalıştı.",
+    "tags": [
+      "LGS",
+      "Balkan Antantı",
+      "Sadabat Paktı"
+    ]
+  },
+  {
+    "id": "ink-8-7-lgs-01",
+    "unit": "ink-8-7",
+    "type": "passage",
+    "difficulty": 2,
+    "context": "İkinci Dünya Savaşı başladığında Türkiye, Birinci Dünya Savaşı'nın acı sonuçlarını unutmamıştı. Hükûmet, ülkeyi savaşın dışında tutmak için hem Müttefikler hem de Almanya ile dengeli ilişkiler kurdu. Savaş yıllarında Türkiye'ye saldırı olmadı, ancak ordunun hazır tutulması ekonomiyi zorladı; bazı temel ürünler karneyle dağıtıldı.",
+    "prompt": "Bu metne göre İkinci Dünya Savaşı yıllarında Türkiye ile ilgili hangisi söylenebilir?",
+    "choices": [
+      "Savaşın başından itibaren Almanya'nın yanında savaştı.",
+      "Savaşa girmese de savaşın ekonomik etkilerini yaşadı.",
+      "Savaş yıllarında ekonomisi hızla büyüdü.",
+      "Savaşın dışında kalmak için hiçbir çaba göstermedi."
+    ],
+    "answer": 1,
+    "explanation": "Türkiye dengeli bir politikayla savaşın dışında kaldı. Ancak ordunun sürekli hazır tutulması ekonomiyi zorladı ve karne uygulamasına gidildi.",
+    "tags": [
+      "LGS",
+      "İkinci Dünya Savaşı"
+    ]
+  },
+  {
+    "id": "ink-8-7-lgs-02",
+    "unit": "ink-8-7",
+    "type": "passage",
+    "difficulty": 1,
+    "context": "Atatürk, 5 Eylül 1938'de yazdığı vasiyetinde mirasının büyük bölümünü Cumhuriyet Halk Partisine bıraktı. Banka hisselerinin gelirinden pay ayırırken kız kardeşi Makbule Hanım'ı, manevi evlatlarını ve İsmet İnönü'nün çocuklarının eğitimini unutmadı. Gelirin geri kalanını ise Türk Tarih Kurumu ile Türk Dil Kurumu'na ayırdı.",
+    "prompt": "Bu vasiyet Atatürk'ün en çok hangi alana önem verdiğini gösterir?",
+    "choices": [
+      "Askerî güce",
+      "Ticarete",
+      "Bilim ve kültüre",
+      "Tarıma"
+    ],
+    "answer": 2,
+    "explanation": "Atatürk gelirinin önemli bir bölümünü tarih ve dil araştırmaları yapan iki kuruma bıraktı. Bu, bilime ve millî kültüre verdiği önemi gösterir.",
+    "tags": [
+      "LGS",
+      "Atatürk'ün vasiyeti"
+    ]
+  }
+]

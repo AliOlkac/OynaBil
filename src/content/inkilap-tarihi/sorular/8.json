@@ -1,0 +1,1220 @@
+[
+  {
+    "id": "ink-8-1-01",
+    "unit": "ink-8-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Mustafa Kemal hangi yıl ve hangi şehirde doğmuştur?",
+    "choices": [
+      "1876, Selanik",
+      "1881, Manastır",
+      "1881, Selanik",
+      "1889, İstanbul"
+    ],
+    "answer": 2,
+    "explanation": "Mustafa Kemal 1881'de Selanik'te doğdu. Babası Ali Rıza Efendi, annesi Zübeyde Hanım'dır.",
+    "tags": [
+      "Mustafa Kemal'in hayatı"
+    ]
+  },
+  {
+    "id": "ink-8-1-02",
+    "unit": "ink-8-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Mustafa Kemal'e \"Kemal\" adını Selanik Askerî Rüştiyesindeki matematik öğretmeni vermiştir.",
+    "answer": true,
+    "explanation": "Matematik öğretmeni Mustafa Sabri Bey, derslerdeki başarısı nedeniyle ona \"Kemal\" adını verdi. Kemal, olgunluk ve mükemmellik demektir.",
+    "tags": [
+      "Mustafa Kemal'in hayatı"
+    ]
+  },
+  {
+    "id": "ink-8-1-03",
+    "unit": "ink-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Mustafa Kemal'in Ömer Naci ile tanıştığı, edebiyata ve tarihe ilgi duymaya başladığı okul hangisidir?",
+    "choices": [
+      "Şemsi Efendi Okulu",
+      "Manastır Askerî İdadisi",
+      "Selanik Askerî Rüştiyesi",
+      "Harp Akademisi"
+    ],
+    "answer": 1,
+    "explanation": "Mustafa Kemal, Manastır Askerî İdadisinde şair Ömer Naci ile tanıştı. Bu okulda edebiyata, hitabete ve tarihe ilgi duymaya başladı.",
+    "tags": [
+      "Mustafa Kemal'in hayatı"
+    ]
+  },
+  {
+    "id": "ink-8-1-04",
+    "unit": "ink-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Mustafa Kemal'in mahalle mektebinden sonra babasının isteğiyle geçtiği, yeni yöntemlerle eğitim veren okul hangisidir?",
+    "choices": [
+      "Selanik Askerî Rüştiyesi",
+      "Mülkiye Mektebi",
+      "Manastır Askerî İdadisi",
+      "Şemsi Efendi Okulu"
+    ],
+    "answer": 3,
+    "explanation": "Annesi Mustafa Kemal'in mahalle mektebinde okumasını, babası ise yeni yöntemlerle eğitim veren Şemsi Efendi Okulu'na gitmesini istedi. Sonunda Şemsi Efendi Okulu'na geçti.",
+    "tags": [
+      "Mustafa Kemal'in hayatı"
+    ]
+  },
+  {
+    "id": "ink-8-1-05",
+    "unit": "ink-8-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Mustafa Kemal'in Tobruk ve Derne'de İtalyanlara karşı savaştığı savaş hangisidir?",
+    "choices": [
+      "Balkan Savaşları",
+      "Trablusgarp Savaşı",
+      "Çanakkale Savaşı",
+      "Sakarya Savaşı"
+    ],
+    "answer": 1,
+    "explanation": "1911'de İtalya Trablusgarp'a saldırınca Mustafa Kemal gönüllü olarak bölgeye gitti ve Tobruk ile Derne'de yerel halkı örgütleyerek savaştı.",
+    "tags": [
+      "Trablusgarp Savaşı"
+    ]
+  },
+  {
+    "id": "ink-8-1-06",
+    "unit": "ink-8-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Çanakkale Savaşı'nda Mustafa Kemal, Anafartalar ve Conkbayırı'nda önemli başarılar kazanmıştır.",
+    "answer": true,
+    "explanation": "Mustafa Kemal, Çanakkale Kara Savaşları'nda Arıburnu, Anafartalar ve Conkbayırı'nda kazandığı başarılarla tanınmaya başladı.",
+    "tags": [
+      "Çanakkale Savaşı"
+    ]
+  },
+  {
+    "id": "ink-8-1-07",
+    "unit": "ink-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "18 Mart 1915'te Çanakkale'de kazanılan zafer, hangi tür bir zaferdir?",
+    "choices": [
+      "Kara zaferi",
+      "Hava zaferi",
+      "Deniz zaferi",
+      "Diplomatik zafer"
+    ],
+    "answer": 2,
+    "explanation": "18 Mart 1915'te İtilaf donanması Çanakkale Boğazı'nı geçmeyi başaramadı. Bu yüzden 18 Mart, Çanakkale Deniz Zaferi olarak anılır.",
+    "tags": [
+      "Çanakkale Savaşı"
+    ]
+  },
+  {
+    "id": "ink-8-1-08",
+    "unit": "ink-8-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Birinci Dünya Savaşı'nda Mustafa Kemal'in Muş ve Bitlis'i Ruslardan geri aldığı cephe hangisidir?",
+    "choices": [
+      "Kafkas Cephesi",
+      "Irak Cephesi",
+      "Suriye-Filistin Cephesi",
+      "Kanal Cephesi"
+    ],
+    "answer": 0,
+    "explanation": "Mustafa Kemal 1916'da Kafkas Cephesi'nde görev yaptı ve Rusların işgal ettiği Muş ile Bitlis'i geri aldı.",
+    "tags": [
+      "Birinci Dünya Savaşı"
+    ]
+  },
+  {
+    "id": "ink-8-1-09",
+    "unit": "ink-8-1",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Fransız İhtilali'nin yaydığı milliyetçilik düşüncesi Osmanlı Devleti'ni en çok nasıl etkilemiştir?",
+    "choices": [
+      "Sanayi hızla gelişmiştir.",
+      "Kapitülasyonlar kaldırılmıştır.",
+      "Farklı milletler bağımsızlık için ayaklanmıştır.",
+      "Ticaret yolları değişmiştir."
+    ],
+    "answer": 2,
+    "explanation": "Milliyetçilik düşüncesi, çok uluslu Osmanlı Devleti'nde farklı milletlerin bağımsızlık isteğini artırdı. Bu da isyanlara ve toprak kayıplarına yol açtı.",
+    "tags": [
+      "Fransız İhtilali"
+    ]
+  },
+  {
+    "id": "ink-8-1-10",
+    "unit": "ink-8-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Birinci Dünya Savaşı'nda Osmanlı Devleti, İtilaf Devletleri'nin yanında savaşmıştır.",
+    "answer": false,
+    "explanation": "Osmanlı Devleti, Almanya ve Avusturya-Macaristan ile birlikte İttifak Devletleri'nin yanında savaştı. İngiltere, Fransa ve Rusya ise İtilaf Devletleri'ydi.",
+    "tags": [
+      "Birinci Dünya Savaşı"
+    ]
+  },
+  {
+    "id": "ink-8-1-11",
+    "unit": "ink-8-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Osmanlı Devleti, II. Balkan Savaşı sırasında hangi şehri geri almıştır?",
+    "choices": [
+      "Selanik",
+      "Edirne",
+      "Manastır",
+      "Sofya"
+    ],
+    "answer": 1,
+    "explanation": "I. Balkan Savaşı'nda kaybedilen Edirne, 1913'teki II. Balkan Savaşı sırasında geri alındı. Selanik ve Manastır ise geri alınamadı.",
+    "tags": [
+      "Balkan Savaşları"
+    ]
+  },
+  {
+    "id": "ink-8-2-01",
+    "unit": "ink-8-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Birinci Dünya Savaşı'ndan yenik çıkan Osmanlı Devleti'nin 30 Ekim 1918'de imzaladığı ateşkes antlaşması hangisidir?",
+    "choices": [
+      "Mudanya Ateşkes Antlaşması",
+      "Mondros Ateşkes Antlaşması",
+      "Sevr Antlaşması",
+      "Uşi Antlaşması"
+    ],
+    "answer": 1,
+    "explanation": "Mondros Ateşkes Antlaşması ile Osmanlı Devleti savaştan çekildi. Antlaşmanın ağır maddeleri Anadolu'nun işgaline zemin hazırladı.",
+    "tags": [
+      "Mondros Ateşkes Antlaşması"
+    ]
+  },
+  {
+    "id": "ink-8-2-02",
+    "unit": "ink-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Mondros Ateşkes Antlaşması'nın hangi maddesi, İtilaf Devletleri'ne güvenliklerini tehdit eden herhangi bir stratejik yeri işgal etme hakkı vermiştir?",
+    "choices": [
+      "1. madde",
+      "5. madde",
+      "24. madde",
+      "7. madde"
+    ],
+    "answer": 3,
+    "explanation": "7. madde, İtilaf Devletleri'ne istedikleri yeri işgal etme yolunu açtı. 24. madde ise doğudaki altı vilayette karışıklık çıkarsa buraların işgal edilebileceğini söylüyordu.",
+    "tags": [
+      "Mondros Ateşkes Antlaşması"
+    ]
+  },
+  {
+    "id": "ink-8-2-03",
+    "unit": "ink-8-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Mustafa Kemal, 19 Mayıs 1919'da Samsun'a çıkarak Millî Mücadele'yi başlatmıştır.",
+    "answer": true,
+    "explanation": "Mustafa Kemal, Bandırma Vapuru ile 19 Mayıs 1919'da Samsun'a çıktı. Bu tarih Millî Mücadele'nin başlangıcı kabul edilir.",
+    "tags": [
+      "Samsun'a çıkış"
+    ]
+  },
+  {
+    "id": "ink-8-2-04",
+    "unit": "ink-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kuva-yi Milliye'nin işgallere karşı ilk silahlı direnişi nerede ve kime karşı yapılmıştır?",
+    "choices": [
+      "İzmir'de Yunanlara karşı",
+      "Antep'te İngilizlere karşı",
+      "Dörtyol'da Fransızlara karşı",
+      "Antalya'da İtalyanlara karşı"
+    ],
+    "answer": 2,
+    "explanation": "İşgallere karşı ilk silahlı direniş, 19 Aralık 1918'de Hatay'ın Dörtyol ilçesinde Fransızlara karşı yapıldı.",
+    "tags": [
+      "Kuva-yi Milliye"
+    ]
+  },
+  {
+    "id": "ink-8-2-05",
+    "unit": "ink-8-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İzmir'in işgali sırasında Yunan askerlerine ilk kurşunu atan gazeteci kimdir?",
+    "choices": [
+      "Hasan Tahsin",
+      "Mehmet Akif Ersoy",
+      "Halide Edip Adıvar",
+      "Ömer Naci"
+    ],
+    "answer": 0,
+    "explanation": "15 Mayıs 1919'da İzmir'in işgali sırasında gazeteci Hasan Tahsin, işgalcilere ilk kurşunu attı ve şehit oldu.",
+    "tags": [
+      "İzmir'in işgali"
+    ]
+  },
+  {
+    "id": "ink-8-2-06",
+    "unit": "ink-8-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Aşağıdakilerden hangisi Millî Mücadele'ye karşı kurulan zararlı cemiyetlerden biridir?",
+    "choices": [
+      "Trakya Paşaeli Cemiyeti",
+      "Mavri Mira Cemiyeti",
+      "Kilikyalılar Cemiyeti",
+      "Millî Kongre Cemiyeti"
+    ],
+    "answer": 1,
+    "explanation": "Mavri Mira, Rumların Bizans'ı yeniden kurmak amacıyla oluşturduğu zararlı bir cemiyettir. Diğer üçü vatanı savunmak için kurulan yararlı cemiyetlerdir.",
+    "tags": [
+      "cemiyetler"
+    ]
+  },
+  {
+    "id": "ink-8-2-07",
+    "unit": "ink-8-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Erzurum Kongresi, katılımcıları bakımından bölgesel; aldığı kararlar bakımından ulusal bir kongredir.",
+    "answer": true,
+    "explanation": "Erzurum Kongresi'ne yalnızca doğu illerinden temsilciler katıldı, bu yüzden bölgeseldir. Kararları ise bütün vatanı ilgilendirdiği için ulusaldır.",
+    "tags": [
+      "Erzurum Kongresi"
+    ]
+  },
+  {
+    "id": "ink-8-2-08",
+    "unit": "ink-8-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Sivas Kongresi'nde Millî Mücadele'nin sesini duyurmak için çıkarılmasına karar verilen gazete hangisidir?",
+    "choices": [
+      "Hâkimiyet-i Milliye",
+      "Takvim-i Vekayi",
+      "Tercüman-ı Ahval",
+      "İrade-i Milliye"
+    ],
+    "answer": 3,
+    "explanation": "Sivas Kongresi'nde İrade-i Milliye gazetesinin çıkarılmasına karar verildi. Hâkimiyet-i Milliye ise 1920'de Ankara'da çıkarılan gazetedir.",
+    "tags": [
+      "Sivas Kongresi"
+    ]
+  },
+  {
+    "id": "ink-8-2-09",
+    "unit": "ink-8-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Son Osmanlı Mebusan Meclisi Misak-ı Millî'yi kabul edince İtilaf Devletleri ne yapmıştır?",
+    "choices": [
+      "İstanbul'u resmen işgal etmişlerdir.",
+      "Mudanya'da ateşkes istemişlerdir.",
+      "Kapitülasyonları kaldırmışlardır.",
+      "Lozan Konferansı'nı toplamışlardır."
+    ],
+    "answer": 0,
+    "explanation": "Misak-ı Millî'nin kabulünden rahatsız olan İtilaf Devletleri 16 Mart 1920'de İstanbul'u resmen işgal etti. Bu gelişme Ankara'da TBMM'nin açılmasına yol açtı.",
+    "tags": [
+      "Misak-ı Millî"
+    ]
+  },
+  {
+    "id": "ink-8-2-10",
+    "unit": "ink-8-2",
+    "type": "true-false",
+    "difficulty": 3,
+    "prompt": "Amerikan mandası düşüncesi Sivas Kongresi'nde tartışılmış ve kesin olarak reddedilmiştir.",
+    "answer": true,
+    "explanation": "Sivas Kongresi'nde bazı delegeler Amerikan mandasını savundu. Mustafa Kemal'in kararlı tutumuyla manda ve himaye kesin olarak reddedildi.",
+    "tags": [
+      "Sivas Kongresi"
+    ]
+  },
+  {
+    "id": "ink-8-2-11",
+    "unit": "ink-8-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Mustafa Kemal Samsun'a hangi görevle gönderilmiştir?",
+    "choices": [
+      "Harbiye Nazırı",
+      "9. Ordu Müfettişi",
+      "Sadrazam",
+      "Yıldırım Orduları Komutanı"
+    ],
+    "answer": 1,
+    "explanation": "Mustafa Kemal, bölgedeki asayişi sağlamak amacıyla 9. Ordu Müfettişi olarak Samsun'a gönderildi. Bu görevi Anadolu'yu örgütlemek için kullandı.",
+    "tags": [
+      "Samsun'a çıkış"
+    ]
+  },
+  {
+    "id": "ink-8-3-01",
+    "unit": "ink-8-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Türkiye Büyük Millet Meclisi hangi tarihte açılmıştır?",
+    "choices": [
+      "19 Mayıs 1919",
+      "23 Nisan 1920",
+      "30 Ağustos 1922",
+      "29 Ekim 1923"
+    ],
+    "answer": 1,
+    "explanation": "TBMM 23 Nisan 1920'de Ankara'da açıldı ve Mustafa Kemal meclis başkanı seçildi.",
+    "tags": [
+      "TBMM"
+    ]
+  },
+  {
+    "id": "ink-8-3-02",
+    "unit": "ink-8-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Birinci TBMM, güçler birliği ilkesini benimseyerek yasama ve yürütme yetkisini kendinde toplamıştır.",
+    "answer": true,
+    "explanation": "Olağanüstü şartlarda hızlı karar alabilmek için TBMM, yasama ve yürütme yetkisini kendinde topladı. Buna güçler birliği denir.",
+    "tags": [
+      "TBMM"
+    ]
+  },
+  {
+    "id": "ink-8-3-03",
+    "unit": "ink-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "TBMM'nin vatana ihanet edenleri cezalandırmak için çıkardığı kanun hangisidir?",
+    "choices": [
+      "Takrir-i Sükûn Kanunu",
+      "Teşvik-i Sanayi Kanunu",
+      "Hıyanet-i Vataniye Kanunu",
+      "Kabotaj Kanunu"
+    ],
+    "answer": 2,
+    "explanation": "Ayaklanmalar üzerine TBMM, Nisan 1920'de Hıyanet-i Vataniye Kanunu'nu çıkardı. Bu kanunu uygulamak için İstiklal Mahkemeleri kuruldu.",
+    "tags": [
+      "TBMM'ye karşı ayaklanmalar"
+    ]
+  },
+  {
+    "id": "ink-8-3-04",
+    "unit": "ink-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Osmanlı Hükûmetinin imzaladığı, ancak Mebusan Meclisi kapalı olduğu için onaylanmayan antlaşma hangisidir?",
+    "choices": [
+      "Sevr Antlaşması",
+      "Mondros Ateşkes Antlaşması",
+      "Gümrü Antlaşması",
+      "Lozan Barış Antlaşması"
+    ],
+    "answer": 0,
+    "explanation": "Sevr Antlaşması 10 Ağustos 1920'de imzalandı. Mebusan Meclisi kapalı olduğu için onaylanmadı; TBMM de antlaşmayı tanımadı ve hukuken geçersiz kaldı.",
+    "tags": [
+      "Sevr Antlaşması"
+    ]
+  },
+  {
+    "id": "ink-8-3-05",
+    "unit": "ink-8-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İstiklal Marşı'nın şairi kimdir?",
+    "choices": [
+      "Ziya Gökalp",
+      "Namık Kemal",
+      "Yahya Kemal Beyatlı",
+      "Mehmet Akif Ersoy"
+    ],
+    "answer": 3,
+    "explanation": "İstiklal Marşı'nı Mehmet Akif Ersoy yazdı. Akif, şiiri Türk ordusuna armağan etti.",
+    "tags": [
+      "İstiklal Marşı"
+    ]
+  },
+  {
+    "id": "ink-8-3-06",
+    "unit": "ink-8-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "İstiklal Marşı, 12 Mart 1921'de TBMM tarafından kabul edilmiştir.",
+    "answer": true,
+    "explanation": "İstiklal Marşı 12 Mart 1921'de TBMM'de kabul edildi. Bu yüzden 12 Mart, İstiklal Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma Günü'dür.",
+    "tags": [
+      "İstiklal Marşı"
+    ]
+  },
+  {
+    "id": "ink-8-3-07",
+    "unit": "ink-8-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Sakarya'da verilen \"Hattı müdafaa yoktur, sathı müdafaa vardır.\" emri neyi anlatır?",
+    "choices": [
+      "Ordunun hemen geri çekilmesi gerektiğini",
+      "Bir hattın değil, bütün vatan toprağının savunulacağını",
+      "Savaşın yalnızca bir şehirde yapılacağını",
+      "Barış görüşmelerine başlanacağını"
+    ],
+    "answer": 1,
+    "explanation": "Mustafa Kemal bu emirle savunmanın bir çizgiyle sınırlı olmadığını, vatanın her karışının savunulacağını bildirdi.",
+    "tags": [
+      "Sakarya Meydan Muharebesi"
+    ]
+  },
+  {
+    "id": "ink-8-3-08",
+    "unit": "ink-8-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kütahya-Eskişehir Savaşları'ndan sonra ordunun ihtiyaçlarını halkın katkısıyla karşılamak için yayımlanan emirler hangisidir?",
+    "choices": [
+      "Tekâlif-i Milliye Emirleri",
+      "Amasya Genelgesi",
+      "Havza Genelgesi",
+      "Misak-ı Millî"
+    ],
+    "answer": 0,
+    "explanation": "Başkomutan Mustafa Kemal, Ağustos 1921'de Tekâlif-i Milliye Emirleri'ni yayımladı. Halk; yiyecek, giyecek ve silahının bir kısmını orduya verdi.",
+    "tags": [
+      "Tekâlif-i Milliye"
+    ]
+  },
+  {
+    "id": "ink-8-3-09",
+    "unit": "ink-8-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Güney Cephesi'nde Fransızlara ve Ermenilere karşı düzenli ordu değil, Kuva-yi Milliye mücadele etmiştir.",
+    "answer": true,
+    "explanation": "Maraş, Antep ve Urfa'da halk Kuva-yi Milliye birlikleriyle direndi. Bu yüzden şehirlerimiz Kahraman, Gazi ve Şanlı unvanlarını aldı.",
+    "tags": [
+      "Güney Cephesi"
+    ]
+  },
+  {
+    "id": "ink-8-3-10",
+    "unit": "ink-8-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Lozan Konferansı'nda çözülemeyen ve İngiltere ile sonradan görüşülmesine karar verilen sorun hangisidir?",
+    "choices": [
+      "Kapitülasyonlar",
+      "Batı Trakya",
+      "Musul",
+      "Savaş tazminatı"
+    ],
+    "answer": 2,
+    "explanation": "Lozan'da Irak sınırı, yani Musul sorunu çözülemedi ve İngiltere ile ikili görüşmelere bırakıldı. Kapitülasyonlar ise tamamen kaldırıldı.",
+    "tags": [
+      "Lozan Barış Antlaşması"
+    ]
+  },
+  {
+    "id": "ink-8-3-11",
+    "unit": "ink-8-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Büyük Taarruz'dan sonra \"Ordular! İlk hedefiniz Akdeniz'dir. İleri!\" emriyle ilerleyen Türk ordusu 9 Eylül 1922'de hangi şehre girmiştir?",
+    "choices": [
+      "Bursa",
+      "Eskişehir",
+      "Afyonkarahisar",
+      "İzmir"
+    ],
+    "answer": 3,
+    "explanation": "Türk ordusu 9 Eylül 1922'de İzmir'e girdi. Böylece Batı Anadolu Yunan işgalinden kurtarıldı.",
+    "tags": [
+      "Büyük Taarruz"
+    ]
+  },
+  {
+    "id": "ink-8-3-12",
+    "unit": "ink-8-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kastamonu yolunda taşıdığı cephaneyi kardan ve soğuktan korurken donarak şehit olan kadın kahraman kimdir?",
+    "choices": [
+      "Şerife Bacı",
+      "Kara Fatma",
+      "Halide Edip Adıvar",
+      "Nezahat Onbaşı"
+    ],
+    "answer": 0,
+    "explanation": "Şerife Bacı, İnebolu'dan cepheye cephane taşıyan kadınlardandı. Cephaneyi örtüsüyle koruyup kendisi soğuktan donarak şehit oldu.",
+    "tags": [
+      "Millî Mücadele'de kadınlar"
+    ]
+  },
+  {
+    "id": "ink-8-4-01",
+    "unit": "ink-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Cumhuriyet hangi tarihte ilan edilmiştir?",
+    "choices": [
+      "23 Nisan 1920",
+      "1 Kasım 1922",
+      "29 Ekim 1923",
+      "3 Mart 1924"
+    ],
+    "answer": 2,
+    "explanation": "Cumhuriyet 29 Ekim 1923'te ilan edildi ve Mustafa Kemal ilk cumhurbaşkanı seçildi.",
+    "tags": [
+      "Cumhuriyetin ilanı"
+    ]
+  },
+  {
+    "id": "ink-8-4-02",
+    "unit": "ink-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Halifeliğin kaldırıldığı gün öğretim birliğini sağlamak için kabul edilen kanun hangisidir?",
+    "choices": [
+      "Tevhid-i Tedrisat Kanunu",
+      "Soyadı Kanunu",
+      "Şapka Kanunu",
+      "Kabotaj Kanunu"
+    ],
+    "answer": 0,
+    "explanation": "3 Mart 1924'te Tevhid-i Tedrisat Kanunu ile bütün okullar Maarif Vekâletine bağlandı ve eğitimde birlik sağlandı.",
+    "tags": [
+      "Tevhid-i Tedrisat"
+    ]
+  },
+  {
+    "id": "ink-8-4-03",
+    "unit": "ink-8-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Türk Medeni Kanunu, İsviçre Medeni Kanunu örnek alınarak hazırlanmıştır.",
+    "answer": true,
+    "explanation": "1926'da kabul edilen Türk Medeni Kanunu İsviçre'den alındı. Bu kanunla kadın ve erkek, aile ve miras konularında eşit haklar kazandı.",
+    "tags": [
+      "Türk Medeni Kanunu"
+    ]
+  },
+  {
+    "id": "ink-8-4-04",
+    "unit": "ink-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Türk kadını milletvekili seçme ve seçilme hakkını hangi yıl elde etmiştir?",
+    "choices": [
+      "1926",
+      "1930",
+      "1946",
+      "1934"
+    ],
+    "answer": 3,
+    "explanation": "Türk kadını 1930'da belediye seçimlerinde, 1934'te ise milletvekili seçimlerinde seçme ve seçilme hakkı kazandı.",
+    "tags": [
+      "kadın hakları"
+    ]
+  },
+  {
+    "id": "ink-8-4-05",
+    "unit": "ink-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Türk Tarih Kurumu ve Türk Dil Kurumu'nun kurulması Atatürk'ün hangi ilkesiyle doğrudan ilgilidir?",
+    "choices": [
+      "Devletçilik",
+      "Laiklik",
+      "Milliyetçilik",
+      "Cumhuriyetçilik"
+    ],
+    "answer": 2,
+    "explanation": "Bu kurumlar Türk tarihini ve Türk dilini araştırmak, millî kültürü güçlendirmek için kuruldu. Bu amaç milliyetçilik ilkesiyle ilgilidir.",
+    "tags": [
+      "Atatürk ilkeleri"
+    ]
+  },
+  {
+    "id": "ink-8-4-06",
+    "unit": "ink-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Halifeliğin kaldırılması Atatürk'ün hangi ilkesiyle en çok ilgilidir?",
+    "choices": [
+      "Halkçılık",
+      "Laiklik",
+      "Devletçilik",
+      "Milliyetçilik"
+    ],
+    "answer": 1,
+    "explanation": "Halifeliğin kaldırılmasıyla din ve devlet işleri birbirinden ayrılmaya başladı. Bu, laiklik ilkesiyle ilgilidir.",
+    "tags": [
+      "Atatürk ilkeleri"
+    ]
+  },
+  {
+    "id": "ink-8-4-07",
+    "unit": "ink-8-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Soyadı Kanunu'nun ardından TBMM, Mustafa Kemal'e \"Atatürk\" soyadını vermiştir.",
+    "answer": true,
+    "explanation": "Soyadı Kanunu 1934'te kabul edildi. Aynı yıl TBMM, çıkardığı özel bir kanunla Mustafa Kemal'e \"Atatürk\" soyadını verdi.",
+    "tags": [
+      "Soyadı Kanunu"
+    ]
+  },
+  {
+    "id": "ink-8-4-08",
+    "unit": "ink-8-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "1923'te toplanan ve ekonomide \"Misak-ı İktisadi\" kararlarının alındığı kongre hangisidir?",
+    "choices": [
+      "Sivas Kongresi",
+      "Erzurum Kongresi",
+      "İzmir İktisat Kongresi",
+      "Balıkesir Kongresi"
+    ],
+    "answer": 2,
+    "explanation": "İzmir İktisat Kongresi 1923'te toplandı. Kongrede millî ekonominin temel ilkeleri olan Misak-ı İktisadi kararları alındı.",
+    "tags": [
+      "ekonomi"
+    ]
+  },
+  {
+    "id": "ink-8-4-09",
+    "unit": "ink-8-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Türk karasularında gemi işletme ve ticaret hakkını yalnızca Türk vatandaşlarına veren 1926 tarihli kanun hangisidir?",
+    "choices": [
+      "Teşvik-i Sanayi Kanunu",
+      "Kabotaj Kanunu",
+      "Tevhid-i Tedrisat Kanunu",
+      "Soyadı Kanunu"
+    ],
+    "answer": 1,
+    "explanation": "Kabotaj Kanunu 1 Temmuz 1926'da yürürlüğe girdi. Bu tarih her yıl Denizcilik ve Kabotaj Bayramı olarak kutlanır.",
+    "tags": [
+      "ekonomi"
+    ]
+  },
+  {
+    "id": "ink-8-4-10",
+    "unit": "ink-8-4",
+    "type": "true-false",
+    "difficulty": 3,
+    "prompt": "Aşar vergisi, köylünün üzerindeki vergi yükünü hafifletmek amacıyla 1925'te kaldırılmıştır.",
+    "answer": true,
+    "explanation": "Aşar, ürünün bir bölümünün vergi olarak alınmasıydı ve köylüyü çok zorluyordu. 1925'te kaldırılmasıyla tarım ve köylü desteklendi.",
+    "tags": [
+      "ekonomi"
+    ]
+  },
+  {
+    "id": "ink-8-4-11",
+    "unit": "ink-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Harf İnkılabı'ndan sonra yeni harflerin halka öğretilmesi için açılan okullar hangisidir?",
+    "choices": [
+      "Köy Enstitüleri",
+      "Halkevleri",
+      "Darülfünun",
+      "Millet Mektepleri"
+    ],
+    "answer": 3,
+    "explanation": "1 Ocak 1929'da açılan Millet Mektepleri'nde okuma yazma bilmeyen yetişkinlere yeni Türk harfleri öğretildi.",
+    "tags": [
+      "Harf İnkılabı"
+    ]
+  },
+  {
+    "id": "ink-8-4-12",
+    "unit": "ink-8-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Uluslararası takvim, saat ve ölçü birimlerinin kabul edilmesinin temel amacı nedir?",
+    "choices": [
+      "Dünya ile ilişkilerde karışıklığı önlemek",
+      "Köylüyü vergiden kurtarmak",
+      "Okuma yazma oranını artırmak",
+      "Yabancı okulları denetlemek"
+    ],
+    "answer": 0,
+    "explanation": "Farklı takvim, saat ve ölçüler kullanılması ticarette ve günlük işlerde karışıklık yaratıyordu. Uluslararası sistemlere geçilerek dünya ile uyum sağlandı.",
+    "tags": [
+      "toplumsal inkılaplar"
+    ]
+  },
+  {
+    "id": "ink-8-4-13",
+    "unit": "ink-8-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Saltanat hangi tarihte kaldırılmıştır?",
+    "choices": [
+      "1 Kasım 1922",
+      "23 Nisan 1920",
+      "13 Ekim 1923",
+      "3 Mart 1924"
+    ],
+    "answer": 0,
+    "explanation": "TBMM 1 Kasım 1922'de saltanatı kaldırdı. Böylece Osmanlı Devleti hukuken sona erdi.",
+    "tags": [
+      "saltanatın kaldırılması"
+    ]
+  },
+  {
+    "id": "ink-8-5-01",
+    "unit": "ink-8-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Cumhuriyet Dönemi'nin ilk muhalefet partisi hangisidir?",
+    "choices": [
+      "Serbest Cumhuriyet Fırkası",
+      "Terakkiperver Cumhuriyet Fırkası",
+      "Demokrat Parti",
+      "Halk Fırkası"
+    ],
+    "answer": 1,
+    "explanation": "Terakkiperver Cumhuriyet Fırkası 1924'te Kâzım Karabekir ve arkadaşları tarafından kuruldu. Cumhuriyet Dönemi'nin ilk muhalefet partisidir.",
+    "tags": [
+      "çok partili hayat"
+    ]
+  },
+  {
+    "id": "ink-8-5-02",
+    "unit": "ink-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Terakkiperver Cumhuriyet Fırkası hangi olaydan sonra kapatılmıştır?",
+    "choices": [
+      "Menemen Olayı",
+      "İzmir'in işgali",
+      "Şeyh Sait İsyanı",
+      "Sevr Antlaşması"
+    ],
+    "answer": 2,
+    "explanation": "1925'te çıkan Şeyh Sait İsyanı'nda partinin bazı üyelerinin isyancılarla ilişkili olduğu düşünüldü ve parti kapatıldı.",
+    "tags": [
+      "çok partili hayat"
+    ]
+  },
+  {
+    "id": "ink-8-5-03",
+    "unit": "ink-8-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Serbest Cumhuriyet Fırkası'nı kim kurmuştur?",
+    "choices": [
+      "Kâzım Karabekir",
+      "İsmet İnönü",
+      "Celal Bayar",
+      "Ali Fethi Okyar"
+    ],
+    "answer": 3,
+    "explanation": "Serbest Cumhuriyet Fırkası 1930'da Atatürk'ün isteğiyle Ali Fethi Okyar tarafından kuruldu.",
+    "tags": [
+      "çok partili hayat"
+    ]
+  },
+  {
+    "id": "ink-8-5-04",
+    "unit": "ink-8-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Serbest Cumhuriyet Fırkası, Mustafa Kemal'in isteğiyle kurulmuştur.",
+    "answer": true,
+    "explanation": "Atatürk, mecliste hükûmeti denetleyecek bir muhalefet olmasını istedi. Bu amaçla yakın arkadaşı Ali Fethi Okyar'dan yeni bir parti kurmasını istedi.",
+    "tags": [
+      "çok partili hayat"
+    ]
+  },
+  {
+    "id": "ink-8-5-05",
+    "unit": "ink-8-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "1930'daki Menemen Olayı'nda şehit edilen yedek subay öğretmen kimdir?",
+    "choices": [
+      "Kubilay",
+      "Hasan Tahsin",
+      "Yahya Kaptan",
+      "Ömer Naci"
+    ],
+    "answer": 0,
+    "explanation": "Öğretmen Mustafa Fehmi Kubilay, 1930'da Menemen'de Cumhuriyet'e karşı ayaklananlar tarafından şehit edildi.",
+    "tags": [
+      "Menemen Olayı"
+    ]
+  },
+  {
+    "id": "ink-8-5-06",
+    "unit": "ink-8-5",
+    "type": "true-false",
+    "difficulty": 3,
+    "prompt": "Takrir-i Sükûn Kanunu, Şeyh Sait İsyanı üzerine çıkarılmıştır.",
+    "answer": true,
+    "explanation": "Şeyh Sait İsyanı üzerine Mart 1925'te çıkarılan Takrir-i Sükûn Kanunu, hükûmete düzeni sağlamak için olağanüstü yetkiler verdi.",
+    "tags": [
+      "Şeyh Sait İsyanı"
+    ]
+  },
+  {
+    "id": "ink-8-5-07",
+    "unit": "ink-8-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Çok partili hayata geçiş denemelerinin temel amacı nedir?",
+    "choices": [
+      "Saltanatı yeniden kurmak",
+      "Demokrasiyi geliştirmek",
+      "Meclisi kapatmak",
+      "Seçimleri kaldırmak"
+    ],
+    "answer": 1,
+    "explanation": "Farklı görüşlerin mecliste temsil edilmesi ve hükûmetin denetlenmesi demokrasinin gereğidir. Çok partili hayat denemeleri bu amaçla yapıldı.",
+    "tags": [
+      "çok partili hayat"
+    ]
+  },
+  {
+    "id": "ink-8-5-08",
+    "unit": "ink-8-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "1923'te kurulan ve Cumhuriyet Dönemi'nin ilk siyasi partisi olan Halk Fırkası'nın kurucusu kimdir?",
+    "choices": [
+      "Kâzım Karabekir",
+      "Ali Fethi Okyar",
+      "Mustafa Kemal",
+      "Rauf Orbay"
+    ],
+    "answer": 2,
+    "explanation": "Halk Fırkası'nı 1923'te Mustafa Kemal kurdu. Parti daha sonra Cumhuriyet Halk Fırkası adını aldı.",
+    "tags": [
+      "siyasi partiler"
+    ]
+  },
+  {
+    "id": "ink-8-5-09",
+    "unit": "ink-8-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Mustafa Kemal'in 1927'de okuduğu ve 1919-1927 yılları arasındaki olayları anlattığı eser hangisidir?",
+    "choices": [
+      "Nutuk",
+      "Medeni Bilgiler",
+      "Geometri",
+      "Misak-ı Millî"
+    ],
+    "answer": 0,
+    "explanation": "Mustafa Kemal, Nutuk'u 1927'de partinin kurultayında günlerce süren bir konuşmayla okudu. Eserde Samsun'a çıkıştan 1927'ye kadar olan olaylar anlatılır.",
+    "tags": [
+      "Nutuk"
+    ]
+  },
+  {
+    "id": "ink-8-6-01",
+    "unit": "ink-8-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Atatürk Dönemi Türk dış politikasının temel ilkesini anlatan söz hangisidir?",
+    "choices": [
+      "Ya istiklal ya ölüm!",
+      "Yurtta sulh, cihanda sulh.",
+      "Hattı müdafaa yoktur, sathı müdafaa vardır.",
+      "Ordular! İlk hedefiniz Akdeniz'dir."
+    ],
+    "answer": 1,
+    "explanation": "\"Yurtta sulh, cihanda sulh\" yurtta barış, dünyada barış demektir. Atatürk, dış politikada barışı ve komşularla iyi ilişkileri esas aldı.",
+    "tags": [
+      "dış politika ilkeleri"
+    ]
+  },
+  {
+    "id": "ink-8-6-02",
+    "unit": "ink-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Türkiye Milletler Cemiyeti'ne hangi yıl üye olmuştur?",
+    "choices": [
+      "1923",
+      "1926",
+      "1938",
+      "1932"
+    ],
+    "answer": 3,
+    "explanation": "Türkiye 1932'de Milletler Cemiyeti'ne davet edilerek üye oldu. Bu, Türkiye'nin barışçı dış politikasının bir sonucudur.",
+    "tags": [
+      "Milletler Cemiyeti"
+    ]
+  },
+  {
+    "id": "ink-8-6-03",
+    "unit": "ink-8-6",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Montrö Boğazlar Sözleşmesi ile Boğazlar'daki uluslararası komisyon kaldırılmış ve denetim Türkiye'ye verilmiştir.",
+    "answer": true,
+    "explanation": "1936'da imzalanan Montrö Boğazlar Sözleşmesi ile Boğazlar üzerinde tam egemenlik sağlandı. Türkiye Boğazlar'a asker yerleştirme hakkı da kazandı.",
+    "tags": [
+      "Boğazlar sorunu"
+    ]
+  },
+  {
+    "id": "ink-8-6-04",
+    "unit": "ink-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Atatürk'ün \"kişisel meselem\" dediği Hatay, hangi yıl Türkiye'ye katılmıştır?",
+    "choices": [
+      "1936",
+      "1937",
+      "1939",
+      "1945"
+    ],
+    "answer": 2,
+    "explanation": "Hatay 1938'de bağımsız bir devlet oldu, 1939'da Hatay Meclisinin kararıyla Türkiye'ye katıldı. Atatürk bu sonucu göremeden vefat etti.",
+    "tags": [
+      "Hatay sorunu"
+    ]
+  },
+  {
+    "id": "ink-8-6-05",
+    "unit": "ink-8-6",
+    "type": "true-false",
+    "difficulty": 3,
+    "prompt": "Musul sorunu Milletler Cemiyeti'ne götürülmüş, Cemiyet de Musul'un Irak'a bırakılmasına karar vermiştir.",
+    "answer": true,
+    "explanation": "İngiltere Musul sorununu Milletler Cemiyeti'ne götürdü ve karar Irak lehine çıktı. Türkiye 1926 Ankara Antlaşması ile bu durumu kabul etti.",
+    "tags": [
+      "Musul sorunu"
+    ]
+  },
+  {
+    "id": "ink-8-6-06",
+    "unit": "ink-8-6",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Lozan'dan kalan nüfus mübadelesi sorunu hangi devletle yaşanmıştır?",
+    "choices": [
+      "Yunanistan",
+      "İngiltere",
+      "Fransa",
+      "İtalya"
+    ],
+    "answer": 0,
+    "explanation": "Lozan'da Türkiye'deki Rumlarla Yunanistan'daki Türklerin yer değiştirmesi kararlaştırıldı. Uygulamada çıkan sorunlar 1930'da Yunanistan ile çözüldü.",
+    "tags": [
+      "nüfus mübadelesi"
+    ]
+  },
+  {
+    "id": "ink-8-6-07",
+    "unit": "ink-8-6",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Balkan Antantı'nın kurulmasında etkili olan gelişme hangisidir?",
+    "choices": [
+      "Musul sorunu",
+      "Hatay sorunu",
+      "İtalya'nın yayılmacı politikası",
+      "Nüfus mübadelesi"
+    ],
+    "answer": 2,
+    "explanation": "İtalya'nın Balkanlar ve Akdeniz'deki yayılmacı politikası, Balkan devletlerini birlikte hareket etmeye yöneltti. Balkan Antantı 1934'te kuruldu.",
+    "tags": [
+      "Balkan Antantı"
+    ]
+  },
+  {
+    "id": "ink-8-6-08",
+    "unit": "ink-8-6",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Sadabat Paktı, Türkiye'nin Balkan devletleriyle imzaladığı bir pakttır.",
+    "answer": false,
+    "explanation": "Sadabat Paktı 1937'de Türkiye, İran, Irak ve Afganistan arasında imzalandı. Balkan devletleriyle kurulan birlik Balkan Antantı'dır.",
+    "tags": [
+      "Sadabat Paktı"
+    ]
+  },
+  {
+    "id": "ink-8-6-09",
+    "unit": "ink-8-6",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Lozan'dan kalan yabancı okullar sorunu nasıl çözülmüştür?",
+    "choices": [
+      "Bütün yabancı okullar kapatılmıştır.",
+      "Okullar yabancı devletlere bağlanmıştır.",
+      "Türk yasalarına uymaları şartıyla çalışmalarına izin verilmiştir.",
+      "Okullar yalnızca yabancı öğrencilere açılmıştır."
+    ],
+    "answer": 2,
+    "explanation": "Yabancı okullar Türk yasalarına ve Millî Eğitim denetimine uymak şartıyla eğitimlerini sürdürebildi. Böylece eğitimde egemenlik korundu.",
+    "tags": [
+      "yabancı okullar"
+    ]
+  },
+  {
+    "id": "ink-8-7-01",
+    "unit": "ink-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Atatürk hangi tarihte ve nerede hayatını kaybetmiştir?",
+    "choices": [
+      "10 Kasım 1938, Dolmabahçe Sarayı",
+      "10 Kasım 1938, Çankaya Köşkü",
+      "29 Ekim 1938, Dolmabahçe Sarayı",
+      "19 Mayıs 1938, Çankaya Köşkü"
+    ],
+    "answer": 0,
+    "explanation": "Atatürk 10 Kasım 1938'de saat 9.05'te İstanbul'da Dolmabahçe Sarayı'nda hayatını kaybetti.",
+    "tags": [
+      "Atatürk'ün ölümü"
+    ]
+  },
+  {
+    "id": "ink-8-7-02",
+    "unit": "ink-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Atatürk'ün ölümünden sonra cumhurbaşkanı seçilen kişi kimdir?",
+    "choices": [
+      "Celal Bayar",
+      "Fevzi Çakmak",
+      "İsmet İnönü",
+      "Ali Fethi Okyar"
+    ],
+    "answer": 2,
+    "explanation": "İsmet İnönü, 11 Kasım 1938'de TBMM tarafından Türkiye'nin ikinci cumhurbaşkanı seçildi.",
+    "tags": [
+      "İsmet İnönü"
+    ]
+  },
+  {
+    "id": "ink-8-7-03",
+    "unit": "ink-8-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Atatürk'ün naaşı, 1953'te Etnografya Müzesi'nden Anıtkabir'e taşınmıştır.",
+    "answer": true,
+    "explanation": "Atatürk'ün naaşı önce Ankara Etnografya Müzesi'ne geçici olarak konuldu. Anıtkabir tamamlanınca 10 Kasım 1953'te buraya taşındı.",
+    "tags": [
+      "Anıtkabir"
+    ]
+  },
+  {
+    "id": "ink-8-7-04",
+    "unit": "ink-8-7",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Atatürk vasiyetinde mirasından hangi kurumlara pay ayırmıştır?",
+    "choices": [
+      "Sümerbank ve Etibank",
+      "Halkevleri ve Millet Mektepleri",
+      "Darülfünun ve Harbiye",
+      "Türk Tarih Kurumu ve Türk Dil Kurumu"
+    ],
+    "answer": 3,
+    "explanation": "Atatürk 1938'de yazdığı vasiyetinde mirasının bir bölümünü Türk Tarih Kurumu ile Türk Dil Kurumu'na bıraktı. Bu, bilime ve kültüre verdiği önemi gösterir.",
+    "tags": [
+      "Atatürk'ün vasiyeti"
+    ]
+  },
+  {
+    "id": "ink-8-7-05",
+    "unit": "ink-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İkinci Dünya Savaşı hangi olayla başlamıştır?",
+    "choices": [
+      "Japonya'nın Çin'e saldırmasıyla",
+      "Almanya'nın Polonya'ya saldırmasıyla",
+      "İtalya'nın Habeşistan'a saldırmasıyla",
+      "ABD'nin savaşa girmesiyle"
+    ],
+    "answer": 1,
+    "explanation": "İkinci Dünya Savaşı, 1 Eylül 1939'da Almanya'nın Polonya'ya saldırmasıyla başladı.",
+    "tags": [
+      "İkinci Dünya Savaşı"
+    ]
+  },
+  {
+    "id": "ink-8-7-06",
+    "unit": "ink-8-7",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Türkiye, İkinci Dünya Savaşı'nın büyük bölümünde savaşa girmeyerek tarafsız kalmıştır.",
+    "answer": true,
+    "explanation": "Türkiye savaşın dışında kalmak için dengeli bir politika izledi. Savaşın sonuna doğru, 1945'te Almanya ve Japonya'ya sembolik olarak savaş ilan etti.",
+    "tags": [
+      "İkinci Dünya Savaşı"
+    ]
+  },
+  {
+    "id": "ink-8-7-07",
+    "unit": "ink-8-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Türkiye'nin Şubat 1945'te Almanya ve Japonya'ya savaş ilan etmesinin temel nedeni nedir?",
+    "choices": [
+      "Hatay'ı geri almak",
+      "Musul'u almak",
+      "Birleşmiş Milletlerin kuruluşuna katılmak",
+      "Boğazların denetimini almak"
+    ],
+    "answer": 2,
+    "explanation": "Birleşmiş Milletlerin kuruluş konferansına, belirli bir tarihe kadar Mihver Devletleri'ne savaş ilan eden ülkeler çağrıldı. Türkiye bu nedenle savaş ilan etti ve kurucu üye oldu.",
+    "tags": [
+      "Birleşmiş Milletler"
+    ]
+  },
+  {
+    "id": "ink-8-7-08",
+    "unit": "ink-8-7",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Türkiye'de çok partili hayata geçiş sürecinde 1946'da kurulan parti hangisidir?",
+    "choices": [
+      "Demokrat Parti",
+      "Terakkiperver Cumhuriyet Fırkası",
+      "Serbest Cumhuriyet Fırkası",
+      "Halk Fırkası"
+    ],
+    "answer": 0,
+    "explanation": "Demokrat Parti 7 Ocak 1946'da kuruldu. Böylece Türkiye'de kalıcı olarak çok partili hayata geçildi.",
+    "tags": [
+      "çok partili hayat"
+    ]
+  },
+  {
+    "id": "ink-8-7-09",
+    "unit": "ink-8-7",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "1950 seçimlerini Türk demokrasi tarihi açısından önemli kılan gelişme hangisidir?",
+    "choices": [
+      "Kadınlar ilk kez oy kullandı.",
+      "İlk kez çok partili seçim yapıldı.",
+      "Cumhuriyet ilan edildi.",
+      "İktidar ilk kez seçimle el değiştirdi."
+    ],
+    "answer": 3,
+    "explanation": "1950 seçimlerini Demokrat Parti kazandı ve iktidar ilk kez seçim yoluyla el değiştirdi. İlk çok partili seçim ise 1946'da yapılmıştı.",
+    "tags": [
+      "çok partili hayat"
+    ]
+  }
+]

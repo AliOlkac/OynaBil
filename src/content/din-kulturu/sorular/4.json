@@ -1,0 +1,814 @@
+[
+  {
+    "id": "dkab-4-1-01",
+    "unit": "dkab-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bir işe başlarken \"Bismillahirrahmanirrahim\" deriz. Bu söze ne ad verilir?",
+    "choices": [
+      "Tekbir",
+      "Besmele",
+      "Selam",
+      "Dua"
+    ],
+    "answer": 1,
+    "explanation": "\"Bismillahirrahmanirrahim\" sözüne besmele denir. Müslümanlar yemeğe, derse ve güzel işlere besmeleyle başlar.",
+    "tags": [
+      "besmele"
+    ]
+  },
+  {
+    "id": "dkab-4-1-02",
+    "unit": "dkab-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Besmelenin anlamı hangisidir?",
+    "choices": [
+      "Allah en büyüktür.",
+      "Allah'a hamdolsun.",
+      "Rahman ve Rahim olan Allah'ın adıyla",
+      "Allah dilerse"
+    ],
+    "answer": 2,
+    "explanation": "Besmele \"Rahman ve Rahim olan Allah'ın adıyla\" demektir. Rahman ve Rahim, Allah'ın çok merhametli olduğunu anlatır.",
+    "tags": [
+      "besmele"
+    ]
+  },
+  {
+    "id": "dkab-4-1-03",
+    "unit": "dkab-4-1",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Müslümanlar karşılaştıklarında \"Selamünaleyküm\" diyerek selamlaşır.",
+    "answer": true,
+    "explanation": "\"Selamünaleyküm\" sözü \"Esenlik sizin üzerinize olsun.\" demektir. Selam vermek insanlar arasında sevgiyi artırır.",
+    "tags": [
+      "selamlaşma"
+    ]
+  },
+  {
+    "id": "dkab-4-1-04",
+    "unit": "dkab-4-1",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Bize \"Selamünaleyküm\" diyen birine nasıl karşılık veririz?",
+    "choices": [
+      "Maşallah",
+      "İnşallah",
+      "Elhamdülillah",
+      "Aleykümselam"
+    ],
+    "answer": 3,
+    "explanation": "Selam verene \"Aleykümselam\" diye karşılık verilir. Bu söz \"Esenlik sizin de üzerinize olsun.\" demektir.",
+    "tags": [
+      "selamlaşma"
+    ]
+  },
+  {
+    "id": "dkab-4-1-05",
+    "unit": "dkab-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Allahu ekber\" sözü ne anlama gelir?",
+    "choices": [
+      "Allah en büyüktür.",
+      "Allah her şeyi bilir.",
+      "Allah'a hamdolsun.",
+      "Allah dilerse"
+    ],
+    "answer": 0,
+    "explanation": "\"Allahu ekber\" Allah en büyüktür demektir. Bu söze tekbir denir; ezanda ve namazda söylenir.",
+    "tags": [
+      "tekbir"
+    ]
+  },
+  {
+    "id": "dkab-4-1-06",
+    "unit": "dkab-4-1",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "\"Allahu ekber\" sözüne besmele denir.",
+    "answer": false,
+    "explanation": "\"Allahu ekber\" sözüne tekbir denir. Besmele ise \"Bismillahirrahmanirrahim\" sözüdür.",
+    "tags": [
+      "tekbir"
+    ]
+  },
+  {
+    "id": "dkab-4-1-07",
+    "unit": "dkab-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hasta bir arkadaşımızı ziyaret ettiğimizde ona hangi dileği söyleriz?",
+    "choices": [
+      "Hayırlı olsun.",
+      "Allah şifa versin.",
+      "Allah kabul etsin.",
+      "Maşallah."
+    ],
+    "answer": 1,
+    "explanation": "Hasta birine \"Allah şifa versin\" diyerek iyileşmesi için dua ederiz. Hasta ziyareti güzel bir davranıştır.",
+    "tags": [
+      "dinî ifadeler"
+    ]
+  },
+  {
+    "id": "dkab-4-1-08",
+    "unit": "dkab-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "\"Estağfirullah\" sözü ne anlama gelir?",
+    "choices": [
+      "Allah'ın adıyla",
+      "Allah en büyüktür.",
+      "Allah dilerse",
+      "Allah'tan bağışlanma dilerim."
+    ],
+    "answer": 3,
+    "explanation": "\"Estağfirullah\" Allah'tan bağışlanma dilerim demektir. Biri bizi överken alçakgönüllülükle de bu söz söylenir.",
+    "tags": [
+      "dinî ifadeler"
+    ]
+  },
+  {
+    "id": "dkab-4-1-09",
+    "unit": "dkab-4-1",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Mert'in ailesi yeni bir eve taşındı. Komşuları onları ziyarete gelince hangi sözü söylemesi uygundur?",
+    "choices": [
+      "Hayırlı olsun.",
+      "Allah şifa versin.",
+      "Geçmiş olsun.",
+      "Aleykümselam."
+    ],
+    "answer": 0,
+    "explanation": "Yeni bir ev, iş ya da eşya sahibi olan birine \"Hayırlı olsun\" deriz. Böylece onun için iyilik dileriz.",
+    "tags": [
+      "dinî ifadeler"
+    ]
+  },
+  {
+    "id": "dkab-4-1-10",
+    "unit": "dkab-4-1",
+    "type": "true-false",
+    "difficulty": 3,
+    "prompt": "\"Sübhanallah\" sözü, Allah'ın her türlü eksiklikten uzak olduğunu anlatmak için söylenir.",
+    "answer": true,
+    "explanation": "\"Sübhanallah\" Allah her türlü eksiklikten uzaktır demektir. Allah'ın yarattıklarındaki güzellik karşısında da söylenir.",
+    "tags": [
+      "dinî ifadeler"
+    ]
+  },
+  {
+    "id": "dkab-4-2-01",
+    "unit": "dkab-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "\"İslam\" kelimesinin anlamlarından biri hangisidir?",
+    "choices": [
+      "Savaş",
+      "Barış ve esenlik",
+      "Zenginlik",
+      "Yolculuk"
+    ],
+    "answer": 1,
+    "explanation": "İslam kelimesi barış, esenlik ve Allah'a teslim olma anlamlarına gelir.",
+    "tags": [
+      "İslam"
+    ]
+  },
+  {
+    "id": "dkab-4-2-02",
+    "unit": "dkab-4-2",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "İslam dininin kutsal kitabı hangisidir?",
+    "choices": [
+      "Tevrat",
+      "Zebur",
+      "İncil",
+      "Kur'an-ı Kerim"
+    ],
+    "answer": 3,
+    "explanation": "İslam dininin kutsal kitabı Kur'an-ı Kerim'dir. Kur'an-ı Kerim, Hz. Muhammed'e (sav) indirilmiştir.",
+    "tags": [
+      "Kur'an-ı Kerim"
+    ]
+  },
+  {
+    "id": "dkab-4-2-03",
+    "unit": "dkab-4-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "İslam dininin peygamberi Hz. Muhammed'dir (sav).",
+    "answer": true,
+    "explanation": "Hz. Muhammed (sav), İslam dininin peygamberidir. O, peygamberlerin sonuncusudur.",
+    "tags": [
+      "Hz. Muhammed"
+    ]
+  },
+  {
+    "id": "dkab-4-2-04",
+    "unit": "dkab-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İmanın şartları kaç tanedir?",
+    "choices": [
+      "Dört",
+      "Beş",
+      "Altı",
+      "Yedi"
+    ],
+    "answer": 2,
+    "explanation": "İmanın şartları altıdır: Allah'a, meleklere, kitaplara, peygamberlere, ahiret gününe, kadere ve kazaya inanmak.",
+    "tags": [
+      "imanın şartları"
+    ]
+  },
+  {
+    "id": "dkab-4-2-05",
+    "unit": "dkab-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "İslam'ın şartları kaç tanedir?",
+    "choices": [
+      "Beş",
+      "Altı",
+      "Üç",
+      "Yedi"
+    ],
+    "answer": 0,
+    "explanation": "İslam'ın şartları beştir: Kelime-i şehadet getirmek, namaz kılmak, oruç tutmak, zekât vermek ve hacca gitmek.",
+    "tags": [
+      "İslam'ın şartları"
+    ]
+  },
+  {
+    "id": "dkab-4-2-06",
+    "unit": "dkab-4-2",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Kelime-i tevhid, Allah'tan başka ilah olmadığını ve Hz. Muhammed'in (sav) O'nun elçisi olduğunu bildirir.",
+    "answer": true,
+    "explanation": "Kelime-i tevhid, Allah'ın bir olduğunu ve Hz. Muhammed'in (sav) O'nun elçisi olduğunu bildiren sözdür. Tevhid, Allah'ı bir bilmek demektir.",
+    "tags": [
+      "kelime-i tevhid"
+    ]
+  },
+  {
+    "id": "dkab-4-2-07",
+    "unit": "dkab-4-2",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Allah'a ve O'nun bildirdiklerine gönülden inanan kişiye ne denir?",
+    "choices": [
+      "Müezzin",
+      "Hafız",
+      "Mümin",
+      "İmam"
+    ],
+    "answer": 2,
+    "explanation": "Allah'a ve O'nun bildirdiklerine gönülden inanan kişiye mümin denir. İman etmek, gönülden inanmak ve bunu dille söylemektir.",
+    "tags": [
+      "iman"
+    ]
+  },
+  {
+    "id": "dkab-4-2-08",
+    "unit": "dkab-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangisi imanın şartlarından değil, İslam'ın şartlarındandır?",
+    "choices": [
+      "Meleklere inanmak",
+      "Ahiret gününe inanmak",
+      "Kadere inanmak",
+      "Oruç tutmak"
+    ],
+    "answer": 3,
+    "explanation": "Oruç tutmak İslam'ın şartlarındandır. Meleklere, ahirete ve kadere inanmak ise imanın şartlarındandır.",
+    "tags": [
+      "imanın şartları",
+      "İslam'ın şartları"
+    ]
+  },
+  {
+    "id": "dkab-4-2-09",
+    "unit": "dkab-4-2",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kelime-i şehadet getirmek ne demektir?",
+    "choices": [
+      "Her gün beş vakit namaz kılmak",
+      "Allah'ın birliğine ve Hz. Muhammed'in peygamberliğine şahitlik etmek",
+      "Ramazan ayında oruç tutmak",
+      "Kur'an-ı Kerim'i ezberlemek"
+    ],
+    "answer": 1,
+    "explanation": "Kelime-i şehadet getirmek, Allah'ın bir olduğuna ve Hz. Muhammed'in (sav) O'nun kulu ve elçisi olduğuna şahitlik etmektir. İslam'ın ilk şartıdır.",
+    "tags": [
+      "kelime-i şehadet"
+    ]
+  },
+  {
+    "id": "dkab-4-2-10",
+    "unit": "dkab-4-2",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Kur'an-ı Kerim, Hz. Musa'ya indirilmiştir.",
+    "answer": false,
+    "explanation": "Kur'an-ı Kerim, Hz. Muhammed'e (sav) indirilmiştir. Hz. Musa'ya indirilen kitap Tevrat'tır.",
+    "tags": [
+      "Kur'an-ı Kerim"
+    ]
+  },
+  {
+    "id": "dkab-4-3-01",
+    "unit": "dkab-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yalan söylemeyen, sözünde ve davranışında doğru olan kişiye ne denir?",
+    "choices": [
+      "Cimri",
+      "Dürüst",
+      "Kıskanç",
+      "Bencil"
+    ],
+    "answer": 1,
+    "explanation": "Sözünde ve davranışında doğru olan kişiye dürüst denir. Dürüst insana herkes güvenir.",
+    "tags": [
+      "dürüstlük"
+    ]
+  },
+  {
+    "id": "dkab-4-3-02",
+    "unit": "dkab-4-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Arkadaşımızın eşyasını izin almadan kullanmak güzel ahlaka uygun bir davranıştır.",
+    "answer": false,
+    "explanation": "Başkasının eşyasını kullanmadan önce izin almalıyız. İzinsiz kullanmak, başkasının hakkına saygısızlıktır.",
+    "tags": [
+      "kul hakkı"
+    ]
+  },
+  {
+    "id": "dkab-4-3-03",
+    "unit": "dkab-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi yardımlaşmaya örnek bir davranıştır?",
+    "choices": [
+      "Sırasını bekleyen arkadaşının önüne geçmek",
+      "Arkadaşının oyuncağını izinsiz almak",
+      "Yaşlı komşusunun ağır çantasını taşımak",
+      "Sınıfta bağırarak konuşmak"
+    ],
+    "answer": 2,
+    "explanation": "Yaşlı komşusunun çantasını taşımak yardımlaşmaya örnektir. Yardımlaşma insanlar arasında sevgiyi ve kardeşliği güçlendirir.",
+    "tags": [
+      "yardımlaşma"
+    ]
+  },
+  {
+    "id": "dkab-4-3-04",
+    "unit": "dkab-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Kendini başkalarından üstün görmeye ne ad verilir?",
+    "choices": [
+      "Kibir",
+      "Tevazu",
+      "Sabır",
+      "Merhamet"
+    ],
+    "answer": 0,
+    "explanation": "Kendini başkalarından üstün görmeye kibir denir. Kibrin zıddı alçakgönüllülük demek olan tevazudur.",
+    "tags": [
+      "kibir"
+    ]
+  },
+  {
+    "id": "dkab-4-3-05",
+    "unit": "dkab-4-3",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Arkadaşımızın başarısını kıskanmak yerine onu tebrik etmek güzel bir davranıştır.",
+    "answer": true,
+    "explanation": "Kıskançlık insanı mutsuz eder ve arkadaşlığı bozar. Başkasının başarısına sevinmek güzel ahlakın gereğidir.",
+    "tags": [
+      "kıskançlık"
+    ]
+  },
+  {
+    "id": "dkab-4-3-06",
+    "unit": "dkab-4-3",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hz. Muhammed (sav), komşusu açken tok yatmanın doğru olmadığını bildirmiştir. Bu öğüt neyle ilgilidir?",
+    "choices": [
+      "Temizlik",
+      "Komşuluk",
+      "Çalışkanlık",
+      "Dakiklik"
+    ],
+    "answer": 1,
+    "explanation": "Peygamberimiz komşularımızın hâlini sormamızı ve ihtiyaçlarını gidermemizi öğütlemiştir. Bu öğüt komşuluk ilişkileriyle ilgilidir.",
+    "tags": [
+      "komşuluk"
+    ]
+  },
+  {
+    "id": "dkab-4-3-07",
+    "unit": "dkab-4-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Can, Ali'nin defterine yanlışlıkla su döktü ve özür diledi. Ali de \"Önemli değil.\" diyerek onu affetti. Ali'nin davranışı hangi değere örnektir?",
+    "choices": [
+      "Cömertlik",
+      "Dürüstlük",
+      "Bağışlayıcılık",
+      "Çalışkanlık"
+    ],
+    "answer": 2,
+    "explanation": "Ali, arkadaşının hatasını affederek bağışlayıcı davrandı. Allah da bağışlayıcıdır ve insanların birbirini affetmesini sever.",
+    "tags": [
+      "bağışlayıcılık"
+    ]
+  },
+  {
+    "id": "dkab-4-3-08",
+    "unit": "dkab-4-3",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangisi dilimizle yapılan kötü bir davranıştır?",
+    "choices": [
+      "Selam vermek",
+      "Teşekkür etmek",
+      "Güzel söz söylemek",
+      "Gıybet etmek"
+    ],
+    "answer": 3,
+    "explanation": "Gıybet, bir kişinin arkasından onun hoşlanmayacağı şeyleri konuşmaktır. Dinimiz gıybeti yasaklamıştır.",
+    "tags": [
+      "gıybet"
+    ]
+  },
+  {
+    "id": "dkab-4-3-09",
+    "unit": "dkab-4-3",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Güzel ahlaklı insan, insanlara olduğu kadar hayvanlara ve doğaya da iyi davranır.",
+    "answer": true,
+    "explanation": "Güzel ahlak yalnızca insanlara değil, bütün canlılara ve doğaya iyi davranmayı da kapsar.",
+    "tags": [
+      "merhamet"
+    ]
+  },
+  {
+    "id": "dkab-4-3-10",
+    "unit": "dkab-4-3",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hangisi anne babaya saygının bir örneğidir?",
+    "choices": [
+      "Onlar konuşurken sözlerini kesmemek",
+      "Onlara yüksek sesle karşılık vermek",
+      "Çağırdıklarında duymazdan gelmek",
+      "Söylediklerini önemsememek"
+    ],
+    "answer": 0,
+    "explanation": "Anne babamız konuşurken sözlerini kesmeden dinlemek onlara saygı göstermektir. Dinimiz anne babaya iyilik etmeyi öğütler.",
+    "tags": [
+      "anne babaya saygı"
+    ]
+  },
+  {
+    "id": "dkab-4-4-01",
+    "unit": "dkab-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hz. Muhammed (sav) hangi şehirde doğmuştur?",
+    "choices": [
+      "Medine",
+      "Taif",
+      "Mekke",
+      "Kudüs"
+    ],
+    "answer": 2,
+    "explanation": "Hz. Muhammed (sav) 571 yılında Mekke'de doğdu.",
+    "tags": [
+      "Hz. Muhammed'in hayatı"
+    ]
+  },
+  {
+    "id": "dkab-4-4-02",
+    "unit": "dkab-4-4",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Hz. Muhammed'e (sav) dürüstlüğü ve güvenilirliği nedeniyle verilen lakap hangisidir?",
+    "choices": [
+      "Muhammedü'l-Emin",
+      "Kanuni",
+      "Yavuz",
+      "Fatih"
+    ],
+    "answer": 0,
+    "explanation": "Mekkeliler ona \"güvenilir Muhammed\" anlamında Muhammedü'l-Emin derdi. Emanetlerini ona bırakırlardı.",
+    "tags": [
+      "Muhammedü'l-Emin"
+    ]
+  },
+  {
+    "id": "dkab-4-4-03",
+    "unit": "dkab-4-4",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Hz. Muhammed (sav) 571 yılında doğmuştur.",
+    "answer": true,
+    "explanation": "Hz. Muhammed (sav) 571 yılında Mekke'de doğdu. Doğduğu gece Mevlit Kandili olarak anılır.",
+    "tags": [
+      "Hz. Muhammed'in hayatı"
+    ]
+  },
+  {
+    "id": "dkab-4-4-04",
+    "unit": "dkab-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hz. Muhammed'e (sav) ilk vahiy nerede gelmiştir?",
+    "choices": [
+      "Sevr Mağarası'nda",
+      "Hira Mağarası'nda",
+      "Uhud Dağı'nda",
+      "Medine'de"
+    ],
+    "answer": 1,
+    "explanation": "Hz. Muhammed (sav), Hira Mağarası'nda düşünüp ibadet ederken ilk vahiy geldi.",
+    "tags": [
+      "vahiy"
+    ]
+  },
+  {
+    "id": "dkab-4-4-05",
+    "unit": "dkab-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hz. Muhammed'e (sav) ilk vahiy geldiğinde kaç yaşındaydı?",
+    "choices": [
+      "25",
+      "30",
+      "63",
+      "40"
+    ],
+    "answer": 3,
+    "explanation": "Hz. Muhammed'e (sav) ilk vahiy 40 yaşındayken geldi. Böylece peygamberliği başladı.",
+    "tags": [
+      "vahiy"
+    ]
+  },
+  {
+    "id": "dkab-4-4-06",
+    "unit": "dkab-4-4",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Hz. Muhammed (sav), Medine'den Mekke'ye hicret etmiştir.",
+    "answer": false,
+    "explanation": "Hz. Muhammed (sav) 622 yılında Mekke'den Medine'ye hicret etti. Hicret, bir yerden başka bir yere göç etmek demektir.",
+    "tags": [
+      "hicret"
+    ]
+  },
+  {
+    "id": "dkab-4-4-07",
+    "unit": "dkab-4-4",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hz. Muhammed'in (sav) doğumunun anıldığı geceye ne ad verilir?",
+    "choices": [
+      "Kadir Gecesi",
+      "Miraç Kandili",
+      "Mevlit Kandili",
+      "Regaip Kandili"
+    ],
+    "answer": 2,
+    "explanation": "Hz. Muhammed'in (sav) doğumu her yıl Mevlit Kandili'nde anılır.",
+    "tags": [
+      "Mevlit Kandili"
+    ]
+  },
+  {
+    "id": "dkab-4-4-08",
+    "unit": "dkab-4-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hz. Muhammed (sav) çocukken çobanlık, gençliğinde ticaret yapmıştır. Bu bilgi neyi gösterir?",
+    "choices": [
+      "Çalışmaya ve emeğe önem verdiğini",
+      "Hiç okula gitmediğini",
+      "Mekke'den hiç ayrılmadığını",
+      "Ticaretten hoşlanmadığını"
+    ],
+    "answer": 0,
+    "explanation": "Hz. Muhammed (sav) küçük yaştan itibaren çalışarak geçimini sağladı. Bu, onun emeğe ve çalışmaya verdiği önemi gösterir.",
+    "tags": [
+      "Hz. Muhammed'in hayatı"
+    ]
+  },
+  {
+    "id": "dkab-4-4-09",
+    "unit": "dkab-4-4",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Kâbe onarılırken Hacerülesved taşını kimin yerine koyacağı tartışıldı. Hz. Muhammed (sav) bu sorunu nasıl çözdü?",
+    "choices": [
+      "Taşı tek başına taşıyıp yerine koydu.",
+      "Taşı bir örtüye koyup herkesin birlikte taşımasını sağladı.",
+      "Kararı en güçlü kabileye bıraktı.",
+      "Taşın yerine konulmamasını istedi."
+    ],
+    "answer": 1,
+    "explanation": "Hz. Muhammed (sav) taşı bir örtüye koydu, her kabileden biri örtünün bir ucundan tuttu. Böylece kavga çıkmadan sorun barışla çözüldü.",
+    "tags": [
+      "Hacerülesved"
+    ]
+  },
+  {
+    "id": "dkab-4-4-10",
+    "unit": "dkab-4-4",
+    "type": "true-false",
+    "difficulty": 3,
+    "prompt": "Hz. Muhammed (sav) 63 yaşında Medine'de vefat etmiştir.",
+    "answer": true,
+    "explanation": "Hz. Muhammed (sav) 632 yılında, 63 yaşında Medine'de vefat etti. Kabri Mescid-i Nebevi'dedir.",
+    "tags": [
+      "Hz. Muhammed'in hayatı"
+    ]
+  },
+  {
+    "id": "dkab-4-5-01",
+    "unit": "dkab-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Yemekten önce ve sonra ne yapmalıyız?",
+    "choices": [
+      "Hemen uyumalıyız.",
+      "Ellerimizi yıkamalıyız.",
+      "Koşmalıyız.",
+      "Televizyon izlemeliyiz."
+    ],
+    "answer": 1,
+    "explanation": "Yemekten önce ve sonra ellerimizi yıkamak hem sağlığımızı korur hem de Peygamberimizin tavsiyesidir.",
+    "tags": [
+      "beden temizliği"
+    ]
+  },
+  {
+    "id": "dkab-4-5-02",
+    "unit": "dkab-4-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "İslam dini beden, giysi ve çevre temizliğine önem verir.",
+    "answer": true,
+    "explanation": "İslam dini temizliğe çok önem verir. Bedenimizi, giysilerimizi ve çevremizi temiz tutmamızı ister.",
+    "tags": [
+      "temizlik"
+    ]
+  },
+  {
+    "id": "dkab-4-5-03",
+    "unit": "dkab-4-5",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "prompt": "Namaz kılmadan önce belirli organları yıkayarak yapılan temizliğe ne denir?",
+    "choices": [
+      "Abdest",
+      "Ezan",
+      "Kıble",
+      "Dua"
+    ],
+    "answer": 0,
+    "explanation": "Namaz kılmadan önce abdest alınır. Abdest, belirli organları yıkayarak yapılan temizliktir.",
+    "tags": [
+      "abdest"
+    ]
+  },
+  {
+    "id": "dkab-4-5-04",
+    "unit": "dkab-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hz. Muhammed'in (sav) dişlerini temizlemek için kullandığı ağaç dalına ne denir?",
+    "choices": [
+      "Tespih",
+      "Seccade",
+      "Misvak",
+      "Mushaf"
+    ],
+    "answer": 2,
+    "explanation": "Misvak, diş temizliğinde kullanılan bir ağaç dalıdır. Peygamberimiz ağız ve diş temizliğine çok önem verirdi.",
+    "tags": [
+      "ağız ve diş temizliği"
+    ]
+  },
+  {
+    "id": "dkab-4-5-05",
+    "unit": "dkab-4-5",
+    "type": "true-false",
+    "difficulty": 2,
+    "prompt": "Abdest alırken suyu gereğinden fazla kullanmak güzel bir davranıştır.",
+    "answer": false,
+    "explanation": "Suyu gereğinden fazla kullanmak israftır. Peygamberimiz abdest alırken bile suyu idareli kullanmamızı öğütlemiştir.",
+    "tags": [
+      "israf",
+      "abdest"
+    ]
+  },
+  {
+    "id": "dkab-4-5-06",
+    "unit": "dkab-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Su bulunmadığında ya da kullanılamadığında temiz toprakla yapılan temizliğe ne denir?",
+    "choices": [
+      "Gusül",
+      "Teyemmüm",
+      "Abdest",
+      "Sadaka"
+    ],
+    "answer": 1,
+    "explanation": "Su bulunamadığında ya da hastalık gibi bir sebeple kullanılamadığında teyemmüm yapılır. Teyemmüm temiz toprakla yapılır.",
+    "tags": [
+      "teyemmüm"
+    ]
+  },
+  {
+    "id": "dkab-4-5-07",
+    "unit": "dkab-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Boy abdesti olarak da bilinen, bütün vücudun yıkanmasıyla yapılan temizliğe ne denir?",
+    "choices": [
+      "Teyemmüm",
+      "Tekbir",
+      "Besmele",
+      "Gusül"
+    ],
+    "answer": 3,
+    "explanation": "Bütün vücudun yıkanmasıyla yapılan temizliğe gusül denir. Halk arasında boy abdesti olarak da bilinir.",
+    "tags": [
+      "gusül"
+    ]
+  },
+  {
+    "id": "dkab-4-5-08",
+    "unit": "dkab-4-5",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "prompt": "Hz. Muhammed (sav), temizliğin imanın yarısı olduğunu bildirmiştir. Bu söz neyi anlatır?",
+    "choices": [
+      "Temizliğin dinimizde çok önemli olduğunu",
+      "Temizliğin yalnızca evde yapılacağını",
+      "Temizliğin büyüklere ait bir iş olduğunu",
+      "Temizliğin haftada bir yapılacağını"
+    ],
+    "answer": 0,
+    "explanation": "Peygamberimiz temizliği imanla birlikte anarak dinimizde ne kadar önemli olduğunu göstermiştir.",
+    "tags": [
+      "temizlik"
+    ]
+  },
+  {
+    "id": "dkab-4-5-09",
+    "unit": "dkab-4-5",
+    "type": "multiple-choice",
+    "difficulty": 3,
+    "prompt": "Hangisi çevre temizliğine örnek bir davranıştır?",
+    "choices": [
+      "Sabah dişlerimizi fırçalamak",
+      "Tırnaklarımızı kesmek",
+      "Kirli giysilerimizi yıkamak",
+      "Piknikten dönerken çöplerimizi toplamak"
+    ],
+    "answer": 3,
+    "explanation": "Piknik alanını temiz bırakmak çevre temizliğine örnektir. Diş fırçalamak ve tırnak kesmek ise beden temizliğidir.",
+    "tags": [
+      "çevre temizliği"
+    ]
+  },
+  {
+    "id": "dkab-4-5-10",
+    "unit": "dkab-4-5",
+    "type": "true-false",
+    "difficulty": 1,
+    "prompt": "Okulumuzun ve sokağımızın temizliği bizi ilgilendirmez.",
+    "answer": false,
+    "explanation": "Ortak kullandığımız yerleri temiz tutmak hepimizin görevidir. Çöpleri yere değil, çöp kutusuna atmalıyız.",
+    "tags": [
+      "çevre temizliği"
+    ]
+  }
+]

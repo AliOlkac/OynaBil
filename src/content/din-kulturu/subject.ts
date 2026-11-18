@@ -5,10 +5,16 @@ export const dinKulturu: Subject = {
   name: "Din Kültürü ve Ahlak Bilgisi",
   shortName: "Din Kültürü",
   code: "dkab",
-  grades: [5, 6, 7, 8],
+  grades: [4, 5, 6, 7, 8],
   curriculumNote:
-    "5, 6 ve 7. sınıf üniteleri Türkiye Yüzyılı Maarif Modeli'ne, 8. sınıf üniteleri 2026-2027 öğretim yılında okutulan programa göre düzenlenmiştir.",
+    "5, 6 ve 7. sınıf üniteleri Türkiye Yüzyılı Maarif Modeli'ne; 4 ve 8. sınıf üniteleri 2026-2027 öğretim yılında okutulan 2018 programına göre düzenlenmiştir.",
   units: [
+    { id: "dkab-4-1", grade: 4, order: 1, title: "Günlük Hayattaki Dinî İfadeler" },
+    { id: "dkab-4-2", grade: 4, order: 2, title: "İslam'ı Tanıyalım" },
+    { id: "dkab-4-3", grade: 4, order: 3, title: "Güzel Ahlak" },
+    { id: "dkab-4-4", grade: 4, order: 4, title: "Hz. Muhammed'i Tanıyalım" },
+    { id: "dkab-4-5", grade: 4, order: 5, title: "Din ve Temizlik" },
+
     { id: "dkab-5-1", grade: 5, order: 1, title: "Allah İnancı" },
     { id: "dkab-5-2", grade: 5, order: 2, title: "Namaz" },
     { id: "dkab-5-3", grade: 5, order: 3, title: "Kur'an-ı Kerim" },

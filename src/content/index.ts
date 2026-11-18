@@ -5,6 +5,7 @@ import { matematik } from "./matematik/subject";
 import { hayatBilgisi } from "./hayat-bilgisi/subject";
 import { fenBilimleri } from "./fen-bilimleri/subject";
 import { sosyalBilgiler } from "./sosyal-bilgiler/subject";
+import { inkilapTarihi } from "./inkilap-tarihi/subject";
 import { ingilizce } from "./ingilizce/subject";
 import { dinKulturu } from "./din-kulturu/subject";
 
@@ -20,7 +21,7 @@ import { dinKulturu } from "./din-kulturu/subject";
  * Yeni bir ders eklemek için `subject.ts` ile üniteleri tanımlayın, dosyaları koyun ve
  * aşağıdaki iki listeye ekleyin.
  */
-export const SUBJECTS: Subject[] = [turkce, matematik, hayatBilgisi, fenBilimleri, sosyalBilgiler, ingilizce, dinKulturu];
+export const SUBJECTS: Subject[] = [turkce, matematik, hayatBilgisi, fenBilimleri, sosyalBilgiler, inkilapTarihi, ingilizce, dinKulturu];
 
 type Module = { default: unknown };
 type GradeFiles = {
@@ -69,6 +70,9 @@ export const CONTENT_FILES: Record<string, Partial<Record<Grade, GradeFiles>>> =
     6: { questions: () => import("./sosyal-bilgiler/sorular/6.json"), cards: () => import("./sosyal-bilgiler/kartlar/6.json") },
     7: { questions: () => import("./sosyal-bilgiler/sorular/7.json"), cards: () => import("./sosyal-bilgiler/kartlar/7.json") },
   },
+  "inkilap-tarihi": {
+    8: { questions: () => import("./inkilap-tarihi/sorular/8.json"), cards: () => import("./inkilap-tarihi/kartlar/8.json"), passages: () => import("./inkilap-tarihi/sorular/8-lgs.json") },
+  },
   ingilizce: {
     2: { questions: () => import("./ingilizce/sorular/2.json"), cards: () => import("./ingilizce/kartlar/2.json") },
     3: { questions: () => import("./ingilizce/sorular/3.json"), cards: () => import("./ingilizce/kartlar/3.json") },
@@ -79,6 +83,7 @@ export const CONTENT_FILES: Record<string, Partial<Record<Grade, GradeFiles>>> =
     8: { questions: () => import("./ingilizce/sorular/8.json"), cards: () => import("./ingilizce/kartlar/8.json"), passages: () => import("./ingilizce/sorular/8-lgs.json") },
   },
   "din-kulturu": {
+    4: { questions: () => import("./din-kulturu/sorular/4.json"), cards: () => import("./din-kulturu/kartlar/4.json") },
     5: { questions: () => import("./din-kulturu/sorular/5.json"), cards: () => import("./din-kulturu/kartlar/5.json") },
     6: { questions: () => import("./din-kulturu/sorular/6.json"), cards: () => import("./din-kulturu/kartlar/6.json") },
     7: { questions: () => import("./din-kulturu/sorular/7.json"), cards: () => import("./din-kulturu/kartlar/7.json") },

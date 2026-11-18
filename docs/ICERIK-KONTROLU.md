@@ -1,6 +1,8 @@
 # İçerik kontrol listesi
 
-Havuzda 1.998 soru var:
+Havuzda sekiz derste 10.735 soru var. Bu belgenin ilk bölümü Din Kültürü ve Ahlak Bilgisi'ni (5-8. sınıf), son bölümü ("Öteki dersler") öteki dersleri ve Din Kültürü 4. sınıfı anlatır.
+
+Din Kültürü 5-8'de 1.998 soru var:
 - 236 elle yazılan soru,
 - 81 bilgi kartı kümesinden üretilen 1.715 soru,
 - 8. sınıf için 47 LGS tarzı paragraf sorusu.
@@ -127,6 +129,73 @@ Ayet metni alıntılanmadı, yalnızca kaynağı belirtilen yakın anlatımlar k
 - **Benzetme:** `dkab-8-1-lgs-06` kader ve kazayı mimar benzetmesiyle anlatıyor. Metin bunun yalnızca bir benzetme olduğunu belirtiyor.
 - **Düzeltilen:** `dkab-8-5-lgs-05` metni bütün ayetlerin bir olay üzerine indiği izlenimini veriyordu. Doğrulayıcının uyarısıyla "Bazen…" diye düzeltildi.
 - **Genel not:** Çeldiricilerin bir kısmı "yalnızca", "hiçbir" gibi kesin sözcüklerle kendini ele veriyor, bu da soruları gerçek LGS'den biraz kolaylaştırıyor. Üretim hattının kuralları bundan kaçınacak şekilde güncellendi.
+
+## Öteki dersler
+
+Bu dersler yardımcı yazarlarla hazırlandı. Her biri şema testinden geçer; sayısal cevaplar betikle yeniden hesaplandı, LGS soruları ikinci kez çözüldü, karttan üretilen sorular örneklenerek okundu. MEB'in program sitesine (tymm.meb.gov.tr) yazım sırasında erişilemedi: Maarif Modeli tema adları arama sonuçlarından alındı, konuların temalara dağılımı tahmindir. Aşağıdaki maddelerdeki soruların cevabı doğrudur; soru işareti çoğunlukla konunun o sınıfın programında yer alıp almadığı ya da ders kitabının ifadesidir.
+
+### Türkçe
+
+**Türkçe 1-4**
+
+- Üniteler beceri alanı (resmî tema adı değil). tr-3-2 "Adlar ve Sözcük Türleri" kapsamı doğrulanmadı.
+- Bakılacaklar: tr-3-2-* ve tr-3-2-cogul-adlar; tr-2-3-07; tr-1-4-05, tr-2-3-04, tr-3-3-06; tr-2-2-es-sesli, tr-3-1-es-sesli, tr-4-1-09; tr-3-4-04, tr-4-4-04, tr-4-4-05, tr-2-4-04, tr-2-4-07; tr-3-4-10, tr-4-4-07, tr-4-4-09; tr-3-5-04, tr-4-5-06, tr-4-5-08; tr-4-1-mecaz-anlam, tr-4-1-04/07/08; tr-4-3-06, tr-4-3-07; tr-4-2-atasozleri.
+
+**Türkçe 5-8**
+
+- Üniteler beceri alanı; Maarif dil bilgisi konularının sınıf dağılımı doğrulanmadı.
+- Bakılacaklar: tr-5-7-* ve tr-5-7-yapim-eki, tr-6-7-sifatlar ve tr-6-7-06, tr-6-7-edatlar, tr-6-5-07/08, tr-7-1-06, tr-7-7-10/11, tr-7-7-kipler, tr-8-5-02, tr-8-6-08 ve tr-8-6-oge-sorulari, tr-8-7-08 ve tr-8-7-cati, tr-8-2-lgs-14, tr-8-2-lgs-04, tr-8-2-lgs-05..08.
+
+### Matematik
+
+**Matematik 1-4**
+
+- Tema adları arama özetleri/hafıza; 1-2'de 7, 3'te 6 tema; numaralı temaların içerik dağılımı tahmin. 4: öğrenme alanları 6 başlıkta.
+- Bakılacaklar: mat-1-1-02 (daire/çember), mat-1-6-03/04/05/07/08, mat-2-1-07, mat-2-6-03/04, mat-2-4-08/14 ve 3-4 çarpım kartları, mat-3-1-07/13/06/11, mat-3-4-07/12, mat-3-5-12/06/07, saat yazımı (15.30), mat-4-5-03/04/09/14 (birimkare), mat-4-3-01, mat-4-6-10. Birim dönüşümü kartlarında zayıf yanlış ifadeler.
+
+**Matematik 5-8**
+
+- Tema adları arama özetlerinden; 6 ve özellikle 7. sınıfın tema sırası/sayısı doğrulanamadı ("Dönüşüm" teması eklenmedi). 8: 12 ünite 8'e indirildi.
+- Bakılacaklar (cevaplar doğru, kapsam belirsiz): mat-5-5-05, mat-5-5-06, mat-5-2-* üslü ve mat-5-2-uslu-ifadeler, mat-5-1-04/07/09, mat-6-1-06, mat-6-1-asal-carpanlar, mat-6-5-02/04/08, mat-6-7-* (05, 06), mat-7-1-*, mat-7-4-06, mat-7-5-07, mat-7-7-07, mat-8-1-04, mat-8-3-lgs-01, mat-5-3-uzunluk-donusumleri (zayıf çeldirici).
+
+### Hayat Bilgisi
+
+- Öğrenme alanları: Ben ve Okulum, Sağlığım ve Güvenliğim, Ailem ve Toplum, Yaşadığım Yer ve Ülkem, Doğa ve Çevre, Bilim, Teknoloji ve Sanat. 1, 5, 6. alan adı arama özetinden doğrulandı; 2, 3, 4 hafızadan. Konuların sınıflara dağılımı doğrulanmadı.
+- Bakılacaklar: hb-1-2-duyu-organlari, hb-3-5-bitkinin-bolumleri, hb-3-5-atik-kutu-renkleri, hb-1-5-atik-kutulari, hb-2-2-09, hb-2-2-08, hb-2-2-05, hb-2-2-01, hb-3-4-11, hb-3-4-08, hb-3-4-bayram-olaylari, hb-2-4-ataturkun-ailesi, hb-3-6-05 (Bell), hb-3-6-09, hb-3-6-bilim-insanlari, hb-3-4-04/05/06, hb-3-5-10, hb-3-5-05.
+
+### Fen Bilimleri
+
+**Fen 3-5**
+
+- 3. sınıf üniteleri arama özetlerinden: Bilimsel Keşif Yolculuğu; Canlılar Dünyasına Yolculuk; Yer Bilimciler İş Başında; Maddeyi Tanıyalım, Karıştırıp Ayıralım; Hareketi Keşfediyorum; Yaşamımızı Kolaylaştıran Elektrik; Toprağı Tanıyorum, Tarımı Keşfediyorum; Canlıların Yaşam Alanlarına Yolculuk (8. ünite yalnızca üçüncü taraf sitede; yoksa fen-3-8 silinmeli). 5. sınıf ünite sayısı (7/8) belirsiz.
+- Bakılacaklar: fen-3-3-05/06/07, fen-3-3-katmanlar, fen-3-4-09 ve fen-3-4-ayirma, fen-3-7-05 ve fen-3-7-toprak-turleri, fen-4-1-06, fen-4-3-09, fen-4-2-icerik-gorev, fen-5-1-09, fen-5-1-ay-evreleri, fen-5-3-hucre-yapilari, fen-5-5-04/05/06/08 ve fen-5-5-hal-degisimleri, fen-5-6-06/08/10, fen-5-7-09/10.
+
+**Fen 6-8**
+
+- 6: Güneş Sistemi ve Tutulmalar; Kuvvetin Etkisinde Hareket; Canlılarda Sistemler; Işığın Yansıması ve Renkler; Maddenin Ayırt Edici Özellikleri; Elektriğin İletimi ve Direnç; Sürdürülebilir Yaşam ve Etkileşim. 7: Uzay Çağı; Kuvvet ve Enerjiyi Keşfedelim; Vücudumuzdaki Sistemler; Işığın Kırılması ve Mercekler; Maddenin Doğasına Yolculuk; Elektriklenme; Sürdürülebilir Yaşam ve Enerji (ad belirsiz). Adlar arama özetinden; ünite kapsamları (6-7, 7-3, 7-1, 7-5) tahmin.
+- Bakılacaklar: fen-6-7-* ve fen-7-3-* (tümü), fen-6-3-*, fen-6-5-07/08 ve fen-6-5-ayirt-edici, fen-6-4-cukur-ayna, fen-6-4-03, fen-7-1-04/07/08/09, fen-7-4-ince-kenarli-mercek, fen-7-5-10/11, fen-7-6-10, fen-8-7-10, fen-7-2-enerji-donusumu, fen-8-7-isi-donusumu, fen-8-4-gruplar, fen-8-4-element-siniflari, fen-8-7-11, fen-8-7-lgs-02, fen-8-4-lgs-01.
+
+### Sosyal Bilgiler
+
+- Ünite adları verilen öğrenme alanı adları (doğrulanmadı). 6-7. sınıfta konuların öğrenme alanlarına dağılımı belirsiz: sos-7-1 (tamamı), sos-7-2, sos-6-2, sos-7-4, sos-7-5.
+- Bakılacaklar: sos-6-3-08, sos-6-3-kurucular, sos-6-5-05 (bor), sos-6-2-09, sos-6-4-kuvvetler ve sos-6-4-01/04, sos-7-5-01/08, sos-7-6-bilginler, sos-7-6-09, sos-7-3-kasifler, sos-7-4-08, sos-4-4-01 ve sos-4-4-buluslar, sos-5-3-07/08, sos-4-2-07.
+
+### T.C. İnkılap Tarihi ve Atatürkçülük; Din Kültürü 4. sınıf
+
+- Ünite adları 2018 programı (hafızadan); konu yerleşimi belirsiz: TBMM'nin açılışı 3. ünitede, saltanatın kaldırılması 4'te, Nutuk 5'te.
+- Bakılacaklar: ink-8-3-12 (Şerife Bacı), ink-8-3-lgs-04 (Akif'in ödülü), ink-8-5-09, ink-8-4-11 (Millet Mektepleri 1 Ocak 1929), ink-8-3-savaslar (Londra Konferansı, İtalyan çekilmesi), ink-8-3-antlasmalar (mudanya, moskova, kars), ink-8-4-ilkeler (halkçılık tanımı), ink-8-4-inkilaplar (alan etiketleri); dkab-4-4-ailesi (Abdullah), dkab-4-1-ifadeler (maşallah), dkab-4-5-06/07 (teyemmüm, gusül), dkab-4-4-09 (Hacerülesved), dkab-4-3-degerler.
+
+### İngilizce
+
+**İngilizce 2-4**
+
+- 2-3. sınıf temaları (School Life, Classroom Life, Personal Life, Family Life, Homes & Houses & Neighbourhoods, Life in the City & the World) yalnızca arama özetlerinden; tema 5-6 adları ve kelimelerin temalara dağılımı doğrulanamadı.
+- Bakılacaklar önerilenler: ing-3-4-06 ve ing-3-4-aile (son/daughter/parents); ing-3-5-06/09/11 (fridge, oven, bakery, pharmacy); ing-3-6-05/06 (mevsimler); ing-3-2-yer-bildirenler; ing-3-3-duygular; ing-2-3-10, ing-2-5-10, ing-2-6-08; ing-4-2-07 ve ing-4-2-ulkeler-uyruklar (Britain/British); ing-4-5-07; ing-4-6-deney-yonergeleri; ing-4-4-etkinlikler; ing-4-9-dis-gorunus (slim).
+
+**İngilizce 5-8**
+
+- 5-7 temaları (School Life, Classroom Life, Personal Life, Family Life, Life in the Neighbourhood & City, Life in the World, Life in Nature, Life in the Universe & Future) arama özetlerinden; sıra ve 7. sınıf adları tahmin; dil bilgisi dağılımı tahmin.
+- Bakılacaklar: ing-5-6-*, ing-5-7-*, ing-5-8-*; ing-5-8-03, ing-6-5-*, ing-6-4-*, ing-6-6-04/05/06; ing-7-7-07, ing-7-8-04, ing-7-8-07; ing-8-7-06; ing-8-9-02, ing-8-9-04, ing-8-9-lgs-01; ing-8-10-lgs-02; ing-5-2-dersler; ing-8-6-sporlar.
 
 ## Yazım tercihleri
 - Peygamber adlarında Diyanet yazımı kullanıldı: Davud, Yakub, Şuayb, Eyyub.

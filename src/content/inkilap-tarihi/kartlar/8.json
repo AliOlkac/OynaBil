@@ -1,0 +1,551 @@
+[
+  {
+    "kind": "pairs",
+    "id": "ink-8-1-cepheler",
+    "unit": "ink-8-1",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "Birinci Dünya Savaşı'nda {olayKucuk} hangi cephede yaşanmıştır?",
+        "answer": "cephe"
+      },
+      {
+        "prompt": "Birinci Dünya Savaşı'nda {cepheBulunma} yaşanan olay hangisidir?",
+        "answer": "olay"
+      }
+    ],
+    "statement": {
+      "text": "Birinci Dünya Savaşı'nda {olayKucuk} {cepheBulunma} yaşanmıştır.",
+      "swap": "cepheBulunma"
+    },
+    "explanation": "Birinci Dünya Savaşı'nda {olayKucuk} {cepheBulunma} yaşanmıştır.",
+    "items": [
+      {
+        "id": "canakkale",
+        "olay": "Conkbayırı ve Anafartalar savaşları",
+        "olayKucuk": "Conkbayırı ve Anafartalar savaşları",
+        "cephe": "Çanakkale Cephesi",
+        "cepheBulunma": "Çanakkale Cephesi'nde",
+        "not": "Mustafa Kemal bu savaşlarda gösterdiği başarıyla tanındı."
+      },
+      {
+        "id": "kafkas",
+        "olay": "Sarıkamış Harekâtı",
+        "olayKucuk": "Sarıkamış Harekâtı",
+        "cephe": "Kafkas Cephesi",
+        "cepheBulunma": "Kafkas Cephesi'nde",
+        "not": "Ruslara karşı kışın yapılan bu harekâtta birçok asker soğuktan şehit oldu."
+      },
+      {
+        "id": "irak",
+        "olay": "Kut'ül Amare Zaferi",
+        "olayKucuk": "Kut'ül Amare Zaferi",
+        "cephe": "Irak Cephesi",
+        "cepheBulunma": "Irak Cephesi'nde",
+        "not": "1916'da İngilizlere karşı kazanılan bu zaferde bir İngiliz tümeni esir alındı."
+      },
+      {
+        "id": "kanal",
+        "olay": "Süveyş Kanalı'na yapılan saldırılar",
+        "olayKucuk": "Süveyş Kanalı'na yapılan saldırılar",
+        "cephe": "Kanal Cephesi",
+        "cepheBulunma": "Kanal Cephesi'nde",
+        "not": "Amaç, İngilizlerin Hindistan yolunu kesmekti."
+      },
+      {
+        "id": "hicaz",
+        "olay": "Fahrettin Paşa'nın Medine savunması",
+        "olayKucuk": "Fahrettin Paşa'nın Medine savunması",
+        "cephe": "Hicaz ve Yemen Cephesi",
+        "cepheBulunma": "Hicaz ve Yemen Cephesi'nde",
+        "not": "Fahrettin Paşa, Medine'yi uzun süre teslim etmeden savundu."
+      },
+      {
+        "id": "suriye",
+        "olay": "Mustafa Kemal'in Halep'in kuzeyinde düşmanı durdurması",
+        "olayKucuk": "Mustafa Kemal'in Halep'in kuzeyinde düşmanı durdurması",
+        "cephe": "Suriye-Filistin Cephesi",
+        "cepheBulunma": "Suriye-Filistin Cephesi'nde",
+        "not": "Mustafa Kemal'in kurduğu bu savunma hattı, daha sonra Misak-ı Millî sınırının belirlenmesinde esas alındı."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ink-8-2-kongreler",
+    "unit": "ink-8-2",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "\"{gelisme}\" Bu gelişme hangisiyle ilgilidir?",
+        "answer": "ad"
+      },
+      {
+        "prompt": "Hangisi {adIle} ilgili doğru bir bilgidir?",
+        "answer": "gelisme"
+      }
+    ],
+    "statement": {
+      "text": "{adBulunma} {gelismeKucuk}",
+      "swap": "adBulunma"
+    },
+    "explanation": "{adBulunma} {gelismeKucuk}",
+    "items": [
+      {
+        "id": "havza",
+        "ad": "Havza Genelgesi",
+        "adIle": "Havza Genelgesi ile",
+        "adBulunma": "Havza Genelgesi ile",
+        "gelisme": "Halk, işgalleri protesto mitingleri düzenlemeye çağrıldı.",
+        "gelismeKucuk": "halk, işgalleri protesto mitingleri düzenlemeye çağrıldı.",
+        "not": "Genelge 28 Mayıs 1919'da yayımlandı."
+      },
+      {
+        "id": "amasya",
+        "ad": "Amasya Genelgesi",
+        "adIle": "Amasya Genelgesi ile",
+        "adBulunma": "Amasya Genelgesi'nde",
+        "gelisme": "Kurtuluş Savaşı'nın amacı, gerekçesi ve yöntemi ilk kez açıklandı.",
+        "gelismeKucuk": "Kurtuluş Savaşı'nın amacı, gerekçesi ve yöntemi ilk kez açıklandı.",
+        "not": "Genelgede \"Milletin bağımsızlığını yine milletin azim ve kararı kurtaracaktır.\" denildi."
+      },
+      {
+        "id": "erzurum",
+        "ad": "Erzurum Kongresi",
+        "adIle": "Erzurum Kongresi ile",
+        "adBulunma": "Erzurum Kongresi'nde",
+        "gelisme": "Manda ve himaye ilk kez reddedildi.",
+        "gelismeKucuk": "manda ve himaye ilk kez reddedildi.",
+        "not": "Kongre 23 Temmuz 1919'da toplandı; Temsil Heyeti de burada kuruldu."
+      },
+      {
+        "id": "sivas",
+        "ad": "Sivas Kongresi",
+        "adIle": "Sivas Kongresi ile",
+        "adBulunma": "Sivas Kongresi'nde",
+        "gelisme": "Bütün millî cemiyetler tek çatı altında birleştirildi.",
+        "gelismeKucuk": "bütün millî cemiyetler tek çatı altında birleştirildi.",
+        "not": "Cemiyetler, Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti adıyla birleşti."
+      },
+      {
+        "id": "amasya-gorusmeleri",
+        "ad": "Amasya Görüşmeleri",
+        "adIle": "Amasya Görüşmeleri ile",
+        "adBulunma": "Amasya Görüşmeleri ile",
+        "gelisme": "İstanbul Hükûmeti, Temsil Heyeti'ni tanımış oldu.",
+        "gelismeKucuk": "İstanbul Hükûmeti, Temsil Heyeti'ni tanımış oldu.",
+        "not": "Görüşmeler Ekim 1919'da Temsil Heyeti ile İstanbul Hükûmeti arasında yapıldı."
+      },
+      {
+        "id": "misak",
+        "ad": "Misak-ı Millî",
+        "adIle": "Misak-ı Millî ile",
+        "adBulunma": "Misak-ı Millî'de",
+        "gelisme": "Batı Trakya, Kars, Ardahan ve Batum için halkoylaması istendi.",
+        "gelismeKucuk": "Batı Trakya, Kars, Ardahan ve Batum için halkoylaması istendi.",
+        "not": "Misak-ı Millî, 28 Ocak 1920'de son Osmanlı Mebusan Meclisinde kabul edildi."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ink-8-2-tarihler",
+    "unit": "ink-8-2",
+    "difficulty": 3,
+    "questions": [
+      {
+        "prompt": "{olay} hangi tarihte gerçekleşmiştir?",
+        "answer": "tarih"
+      },
+      {
+        "prompt": "{tarih} tarihinde gerçekleşen olay hangisidir?",
+        "answer": "olay"
+      }
+    ],
+    "statement": {
+      "text": "{olay}, {tarih} tarihinde gerçekleşmiştir.",
+      "swap": "tarih"
+    },
+    "explanation": "{olay}, {tarih} tarihinde gerçekleşmiştir.",
+    "items": [
+      {
+        "id": "mondros",
+        "olay": "Mondros Ateşkes Antlaşması'nın imzalanması",
+        "tarih": "30 Ekim 1918"
+      },
+      {
+        "id": "izmir",
+        "olay": "İzmir'in Yunanlar tarafından işgali",
+        "tarih": "15 Mayıs 1919"
+      },
+      {
+        "id": "samsun",
+        "olay": "Mustafa Kemal'in Samsun'a çıkışı",
+        "tarih": "19 Mayıs 1919"
+      },
+      {
+        "id": "amasya",
+        "olay": "Amasya Genelgesi'nin yayımlanması",
+        "tarih": "22 Haziran 1919"
+      },
+      {
+        "id": "erzurum",
+        "olay": "Erzurum Kongresi'nin toplanması",
+        "tarih": "23 Temmuz 1919"
+      },
+      {
+        "id": "sivas",
+        "olay": "Sivas Kongresi'nin toplanması",
+        "tarih": "4 Eylül 1919"
+      },
+      {
+        "id": "misak",
+        "olay": "Misak-ı Millî'nin kabul edilmesi",
+        "tarih": "28 Ocak 1920"
+      },
+      {
+        "id": "istanbul",
+        "olay": "İstanbul'un resmen işgal edilmesi",
+        "tarih": "16 Mart 1920"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ink-8-3-savaslar",
+    "unit": "ink-8-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "Hangisi {savasTamlayan} doğrudan bir sonucudur?",
+        "answer": "sonuc"
+      },
+      {
+        "prompt": "{sonuc} hangisinin doğrudan sonucudur?",
+        "answer": "savas"
+      }
+    ],
+    "statement": {
+      "text": "{sonuc}, {savasTamlayan} doğrudan sonucudur.",
+      "swap": "savasTamlayan"
+    },
+    "explanation": "{sonuc}, {savasTamlayan} doğrudan sonucudur.",
+    "items": [
+      {
+        "id": "birinci-inonu",
+        "savas": "I. İnönü Muharebesi",
+        "sonuc": "Londra Konferansı'nın toplanması",
+        "not": "Bu muharebe, düzenli ordunun ilk zaferidir.",
+        "savasTamlayan": "I. İnönü Muharebesi'nin"
+      },
+      {
+        "id": "ikinci-inonu",
+        "savas": "II. İnönü Muharebesi",
+        "sonuc": "İtalyanların Anadolu'dan çekilmeye başlaması",
+        "not": "Mustafa Kemal, İsmet Paşa'ya \"milletin makûs talihini de yendiniz\" diye yazdı.",
+        "savasTamlayan": "II. İnönü Muharebesi'nin"
+      },
+      {
+        "id": "kutahya-eskisehir",
+        "savas": "Kütahya-Eskişehir Savaşları",
+        "sonuc": "Başkomutanlık Kanunu'nun çıkarılması",
+        "not": "Yenilginin ardından ordu Sakarya Nehri'nin doğusuna çekildi ve Mustafa Kemal başkomutan oldu.",
+        "savasTamlayan": "Kütahya-Eskişehir Savaşları'nın"
+      },
+      {
+        "id": "sakarya",
+        "savas": "Sakarya Meydan Muharebesi",
+        "sonuc": "Mustafa Kemal'e mareşal rütbesi ve gazi unvanı verilmesi",
+        "not": "Muharebe 22 gün 22 gece sürdü.",
+        "savasTamlayan": "Sakarya Meydan Muharebesi'nin"
+      },
+      {
+        "id": "buyuk-taarruz",
+        "savas": "Büyük Taarruz",
+        "sonuc": "Mudanya Ateşkes Antlaşması'nın imzalanması",
+        "not": "Büyük Taarruz 26 Ağustos 1922'de başladı.",
+        "savasTamlayan": "Büyük Taarruz'un"
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ink-8-3-antlasmalar",
+    "unit": "ink-8-3",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{antlasma} ile hangisi gerçekleşmiştir?",
+        "answer": "bilgi"
+      },
+      {
+        "prompt": "Hangi antlaşma ile {bilgiSoru}?",
+        "answer": "antlasma"
+      }
+    ],
+    "statement": {
+      "text": "{antlasma} ile {bilgiSoru}.",
+      "swap": "antlasma"
+    },
+    "explanation": "{antlasma} ile {bilgiSoru}.",
+    "items": [
+      {
+        "id": "gumru",
+        "antlasma": "Gümrü Antlaşması",
+        "bilgi": "Doğu Cephesi'nde Ermenistan ile savaş sona erdi.",
+        "bilgiSoru": "Doğu Cephesi'nde Ermenistan ile savaş sona erdi",
+        "not": "3 Aralık 1920'de imzalanan bu antlaşma, TBMM'nin ilk uluslararası antlaşmasıdır."
+      },
+      {
+        "id": "moskova",
+        "antlasma": "Moskova Antlaşması",
+        "bilgi": "Misak-ı Millî'yi tanıyan ilk büyük devlet Sovyet Rusya oldu.",
+        "bilgiSoru": "Misak-ı Millî'yi tanıyan ilk büyük devlet Sovyet Rusya oldu",
+        "not": "Antlaşma 16 Mart 1921'de imzalandı."
+      },
+      {
+        "id": "kars",
+        "antlasma": "Kars Antlaşması",
+        "bilgi": "Doğu sınırımız bugünkü şeklini aldı.",
+        "bilgiSoru": "doğu sınırımız bugünkü şeklini aldı",
+        "not": "Antlaşma Ekim 1921'de Kafkas cumhuriyetleriyle imzalandı."
+      },
+      {
+        "id": "ankara",
+        "antlasma": "Ankara Antlaşması (1921)",
+        "bilgi": "Fransa, TBMM'yi tanıyan ilk İtilaf devleti oldu.",
+        "bilgiSoru": "Fransa, TBMM'yi tanıyan ilk İtilaf devleti oldu",
+        "not": "Bu antlaşmayla Güney Cephesi kapandı."
+      },
+      {
+        "id": "lozan",
+        "antlasma": "Lozan Barış Antlaşması",
+        "bilgi": "Kapitülasyonlar tamamen kaldırıldı.",
+        "bilgiSoru": "kapitülasyonlar tamamen kaldırıldı",
+        "not": "Antlaşma 24 Temmuz 1923'te imzalandı; Türk heyetine İsmet Paşa başkanlık etti."
+      },
+      {
+        "id": "mudanya",
+        "antlasma": "Mudanya Ateşkes Antlaşması",
+        "bilgi": "Kurtuluş Savaşı'nın askerî dönemi sona erdi.",
+        "bilgiSoru": "Kurtuluş Savaşı'nın askerî dönemi sona erdi",
+        "not": "İstanbul, Boğazlar ve Doğu Trakya savaş yapılmadan kurtarıldı."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ink-8-4-inkilaplar",
+    "unit": "ink-8-4",
+    "difficulty": 1,
+    "questions": [
+      {
+        "prompt": "{inkilap} hangi alanda yapılan bir inkılaptır?",
+        "answer": "alan"
+      }
+    ],
+    "statement": {
+      "text": "{inkilap}, {alanKucuk} yapılan bir inkılaptır.",
+      "swap": "alanKucuk"
+    },
+    "explanation": "{inkilap}, {alanKucuk} yapılan bir inkılaptır.",
+    "items": [
+      {
+        "id": "saltanat",
+        "inkilap": "Saltanatın kaldırılması",
+        "alan": "Siyasi alanda",
+        "alanKucuk": "siyasi alanda",
+        "not": "Saltanat 1 Kasım 1922'de kaldırıldı."
+      },
+      {
+        "id": "cumhuriyet",
+        "inkilap": "Cumhuriyetin ilanı",
+        "alan": "Siyasi alanda",
+        "alanKucuk": "siyasi alanda",
+        "not": "Cumhuriyet 29 Ekim 1923'te ilan edildi."
+      },
+      {
+        "id": "medeni-kanun",
+        "inkilap": "Türk Medeni Kanunu'nun kabulü",
+        "alan": "Hukuk alanında",
+        "alanKucuk": "hukuk alanında",
+        "not": "Medeni Kanun 1926'da kabul edildi."
+      },
+      {
+        "id": "tevhid",
+        "inkilap": "Tevhid-i Tedrisat Kanunu",
+        "alan": "Eğitim ve kültür alanında",
+        "alanKucuk": "eğitim ve kültür alanında",
+        "not": "Kanun 3 Mart 1924'te kabul edildi."
+      },
+      {
+        "id": "harf",
+        "inkilap": "Harf İnkılabı",
+        "alan": "Eğitim ve kültür alanında",
+        "alanKucuk": "eğitim ve kültür alanında",
+        "not": "Yeni Türk harfleri 1 Kasım 1928'de kabul edildi."
+      },
+      {
+        "id": "sapka",
+        "inkilap": "Şapka Kanunu",
+        "alan": "Toplumsal alanda",
+        "alanKucuk": "toplumsal alanda",
+        "not": "Şapka Kanunu 1925'te kabul edildi."
+      },
+      {
+        "id": "soyadi",
+        "inkilap": "Soyadı Kanunu",
+        "alan": "Toplumsal alanda",
+        "alanKucuk": "toplumsal alanda",
+        "not": "Soyadı Kanunu 1934'te kabul edildi."
+      },
+      {
+        "id": "asar",
+        "inkilap": "Aşar vergisinin kaldırılması",
+        "alan": "Ekonomi alanında",
+        "alanKucuk": "ekonomi alanında",
+        "not": "Aşar 1925'te kaldırıldı."
+      },
+      {
+        "id": "kabotaj",
+        "inkilap": "Kabotaj Kanunu",
+        "alan": "Ekonomi alanında",
+        "alanKucuk": "ekonomi alanında",
+        "not": "Kanun 1 Temmuz 1926'da yürürlüğe girdi."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ink-8-4-ilkeler",
+    "unit": "ink-8-4",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ilke} ilkesi neyi esas alır?",
+        "answer": "tanim"
+      },
+      {
+        "prompt": "{tanimSoru} hangi ilkeyle ilgilidir?",
+        "answer": "ilke"
+      }
+    ],
+    "statement": {
+      "text": "{ilke} ilkesi, {tanimKucuk} esas alır.",
+      "swap": "tanimKucuk"
+    },
+    "explanation": "{ilke} ilkesi, {tanimKucuk} esas alır.",
+    "items": [
+      {
+        "id": "cumhuriyetcilik",
+        "ilke": "Cumhuriyetçilik",
+        "tanim": "Millî egemenliğe dayalı yönetimi",
+        "tanimKucuk": "millî egemenliğe dayalı yönetimi",
+        "tanimSoru": "Yönetimin millî egemenliğe dayanması",
+        "not": "\"Egemenlik kayıtsız şartsız milletindir.\" sözü bu ilkeyi anlatır."
+      },
+      {
+        "id": "milliyetcilik",
+        "ilke": "Milliyetçilik",
+        "tanim": "Millî birlik ve beraberliği",
+        "tanimKucuk": "millî birlik ve beraberliği",
+        "tanimSoru": "Millî birlik ve beraberliğin korunması",
+        "not": "Türk Tarih Kurumu ve Türk Dil Kurumu'nun kurulması bu ilkeyle ilgilidir."
+      },
+      {
+        "id": "halkcilik",
+        "ilke": "Halkçılık",
+        "tanim": "Kanun önünde herkesin eşit olmasını",
+        "tanimKucuk": "kanun önünde herkesin eşit olmasını",
+        "tanimSoru": "Kanun önünde herkesin eşit olması",
+        "not": "Lakap ve unvanların kaldırılması bu ilkeyle ilgilidir."
+      },
+      {
+        "id": "devletcilik",
+        "ilke": "Devletçilik",
+        "tanim": "Özel girişimin yetmediği yerde devletin yatırım yapmasını",
+        "tanimKucuk": "özel girişimin yetmediği yerde devletin yatırım yapmasını",
+        "tanimSoru": "Özel girişimin yetmediği yerde devletin yatırım yapması",
+        "not": "Sümerbank ve Etibank gibi kuruluşlar bu anlayışla kuruldu."
+      },
+      {
+        "id": "laiklik",
+        "ilke": "Laiklik",
+        "tanim": "Din ve devlet işlerinin birbirinden ayrılmasını",
+        "tanimKucuk": "din ve devlet işlerinin birbirinden ayrılmasını",
+        "tanimSoru": "Din ve devlet işlerinin birbirinden ayrılması",
+        "not": "Laiklik, din ve vicdan özgürlüğünü de güvence altına alır."
+      },
+      {
+        "id": "inkilapcilik",
+        "ilke": "İnkılapçılık",
+        "tanim": "Yapılan yenilikleri koruyup geliştirmeyi",
+        "tanimKucuk": "yapılan yenilikleri koruyup geliştirmeyi",
+        "tanimSoru": "Yapılan yeniliklerin korunup geliştirilmesi",
+        "not": "Bu ilke, çağın gereklerine göre yenilenmeyi öngörür."
+      }
+    ]
+  },
+  {
+    "kind": "pairs",
+    "id": "ink-8-6-dis-politika",
+    "unit": "ink-8-6",
+    "difficulty": 2,
+    "questions": [
+      {
+        "prompt": "{ad} ile hangisi gerçekleşmiştir?",
+        "answer": "bilgi"
+      },
+      {
+        "prompt": "Hangisi ile {bilgiSoru}?",
+        "answer": "ad"
+      },
+      {
+        "prompt": "{ad} hangi yıl imzalanmıştır?",
+        "answer": "yil"
+      }
+    ],
+    "statement": {
+      "text": "{ad} ile {bilgiSoru}.",
+      "swap": "ad"
+    },
+    "explanation": "{ad} ile {bilgiSoru}. Bu gelişme {yil} yılında yaşandı.",
+    "items": [
+      {
+        "id": "ankara-1926",
+        "ad": "İngiltere ve Irak ile yapılan Ankara Antlaşması",
+        "bilgi": "Musul, Irak'a bırakıldı.",
+        "bilgiSoru": "Musul, Irak'a bırakıldı",
+        "yil": "1926"
+      },
+      {
+        "id": "yunanistan-1930",
+        "ad": "Yunanistan ile yapılan Ankara Antlaşması",
+        "bilgi": "Nüfus mübadelesinden kalan sorunlar çözüldü.",
+        "bilgiSoru": "nüfus mübadelesinden kalan sorunlar çözüldü",
+        "yil": "1930"
+      },
+      {
+        "id": "balkan-antanti",
+        "ad": "Balkan Antantı",
+        "bilgi": "Türkiye, Yunanistan, Yugoslavya ve Romanya arasında işbirliği kuruldu.",
+        "bilgiSoru": "Türkiye, Yunanistan, Yugoslavya ve Romanya arasında işbirliği kuruldu",
+        "yil": "1934"
+      },
+      {
+        "id": "montro",
+        "ad": "Montrö Boğazlar Sözleşmesi",
+        "bilgi": "Boğazlar'ın denetimi Türkiye'ye geçti.",
+        "bilgiSoru": "Boğazlar'ın denetimi Türkiye'ye geçti",
+        "yil": "1936"
+      },
+      {
+        "id": "sadabat",
+        "ad": "Sadabat Paktı",
+        "bilgi": "Türkiye, İran, Irak ve Afganistan arasında dostluk kuruldu.",
+        "bilgiSoru": "Türkiye, İran, Irak ve Afganistan arasında dostluk kuruldu",
+        "yil": "1937"
+      }
+    ]
+  }
+]
