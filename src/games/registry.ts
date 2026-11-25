@@ -230,7 +230,27 @@ export const basketbol: GameDefinition = {
   questionsNeeded: (s) => Number(s.questions) + 6,
 };
 
-export const GAMES: GameDefinition[] = [bilgiYarismasi, halatCekme, kuleYikmaca, penalti, basketbol];
+export const okculuk: GameDefinition = {
+  id: "okculuk",
+  name: "Okçuluk",
+  scene3d: true,
+  tagline: "İki takıma aynı soru. İlk bilen yayını gerer: rüzgârı hesaba katıp hedefin tam ortasını vurabilecek mi?",
+  howTo: [
+    "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
+    "İlk doğru cevaplayan takım ok atma hakkı kazanır. Yanlış cevap veren takım bekler.",
+    "Nişangâh hedefin üstünde gezinir. Ortaya gelince BIRAK'a dokunun. Rüzgâr oku estiği yana iter: rüzgâr sağa esiyorsa nişanı biraz sola alın.",
+    "Halkalar ortadan dışa 10'dan 1'e puan verir. Sorular bitince çok puan toplayan kazanır; eşitlikte uzatmada 7 ve üstünü vuran kazanır.",
+  ],
+  teamCount: { min: 2, max: 2, default: 2 },
+  // Doğru/yanlış soruları kullanılmaz: bir takımın yanlış cevabı görülünce doğrusu belli olurdu.
+  questionTypes: ["multiple-choice"],
+  settings: basketbol.settings,
+  defaultSettings: { questions: 10, seconds: 30 },
+  // Uzatma için yedek sorular da gerekir.
+  questionsNeeded: (s) => Number(s.questions) + 6,
+};
+
+export const GAMES: GameDefinition[] = [bilgiYarismasi, halatCekme, kuleYikmaca, penalti, basketbol, okculuk];
 
 export function getGame(id: string): GameDefinition | undefined {
   return GAMES.find((g) => g.id === id);

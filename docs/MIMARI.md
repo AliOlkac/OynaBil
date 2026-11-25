@@ -108,6 +108,14 @@ Basketbol, Penaltı'nın düzenini izler: `BasketStage` üç boyutlu salon (`sce
 - **Zaman çizelgesi** (`timeline.ts`, three.js içermez): topun yolu, sonuca göre (tertemiz, çemberden içeri, ön ya da arka çemberden dönen, panyadan seken, havaya giden) yerçekimli yay parçalarından kurulur; çember, panya, file ve parke olayları aynı listededir. Sesler, skorun güncellenmesi ve ağır çekim tekrar bu listeden okunur. Testler her sonucun yolunun kesintisiz olduğunu, basketin çemberin içinden geçtiğini ve kaçan topun geçmediğini sınar.
 - **File** her kare topun yerine göre esner: top hangi halkanın hizasındaysa o halka topu sarar; basketten sonra file sallanır.
 
+### Üç boyutlu sahne (Okçuluk)
+
+Okçuluk, Basketbol'un düzenini izler: `ArcheryStage` üç boyutlu atış alanı (`scene3d/engine.ts`) ile çizim sahnesi (`scene/ArcheryScene.tsx`) arasında seçer; ikisi aynı girdiyi alır ve aynı olayları bildirir.
+
+- **Atışın sonucu oyun mantığındadır** (`logic.ts`): nişangâhın yeri, ok bırakıldığı an ile nişan almanın başladığı an arasındaki farktan saf bir fonksiyonla (`sightAt`) hesaplanır; rüzgâr (`windFor`, soru kimliğinden türetilir) oku yana kaydırır, halka puanı merkezden uzaklıktan çıkar. Ekrandaki dürbün (`AimScope.tsx`) aynı fonksiyonu çizer. Uzatmada 7'nin altındaki ok skora eklenmez (`Shot.scored`).
+- **Zaman çizelgesi** (`timeline.ts`, three.js içermez): okun ucu bırakış noktasından hedef yüzüne (ya da hedefi bulmazsa arkadaki çimene) yerçekimli bir yayla gider; saplanma anı, okun titreşimi ve ağır çekimin aralığı buradadır.
+- **Okçu yan durur:** sol omzu hedefe bakar, yay sol elde, çekme eli çeneye gelir. Yay ve kiriş her kare ellerin dünya koordinatından (`KidFigure.handWorld`) kurulur. Hedefte son altı ok durur.
+
 ### Üç boyutlu sahne (Bilgi Yarışması)
 
 Bilgi Yarışması'nın çizim sahnesi yoktur; üç boyutlu stüdyo (`scene3d/StudioStage.tsx`) soru ekranının üstünde bir şerittir. Tahta 3D çizemiyorsa şerit hiç yer kaplamaz ve oyun eskisi gibi oynanır. Şerit paragraf (LGS) sorularında ve 860 pikselden alçak ekranlarda gizlenir; soru metni her zaman önceliklidir. Sahne yalnızca özet girdi alır (sıradaki takım, son sonuç, puanlar, önde olan takım).

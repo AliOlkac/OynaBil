@@ -280,6 +280,13 @@ export class KidFigure {
     this.pose({ ...m, footL: local(m.footL, bodyA), footR: local(m.footR, bodyB), handL: local(m.handL, bodyC), handR: local(m.handR, bodyD) }, time);
   }
 
+  /** Bir elin dünya koordinatı (`side` -1 sol, 1 sağ): okçunun yayı sol elde durur. */
+  handWorld(side: -1 | 1, out: THREE.Vector3): THREE.Vector3 {
+    this.root.updateMatrixWorld();
+    const limb = this.limbs.find((l) => l.side === side) ?? this.limbs[0];
+    return out.copy(limb.hand.position).applyMatrix4(this.root.matrixWorld);
+  }
+
   /** İki elin orta noktası (dünya koordinatı): kalecinin tuttuğu top buraya konur. */
   handsCentre(out: THREE.Vector3): THREE.Vector3 {
     this.root.updateMatrixWorld();

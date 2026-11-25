@@ -240,6 +240,16 @@ export const sfx = {
     tone(247, 0, 1.2, { type: "square", gain: 0.035 });
   },
 
+  // Okçuluk
+  bowDraw: () => noise(0, 0.7, { freq: 900, q: 6, gain: 0.05, attack: 0.5, sweepTo: 1400 }),
+  bowRelease: () => {
+    tone(180, 0, 0.18, { type: "triangle", gain: 0.14, to: 120 });
+    noise(0, 0.08, { freq: 2600, q: 1, gain: 0.08 });
+  },
+  arrowHit: (strength = 1) => {
+    tone(140, 0, 0.1, { type: "sine", gain: 0.08 + 0.12 * strength, to: 80 });
+    noise(0, 0.06, { freq: 1200, q: 1.2, gain: 0.05 + 0.06 * strength });
+  },
   tap: () => tone(660, 0, 0.06, { type: "triangle", gain: 0.08 }),
   tick: () => tone(1046, 0, 0.05, { type: "square", gain: 0.035 }),
   correct: () => {

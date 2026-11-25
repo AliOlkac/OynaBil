@@ -42,6 +42,21 @@ export function GameGlyph({ id, selected = false }: { id: string; selected?: boo
       </span>
     );
   }
+  if (id === "okculuk") {
+    return (
+      <span className={`grid size-14 shrink-0 place-items-center rounded-lg ${ring}`} aria-hidden>
+        <svg viewBox="0 0 48 48" className="size-11">
+          <circle cx="30" cy="20" r="15" fill="var(--color-cream)" />
+          <circle cx="30" cy="20" r="12" fill="var(--color-ink-950)" />
+          <circle cx="30" cy="20" r="9" fill="var(--color-kobalt)" />
+          <circle cx="30" cy="20" r="6" fill="var(--color-mercan)" />
+          <circle cx="30" cy="20" r="3" fill="var(--color-kehribar)" />
+          <path d="M6 42 L29 21" stroke="var(--color-ahsap-acik)" strokeWidth={2.5} strokeLinecap="round" />
+          <path d="M6 42 l-1 -6 l4 2 Z M6 42 l6 1 l-2 -4 Z" fill="var(--color-mercan)" />
+        </svg>
+      </span>
+    );
+  }
   if (id === "kule-yikmaca") {
     return (
       <span className={`grid size-14 shrink-0 place-items-center rounded-lg ${ring}`} aria-hidden>
