@@ -173,3 +173,23 @@ describe("Okçuluk: oyun akışı", () => {
     expect(s.deadline).toBe(15_000);
   });
 });
+
+describe("Okçuluk: zorluk", () => {
+  it("normal ve zorda nişangâh daha hızlı gezinir, rüzgâr daha sert iter", () => {
+    const at = AIM_LOCK_MS + 1_000;
+    expect(sightAt(at, 2)).toEqual(sightAt(AIM_LOCK_MS + 1_300, 1));
+    expect(sightAt(at, 3)).toEqual(sightAt(AIM_LOCK_MS + 1_600, 1));
+    expect(hitPoint({ x: 0, y: 0 }, 2, 3).x).toBeGreaterThan(hitPoint({ x: 0, y: 0 }, 2, 1).x);
+  });
+
+  it("oyun ayardaki zorlukla oynanır; ayarı olmayan eski oyun kolaydır", () => {
+    const t = 100 + AIM_LOCK_MS + 2_000;
+    const shoot = (difficulty?: number) => {
+      let s = start(difficulty === undefined ? {} : { difficulty });
+      s = reduce(s, { type: "answer", side: 0, option: right(s), now: 100 });
+      return reduce(s, { type: "shoot", now: t }).shots[0];
+    };
+    expect(shoot().aim).toEqual(sightAt(t - 100, 1));
+    expect(shoot(3).aim).toEqual(sightAt(t - 100, 3));
+  });
+});

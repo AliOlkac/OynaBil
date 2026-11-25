@@ -25,6 +25,7 @@ import { AimScope } from "./AimScope";
 import { AIM_LOCK_MS, archeryReducer, createArchery, OVERTIME_WIN, type ArcheryAction, type ArcherySettings, type ArcheryState, type Shot } from "./logic";
 import type { ArcherySceneInput, SceneTeam } from "./scene/types";
 import { ArcheryStage, preloadArcheryStage } from "./scene3d/ArcheryStage";
+import { difficultyOf } from "../shared/difficulty";
 import { useStage3d } from "../shared/stage3d/support";
 import { RESULT_TEXT } from "./timeline";
 
@@ -211,6 +212,7 @@ export default function Okculuk({ config, deck, onRestart }: GameProps) {
               wind={s.phase === "aim" ? s.wind : lastShot!.wind}
               hit={s.phase === "result" && lastShot ? lastShot.hit : null}
               color={TEAM_STYLES[teams[s.phase === "aim" ? s.shooter! : lastShot!.side].color].base}
+              difficulty={difficultyOf(settings)}
             />
           </div>
         )}

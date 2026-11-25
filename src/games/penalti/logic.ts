@@ -1,4 +1,5 @@
 import type { PlayableQuestion } from "@/core/deck";
+import { byDifficulty, difficultyOf, type Difficulty } from "../shared/difficulty";
 import { duelAnswer, freshDuel, type Duel } from "../shared/duel";
 import type { AnswerLog, Team } from "../types";
 
@@ -24,6 +25,11 @@ export const SUDDEN_DEATH_MAX = 6;
  */
 export const BALL_X = 0.045;
 export const BALL_Y = 0.067;
+/**
+ * Şutun sapması (kale genişliğinin yarısı cinsinden yarıçap): kolayda top tam nişana gider; normal ve
+ * zorda nişan halkasının içinde bir yere sapar. Köşeye çok yakın nişan direğe ya da auta gidebilir.
+ */
+export const SCATTER = [0, 0.09, 0.15] as const;
 
 export type Third = "sol" | "orta" | "sag";
 export type KickResult = "gol" | "kurtardi" | "direk" | "aut";
@@ -35,13 +41,18 @@ export type PenaltySettings = {
   questions: number;
   /** Soru süresi (saniye); 0 süresiz. */
   seconds: number;
+  /** 1 kolay, 2 normal, 3 zor (bkz. shared/difficulty). */
+  difficulty?: number;
 };
 
 export type Kick = {
   side: 0 | 1;
-  /** Topun gittiği nokta (kale koordinatı). */
+  /** Topun gittiği nokta (kale koordinatı): nişan + sapma. */
   x: number;
   y: number;
+  /** Şutçunun nişan aldığı nokta (eski kayıtlarda yok). */
+  aimX?: number;
+  aimY?: number;
   third: Third;
   keeper: Third;
   result: KickResult;
@@ -103,6 +114,22 @@ export function keeperFor(seed: number, kickIndex: number): Third {
   h = Math.imul(h ^ (h >>> 13), 0xc2b2ae35) >>> 0;
   h = (h ^ (h >>> 16)) >>> 0;
   return (["sol", "orta", "sag"] as const)[h % 3];
+}
+
+/**
+ * Şutun sapması: oyun tohumu ve şutun sırasından türetilir, halkanın içinde düzgün dağılır. Kale 3'e 1
+ * olduğu için dikeyde y birimi 1.5 katıdır; sapma metre olarak dairedir.
+ */
+export function scatterFor(seed: number, kickIndex: number, d: Difficulty): { dx: number; dy: number } {
+  const r = byDifficulty(d, SCATTER);
+  if (r === 0) return { dx: 0, dy: 0 };
+  let h = (seed ^ Math.imul(kickIndex + 101, 0x85ebca6b)) >>> 0;
+  h = Math.imul(h ^ (h >>> 15), 0x2c1b3c6d) >>> 0;
+  h = Math.imul(h ^ (h >>> 12), 0x297a2d39) >>> 0;
+  h = (h ^ (h >>> 15)) >>> 0;
+  const a = ((h & 0xffff) / 0x10000) * Math.PI * 2;
+  const k = Math.sqrt((h >>> 16) / 0x10000) * r;
+  return { dx: Math.cos(a) * k, dy: Math.sin(a) * k * 1.5 };
 }
 
 export function kickResult(x: number, y: number, keeper: Third): KickResult {
@@ -203,8 +230,11 @@ export function penaltyReducer(deck: PlayableQuestion[]) {
         if (a.now - s.kickStart < KICK_LOCK_MS) return s;
         if (!Number.isFinite(a.x) || !Number.isFinite(a.y)) return s;
         const keeper = keeperFor(s.seed, s.kicks.length);
-        const result = kickResult(a.x, a.y, keeper);
-        const kick: Kick = { side: s.shooter, x: a.x, y: a.y, third: thirdOf(a.x), keeper, result, at: a.now, questionId: q?.id ?? "" };
+        const { dx, dy } = scatterFor(s.seed, s.kicks.length, difficultyOf(s.settings));
+        const x = a.x + dx;
+        const y = a.y + dy;
+        const result = kickResult(x, y, keeper);
+        const kick: Kick = { side: s.shooter, x, y, aimX: a.x, aimY: a.y, third: thirdOf(x), keeper, result, at: a.now, questionId: q?.id ?? "" };
         const goals = [...s.goals] as [number, number];
         if (result === "gol") goals[s.shooter] += 1;
         const next: PenaltyState = { ...s, phase: "result", goals, kicks: [...s.kicks, kick], kickStart: null };

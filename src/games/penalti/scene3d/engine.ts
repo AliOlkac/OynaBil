@@ -835,7 +835,8 @@ export function createPenaltyEngine(o: EngineOptions): { dispose: () => void } {
       const place = classify(g.gx, g.gy);
       aimMat.color.copy(tokenColor(place === "aut" ? "var(--color-ink-400)" : teams[inp.shooter ?? 0].base));
       const pulse = quiet ? 1 : 1 + Math.sin(st.clock * 9) * 0.08;
-      ring.scale.setScalar(pulse);
+      // Zorlukta şut halkanın içinde bir yere sapar: halka sapmanın sınırını gösterir.
+      ring.scale.setScalar(pulse * Math.max(1, (inp.scatter * GOAL_HALF) / 0.29));
       const slide = quiet ? 0 : (st.clock * 1.6) % 1;
       pathDots.forEach((d, i) => {
         const u = (i + slide) / DOTS;

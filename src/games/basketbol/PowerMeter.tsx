@@ -2,6 +2,7 @@
 
 import { Flame } from "lucide-react";
 import { useEffect, useRef } from "react";
+import type { Difficulty } from "../shared/difficulty";
 import { meterAt, SWEET, zoneHalf, type Range } from "./logic";
 
 /**
@@ -9,19 +10,19 @@ import { meterAt, SWEET, zoneHalf, type Range } from "./logic";
  * yeşilin geri kalanı çemberden giren toptur. Yer, oyun mantığıyla aynı fonksiyondan (`meterAt`)
  * hesaplanır; ekranda görünen yer ile atışın sonucu birebir aynıdır.
  */
-export function PowerMeter({ range, meterStart, fire, reducedMotion }: { range: Range; meterStart: number; fire: boolean; reducedMotion: boolean }) {
+export function PowerMeter({ range, meterStart, fire, reducedMotion, difficulty }: { range: Range; meterStart: number; fire: boolean; reducedMotion: boolean; difficulty: Difficulty }) {
   const needle = useRef<HTMLDivElement>(null);
   useEffect(() => {
     let raf = 0;
     const tick = () => {
-      const p = meterAt(Date.now() - meterStart, range);
+      const p = meterAt(Date.now() - meterStart, range, difficulty);
       if (needle.current) needle.current.style.left = `${(p * 100).toFixed(2)}%`;
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [range, meterStart]);
-  const w = zoneHalf(range, fire);
+  }, [range, meterStart, difficulty]);
+  const w = zoneHalf(range, fire, difficulty);
   const pct = (v: number) => `${(Math.max(0, Math.min(1, v)) * 100).toFixed(2)}%`;
   return (
     <div className="relative h-14 w-full min-w-[14rem] sm:h-16" role="img" aria-label="Güç çubuğu: iğne yeşil bölgedeyken at">

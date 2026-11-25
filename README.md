@@ -34,6 +34,8 @@
 
 Bilgi Yarışması'nı dizüstü bilgisayardan da yönetebilirsiniz: `A-D` ya da `1-4` cevap verir, `Enter` sonraki soruya geçer, `P` süreyi duraklatır. Kule Yıkmaca'da `Boşluk` ya da `Enter` mancınığı ateşler, Penaltı'da sayı tuşları (sayısal tuş takımı gibi, 7 sol üst, 3 sağ alt) şut çektirir. Basketbol'da `2` ya da `3` mesafeyi seçer, `Boşluk` atar. Okçuluk'ta `Boşluk` oku bırakır.
 
+Kule Yıkmaca, Penaltı, Basketbol ve Okçuluk'un kurulumunda bir **Zorluk** ayarı vardır. Kolay, küçük sınıflar içindir; Normal (varsayılan) ve Zor ayarda nişangâh ve güç çubuğu daha hızlı gider, yeşil bölge daralır, rüzgâr daha sert eser, Penaltı'da şut nişan halkasının içinde biraz sapar.
+
 Kule Yıkmaca, Penaltı, Basketbol ve Okçuluk'ta iki takıma aynı soru sorulur: iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir, şıklar iki tarafta farklı sırayla dizilir. Bu oyunlarda yalnızca çoktan seçmeli sorular kullanılır; doğru/yanlış sorusunda bir takımın yanlış cevabı görülünce doğrusu belli olurdu. Atıştan sonra sıradaki soruya kendiliğinden geçilir; öğretmen geçişi durdurup konuyu anlatabilir.
 
 **Üç boyutlu sahne ve eski tahtalar:** Bütün oyunların üç boyutlu sahnesi vardır ve ekran kartı olan tahtalarda kendiliğinden açılır; Bilgi Yarışması'nda bu, soru ekranının üstündeki stüdyo şerididir. Oyun tahtanın gücünü kendisi ölçer: sahne akmıyorsa ayrıntıyı azaltır, yine akmıyorsa aynı oyunu çizim sahnesiyle sürdürür. Üst çubuktaki **3D** düğmesiyle sahneyi siz de açıp kapatabilirsiniz; tercih o tahtada hatırlanır. Üç boyutlu sahne ve sesler ilk açılışta indirilir, sonra internetsiz de çalışır.

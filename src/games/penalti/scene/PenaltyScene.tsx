@@ -26,6 +26,7 @@ import {
   toScreen,
   WORLD_LEFT,
   WORLD_RIGHT,
+  GOAL_HALF,
 } from "./geometry";
 
 /**
@@ -45,6 +46,8 @@ export type SceneInput = {
   kicks: Kick[];
   locked: [boolean, boolean];
   winner: 0 | 1 | "draw" | null;
+  /** Şutun sapma yarıçapı (kale yarı genişliği cinsinden); nişan halkası bu kadar büyür. */
+  scatter: number;
 };
 
 type Props = {
@@ -716,6 +719,7 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
         aimLine?.setAttribute("d", `M${fmt(SPOT)}Q${fmt(mid)} ${fmt(p)}`);
         aimTarget?.setAttribute("transform", `translate(${fmt(p)})`);
         aimRing?.setAttribute("stroke", place === "aut" ? "var(--color-ink-400)" : teamsRef.current[inp.shooter ?? 0].base);
+        aimRing?.setAttribute("r", Math.max(30, inp.scatter * GOAL_HALF).toFixed(1));
       } else aim?.setAttribute("opacity", "0");
 
       // -- toz --

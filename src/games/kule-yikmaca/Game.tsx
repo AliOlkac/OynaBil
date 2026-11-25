@@ -1,5 +1,6 @@
 "use client";
 
+import { difficultyOf } from "../shared/difficulty";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowRight, Check, Crosshair, Flag, Flame, Pause, Play, X } from "lucide-react";
 import { AutoAdvance } from "@/components/game/AutoAdvance";
@@ -190,6 +191,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
     locked: s.duel.locked,
     shooter: s.shooter,
     aimStart: s.aimStart,
+    difficulty: difficultyOf(settings),
     wind,
     ammo,
     shots: s.shots,

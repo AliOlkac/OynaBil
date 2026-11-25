@@ -9,6 +9,8 @@ import {
   keeperFor,
   kickResult,
   penaltyReducer,
+  SCATTER,
+  scatterFor,
   SUDDEN_DEATH_MAX,
   thirdOf,
   type PenaltySettings,
@@ -159,5 +161,33 @@ describe("Penaltı: oyun akışı", () => {
     }
     expect(s.phase).toBe("finished");
     expect(s.winner).toBe("draw");
+  });
+});
+
+describe("Penaltı: zorluk", () => {
+  it("kolayda top tam nişana gider; normal ve zorda halkanın içinde sapar", () => {
+    let s = scoreAttempt(start(), 0, 0.5, 0.5);
+    expect(s.kicks[0]).toMatchObject({ x: 0.5, y: 0.5 });
+    for (const d of [2, 3] as const) {
+      s = scoreAttempt(start({ difficulty: d }), 0, 0.5, 0.5);
+      const k = s.kicks[0];
+      expect(k.aimX).toBe(0.5);
+      // Metre olarak daire: dikey sapma 1.5 ile bölünür.
+      expect(Math.hypot(k.x - 0.5, (k.y - 0.5) / 1.5)).toBeLessThanOrEqual(SCATTER[d - 1] + 1e-9);
+    }
+  });
+
+  it("sapma tohuma ve şutun sırasına bağlıdır, halkayı dolaşır", () => {
+    expect(scatterFor(5, 2, 3)).toEqual(scatterFor(5, 2, 3));
+    expect(scatterFor(5, 2, 1)).toEqual({ dx: 0, dy: 0 });
+    const xs = Array.from({ length: 200 }, (_, i) => scatterFor(9, i, 3));
+    expect(xs.some((v) => v.dx > 0.1)).toBe(true);
+    expect(xs.some((v) => v.dx < -0.1)).toBe(true);
+    expect(xs.some((v) => v.dy > 0.1)).toBe(true);
+  });
+
+  it("zorda köşeye çok yakın nişan bazen direğe ya da auta gider", () => {
+    const results = Array.from({ length: 40 }, (_, seed) => scoreAttempt(start({ difficulty: 3 }, seed + 1), 0, 0.93, 0.9).kicks[0].result);
+    expect(results.some((r) => r === "direk" || r === "aut")).toBe(true);
   });
 });

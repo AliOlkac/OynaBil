@@ -2,6 +2,7 @@
 
 import { ArrowLeft, ArrowRight, Wind as WindIcon } from "lucide-react";
 import { useEffect, useRef } from "react";
+import type { Difficulty } from "../shared/difficulty";
 import { AIM_LOCK_MS, sightAt, type Point, type Wind } from "./logic";
 import { RING_COLORS } from "./timeline";
 
@@ -10,14 +11,14 @@ import { RING_COLORS } from "./timeline";
  * aynı fonksiyondan (`sightAt`) hesaplanır; dokunulduğu anda görünen yer ile okun nişanı birebir aynıdır.
  * Ok bırakılınca dürbün okun saplandığı yeri gösterir.
  */
-export function AimScope({ aimStart, wind, hit, color }: { aimStart: number | null; wind: Wind; hit: Point | null; color: string }) {
+export function AimScope({ aimStart, wind, hit, color, difficulty }: { aimStart: number | null; wind: Wind; hit: Point | null; color: string; difficulty: Difficulty }) {
   const cross = useRef<SVGGElement>(null);
   useEffect(() => {
     if (aimStart === null) return;
     let raf = 0;
     const tick = () => {
       const elapsed = Date.now() - aimStart;
-      const p = sightAt(elapsed);
+      const p = sightAt(elapsed, difficulty);
       const el = cross.current;
       if (el) {
         el.setAttribute("transform", `translate(${p.x.toFixed(4)} ${(-p.y).toFixed(4)})`);
@@ -28,7 +29,7 @@ export function AimScope({ aimStart, wind, hit, color }: { aimStart: number | nu
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [aimStart]);
+  }, [aimStart, difficulty]);
 
   return (
     <div className="flex h-full w-full flex-col items-center justify-end gap-2">

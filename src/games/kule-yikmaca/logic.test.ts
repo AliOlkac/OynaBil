@@ -207,3 +207,12 @@ describe("Kule Yıkmaca: düello sorusu", () => {
     expect(s.deadline).toBe(70_000);
   });
 });
+
+describe("Kule Yıkmaca: zorluk", () => {
+  it("normal ve zorda nişangâh daha hızlı tarar", () => {
+    const t = AIM_LOCK_MS + SWEEP_MS / 4;
+    expect(sweepAt(t, 1)).toBeCloseTo(0.5);
+    expect(sweepAt(t, 2)).toBeCloseTo(0.65);
+    expect(sweepAt(t, 3)).toBeCloseTo(0.8);
+  });
+});

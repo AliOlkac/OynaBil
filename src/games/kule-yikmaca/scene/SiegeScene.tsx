@@ -1,5 +1,6 @@
 "use client";
 
+import type { Difficulty } from "../../shared/difficulty";
 import confetti from "canvas-confetti";
 import { useEffect, useMemo, useRef } from "react";
 import { cssColor } from "@/lib/color";
@@ -55,6 +56,8 @@ export type SceneInput = {
   shooter: 0 | 1 | null;
   /** Nişan evresinin başladığı an (Date.now). */
   aimStart: number | null;
+  /** Nişangâhın hızı zorluğa bağlıdır. */
+  difficulty: Difficulty;
   wind: number;
   ammo: Ammo;
   shots: Shot[];
@@ -657,7 +660,7 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
         const shooter = inp.shooter!;
         const target = (1 - shooter) as 0 | 1;
         const d = dirOf(shooter);
-        const p = sweepAt(aimElapsed);
+        const p = sweepAt(aimElapsed, inp.difficulty);
         const y = yOf(p);
         const face = TOWER_X[target] - d * BODY_HALF;
         const appear = clamp01((aimElapsed - AIM_LOCK_MS) / 250);

@@ -1,4 +1,5 @@
 import type { PlayableQuestion } from "@/core/deck";
+import { byDifficulty, difficultyOf, type Difficulty } from "../shared/difficulty";
 import { duelAnswer, freshDuel, type Duel } from "../shared/duel";
 import type { AnswerLog, Team } from "../types";
 
@@ -35,12 +36,17 @@ export const SWEET = 0.72;
 export const ZONE_HALF: Record<Range, number> = { 2: 0.1, 3: 0.065 };
 /** Ateşli elde yeşil bölge bu kadar genişler. */
 export const FIRE_BONUS = 1.4;
+/** Zorluğa göre (kolay, normal, zor): çubuğun hızı ve yeşil bölgenin genişliği, kolaya göre kat. */
+export const METER_SPEED = [1, 1.2, 1.4] as const;
+export const ZONE_SCALE = [1, 0.8, 0.65] as const;
 
 export type BasketSettings = {
   /** Oyundaki soru sayısı; her soruda en fazla bir atış yapılır. */
   questions: number;
   /** Soru süresi (saniye); 0 süresiz. */
   seconds: number;
+  /** 1 kolay, 2 normal, 3 zor (bkz. shared/difficulty). */
+  difficulty?: number;
 };
 
 export type Shot = {
@@ -92,9 +98,10 @@ export type BasketAction =
 // ---- saf yardımcılar (sahne ve ekran da kullanır) ----
 
 /** Güç çubuğunun yeri: METER_LOCK_MS sonra 0'dan başlar, bir turda 1'e çıkıp geri iner. */
-export function meterAt(elapsedMs: number, range: Range): number {
+export function meterAt(elapsedMs: number, range: Range, d: Difficulty = 1): number {
   const t = Math.max(0, elapsedMs - METER_LOCK_MS);
-  const f = (t % METER_PERIOD[range]) / METER_PERIOD[range];
+  const period = METER_PERIOD[range] / byDifficulty(d, METER_SPEED);
+  const f = (t % period) / period;
   return f < 0.5 ? f * 2 : 2 - f * 2;
 }
 
@@ -104,13 +111,13 @@ export function onFire(shots: Shot[], side: 0 | 1): boolean {
   return own.length >= 2 && own.slice(-2).every((s) => RESULT_MADE[s.result]);
 }
 
-export function zoneHalf(range: Range, fire: boolean): number {
-  return ZONE_HALF[range] * (fire ? FIRE_BONUS : 1);
+export function zoneHalf(range: Range, fire: boolean, d: Difficulty = 1): number {
+  return ZONE_HALF[range] * (fire ? FIRE_BONUS : 1) * byDifficulty(d, ZONE_SCALE);
 }
 
 /** Atışın sonucu güç çubuğunun yerinden çıkar: yeşilin ortası tertemiz, kenarı çemberden içeri. */
-export function shotResult(power: number, range: Range, fire = false): ShotResult {
-  const w = zoneHalf(range, fire);
+export function shotResult(power: number, range: Range, fire = false, level: Difficulty = 1): ShotResult {
+  const w = zoneHalf(range, fire, level);
   const d = power - SWEET;
   const a = Math.abs(d);
   if (a <= w * 0.4) return "temiz";
@@ -220,8 +227,9 @@ export function basketReducer(deck: PlayableQuestion[]) {
         if (s.phase !== "aim" || s.shooter === null || s.range === null || s.meterStart === null) return s;
         if (a.now - s.meterStart < METER_LOCK_MS) return s;
         const fire = onFire(s.shots, s.shooter);
-        const power = meterAt(a.now - s.meterStart, s.range);
-        const result = shotResult(power, s.range, fire);
+        const d = difficultyOf(s.settings);
+        const power = meterAt(a.now - s.meterStart, s.range, d);
+        const result = shotResult(power, s.range, fire, d);
         const points = RESULT_MADE[result] ? s.range : 0;
         const shot: Shot = { side: s.shooter, range: s.range, power, onFire: fire, result, points, at: a.now, questionId: q?.id ?? "" };
         const score = [...s.score] as [number, number];

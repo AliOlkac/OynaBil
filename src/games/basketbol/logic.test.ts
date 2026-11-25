@@ -12,6 +12,7 @@ import {
   onFire,
   OVERTIME_MAX,
   shotResult,
+  zoneHalf,
   SWEET,
   ZONE_HALF,
   type BasketSettings,
@@ -157,5 +158,19 @@ describe("Basketbol: oyun akışı", () => {
     }
     expect(s.phase).toBe("finished");
     expect(s.winner).toBe("draw");
+  });
+});
+
+describe("Basketbol: zorluk", () => {
+  it("normal ve zorda yeşil bölge daralır, çubuk hızlanır", () => {
+    expect(zoneHalf(2, false, 2)).toBeLessThan(zoneHalf(2, false, 1));
+    expect(zoneHalf(2, false, 3)).toBeLessThan(zoneHalf(2, false, 2));
+    // Kolayda çemberden giren güç zorda kaçar.
+    const p = SWEET + ZONE_HALF[2] * 0.9;
+    expect(shotResult(p, 2, false, 1)).toBe("cember");
+    expect(shotResult(p, 2, false, 3)).not.toBe("cember");
+    const t = METER_LOCK_MS + METER_PERIOD[2] / 4;
+    expect(meterAt(t, 2, 1)).toBeCloseTo(0.5);
+    expect(meterAt(t, 2, 3)).toBeGreaterThan(0.5);
   });
 });

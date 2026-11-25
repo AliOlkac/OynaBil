@@ -1,3 +1,4 @@
+import { byDifficulty, difficultyOf, type Difficulty } from "../shared/difficulty";
 import type { PlayableQuestion } from "@/core/deck";
 import { duelAnswer, freshDuel, type Duel } from "../shared/duel";
 import type { AnswerLog, Team } from "../types";
@@ -27,6 +28,8 @@ export const TOWER_HP = 100;
 export const AIM_LOCK_MS = 1_600;
 /** Nişangâhın aşağıdan yukarı çıkıp geri inme süresi. */
 export const SWEEP_MS = 2_400;
+/** Zorluğa göre (kolay, normal, zor) nişangâhın hızı, kolaya göre kat. */
+export const SWEEP_SPEED = [1, 1.3, 1.6] as const;
 /** Rüzgârın her kademesi isabet yüksekliğini bu kadar kaydırır (nişangâh ölçeğinde). */
 export const WIND_STEP = 0.035;
 export const MAX_WIND = 3;
@@ -68,6 +71,8 @@ export type SiegeSettings = {
   questions: number;
   /** Soru süresi (saniye); 0 süresiz. */
   seconds: number;
+  /** 1 kolay, 2 normal, 3 zor (bkz. shared/difficulty). */
+  difficulty?: number;
 };
 
 export type Shot = {
@@ -125,9 +130,10 @@ export type SiegeAction =
 // ---- saf yardımcılar (sahne de kullanır) ----
 
 /** Nişangâhın konumu: AIM_LOCK_MS sonra aşağıdan başlar, SWEEP_MS'de bir aşağı yukarı gidip gelir. */
-export function sweepAt(elapsedMs: number): number {
+export function sweepAt(elapsedMs: number, d: Difficulty = 1): number {
   const t = Math.max(0, elapsedMs - AIM_LOCK_MS);
-  const f = (t % SWEEP_MS) / SWEEP_MS;
+  const period = SWEEP_MS / byDifficulty(d, SWEEP_SPEED);
+  const f = (t % period) / period;
   return f < 0.5 ? f * 2 : 2 - f * 2;
 }
 
@@ -261,7 +267,7 @@ export function siegeReducer(deck: PlayableQuestion[]) {
         if (a.now - s.aimStart < AIM_LOCK_MS) return s;
         const shooter = s.shooter;
         const target = (1 - shooter) as 0 | 1;
-        const aim = sweepAt(a.now - s.aimStart);
+        const aim = sweepAt(a.now - s.aimStart, difficultyOf(s.settings));
         const wind = windFor(s.seed, roundOf(s));
         const hit = aim + windShift(shooter, wind);
         const zone = zoneAt(hit);

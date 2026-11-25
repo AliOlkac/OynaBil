@@ -17,6 +17,7 @@ import { memoryScope } from "@/lib/memory";
 import { dur, ease, spring } from "@/lib/motion";
 import { sfx } from "@/lib/sound";
 import { basketbol } from "../registry";
+import { difficultyOf } from "../shared/difficulty";
 import { optionOrder } from "../shared/duel";
 import { basketAudio } from "./audio";
 import { TEAM_STYLES } from "../teams";
@@ -320,7 +321,7 @@ export default function Basketbol({ config, deck, onRestart }: GameProps) {
                 <>
                   <div className="min-w-[14rem] flex-1">
                     <p className="mb-2 text-lg font-bold sm:text-xl">İğne yeşile gelince AT!</p>
-                    <PowerMeter range={s.range} meterStart={s.meterStart!} fire={fire} reducedMotion={reducedMotion} />
+                    <PowerMeter range={s.range} meterStart={s.meterStart!} fire={fire} reducedMotion={reducedMotion} difficulty={difficultyOf(settings)} />
                   </div>
                   <button
                     type="button"

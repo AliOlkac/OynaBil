@@ -1,5 +1,6 @@
 import { hashSeed } from "@/core/cards";
 import type { PlayableQuestion } from "@/core/deck";
+import { byDifficulty, difficultyOf, type Difficulty } from "../shared/difficulty";
 import { duelAnswer, freshDuel, type Duel } from "../shared/duel";
 import type { AnswerLog, Team } from "../types";
 
@@ -22,8 +23,11 @@ export const AIM_LOCK_MS = 900;
 export const OVERTIME_MAX = 6;
 /** Uzatmada oyunu bitiren en düşük puan (kırmızı halka). */
 export const OVERTIME_WIN = 7;
-/** Bir rüzgâr kademesinin oku kaydırdığı mesafe (hedef yarıçapı 1). Her halka 0.1 geniştir. */
+/** Bir rüzgâr kademesinin oku kaydırdığı mesafe (hedef yarıçapı 1, kolay zorlukta). Her halka 0.1 geniştir. */
 export const WIND_STEP = 0.11;
+/** Zorluğa göre: nişangâhın hızı (kolaya göre kat) ve rüzgâr kademesinin etkisi. */
+export const SIGHT_SPEED = [1, 1.3, 1.6] as const;
+export const WIND_STEPS = [WIND_STEP, 0.13, 0.15] as const;
 /** Hedefin saman tabanı yüzden biraz geniştir: bu yarıçapa kadar ok tabana saplanır (0 puan). */
 export const BOSS_R = 1.28;
 
@@ -35,6 +39,8 @@ export type ArcherySettings = {
   questions: number;
   /** Soru süresi (saniye); 0 süresiz. */
   seconds: number;
+  /** 1 kolay, 2 normal, 3 zor (bkz. shared/difficulty). */
+  difficulty?: number;
 };
 
 export type Point = { x: number; y: number };
@@ -93,15 +99,15 @@ export type ArcheryAction =
  * Nişangâhın yeri: yay gerildikten (AIM_LOCK_MS) sonra hedefin üstünde iki farklı hızda salınır;
  * salınımın genişliği nefes alıp verir gibi büyüyüp küçülür. Yol merkezden sık sık geçer.
  */
-export function sightAt(elapsedMs: number): Point {
-  const t = Math.max(0, elapsedMs - AIM_LOCK_MS) / 1000;
+export function sightAt(elapsedMs: number, d: Difficulty = 1): Point {
+  const t = (Math.max(0, elapsedMs - AIM_LOCK_MS) / 1000) * byDifficulty(d, SIGHT_SPEED);
   const amp = 0.6 + 0.22 * Math.sin(t * 0.85 + 1.2);
   return { x: amp * Math.sin(t * 1.55), y: amp * 0.78 * Math.sin(t * 2.15 + 0.7) };
 }
 
 /** Okun saplandığı yer: rüzgâr oku kendi yönüne kaydırır. */
-export function hitPoint(aim: Point, wind: Wind): Point {
-  return { x: aim.x + wind * WIND_STEP, y: aim.y };
+export function hitPoint(aim: Point, wind: Wind, d: Difficulty = 1): Point {
+  return { x: aim.x + wind * byDifficulty(d, WIND_STEPS), y: aim.y };
 }
 
 /** Halka puanı: merkezden her 0.1 uzaklaşmada bir puan düşer; yüzün dışı 0. */
@@ -221,8 +227,9 @@ export function archeryReducer(deck: PlayableQuestion[]) {
       case "shoot": {
         if (s.phase !== "aim" || s.shooter === null || s.aimStart === null) return s;
         if (a.now - s.aimStart < AIM_LOCK_MS) return s;
-        const aim = sightAt(a.now - s.aimStart);
-        const hit = hitPoint(aim, s.wind);
+        const d = difficultyOf(s.settings);
+        const aim = sightAt(a.now - s.aimStart, d);
+        const hit = hitPoint(aim, s.wind, d);
         const points = ringOf(hit);
         // Uzatmada yalnızca kazandıran atış sayılır; kısa kalan ok skoru değiştirmez, eşitlik sürer.
         const scored = !s.overtime || points >= OVERTIME_WIN ? points : 0;
