@@ -545,15 +545,24 @@ export function createTugEngine(o: EngineOptions): { dispose: () => void } {
     const fitW = settled ? 13 : 15.4;
     const kk = quiet || st.cut ? 1 : follow(settled ? 2.2 : 1.6, dt);
     st.cut = false;
-    st.cam.x = lerp(st.cam.x, cx, kk);
-    st.cam.y = lerp(st.cam.y, settled ? 2.5 : 2.2, kk);
-    st.cam.z = lerp(st.cam.z, settled ? 9.4 : 10.5, kk);
-    st.look.set(st.cam.x * 0.9, 1.06, 0);
+    // Dar ekranda (telefon) ip boydan boya sığmaz: kamera soldaki takımın arkasından, ip boyunca çapraz bakar.
+    const narrow = st.aspect < 1.7;
+    if (narrow) {
+      st.cam.x = lerp(st.cam.x, cx - 12.5, kk);
+      st.cam.y = lerp(st.cam.y, 2.9, kk);
+      st.cam.z = lerp(st.cam.z, 5, kk);
+      st.look.set(st.cam.x + 9.6, 0.75, 0);
+    } else {
+      st.cam.x = lerp(st.cam.x, cx, kk);
+      st.cam.y = lerp(st.cam.y, settled ? 2.5 : 2.2, kk);
+      st.cam.z = lerp(st.cam.z, settled ? 9.4 : 10.5, kk);
+      st.look.set(st.cam.x * 0.9, 1.06, 0);
+    }
     st.fitW = lerp(st.fitW, fitW, kk);
     camera.position.copy(st.cam);
     camera.lookAt(st.look);
     const dist = st.cam.distanceTo(st.look);
-    camera.fov = (2 * Math.atan(Math.max(3.3 / 2, st.fitW / 2 / st.aspect) / dist) * 180) / Math.PI;
+    camera.fov = narrow ? (2 * Math.atan(Math.tan((13.5 * Math.PI) / 180) / st.aspect) * 180) / Math.PI : (2 * Math.atan(Math.max(3.3 / 2, st.fitW / 2 / st.aspect) / dist) * 180) / Math.PI;
     camera.updateProjectionMatrix();
 
     renderer.render(scene, camera);

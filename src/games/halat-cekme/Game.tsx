@@ -1,5 +1,6 @@
 "use client";
 
+import { BOT_SIDE, botAnswerPlan, useBotAction, useSolo } from "../shared/solo";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowRight, Check, Flame, Snowflake, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
@@ -39,7 +40,7 @@ function streakOf(log: AnswerLog[], teamId: string) {
   return n;
 }
 
-export default function HalatCekme({ config, deck, onRestart }: GameProps) {
+export default function HalatCekme({ config, deck, onRestart, solo }: GameProps) {
   const settings = config.settings as unknown as TugSettings;
   const teams = config.teams.slice(0, 2) as [Team, Team];
   const reducer = useMemo(() => tugReducer(deck), [deck]);
@@ -75,6 +76,25 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
     else if (countdown === 0) sfx.go();
   }, [playing, countdown]);
 
+  // Tek oyunculu mod: sağdaki takımı bilgisayar oynar; kendi sorusunu kendi hızında cevaplar.
+  useSolo(solo, {
+    seed: config.seed,
+    ready: s.phase === "ready",
+    start: () => dispatch({ type: "start", now: clock() }),
+    done: s.phase === "finished" && showResults,
+    result: () => ({ winner: s.winner === null || s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1, score: [s.sides[0].correct, s.sides[1].correct], log: s.log, deck }),
+    asking: false,
+    questionKey: "",
+    question: undefined,
+    answer: () => {},
+  });
+  const bot = s.sides[BOT_SIDE];
+  const botKey = String(bot.correct + bot.wrong);
+  const botQuestion = deck[bot.question % deck.length];
+  const botPlan = solo && botQuestion ? botAnswerPlan(config.seed, `halat:${botKey}`, solo.bot.skill, botQuestion) : null;
+  const botFrom = Math.max(s.startsAt ?? 0, bot.last?.at ?? 0, bot.frozenUntil ?? 0);
+  useBotAction(botPlan !== null && playing, botKey, { at: botFrom + (botPlan?.delay ?? 0) }, () => botPlan && dispatch({ type: "answer", side: BOT_SIDE, option: botPlan.option, now: clock() }));
+
   const winnerIndex = s.winner === null ? null : s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1;
   const frozen: [boolean, boolean] = [0, 1].map((i) => {
     const f = s.sides[i].frozenUntil;
@@ -97,6 +117,7 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
   );
 
   if (s.phase === "ready") {
+    if (solo) return null;
     return (
       <GameIntro
         game={halatCekme}
@@ -108,6 +129,7 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
   }
 
   if (s.phase === "finished" && showResults) {
+    if (solo) return null;
     return (
       <Results
         standings={s.sides
@@ -137,7 +159,7 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
-      <div className="relative mx-4 h-[44%] min-h-[13rem] shrink-0 overflow-hidden rounded-xl bg-ink-950 shadow-[var(--surface-light)] sm:mx-6">
+      <div className={`relative mx-4 min-h-[13rem] shrink-0 overflow-hidden rounded-xl bg-ink-950 shadow-[var(--surface-light)] sm:mx-6 ${solo ? "h-[36%]" : "h-[44%]"}`}>
         <TugStage input={sceneInput} teams={sceneTeams} reducedMotion={reducedMotion} />
 
         {/* Yayın tarzı skor çubuğu: takımlar ve süre tek yerde */}
@@ -152,8 +174,8 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
               {show && (
                 <motion.span
                   key={last!.at}
-                  className="pointer-events-none absolute top-[30%] text-5xl font-bold"
-                  style={{ left: i === 0 ? "22%" : "70%", color: TEAM_STYLES[teams[i].color].base, textShadow: "0 0.2rem 0 rgb(7 18 40 / 0.6)" }}
+                  className="pointer-events-none absolute top-[30%] text-3xl font-bold sm:text-5xl"
+                  style={{ left: i === 0 ? "18%" : "62%", color: TEAM_STYLES[teams[i].color].base, textShadow: "0 0.2rem 0 rgb(7 18 40 / 0.6)" }}
                   initial={{ y: 20, opacity: 0, scale: 0.6 }}
                   animate={{ y: -30, opacity: 1, scale: 1 }}
                   exit={{ y: -60, opacity: 0 }}
@@ -168,8 +190,8 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
 
       </div>
 
-      <div className="relative grid min-h-0 flex-1 grid-cols-2">
-        {([0, 1] as const).map((i) => (
+      <div className={`relative grid min-h-0 flex-1 ${solo ? "grid-cols-1" : "grid-cols-2"}`}>
+        {([0, 1] as const).filter((i) => !solo || i === 0).map((i) => (
           <SidePanel
             key={teams[i].id}
             side={i}
@@ -259,11 +281,11 @@ function ScoreBug({
           return (
             <div key={team.id} className={`flex flex-col gap-2 ${i === 0 ? "order-1 items-end" : "order-3 items-start"}`}>
               <div
-                className={`flex items-center gap-3 rounded-xl bg-ink-950/85 py-2 ${i === 0 ? "pr-4 pl-3" : "flex-row-reverse pr-3 pl-4"}`}
+                className={`flex items-center gap-2 rounded-xl bg-ink-950/85 py-1.5 sm:gap-3 sm:py-2 ${i === 0 ? "pr-3 pl-2 sm:pr-4 sm:pl-3" : "flex-row-reverse pr-2 pl-3 sm:pr-3 sm:pl-4"}`}
                 style={{ boxShadow: `inset 0 -0.3rem 0 ${style.base}` }}
               >
-                <TeamEmblem color={team.color} className="size-8" />
-                <span className="max-w-[14rem] truncate text-2xl font-bold" style={{ color: style.base }}>
+                <TeamEmblem color={team.color} className="size-6 sm:size-8" />
+                <span className="hidden max-w-[14rem] truncate text-2xl font-bold sm:inline" style={{ color: style.base }}>
                   {team.name}
                 </span>
                 <span className="tabular min-w-[2ch] text-center text-3xl font-bold">{sides[i].correct}</span>
@@ -272,7 +294,7 @@ function ScoreBug({
                 {frozen[i] && !finished && (
                   <motion.p
                     key="frozen"
-                    className="flex items-center gap-2 rounded-lg px-3 py-1 text-lg font-bold text-ink-950"
+                    className="flex items-center gap-1.5 rounded-lg px-2 py-0.5 text-sm font-bold text-ink-950 sm:gap-2 sm:px-3 sm:py-1 sm:text-lg"
                     style={{ background: "rgb(190 235 255)" }}
                     initial={{ scale: 0.6, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -352,8 +374,7 @@ function SidePanel({
         >
           <h2 className={`mt-2 leading-tight font-bold text-balance ${q.prompt.length > 90 ? "text-xl sm:text-2xl" : "text-2xl sm:text-3xl"}`}>{q.prompt}</h2>
           <div
-            className="mt-4 grid min-h-0 flex-1 grid-cols-2 content-start gap-3"
-            style={{ gridTemplateRows: `repeat(${Math.ceil(q.options.length / 2)}, minmax(0, 8.5rem))` }}
+            className="mt-4 grid min-h-0 flex-1 auto-rows-[minmax(0,8.5rem)] grid-cols-1 content-start gap-2 sm:grid-cols-2 sm:gap-3"
           >
             {q.options.map((option, i) => {
               const tone = frozen ? (i === q.correctIndex ? "correct" : i === state.last?.option ? "wrong" : "dim") : "idle";

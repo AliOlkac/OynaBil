@@ -1,5 +1,7 @@
 "use client";
 
+import { BOT_SIDE, useBotAction, useSolo } from "../shared/solo";
+import { botFireAt } from "./bot";
 import { difficultyOf } from "../shared/difficulty";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowRight, Check, Crosshair, Flag, Flame, Pause, Play, X } from "lucide-react";
@@ -59,7 +61,7 @@ function hydrate(s: SiegeState, fresh: () => SiegeState): SiegeState {
   return s;
 }
 
-export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
+export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps) {
   const settings = config.settings as unknown as SiegeSettings;
   const teams = config.teams.slice(0, 2) as [Team, Team];
   const reducer = useMemo(() => siegeReducer(deck), [deck]);
@@ -81,7 +83,9 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
   const now = useNow(ticking, aiming ? 100 : 200);
   const paused = s.phase === "question" && s.deadline === null && s.remaining !== null;
   const remaining = s.deadline !== null ? Math.max(0, s.deadline - now) : (s.remaining ?? settings.seconds * 1000);
-  const armed = aiming && now - s.aimStart! >= AIM_LOCK_MS;
+  // Tek oyunculu modda sağdaki takımı bilgisayar oynar.
+  const botTurn = Boolean(solo) && s.shooter === BOT_SIDE;
+  const armed = !botTurn && aiming && now - s.aimStart! >= AIM_LOCK_MS;
   const lastShot = s.shots[s.shots.length - 1];
   const impactShown = impacted >= s.shots.length;
   const wind = windFor(s.seed, roundOf(s));
@@ -115,10 +119,24 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
     lastLocked.current = lockedCount;
   }, [lockedCount]);
 
+  useSolo(solo, {
+    seed: config.seed,
+    ready: s.phase === "ready",
+    start: () => dispatch({ type: "start", now: clock() }),
+    done: s.phase === "finished" && showResults,
+    result: () => ({ winner: s.winner === null || s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1, score: [dealt(s, 0), dealt(s, 1)], log: s.log, deck }),
+    asking: s.phase === "question" && !paused && s.duel.winner === null && !s.duel.locked[BOT_SIDE],
+    questionKey: String(roundOf(s)),
+    question: q,
+    answer: (option) => dispatch({ type: "answer", side: BOT_SIDE, option, now: clock() }),
+  });
+  const botAt = botTurn && s.phase === "aim" && s.aimStart !== null ? botFireAt(config.seed, String(roundOf(s)), solo!.bot.skill, s.aimStart, wind, difficultyOf(settings)) : 0;
+  useBotAction(botAt > 0, `tas:${roundOf(s)}`, { at: botAt }, () => dispatch({ type: "fire", now: botAt }));
+
   const fire = useCallback(() => {
-    if (!aiming) return;
+    if (!aiming || botTurn) return;
     dispatch({ type: "fire", now: clock() });
-  }, [aiming, dispatch]);
+  }, [aiming, botTurn, dispatch]);
 
   const next = useCallback(() => {
     sfx.tap();
@@ -151,6 +169,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
   const onFinale = useCallback(() => setFinaleDone(true), []);
 
   if (s.phase === "ready") {
+    if (solo) return null;
     return (
       <GameIntro
         game={kuleYikmaca}
@@ -165,6 +184,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
   }
 
   if (s.phase === "finished" && showResults) {
+    if (solo) return null;
     return (
       <Results
         standings={([0, 1] as const)
@@ -272,6 +292,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
                 duel={s.duel}
                 orders={[optionOrder(q.id, s.seed, 0, q.options.length), optionOrder(q.id, s.seed, 1, q.options.length)]}
                 revealed={s.phase === "reveal"}
+                only={solo ? 0 : undefined}
                 disabled={paused}
                 onAnswer={(side, option) => dispatch({ type: "answer", side, option, now: clock() })}
                 meta={
@@ -332,7 +353,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
             >
               <TurnBadge team={teams[shooter]} label="Atışta" />
               <div className="min-w-[14rem] flex-1">
-                <p className="text-lg font-bold sm:text-2xl">{armed ? "Nişangâh pencereye gelince ATEŞ!" : "Mancınık kuruluyor, taş yükleniyor…"}</p>
+                <p className="text-lg font-bold sm:text-2xl">{botTurn ? "Rakip nişan alıyor…" : armed ? "Nişangâh pencereye gelince ATEŞ!" : "Mancınık kuruluyor, taş yükleniyor…"}</p>
                 <p className="mt-0.5 hidden text-base text-ink-300 sm:block sm:text-lg">
                   {windHint(wind, shooter)}
                   {ammo === "ates" && <span className="ml-2 font-semibold text-ates">Ateşli gülle: hasar 1,5 kat.</span>}
@@ -347,7 +368,7 @@ export default function KuleYikmaca({ config, deck, onRestart }: GameProps) {
                   fire();
                 }}
                 className="pressable flex h-20 w-full shrink-0 items-center justify-center gap-4 rounded-xl px-10 text-4xl font-bold text-ink-950 transition-opacity disabled:opacity-40 sm:h-24 sm:w-auto sm:text-5xl"
-                style={{ background: TEAM_STYLES[teams[shooter].color].base, "--edge": TEAM_STYLES[teams[shooter].color].deep } as CSSProperties}
+                style={{ display: botTurn ? "none" : undefined, background: TEAM_STYLES[teams[shooter].color].base, "--edge": TEAM_STYLES[teams[shooter].color].deep } as CSSProperties}
               >
                 <Crosshair className="size-11" strokeWidth={2.6} /> ATEŞ!
               </button>

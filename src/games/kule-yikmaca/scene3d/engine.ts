@@ -68,6 +68,8 @@ export type EngineOptions = {
 type CamShot = { pos: V3; look: V3; fitW: number; fitH: number };
 /** Soru sırasında iki kule; atışta taşın bütün yolu. */
 const OVERVIEW: CamShot = { pos: { x: 0, y: 6.6, z: 44 }, look: { x: 0, y: 6.3, z: 0 }, fitW: 47, fitH: 15 };
+/** Dar ekranda (telefon) iki kule yan yana sığmaz: kamera soldaki kulenin arkasından çapraz bakar, iki kule de görünür. */
+const NARROW_VIEW: CamShot = { pos: { x: -44, y: 11, z: 18 }, look: { x: -6, y: 5.2, z: 0 }, fitW: 22, fitH: 14 };
 const WIDE: CamShot = { pos: { x: 0, y: 8, z: 46 }, look: { x: 0, y: 7.4, z: 0 }, fitW: 47, fitH: 17 };
 
 const KID = 0.9;
@@ -968,7 +970,8 @@ export function createSiegeEngine(o: EngineOptions): { dispose: () => void } {
 
     // -- kamera --
     // Kurulurken atan mancınık, nişan alırken hedef kule; atışta taşın bütün yolu görünür.
-    let shot: CamShot = OVERVIEW;
+    const narrow = st.aspect < 1.2;
+    let shot: CamShot = narrow ? NARROW_VIEW : OVERVIEW;
     let rate = 3.2;
     const cockShot = (side: 0 | 1): CamShot => {
       const cx = CATAPULT_X[side];
@@ -976,7 +979,7 @@ export function createSiegeEngine(o: EngineOptions): { dispose: () => void } {
       return { pos: { x: cx + d * 6.5, y: 3.5, z: 12.5 }, look: { x: cx - d * 0.6, y: 1.9, z: 0 }, fitW: 9.5, fitH: 5.6 };
     };
     if (flying) {
-      shot = { pos: { x: stonePos.x * 0.3, y: 8, z: 46 }, look: { x: stonePos.x * 0.45, y: 7.4, z: 0 }, fitW: 43, fitH: 17 };
+      shot = narrow ? NARROW_VIEW : { pos: { x: stonePos.x * 0.3, y: 8, z: 46 }, look: { x: stonePos.x * 0.45, y: 7.4, z: 0 }, fitW: 43, fitH: 17 };
       rate = 4.5;
     } else if (aiming) {
       const side = inp.shooter!;
@@ -989,7 +992,7 @@ export function createSiegeEngine(o: EngineOptions): { dispose: () => void } {
     } else if (fin?.honor && !fin.fired && (inp.winner === 0 || inp.winner === 1)) {
       shot = cockShot(inp.winner);
     } else if (st.flight || inp.phase === "shot" || inp.phase === "finished") {
-      shot = WIDE;
+      shot = narrow ? NARROW_VIEW : WIDE;
     }
     const falling = ([0, 1] as const).find((s) => towers[s].collapseStart !== null && !towers[s].collapsed(t));
     if (falling !== undefined && !quiet) {

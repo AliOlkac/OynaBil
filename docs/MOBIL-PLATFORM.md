@@ -33,8 +33,8 @@ Yeni oyun icat etmeye gerek yoktur: tahta sürümündeki altı oyunun hepsi iki 
 | **Basketbol** | Bilen atar: yakından 2 sayı ya da üçlük. Üst üste iki basket eli ateşlendirir | Dik ekrana hazır |
 | **Okçuluk** | Bilen yayını gerer; nişangâh gezinir, rüzgâr oku iter. En çok puanı toplayan kazanır | Dik ekrana hazır |
 | **Penaltı** | Bilen penaltıyı çeker; kaleci bilgisayardır, üç yönden birine atlar | Dik ekrana hazır. İleride isteğe bağlı "canlı kaleci" (rakip yön seçer) eklenebilir |
-| **Kule Yıkmaca** | Bilen rakibin kulesine taş atar; kulesi önce yıkılan kaybeder | Geniş sahne: yatay ekran ya da dik ekran için yeni kamera |
-| **Halat Çekme** | İki oyuncu aynı anda kendi hızında soru çözer; her doğru ipi çeker | Canlı maça en uygun mod; geniş sahne |
+| **Kule Yıkmaca** | Bilen rakibin kulesine taş atar; kulesi önce yıkılan kaybeder | Dik ekranda çapraz kamerayla oynanır |
+| **Halat Çekme** | İki oyuncu aynı anda kendi hızında soru çözer; her doğru ipi çeker | Canlı maça en uygun mod; dik ekranda çapraz kamera |
 | **Bilgi Yarışması** | Sırayla soru, bilemeyenin sorusu çalınır | Beceri gerektirmez |
 
 ### 3.3 Beceri kısmı kolay değildir
@@ -169,7 +169,7 @@ Rekabetçi oyunda soru hatası maçın sonucunu değiştirir; tahtadan daha da �
 
 ## 10. Aşamalar
 
-**Durum:** Aşama 0'ın prototipi yapıldı: `/mobil` adresinde lobi, lig, çalışma ve profil ekranları ile Basketbol, Okçuluk ve Penaltı'da bilgisayar rakibe karşı dereceli maç oynanıyor (sunucusuz, kayıt telefonda). Amaç arayüzü ve oyun hissini gerçek çocuklarla denemek.
+**Durum:** Aşama 0'ın prototipi yapıldı: `/mobil` adresinde lobi, lig, çalışma ve profil ekranları ile Basketbol, Okçuluk, Penaltı, Kule Yıkmaca ve Halat Çekme'de bilgisayar rakibe karşı dereceli maç oynanıyor (sunucusuz, kayıt telefonda). Amaç arayüzü ve oyun hissini gerçek çocuklarla denemek.
 
 Süreler, 1–2 geliştirici ve yarı zamanlı bir içerik editörü varsayımıyla kabadır.
 

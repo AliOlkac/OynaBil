@@ -11,7 +11,7 @@ import { applyMatch, startRank, type MatchChange, type Outcome, type Rank } from
  * ve ünite bazında başarı. Sunuculu sürümde bu kayıt hesaba taşınır (docs/MOBIL-PLATFORM.md).
  */
 
-export const MOBILE_GAMES = ["basketbol", "okculuk", "penalti"] as const;
+export const MOBILE_GAMES = ["basketbol", "okculuk", "penalti", "kule-yikmaca", "halat-cekme"] as const;
 export type MobileGameId = (typeof MOBILE_GAMES)[number];
 export const PLAYER_ID = "sen";
 export const MAX_SHIELDS = 3;

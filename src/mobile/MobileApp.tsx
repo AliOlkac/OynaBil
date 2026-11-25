@@ -49,7 +49,10 @@ import {
  * Yön ve sonraki aşamalar: docs/MOBIL-PLATFORM.md.
  */
 
+/** Mobil maçlar kısadır: altı soru ya da doksan saniyelik halat. */
 const MATCH_SETTINGS = { questions: 6, seconds: 20 };
+const TUG_SETTINGS = { target: 4, seconds: 90 };
+const settingsFor = (gameId: string) => (gameId === "halat-cekme" ? TUG_SETTINGS : MATCH_SETTINGS);
 /** Mobil maçların sorulanlar hafızası tahtadakinden ayrıdır. */
 const SECTION = "mobil";
 const PRACTICE_SIZE = 8;
@@ -75,7 +78,7 @@ async function createMatch(p: Profile): Promise<Profile["active"]> {
   const all = subjectsFor(p.grade);
   const wanted = all.find((s) => s.id === p.subject);
   const order = wanted ? [wanted, ...shuffle(all.filter((s) => s !== wanted), rng)] : shuffle(all, rng);
-  const needed = getGame(gameId)!.questionsNeeded(MATCH_SETTINGS, 2);
+  const needed = Math.max(12, getGame(gameId)!.questionsNeeded(settingsFor(gameId), 2));
   for (const subject of order) {
     const pool = (await loadPool(subject.id, p.grade)).filter(isChoice);
     if (pool.length < needed) continue;
@@ -92,7 +95,7 @@ async function createMatch(p: Profile): Promise<Profile["active"]> {
         { id: PLAYER_ID, name: p.name || "Sen", color: "kobalt" },
         { id: "rakip", name: opponent, color: "mercan" },
       ],
-      settings: MATCH_SETTINGS,
+      settings: settingsFor(gameId),
       seed,
       deckIds,
       sessionId: newSessionId(),
