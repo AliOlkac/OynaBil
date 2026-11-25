@@ -87,7 +87,8 @@ export function Results({
 
   return (
     <div className="grid min-h-0 flex-1 grid-cols-1 gap-6 overflow-y-auto px-8 pt-2 pb-8 lg:grid-cols-[1.05fr_1fr] lg:overflow-hidden">
-      <section className="flex min-h-0 flex-col">
+      {/* Telefonda bölüm içeriği kadar uzar ve sayfa kayar; geniş ekranda kürsü kalan yere sığar. */}
+      <section className="flex flex-col lg:min-h-0">
         <motion.h1
           className="text-4xl leading-tight font-bold"
           initial={{ opacity: 0, y: 12 }}
@@ -204,7 +205,8 @@ function Podium({ standings, winnerId, scoreLabel }: { standings: Standing[]; wi
   const heights = [100, 74, 54, 40];
 
   return (
-    <div className="mt-6 flex min-h-0 flex-1 items-end justify-center gap-4 pb-2">
+    // Kürsü kendi kutusunun yüksekliğine göre ölçülür (`cqh`): kısa tahtada sütunlar kısalır, taç başlığa taşmaz.
+    <div className="mt-6 flex min-h-[26rem] flex-1 items-end justify-center gap-4 pb-2 [container-type:size] lg:min-h-0">
       {order.map((i) => {
         const s = standings[i];
         const rank = ranks[i];
@@ -224,7 +226,7 @@ function Podium({ standings, winnerId, scoreLabel }: { standings: Standing[]; wi
                   animate={{ y: 0, opacity: 1, rotate: 0 }}
                   transition={{ ...spring.celebrate, delay: delay + 0.6 }}
                 >
-                  <Crown className="size-12 fill-kehribar text-kehribar" />
+                  <Crown className="size-10 fill-kehribar text-kehribar" />
                 </motion.span>
               )}
               <TeamEmblem color={s.team.color} className="size-14" />
@@ -232,16 +234,18 @@ function Podium({ standings, winnerId, scoreLabel }: { standings: Standing[]; wi
               <p className="text-sm text-ink-300">{s.detail}</p>
             </motion.div>
             <motion.div
-              className="mt-3 flex w-full shrink-0 origin-bottom flex-col items-center rounded-t-xl pt-3"
-              // Sütun boyu ekrana göre: 1080p tahtada en uzunu 22rem, kısa tahtada ekran yüksekliğinin %40'ı.
-              style={{ height: `calc(min(22rem, 40dvh) * ${(heights[rank - 1] ?? 30) / 100})`, background: style.base, boxShadow: `inset 0 -0.5rem 0 ${style.deep}` }}
+              className="mt-3 flex w-full shrink-0 origin-bottom flex-col items-center rounded-t-xl pt-3 [container-type:size]"
+              // Sütun boyu kürsünün yüksekliğine göre: en uzunu 22rem; taç, amblem ve ad için üstte 12.5rem kalır.
+              // En kısa sütun bile puanı ve sırayı taşıyacak kadar (8.5rem) uzundur.
+              style={{ height: `max(8.5rem, calc(min(22rem, max(6rem, 100cqh - 12.5rem)) * ${(heights[rank - 1] ?? 30) / 100}))`, background: style.base, boxShadow: `inset 0 -0.5rem 0 ${style.deep}` }}
               initial={{ scaleY: 0 }}
               animate={{ scaleY: 1 }}
               transition={{ ...spring.enter, delay }}
             >
               <CountUp value={s.score} delay={delay + 0.2} />
               <span className="text-sm font-semibold text-ink-950/70">{scoreLabel}</span>
-              <span className="mt-auto pb-3 text-5xl font-bold text-ink-950/35">{rank}</span>
+              {/* Sıra rakamı yalnızca sütunda yeri varsa görünür; kısa tahtada sütunun dibinden taşmaz. */}
+              <span className="mt-auto hidden pb-3 text-5xl font-bold text-ink-950/35 [@container_(min-height:9.75rem)]:block">{rank}</span>
             </motion.div>
           </div>
         );

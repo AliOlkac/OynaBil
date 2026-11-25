@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-# Penaltı ve Basketbol oyunlarının spiker, tribün ve top seslerini siteye uygun hâle getirir.
+# Penaltı, Basketbol ve Okçuluk oyunlarının spiker, tribün ve top seslerini siteye uygun hâle getirir.
 #
 # Kaynak sesler ElevenLabs ile üretilir (docs/SESLER.md) ve ayrı bir depoda durur. Bu betik onları
 # tek kanala indirir, baştaki ve sondaki sessizliği kırpar, ses düzeyini eşitler ve küçük birer mp3
-# olarak public/ses/penalti/ altına yazar. Site bu dosyaları çevrimdışı çalışmak için önbelleğe alır.
+# olarak public/ses/<oyun>/ altına yazar. Site bu dosyaları çevrimdışı çalışmak için önbelleğe alır.
 #
 # Kullanım: scripts/sesleri-hazirla.sh <ses deposunun klasörü>
-#   Beklenen içerik: jobs/oynabil-penalti-spiker-raju/*.mp3, jobs/oynabil-basket-spiker/*.mp3 ve sfx/oynabil-*.mp3
+#   Beklenen içerik: jobs/oynabil-penalti-spiker-raju/*.mp3, jobs/oynabil-basket-spiker2/*.mp3,
+#   jobs/oynabil-okculuk-spiker/*.mp3, sfx/oynabil-*.mp3 ve sfx/okculuk-*.mp3
 set -euo pipefail
 
 SRC="${1:?Kullanım: scripts/sesleri-hazirla.sh <ses deposunun klasörü>}"
@@ -49,7 +50,7 @@ du -ch "$OUT"/*.mp3 | tail -1
 # Basketbol: spiker, salon ve top sesleri
 OUT="public/ses/basketbol"
 mkdir -p "$OUT"
-for f in "$SRC"/jobs/oynabil-basket-spiker/*.mp3; do
+for f in "$SRC"/jobs/oynabil-basket-spiker2/*.mp3; do
   encode "$f" "$OUT/spiker-$(basename "$f")" -1.5
 done
 encode "$SRC/sfx/oynabil-salon-ortam.mp3" "$OUT/salon-ortam.mp3" -10
@@ -60,4 +61,21 @@ encode "$SRC/sfx/oynabil-basket-cember.mp3" "$OUT/cember.mp3" -3
 encode "$SRC/sfx/oynabil-basket-panya.mp3" "$OUT/panya.mp3" -3
 encode "$SRC/sfx/oynabil-basket-sekme.mp3" "$OUT/sekme.mp3" -4
 encode "$SRC/sfx/oynabil-basket-buzzer.mp3" "$OUT/buzzer.mp3" -6
+du -ch "$OUT"/*.mp3 | tail -1
+
+# Okçuluk: spiker, alan ve ok sesleri
+OUT="public/ses/okculuk"
+mkdir -p "$OUT"
+for f in "$SRC"/jobs/oynabil-okculuk-spiker/*.mp3; do
+  encode "$f" "$OUT/spiker-$(basename "$f")" -1.5
+done
+encode "$SRC/sfx/okculuk-ortam.mp3" "$OUT/alan-ortam.mp3" -11
+encode "$SRC/sfx/okculuk-cosku.mp3" "$OUT/alan-cosku.mp3" -3 ",afade=t=out:st=2.8:d=0.7"
+encode "$SRC/sfx/okculuk-ah.mp3" "$OUT/alan-ah.mp3" -5 ",afade=t=out:st=1.9:d=0.6"
+encode "$SRC/sfx/okculuk-ruzgar.mp3" "$OUT/ruzgar.mp3" -8 ",afade=t=in:d=0.3,afade=t=out:st=1.9:d=0.6"
+encode "$SRC/sfx/okculuk-yay-ger.mp3" "$OUT/yay-ger.mp3" -4
+encode "$SRC/sfx/okculuk-birak.mp3" "$OUT/birak.mp3" -2
+encode "$SRC/sfx/okculuk-ucus.mp3" "$OUT/ucus.mp3" -5
+encode "$SRC/sfx/okculuk-hedef.mp3" "$OUT/hedef.mp3" -2
+encode "$SRC/sfx/okculuk-cimen.mp3" "$OUT/cimen.mp3" -4
 du -ch "$OUT"/*.mp3 | tail -1
