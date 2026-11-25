@@ -131,13 +131,6 @@
         "tr": "rendelemek",
         "enSik": "Grate",
         "trSik": "Rendelemek"
-      },
-      {
-        "id": "slice",
-        "en": "slice",
-        "tr": "dilimlemek",
-        "enSik": "Slice",
-        "trSik": "Dilimlemek"
       }
     ]
   },
@@ -168,13 +161,6 @@
         "tr": "indirmek",
         "enSik": "Download",
         "trSik": "İndirmek"
-      },
-      {
-        "id": "upload",
-        "en": "upload",
-        "tr": "yüklemek",
-        "enSik": "Upload",
-        "trSik": "Yüklemek"
       },
       {
         "id": "password",
@@ -505,13 +491,6 @@
         "tr": "kasırga",
         "enSik": "Hurricane",
         "trSik": "Kasırga"
-      },
-      {
-        "id": "tornado",
-        "en": "tornado",
-        "tr": "hortum",
-        "enSik": "Tornado",
-        "trSik": "Hortum"
       },
       {
         "id": "eruption",

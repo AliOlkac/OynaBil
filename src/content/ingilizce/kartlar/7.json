@@ -53,13 +53,6 @@
         "islev": "Teşekkür ediyor",
         "amac": "teşekkür etmek",
         "tr": "Çok teşekkür ederim."
-      },
-      {
-        "id": "advice",
-        "ifade": "You should see a doctor.",
-        "islev": "Tavsiye veriyor",
-        "amac": "tavsiye vermek",
-        "tr": "Doktora görünmelisin."
       }
     ],
     "unit": "ing-7-6"

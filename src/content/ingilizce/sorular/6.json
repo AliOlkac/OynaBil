@@ -220,9 +220,9 @@
     "unit": "ing-6-3",
     "type": "true-false",
     "difficulty": 1,
-    "prompt": "\"I'm interested in music\" means I like music.",
+    "prompt": "\"I'm interested in music\" cümlesi \"Müzikle ilgileniyorum.\" demektir.",
     "answer": true,
-    "explanation": "\"Be interested in\" bir şeye ilgi duymak demektir. Müziğe ilgi duyan kişi müziği sever."
+    "explanation": "\"Be interested in\" bir şeyle ilgilenmek, bir şeye ilgi duymak demektir."
   },
   {
     "id": "ing-6-3-04",

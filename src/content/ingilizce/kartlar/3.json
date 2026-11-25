@@ -488,12 +488,6 @@
         "en": "bike",
         "tr": "bisiklet",
         "trSik": "Bisiklet"
-      },
-      {
-        "id": "boat",
-        "en": "boat",
-        "tr": "tekne",
-        "trSik": "Tekne"
       }
     ]
   },

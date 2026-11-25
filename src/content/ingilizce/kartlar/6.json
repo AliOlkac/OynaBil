@@ -337,7 +337,7 @@
       {
         "id": "baker",
         "job": "baker",
-        "jobSik": "ABaker",
+        "jobSik": "A baker",
         "yer": "at a bakery",
         "yerSik": "At a bakery",
         "trJob": "fırıncı",
@@ -346,7 +346,7 @@
       {
         "id": "nurse",
         "job": "nurse",
-        "jobSik": "ANurse",
+        "jobSik": "A nurse",
         "yer": "at a hospital",
         "yerSik": "At a hospital",
         "trJob": "hemşire",
@@ -355,7 +355,7 @@
       {
         "id": "waiter",
         "job": "waiter",
-        "jobSik": "AWaiter",
+        "jobSik": "A waiter",
         "yer": "at a restaurant",
         "yerSik": "At a restaurant",
         "trJob": "garson",
@@ -364,29 +364,29 @@
       {
         "id": "farmer",
         "job": "farmer",
-        "jobSik": "AFarmer",
+        "jobSik": "A farmer",
         "yer": "on a farm",
         "yerSik": "On a farm",
         "trJob": "çiftçi",
         "trYer": "çiftlikte"
       },
       {
-        "id": "pharmacist",
-        "job": "pharmacist",
-        "jobSik": "APharmacist",
-        "yer": "at a pharmacy",
-        "yerSik": "At a pharmacy",
-        "trJob": "eczacı",
-        "trYer": "eczanede"
-      },
-      {
         "id": "mechanic",
         "job": "mechanic",
-        "jobSik": "AMechanic",
+        "jobSik": "A mechanic",
         "yer": "at a garage",
         "yerSik": "At a garage",
         "trJob": "tamirci",
         "trYer": "tamirhanede"
+      },
+      {
+        "id": "teacher",
+        "job": "teacher",
+        "yer": "at a school",
+        "yerSik": "At a school",
+        "trJob": "öğretmen",
+        "trYer": "okulda",
+        "jobSik": "A teacher"
       }
     ],
     "unit": "ing-6-5"
@@ -511,13 +511,6 @@
         "tr": "roket",
         "enSik": "Rocket",
         "trSik": "Roket"
-      },
-      {
-        "id": "spaceship",
-        "en": "spaceship",
-        "tr": "uzay gemisi",
-        "enSik": "Spaceship",
-        "trSik": "Uzay gemisi"
       },
       {
         "id": "satellite",
