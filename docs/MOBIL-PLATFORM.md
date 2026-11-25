@@ -4,7 +4,7 @@ Bu belge, akıllı tahtadaki OynaBil'in öğrencilerin kendi telefonlarında bir
 
 ## 1. Fikir bir cümlede
 
-Çocuklar ders sorularını cevaplayarak birbirleriyle maç yapar: penaltı atar, kale yıkar, Türkiye haritasında il fetheder. Kazandıkça lig puanı toplar, Bronz'dan Elmas'a çıkar. Kaybettiği maçın sonunda da hangi konuda zorlandığını görür ve oraya çalışır.
+Çocuklar ders sorularını cevaplayarak birbirleriyle maç yapar: penaltı çeker, basket atar, ok atar, kale yıkar. Kazandıkça lig puanı toplar, Bronz'dan Elmas'a çıkar. Kaybettiği maçın sonunda da hangi konuda zorlandığını görür ve oraya çalışır.
 
 ## 2. İlkeler
 
@@ -16,43 +16,49 @@ Bu belge, akıllı tahtadaki OynaBil'in öğrencilerin kendi telefonlarında bir
 
 ## 3. Oyun modları
 
-### 3.1 Penaltı Düellosu (1'e 1, ilk mod)
+Yeni oyun icat etmeye gerek yoktur: tahta sürümündeki altı oyunun hepsi iki kişilik rekabetçi moda dönüşür. Sahneler, spiker ve sesler aynen kullanılır.
 
-İki oyuncu, gerçek bir penaltı atışları serisi gibi sırayla şutçu ve kaleci olur. Her oyuncu beş şut çeker; eşitlikte seri penaltıya geçilir.
+### 3.1 Ortak düello kuralı
 
-Her atıştan önce iki oyuncuya aynı soru gelir (12 saniye):
+- İki oyuncuya aynı soru gelir (12 saniye).
+- Doğru bilen kendi atışını yapar; ikisi de bilirse ikisi de atar, ilk bilen önce atar.
+- Skorlar yarışır. Kimsenin rakibini durdurması ya da kurtarması gerekmez.
+- Maç 10 soru sürer (yaklaşık 4–5 dakika); eşitlikte uzatma, tahta sürümündeki kurallarla.
+- Lig puanı bütün oyunlarda ortaktır. Dereceli maçta oyun türü her gün döner ya da oyuncu sevdiği oyunu seçer.
 
-| | Doğru cevap | Yanlış cevap ya da süre dolması |
+### 3.2 Oyunlar
+
+| Oyun | Düelloda nasıl oynanır | Not |
 |---|---|---|
-| **Şutçu** | Nişanını istediği yere alır, top normal sapar | Top çok sapar, büyük olasılıkla auta ya da kaleciye gider |
-| **Kaleci** | Üç yönden (sol, orta, sağ) birini seçip atlar | Kaleci geç kalır: yalnızca ortayı tutabilir |
+| **Basketbol** | Bilen atar: yakından 2 sayı ya da üçlük. Üst üste iki basket eli ateşlendirir | Dik ekrana hazır |
+| **Okçuluk** | Bilen yayını gerer; nişangâh gezinir, rüzgâr oku iter. En çok puanı toplayan kazanır | Dik ekrana hazır |
+| **Penaltı** | Bilen penaltıyı çeker; kaleci bilgisayardır, üç yönden birine atlar | Dik ekrana hazır. İleride isteğe bağlı "canlı kaleci" (rakip yön seçer) eklenebilir |
+| **Kule Yıkmaca** | Bilen rakibin kulesine taş atar; kulesi önce yıkılan kaybeder | Geniş sahne: yatay ekran ya da dik ekran için yeni kamera |
+| **Halat Çekme** | İki oyuncu aynı anda kendi hızında soru çözer; her doğru ipi çeker | Canlı maça en uygun mod; geniş sahne |
+| **Bilgi Yarışması** | Sırayla soru, bilemeyenin sorusu çalınır | Beceri gerektirmez |
 
-- **Akıl oyunu:** Şutçu nişan alırken kaleci aynı anda bir yön seçer. İkisi de karşısındakinin seçimini görmez. Bilgisayar kalecinin 1/3 rastgeleliği yerine "bu sefer sağa mı atar?" tahmini oyunun özü olur.
-- **Hız bonusu:** Doğru cevabı ilk veren oyuncu nişanını 1 saniye erken kilitler. Hız avantaj sağlar ama bilmeden kazandırmaz.
-- **Süre:** Bir maç yaklaşık 4 dakika sürer: on atış ve atış başına yaklaşık 20 saniye.
+### 3.3 Beceri kısmı kolay değildir
 
-### 3.2 Bil ve Fethet: Türkiye (3–4 kişilik)
+Basketbol, Okçuluk ve Kule Yıkmaca tek ayarda, zor oynanır: nişangâh ve güç çubuğu hızlıdır, yeşil bölge dardır, rüzgâr serttir. Soruyu bilmek atış hakkı verir ama sayıyı garanti etmez. Penaltı şansa dayandığı için zorlaştırılmaz. Tahta sürümünde de ayar böyledir; kolay ve normal seçenekleri kaldırıldı.
 
-- **Harita:** Türkiye haritası; 81 il ya da daha kısa maç için 7 coğrafi bölgeye bölünmüş yaklaşık 30 parça. Her oyuncu bir köşeden başlar, başkentinde bir kule vardır.
-- **Fetih turları:** Herkese aynı soru gelir. En hızlı doğru cevap veren, sınırdaki boş bir ili alır. Sonra gelen doğrular da sırayla il alır.
-- **Saldırı turları:** Sıradaki oyuncu bir komşu ile saldırır ve iki oyuncu düello sorusu çözer (sayısal tahmin sorularıyla eşitlik bozulur). Saldıran kazanırsa il el değiştirir. Başkente saldırmak için kulenin üç canını bitirmek gerekir.
-- **Kuleler:** Savunmada doğru cevap veren oyuncunun ilindeki kule bir kat yükselir; yüksek kule savunmada bir hak daha verir.
-- **Süre ve sonuç:** Maç yaklaşık 10 dakika ya da 6 tur sürer. En çok toprağı olan kazanır; başkentini kaybeden oyundan çıkar.
-- **Görünüm:** Haritada iller takım rengine boyanır, fetihte bayrak dikilir, kule yıkılınca Kule Yıkmaca'nın yıkılış sahnesi küçük ölçekte oynar.
-- **2 kişilik sürüm:** Aynı harita, yarıya bölünmüş başlangıçla.
+### 3.4 Sonra: Bil ve Fethet, Türkiye (3–4 kişilik)
 
-### 3.3 Sonra eklenebilecekler
+- **Harita:** Türkiye haritası; 81 il ya da daha kısa maç için yaklaşık 30 parça. Her oyuncu bir köşeden başlar, başkentinde bir kule vardır.
+- **Fetih turları:** Herkese aynı soru gelir; en hızlı doğru cevap sınırdaki boş bir ili alır.
+- **Saldırı turları:** Sıradaki oyuncu komşu bir ile saldırır ve iki oyuncu düello sorusu çözer. Saldıran kazanırsa il el değiştirir. Başkent üç canla korunur.
+- **Kuleler:** Savunmada doğru cevap kuleyi bir kat yükseltir; yüksek kule savunmada bir hak daha verir.
+- **Süre ve sonuç:** Yaklaşık 10 dakika ya da 6 tur. En çok toprağı olan kazanır. İki kişilik sürümü de vardır.
 
-- **Okçuluk ve Basketbol düellosu:** Penaltı Düellosu'nun kalıbıyla; iki oyuncu aynı anda atar, puanlar karşılaştırılır.
-- **Takım maçı (2'ye 2):** Arkadaşlar aynı takımda.
-- **Sınıf ligi:** Öğretmen sınıfı kurar, haftalık sınıf sıralaması tahtada gösterilir. Bu, tahta sürümüyle mobili birbirine bağlar.
+### 3.5 Daha sonra
+
+- **Takım maçı (2'ye 2)** ve öğretmenin kurduğu **sınıf ligi** (haftalık sınıf sıralaması tahtada gösterilir).
 
 ## 4. Maçın akışı
 
 1. **Eşleşme:**
    - "Dereceli" (lig puanı değişir), "Dostluk" (arkadaşa meydan okuma) ya da "Antrenman" (bilgisayara karşı).
    - Oyuncu ders ve ünite seçebilir ya da "karışık" der. Dereceli maçta ders, haftalık lig dersi ya da oyuncunun seçtiği derslerden gelir.
-2. **Maç:** 3.1 ya da 3.2.
+2. **Maç:** 3. bölümdeki oyunlardan biri.
 3. **Maç sonu ekranı:**
    - Lig puanı değişimi (+18 / −14 gibi).
    - Yanlış cevapların açıklamaları.
@@ -86,7 +92,7 @@ Arayüz kuralları:
 - **Kaybedene de yol:** Yenilgi ekranında yanlışların açıklaması ve "çalış, kalkan kazan" düğmesi öndedir.
 - **Eski telefonlarda da akıcı:** Tahta sürümündeki üç kalite kademesi korunur; zayıf telefonda sahne çizim sürümüne döner.
 
-Örnek ekran taslakları (lobi, soru, kaleci seçimi, maç sonu, lig, harita) planın web sayfası sürümündedir.
+Oyunların telefondaki gerçek görüntüleri ve lobi, lig, maç sonu taslakları planın web sayfası sürümündedir.
 
 ## 5. Lig ve puan sistemi
 
@@ -168,11 +174,11 @@ Süreler, 1–2 geliştirici ve yarı zamanlı bir içerik editörü varsayımı
 | Aşama | Kapsam | Kabaca süre |
 |---|---|---|
 | **0. Hazırlık** | Tekrar sorununun düzeltilmesi (yapıldı); soru havuzunu büyütme; mobil ekran taslakları; KVKK danışmanlığı | 3–4 hafta |
-| **1. Hesaplar ve sıralı düello** | Kayıt ve veli onayı, profil, arkadaşa meydan okuma, sıralı Penaltı Düellosu, maç sonu çalışma önerisi, Android kapalı beta (2–3 okul) | 8–10 hafta |
-| **2. Dereceli ve ligler** | Canlı 1'e 1 Penaltı Düellosu, eşleştirme, MMR, ligler ve ilk sezon, günlük görevler, iOS | 8–10 hafta |
+| **1. Hesaplar ve sıralı düello** | Kayıt ve veli onayı, profil, arkadaşa meydan okuma, sıralı düello (Basketbol, Okçuluk, Penaltı), maç sonu çalışma önerisi, Android kapalı beta (2–3 okul) | 8–10 hafta |
+| **2. Dereceli ve ligler** | Canlı 1'e 1 düello (Halat Çekme ve Kule Yıkmaca dahil), eşleştirme, MMR, ligler ve ilk sezon, günlük görevler, iOS | 8–10 hafta |
 | **3. Bil ve Fethet: Türkiye** | 3–4 kişilik harita modu, kuleler, 2 kişilik sürüm | 8–12 hafta |
 | **4. Öğretmen ve videolar** | Sınıf ligi, öğretmen ve veli paneli, video yükleme, ustalık rozetleri | 6–8 hafta |
-| **5. Daha çok mod** | Okçuluk ve Basketbol düellosu, 2'ye 2 takım maçı | sürekli |
+| **5. Daha çok mod** | 2'ye 2 takım maçı, canlı kaleci | sürekli |
 
 Kapalı beta en önemli adımdır. Okullarda gerçek çocuklarla oynatıp eşleşme süresine, maç uzunluğuna ve küsme oranına bakmadan dereceli sisteme geçilmemeli.
 
