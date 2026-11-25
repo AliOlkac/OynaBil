@@ -103,13 +103,6 @@
         "not": "Gözyaşının çokluğu olduğundan çok büyük gösterilmiştir."
       },
       {
-        "id": "karinca",
-        "ornek": "Karınca, ağustos böceğine ‘Yazın ne yaptın?’ diye sordu.",
-        "sanat": "Konuşturma",
-        "sanatKucuk": "konuşturma",
-        "not": "İnsan dışındaki varlıklar konuşturulmuştur."
-      },
-      {
         "id": "ok",
         "ornek": "Atlet, yaydan çıkmış ok gibi fırladı.",
         "sanat": "Benzetme",
@@ -228,10 +221,10 @@
       },
       {
         "id": "yay-ayrac",
-        "gorev": "Cümle içindeki bir sözün açıklamasını göstermek için",
+        "gorev": "Tiyatro eserlerinde konuşanın hareketlerini göstermek için",
         "isaret": "yay ayraç",
         "isaretSik": "Yay ayraç",
-        "not": "Örnek: Ankara'ya (başkentimize) ilk kez gidiyorum."
+        "not": "Örnek: Ali (gülerek): Sonunda geldin!"
       },
       {
         "id": "uc-nokta",

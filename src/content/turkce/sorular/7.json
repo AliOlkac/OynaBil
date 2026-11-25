@@ -793,12 +793,12 @@
     "difficulty": 3,
     "prompt": "Hangi cümlede yer-yön zarfı vardır?",
     "choices": [
-      "Çocuk içeriye girdi.",
+      "Odanın içi karanlıktı.",
       "İçerisi çok sıcak.",
       "Çocuk içeri girdi.",
       "İçeriden sesler geliyor."
     ],
     "answer": 2,
-    "explanation": "Yer-yön zarfları ek almadan fiilin yönünü bildirir. “İçeriye, içerisi, içeriden” sözcükleri ek aldığı için isim olarak kullanılmıştır."
+    "explanation": "Yer-yön zarfları ek almadan fiilin yönünü bildirir: “içeri girdi”. “İçerisi, içeriden, odanın içi” ise isim olarak kullanılmıştır."
   }
 ]

@@ -30,20 +30,8 @@
     "negative": "Hangisi cansız bir varlıktır?",
     "statement": "{item} canlı bir varlıktır.",
     "explanation": "Canlılar beslenir, solunum yapar, büyür ve çoğalır. Buradaki canlılar: {members}. Taş, bulut, su ve insan yapımı eşyalar cansızdır.",
-    "members": [
-      "Karınca",
-      "Papatya",
-      "Kedi",
-      "Çam ağacı",
-      "Serçe"
-    ],
-    "nonMembers": [
-      "Taş",
-      "Bulut",
-      "Oyuncak bebek",
-      "Bisiklet",
-      "Su"
-    ]
+    "members": ["Karınca", "Papatya", "Kedi", "Çam ağacı", "Serçe"],
+    "nonMembers": ["Taş", "Bulut", "Oyuncak bebek", "Bisiklet", "Su"]
   },
   {
     "kind": "pairs",
@@ -86,12 +74,8 @@
       }
     ],
     "distractors": {
-      "katman": [
-        "Ateş küre"
-      ],
-      "ozellik": [
-        "Dünya'nın en sıcak katmanıdır"
-      ]
+      "katman": ["Ateş küre"],
+      "ozellik": ["Dünya'nın en sıcak katmanıdır"]
     }
   },
   {
@@ -141,9 +125,7 @@
       }
     ],
     "distractors": {
-      "yontem": [
-        "Yüzdürme"
-      ]
+      "yontem": ["Yüzdürme"]
     }
   },
   {
@@ -216,13 +198,7 @@
       "Çamaşır makinesi",
       "Elektrikli süpürge"
     ],
-    "nonMembers": [
-      "Makas",
-      "Mum",
-      "Kürek",
-      "Tahta kaşık",
-      "El arabası"
-    ]
+    "nonMembers": ["Makas", "Mum", "Kürek", "Tahta kaşık", "El arabası"]
   },
   {
     "kind": "pairs",
@@ -312,13 +288,6 @@
         "alan": "Deniz",
         "alanda": "denizde",
         "aciklama": "Yunus denizde yaşar. Yüzgeçleri ve kaygan gövdesi suda hızlı yüzmesini sağlar."
-      },
-      {
-        "id": "kurbaga",
-        "canli": "Kurbağa",
-        "alan": "Göl kıyısı",
-        "alanda": "göl kıyısında",
-        "aciklama": "Kurbağa göl ve dere kıyılarında yaşar. Hem karada hem suda yaşayabilir, yumurtalarını suya bırakır."
       }
     ]
   }

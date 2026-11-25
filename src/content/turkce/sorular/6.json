@@ -603,7 +603,7 @@
       "Tırnak işareti",
       "Yay ayraç",
       "Kesme işareti",
-      "Kısa çizgi"
+      "Noktalı virgül"
     ],
     "answer": 1,
     "explanation": "Yay ayraç, cümlenin yapısıyla doğrudan ilgili olmayan açıklamalar için kullanılır: “Bu konuyu geçen yıl (5. sınıfta) öğrenmiştik.”"

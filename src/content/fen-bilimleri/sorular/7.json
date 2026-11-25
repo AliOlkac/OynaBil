@@ -5,12 +5,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Gök cisimlerini gözlemlemek için kullanılan araç hangisidir?",
-    "choices": [
-      "Teleskop",
-      "Mikroskop",
-      "Periskop",
-      "Termometre"
-    ],
+    "choices": ["Teleskop", "Mikroskop", "Periskop", "Termometre"],
     "answer": 0,
     "explanation": "Teleskop, uzaktaki gök cisimlerini daha yakın ve ayrıntılı görmemizi sağlayan gözlem aracıdır."
   },
@@ -20,12 +15,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "İnsanlar tarafından yapılıp bir gök cisminin çevresinde dolanması için uzaya gönderilen araçlara ne denir?",
-    "choices": [
-      "Doğal uydu",
-      "Yapay uydu",
-      "Meteor",
-      "Gezegen"
-    ],
+    "choices": ["Doğal uydu", "Yapay uydu", "Meteor", "Gezegen"],
     "answer": 1,
     "explanation": "Yapay uydular haberleşme, hava tahmini, gözlem ve konum belirleme gibi amaçlarla uzaya gönderilir."
   },
@@ -74,12 +64,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Teleskopların bulunduğu, gök cisimlerinin gözlemlendiği yerlere ne ad verilir?",
-    "choices": [
-      "Planetaryum",
-      "Gözlemevi",
-      "Uzay istasyonu",
-      "Laboratuvar"
-    ],
+    "choices": ["Planetaryum", "Gözlemevi", "Uzay istasyonu", "Laboratuvar"],
     "answer": 1,
     "explanation": "Gözlemevlerine rasathane de denir. Gök bilimciler burada teleskoplarla gözlem yapar."
   },
@@ -104,12 +89,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Yıldızların içinde doğduğu gaz ve toz bulutlarına ne denir?",
-    "choices": [
-      "Kara delik",
-      "Galaksi",
-      "Kuyruklu yıldız",
-      "Bulutsu"
-    ],
+    "choices": ["Kara delik", "Galaksi", "Kuyruklu yıldız", "Bulutsu"],
     "answer": 3,
     "explanation": "Bulutsular (nebulalar) gaz ve tozdan oluşur. Yıldızlar bu bulutların içinde oluşur."
   },
@@ -143,12 +123,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Fen bilimlerinde işin birimi aşağıdakilerden hangisidir?",
-    "choices": [
-      "Newton",
-      "Pascal",
-      "Kilogram",
-      "Joule"
-    ],
+    "choices": ["Newton", "Pascal", "Kilogram", "Joule"],
     "answer": 3,
     "explanation": "İş ve enerjinin birimi joule (J) olarak kullanılır. Newton kuvvetin birimidir."
   },
@@ -182,12 +157,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Bir sandık 20 N büyüklüğündeki kuvvetle kuvvet doğrultusunda 5 m çekiliyor. Yapılan iş kaç jouledür?",
-    "choices": [
-      "100 J",
-      "4 J",
-      "25 J",
-      "15 J"
-    ],
+    "choices": ["100 J", "4 J", "25 J", "15 J"],
     "answer": 0,
     "explanation": "İş = kuvvet × alınan yol. 20 × 5 = 100 J."
   },
@@ -251,12 +221,7 @@
     "type": "multiple-choice",
     "difficulty": 3,
     "prompt": "Ağırlığı 50 N olan bir çanta yerden 2 m yükseklikteki rafa kaldırılıyor. Yer çekimine karşı yapılan iş kaç jouledür?",
-    "choices": [
-      "25 J",
-      "52 J",
-      "48 J",
-      "100 J"
-    ],
+    "choices": ["25 J", "52 J", "48 J", "100 J"],
     "answer": 3,
     "explanation": "İş = kuvvet × yol. Çantayı kaldırmak için ağırlığı kadar kuvvet gerekir: 50 × 2 = 100 J."
   },
@@ -281,12 +246,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Besinlerin kana geçebilecek kadar küçük parçalara ayrılmasına ne denir?",
-    "choices": [
-      "Solunum",
-      "Boşaltım",
-      "Sindirim",
-      "Dolaşım"
-    ],
+    "choices": ["Solunum", "Boşaltım", "Sindirim", "Dolaşım"],
     "answer": 2,
     "explanation": "Sindirim, büyük besin moleküllerinin hücrelere girebilecek kadar küçük parçalara ayrılmasıdır."
   },
@@ -296,12 +256,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Kimyasal sindirimi ağızda başlayan besin grubu hangisidir?",
-    "choices": [
-      "Proteinler",
-      "Yağlar",
-      "Vitaminler",
-      "Karbonhidratlar"
-    ],
+    "choices": ["Proteinler", "Yağlar", "Vitaminler", "Karbonhidratlar"],
     "answer": 3,
     "explanation": "Karbonhidratların kimyasal sindirimi ağızda tükürükle başlar. Proteinlerinki midede, yağlarınki ince bağırsakta başlar."
   },
@@ -320,12 +275,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Yağların mekanik sindirimini sağlayan safra sıvısı hangi organda üretilir?",
-    "choices": [
-      "Safra kesesi",
-      "Karaciğer",
-      "Pankreas",
-      "Mide"
-    ],
+    "choices": ["Safra kesesi", "Karaciğer", "Pankreas", "Mide"],
     "answer": 1,
     "explanation": "Safra karaciğerde üretilir, safra kesesinde depolanır ve ince bağırsağa dökülerek yağları küçük damlacıklara ayırır."
   },
@@ -350,12 +300,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Akciğerlerde kan ile hava arasındaki gaz alışverişi hangi yapıda gerçekleşir?",
-    "choices": [
-      "Bronş",
-      "Gırtlak",
-      "Yutak",
-      "Alveol"
-    ],
+    "choices": ["Bronş", "Gırtlak", "Yutak", "Alveol"],
     "answer": 3,
     "explanation": "Alveoller (hava kesecikleri) kılcal damarlarla sarılıdır. Oksijen kana, karbondioksit alveollere burada geçer."
   },
@@ -365,12 +310,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Böbreklerde kanın süzülmesini sağlayan yapı birimi hangisidir?",
-    "choices": [
-      "Nefron",
-      "Alveol",
-      "Nöron",
-      "Villus"
-    ],
+    "choices": ["Nefron", "Alveol", "Nöron", "Villus"],
     "answer": 0,
     "explanation": "Her böbrekte yaklaşık bir milyon nefron bulunur. Nefronlar kanı süzerek idrarı oluşturur."
   },
@@ -419,12 +359,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Işığın saydam bir ortamdan başka bir saydam ortama geçerken doğrultu değiştirmesine ne denir?",
-    "choices": [
-      "Yansıma",
-      "Kırılma",
-      "Soğurulma",
-      "Tutulma"
-    ],
+    "choices": ["Yansıma", "Kırılma", "Soğurulma", "Tutulma"],
     "answer": 1,
     "explanation": "Işık farklı yoğunluktaki saydam bir ortama eğik geçerken doğrultu değiştirir. Bu olaya ışığın kırılması denir."
   },
@@ -540,7 +475,7 @@
       "Bulunduğu yerden daha derinde",
       "Tam bulunduğu yerde",
       "Baş aşağı dönmüş olarak",
-      "Bulunduğu yerden daha yakında"
+      "Olduğundan daha yukarıda, yüzeye yakın"
     ],
     "answer": 3,
     "explanation": "Balıktan gelen ışınlar sudan havaya geçerken kırılır. Bu yüzden balık olduğundan daha yakında, yüzeye yakın görünür."
@@ -551,12 +486,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Bir elementin özelliklerini taşıyan en küçük yapı taşı hangisidir?",
-    "choices": [
-      "Atom",
-      "Molekül",
-      "Hücre",
-      "Bileşik"
-    ],
+    "choices": ["Atom", "Molekül", "Hücre", "Bileşik"],
     "answer": 0,
     "explanation": "Atom, maddenin en küçük yapı taşıdır. Her elementin atomu kendine özgüdür."
   },
@@ -566,12 +496,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Atomun çekirdeğinde bulunan pozitif yüklü tanecik hangisidir?",
-    "choices": [
-      "Elektron",
-      "Proton",
-      "Nötron",
-      "Molekül"
-    ],
+    "choices": ["Elektron", "Proton", "Nötron", "Molekül"],
     "answer": 1,
     "explanation": "Çekirdekte pozitif yüklü protonlar ve yüksüz nötronlar bulunur. Negatif yüklü elektronlar çekirdeğin çevresindedir."
   },
@@ -599,12 +524,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Aynı cins atomlardan oluşan saf maddelere ne ad verilir?",
-    "choices": [
-      "Element",
-      "Bileşik",
-      "Karışım",
-      "Çözelti"
-    ],
+    "choices": ["Element", "Bileşik", "Karışım", "Çözelti"],
     "answer": 0,
     "explanation": "Elementler tek cins atomdan oluşur. Demir, altın ve oksijen birer elementtir."
   },
@@ -614,12 +534,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Aşağıdakilerden hangisi bir bileşiktir?",
-    "choices": [
-      "Oksijen gazı",
-      "Su",
-      "Demir",
-      "Hava"
-    ],
+    "choices": ["Oksijen gazı", "Su", "Demir", "Hava"],
     "answer": 1,
     "explanation": "Su (H₂O), hidrojen ve oksijen atomlarının belirli oranda birleşmesiyle oluşan bir bileşiktir. Oksijen ve demir element, hava karışımdır."
   },
@@ -629,12 +544,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Bir su molekülünde (H₂O) toplam kaç atom bulunur?",
-    "choices": [
-      "2",
-      "1",
-      "3",
-      "4"
-    ],
+    "choices": ["2", "1", "3", "4"],
     "answer": 2,
     "explanation": "H₂O molekülünde 2 hidrojen ve 1 oksijen atomu vardır: 2 + 1 = 3 atom."
   },
@@ -653,12 +563,7 @@
     "type": "multiple-choice",
     "difficulty": 3,
     "prompt": "Proton sayısı 11 olan nötr bir sodyum atomunun elektron sayısı kaçtır?",
-    "choices": [
-      "11",
-      "10",
-      "12",
-      "23"
-    ],
+    "choices": ["11", "10", "12", "23"],
     "answer": 0,
     "explanation": "Nötr atomlarda proton sayısı elektron sayısına eşittir. Bu nedenle elektron sayısı da 11'dir."
   },
@@ -722,12 +627,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Yüklü bir cismin toprağa bağlanarak yükünün boşaltılmasına ne denir?",
-    "choices": [
-      "Yalıtım",
-      "Topraklama",
-      "Kısa devre",
-      "Sürtünme"
-    ],
+    "choices": ["Yalıtım", "Topraklama", "Kısa devre", "Sürtünme"],
     "answer": 1,
     "explanation": "Topraklamada yüklü cisim ile yer arasında yük alışverişi olur ve cisim nötr hâle gelir."
   },
@@ -737,12 +637,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Bir cismin elektrik yüklü olup olmadığını anlamak için kullanılan araç hangisidir?",
-    "choices": [
-      "Elektroskop",
-      "Ampermetre",
-      "Dinamometre",
-      "Barometre"
-    ],
+    "choices": ["Elektroskop", "Ampermetre", "Dinamometre", "Barometre"],
     "answer": 0,
     "explanation": "Elektroskop, bir cismin yüklü olup olmadığını ve yükünün cinsini belirlemeye yarar."
   },
@@ -767,12 +662,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Sürtünme ile elektriklenmede cisimler arasında hangi tanecikler aktarılır?",
-    "choices": [
-      "Protonlar",
-      "Nötronlar",
-      "Elektronlar",
-      "Atom çekirdekleri"
-    ],
+    "choices": ["Protonlar", "Nötronlar", "Elektronlar", "Atom çekirdekleri"],
     "answer": 2,
     "explanation": "Elektriklenmede yalnızca elektronlar bir cisimden diğerine geçer. Protonlar çekirdekte olduğu için yer değiştirmez."
   },
@@ -974,12 +864,7 @@
     "type": "multiple-choice",
     "difficulty": 3,
     "prompt": "Fosil yakıt tüketiminin artmasıyla güçlenen sera etkisi hangi küresel soruna yol açar?",
-    "choices": [
-      "Küresel ısınma",
-      "Depremler",
-      "Gelgit olayı",
-      "Ay tutulması"
-    ],
+    "choices": ["Küresel ısınma", "Depremler", "Gelgit olayı", "Ay tutulması"],
     "answer": 0,
     "explanation": "Atmosferde artan karbondioksit ısının uzaya geri dönmesini zorlaştırır. Dünya'nın ortalama sıcaklığı artar; buna küresel ısınma denir."
   }

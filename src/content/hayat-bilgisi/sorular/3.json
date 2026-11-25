@@ -5,12 +5,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Okulda bir sorunumuz olduğunda önce kime başvururuz?",
-    "choices": [
-      "Bakkala",
-      "Postacıya",
-      "Öğretmenimize",
-      "Şoföre"
-    ],
+    "choices": ["Bakkala", "Postacıya", "Öğretmenimize", "Şoföre"],
     "answer": 2,
     "explanation": "Okuldaki sorunlarımızı önce öğretmenimize anlatırız. Öğretmenimiz çözüm bulmamıza yardım eder."
   },
@@ -20,12 +15,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Hangisi arkadaşlık ilişkilerini güçlendirir?",
-    "choices": [
-      "Lakap takmak",
-      "Sır tutmamak",
-      "Dışlamak",
-      "Yardımlaşmak"
-    ],
+    "choices": ["Lakap takmak", "Sır tutmamak", "Dışlamak", "Yardımlaşmak"],
     "answer": 3,
     "explanation": "Yardımlaşmak, paylaşmak ve güvenilir olmak arkadaşlığı güçlendirir. Lakap takmak ve dışlamak ise arkadaşlığı bozar."
   },
@@ -83,12 +73,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Okulda suyu, elektriği ve kâğıdı dikkatli kullanmaya ne denir?",
-    "choices": [
-      "Tasarruf",
-      "İsraf",
-      "Tüketim",
-      "Üretim"
-    ],
+    "choices": ["Tasarruf", "İsraf", "Tüketim", "Üretim"],
     "answer": 0,
     "explanation": "Kaynakları gerektiği kadar kullanmaya tasarruf denir. Gereksiz yere harcamak ise israftır."
   },
@@ -107,12 +92,7 @@
     "type": "multiple-choice",
     "difficulty": 3,
     "prompt": "Okulla ilgili kararlara öğrencilerin de oy vererek katılması hangi kavramla ilgilidir?",
-    "choices": [
-      "Tasarruf",
-      "Reklam",
-      "Demokrasi",
-      "Rekabet"
-    ],
+    "choices": ["Tasarruf", "Reklam", "Demokrasi", "Rekabet"],
     "answer": 2,
     "explanation": "Demokraside kararlar birlikte alınır ve herkesin söz hakkı vardır. Sınıf başkanı seçimi buna bir örnektir."
   },
@@ -161,12 +141,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Bisiklet sürerken güvenliğimiz için hangisini takmalıyız?",
-    "choices": [
-      "Kolye",
-      "Kulaklık",
-      "Kask",
-      "Atkı"
-    ],
+    "choices": ["Kolye", "Kulaklık", "Kask", "Atkı"],
     "answer": 2,
     "explanation": "Kask, düşme ve çarpma anında başımızı korur. Dizlik ve dirseklik de yaralanmayı azaltır."
   },
@@ -254,12 +229,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Alışverişten sonra satıcıdan hangisini almalıyız?",
-    "choices": [
-      "İmza",
-      "Fiş ya da fatura",
-      "Fotoğraf",
-      "Mektup"
-    ],
+    "choices": ["İmza", "Fiş ya da fatura", "Fotoğraf", "Mektup"],
     "answer": 1,
     "explanation": "Fiş ya da fatura, ürünü satın aldığımızı gösterir. Ürün bozuk çıkarsa değiştirmek için gereklidir."
   },
@@ -284,12 +254,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Evimizin yakınında oturan kişilere ne denir?",
-    "choices": [
-      "Akraba",
-      "Müşteri",
-      "Yolcu",
-      "Komşu"
-    ],
+    "choices": ["Akraba", "Müşteri", "Yolcu", "Komşu"],
     "answer": 3,
     "explanation": "Evimizin yakınında oturan kişiler komşularımızdır. Komşular birbirine saygılı davranır ve yardım eder."
   },
@@ -323,12 +288,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Bir ürünü ya da hizmeti satın alıp kullanan kişiye ne denir?",
-    "choices": [
-      "Tüketici",
-      "Üretici",
-      "Satıcı",
-      "Kasiyer"
-    ],
+    "choices": ["Tüketici", "Üretici", "Satıcı", "Kasiyer"],
     "answer": 0,
     "explanation": "Satın alıp kullanan kişi tüketicidir. Ürünü yapan ya da yetiştiren kişi ise üreticidir."
   },
@@ -371,12 +331,7 @@
     "type": "multiple-choice",
     "difficulty": 3,
     "prompt": "Anne ve babamızın çalışarak kazandığı paraya ne denir?",
-    "choices": [
-      "Gider",
-      "Borç",
-      "Gelir",
-      "Bağış"
-    ],
+    "choices": ["Gider", "Borç", "Gelir", "Bağış"],
     "answer": 2,
     "explanation": "Çalışarak kazanılan para gelirdir. Kira, fatura ve mutfak masrafı gibi harcamalar ise giderdir."
   },
@@ -386,12 +341,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Yön bulmamıza yarayan alet hangisidir?",
-    "choices": [
-      "Termometre",
-      "Pusula",
-      "Saat",
-      "Cetvel"
-    ],
+    "choices": ["Termometre", "Pusula", "Saat", "Cetvel"],
     "answer": 1,
     "explanation": "Pusula yön bulmaya yarar. Pusulanın ibresi kuzey-güney doğrultusunu gösterir."
   },
@@ -401,12 +351,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Bir ülkenin yönetim merkezi olan şehre ne denir?",
-    "choices": [
-      "Köy",
-      "Liman",
-      "Başkent",
-      "İlçe"
-    ],
+    "choices": ["Köy", "Liman", "Başkent", "İlçe"],
     "answer": 2,
     "explanation": "Ülkenin yönetildiği şehre başkent denir. Türkiye'nin başkenti Ankara'dır."
   },
@@ -425,12 +370,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Bir ilin en yetkili yöneticisi kimdir?",
-    "choices": [
-      "Vali",
-      "Muhtar",
-      "Kaymakam",
-      "Belediye başkanı"
-    ],
+    "choices": ["Vali", "Muhtar", "Kaymakam", "Belediye başkanı"],
     "answer": 0,
     "explanation": "İlleri vali yönetir. İlçeleri kaymakam, mahalle ve köyleri muhtar yönetir."
   },
@@ -440,12 +380,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Mahalle ve köyleri kim yönetir?",
-    "choices": [
-      "Vali",
-      "Muhtar",
-      "Kaymakam",
-      "Öğretmen"
-    ],
+    "choices": ["Vali", "Muhtar", "Kaymakam", "Öğretmen"],
     "answer": 1,
     "explanation": "Mahalleyi ve köyü, orada yaşayanların seçtiği muhtar yönetir."
   },
@@ -455,12 +390,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Şehrin temizlik, su ve ulaşım hizmetlerini hangi kurum yürütür?",
-    "choices": [
-      "Okul",
-      "Hastane",
-      "Belediye",
-      "Postane"
-    ],
+    "choices": ["Okul", "Hastane", "Belediye", "Postane"],
     "answer": 2,
     "explanation": "Belediye; çöplerin toplanması, su, park ve toplu taşıma gibi hizmetleri yürütür."
   },
@@ -470,12 +400,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Türkiye Büyük Millet Meclisi hangi şehirde açılmıştır?",
-    "choices": [
-      "İstanbul",
-      "Sivas",
-      "Erzurum",
-      "Ankara"
-    ],
+    "choices": ["İstanbul", "Sivas", "Erzurum", "Ankara"],
     "answer": 3,
     "explanation": "Türkiye Büyük Millet Meclisi 23 Nisan 1920'de Ankara'da açılmıştır."
   },
@@ -485,12 +410,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Matematik öğretmeni, Mustafa'ya hangi adı vermiştir?",
-    "choices": [
-      "Kemal",
-      "Ali",
-      "Rıza",
-      "Cemal"
-    ],
+    "choices": ["Kemal", "Ali", "Rıza", "Cemal"],
     "answer": 0,
     "explanation": "Mustafa matematikte çok başarılıydı. Öğretmeni ona \"olgunluk\" anlamına gelen Kemal adını verdi."
   },
@@ -508,9 +428,9 @@
     "unit": "hb-3-4",
     "type": "true-false",
     "difficulty": 2,
-    "prompt": "Pusulanın renkli ucu kuzeyi gösterir.",
+    "prompt": "Pusulanın ibresi her zaman kuzey-güney doğrultusunu gösterir.",
     "answer": true,
-    "explanation": "Pusulanın ibresinin renkli ucu kuzeyi gösterir. Kuzeyi bulunca öteki yönleri de belirleyebiliriz."
+    "explanation": "Pusulanın ibresi mıknatıslıdır ve kuzey-güney doğrultusunda durur. Kuzeyi bulunca öteki yönleri de belirleyebiliriz."
   },
   {
     "id": "hb-3-4-11",
@@ -533,12 +453,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Hangisi geri dönüştürülebilen bir atıktır?",
-    "choices": [
-      "Kullanılmış peçete",
-      "Islak mendil",
-      "Cam şişe",
-      "Sakız"
-    ],
+    "choices": ["Kullanılmış peçete", "Islak mendil", "Cam şişe", "Sakız"],
     "answer": 2,
     "explanation": "Cam, kâğıt, plastik ve metal atıklar geri dönüştürülerek yeniden kullanılabilir."
   },
@@ -563,12 +478,7 @@
     "type": "multiple-choice",
     "difficulty": 1,
     "prompt": "Havanın sıcaklığını ölçen alet hangisidir?",
-    "choices": [
-      "Termometre",
-      "Pusula",
-      "Terazi",
-      "Cetvel"
-    ],
+    "choices": ["Termometre", "Pusula", "Terazi", "Cetvel"],
     "answer": 0,
     "explanation": "Sıcaklık termometre ile ölçülür. Pusula yön bulmaya, terazi tartmaya, cetvel uzunluk ölçmeye yarar."
   },
@@ -617,12 +527,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Deprem çantasında hangisinin bulunması gerekir?",
-    "choices": [
-      "Oyun konsolu",
-      "Vazo",
-      "Su, el feneri ve düdük",
-      "Halı"
-    ],
+    "choices": ["Oyun konsolu", "Vazo", "Su, el feneri ve düdük", "Halı"],
     "answer": 2,
     "explanation": "Deprem çantasında su, dayanıklı yiyecek, el feneri, düdük, radyo ve ilk yardım malzemesi bulunur."
   },
@@ -650,12 +555,7 @@
     "type": "multiple-choice",
     "difficulty": 3,
     "prompt": "Hava olaylarını inceleyip hava tahmini yapan bilim dalı hangisidir?",
-    "choices": [
-      "Meteoroloji",
-      "Astronomi",
-      "Arkeoloji",
-      "Biyoloji"
-    ],
+    "choices": ["Meteoroloji", "Astronomi", "Arkeoloji", "Biyoloji"],
     "answer": 0,
     "explanation": "Meteoroloji hava olaylarını inceler. Meteoroloji uzmanları hava tahmini yaparak bizi önceden bilgilendirir."
   },
@@ -665,12 +565,7 @@
     "type": "multiple-choice",
     "difficulty": 3,
     "prompt": "Kâğıt atıkların geri dönüştürülmesi en çok hangisinin korunmasını sağlar?",
-    "choices": [
-      "Madenlerin",
-      "Ormanların",
-      "Kayaların",
-      "Çöllerin"
-    ],
+    "choices": ["Madenlerin", "Ormanların", "Kayaların", "Çöllerin"],
     "answer": 1,
     "explanation": "Kâğıt ağaçtan üretilir. Kâğıt geri dönüştürülünce daha az ağaç kesilir ve ormanlar korunur."
   },
@@ -743,12 +638,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Hangisi en eski haberleşme yoludur?",
-    "choices": [
-      "Akıllı telefon",
-      "E-posta",
-      "Televizyon",
-      "Mektup"
-    ],
+    "choices": ["Akıllı telefon", "E-posta", "Televizyon", "Mektup"],
     "answer": 3,
     "explanation": "İnsanlar yüzyıllar boyunca mektupla haberleşmiştir. Televizyon, e-posta ve akıllı telefon çok daha yenidir."
   },
@@ -758,12 +648,7 @@
     "type": "multiple-choice",
     "difficulty": 2,
     "prompt": "Geleneksel el sanatlarımızdan biri hangisidir?",
-    "choices": [
-      "Bale",
-      "Ebru",
-      "Opera",
-      "Sinema"
-    ],
+    "choices": ["Bale", "Ebru", "Opera", "Sinema"],
     "answer": 1,
     "explanation": "Ebru, su üzerine boyalarla desen yapılıp kâğıda geçirilen geleneksel bir sanatımızdır."
   },
@@ -782,12 +667,7 @@
     "type": "multiple-choice",
     "difficulty": 3,
     "prompt": "2015 yılında Nobel Kimya Ödülü'nü alan Türk bilim insanı kimdir?",
-    "choices": [
-      "Aziz Sancar",
-      "Cahit Arf",
-      "Ali Kuşçu",
-      "Piri Reis"
-    ],
+    "choices": ["Aziz Sancar", "Cahit Arf", "Ali Kuşçu", "Piri Reis"],
     "answer": 0,
     "explanation": "Aziz Sancar, hücrelerin hasar gören DNA'yı nasıl onardığını açıklayan çalışmalarıyla 2015'te Nobel Kimya Ödülü'nü almıştır."
   },

@@ -1,6 +1,6 @@
 # İçerik kontrol listesi
 
-Havuzda sekiz derste 10.735 soru var. Bu belgenin ilk bölümü Din Kültürü ve Ahlak Bilgisi'ni (5-8. sınıf), son bölümü ("Öteki dersler") öteki dersleri ve Din Kültürü 4. sınıfı anlatır.
+Havuzda sekiz derste 10.682 soru var. Bu belgenin ilk bölümü Din Kültürü ve Ahlak Bilgisi'ni (5-8. sınıf), son bölümü ("Öteki dersler") öteki dersleri ve Din Kültürü 4. sınıfı anlatır.
 
 Din Kültürü 5-8'de 1.998 soru var:
 - 236 elle yazılan soru,
@@ -131,6 +131,20 @@ Ayet metni alıntılanmadı, yalnızca kaynağı belirtilen yakın anlatımlar k
 - **Genel not:** Çeldiricilerin bir kısmı "yalnızca", "hiçbir" gibi kesin sözcüklerle kendini ele veriyor, bu da soruları gerçek LGS'den biraz kolaylaştırıyor. Üretim hattının kuralları bundan kaçınacak şekilde güncellendi.
 
 ## Öteki dersler
+
+### Bağımsız denetim
+
+Öteki derslerin elle yazılan ve LGS tarzı soruları (2.467 soru), cevap anahtarını görmeyen ayrı denetçilere baştan sona çözdürüldü; **2.467 sorunun 2.467'sinde anahtarla aynı cevap bulundu.** Kart kümelerinin 6.155 satırı da okundu. Bilgi olarak yanlış bir cevap çıkmadı; bulunan sorunlar iki şıkkın birden savunulabildiği ya da ifadenin tartışmalı olduğu satırlardı ve düzeltildi:
+
+- İngilizce: "ABaker" gibi bozuk yazılan meslek şıkları; tekne/gemi, kasırga/hortum, tavsiye/öneri, roket/uzay gemisi, dilimlemek/doğramak, yüklemek/indirmek çiftleri.
+- Türkçe: konuşturma satırları (konuşturma kişileştirmeyi de içerdiği için çıkarıldı), yay ayraç ile kısa çizgi, deneme ile söyleşi tanımı, "içeriye" ile "içeri".
+- Matematik: alan bağıntıları kümesi (kare aynı zamanda dikdörtgen ve paralelkenar olduğu için çıkarıldı), zar-küp satırı.
+- Fen ve Hayat Bilgisi: vitaminler sorusunda "su" çeldiricisi, acil yardım kartının kökleri, kurbağa-orman, balığın görünen yeri, pusula ifadesi.
+- Sosyal, İnkılap, Din Kültürü 4: Asya Hun Devleti'nin kurucusu (Teoman/Mete Han), karınca yuvası ve yosunla yön bulma, Halk Fırkası'nın "Cumhuriyet Dönemi'nin ilk partisi" diye anılması, dürüstlük örneği.
+
+Din Kültürü 4. sınıftaki "altı iman şartı" ve "beş İslam şartı" soruları MEB programının çerçevesine göredir; denetçi bu sayımın Ehl-i sünnet sayımı olduğunu not etti, sorular değiştirilmedi.
+
+### Yazım süreci
 
 Bu dersler yardımcı yazarlarla hazırlandı. Her biri şema testinden geçer; sayısal cevaplar betikle yeniden hesaplandı, LGS soruları ikinci kez çözüldü, karttan üretilen sorular örneklenerek okundu. MEB'in program sitesine (tymm.meb.gov.tr) yazım sırasında erişilemedi: Maarif Modeli tema adları arama sonuçlarından alındı, konuların temalara dağılımı tahmindir. Aşağıdaki maddelerdeki soruların cevabı doğrudur; soru işareti çoğunlukla konunun o sınıfın programında yer alıp almadığı ya da ders kitabının ifadesidir.
 

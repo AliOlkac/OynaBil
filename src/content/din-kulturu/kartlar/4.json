@@ -5,18 +5,63 @@
     "unit": "dkab-4-1",
     "difficulty": 1,
     "questions": [
-      { "prompt": "{durum} hangi sözü söyleriz?", "answer": "ifade" },
-      { "prompt": "\"{ifade}\" sözü ne anlama gelir?", "answer": "anlam" }
+      {
+        "prompt": "{durum} hangi sözü söyleriz?",
+        "answer": "ifade"
+      },
+      {
+        "prompt": "\"{ifade}\" sözü ne anlama gelir?",
+        "answer": "anlam"
+      }
     ],
-    "statement": { "text": "\"{ifade}\" sözünü {durumKucuk} söyleriz.", "swap": "durumKucuk" },
+    "statement": {
+      "text": "\"{ifade}\" sözünü {durumKucuk} söyleriz.",
+      "swap": "durumKucuk"
+    },
     "explanation": "\"{ifade}\" sözünü {durumKucuk} söyleriz. Bu söz \"{anlam}\" demektir.",
     "items": [
-      { "id": "bismillah", "ifade": "Bismillah", "durum": "Bir işe başlarken", "durumKucuk": "bir işe başlarken", "anlam": "Allah'ın adıyla" },
-      { "id": "elhamdulillah", "ifade": "Elhamdülillah", "durum": "Bir nimet için şükrederken", "durumKucuk": "bir nimet için şükrederken", "anlam": "Allah'a hamdolsun" },
-      { "id": "insallah", "ifade": "İnşallah", "durum": "Gelecekte yapacağımız bir işten söz ederken", "durumKucuk": "gelecekte yapacağımız bir işten söz ederken", "anlam": "Allah dilerse" },
-      { "id": "masallah", "ifade": "Maşallah", "durum": "Beğendiğimiz güzel bir şey karşısında", "durumKucuk": "beğendiğimiz güzel bir şey karşısında", "anlam": "Allah dilemiş" },
-      { "id": "selam", "ifade": "Selamünaleyküm", "durum": "Biriyle karşılaştığımızda", "durumKucuk": "biriyle karşılaştığımızda", "anlam": "Esenlik sizin üzerinize olsun" },
-      { "id": "razi", "ifade": "Allah razı olsun", "durum": "Birine teşekkür ederken", "durumKucuk": "birine teşekkür ederken", "anlam": "Allah senden hoşnut olsun" }
+      {
+        "id": "bismillah",
+        "ifade": "Bismillah",
+        "durum": "Bir işe başlarken",
+        "durumKucuk": "bir işe başlarken",
+        "anlam": "Allah'ın adıyla"
+      },
+      {
+        "id": "elhamdulillah",
+        "ifade": "Elhamdülillah",
+        "durum": "Bir nimet için şükrederken",
+        "durumKucuk": "bir nimet için şükrederken",
+        "anlam": "Allah'a hamdolsun"
+      },
+      {
+        "id": "insallah",
+        "ifade": "İnşallah",
+        "durum": "Gelecekte yapacağımız bir işten söz ederken",
+        "durumKucuk": "gelecekte yapacağımız bir işten söz ederken",
+        "anlam": "Allah dilerse"
+      },
+      {
+        "id": "masallah",
+        "ifade": "Maşallah",
+        "durum": "Beğendiğimiz güzel bir şey karşısında",
+        "durumKucuk": "beğendiğimiz güzel bir şey karşısında",
+        "anlam": "Allah dilemiş"
+      },
+      {
+        "id": "selam",
+        "ifade": "Selamünaleyküm",
+        "durum": "Biriyle karşılaştığımızda",
+        "durumKucuk": "biriyle karşılaştığımızda",
+        "anlam": "Esenlik sizin üzerinize olsun"
+      },
+      {
+        "id": "razi",
+        "ifade": "Allah razı olsun",
+        "durum": "Birine teşekkür ederken",
+        "durumKucuk": "birine teşekkür ederken",
+        "anlam": "Allah senden hoşnut olsun"
+      }
     ]
   },
   {
@@ -28,8 +73,20 @@
     "negative": "Hangisi imanın şartlarından biri değildir?",
     "statement": "{item}, imanın şartlarındandır.",
     "explanation": "İmanın şartları altıdır: {members}. Namaz kılmak, oruç tutmak, zekât vermek ve hacca gitmek ise İslam'ın şartlarındandır.",
-    "members": ["Allah'a inanmak", "Meleklere inanmak", "Kitaplara inanmak", "Peygamberlere inanmak", "Ahiret gününe inanmak", "Kadere ve kazaya inanmak"],
-    "nonMembers": ["Namaz kılmak", "Oruç tutmak", "Zekât vermek", "Hacca gitmek"]
+    "members": [
+      "Allah'a inanmak",
+      "Meleklere inanmak",
+      "Kitaplara inanmak",
+      "Peygamberlere inanmak",
+      "Ahiret gününe inanmak",
+      "Kadere ve kazaya inanmak"
+    ],
+    "nonMembers": [
+      "Namaz kılmak",
+      "Oruç tutmak",
+      "Zekât vermek",
+      "Hacca gitmek"
+    ]
   },
   {
     "kind": "list",
@@ -40,8 +97,19 @@
     "negative": "Hangisi İslam'ın şartlarından biri değildir?",
     "statement": "{item}, İslam'ın şartlarındandır.",
     "explanation": "İslam'ın şartları beştir: {members}. Meleklere, ahirete ve kadere inanmak ise imanın şartlarındandır.",
-    "members": ["Kelime-i şehadet getirmek", "Namaz kılmak", "Oruç tutmak", "Zekât vermek", "Hacca gitmek"],
-    "nonMembers": ["Meleklere inanmak", "Ahiret gününe inanmak", "Kadere ve kazaya inanmak", "Kitaplara inanmak"]
+    "members": [
+      "Kelime-i şehadet getirmek",
+      "Namaz kılmak",
+      "Oruç tutmak",
+      "Zekât vermek",
+      "Hacca gitmek"
+    ],
+    "nonMembers": [
+      "Meleklere inanmak",
+      "Ahiret gününe inanmak",
+      "Kadere ve kazaya inanmak",
+      "Kitaplara inanmak"
+    ]
   },
   {
     "kind": "pairs",
@@ -49,17 +117,61 @@
     "unit": "dkab-4-3",
     "difficulty": 1,
     "questions": [
-      { "prompt": "{ornek} Bu davranış hangi değere örnektir?", "answer": "deger" },
-      { "prompt": "Hangisi {degerYonelme} örnek bir davranıştır?", "answer": "davranis" }
+      {
+        "prompt": "{ornek} Bu davranış hangi değere örnektir?",
+        "answer": "deger"
+      },
+      {
+        "prompt": "Hangisi {degerYonelme} örnek bir davranıştır?",
+        "answer": "davranis"
+      }
     ],
-    "statement": { "text": "{davranis}, {degerYonelme} örnektir.", "swap": "degerYonelme" },
+    "statement": {
+      "text": "{davranis}, {degerYonelme} örnektir.",
+      "swap": "degerYonelme"
+    },
     "explanation": "{davranis}, {degerYonelme} örnektir.",
     "items": [
-      { "id": "durustluk", "ornek": "Ayşe, vazoyu kırdığını annesine saklamadan söyledi.", "deger": "Dürüstlük", "degerYonelme": "dürüstlüğe", "davranis": "Hatasını saklamadan doğruyu söylemek", "not": "Dürüst insan, zor olsa bile doğruyu söyler." },
-      { "id": "merhamet", "ornek": "Kerem, kışın sokak kedileri için kapının önüne su ve mama koydu.", "deger": "Merhamet", "degerYonelme": "merhamete", "davranis": "Sokak hayvanlarına yiyecek ve su vermek", "not": "Merhametli insan, bütün canlılara şefkatle davranır." },
-      { "id": "sabir", "ornek": "Elif, yapbozunu tamamlayamayınca sinirlenmeden tekrar tekrar denedi.", "deger": "Sabır", "degerYonelme": "sabra", "davranis": "Zorlanınca sinirlenmeden yeniden denemek", "not": "Sabırlı insan, zorluklar karşısında hemen vazgeçmez." },
-      { "id": "saygi", "ornek": "Zeynep, sınıfta arkadaşı konuşurken sözünü kesmeden dinledi.", "deger": "Saygı", "degerYonelme": "saygıya", "davranis": "Konuşan birinin sözünü kesmeden dinlemek", "not": "Saygılı insan, başkalarının düşüncelerine değer verir." },
-      { "id": "sorumluluk", "ornek": "Deniz, sınıftaki çiçekleri sulama görevini her gün aksatmadan yaptı.", "deger": "Sorumluluk", "degerYonelme": "sorumluluğa", "davranis": "Kendisine verilen görevi aksatmadan yapmak", "not": "Sorumluluk sahibi insan, üzerine düşen görevi zamanında yapar." }
+      {
+        "id": "durustluk",
+        "ornek": "Ayşe, bakkal fazla para üstü verince parayı hemen geri verdi.",
+        "deger": "Dürüstlük",
+        "degerYonelme": "dürüstlüğe",
+        "davranis": "Fazla verilen para üstünü geri vermek",
+        "not": "Dürüst insan, zor olsa bile doğruyu söyler."
+      },
+      {
+        "id": "merhamet",
+        "ornek": "Kerem, kışın sokak kedileri için kapının önüne su ve mama koydu.",
+        "deger": "Merhamet",
+        "degerYonelme": "merhamete",
+        "davranis": "Sokak hayvanlarına yiyecek ve su vermek",
+        "not": "Merhametli insan, bütün canlılara şefkatle davranır."
+      },
+      {
+        "id": "sabir",
+        "ornek": "Elif, yapbozunu tamamlayamayınca sinirlenmeden tekrar tekrar denedi.",
+        "deger": "Sabır",
+        "degerYonelme": "sabra",
+        "davranis": "Zorlanınca sinirlenmeden yeniden denemek",
+        "not": "Sabırlı insan, zorluklar karşısında hemen vazgeçmez."
+      },
+      {
+        "id": "saygi",
+        "ornek": "Zeynep, sınıfta arkadaşı konuşurken sözünü kesmeden dinledi.",
+        "deger": "Saygı",
+        "degerYonelme": "saygıya",
+        "davranis": "Konuşan birinin sözünü kesmeden dinlemek",
+        "not": "Saygılı insan, başkalarının düşüncelerine değer verir."
+      },
+      {
+        "id": "sorumluluk",
+        "ornek": "Deniz, sınıftaki çiçekleri sulama görevini her gün aksatmadan yaptı.",
+        "deger": "Sorumluluk",
+        "degerYonelme": "sorumluluğa",
+        "davranis": "Kendisine verilen görevi aksatmadan yapmak",
+        "not": "Sorumluluk sahibi insan, üzerine düşen görevi zamanında yapar."
+      }
     ]
   },
   {
@@ -68,19 +180,77 @@
     "unit": "dkab-4-4",
     "difficulty": 2,
     "questions": [
-      { "prompt": "{kisi}, Hz. Muhammed'in (sav) nesidir?", "answer": "yakinlik" },
-      { "prompt": "Hz. Muhammed'in (sav) {yakinlikTanim} kimdir?", "answer": "kisi" }
+      {
+        "prompt": "{kisi}, Hz. Muhammed'in (sav) nesidir?",
+        "answer": "yakinlik"
+      },
+      {
+        "prompt": "Hz. Muhammed'in (sav) {yakinlikTanim} kimdir?",
+        "answer": "kisi"
+      }
     ],
-    "statement": { "text": "{kisi}, Hz. Muhammed'in (sav) {yakinlikCumle}.", "swap": "yakinlikCumle" },
+    "statement": {
+      "text": "{kisi}, Hz. Muhammed'in (sav) {yakinlikCumle}.",
+      "swap": "yakinlikCumle"
+    },
     "explanation": "{kisi}, Hz. Muhammed'in (sav) {yakinlikCumle}.",
     "items": [
-      { "id": "amine", "kisi": "Âmine", "yakinlik": "Annesi", "yakinlikTanim": "annesi", "yakinlikCumle": "annesidir", "not": "Hz. Muhammed (sav) altı yaşındayken annesi vefat etti." },
-      { "id": "abdullah", "kisi": "Abdullah", "yakinlik": "Babası", "yakinlikTanim": "babası", "yakinlikCumle": "babasıdır", "not": "Babası, Hz. Muhammed (sav) dünyaya gelmeden önce vefat etmişti." },
-      { "id": "abdulmuttalip", "kisi": "Abdülmuttalip", "yakinlik": "Dedesi", "yakinlikTanim": "annesinin vefatından sonra onu yanına alan dedesi", "yakinlikCumle": "dedesidir", "not": "Dedesi, annesinin vefatından sonra onu yanına aldı." },
-      { "id": "ebu-talip", "kisi": "Ebu Talip", "yakinlik": "Amcası", "yakinlikTanim": "dedesinin vefatından sonra onu yanına alan amcası", "yakinlikCumle": "amcasıdır", "not": "Dedesinin vefatından sonra amcası Ebu Talip'in yanında büyüdü." },
-      { "id": "halime", "kisi": "Halime", "yakinlik": "Süt annesi", "yakinlikTanim": "süt annesi", "yakinlikCumle": "süt annesidir", "not": "Halime, onu çocukluğunun ilk yıllarında çölde büyüttü." },
-      { "id": "hatice", "kisi": "Hz. Hatice", "yakinlik": "İlk eşi", "yakinlikTanim": "ilk eşi", "yakinlikCumle": "ilk eşidir", "not": "Hz. Hatice, Hz. Muhammed'in (sav) peygamberliğine ilk inanan kişidir." },
-      { "id": "fatima", "kisi": "Hz. Fatıma", "yakinlik": "Kızı", "yakinlikTanim": "kızlarından biri", "yakinlikCumle": "kızıdır", "not": "Hz. Fatıma, Hz. Ali ile evlendi." }
+      {
+        "id": "amine",
+        "kisi": "Âmine",
+        "yakinlik": "Annesi",
+        "yakinlikTanim": "annesi",
+        "yakinlikCumle": "annesidir",
+        "not": "Hz. Muhammed (sav) altı yaşındayken annesi vefat etti."
+      },
+      {
+        "id": "abdullah",
+        "kisi": "Abdullah",
+        "yakinlik": "Babası",
+        "yakinlikTanim": "babası",
+        "yakinlikCumle": "babasıdır",
+        "not": "Babası, Hz. Muhammed (sav) dünyaya gelmeden önce vefat etmişti."
+      },
+      {
+        "id": "abdulmuttalip",
+        "kisi": "Abdülmuttalip",
+        "yakinlik": "Dedesi",
+        "yakinlikTanim": "annesinin vefatından sonra onu yanına alan dedesi",
+        "yakinlikCumle": "dedesidir",
+        "not": "Dedesi, annesinin vefatından sonra onu yanına aldı."
+      },
+      {
+        "id": "ebu-talip",
+        "kisi": "Ebu Talip",
+        "yakinlik": "Amcası",
+        "yakinlikTanim": "dedesinin vefatından sonra onu yanına alan amcası",
+        "yakinlikCumle": "amcasıdır",
+        "not": "Dedesinin vefatından sonra amcası Ebu Talip'in yanında büyüdü."
+      },
+      {
+        "id": "halime",
+        "kisi": "Halime",
+        "yakinlik": "Süt annesi",
+        "yakinlikTanim": "süt annesi",
+        "yakinlikCumle": "süt annesidir",
+        "not": "Halime, onu çocukluğunun ilk yıllarında çölde büyüttü."
+      },
+      {
+        "id": "hatice",
+        "kisi": "Hz. Hatice",
+        "yakinlik": "İlk eşi",
+        "yakinlikTanim": "ilk eşi",
+        "yakinlikCumle": "ilk eşidir",
+        "not": "Hz. Hatice, Hz. Muhammed'in (sav) peygamberliğine ilk inanan kişidir."
+      },
+      {
+        "id": "fatima",
+        "kisi": "Hz. Fatıma",
+        "yakinlik": "Kızı",
+        "yakinlikTanim": "kızlarından biri",
+        "yakinlikCumle": "kızıdır",
+        "not": "Hz. Fatıma, Hz. Ali ile evlendi."
+      }
     ]
   },
   {
@@ -92,7 +262,18 @@
     "negative": "Hangisi temizliğe önem veren bir davranış değildir?",
     "statement": "{item}, temizliğe önem veren bir davranıştır.",
     "explanation": "Temiz bir insan; ellerini yıkar, dişlerini fırçalar, tırnaklarını keser, giysilerini temiz tutar ve çöpünü çöp kutusuna atar.",
-    "members": ["Yemekten önce ellerini yıkamak", "Dişlerini düzenli fırçalamak", "Tırnaklarını kesmek", "Giysilerini temiz tutmak", "Çöpünü çöp kutusuna atmak"],
-    "nonMembers": ["Ellerini yıkamadan yemek yemek", "Kullandığı peçeteyi yere atmak", "Piknik alanında çöplerini bırakmak", "Kirli giysilerle okula gitmek"]
+    "members": [
+      "Yemekten önce ellerini yıkamak",
+      "Dişlerini düzenli fırçalamak",
+      "Tırnaklarını kesmek",
+      "Giysilerini temiz tutmak",
+      "Çöpünü çöp kutusuna atmak"
+    ],
+    "nonMembers": [
+      "Ellerini yıkamadan yemek yemek",
+      "Kullandığı peçeteyi yere atmak",
+      "Piknik alanında çöplerini bırakmak",
+      "Kirli giysilerle okula gitmek"
+    ]
   }
 ]

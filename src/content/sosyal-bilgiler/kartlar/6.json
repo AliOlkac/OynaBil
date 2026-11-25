@@ -75,13 +75,6 @@
     "explanation": "{devletGen} kurucusu {kurucu} olarak kabul edilir.",
     "items": [
       {
-        "id": "hun",
-        "devlet": "Asya Hun Devleti",
-        "devletGen": "Asya Hun Devleti'nin",
-        "kurucu": "Teoman",
-        "not": "Devlet en parlak dönemini Teoman'ın oğlu Mete Han zamanında yaşamıştır."
-      },
-      {
         "id": "kokturk",
         "devlet": "I. Kök Türk Devleti",
         "devletGen": "I. Kök Türk Devleti'nin",
@@ -117,14 +110,8 @@
       }
     ],
     "distractors": {
-      "kurucu": [
-        "Mete Han",
-        "Bilge Kağan",
-        "Alparslan"
-      ],
-      "devlet": [
-        "Karahanlı Devleti"
-      ]
+      "kurucu": ["Mete Han", "Bilge Kağan", "Alparslan"],
+      "devlet": ["Karahanlı Devleti"]
     }
   },
   {
@@ -382,11 +369,7 @@
       }
     ],
     "distractors": {
-      "organ": [
-        "Belediye meclisleri",
-        "Valilikler",
-        "Muhtarlıklar"
-      ]
+      "organ": ["Belediye meclisleri", "Valilikler", "Muhtarlıklar"]
     }
   },
   {

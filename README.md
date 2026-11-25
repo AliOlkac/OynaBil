@@ -1,17 +1,17 @@
 # OynaBil
 
 İlkokul ve ortaokul öğretmenlerinin akıllı tahtada sınıfı takımlara ayırıp **yarışarak ders işlediği** oyun platformu.
-1-8. sınıflar için 8 ders, 281 ünite ve 10.735 açıklamalı soru.
+1-8. sınıflar için 8 ders, 281 ünite ve 10.682 açıklamalı soru.
 
 | Ders | Sınıf | Ünite | Elle yazılan | Bilgi kartından | LGS tarzı paragraf | Toplam |
 |---|---|---|---|---|---|---|
-| Türkçe | 1-8 | 52 | 453 | 1.224 | 20 | 1.697 |
-| Matematik | 1-8 | 55 | 565 | 1.366 | 20 | 1.951 |
+| Türkçe | 1-8 | 52 | 453 | 1.212 | 20 | 1.685 |
+| Matematik | 1-8 | 55 | 565 | 1.359 | 20 | 1.944 |
 | Hayat Bilgisi | 1-3 | 18 | 161 | 364 |  | 525 |
-| Fen Bilimleri | 3-8 | 43 | 420 | 821 | 18 | 1.259 |
-| Sosyal Bilgiler | 4-7 | 25 | 201 | 557 |  | 758 |
+| Fen Bilimleri | 3-8 | 43 | 420 | 817 | 18 | 1.255 |
+| Sosyal Bilgiler | 4-7 | 25 | 201 | 551 |  | 752 |
 | T.C. İnkılap Tarihi ve Atatürkçülük | 8 | 7 | 74 | 200 | 20 | 294 |
-| İngilizce | 2-8 | 56 | 445 | 1.610 | 20 | 2.075 |
+| İngilizce | 2-8 | 56 | 445 | 1.586 | 20 | 2.051 |
 | Din Kültürü ve Ahlak Bilgisi | 4-8 | 25 | 286 | 1.843 | 47 | 2.176 |
 
 - **Tek ekran:** Bütün oyun tahtada döner, öğrencilerin cihaz kullanmasına gerek yoktur.
@@ -106,5 +106,5 @@ scripts/                   Service worker üretimi, LGS soru üretim hattı (lgs
 
 Sorular MEB öğretim programlarının ünite ve tema yapısına göre yazıldı: 1, 2, 3, 5, 6 ve 7. sınıflar Türkiye Yüzyılı Maarif Modeli'ne, 4 ve 8. sınıflar 2026-2027'de okutulan 2018 programlarına göre düzenlendi. Türkçede üniteler tema adları yerine soru sormaya uygun beceri alanlarıdır (sözcükte anlam, yazım kuralları gibi). Her dersin kaynağı soru bankasında dersin altında yazar.
 
-Din Kültürü'nün bilgi kartları ve LGS soruları yazıldıktan sonra üretilen her soru okunarak gözden geçirildi; LGS soruları ayrıca cevap anahtarı gösterilmeden bağımsız olarak çözdürüldü (47 sorunun 47'sinde aynı cevap bulundu). Öteki derslerde sayısal cevaplar betikle yeniden hesaplandı ve LGS soruları ikinci kez çözüldü; karttan üretilen sorular örneklenerek okundu. MEB'in program sitesine yazım sırasında erişilemediği için bazı Maarif Modeli tema adları ve konuların temalara dağılımı doğrulanamadı.
+Din Kültürü'nün bilgi kartları ve LGS soruları yazıldıktan sonra üretilen her soru okunarak gözden geçirildi; LGS soruları ayrıca cevap anahtarı gösterilmeden bağımsız olarak çözdürüldü (47 sorunun 47'sinde aynı cevap bulundu). Öteki derslerde sayısal cevaplar betikle yeniden hesaplandı ve LGS soruları ikinci kez çözüldü; karttan üretilen sorular örneklenerek okundu. Ardından elle yazılan ve LGS soruları cevap anahtarını görmeyen ayrı denetçilere çözdürüldü: 2.467 sorunun 2.467'sinde aynı cevap bulundu; kart kümelerinin 6.155 satırı da okunarak iki doğru şıklı ya da tartışmalı satırlar düzeltildi. MEB'in program sitesine yazım sırasında erişilemediği için bazı Maarif Modeli tema adları ve konuların temalara dağılımı doğrulanamadı.
 Sınıfta kullanmadan önce bir branş öğretmeninin gözden geçirmesi önerilir. Özellikle bakılması gereken sorular ve kart kümeleri: [docs/ICERIK-KONTROLU.md](docs/ICERIK-KONTROLU.md). Sınıfta fark edilen hatalar **Hata bildir** ile kaydedilir ve soru bankasından dışa aktarılır.

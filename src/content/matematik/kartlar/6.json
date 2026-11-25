@@ -79,26 +79,8 @@
     "negative": "Aşağıdakilerden hangisi asal sayı değildir?",
     "statement": "{item} bir asal sayıdır.",
     "explanation": "Asal sayının 1 ve kendisinden başka çarpanı yoktur; 1 asal değildir. 40'tan küçük asal sayılar: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37.",
-    "members": [
-      "2",
-      "11",
-      "13",
-      "17",
-      "19",
-      "23",
-      "31",
-      "37"
-    ],
-    "nonMembers": [
-      "1",
-      "9",
-      "15",
-      "21",
-      "27",
-      "33",
-      "39",
-      "49"
-    ]
+    "members": ["2", "11", "13", "17", "19", "23", "31", "37"],
+    "nonMembers": ["1", "9", "15", "21", "27", "33", "39", "49"]
   },
   {
     "kind": "pairs",
@@ -287,14 +269,7 @@
       }
     ],
     "distractors": {
-      "tumler": [
-        "160°",
-        "145°",
-        "132°",
-        "118°",
-        "105°",
-        "172°"
-      ]
+      "tumler": ["160°", "145°", "132°", "118°", "105°", "172°"]
     }
   },
   {
@@ -346,60 +321,7 @@
       }
     ],
     "distractors": {
-      "butunler": [
-        "18°",
-        "330°",
-        "315°",
-        "288°",
-        "240°",
-        "196°"
-      ]
-    }
-  },
-  {
-    "kind": "pairs",
-    "id": "mat-6-5-alan-bagintilari",
-    "unit": "mat-6-5",
-    "difficulty": 1,
-    "questions": [
-      {
-        "prompt": "{sekilIn} alanı hangi işlemle bulunur?",
-        "answer": "formul"
-      }
-    ],
-    "explanation": "{sekilIn} alanı: {formul}. {neden}",
-    "items": [
-      {
-        "id": "kare",
-        "sekilIn": "Karenin",
-        "formul": "kenar × kenar",
-        "neden": "Karenin bütün kenarları eşit olduğundan bir kenar kendisiyle çarpılır."
-      },
-      {
-        "id": "dikdortgen",
-        "sekilIn": "Dikdörtgenin",
-        "formul": "kısa kenar × uzun kenar",
-        "neden": "Dikdörtgen, kısa kenar sayısı kadar sıra ve uzun kenar sayısı kadar birim kareden oluşur."
-      },
-      {
-        "id": "paralelkenar",
-        "sekilIn": "Paralelkenarın",
-        "formul": "taban × yükseklik",
-        "neden": "Paralelkenar, aynı taban ve yüksekliğe sahip bir dikdörtgene dönüştürülebilir."
-      },
-      {
-        "id": "ucgen",
-        "sekilIn": "Üçgenin",
-        "formul": "(taban × yükseklik) ÷ 2",
-        "neden": "Üçgen, aynı taban ve yüksekliğe sahip paralelkenarın yarısıdır."
-      }
-    ],
-    "distractors": {
-      "formul": [
-        "(kısa kenar + uzun kenar) × 2",
-        "kenar × 4",
-        "taban + yükseklik"
-      ]
+      "butunler": ["18°", "330°", "315°", "288°", "240°", "196°"]
     }
   }
 ]

@@ -318,15 +318,6 @@
         "not": "Zarf-fiiller yüklemi zaman ya da durum yönünden etkiler."
       },
       {
-        "id": "gulusu",
-        "cumle": "Bu gülüşü hiç unutmam.",
-        "sozcuk": "gülüşü",
-        "tur": "İsim-fiil",
-        "turKucuk": "isim-fiil",
-        "ek": "-üş",
-        "not": "İsim-fiil ekleri “-ma, -ış, -mak” ekleridir."
-      },
-      {
         "id": "kirilmis",
         "cumle": "Kırılmış vazoyu yapıştırdı.",
         "sozcuk": "kırılmış",

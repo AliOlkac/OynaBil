@@ -60,13 +60,12 @@
     "positive": "Hangisi yön bulmak için kullanılan yöntemlerden biridir?",
     "negative": "Hangisi yön bulmak için kullanılan bir yöntem değildir?",
     "statement": "{item}, yön bulmak için kullanılan yöntemlerden biridir.",
-    "explanation": "Yön bulma yöntemleri: {members}. Karınca yuvalarının ağzı güneye bakar, ağaçların kuzey yüzü yosun tutar, Kutup Yıldızı kuzeyi gösterir.",
+    "explanation": "Yön bulma yöntemleri: {members}. Pusula iğnesi kuzeyi, Kutup Yıldızı kuzey yönünü gösterir; Güneş doğudan doğar.",
     "members": [
       "Pusula kullanmak",
       "Kutup Yıldızı'na bakmak",
-      "Karınca yuvalarına bakmak",
-      "Ağaçların yosunlu yüzüne bakmak",
-      "Güneşin doğduğu yöne bakmak"
+      "Güneşin doğduğu yöne bakmak",
+      "Gölgemizin düştüğü yöne bakmak"
     ],
     "nonMembers": [
       "Termometreye bakmak",
@@ -144,12 +143,7 @@
     "negative": "Hangisi temel ihtiyaç değil, bir istektir?",
     "statement": "{item} temel ihtiyaçlarımızdan biridir.",
     "explanation": "Temel ihtiyaçlar yaşamak için zorunludur: {members}. Bunların dışında kalan ve olmadan da yaşayabildiğimiz şeyler isteklerimizdir.",
-    "members": [
-      "Beslenme",
-      "Barınma",
-      "Giyinme",
-      "Su içme"
-    ],
+    "members": ["Beslenme", "Barınma", "Giyinme", "Su içme"],
     "nonMembers": [
       "Oyun konsolu",
       "Tablet bilgisayar",

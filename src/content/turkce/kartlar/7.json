@@ -103,13 +103,6 @@
         "not": "Bavulun ağırlığı olduğundan çok büyük gösterilmiştir."
       },
       {
-        "id": "papatya",
-        "ornek": "Papatya, ‘Beni koparma!’ diye yalvardı.",
-        "sanat": "Konuşturma",
-        "sanatKucuk": "konuşturma",
-        "not": "İnsan dışındaki bir varlık konuşturulmuştur."
-      },
-      {
         "id": "aglarken",
         "ornek": "Ağlarken gülüyor, gülerken ağlıyordu.",
         "sanat": "Karşıtlık",
@@ -129,13 +122,6 @@
         "sanat": "Karşıtlık",
         "sanatKucuk": "karşıtlık",
         "not": "Yaz ve kış gibi karşıt kavramlar bir arada kullanılmıştır."
-      },
-      {
-        "id": "kedi",
-        "ornek": "Kedi, ‘Bugün de balık yok mu?’ diye söylendi.",
-        "sanat": "Konuşturma",
-        "sanatKucuk": "konuşturma",
-        "not": "İnsan dışındaki bir varlık konuşturulmuştur."
       }
     ],
     "distractors": {
@@ -168,8 +154,8 @@
       {
         "id": "deneme",
         "tur": "Deneme",
-        "ozellik": "Yazarın görüşlerini kanıtlama kaygısı gütmeden içtenlikle anlattığı",
-        "ozellikKucuk": "yazarın görüşlerini kanıtlama kaygısı gütmeden içtenlikle anlattığı"
+        "ozellik": "Yazarın kişisel görüşlerini kendi kendine konuşuyormuş gibi anlattığı",
+        "ozellikKucuk": "yazarın kişisel görüşlerini kendi kendine konuşuyormuş gibi anlattığı"
       },
       {
         "id": "biyografi",

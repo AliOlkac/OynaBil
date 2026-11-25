@@ -381,12 +381,6 @@
     "explanation": "{ornek} {cisimE} benzer.",
     "items": [
       {
-        "id": "zar",
-        "ornek": "Zar",
-        "cisim": "Küp",
-        "cisimE": "küpe"
-      },
-      {
         "id": "top",
         "ornek": "Futbol topu",
         "cisim": "Küre",

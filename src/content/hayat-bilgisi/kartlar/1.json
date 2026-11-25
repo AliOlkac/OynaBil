@@ -96,39 +96,39 @@
     "difficulty": 2,
     "questions": [
       {
-        "prompt": "{durum} yardıma hangisi gelir?",
+        "prompt": "{durum} {gorev} hangisi gelir?",
         "answer": "ekip"
       }
     ],
     "statement": {
-      "text": "{durum} yardıma {ekipKucuk} gelir.",
+      "text": "{durum} {gorev} {ekipKucuk} gelir.",
       "swap": "ekipKucuk"
     },
-    "explanation": "{durum} yardıma {ekipKucuk} gelir. Bütün acil durumlarda 112 aranır.",
+    "explanation": "{durum} {gorev} {ekipKucuk} gelir. Bütün acil durumlarda 112 aranır.",
     "distractors": {
-      "ekip": [
-        "Postacı",
-        "Çöp kamyonu"
-      ]
+      "ekip": ["Postacı", "Çöp kamyonu"]
     },
     "items": [
       {
         "id": "yangin",
         "durum": "Bir yerde yangın çıktığında",
         "ekip": "İtfaiye",
-        "ekipKucuk": "itfaiye"
+        "ekipKucuk": "itfaiye",
+        "gorev": "yangını söndürmek için"
       },
       {
         "id": "hasta",
-        "durum": "Biri kazada yaralandığında",
+        "durum": "Biri hastalanıp hastaneye götürülmesi gerektiğinde",
         "ekip": "Ambulans",
-        "ekipKucuk": "ambulans"
+        "ekipKucuk": "ambulans",
+        "gorev": "hastayı hastaneye götürmek için"
       },
       {
         "id": "hirsiz",
         "durum": "Bir eve hırsız girdiğinde",
         "ekip": "Polis",
-        "ekipKucuk": "polis"
+        "ekipKucuk": "polis",
+        "gorev": "hırsızı yakalamak için"
       }
     ]
   },
