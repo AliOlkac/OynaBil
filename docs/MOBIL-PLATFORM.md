@@ -61,6 +61,33 @@ Her atıştan önce iki oyuncuya aynı soru gelir (12 saniye):
 
 Oyuncu sayısı azken canlı eşleşme boş kalabilir. Bunun için **sıralı düello** gerekir: oyuncu kendi atışlarını oynar, rakip birkaç saat içinde kendininkini oynar ve sonuç ikisine bildirilir. Bu yapı ilk aşamada canlı maçtan daha önemlidir (bkz. 10. bölüm).
 
+## 4.1 Arayüz ve oyun hissi
+
+Tahta sürümü öğretmen için tasarlandı: ders, sınıf ve ünite seçilen bir kurulum formu. Mobil sürüm bir web sitesi gibi değil, bir oyun gibi açılmalıdır.
+
+| Konu | Tahta sürümü (bugün) | Mobil sürüm |
+|---|---|---|
+| Açılış | Oyun listesi ve "Oyun kur" bağlantısı | Lobi: lig rozeti, puan çubuğu ve tek büyük OYNA düğmesi. İlk maça iki dokunuşta girilir |
+| Maça giriş | Üç sütunlu kurulum formu | Form yok. Ders ve ünite, oyuncunun sınıfından ve haftalık lig dersinden gelir; isteyen lobiden değiştirir |
+| Gezinme | Üst çubuk, geri oku, sayfa bağlantıları | Altta dört sekme: Ana, Lig, Çalış, Profil |
+| Düğmeler | Düz, küçük, yazı ağırlıklı | Kalın kenarlı, basınca çöken büyük düğmeler; en az 48 piksel dokunma alanı |
+| Geri bildirim | Sahnede animasyon, arayüzde sakinlik | Her dokunuşta titreşim, ses ve hareket. Doğru cevapta ekran parlar, yanlışta sarsılır |
+| İlerleme | Oyun sonunda puan tablosu | Her maçtan sonra dolan lig çubuğu, lig atlama töreni, günlük görev ve sezon rozetleri |
+| Yazı | Açıklayıcı paragraflar | Kısa etiketler. Kurallar ilk maçta oynatılarak öğretilir |
+| Kimlik | Takım adı ve rengi | Takma ad, avatar, forma, top ve kale süsü; hepsi oynayarak kazanılır |
+
+Arayüz kuralları:
+
+- **Tek büyük eylem:** Her ekranda bir ana düğme vardır ve altın rengi yalnızca onundur.
+- **Başparmak bölgesi:** Dokunulan her şey ekranın alt yarısındadır; üst yarı sahne ve skor içindir.
+- **Dik ekran, tek el:** Maçlar dik ekranda oynanır: sahne üstte, soru ortada, şıklar altta. Yatay ekran yalnızca harita modunda seçenektir.
+- **Bekleme yok:** Eşleşme aranırken oyuncu ısınma sorusu çözer; rakip bulununca maç üç saniyede başlar.
+- **Ödül anı tören olur:** Lig atlama, seri galibiyet ve sezon ödülü tam ekran kutlanır.
+- **Kaybedene de yol:** Yenilgi ekranında yanlışların açıklaması ve "çalış, kalkan kazan" düğmesi öndedir.
+- **Eski telefonlarda da akıcı:** Tahta sürümündeki üç kalite kademesi korunur; zayıf telefonda sahne çizim sürümüne döner.
+
+Örnek ekran taslakları (lobi, soru, kaleci seçimi, maç sonu, lig, harita) planın web sayfası sürümündedir.
+
 ## 5. Lig ve puan sistemi
 
 - **Ligler:** Bronz, Gümüş, Altın, Platin, Elmas ve en üstte Usta. Elmas'a kadar her ligin III, II, I basamakları vardır.
