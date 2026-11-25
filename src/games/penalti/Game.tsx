@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/Button";
 import { TeamEmblem } from "@/components/ui/TeamEmblem";
 import { findUnit } from "@/core/repository";
 import { clock, usePersistentReducer, useNow } from "@/lib/hooks";
-import { memoryScope } from "@/lib/memory";
+import { memoryScope, useRememberAsked } from "@/lib/memory";
 import { dur, ease, spring } from "@/lib/motion";
 import { sfx } from "@/lib/sound";
 import { penalti } from "../registry";
@@ -66,6 +66,8 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
   const [reporting, setReporting] = useState(false);
 
   const q = deck[s.current];
+  // Soru ekrana gelir gelmez hafızaya yazılır: oyun yarıda kalsa da bir sonraki destede sona bırakılır.
+  useRememberAsked(memoryScope(config.subjectId, config.grade, config.section), [s.phase !== "ready" ? q?.id : undefined]);
   const kicking = s.phase === "kick" && s.kickStart !== null;
   const ticking = (s.phase === "question" && s.deadline !== null) || kicking;
   const now = useNow(ticking, kicking ? 100 : 200);

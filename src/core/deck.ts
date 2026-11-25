@@ -61,7 +61,7 @@ export type DeckOptions = {
  *
  * - Daha önce sorulmamış sorular önce gelir; sorulmuş olanlar en eski sorulandan başlayarak sona dizilir.
  * - Üniteler sırayla harmanlanır ki tek bir ünite destenin başını doldurmasın.
- * - Her ünitede yeni sorular kolaydan zora doğru ilerler.
+ * - Her ünitede yeni sorular kabaca kolaydan zora ilerler; komşu zorluktakiler karışır (her oyun farklı açılır).
  * - Aynı bilgiyi soran sorular (aynı `group`) bir oyunda yan yana gelmez: ikincisi destenin sonuna kalır.
  */
 export function buildDeckIds(pool: readonly Question[], options: DeckOptions): string[] {
@@ -78,7 +78,10 @@ export function buildDeckIds(pool: readonly Question[], options: DeckOptions): s
     byUnit.set(q.unit, list);
   }
   const queues = shuffle([...byUnit.values()], rng).map((list) => {
-    const fresh = list.filter((q) => !seen[q.id]).sort((a, b) => a.difficulty - b.difficulty);
+    // Yeni sorular kabaca kolaydan zora dizilir; aynı zorluktaki ve komşu zorluktaki sorular karışır ki
+    // her oyun aynı kolay sorularla açılmasın.
+    const rank = new Map(list.map((q) => [q.id, q.difficulty + rng() * 1.6]));
+    const fresh = list.filter((q) => !seen[q.id]).sort((a, b) => rank.get(a.id)! - rank.get(b.id)!);
     const old = list.filter((q) => seen[q.id]).sort((a, b) => seen[a.id] - seen[b.id]);
     return [...fresh, ...old];
   });

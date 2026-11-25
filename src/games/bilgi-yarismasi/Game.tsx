@@ -14,7 +14,7 @@ import { findUnit } from "@/core/repository";
 import { clock, usePersistentReducer, useNow } from "@/lib/hooks";
 import { dur, ease, spring, stagger } from "@/lib/motion";
 import { cssColor } from "@/lib/color";
-import { memoryScope } from "@/lib/memory";
+import { memoryScope, useRememberAsked } from "@/lib/memory";
 import { sfx } from "@/lib/sound";
 import type { StudioInput } from "./scene3d/engine";
 import { preloadStudioStage, StudioStage } from "./scene3d/StudioStage";
@@ -80,6 +80,8 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
   const [s, dispatch] = usePersistentReducer(config.sessionId, reducer, () => createQuiz(config.teams, settings), hydrate);
 
   const q = deck[s.current];
+  // Soru ekrana gelir gelmez hafızaya yazılır: oyun yarıda kalsa da bir sonraki destede sona bırakılır.
+  useRememberAsked(memoryScope(config.subjectId, config.grade, config.section), [s.phase !== "ready" ? q?.id : undefined]);
   const team = currentTeam(s);
   const timed = s.phase === "question" && s.deadline !== null;
   const now = useNow(timed, 100);

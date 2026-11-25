@@ -56,3 +56,25 @@ describe("Deste", () => {
     expect(deck.map((d) => d.id)).toEqual(["dkab-8-2-02", "dkab-8-1-01"]);
   });
 });
+
+describe("Deste: tekrar etmeyen açılış", () => {
+  const big: Question[] = Array.from({ length: 30 }, (_, i) =>
+    q(`tr-5-1-${String(i + 1).padStart(2, "0")}`, "tr-5-1", { difficulty: ((i % 3) + 1) as Question["difficulty"] }),
+  );
+  const opts = { unitIds: ["tr-5-1"], types: ["multiple-choice"] as const };
+
+  it("her oyun farklı sorularla açılır, ama kabaca kolaydan zora ilerler", () => {
+    const openings = new Set(Array.from({ length: 12 }, (_, seed) => buildDeckIds(big, { ...opts, seed: seed + 1 }).slice(0, 5).join(",")));
+    expect(openings.size).toBeGreaterThan(8);
+    const diff = (id: string) => big.find((x) => x.id === id)!.difficulty;
+    const ids = buildDeckIds(big, { ...opts, seed: 7 });
+    const avg = (xs: string[]) => xs.reduce((n, id) => n + diff(id), 0) / xs.length;
+    expect(avg(ids.slice(0, 10))).toBeLessThan(avg(ids.slice(20)));
+  });
+
+  it("sorulmuş sorular sona kalır; en eski sorulan önce döner", () => {
+    const seen = { [big[0].id]: 300, [big[1].id]: 100, [big[2].id]: 200 };
+    const ids = buildDeckIds(big, { ...opts, seed: 3, seen });
+    expect(ids.slice(-3)).toEqual([big[1].id, big[2].id, big[0].id]);
+  });
+});

@@ -10,7 +10,7 @@ import { TeamEmblem } from "@/components/ui/TeamEmblem";
 import type { PlayableQuestion } from "@/core/deck";
 import { clock, usePersistentReducer, useNow } from "@/lib/hooks";
 import { dur, ease, spring } from "@/lib/motion";
-import { memoryScope } from "@/lib/memory";
+import { memoryScope, useRememberAsked } from "@/lib/memory";
 import { sfx } from "@/lib/sound";
 import { halatCekme } from "../registry";
 import { TEAM_STYLES } from "../teams";
@@ -89,6 +89,12 @@ export default function HalatCekme({ config, deck, onRestart }: GameProps) {
     missAt: [s.sides[0].wrong, s.sides[1].wrong],
     frozen,
   };
+
+  // İki tarafın o an gördüğü sorular hafızaya yazılır: oyun yarıda kalsa da bir sonraki destede sona bırakılır.
+  useRememberAsked(
+    memoryScope(config.subjectId, config.grade, config.section),
+    s.phase === "ready" ? [] : s.sides.map((side) => deck[side.question % deck.length]?.id),
+  );
 
   if (s.phase === "ready") {
     return (

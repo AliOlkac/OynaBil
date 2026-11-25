@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { createLocalStore } from "./store";
 
 /**
@@ -40,4 +41,19 @@ export function forgetSeen(scope: string) {
     delete rest[scope];
     return rest;
   });
+}
+
+/**
+ * Ekrana gelen soruları anında hafızaya yazar. Oyun yarıda bırakılsa, sayfa yenilense ya da baştan
+ * başlansa bile sorulan soru bir sonraki destede sona kalır. Her kimlik bir kez yazılır.
+ */
+export function useRememberAsked(scope: string, ids: readonly (string | undefined)[]) {
+  const written = useRef(new Set<string>());
+  const key = ids.filter(Boolean).join("|");
+  useEffect(() => {
+    const fresh = key.split("|").filter((id) => id && !written.current.has(id));
+    if (fresh.length === 0) return;
+    fresh.forEach((id) => written.current.add(id));
+    markSeen(scope, fresh, Date.now());
+  }, [scope, key]);
 }

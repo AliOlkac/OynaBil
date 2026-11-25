@@ -333,6 +333,13 @@ export function SetupScreen() {
               <History className="size-4 shrink-0" />
               <span>
                 <span className="tabular">{seenHere}</span> soru daha önce soruldu, yeni oyunda sona bırakılır.
+                {available - seenHere < needed && (
+                  // Yeni soru bu oyuna yetmiyorsa öğretmen tekrarın nereden geldiğini bilsin.
+                  <span className="text-kehribar">
+                    {" "}
+                    Yeni soru az kaldı ({available - seenHere}); tekrar görmemek için ünite ekleyin.
+                  </span>
+                )}
               </span>
               <button type="button" onClick={() => forgetSeen(scope)} className="rounded-md px-2 py-0.5 font-semibold text-firuze hover:bg-ink-800">
                 Hafızayı sil
