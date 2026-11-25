@@ -77,7 +77,7 @@ src/
   components/              Ortak arayüz: düğmeler, takım amblemleri, oyun çerçevesi, sonuç ekranı
   app/                     Sayfalar: ana sayfa, /kurulum, /oyun/[oyun], /sorular
 public/ses/                Kayıtlı sesler (Penaltı'nın spikeri ve tribünü)
-docs/                      Mimari, tasarım sistemi, sesler, içerik kontrol listesi
+docs/                      Mimari, tasarım sistemi, sesler, içerik kontrol listesi, mobil platform planı
 scripts/                   Service worker üretimi, LGS soru üretim hattı (lgs-uret.ts), ses hazırlama (sesleri-hazirla.sh)
 ```
 
