@@ -2,7 +2,7 @@
 
 import confetti from "canvas-confetti";
 import { AnimatePresence, motion } from "motion/react";
-import { BookOpen, Check, ChevronRight, Home, RotateCcw, Shield, Swords, Trophy, User, Volume2, VolumeX, X } from "lucide-react";
+import { BookOpen, Box, Check, ChevronRight, Flame, Home, RotateCcw, Shield, Shuffle, Swords, Trophy, User, Volume2, VolumeX, X } from "lucide-react";
 import Link from "next/link";
 import { Suspense, useEffect, useMemo, useState } from "react";
 import { GameGlyph } from "@/components/game/GameGlyph";
@@ -15,14 +15,16 @@ import { findUnit, getSubject, loadPool, unitsFor, useGradePool } from "@/core/r
 import { getGame } from "@/games/registry";
 import { GAME_SCREENS } from "@/games/screens";
 import type { SoloMode, SoloResult } from "@/games/shared/solo";
+import { setStage3dPref, useStage3d } from "@/games/shared/stage3d/support";
+import { TEAM_ORDER, TEAM_STYLES } from "@/games/teams";
 import type { GameConfig } from "@/games/types";
 import { cssColor } from "@/lib/color";
 import { getSeen, memoryScope } from "@/lib/memory";
-import { spring } from "@/lib/motion";
+import { ease, spring } from "@/lib/motion";
 import { newSessionId } from "@/lib/session";
 import { isSoundOn, setSoundOn, sfx } from "@/lib/sound";
 import { botSkill, GUARD_MATCHES, rankName, SAFE_BELOW, tierOf, TIERS, TOP_STEP, type Rank } from "./league";
-import { GameButton, LeagueShield, LpBar, Panel, tap } from "./parts";
+import { GameButton, LeagueShield, LpBar, Panel, Sheet, tap } from "./parts";
 import {
   addStats,
   BOT_NAMES,
@@ -35,9 +37,11 @@ import {
   QUEST_MATCHES,
   recordMatch,
   resetProfile,
+  rivalColor,
   updateProfile,
   useProfile,
   weakUnits,
+  winStreak,
   type MatchOutcome,
   type MobileGameId,
   type Profile,
@@ -52,7 +56,8 @@ import {
 /** Mobil maçlar kısadır: altı soru ya da doksan saniyelik halat. */
 const MATCH_SETTINGS = { questions: 6, seconds: 20 };
 const TUG_SETTINGS = { target: 4, seconds: 90 };
-const settingsFor = (gameId: string) => (gameId === "halat-cekme" ? TUG_SETTINGS : MATCH_SETTINGS);
+const QUIZ_SETTINGS = { rounds: 3, seconds: 20, lgs: 0, jokers: true, steal: true };
+const settingsFor = (gameId: string) => (gameId === "halat-cekme" ? TUG_SETTINGS : gameId === "bilgi-yarismasi" ? QUIZ_SETTINGS : MATCH_SETTINGS);
 /** Mobil maçların sorulanlar hafızası tahtadakinden ayrıdır. */
 const SECTION = "mobil";
 const PRACTICE_SIZE = 8;
@@ -92,8 +97,8 @@ async function createMatch(p: Profile): Promise<Profile["active"]> {
       unitIds,
       section: SECTION,
       teams: [
-        { id: PLAYER_ID, name: p.name || "Sen", color: "kobalt" },
-        { id: "rakip", name: opponent, color: "mercan" },
+        { id: PLAYER_ID, name: p.name || "Sen", color: p.color },
+        { id: "rakip", name: opponent, color: rivalColor(p.color) },
       ],
       settings: settingsFor(gameId),
       seed,
@@ -153,10 +158,12 @@ export function MobileApp() {
   return (
     <Frame>
       <div className="min-h-0 flex-1 overflow-y-auto px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-4">
-        {tab === "ana" && <Lobby p={p} busy={busy} notice={notice} onPlay={play} />}
-        {tab === "lig" && <LeagueTab p={p} />}
-        {tab === "calis" && <StudyTab p={p} onStudy={(unit) => setFlow({ kind: "practice", unit })} />}
-        {tab === "profil" && <ProfileTab p={p} />}
+        <motion.div key={tab} className="min-h-full" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.22, ease }}>
+          {tab === "ana" && <Lobby p={p} busy={busy} notice={notice} onPlay={play} />}
+          {tab === "lig" && <LeagueTab p={p} />}
+          {tab === "calis" && <StudyTab p={p} onStudy={(unit) => setFlow({ kind: "practice", unit })} />}
+          {tab === "profil" && <ProfileTab p={p} />}
+        </motion.div>
       </div>
       <nav className="grid shrink-0 grid-cols-4 bg-ink-950 px-2 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]" aria-label="Bölümler">
         {(
@@ -190,7 +197,7 @@ export function MobileApp() {
 function Frame({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <div className="board h-dvh bg-ink-950">
-      <div className={`mx-auto flex h-full max-w-md flex-col bg-[radial-gradient(120%_70%_at_50%_0%,var(--color-ink-700),var(--color-ink-900)_70%)] ${className}`}>{children}</div>
+      <div className={`relative mx-auto flex h-full max-w-md flex-col overflow-hidden bg-[radial-gradient(120%_70%_at_50%_0%,var(--color-ink-700),var(--color-ink-900)_70%)] ${className}`}>{children}</div>
     </div>
   );
 }
@@ -247,7 +254,19 @@ function GradePicker({ grade, onPick }: { grade: Grade; onPick: (g: Grade) => vo
   );
 }
 
-function Chip({ on, onPick, children }: { on: boolean; onPick: () => void; children: React.ReactNode }) {
+/** Oyun kartlarının görünüşü ve tek satırlık ipucu. Renkler sahnelerin kendi belirteçleridir. */
+const GAME_ART: Record<MobileGameId | "sirayla", { tip: string; from: string; to: string }> = {
+  sirayla: { tip: "Her maçta sıradaki oyun gelir.", from: "var(--color-ink-600)", to: "var(--color-ink-800)" },
+  basketbol: { tip: "Soruyu bil, mesafeni seç, iğne yeşildeyken AT!", from: "var(--color-ates)", to: "var(--color-ahsap-koyu)" },
+  okculuk: { tip: "Soruyu bil, nişangâh ortadayken BIRAK! Rüzgâra dikkat.", from: "var(--color-cim-acik)", to: "var(--color-servi)" },
+  penalti: { tip: "Soruyu bil, topu kalede bir köşeye sürükle.", from: "var(--color-saha-acik)", to: "var(--color-saha)" },
+  "kule-yikmaca": { tip: "Soruyu bil, nişangâh penceredeyken ATEŞ!", from: "var(--color-ufuk)", to: "var(--color-tas-koyu)" },
+  "halat-cekme": { tip: "Hızlı ve doğru cevapla, ipi kendine çek.", from: "var(--color-camur-parlak)", to: "var(--color-camur-koyu)" },
+  "bilgi-yarismasi": { tip: "Sırayla soru. Rakip bilemezse soruyu çal.", from: "var(--color-kobalt)", to: "var(--color-kobalt-deep)" },
+};
+
+function GameCard({ id, on, onPick }: { id: MobileGameId | "sirayla"; on: boolean; onPick: () => void }) {
+  const art = GAME_ART[id];
   return (
     <button
       type="button"
@@ -256,9 +275,26 @@ function Chip({ on, onPick, children }: { on: boolean; onPick: () => void; child
         tap();
         onPick();
       }}
-      className={`flex shrink-0 items-center gap-2 rounded-xl px-3.5 py-2 text-base font-bold ${on ? "bg-cream text-ink-950" : "bg-ink-950/70 text-ink-300"}`}
+      className={`relative flex h-36 w-28 shrink-0 snap-center flex-col items-center justify-end overflow-hidden rounded-3xl pb-2.5 transition-transform ${on ? "scale-100 outline-4 outline-kehribar" : "scale-[0.94] opacity-80"}`}
+      style={{ background: `linear-gradient(165deg, ${art.from}, ${art.to})`, transitionDuration: "var(--dur-base)" }}
     >
-      {children}
+      <span className="absolute inset-x-0 top-3 grid place-items-center">
+        {id === "sirayla" ? (
+          <span className="grid size-16 place-items-center rounded-2xl bg-ink-950/45">
+            <Shuffle className="size-9 text-cream" strokeWidth={2.5} />
+          </span>
+        ) : (
+          <span className="scale-[1.2] rounded-xl bg-ink-950/45">
+            <GameGlyph id={id} selected />
+          </span>
+        )}
+      </span>
+      <span className="px-1 text-center text-base leading-tight font-bold text-cream [text-shadow:0_0.1rem_0_rgb(0_0_0/0.45)]">{id === "sirayla" ? "Sırayla" : getGame(id)!.name}</span>
+      {on && (
+        <span className="absolute top-2 right-2 grid size-6 place-items-center rounded-full bg-kehribar text-ink-950">
+          <Check className="size-4" strokeWidth={4} />
+        </span>
+      )}
     </button>
   );
 }
@@ -266,51 +302,64 @@ function Chip({ on, onPick, children }: { on: boolean; onPick: () => void; child
 function Lobby({ p, busy, notice, onPlay }: { p: Profile; busy: boolean; notice: string | null; onPlay: () => void }) {
   const tier = tierOf(p.rank.step);
   const [openedAt] = useState(() => Date.now());
+  const [picking, setPicking] = useState(false);
   const today = matchesToday(p, openedAt);
+  const streak = winStreak(p);
+  const subjects = subjectsFor(p.grade);
+  const subject = subjects.find((s) => s.id === p.subject);
   const nextGame = p.game === "sirayla" ? MOBILE_GAMES[p.history.length % MOBILE_GAMES.length] : p.game;
   return (
-    <div className="flex min-h-full flex-col gap-4">
+    <div className="flex min-h-full flex-col gap-3.5">
       <header className="flex items-center gap-3">
-        <TeamEmblem color="kobalt" className="size-10" />
+        <TeamEmblem color={p.color} className="size-11" />
         <div className="min-w-0 flex-1 leading-tight">
           <p className="truncate text-xl font-bold">{p.name}</p>
           <p className="text-sm font-semibold text-ink-300">{p.grade}. sınıf</p>
         </div>
+        {streak >= 2 && (
+          <p className="flex items-center gap-1 rounded-full bg-ink-950/70 px-3 py-1.5 text-base font-bold text-ates" aria-label={`${streak} maçlık galibiyet serisi`}>
+            <Flame className="size-5 fill-current" /> {streak}
+          </p>
+        )}
         <p className="flex items-center gap-1.5 rounded-full bg-ink-950/70 px-3 py-1.5 text-base font-bold" aria-label={`${p.shields} kalkan`}>
           <Shield className="size-5 fill-firuze text-firuze" /> {p.shields}
         </p>
       </header>
 
-      <motion.div className="flex flex-col items-center gap-1 py-1" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={spring.enter}>
-        <LeagueShield step={p.rank.step} className="size-32 drop-shadow-[0_0.5rem_0_rgb(0_0_0/0.35)]" />
-        <p className="text-3xl font-bold" style={{ color: tier.color }}>
-          {rankName(p.rank.step)}
-        </p>
-        <LpBar lp={p.rank.step >= TOP_STEP ? 100 : p.rank.lp} color={tier.color} className="w-56" />
-        <p className="tabular text-sm font-semibold text-ink-300">{p.rank.step >= TOP_STEP ? `${p.rank.lp} lig puanı` : `${p.rank.lp} / 100 lig puanı`}</p>
-        {p.rank.guard > 0 && <p className="text-sm font-semibold text-firuze">Yeni basamak koruması: {p.rank.guard} maç puan kaybetmezsin</p>}
+      <motion.div className="flex items-center gap-4 rounded-3xl bg-ink-950/45 p-3.5" initial={{ scale: 0.94, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={spring.enter}>
+        <LeagueShield step={p.rank.step} className="size-24 shrink-0 drop-shadow-[0_0.4rem_0_rgb(0_0_0/0.35)]" />
+        <div className="min-w-0 flex-1">
+          <p className="text-3xl leading-tight font-bold" style={{ color: tier.color }}>
+            {rankName(p.rank.step)}
+          </p>
+          <LpBar lp={p.rank.step >= TOP_STEP ? 100 : p.rank.lp} color={tier.color} className="mt-1.5" />
+          <p className="tabular mt-1.5 text-sm font-semibold text-ink-300">
+            {p.rank.guard > 0 ? `Koruma: ${p.rank.guard} maç puan kaybetmezsin` : p.rank.step >= TOP_STEP ? `${p.rank.lp} lig puanı` : `${p.rank.lp} / 100 lig puanı`}
+          </p>
+        </div>
       </motion.div>
 
-      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1" aria-label="Oyun">
-        <Chip on={p.game === "sirayla"} onPick={() => updateProfile({ game: "sirayla" })}>
-          Sırayla
-        </Chip>
+      <div className="-mx-4 flex snap-x snap-mandatory gap-2 overflow-x-auto px-4 py-1.5 [scrollbar-width:none]" role="group" aria-label="Oyun">
+        <GameCard id="sirayla" on={p.game === "sirayla"} onPick={() => updateProfile({ game: "sirayla" })} />
         {MOBILE_GAMES.map((g) => (
-          <Chip key={g} on={p.game === g} onPick={() => updateProfile({ game: g })}>
-            {getGame(g)!.name}
-          </Chip>
+          <GameCard key={g} id={g} on={p.game === g} onPick={() => updateProfile({ game: g })} />
         ))}
       </div>
-      <div className="-mx-4 -mt-2 flex gap-2 overflow-x-auto px-4 pb-1" aria-label="Ders">
-        <Chip on={p.subject === "karisik"} onPick={() => updateProfile({ subject: "karisik" })}>
-          Karışık
-        </Chip>
-        {subjectsFor(p.grade).map((s) => (
-          <Chip key={s.id} on={p.subject === s.id} onPick={() => updateProfile({ subject: s.id })}>
-            {s.shortName}
-          </Chip>
-        ))}
-      </div>
+      <p className="-mt-1.5 min-h-10 text-center text-base leading-tight text-ink-300">{GAME_ART[p.game].tip}</p>
+
+      <button
+        type="button"
+        onClick={() => {
+          tap();
+          setPicking(true);
+        }}
+        className="flex items-center gap-3 rounded-2xl bg-ink-950/45 px-4 py-3 text-left"
+      >
+        <BookOpen className="size-6 shrink-0 text-firuze" />
+        <span className="text-base font-semibold text-ink-300">Ders</span>
+        <span className="min-w-0 flex-1 truncate text-right text-lg font-bold">{subject?.name ?? "Karışık"}</span>
+        <ChevronRight className="size-5 shrink-0 text-ink-400" />
+      </button>
 
       <motion.div animate={busy ? {} : { scale: [1, 1.03, 1] }} transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}>
         <GameButton onPress={onPlay} disabled={busy} className="w-full flex-col !gap-0 !rounded-3xl !py-4">
@@ -322,17 +371,37 @@ function Lobby({ p, busy, notice, onPlay }: { p: Profile; busy: boolean; notice:
       </motion.div>
       {notice && <p className="text-center text-base font-semibold text-mercan">{notice}</p>}
 
-      <Panel>
-        <div className="flex items-center gap-3">
-          <p className="flex-1 text-lg font-bold">Günlük görev</p>
-          <p className="tabular text-base font-bold text-ink-300">
-            {Math.min(today, QUEST_MATCHES)} / {QUEST_MATCHES} maç
-          </p>
+      <div className="mt-auto flex items-center gap-3 rounded-2xl bg-ink-950/45 px-4 py-3">
+        <Shield className={`size-7 shrink-0 ${today >= QUEST_MATCHES ? "fill-firuze text-firuze" : "text-ink-400"}`} />
+        <div className="min-w-0 flex-1">
+          <p className="text-base font-bold">{today >= QUEST_MATCHES ? "Günlük görev tamam!" : "Günlük görev: 3 maç oyna, kalkan kazan"}</p>
+          <LpBar lp={(Math.min(today, QUEST_MATCHES) / QUEST_MATCHES) * 100} color="var(--color-zumrut)" className="mt-1.5 !h-2" />
         </div>
-        <LpBar lp={(Math.min(today, QUEST_MATCHES) / QUEST_MATCHES) * 100} color="var(--color-zumrut)" className="mt-2" />
-        <p className="mt-2 text-sm text-ink-300">{today >= QUEST_MATCHES ? "Bugünkü görev tamam: kalkanını aldın." : "Bugün üç maç oyna, bir kalkan kazan. Kalkan, yenilgide puan kaybını yarıya indirir."}</p>
-      </Panel>
-      <p className="mt-auto text-center text-sm text-ink-400">Prototip: rakipler şimdilik bilgisayardır.</p>
+        <p className="tabular text-base font-bold text-ink-300">
+          {Math.min(today, QUEST_MATCHES)}/{QUEST_MATCHES}
+        </p>
+      </div>
+      <p className="text-center text-xs text-ink-400">Prototip: rakipler şimdilik bilgisayardır.</p>
+
+      <Sheet open={picking} title="Hangi dersten?" onClose={() => setPicking(false)}>
+        <div className="flex flex-col gap-2">
+          {[{ id: "karisik", name: "Karışık", note: "Her maçta başka bir ders" }, ...subjects.map((s) => ({ id: s.id, name: s.name, note: `${unitsFor(s, p.grade).length} ünite` }))].map((s) => (
+            <button
+              key={s.id}
+              type="button"
+              onClick={() => {
+                tap();
+                updateProfile({ subject: s.id });
+                setPicking(false);
+              }}
+              className={`flex items-center gap-3 rounded-2xl px-4 py-3 text-left ${p.subject === s.id ? "bg-kehribar text-ink-950" : "bg-ink-850"}`}
+            >
+              <span className="min-w-0 flex-1 text-lg font-bold">{s.name}</span>
+              <span className={`text-sm font-semibold ${p.subject === s.id ? "opacity-70" : "text-ink-400"}`}>{s.note}</span>
+            </button>
+          ))}
+        </div>
+      </Sheet>
     </div>
   );
 }
@@ -343,8 +412,9 @@ function Matchmaking({ active, me, onReady }: { active: NonNullable<Profile["act
     const a = window.setTimeout(() => {
       setFound(true);
       sfx.go();
+      tap();
     }, 1500);
-    const b = window.setTimeout(onReady, 3600);
+    const b = window.setTimeout(onReady, 4200);
     return () => {
       window.clearTimeout(a);
       window.clearTimeout(b);
@@ -354,36 +424,53 @@ function Matchmaking({ active, me, onReady }: { active: NonNullable<Profile["act
   }, []);
   const game = getGame(active.config.gameId)!;
   const subject = getSubject(active.config.subjectId);
+  const art = GAME_ART[active.config.gameId as MobileGameId];
+  const rival = rivalColor(me.color);
   return (
     <Frame className="items-center justify-center gap-6 px-6">
-      <GameGlyph id={game.id} selected />
-      <p className="text-center text-2xl font-bold">
-        {game.name} · {subject?.shortName}
-      </p>
+      <span className="scale-150 rounded-xl" style={{ background: `linear-gradient(165deg, ${art.from}, ${art.to})` }}>
+        <GameGlyph id={game.id} selected />
+      </span>
+      <p className="mt-2 text-center text-3xl font-bold">{game.name}</p>
+      <p className="-mt-5 text-center text-lg font-semibold text-ink-300">{subject?.name}</p>
       <div className="flex w-full items-center justify-between gap-3">
-        <motion.div className="flex flex-1 flex-col items-center gap-2" initial={{ x: -80, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={spring.enter}>
-          <TeamEmblem color="kobalt" className="size-20" />
-          <p className="max-w-full truncate text-xl font-bold text-kobalt">{me.name}</p>
+        <motion.div className="flex min-w-0 flex-1 flex-col items-center gap-2" initial={{ x: -80, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={spring.enter}>
+          <TeamEmblem color={me.color} className="size-20" />
+          <p className="max-w-full truncate text-xl font-bold" style={{ color: TEAM_STYLES[me.color].base }}>
+            {me.name}
+          </p>
           <p className="text-sm font-semibold text-ink-300">{rankName(me.rank.step)}</p>
         </motion.div>
-        <p className="text-4xl font-bold text-kehribar">VS</p>
-        <div className="flex flex-1 flex-col items-center gap-2">
+        <motion.p className="text-5xl font-bold text-kehribar" animate={found ? { scale: [1, 1.5, 1] } : {}} transition={{ duration: 0.5 }}>
+          VS
+        </motion.p>
+        <div className="flex min-w-0 flex-1 flex-col items-center gap-2">
           {found ? (
-            <motion.div className="flex flex-col items-center gap-2" initial={{ x: 80, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={spring.celebrate}>
-              <TeamEmblem color="mercan" className="size-20" />
-              <p className="max-w-full truncate text-xl font-bold text-mercan">{active.opponent}</p>
+            <motion.div className="flex max-w-full flex-col items-center gap-2" initial={{ x: 80, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={spring.celebrate}>
+              <TeamEmblem color={rival} className="size-20" />
+              <p className="max-w-full truncate text-xl font-bold" style={{ color: TEAM_STYLES[rival].base }}>
+                {active.opponent}
+              </p>
               <p className="text-sm font-semibold text-ink-300">Bilgisayar rakip</p>
             </motion.div>
           ) : (
             <>
-              <motion.div className="size-20 rounded-full border-8 border-ink-700 border-t-mercan" animate={{ rotate: 360 }} transition={{ duration: 0.9, repeat: Infinity, ease: "linear" }} />
+              <motion.div className="size-20 rounded-full border-8 border-ink-700 border-t-kehribar" animate={{ rotate: 360 }} transition={{ duration: 0.9, repeat: Infinity, ease: "linear" }} />
               <p className="text-xl font-bold text-ink-300">Aranıyor…</p>
               <p className="text-sm text-transparent">.</p>
             </>
           )}
         </div>
       </div>
-      <p className="text-center text-lg text-ink-300">{found ? "Hazır ol!" : "Rakip aranıyor"}</p>
+      <Panel className="w-full text-center">
+        <p className="text-sm font-bold tracking-wide text-ink-400 uppercase">Nasıl oynanır</p>
+        <p className="mt-1 text-lg leading-snug font-semibold">{art.tip}</p>
+      </Panel>
+      {found && (
+        <button type="button" onClick={onReady} className="text-base font-bold text-kehribar underline">
+          Hemen başla
+        </button>
+      )}
     </Frame>
   );
 }
@@ -394,6 +481,7 @@ function Match({ active, onResult, onQuit }: { active: NonNullable<Profile["acti
   const deck = useMemo(() => (pool ? deckFromIds(pool, config.deckIds, config.seed) : null), [pool, config]);
   const [sound, setSound] = useState(isSoundOn);
   const [confirming, setConfirming] = useState(false);
+  const stage3d = useStage3d();
   // Maç boyunca aynı nesne kalmalı: oyun ekranı sonucu bir kez bildirir.
   const [handlers] = useState(() => ({ onResult }));
   const solo = useMemo<SoloMode>(() => ({ bot: { skill: active.skill }, onResult: (r) => handlers.onResult(r) }), [active.skill, handlers]);
@@ -404,9 +492,21 @@ function Match({ active, onResult, onQuit }: { active: NonNullable<Profile["acti
         <button type="button" aria-label="Maçtan çık" onClick={() => setConfirming(true)} className="grid size-10 place-items-center rounded-xl text-ink-300">
           <X className="size-6" />
         </button>
+        {stage3d.available && <span className="size-10" aria-hidden />}
         <p className="flex-1 truncate text-center text-base font-bold text-ink-300">
           {getGame(config.gameId)!.name} · {getSubject(config.subjectId)?.shortName}
         </p>
+        {stage3d.available && (
+          <button
+            type="button"
+            aria-label={stage3d.enabled ? "3D sahneyi kapat" : "3D sahneyi aç"}
+            aria-pressed={stage3d.enabled}
+            onClick={() => setStage3dPref(stage3d.enabled ? "kapali" : "acik")}
+            className={`grid size-10 place-items-center rounded-xl ${stage3d.enabled ? "text-firuze" : "text-ink-400"}`}
+          >
+            <Box className="size-5" />
+          </button>
+        )}
         <button
           type="button"
           aria-label={sound ? "Sesi kapat" : "Sesi aç"}
@@ -478,7 +578,23 @@ function MatchEnd({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Kazanılan puan sıfırdan sayarak gelir.
+  const [counted, setCounted] = useState(0);
+  useEffect(() => {
+    const start = performance.now() + 500;
+    let raf = requestAnimationFrame(function step(now: number) {
+      const k = Math.max(0, Math.min(1, (now - start) / 700));
+      setCounted(Math.round(outcome.delta * k));
+      if (k < 1) raf = requestAnimationFrame(step);
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [outcome.delta]);
+  const [ceremony, setCeremony] = useState(outcome.promoted);
+  const streak = winStreak(me);
+  const rival = rivalColor(me.color);
+
   const mine = result.log.filter((l) => l.teamId === PLAYER_ID);
+  const rightCount = mine.filter((l) => l.correct).length;
   const missed = [...new Set(mine.filter((l) => !l.correct).map((l) => l.questionId))].flatMap((id) => result.deck.find((q) => q.id === id) ?? []);
   const weak = weakUnits(addStats({}, mine), 1)[0] ?? (missed[0] ? { unit: missed[0].unit, right: 0, total: 1 } : null);
   const title = kind === "win" ? "GALİBİYET!" : kind === "loss" ? "YENİLGİ" : "BERABERE";
@@ -487,7 +603,7 @@ function MatchEnd({
     <Frame>
       <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto px-4 pt-[max(1.25rem,env(safe-area-inset-top))] pb-4">
         <motion.h1
-          className={`text-center text-5xl font-bold ${kind === "win" ? "text-kehribar" : kind === "loss" ? "text-ink-300" : "text-cream"}`}
+          className={`text-center text-[2.6rem] leading-tight font-bold whitespace-nowrap ${kind === "win" ? "text-kehribar" : kind === "loss" ? "text-ink-300" : "text-cream"}`}
           initial={{ scale: 0.4, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={spring.celebrate}
@@ -495,11 +611,23 @@ function MatchEnd({
           {title}
         </motion.h1>
         <div className="flex items-center justify-center gap-4">
-          <TeamEmblem color="kobalt" className="size-10" />
-          <p className="tabular text-5xl font-bold">
+          <TeamEmblem color={me.color} className="size-10" />
+          <p className={`tabular font-bold whitespace-nowrap ${String(result.score[0]).length + String(result.score[1]).length > 4 ? "text-4xl" : "text-5xl"}`}>
             {result.score[0]} <span className="text-ink-400">–</span> {result.score[1]}
           </p>
-          <TeamEmblem color="mercan" className="size-10" />
+          <TeamEmblem color={rival} className="size-10" />
+        </div>
+        <div className="-mt-1 flex flex-wrap items-center justify-center gap-2 text-base font-bold">
+          {mine.length > 0 && (
+            <span className="flex items-center gap-1.5 rounded-full bg-ink-950/60 px-3 py-1">
+              <Check className="size-4 text-zumrut" strokeWidth={4} /> {rightCount}/{mine.length} doğru
+            </span>
+          )}
+          {kind === "win" && streak >= 2 && (
+            <span className="flex items-center gap-1.5 rounded-full bg-ink-950/60 px-3 py-1 text-ates">
+              <Flame className="size-4 fill-current" /> {streak} maçlık seri
+            </span>
+          )}
         </div>
 
         <Panel className="flex items-center gap-4">
@@ -510,8 +638,8 @@ function MatchEnd({
                 {rankName(after.step)}
               </p>
               <p className={`tabular text-xl font-bold ${outcome.delta > 0 ? "text-zumrut" : outcome.delta < 0 ? "text-mercan" : "text-ink-300"}`}>
-                {outcome.delta > 0 ? "+" : ""}
-                {outcome.delta} puan
+                {counted > 0 ? "+" : ""}
+                {counted} puan
               </p>
             </div>
             <LpBar lp={after.step >= TOP_STEP ? 100 : shown} color={tier.color} className="mt-2" />
@@ -558,6 +686,34 @@ function MatchEnd({
           </div>
         )}
       </div>
+      <AnimatePresence>
+        {ceremony && (
+          <motion.div
+            key="toren"
+            className="absolute inset-0 z-40 flex flex-col items-center justify-center gap-4 bg-ink-950/92 px-6 text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            role="dialog"
+            aria-modal
+            aria-label="Basamak atladın"
+          >
+            <motion.p className="text-lg font-bold tracking-[0.25em] text-ink-300" initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }}>
+              YENİ BASAMAK
+            </motion.p>
+            <motion.div initial={{ scale: 0, rotate: -40 }} animate={{ scale: 1, rotate: 0 }} transition={{ ...spring.celebrate, delay: 0.35 }}>
+              <LeagueShield step={after.step} className="size-52 drop-shadow-[0_0.8rem_0_rgb(0_0_0/0.4)]" />
+            </motion.div>
+            <motion.p className="text-5xl font-bold" style={{ color: tier.color }} initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ ...spring.celebrate, delay: 0.7 }}>
+              {rankName(after.step)}
+            </motion.p>
+            <p className="text-lg text-ink-300">{GUARD_MATCHES} maç boyunca puan kaybetmezsin.</p>
+            <GameButton onPress={() => setCeremony(false)} className="mt-2 w-full max-w-xs !text-2xl">
+              Harika!
+            </GameButton>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="grid shrink-0 grid-cols-[1fr_1.4fr] gap-3 bg-ink-950 px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <GameButton tone="ghost" onPress={onLobby}>
           Lobi
@@ -799,17 +955,63 @@ function Practice({ unit, grade, onClose }: { unit: string; grade: Grade; onClos
   );
 }
 
+function Toggle({ label, on, onChange }: { label: string; on: boolean; onChange: (next: boolean) => void }) {
+  return (
+    <button
+      type="button"
+      role="switch"
+      aria-checked={on}
+      onClick={() => {
+        tap();
+        onChange(!on);
+      }}
+      className="flex items-center gap-3 rounded-2xl bg-ink-850 px-4 py-3 text-left"
+    >
+      <span className="flex-1 text-lg font-bold">{label}</span>
+      <span className={`flex h-7 w-12 items-center rounded-full p-1 ${on ? "justify-end bg-zumrut" : "justify-start bg-ink-600"}`}>
+        <span className="size-5 rounded-full bg-cream" />
+      </span>
+    </button>
+  );
+}
+
 function ProfileTab({ p }: { p: Profile }) {
   const [confirming, setConfirming] = useState(false);
+  const [sound, setSound] = useState(isSoundOn);
+  const stage3d = useStage3d();
   const wins = p.history.filter((m) => m.outcome === "win").length;
   const totals = Object.values(p.stats).reduce((a, s) => ({ right: a.right + s.right, total: a.total + s.total }), { right: 0, total: 0 });
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-3xl font-bold">Profil</h1>
-      <label className="text-base font-bold text-ink-300" htmlFor="profil-ad">
-        Takma ad
-      </label>
-      <input id="profil-ad" value={p.name} maxLength={14} onChange={(e) => updateProfile({ name: e.target.value })} className="-mt-3 rounded-2xl bg-ink-950 px-4 py-3 text-xl font-bold text-cream" />
+      <div className="flex items-center gap-4 rounded-3xl bg-ink-950/45 p-4">
+        <TeamEmblem color={p.color} className="size-16 shrink-0" />
+        <div className="min-w-0 flex-1">
+          <label className="text-sm font-bold text-ink-300" htmlFor="profil-ad">
+            Takma ad
+          </label>
+          <input id="profil-ad" value={p.name} maxLength={14} onChange={(e) => updateProfile({ name: e.target.value })} className="mt-1 w-full rounded-xl bg-ink-950 px-3 py-2 text-xl font-bold text-cream" />
+        </div>
+      </div>
+      <p className="text-base font-bold text-ink-300">Amblemin</p>
+      <div className="-mt-2 grid grid-cols-4 gap-2" role="radiogroup" aria-label="Amblem">
+        {TEAM_ORDER.map((c) => (
+          <button
+            key={c}
+            type="button"
+            role="radio"
+            aria-checked={p.color === c}
+            aria-label={TEAM_STYLES[c].label}
+            onClick={() => {
+              tap();
+              updateProfile({ color: c });
+            }}
+            className={`grid place-items-center rounded-2xl py-3 ${p.color === c ? "bg-ink-700 outline-3 outline-kehribar" : "bg-ink-850"}`}
+          >
+            <TeamEmblem color={c} className="size-10" />
+          </button>
+        ))}
+      </div>
       <p className="text-base font-bold text-ink-300">Sınıf</p>
       <GradePicker grade={p.grade} onPick={(grade) => updateProfile({ grade, subject: "karisik" })} />
       <div className="grid grid-cols-3 gap-2">
@@ -824,6 +1026,15 @@ function ProfileTab({ p }: { p: Profile }) {
           </Panel>
         ))}
       </div>
+      <Toggle
+        label="Ses"
+        on={sound}
+        onChange={(next) => {
+          setSoundOn(next);
+          setSound(next);
+        }}
+      />
+      {stage3d.available && <Toggle label="3D sahne (yavaşsa kapat)" on={stage3d.enabled} onChange={(next) => setStage3dPref(next ? "acik" : "kapali")} />}
       <Link href="/" className="rounded-2xl bg-ink-850 px-4 py-3 text-lg font-bold">
         Tahta sürümüne git
       </Link>

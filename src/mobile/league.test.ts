@@ -58,7 +58,7 @@ describe("Mobil lig", () => {
   });
 });
 
-const base: Profile = { ready: true, name: "A", grade: 7, subject: "karisik", game: "sirayla", rank: startRank(), shields: 1, history: [], stats: {}, questDay: null, active: null };
+const base: Profile = { ready: true, name: "A", grade: 7, color: "kobalt", subject: "karisik", game: "sirayla", rank: startRank(), shields: 1, history: [], stats: {}, questDay: null, active: null };
 const match = (sessionId: string, winner: 0 | 1 | "draw") => ({
   sessionId,
   gameId: "basketbol",

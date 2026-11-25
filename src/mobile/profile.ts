@@ -1,7 +1,7 @@
 "use client";
 
 import type { Grade } from "@/core/model";
-import type { GameConfig } from "@/games/types";
+import type { GameConfig, TeamColor } from "@/games/types";
 import type { AnswerLog } from "@/games/types";
 import { createLocalStore } from "@/lib/store";
 import { applyMatch, startRank, type MatchChange, type Outcome, type Rank } from "./league";
@@ -11,7 +11,7 @@ import { applyMatch, startRank, type MatchChange, type Outcome, type Rank } from
  * ve ünite bazında başarı. Sunuculu sürümde bu kayıt hesaba taşınır (docs/MOBIL-PLATFORM.md).
  */
 
-export const MOBILE_GAMES = ["basketbol", "okculuk", "penalti", "kule-yikmaca", "halat-cekme"] as const;
+export const MOBILE_GAMES = ["basketbol", "okculuk", "penalti", "kule-yikmaca", "halat-cekme", "bilgi-yarismasi"] as const;
 export type MobileGameId = (typeof MOBILE_GAMES)[number];
 export const PLAYER_ID = "sen";
 export const MAX_SHIELDS = 3;
@@ -33,6 +33,8 @@ export type Profile = {
   ready: boolean;
   name: string;
   grade: Grade;
+  /** Oyuncunun rengi ve amblemi; rakip başka bir renk alır. */
+  color: TeamColor;
   /** Seçili ders; "karisik" her maçta başka bir ders getirir. */
   subject: string;
   game: MobileGameId | "sirayla";
@@ -47,7 +49,7 @@ export type Profile = {
   active: { config: GameConfig; opponent: string; skill: number } | null;
 };
 
-const FRESH: Profile = { ready: false, name: "", grade: 7, subject: "karisik", game: "sirayla", rank: startRank(), shields: 0, history: [], stats: {}, questDay: null, active: null };
+const FRESH: Profile = { ready: false, name: "", grade: 7, color: "kobalt", subject: "karisik", game: "sirayla", rank: startRank(), shields: 0, history: [], stats: {}, questDay: null, active: null };
 
 export const profileStore = createLocalStore<Profile>("oynabil.mobil.v1", FRESH);
 export const useProfile = () => ({ ...FRESH, ...profileStore.use() });
@@ -112,3 +114,13 @@ export function recordMatch(
 }
 
 export const BOT_NAMES = ["Deniz_K", "MaviRoket", "Zeynep34", "Poyraz", "AtaTürkmen", "Elif.06", "Kaptan35", "Ada_Su", "Rüzgâr", "Yıldız07", "Efe_Can", "Bilge"];
+
+/** Rakibin rengi: oyuncununkinden farklı. */
+export const rivalColor = (mine: TeamColor): TeamColor => (mine === "mercan" ? "kobalt" : "mercan");
+
+/** Süren galibiyet serisi (son maçtan geriye doğru). */
+export function winStreak(p: Pick<Profile, "history">): number {
+  let n = 0;
+  for (let i = p.history.length - 1; i >= 0 && p.history[i].outcome === "win"; i--) n++;
+  return n;
+}

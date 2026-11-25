@@ -1,5 +1,6 @@
 "use client";
 
+import { BOT_SIDE, botAnswerPlan, useBotAction, useSolo } from "../shared/solo";
 import confetti from "canvas-confetti";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowRight, Check, Clock, Crown, Divide, Flag, Flame, Pause, Play, SkipForward, X } from "lucide-react";
@@ -61,9 +62,9 @@ function contextSize(text: string) {
 }
 
 function promptSize(text: string) {
-  if (text.length <= 70) return "text-3xl sm:text-5xl";
-  if (text.length <= 125) return "text-2xl sm:text-4xl";
-  return "text-2xl sm:text-3xl";
+  if (text.length <= 70) return "text-2xl sm:text-5xl";
+  if (text.length <= 125) return "text-xl sm:text-4xl";
+  return "text-xl sm:text-3xl";
 }
 
 /** Yeniden yüklenen bir oyunda süre kendiliğinden akmasın: öğretmen "Devam" diyene kadar duraklatılır. */
@@ -74,7 +75,7 @@ function hydrate(s: QuizState): QuizState {
   return s;
 }
 
-export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
+export default function BilgiYarismasi({ config, deck, onRestart, solo }: GameProps) {
   const settings = config.settings as unknown as QuizSettings;
   const reducer = useMemo(() => quizReducer(deck), [deck]);
   const [s, dispatch] = usePersistentReducer(config.sessionId, reducer, () => createQuiz(config.teams, settings), hydrate);
@@ -87,6 +88,40 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
   const now = useNow(timed, 100);
   const remaining = s.deadline !== null ? s.deadline - now : (s.remaining ?? 0);
   const paused = s.phase === "question" && s.deadline === null && s.remaining !== null;
+
+  // Tek oyunculu mod: ikinci takımı bilgisayar oynar. Kendi sırasında cevaplar, oyuncu bilemezse soruyu çalmayı dener.
+  const botId = solo ? s.teams[BOT_SIDE].id : null;
+  const botAsking = botId !== null && s.phase === "question" && team.id === botId;
+  const botStealing = botId !== null && s.phase === "steal" && team.id !== botId;
+  useSolo(solo, {
+    seed: config.seed,
+    ready: s.phase === "ready",
+    start: () => dispatch({ type: "start", now: clock() }),
+    done: s.phase === "finished",
+    result: () => {
+      const score: [number, number] = [s.scores[s.teams[0].id], s.scores[s.teams[1].id]];
+      return { winner: score[0] === score[1] ? "draw" : score[0] > score[1] ? 0 : 1, score, log: s.log, deck };
+    },
+    asking: botAsking && !paused,
+    questionKey: `soru:${s.cursor}`,
+    question: q,
+    answer: (option) => dispatch({ type: "answer", option, now: clock() }),
+  });
+  const stealPlan = botStealing && q ? botAnswerPlan(config.seed, `cal:${s.cursor}`, solo!.bot.skill, q) : null;
+  useBotAction(botStealing && s.stealTeam === null, `cal-takim:${s.cursor}`, { delay: 1500 }, () => dispatch({ type: "steal-team", teamId: botId! }));
+  useBotAction(botStealing && s.stealTeam === botId, `cal-cevap:${s.cursor}`, { delay: 1900 }, () => {
+    if (!stealPlan || !q) return;
+    // Oyuncunun seçtiği yanlış şık ve gizlenen şıklar seçilemez.
+    const free = q.options.map((_, i) => i).filter((i) => i !== s.picked && !s.hidden.includes(i));
+    const option = free.includes(stealPlan.option) ? stealPlan.option : (free.find((i) => i !== q.correctIndex) ?? q.correctIndex);
+    dispatch({ type: "steal-answer", option });
+  });
+  // Rakip bilemezse soru doğrudan oyuncuya geçer; "kim çalacak" adımı tek oyuncuda gereksizdir.
+  useBotAction(botId !== null && s.phase === "steal" && team.id === botId && s.stealTeam === null, `cal-oyuncu:${s.cursor}`, { delay: 700 }, () => {
+    sfx.steal();
+    dispatch({ type: "steal-team", teamId: s.teams[0].id });
+  });
+  useBotAction(Boolean(solo) && s.phase === "reveal", `sonraki:${s.asked}:${s.cursor}`, { delay: 4500 }, () => dispatch({ type: "next", now: clock() }));
 
   // Süre dolunca
   useEffect(() => {
@@ -167,7 +202,7 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
         className="group relative shrink-0 rounded-full"
         aria-label={paused ? "Süreyi devam ettir" : "Süreyi duraklat"}
       >
-        <TimerRing remainingMs={remaining} totalMs={questionTimeMs(s, q)} paused={paused} className="size-28 text-base" />
+        <TimerRing remainingMs={remaining} totalMs={questionTimeMs(s, q)} paused={paused} className="size-20 text-base sm:size-28" />
         <span className="absolute -bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-ink-800 px-2.5 py-0.5 text-xs font-semibold text-ink-300">
           {paused ? <Play className="size-3 fill-current" /> : <Pause className="size-3 fill-current" />}
           {paused ? "Devam" : "Duraklat"}
@@ -189,6 +224,7 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
   }
 
   function pick(option: number) {
+    if (botAsking || (botStealing && s.stealTeam !== null)) return;
     if (s.phase === "question" && !paused) {
       if (option === q.correctIndex && !s.hidden.includes(option)) celebrate(option, team, POINTS_CORRECT);
       dispatch({ type: "answer", option, now: clock() });
@@ -219,6 +255,7 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
   });
 
   if (s.phase === "ready") {
+    if (solo) return null;
     return (
       <GameIntro
         game={bilgiYarismasi}
@@ -233,6 +270,7 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
   }
 
   if (s.phase === "finished") {
+    if (solo) return null;
     const list = standings(s);
     const top = list[0];
     const tie = list.length > 1 && list[1].score === top.score;
@@ -375,7 +413,7 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
             </div>
 
             <div
-              className={`mt-6 grid flex-1 auto-rows-[minmax(4.5rem,auto)] grid-cols-1 gap-3 pb-5 sm:min-h-0 sm:grid-cols-2 sm:gap-4 ${
+              className={`mt-3 grid flex-1 auto-rows-[minmax(3.5rem,auto)] grid-cols-1 content-start gap-2.5 pb-3 sm:mt-6 sm:min-h-0 sm:auto-rows-[minmax(4.5rem,auto)] sm:content-normal sm:gap-3 sm:pb-5 sm:grid-cols-2 sm:gap-4 ${
                 q.options.length > 2 ? "sm:grid-rows-2" : "sm:grid-rows-[minmax(0,15rem)] sm:content-center"
               }`}
             >
@@ -396,12 +434,12 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
               exit={{ opacity: 0, y: 12 }}
               transition={{ duration: dur.base, ease }}
             >
-              <TurnBadge name={team.name} color={team.color} label="Sıra" />
+              <TurnBadge name={team.name} color={team.color} label={botAsking ? "Rakip düşünüyor" : "Sıra"} />
               {settings.jokers && (
                 <div className="ml-auto flex gap-3">
-                  <JokerButton kind="half" state={s} optionCount={q.options.length} onUse={(joker) => dispatch({ type: "joker", joker, now: Date.now() })} />
-                  {settings.seconds > 0 && <JokerButton kind="time" state={s} optionCount={q.options.length} onUse={(joker) => dispatch({ type: "joker", joker, now: Date.now() })} />}
-                  <JokerButton kind="pass" state={s} optionCount={q.options.length} onUse={(joker) => dispatch({ type: "joker", joker, now: Date.now() })} />
+                  {!botAsking && <JokerButton kind="half" state={s} optionCount={q.options.length} onUse={(joker) => !botAsking && dispatch({ type: "joker", joker, now: Date.now() })} />}
+                  {!botAsking && settings.seconds > 0 && <JokerButton kind="time" state={s} optionCount={q.options.length} onUse={(joker) => !botAsking && dispatch({ type: "joker", joker, now: Date.now() })} />}
+                  {!botAsking && <JokerButton kind="pass" state={s} optionCount={q.options.length} onUse={(joker) => !botAsking && dispatch({ type: "joker", joker, now: Date.now() })} />}
                 </div>
               )}
             </motion.div>
@@ -421,6 +459,10 @@ export default function BilgiYarismasi({ config, deck, onRestart }: GameProps) {
                   <TurnBadge name={stealTeam.name} color={stealTeam.color} label={`Çalıyor, +${POINTS_STEAL}`} />
                   <p className="text-xl text-ink-300">Kalan şıklardan birini seçin.</p>
                 </>
+              ) : botStealing ? (
+                <p className="text-2xl font-bold">
+                  <span className="text-mercan">{s.outcome === "timeout" ? "Süre doldu!" : "Yanlış!"}</span> Rakip soruyu çalmayı deniyor…
+                </p>
               ) : (
                 <>
                   <p className="text-2xl font-bold">

@@ -169,7 +169,7 @@ Rekabetçi oyunda soru hatası maçın sonucunu değiştirir; tahtadan daha da �
 
 ## 10. Aşamalar
 
-**Durum:** Aşama 0'ın prototipi yapıldı: `/mobil` adresinde lobi, lig, çalışma ve profil ekranları ile Basketbol, Okçuluk, Penaltı, Kule Yıkmaca ve Halat Çekme'de bilgisayar rakibe karşı dereceli maç oynanıyor (sunucusuz, kayıt telefonda). Amaç arayüzü ve oyun hissini gerçek çocuklarla denemek.
+**Durum:** Aşama 0'ın prototipi yapıldı: `/mobil` adresinde lobi, lig, çalışma ve profil ekranları ile altı oyunun hepsinde bilgisayar rakibe karşı dereceli maç oynanıyor (sunucusuz, kayıt telefonda). Amaç arayüzü ve oyun hissini gerçek çocuklarla denemek.
 
 Süreler, 1–2 geliştirici ve yarı zamanlı bir içerik editörü varsayımıyla kabadır.
 

@@ -1,6 +1,8 @@
 "use client";
 
+import { AnimatePresence, motion } from "motion/react";
 import type { CSSProperties, ReactNode } from "react";
+import { spring } from "@/lib/motion";
 import { sfx } from "@/lib/sound";
 import { rankName, tierOf, TOP_STEP } from "./league";
 
@@ -79,4 +81,28 @@ export function LpBar({ lp, color = "var(--color-kehribar)", className = "" }: {
 
 export function Panel({ children, className = "" }: { children: ReactNode; className?: string }) {
   return <div className={`rounded-2xl bg-ink-800 p-4 shadow-[var(--surface-light)] ${className}`}>{children}</div>;
+}
+
+/** Alttan açılan seçim paneli: başparmağın eriştiği yerde, dışına dokununca kapanır. */
+export function Sheet({ open, title, onClose, children }: { open: boolean; title: string; onClose: () => void; children: ReactNode }) {
+  return (
+    <AnimatePresence>
+      {open && (
+        <motion.div className="absolute inset-0 z-40 flex flex-col justify-end bg-ink-950/70" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} role="dialog" aria-modal aria-label={title}>
+          <motion.div
+            className="max-h-[80%] overflow-y-auto rounded-t-3xl bg-ink-800 px-4 pt-3 pb-[max(1rem,env(safe-area-inset-bottom))]"
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "100%" }}
+            transition={spring.enter}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-ink-600" aria-hidden />
+            <p className="mb-3 text-2xl font-bold">{title}</p>
+            {children}
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
 }

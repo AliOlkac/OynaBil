@@ -232,3 +232,5 @@ Kök boyut ekrana göre ölçeklenir: 1920x1080 tahtada 20 px, 1366x768 tahtada 
 ## Mobil prototip
 
 Mobil ekranlar (`/mobil`) aynı belirteçleri kullanır; oyun hissi için kurallar şunlardır: ekran başına tek ana eylem ve altın rengi yalnızca onun (`GameButton`, kalın kenarlı, basınca çöker); dokunulan her şey ekranın alt yarısında; altta dört sekme; her dokunuşta tık sesi ve kısa titreşim. Lig rozetleri kalkan biçimindedir ve `--color-lig-*` belirteçleriyle boyanır (bronz, gümüş, altın, platin, elmas, usta).
+
+Lobide oyunlar yatay kayan görsel kartlardır; her kartın zemini o oyunun sahne renklerinden bir geçiştir (Basketbol ateş ve ahşap, Okçuluk çimen, Kule Yıkmaca ufuk ve taş, Halat Çekme çamur). Seçimler (ders) alttan açılan panelde yapılır. Basamak atlama tam ekran kutlanır: rozet dönerek gelir, konfeti yağar. `prefers-reduced-motion` açıkken geçişler ve nabız durur, bilgi aynı kalır.
