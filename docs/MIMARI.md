@@ -100,6 +100,14 @@ Penaltı'nın iki sahnesi vardır: three.js ile çizilen üç boyutlu sahne (`sc
 - **Nişan:** Parmağın altındaki nokta kameradan kale düzlemine ışın izlenerek kale koordinatına çevrilir. Görünen noktalı yol ile topun gittiği yol aynı fonksiyondan çıkar.
 - **Ortak parçalar** (`src/games/shared/stage3d/`): belirteç renkleri ve tuvalden doku (`kit.ts`), iki kemikli uzuvlar için ters kinematik ve çocuk karakter (`figure.ts`), toz ve kırıntı parçacıkları (`particles.ts`). Yeni bir üç boyutlu sahne bunları kullanır.
 
+### Üç boyutlu sahne (Basketbol)
+
+Basketbol, Penaltı'nın düzenini izler: `BasketStage` üç boyutlu salon (`scene3d/engine.ts`) ile çizim sahnesi (`scene/BasketScene.tsx`) arasında seçer; ikisi aynı girdiyi alır ve `onContact`, `onShotDone`, `onFinale` olaylarını bildirir.
+
+- **Atışın sonucu oyun mantığındadır** (`logic.ts`): güç çubuğunun yeri, atış anı ile mesafe seçiminin anı arasındaki farktan saf bir fonksiyonla (`meterAt`) hesaplanır. Ekrandaki çubuk da aynı fonksiyonu çizer; öğrencinin gördüğü yer ile sonuç birebir aynıdır.
+- **Zaman çizelgesi** (`timeline.ts`, three.js içermez): topun yolu, sonuca göre (tertemiz, çemberden içeri, ön ya da arka çemberden dönen, panyadan seken, havaya giden) yerçekimli yay parçalarından kurulur; çember, panya, file ve parke olayları aynı listededir. Sesler, skorun güncellenmesi ve ağır çekim tekrar bu listeden okunur. Testler her sonucun yolunun kesintisiz olduğunu, basketin çemberin içinden geçtiğini ve kaçan topun geçmediğini sınar.
+- **File** her kare topun yerine göre esner: top hangi halkanın hizasındaysa o halka topu sarar; basketten sonra file sallanır.
+
 ### Üç boyutlu sahne (Bilgi Yarışması)
 
 Bilgi Yarışması'nın çizim sahnesi yoktur; üç boyutlu stüdyo (`scene3d/StudioStage.tsx`) soru ekranının üstünde bir şerittir. Tahta 3D çizemiyorsa şerit hiç yer kaplamaz ve oyun eskisi gibi oynanır. Şerit paragraf (LGS) sorularında ve 860 pikselden alçak ekranlarda gizlenir; soru metni her zaman önceliklidir. Sahne yalnızca özet girdi alır (sıradaki takım, son sonuç, puanlar, önde olan takım).

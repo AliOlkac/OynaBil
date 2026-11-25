@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Penaltı oyununun spiker ve stadyum seslerini siteye uygun hâle getirir.
+# Penaltı ve Basketbol oyunlarının spiker, tribün ve top seslerini siteye uygun hâle getirir.
 #
 # Kaynak sesler ElevenLabs ile üretilir (docs/SESLER.md) ve ayrı bir depoda durur. Bu betik onları
 # tek kanala indirir, baştaki ve sondaki sessizliği kırpar, ses düzeyini eşitler ve küçük birer mp3
 # olarak public/ses/penalti/ altına yazar. Site bu dosyaları çevrimdışı çalışmak için önbelleğe alır.
 #
 # Kullanım: scripts/sesleri-hazirla.sh <ses deposunun klasörü>
-#   Beklenen içerik: jobs/oynabil-penalti-spiker-raju/*.mp3 ve sfx/oynabil-*.mp3
+#   Beklenen içerik: jobs/oynabil-penalti-spiker-raju/*.mp3, jobs/oynabil-basket-spiker/*.mp3 ve sfx/oynabil-*.mp3
 set -euo pipefail
 
 SRC="${1:?Kullanım: scripts/sesleri-hazirla.sh <ses deposunun klasörü>}"
@@ -44,4 +44,20 @@ encode "$SRC/sfx/oynabil-ag.mp3" "$OUT/ag.mp3" -3
 encode "$SRC/sfx/oynabil-direk.mp3" "$OUT/direk.mp3" -3
 encode "$SRC/sfx/oynabil-eldiven.mp3" "$OUT/eldiven.mp3" -2
 
+du -ch "$OUT"/*.mp3 | tail -1
+
+# Basketbol: spiker, salon ve top sesleri
+OUT="public/ses/basketbol"
+mkdir -p "$OUT"
+for f in "$SRC"/jobs/oynabil-basket-spiker/*.mp3; do
+  encode "$f" "$OUT/spiker-$(basename "$f")" -1.5
+done
+encode "$SRC/sfx/oynabil-salon-ortam.mp3" "$OUT/salon-ortam.mp3" -10
+encode "$SRC/sfx/oynabil-salon-cosku.mp3" "$OUT/salon-cosku.mp3" -3 ",afade=t=out:st=3.2:d=0.8"
+encode "$SRC/sfx/oynabil-salon-ah.mp3" "$OUT/salon-ah.mp3" -5 ",afade=t=out:st=1.9:d=0.6"
+encode "$SRC/sfx/oynabil-basket-file.mp3" "$OUT/file.mp3" -3
+encode "$SRC/sfx/oynabil-basket-cember.mp3" "$OUT/cember.mp3" -3
+encode "$SRC/sfx/oynabil-basket-panya.mp3" "$OUT/panya.mp3" -3
+encode "$SRC/sfx/oynabil-basket-sekme.mp3" "$OUT/sekme.mp3" -4
+encode "$SRC/sfx/oynabil-basket-buzzer.mp3" "$OUT/buzzer.mp3" -6
 du -ch "$OUT"/*.mp3 | tail -1

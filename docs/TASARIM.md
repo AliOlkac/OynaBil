@@ -65,6 +65,8 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
   - **Tekrar:** Gol, kurtarış ve direk, sonuç kartı okunurken başka bir kameradan ağır çekimde yeniden oynar. Gol ağın arkasından, kurtarış kalecinin uçtuğu yandan alçaktan gösterilir. Köşede "TEKRAR" etiketi durur.
   - Sonuç sahnenin altında büyük harflerle yazılır: GOL!, KURTARDI!, DİREK!, AUT!. Oyun bitince kamera kazanan şutçunun çevresinde döner.
   - **Ses:** Türkçe bir spiker gol, kurtarış, direk ve autu duyurur; tribün uğuldar, golde coşar (bkz. `docs/SESLER.md`).
+- **Basketbol salonu (üç boyutlu):** Okul spor salonu: parke saha, saha çizgileri ve boyalı alan, panyalı pota, turuncu çember ve file, potanın arkasında iki takımın renginde tribün, iki yanda takım sıraları, duvarda skor tabelası. Atış hakkı kazanan oyuncu (forma numaralı) atış noktasına yürür ve topu sektirir; kamera arkasından potaya bakar. Güç çubuğu ekranın altındadır: yeşilin ortasındaki koyu şerit tertemiz basket, yeşilin kalanı çemberden giren toptur. Atışta oyuncu çömelir, sıçrar ve topu en yüksekte bırakır; rakip savunmacı elini kaldırıp zıplar. Basket olunca file sallanır, çemberden takım renginde kıvılcım saçılır, tribün zıplar; sonra potanın yanından ağır çekimde tekrar oynar. Eli ateş almış takımın topu turuncu bir iz bırakır. Oyun bitince siren çalar, kazananlar sevinir, kamera onların çevresinde döner.
+- **Basketbol (çizim):** Tahta üç boyutlu çizemezse salon yandan çizilir: pota sağda, şutçu solda; topun yolu üç boyutlu sahneyle aynıdır.
 - **Bilgi Yarışması stüdyosu (üç boyutlu):** Soru ekranının üstünde ince bir şerit: her takımın kendi renginde kürsüsü, kürsüde puanı, arkasında üç yarışmacısı vardır. Sıradaki takımın kürsüsüne spot ışığı düşer. Doğru cevapta takım zıplayarak sevinir ve kürsüden takım renginde kıvılcımlar saçılır; yanlışta yarışmacılar başını tutar; soru çalınınca ışık çalan takıma geçer. Önde olan takımın kürsüsünde taç durur. Soru okunurken sahnede hareket yoktur.
 - **Halat Çekme sahnesi (üç boyutlu):** Akşam vakti bir okul şenliği: çayır, flamalar, ortada çamur havuzu, iki yanda takım renginde çizgi ve bayrak. Dörder çocuk ipe asılır; doğru cevapta takım geriye yaslanıp çeker ve ayaklarından toz kalkar, yanlışta çocuklar buz kalıbının içinde kalır. Kurdele çizgiye ulaşınca kaybedenler çamura kapaklanır ve çamur sıçrar; kazananlar ip boşalınca geriye devrilir, sonra kalkıp zıplayarak sevinir. Berabere bitişte ip ortadan kopar. Çizim yedeği aynı sahnenin SVG hâlidir.
 - **Kule Yıkmaca sahnesi (üç boyutlu):**
@@ -197,6 +199,7 @@ Kök boyut ekrana göre ölçeklenir: 1920x1080 tahtada 20 px, 1366x768 tahtada 
   - Parçacıklar, kamera sarsıntısı ve bulut kayması kapanır. Kamera kaymadan doğrudan yerine geçer.
   - Kule katlar hâlinde çökmez, solup moloza dönüşür.
   - Nişangâh oyunun parçası olduğu için hareket etmeye devam eder.
+- Basketbol'da kamera kaymadan yerine geçer; ağır çekim tekrar, topun izi, kıvılcım ve konfeti kapanır, tribün zıplamaz. Güç çubuğu oyunun parçası olduğu için hareket etmeye devam eder.
 - Kule Yıkmaca'nın üç boyutlu sahnesinde kamera kaymadan yerine geçer; taşlar düşmez, doğrudan yere konur; toz, kırıntı, sarsıntı ve bayrak dalgalanması kapanır. Taşın uçuşu yine gösterilir.
 - Penaltı'da:
   - Ağır çekim, kamera yaklaşması, sarsıntı ve konfeti kapanır. Tribün zıplamaz.
@@ -205,7 +208,7 @@ Kök boyut ekrana göre ölçeklenir: 1920x1080 tahtada 20 px, 1366x768 tahtada 
 
 ## Üç boyutlu sahneler
 
-Üç boyutlu sahneler three.js ile çizilir. Ortak altyapı `src/games/shared/stage3d/` altındadır; örnekler Penaltı (`src/games/penalti/scene3d/`), Kule Yıkmaca (`src/games/kule-yikmaca/scene3d/`), Halat Çekme (`src/games/halat-cekme/scene3d/`) ve Bilgi Yarışması'dır (`src/games/bilgi-yarismasi/scene3d/`).
+Üç boyutlu sahneler three.js ile çizilir. Ortak altyapı `src/games/shared/stage3d/` altındadır; örnekler Penaltı (`src/games/penalti/scene3d/`), Kule Yıkmaca (`src/games/kule-yikmaca/scene3d/`), Halat Çekme (`src/games/halat-cekme/scene3d/`), Basketbol (`src/games/basketbol/scene3d/`) ve Bilgi Yarışması'dır (`src/games/bilgi-yarismasi/scene3d/`).
 
 - **Görünüm:** Oyuncak gibi, yalın ve parlak. Foto-gerçekçilik hedeflenmez: tahtada 8 metreden okunan iri şekiller, takım renkleri ve net gölgeler yeterlidir.
 - **Dosya yok:** Hazır model ya da resim indirilmez. Çim, ağ, pano, forma ve top dokuları tuvale çizilerek, karakterler basit şekillerden kurulur. Renkler `globals.css` belirteçlerinden okunur.

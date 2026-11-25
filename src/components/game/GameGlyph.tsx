@@ -28,6 +28,20 @@ export function GameGlyph({ id, selected = false }: { id: string; selected?: boo
       </span>
     );
   }
+  if (id === "basketbol") {
+    return (
+      <span className={`grid size-14 shrink-0 place-items-center rounded-lg ${ring}`} aria-hidden>
+        <svg viewBox="0 0 48 48" className="size-11">
+          <rect x="24" y="6" width="18" height="13" rx="1.5" fill="var(--color-cream)" stroke="var(--color-mercan)" strokeWidth={2} />
+          <path d="M27 20 H39" stroke="var(--color-mercan)" strokeWidth={3} strokeLinecap="round" />
+          <path d="M28 21 L30 30 H36 L38 21 M31 21 L32 30 M35 21 L34 30" fill="none" stroke="var(--color-cream)" strokeWidth={1.2} opacity={0.7} />
+          <path d="M6 40 Q 12 6 30 16" fill="none" stroke="var(--color-cream)" strokeWidth={2} strokeDasharray="3 4" strokeLinecap="round" />
+          <circle cx="10" cy="38" r="7" fill="var(--color-ates)" />
+          <path d="M3 38 H17 M10 31 V45 M5 33 Q10 38 5 43 M15 33 Q10 38 15 43" fill="none" stroke="var(--color-ink-950)" strokeWidth={1.3} />
+        </svg>
+      </span>
+    );
+  }
   if (id === "kule-yikmaca") {
     return (
       <span className={`grid size-14 shrink-0 place-items-center rounded-lg ${ring}`} aria-hidden>

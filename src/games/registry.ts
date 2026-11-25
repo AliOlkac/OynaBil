@@ -188,7 +188,49 @@ export const penalti: GameDefinition = {
   questionsNeeded: (s) => Number(s.questions) + 6,
 };
 
-export const GAMES: GameDefinition[] = [bilgiYarismasi, halatCekme, kuleYikmaca, penalti];
+export const basketbol: GameDefinition = {
+  id: "basketbol",
+  name: "Basketbol",
+  scene3d: true,
+  tagline: "İki takıma aynı soru. İlk bilen potaya atar: yakından 2 sayı mı, üçlük çizgisinden 3 sayı mı?",
+  howTo: [
+    "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
+    "İlk doğru cevaplayan takım atış hakkı kazanır ve mesafeyi seçer: yakından 2 sayı ya da üçlük çizgisinden 3 sayı. Yanlış cevap veren takım bekler.",
+    "Güç çubuğu inip çıkar. İğne yeşil bölgedeyken AT'a dokunun: ortası tertemiz basket, kenarı çemberden içeri. Üçlükte yeşil bölge daha dardır.",
+    "Üst üste iki basket atan takımın eli ateş alır, yeşil bölgesi genişler. Sorular bitince çok sayı atan kazanır; eşitlikte uzatmada ilk basketi atan kazanır.",
+  ],
+  teamCount: { min: 2, max: 2, default: 2 },
+  // Doğru/yanlış soruları kullanılmaz: bir takımın yanlış cevabı görülünce doğrusu belli olurdu.
+  questionTypes: ["multiple-choice"],
+  settings: [
+    {
+      key: "questions",
+      label: "Soru sayısı",
+      kind: "choice",
+      options: [
+        { value: 6, label: "6" },
+        { value: 10, label: "10" },
+        { value: 16, label: "16" },
+      ],
+    },
+    {
+      key: "seconds",
+      label: "Soru süresi",
+      kind: "choice",
+      options: [
+        { value: 20, label: "20 sn" },
+        { value: 30, label: "30 sn" },
+        { value: 45, label: "45 sn" },
+        { value: 0, label: "Süresiz" },
+      ],
+    },
+  ],
+  defaultSettings: { questions: 10, seconds: 30 },
+  // Uzatma için yedek sorular da gerekir.
+  questionsNeeded: (s) => Number(s.questions) + 6,
+};
+
+export const GAMES: GameDefinition[] = [bilgiYarismasi, halatCekme, kuleYikmaca, penalti, basketbol];
 
 export function getGame(id: string): GameDefinition | undefined {
   return GAMES.find((g) => g.id === id);

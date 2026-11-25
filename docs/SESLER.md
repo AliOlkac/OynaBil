@@ -3,7 +3,7 @@
 OynaBil'de iki tür ses vardır.
 
 - **Üretilmiş sesler** (`src/lib/sound.ts`): Web Audio ile kodda üretilir, dosyası yoktur. Bütün oyunlar bunları kullanır.
-- **Kayıtlı sesler** (`src/lib/samples.ts`): Spiker replikleri, tribün ve vuruş sesleri. Şimdilik yalnızca Penaltı kullanır (`src/games/penalti/audio.ts`).
+- **Kayıtlı sesler** (`src/lib/samples.ts`): Spiker replikleri, tribün ve vuruş sesleri. Penaltı (`src/games/penalti/audio.ts`) ve Basketbol (`src/games/basketbol/audio.ts`) kullanır.
 
 Kayıtlı bir ses henüz inmediyse ya da çözülemediyse aynı olay için üretilmiş ses çalar. Oyun ses dosyaları olmadan da eksiksiz oynanır.
 
@@ -28,13 +28,31 @@ Dosyalar `public/ses/penalti/` altındadır: 30 dosya, toplam yaklaşık 820 KB.
 
 Aynı olayın birden çok repliği sırayla döner. Yeni bir replik başlayınca süren replik kesilir: son olay önceliklidir. Ses düğmesi kapatılınca süren bütün kayıtlar susar.
 
+## Basketbol'un kayıtları
+
+Dosyalar `public/ses/basketbol/` altındadır: 30 dosya, toplam yaklaşık 670 KB.
+
+| Dosya | Ne zaman çalar |
+|---|---|
+| `spiker-baslangic-1` | Oyun başlarken |
+| `spiker-hazir-1…3` | Bir takım atış hakkı kazanınca (her iki atışta bir) |
+| `spiker-ates-1` | Eli ateş almış takım atışa geçerken |
+| `spiker-basket-1…3`, `spiker-uclu-1…2`, `spiker-temiz-1`, `spiker-cember-1` | Basket: iki sayı, üçlük, tertemiz, çemberden giren |
+| `spiker-kacti-1…3`, `spiker-kisa-1` | Çemberden ya da panyadan dönen, havaya giden top |
+| `spiker-pas-1…2` | İki takım da bilemeyince |
+| `spiker-uzatma-1` | Uzatmaya geçilirken |
+| `spiker-bitis-1…2`, `spiker-berabere-1` | Oyun bitince |
+| `salon-ortam` | Oyun boyunca alçak bir uğultu; atış anında yükselir |
+| `salon-cosku`, `salon-ah` | Basket ve kaçan atış |
+| `file`, `cember`, `panya`, `sekme`, `buzzer` | File, çember, panya, parkede sekme, maç sonu sireni |
+
 ## Nasıl üretildi
 
 Sesler ElevenLabs ile üretildi.
 
 - **Spiker:** "Raju – High Energy Football Commentary" sesi (`jAUbTDuEGvdxrWhSe9eR`), `eleven_v4` modeli, Türkçe. Ses projenin sahibinin seçimidir. Replikler takım adı içermez, çünkü takım adlarını öğretmen belirler.
 - **Tribün ve vuruş sesleri:** Metinden ses efekti üretimiyle.
-- **Kontrol:** Üç replik yeniden yazıya döküldü ve metinle karşılaştırıldı.
+- **Kontrol:** Penaltı'dan üç, Basketbol'dan iki replik yeniden yazıya döküldü ve metinle karşılaştırıldı.
 
 Ham dosyalar ayrı bir depoda durur. Siteye uygun hâle getirmek için:
 

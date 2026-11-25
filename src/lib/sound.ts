@@ -218,6 +218,28 @@ export const sfx = {
   /** Tribünün hayal kırıklığı. */
   aww: () => noise(0.05, 1.2, { freq: 800, q: 1.1, gain: 0.13, attack: 0.2, sweepTo: 350 }),
 
+  // ---- Basketbol ----
+  /** Top parkede seker; `strength` sekmenin yüksekliği (0..1). */
+  bounce: (strength = 1) => tone(95, 0, 0.12, { type: "sine", gain: 0.06 + 0.16 * strength, to: 60 }),
+  /** File: kısa, yumuşak bir hışırtı. */
+  swish: () => noise(0, 0.32, { freq: 4200, q: 0.7, gain: 0.12, attack: 0.03, type: "highpass" }),
+  /** Çembere çarpan top: metalik çınlama. */
+  rim: (strength = 1) => {
+    tone(820, 0, 0.35, { type: "triangle", gain: 0.08 * strength });
+    tone(1240, 0, 0.22, { type: "sine", gain: 0.05 * strength });
+    noise(0, 0.05, { freq: 2000, q: 1, gain: 0.12 * strength });
+  },
+  /** Panyaya çarpan top. */
+  board: () => {
+    noise(0, 0.08, { freq: 600, q: 0.8, gain: 0.28 });
+    tone(140, 0, 0.18, { type: "sine", gain: 0.16, to: 90 });
+  },
+  /** Maç sonu sireni. */
+  buzzer: () => {
+    tone(196, 0, 1.2, { type: "sawtooth", gain: 0.07 });
+    tone(247, 0, 1.2, { type: "square", gain: 0.035 });
+  },
+
   tap: () => tone(660, 0, 0.06, { type: "triangle", gain: 0.08 }),
   tick: () => tone(1046, 0, 0.05, { type: "square", gain: 0.035 }),
   correct: () => {
