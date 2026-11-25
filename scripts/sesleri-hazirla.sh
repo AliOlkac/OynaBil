@@ -6,7 +6,7 @@
 # olarak public/ses/<oyun>/ altına yazar. Site bu dosyaları çevrimdışı çalışmak için önbelleğe alır.
 #
 # Kullanım: scripts/sesleri-hazirla.sh <ses deposunun klasörü>
-#   Beklenen içerik: jobs/oynabil-penalti-spiker-raju/*.mp3, jobs/oynabil-basket-spiker2/*.mp3,
+#   Beklenen içerik: jobs/oynabil-penalti-spiker2/*.mp3, jobs/oynabil-basket-spiker2/*.mp3,
 #   jobs/oynabil-okculuk-spiker/*.mp3, sfx/oynabil-*.mp3 ve sfx/okculuk-*.mp3
 set -euo pipefail
 
@@ -30,7 +30,7 @@ encode() {
 }
 
 # Spiker replikleri
-for f in "$SRC"/jobs/oynabil-penalti-spiker-raju/*.mp3; do
+for f in "$SRC"/jobs/oynabil-penalti-spiker2/*.mp3; do
   encode "$f" "$OUT/spiker-$(basename "$f")" -1.5
 done
 

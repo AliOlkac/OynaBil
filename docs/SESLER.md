@@ -9,7 +9,7 @@ Kayıtlı bir ses henüz inmediyse ya da çözülemediyse aynı olay için üret
 
 ## Penaltı'nın kayıtları
 
-Dosyalar `public/ses/penalti/` altındadır: 30 dosya, toplam yaklaşık 820 KB. Service worker bunları da önbelleğe alır, yani oyun çevrimdışıyken de seslidir.
+Dosyalar `public/ses/penalti/` altındadır: 30 dosya, toplam yaklaşık 860 KB. Service worker bunları da önbelleğe alır, yani oyun çevrimdışıyken de seslidir.
 
 | Dosya | Ne zaman çalar |
 |---|---|
@@ -69,11 +69,10 @@ Dosyalar `public/ses/okculuk/` altındadır: 30 dosya, toplam yaklaşık 810 KB.
 
 Sesler ElevenLabs ile üretildi.
 
-- **Penaltı spikeri:** "Raju – High Energy Football Commentary" sesi (`jAUbTDuEGvdxrWhSe9eR`), `eleven_v4` modeli, Türkçe. Ses projenin sahibinin seçimidir.
-- **Basketbol ve Okçuluk spikeri:** "OynaBil Coşkulu Spiker (TR)" sesi (`8TSaHJWrS14oJ4HmIoZF`). Ses tasarımıyla üretildi: orta yaşlı, İstanbul Türkçesiyle konuşan, kalın ve hafif boğuk sesli, golde coşan, kaçan atışta hayıflanan bir maç spikeri. Gerçek bir kişinin sesi taklit edilmedi. `eleven_v4` modeli, kararlılık 0.3. Replikler `[excited]`, `[shouting]`, `[groaning]`, `[disappointed]` gibi duygu etiketleriyle yazıldı; etiketler okunmaz, yalnızca vurguyu yönlendirir.
+- **Spiker (üç oyunda da):** "OynaBil Coşkulu Spiker (TR)" sesi (`8TSaHJWrS14oJ4HmIoZF`). Ses tasarımıyla üretildi: orta yaşlı, İstanbul Türkçesiyle konuşan, kalın ve hafif boğuk sesli, golde coşan, kaçan atışta hayıflanan bir maç spikeri. Gerçek bir kişinin sesi taklit edilmedi. `eleven_v4` modeli, kararlılık 0.3. Replikler `[excited]`, `[shouting]`, `[groaning]`, `[disappointed]` gibi duygu etiketleriyle yazıldı; etiketler okunmaz, yalnızca vurguyu yönlendirir.
 - Replikler takım adı içermez, çünkü takım adlarını öğretmen belirler.
 - **Tribün ve vuruş sesleri:** Metinden ses efekti üretimiyle.
-- **Kontrol:** Penaltı'dan üç, Basketbol'dan bir, Okçuluk'tan iki replik yeniden yazıya döküldü ve metinle karşılaştırıldı; etiketlerin seslendirilmediği görüldü. Yeni spikerin ses perdesi aralığı eski basketbol repliklerininkinin yaklaşık iki katıdır.
+- **Kontrol:** Penaltı'dan iki, Basketbol'dan bir, Okçuluk'tan iki replik yeniden yazıya döküldü ve metinle karşılaştırıldı; etiketlerin seslendirilmediği görüldü. Yeni spikerin ses perdesi aralığı eski basketbol repliklerininkinin yaklaşık iki katıdır.
 
 Ham dosyalar ayrı bir depoda durur. Siteye uygun hâle getirmek için:
 
@@ -85,10 +84,12 @@ Betik her dosyayı tek kanala indirir, baştaki ve sondaki sessizliği kırpar, 
 
 ## Yeni replik eklemek
 
-1. Repliği aynı ses ve modelle üretin; dosya adı `spiker-<olay>-<sıra>.mp3` olsun.
+1. Repliği aynı ses, model ve kararlılıkla (0.3) bir duygu etiketiyle üretin; dosya adı `spiker-<olay>-<sıra>.mp3` olsun.
 2. `src/games/penalti/audio.ts` içindeki `LINES` listesinde o olayın çeşit sayısını artırın.
 3. `npm run build` çalıştırın; service worker yeni dosyayı kendiliğinden önbelleğe alır.
 
 ## Başka bir oyuna kayıtlı ses eklemek
 
 `src/games/penalti/audio.ts` örnektir: kayıtları `loadSamples` ile indirin, her olay için `playSample(...) ?? sfx.<üretilmiş ses>()` kalıbını kullanın. Böylece dosya yokken de olay sessiz kalmaz.
+
+Penaltı başlangıçta "Raju – High Energy Football Commentary" sesiyle seslendirilmişti; üç oyun aynı spikerle konuşsun diye yeni sese geçildi.
