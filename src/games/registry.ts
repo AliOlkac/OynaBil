@@ -1,4 +1,3 @@
-import { DEFAULT_DIFFICULTY, DIFFICULTY_SETTING } from "./shared/difficulty";
 import type { GameDefinition, GameSettings } from "./types";
 
 /**
@@ -141,9 +140,8 @@ export const kuleYikmaca: GameDefinition = {
         { value: 0, label: "Süresiz" },
       ],
     },
-    DIFFICULTY_SETTING,
   ],
-  defaultSettings: { questions: 10, seconds: 30, difficulty: DEFAULT_DIFFICULTY },
+  defaultSettings: { questions: 10, seconds: 30 },
   questionsNeeded: (s) => Number(s.questions),
   scene3d: true,
 };
@@ -156,7 +154,7 @@ export const penalti: GameDefinition = {
   howTo: [
     "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
     "İlk doğru cevaplayan takımın oyuncusu topun başına geçer. Yanlış cevap veren takım bekler; iki takım da bilemezse kimse çekmez.",
-    "Şutçu topa dokunur, parmağını kalede istediği yere sürükleyip bırakır. Kaleci sola, ortaya ya da sağa atlar; köşeyi tutturursa kurtarır. Normal ve zor ayarda top nişan halkasının içinde biraz sapar: köşeye çok yakın nişan direğe çarpabilir.",
+    "Şutçu topa dokunur, parmağını kalede istediği yere sürükleyip bırakır. Kaleci sola, ortaya ya da sağa atlar; köşeyi tutturursa kurtarır.",
     "Sorular bitince çok gol atan kazanır. Eşitlikte seri penaltıya geçilir: ilk golü atan kazanır.",
   ],
   teamCount: { min: 2, max: 2, default: 2 },
@@ -184,9 +182,8 @@ export const penalti: GameDefinition = {
         { value: 0, label: "Süresiz" },
       ],
     },
-    DIFFICULTY_SETTING,
   ],
-  defaultSettings: { questions: 10, seconds: 30, difficulty: DEFAULT_DIFFICULTY },
+  defaultSettings: { questions: 10, seconds: 30 },
   // Seri penaltı için yedek sorular da gerekir.
   questionsNeeded: (s) => Number(s.questions) + 6,
 };
@@ -227,9 +224,8 @@ export const basketbol: GameDefinition = {
         { value: 0, label: "Süresiz" },
       ],
     },
-    DIFFICULTY_SETTING,
   ],
-  defaultSettings: { questions: 10, seconds: 30, difficulty: DEFAULT_DIFFICULTY },
+  defaultSettings: { questions: 10, seconds: 30 },
   // Uzatma için yedek sorular da gerekir.
   questionsNeeded: (s) => Number(s.questions) + 6,
 };
@@ -249,7 +245,7 @@ export const okculuk: GameDefinition = {
   // Doğru/yanlış soruları kullanılmaz: bir takımın yanlış cevabı görülünce doğrusu belli olurdu.
   questionTypes: ["multiple-choice"],
   settings: basketbol.settings,
-  defaultSettings: { questions: 10, seconds: 30, difficulty: DEFAULT_DIFFICULTY },
+  defaultSettings: { questions: 10, seconds: 30 },
   // Uzatma için yedek sorular da gerekir.
   questionsNeeded: (s) => Number(s.questions) + 6,
 };

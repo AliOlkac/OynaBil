@@ -32,7 +32,7 @@ const teams = defaultTeams(2) as [Team, Team];
 const reduce = archeryReducer(deck);
 const right = (s: ArcheryState) => deck[s.current].correctIndex;
 const wrong = (s: ArcheryState, k = 1) => (deck[s.current].correctIndex + k) % 4;
-const start = (over: Partial<ArcherySettings> = {}) => reduce(createArchery(teams, { questions: 4, seconds: 20, ...over }), { type: "start", now: 0 });
+const start = (over: Partial<ArcherySettings> = {}) => reduce(createArchery(teams, { questions: 4, seconds: 20, difficulty: 1, ...over }), { type: "start", now: 0 });
 const next = (s: ArcheryState, now = 0) => reduce(s, { type: "next", now });
 
 /** Nişangâhın verilen noktaya en yakın geçtiği an (kilitten sonraki ilk 12 saniyede). */
@@ -182,14 +182,14 @@ describe("Okçuluk: zorluk", () => {
     expect(hitPoint({ x: 0, y: 0 }, 2, 3).x).toBeGreaterThan(hitPoint({ x: 0, y: 0 }, 2, 1).x);
   });
 
-  it("oyun ayardaki zorlukla oynanır; ayarı olmayan eski oyun kolaydır", () => {
+  it("oyun ayardaki zorlukla oynanır; ayar yoksa zor oynanır", () => {
     const t = 100 + AIM_LOCK_MS + 2_000;
     const shoot = (difficulty?: number) => {
-      let s = start(difficulty === undefined ? {} : { difficulty });
+      let s = reduce(createArchery(teams, { questions: 4, seconds: 20, ...(difficulty === undefined ? {} : { difficulty }) }), { type: "start", now: 0 });
       s = reduce(s, { type: "answer", side: 0, option: right(s), now: 100 });
       return reduce(s, { type: "shoot", now: t }).shots[0];
     };
-    expect(shoot().aim).toEqual(sightAt(t - 100, 1));
-    expect(shoot(3).aim).toEqual(sightAt(t - 100, 3));
+    expect(shoot().aim).toEqual(sightAt(t - 100, 3));
+    expect(shoot(1).aim).toEqual(sightAt(t - 100, 1));
   });
 });

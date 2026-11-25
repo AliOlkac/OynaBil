@@ -35,7 +35,7 @@ const teams = defaultTeams(2) as [Team, Team];
 const reduce = basketReducer(deck);
 const right = (s: BasketState) => deck[s.current].correctIndex;
 const wrong = (s: BasketState, k = 1) => (deck[s.current].correctIndex + k) % 4;
-const start = (over: Partial<BasketSettings> = {}) => reduce(createBasket(teams, { questions: 4, seconds: 20, ...over }), { type: "start", now: 0 });
+const start = (over: Partial<BasketSettings> = {}) => reduce(createBasket(teams, { questions: 4, seconds: 20, difficulty: 1, ...over }), { type: "start", now: 0 });
 
 /** Güç çubuğunun yükselirken `power` değerine geldiği an (mesafe seçiminden sonra geçen süre). */
 const atPower = (power: number, range: Range) => METER_LOCK_MS + (power / 2) * METER_PERIOD[range];

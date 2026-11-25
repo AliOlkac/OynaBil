@@ -34,7 +34,7 @@
 
 Bilgi Yarışması'nı dizüstü bilgisayardan da yönetebilirsiniz: `A-D` ya da `1-4` cevap verir, `Enter` sonraki soruya geçer, `P` süreyi duraklatır. Kule Yıkmaca'da `Boşluk` ya da `Enter` mancınığı ateşler, Penaltı'da sayı tuşları (sayısal tuş takımı gibi, 7 sol üst, 3 sağ alt) şut çektirir. Basketbol'da `2` ya da `3` mesafeyi seçer, `Boşluk` atar. Okçuluk'ta `Boşluk` oku bırakır.
 
-Kule Yıkmaca, Penaltı, Basketbol ve Okçuluk'un kurulumunda bir **Zorluk** ayarı vardır. Kolay, küçük sınıflar içindir; Normal (varsayılan) ve Zor ayarda nişangâh ve güç çubuğu daha hızlı gider, yeşil bölge daralır, rüzgâr daha sert eser, Penaltı'da şut nişan halkasının içinde biraz sapar.
+Basketbol, Okçuluk ve Kule Yıkmaca bilerek zordur: nişangâh ve güç çubuğu hızlı gider, yeşil bölge dardır, rüzgâr serttir. Tam puan almak beceri ister. Penaltı şansa dayandığı için top tam nişan alınan yere gider.
 
 Kule Yıkmaca, Penaltı, Basketbol ve Okçuluk'ta iki takıma aynı soru sorulur: iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir, şıklar iki tarafta farklı sırayla dizilir. Bu oyunlarda yalnızca çoktan seçmeli sorular kullanılır; doğru/yanlış sorusunda bir takımın yanlış cevabı görülünce doğrusu belli olurdu. Atıştan sonra sıradaki soruya kendiliğinden geçilir; öğretmen geçişi durdurup konuyu anlatabilir.
 

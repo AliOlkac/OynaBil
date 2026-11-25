@@ -184,7 +184,7 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
 
   const expanded = s.phase === "kick" || s.phase === "result" || s.phase === "finished";
   const winnerSide = s.winner === null ? null : s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1;
-  const sceneInput: SceneInput = { phase: s.phase, shooter: s.shooter, kickStart: s.kickStart, kicks: s.kicks, locked: s.duel.locked, winner: winnerSide, scatter: SCATTER[difficultyOf(settings) - 1] };
+  const sceneInput: SceneInput = { phase: s.phase, shooter: s.shooter, kickStart: s.kickStart, kicks: s.kicks, locked: s.duel.locked, winner: winnerSide, scatter: SCATTER[difficultyOf(settings, 1) - 1] };
   const sceneTeams = teams.map((t) => ({ base: TEAM_STYLES[t.color].base, deep: TEAM_STYLES[t.color].deep, emblem: TEAM_STYLES[t.color].emblem })) as [ArtTeam, ArtTeam];
   const winnerTeam = typeof winnerSide === "number" ? teams[winnerSide] : null;
   const shooter = s.shooter !== null ? teams[s.shooter] : null;
@@ -302,7 +302,7 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
                   {armed && <Hand className="size-7 shrink-0 text-kehribar" />}
                   {armed ? "Kalede topu göndermek istediğin yere sürükle ve bırak!" : "Oyuncu topun başına geçiyor…"}
                 </p>
-                <p className="mt-0.5 hidden text-base text-ink-300 sm:block sm:text-lg">Kaleci sola, ortaya ya da sağa atlar. Köşeyi tutturursa kurtarır; direğe ya da dışarıya giden şut gol olmaz.{difficultyOf(settings) > 1 && " Top halkanın içinde biraz sapar: köşeye çok yaklaşma."}</p>
+                <p className="mt-0.5 hidden text-base text-ink-300 sm:block sm:text-lg">Kaleci sola, ortaya ya da sağa atlar. Köşeyi tutturursa kurtarır; direğe ya da dışarıya giden şut gol olmaz.{difficultyOf(settings, 1) > 1 && " Top halkanın içinde biraz sapar: köşeye çok yaklaşma."}</p>
               </div>
             </motion.section>
           )}

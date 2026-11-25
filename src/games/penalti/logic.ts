@@ -230,7 +230,7 @@ export function penaltyReducer(deck: PlayableQuestion[]) {
         if (a.now - s.kickStart < KICK_LOCK_MS) return s;
         if (!Number.isFinite(a.x) || !Number.isFinite(a.y)) return s;
         const keeper = keeperFor(s.seed, s.kicks.length);
-        const { dx, dy } = scatterFor(s.seed, s.kicks.length, difficultyOf(s.settings));
+        const { dx, dy } = scatterFor(s.seed, s.kicks.length, difficultyOf(s.settings, 1));
         const x = a.x + dx;
         const y = a.y + dy;
         const result = kickResult(x, y, keeper);

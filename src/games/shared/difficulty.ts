@@ -1,28 +1,17 @@
-import type { SettingField } from "../types";
-
 /**
- * Beceri oyunlarının zorluğu (Okçuluk, Basketbol, Penaltı, Kule Yıkmaca): 1 kolay, 2 normal, 3 zor.
- * Kolay, oyunların ilk sürümündeki ayardır; küçük sınıflar için uygundur. Ayarı olmayan (eski) kayıtlı
- * oyunlar kolay sayılır: yarıda kalan bir oyun yeniden açılınca kuralları değişmez.
+ * Beceri oyunlarının zorluğu: 1 kolay, 2 normal, 3 zor. Okçuluk, Basketbol ve Kule Yıkmaca her zaman
+ * zor oynanır; kurulumda zorluk ayarı yoktur (projenin sahibinin kararı: tam puan kolay olmamalı).
+ * Penaltı şansa dayandığı için sapmasız (1) oynanır. Kademeler testler ve ileride açılabilecek
+ * ayarlar için durur.
  */
 export type Difficulty = 1 | 2 | 3;
 
-export const DIFFICULTY_SETTING: SettingField = {
-  key: "difficulty",
-  label: "Zorluk",
-  kind: "choice",
-  options: [
-    { value: 1, label: "Kolay" },
-    { value: 2, label: "Normal" },
-    { value: 3, label: "Zor" },
-  ],
-};
+export const SKILL_DIFFICULTY: Difficulty = 3;
 
-export const DEFAULT_DIFFICULTY: Difficulty = 2;
-
-export function difficultyOf(settings: { difficulty?: number }): Difficulty {
+/** Ayarlarda geçerli bir zorluk yazıyorsa onu, yoksa `fallback` değerini döner. */
+export function difficultyOf(settings: { difficulty?: number }, fallback: Difficulty = SKILL_DIFFICULTY): Difficulty {
   const d = settings.difficulty;
-  return d === 2 || d === 3 ? d : 1;
+  return d === 1 || d === 2 || d === 3 ? d : fallback;
 }
 
 /** Zorluğa göre değer seçer: [kolay, normal, zor]. */

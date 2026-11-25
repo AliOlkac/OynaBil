@@ -45,7 +45,7 @@ function calmSeed(rounds: number) {
 }
 
 const start = (over: Partial<SiegeSettings> = {}, seed = calmSeed(2)) =>
-  reduce(createSiege(teams, { questions: 6, seconds: 30, ...over }, seed), { type: "start", now: 0 });
+  reduce(createSiege(teams, { questions: 6, seconds: 30, difficulty: 1, ...over }, seed), { type: "start", now: 0 });
 
 /** Nişangâhın verilen yüksekliğe ilk ulaştığı an (çıkışta). */
 const timeFor = (aim: number) => AIM_LOCK_MS + (aim * SWEEP_MS) / 2;

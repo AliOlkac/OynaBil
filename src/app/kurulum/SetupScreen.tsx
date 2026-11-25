@@ -70,7 +70,9 @@ export function SetupScreen() {
   const shownFields = game.settings.filter(
     (f) => f.kind !== "choice" || !f.requiresType || pool.some((q) => q.type === f.requiresType && selectedUnits.includes(q.unit)),
   );
-  const settings: GameSettings = { ...game.defaultSettings, ...settingsByGame[gameId] };
+  // Kayıtlı ayarlardan yalnızca oyunun bugün tanıdığı anahtarlar alınır (kaldırılmış bir ayar geri gelmez).
+  const settings: GameSettings = { ...game.defaultSettings };
+  for (const [k, v] of Object.entries(settingsByGame[gameId] ?? {})) if (k in game.defaultSettings) settings[k] = v;
   for (const f of game.settings) if (!shownFields.includes(f)) settings[f.key] = game.defaultSettings[f.key];
   const types = gameTypes(game, settings);
   const teamCount = Math.max(game.teamCount.min, Math.min(game.teamCount.max, teamCountByGame[gameId] ?? game.teamCount.default));
