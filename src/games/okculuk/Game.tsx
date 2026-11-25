@@ -18,6 +18,8 @@ import { dur, ease, spring } from "@/lib/motion";
 import { sfx } from "@/lib/sound";
 import { okculuk } from "../registry";
 import { optionOrder } from "../shared/duel";
+import { BOT_SIDE, useBotAction, useSolo } from "../shared/solo";
+import { botReleaseAt } from "./bot";
 import { archeryAudio } from "./audio";
 import { TEAM_STYLES } from "../teams";
 import type { GameProps, Team } from "../types";
@@ -40,7 +42,7 @@ function hydrate(s: ArcheryState): ArcheryState {
   return s;
 }
 
-export default function Okculuk({ config, deck, onRestart }: GameProps) {
+export default function Okculuk({ config, deck, onRestart, solo }: GameProps) {
   const settings = config.settings as unknown as ArcherySettings;
   const teams = config.teams.slice(0, 2) as [Team, Team];
   const reducer = useMemo(() => archeryReducer(deck), [deck]);
@@ -63,8 +65,26 @@ export default function Okculuk({ config, deck, onRestart }: GameProps) {
   const ticking = (s.phase === "question" && s.deadline !== null) || aiming;
   const now = useNow(ticking, aiming ? 100 : 200);
   const paused = s.phase === "question" && s.deadline === null && s.remaining !== null;
+  // Tek oyunculu modda sağdaki takımı bilgisayar oynar.
+  const botTurn = Boolean(solo) && s.shooter === BOT_SIDE;
+  useSolo(solo, {
+    seed: config.seed,
+    ready: s.phase === "ready",
+    start: () => {
+      archeryAudio.say("baslangic", 0.3);
+      dispatch({ type: "start", now: clock() });
+    },
+    done: s.phase === "finished" && showResults,
+    result: () => ({ winner: s.winner === null || s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1, score: s.score, log: s.log, deck }),
+    asking: s.phase === "question" && !paused && s.duel.winner === null && !s.duel.locked[BOT_SIDE],
+    questionKey: String(s.asked),
+    question: q,
+    answer: (option) => dispatch({ type: "answer", side: BOT_SIDE, option, now: clock() }),
+  });
   const remaining = s.deadline !== null ? Math.max(0, s.deadline - now) : (s.remaining ?? settings.seconds * 1000);
-  const canShoot = aiming && now - s.aimStart! >= AIM_LOCK_MS;
+  const canShoot = !botTurn && aiming && now - s.aimStart! >= AIM_LOCK_MS;
+  const botAt = botTurn && s.phase === "aim" && s.aimStart !== null ? botReleaseAt(config.seed, String(s.asked), solo!.bot.skill, s.aimStart, s.wind, difficultyOf(settings)) : 0;
+  useBotAction(botAt > 0, `ok:${s.asked}`, { at: botAt }, () => dispatch({ type: "shoot", now: botAt }));
   const lastShot: Shot | undefined = s.shots[s.shots.length - 1];
 
   const shownScore = [...s.score] as [number, number];
@@ -126,6 +146,7 @@ export default function Okculuk({ config, deck, onRestart }: GameProps) {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement || e.metaKey || e.ctrlKey) return;
       const key = e.key.toLowerCase();
       if ((key === " " || key === "enter") && s.phase === "aim") {
+        if (botTurn) return;
         e.preventDefault();
         shoot();
       } else if ((key === " " || key === "enter") && ((s.phase === "result" && shotDone >= s.shots.length) || s.phase === "reveal")) {
@@ -138,6 +159,7 @@ export default function Okculuk({ config, deck, onRestart }: GameProps) {
   });
 
   if (s.phase === "ready") {
+    if (solo) return null;
     return (
       <GameIntro
         game={okculuk}
@@ -153,6 +175,7 @@ export default function Okculuk({ config, deck, onRestart }: GameProps) {
   }
 
   if (s.phase === "finished" && showResults) {
+    if (solo) return null;
     return (
       <Results
         standings={([0, 1] as const)
@@ -256,6 +279,7 @@ export default function Okculuk({ config, deck, onRestart }: GameProps) {
                 duel={s.duel}
                 orders={[optionOrder(q.id, config.seed, 0, q.options.length), optionOrder(q.id, config.seed, 1, q.options.length)]}
                 revealed={s.phase === "reveal"}
+                only={solo ? 0 : undefined}
                 disabled={paused}
                 onAnswer={(side, option) => dispatch({ type: "answer", side, option, now: clock() })}
                 meta={
@@ -307,7 +331,7 @@ export default function Okculuk({ config, deck, onRestart }: GameProps) {
             >
               <TurnBadge team={shooter} label="Yayı gerdi" />
               <div className="min-w-[12rem] flex-1">
-                <p className="text-lg font-bold sm:text-2xl">Nişangâh ortaya gelince BIRAK!</p>
+                <p className="text-lg font-bold sm:text-2xl">{botTurn ? "Rakip nişan alıyor…" : "Nişangâh ortaya gelince BIRAK!"}</p>
                 <p className="text-base text-ink-300 sm:text-lg">{s.wind === 0 ? "Hava sakin: tam ortaya nişan al." : `Rüzgâr oku ${s.wind < 0 ? "sola" : "sağa"} iter; nişanı biraz ${s.wind < 0 ? "sağa" : "sola"} al.`}</p>
               </div>
               <button
@@ -319,7 +343,7 @@ export default function Okculuk({ config, deck, onRestart }: GameProps) {
                   shoot();
                 }}
                 className="pressable flex h-20 w-full shrink-0 items-center justify-center gap-3 rounded-xl px-10 text-4xl font-bold text-ink-950 transition-opacity disabled:opacity-40 sm:h-24 sm:w-auto sm:text-5xl"
-                style={{ background: TEAM_STYLES[shooter.color].base, "--edge": TEAM_STYLES[shooter.color].deep } as CSSProperties}
+                style={{ display: botTurn ? "none" : undefined, background: TEAM_STYLES[shooter.color].base, "--edge": TEAM_STYLES[shooter.color].deep } as CSSProperties}
               >
                 <Target className="size-9 sm:size-11" strokeWidth={2.5} />
                 BIRAK!

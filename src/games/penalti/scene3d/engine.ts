@@ -363,7 +363,7 @@ export function createPenaltyEngine(o: EngineOptions): { dispose: () => void } {
   };
   const canAim = () => {
     const inp = o.getInput();
-    return inp.phase === "kick" && inp.kickStart !== null && Date.now() - inp.kickStart >= KICK_LOCK_MS && inp.kicks.length === st.seenKicks;
+    return inp.aimable !== false && inp.phase === "kick" && inp.kickStart !== null && Date.now() - inp.kickStart >= KICK_LOCK_MS && inp.kicks.length === st.seenKicks;
   };
   const setAimAttr = () => {
     if (st.aiming) canvas.dataset.aim = `${st.aiming.gx.toFixed(3)},${st.aiming.gy.toFixed(3)}`;

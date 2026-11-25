@@ -159,3 +159,12 @@ Reducer'lar, deste ve soru havuzu bu geçişte değişmeden kalır.
 Service worker yalnızca derlenmiş sürümde kaydolur, `npm run dev` sırasında devreye girmez.
 
 Üç boyutlu sahnenin parçası ve Penaltı'nın ses dosyaları da bu listeye girer; oyun bir kez açıldıktan sonra çevrimdışıyken de üç boyutlu ve sesli çalışır.
+
+## Mobil prototip
+
+`/mobil` rotası (`src/mobile/`) telefonda tek kişilik dereceli maçların prototipidir; sunucu yoktur.
+
+- **Tek oyunculu mod** (`src/games/shared/solo.ts`): Basketbol, Okçuluk ve Penaltı ekranları isteğe bağlı bir `solo` özelliği alır. Oyuncu soldaki takımdır; sağdaki takımı bilgisayar oynar. Kurallar değişmez: rakip aynı eylemleri (cevap, mesafe, atış) gecikmeyle gönderir. Kararları oyun tohumundan türetilir (`botRng`), becerisi oyuncunun gizli puanına bağlıdır. Her oyunun rakip hesabı kendi `bot.ts` dosyasındadır. `solo` verilince tanıtım ve sonuç ekranları çizilmez; maç bitince sonuç `onResult` ile kabuğa bildirilir. Soru panelinde yalnızca oyuncunun şıkları görünür (`DuelQuestion`, `only`).
+- **Lig** (`src/mobile/league.ts`, saf): 16 basamak (Bronz III … Elmas I, Usta), basamak başına 0–100 lig puanı, gizli beceri puanı, Bronz ve Gümüş'te düşmeme, basamak atlayınca üç maçlık koruma, yenilgide kaybı yarıya indiren kalkan.
+- **Oyuncu kaydı** (`src/mobile/profile.ts`): `localStorage` içinde durur: lig, kalkanlar, maç geçmişi, ünite bazında başarı, süren maç. `recordMatch` bir maçı yalnızca bir kez işler. Sunuculu sürümde bu kayıt hesaba taşınır.
+- **Ekranlar** (`src/mobile/MobileApp.tsx`): karşılama, lobi, eşleşme, maç, maç sonu, lig, çalışma ve profil. Mobil maçların sorulanlar hafızası tahtadakinden ayrıdır (`mobil` şubesi).

@@ -169,6 +169,8 @@ Rekabetçi oyunda soru hatası maçın sonucunu değiştirir; tahtadan daha da �
 
 ## 10. Aşamalar
 
+**Durum:** Aşama 0'ın prototipi yapıldı: `/mobil` adresinde lobi, lig, çalışma ve profil ekranları ile Basketbol, Okçuluk ve Penaltı'da bilgisayar rakibe karşı dereceli maç oynanıyor (sunucusuz, kayıt telefonda). Amaç arayüzü ve oyun hissini gerçek çocuklarla denemek.
+
 Süreler, 1–2 geliştirici ve yarı zamanlı bir içerik editörü varsayımıyla kabadır.
 
 | Aşama | Kapsam | Kabaca süre |

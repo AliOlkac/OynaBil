@@ -46,6 +46,8 @@ export type SceneInput = {
   kicks: Kick[];
   locked: [boolean, boolean];
   winner: 0 | 1 | "draw" | null;
+  /** Yanlışsa nişan alınamaz (tek oyunculu modda rakibin şutu). */
+  aimable?: boolean;
   /** Şutun sapma yarıçapı (kale yarı genişliği cinsinden); nişan halkası bu kadar büyür. */
   scatter: number;
 };
@@ -229,7 +231,7 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
     };
     const canAim = () => {
       const inp = inputRef.current;
-      return inp.phase === "kick" && inp.kickStart !== null && Date.now() - inp.kickStart >= KICK_LOCK_MS && inp.kicks.length === st.seenKicks;
+      return inp.aimable !== false && inp.phase === "kick" && inp.kickStart !== null && Date.now() - inp.kickStart >= KICK_LOCK_MS && inp.kicks.length === st.seenKicks;
     };
     const onDown = (e: PointerEvent) => {
       if (!canAim() || st.aiming || (e.pointerType === "mouse" && e.button !== 0)) return;

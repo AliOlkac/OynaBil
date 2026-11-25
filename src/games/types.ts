@@ -1,5 +1,6 @@
 import type { Grade, QuestionType } from "@/core/model";
 import type { PlayableQuestion } from "@/core/deck";
+import type { SoloMode } from "./shared/solo";
 
 export type TeamColor = "kobalt" | "mercan" | "zumrut" | "kehribar";
 
@@ -82,4 +83,6 @@ export type GameProps = {
   deck: PlayableQuestion[];
   onExit: () => void;
   onRestart: () => void;
+  /** Tek oyunculu mod: sağdaki takımı bilgisayar oynar (bkz. shared/solo). */
+  solo?: SoloMode;
 };

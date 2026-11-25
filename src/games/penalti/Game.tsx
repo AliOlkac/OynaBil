@@ -18,6 +18,8 @@ import { dur, ease, spring } from "@/lib/motion";
 import { sfx } from "@/lib/sound";
 import { penalti } from "../registry";
 import { optionOrder } from "../shared/duel";
+import { BOT_SIDE, useBotAction, useSolo } from "../shared/solo";
+import { botKick } from "./bot";
 import { penaltyAudio } from "./audio";
 import { TEAM_STYLES } from "../teams";
 import type { GameProps, Team } from "../types";
@@ -51,7 +53,7 @@ function hydrate(s: PenaltyState): PenaltyState {
   return s;
 }
 
-export default function Penalti({ config, deck, onRestart }: GameProps) {
+export default function Penalti({ config, deck, onRestart, solo }: GameProps) {
   const settings = config.settings as unknown as PenaltySettings;
   const teams = config.teams.slice(0, 2) as [Team, Team];
   const reducer = useMemo(() => penaltyReducer(deck), [deck]);
@@ -72,6 +74,22 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
   const ticking = (s.phase === "question" && s.deadline !== null) || kicking;
   const now = useNow(ticking, kicking ? 100 : 200);
   const paused = s.phase === "question" && s.deadline === null && s.remaining !== null;
+  // Tek oyunculu modda sağdaki takımı bilgisayar oynar.
+  const botTurn = Boolean(solo) && s.shooter === BOT_SIDE;
+  useSolo(solo, {
+    seed: config.seed,
+    ready: s.phase === "ready",
+    start: () => {
+      penaltyAudio.say("baslangic", 0.3);
+      dispatch({ type: "start", now: clock() });
+    },
+    done: s.phase === "finished" && showResults,
+    result: () => ({ winner: s.winner === null || s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1, score: s.goals, log: s.log, deck }),
+    asking: s.phase === "question" && !paused && s.duel.winner === null && !s.duel.locked[BOT_SIDE],
+    questionKey: String(s.asked),
+    question: q,
+    answer: (option) => dispatch({ type: "answer", side: BOT_SIDE, option, now: clock() }),
+  });
   const remaining = s.deadline !== null ? Math.max(0, s.deadline - now) : (s.remaining ?? settings.seconds * 1000);
   const armed = kicking && now - s.kickStart! >= KICK_LOCK_MS;
   const lastKick: Kick | undefined = s.kicks[s.kicks.length - 1];
@@ -120,7 +138,9 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
     }
   }, [s.phase, s.suddenDeath, s.kicks.length, showResults]);
 
-  const kick = useCallback((x: number, y: number) => dispatch({ type: "kick", x, y, now: clock() }), [dispatch]);
+  const kick = useCallback((x: number, y: number) => !botTurn && dispatch({ type: "kick", x, y, now: clock() }), [dispatch, botTurn]);
+  const botPlan = botTurn && s.phase === "kick" && s.kickStart !== null ? botKick(config.seed, String(s.asked), solo!.bot.skill, s.kickStart) : null;
+  useBotAction(botPlan !== null, `sut:${s.asked}`, { at: botPlan?.at ?? 0 }, () => botPlan && dispatch({ type: "kick", x: botPlan.x, y: botPlan.y, now: botPlan.at }));
   const next = useCallback(() => dispatch({ type: "next", now: clock() }), [dispatch]);
   const onContact = useCallback((index: number) => setContacted((n) => Math.max(n, index + 1)), []);
   const onKickDone = useCallback((index: number) => {
@@ -134,7 +154,7 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
     const onKey = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement || e.metaKey || e.ctrlKey) return;
       const key = e.key.toLowerCase();
-      if (s.phase === "kick" && KEY_SPOTS[key]) {
+      if (!botTurn && s.phase === "kick" && KEY_SPOTS[key]) {
         e.preventDefault();
         kick(...KEY_SPOTS[key]);
       } else if ((key === " " || key === "enter") && ((s.phase === "result" && kickDone >= s.kicks.length) || s.phase === "reveal")) {
@@ -147,6 +167,7 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
   });
 
   if (s.phase === "ready") {
+    if (solo) return null;
     return (
       <GameIntro
         game={penalti}
@@ -162,6 +183,7 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
   }
 
   if (s.phase === "finished" && showResults) {
+    if (solo) return null;
     return (
       <Results
         standings={([0, 1] as const)
@@ -184,7 +206,7 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
 
   const expanded = s.phase === "kick" || s.phase === "result" || s.phase === "finished";
   const winnerSide = s.winner === null ? null : s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1;
-  const sceneInput: SceneInput = { phase: s.phase, shooter: s.shooter, kickStart: s.kickStart, kicks: s.kicks, locked: s.duel.locked, winner: winnerSide, scatter: SCATTER[difficultyOf(settings, 1) - 1] };
+  const sceneInput: SceneInput = { phase: s.phase, shooter: s.shooter, kickStart: s.kickStart, kicks: s.kicks, locked: s.duel.locked, winner: winnerSide, aimable: !botTurn, scatter: SCATTER[difficultyOf(settings, 1) - 1] };
   const sceneTeams = teams.map((t) => ({ base: TEAM_STYLES[t.color].base, deep: TEAM_STYLES[t.color].deep, emblem: TEAM_STYLES[t.color].emblem })) as [ArtTeam, ArtTeam];
   const winnerTeam = typeof winnerSide === "number" ? teams[winnerSide] : null;
   const shooter = s.shooter !== null ? teams[s.shooter] : null;
@@ -247,6 +269,7 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
                 duel={s.duel}
                 orders={[optionOrder(q.id, s.seed, 0, q.options.length), optionOrder(q.id, s.seed, 1, q.options.length)]}
                 revealed={s.phase === "reveal"}
+                only={solo ? 0 : undefined}
                 disabled={paused}
                 onAnswer={(side, option) => dispatch({ type: "answer", side, option, now: clock() })}
                 meta={
@@ -299,8 +322,8 @@ export default function Penalti({ config, deck, onRestart }: GameProps) {
               <TurnBadge team={shooter} label="Penaltıda" />
               <div className="min-w-[14rem] flex-1">
                 <p className="flex items-center gap-2 text-lg font-bold sm:text-2xl">
-                  {armed && <Hand className="size-7 shrink-0 text-kehribar" />}
-                  {armed ? "Kalede topu göndermek istediğin yere sürükle ve bırak!" : "Oyuncu topun başına geçiyor…"}
+                  {armed && !botTurn && <Hand className="size-7 shrink-0 text-kehribar" />}
+                  {botTurn ? "Rakip penaltıyı kullanıyor…" : armed ? "Kalede topu göndermek istediğin yere sürükle ve bırak!" : "Oyuncu topun başına geçiyor…"}
                 </p>
                 <p className="mt-0.5 hidden text-base text-ink-300 sm:block sm:text-lg">Kaleci sola, ortaya ya da sağa atlar. Köşeyi tutturursa kurtarır; direğe ya da dışarıya giden şut gol olmaz.{difficultyOf(settings, 1) > 1 && " Top halkanın içinde biraz sapar: köşeye çok yaklaşma."}</p>
               </div>

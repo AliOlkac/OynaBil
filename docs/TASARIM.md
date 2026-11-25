@@ -228,3 +228,7 @@ Kök boyut ekrana göre ölçeklenir: 1920x1080 tahtada 20 px, 1366x768 tahtada 
 
 - **Yedek sahne:** Her üç boyutlu sahnenin bir çizim (SVG) yedeği vardır. Ekran kartı olmayan ya da en düşük kademede de akmayan tahtada oyun yedek sahneyle sürer. Öğretmen üst çubuktaki **3D** düğmesiyle sahneyi kendisi de değiştirebilir.
 - **Durgunluk:** Soru sırasında sahnede sürekli hareket olmaz; kamera, panolar, bayraklar ve bulutlar yalnızca atış anında canlanır. Bayrak dururken de rüzgârın yönünü ve şiddetini gösterir.
+
+## Mobil prototip
+
+Mobil ekranlar (`/mobil`) aynı belirteçleri kullanır; oyun hissi için kurallar şunlardır: ekran başına tek ana eylem ve altın rengi yalnızca onun (`GameButton`, kalın kenarlı, basınca çöker); dokunulan her şey ekranın alt yarısında; altta dört sekme; her dokunuşta tık sesi ve kısa titreşim. Lig rozetleri kalkan biçimindedir ve `--color-lig-*` belirteçleriyle boyanır (bronz, gümüş, altın, platin, elmas, usta).

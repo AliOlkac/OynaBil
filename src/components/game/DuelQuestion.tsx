@@ -27,9 +27,12 @@ export function DuelQuestion({
   meta,
   timer,
   onAnswer,
+  only,
 }: {
   question: PlayableQuestion;
   teams: [Team, Team];
+  /** Yalnızca bu tarafın şıkları gösterilir (tek oyunculu mod: rakip bilgisayardır). */
+  only?: 0 | 1;
   duel: Duel;
   orders: [number[], number[]];
   /** Doğru cevap gösterilsin mi (karar verildi ya da süre doldu). */
@@ -48,8 +51,8 @@ export function DuelQuestion({
         </div>
         {timer}
       </div>
-      <div className="mt-3 grid grid-cols-1 gap-3 sm:min-h-0 sm:flex-1 sm:grid-cols-2 sm:gap-6">
-        {([0, 1] as const).map((side) => (
+      <div className={`mt-3 grid grid-cols-1 gap-3 sm:min-h-0 sm:flex-1 sm:gap-6 ${only === undefined ? "sm:grid-cols-2" : "min-h-0 flex-1"}`}>
+        {([0, 1] as const).filter((side) => only === undefined || side === only).map((side) => (
           <DuelSidePanel
             key={side}
             side={side}
@@ -59,10 +62,18 @@ export function DuelQuestion({
             order={orders[side]}
             revealed={revealed}
             disabled={disabled}
+            solo={only !== undefined}
             onAnswer={(option) => onAnswer(side, option)}
           />
         ))}
       </div>
+      {only !== undefined && !revealed && duel.winner === null && (
+        // Tek oyunculu modda rakibin durumu tek satırda görünür.
+        <p className="mt-2 flex items-center gap-2 px-1 text-base font-semibold text-ink-300">
+          <TeamEmblem color={teams[1 - only].color} className="size-5 shrink-0" />
+          {duel.locked[1 - only] ? `${teams[1 - only].name} yanlış cevap verdi. Sıra sende!` : `${teams[1 - only].name} düşünüyor…`}
+        </p>
+      )}
     </section>
   );
 }
@@ -75,8 +86,10 @@ function DuelSidePanel({
   order,
   revealed,
   disabled,
+  solo = false,
   onAnswer,
 }: {
+  solo?: boolean;
   side: 0 | 1;
   team: Team;
   question: PlayableQuestion;
@@ -125,7 +138,7 @@ function DuelSidePanel({
           )}
         </AnimatePresence>
       </div>
-      <div className="relative mt-2 grid min-h-0 flex-1 auto-rows-[minmax(3.25rem,1fr)] grid-cols-2 gap-2 sm:gap-3">
+      <div className={`relative mt-2 grid min-h-0 flex-1 auto-rows-[minmax(3.25rem,1fr)] gap-2 sm:gap-3 ${solo ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-2"}`}>
         {order.map((original, shown) => {
           const correct = original === question.correctIndex;
           const picked = duel.picked[side] === original;

@@ -1,4 +1,4 @@
-import { ArrowRight, Library } from "lucide-react";
+import { ArrowRight, Library, Smartphone } from "lucide-react";
 import Link from "next/link";
 import { ClientOnly } from "@/components/ClientOnly";
 import { ButtonLink } from "@/components/ui/Button";
@@ -25,7 +25,10 @@ export default async function Home() {
 
       <header className="relative flex h-20 shrink-0 items-center px-5 sm:px-10">
         <Logo className="text-2xl sm:text-3xl" />
-        <ButtonLink href="/sorular" variant="quiet" size="lg" className="ml-auto !px-4" icon={<Library className="size-6" />} aria-label="Soru bankası">
+        <ButtonLink href="/mobil" variant="quiet" size="lg" className="ml-auto !px-4" icon={<Smartphone className="size-6" />} aria-label="Mobil prototip">
+          <span className="hidden sm:inline">Mobil</span>
+        </ButtonLink>
+        <ButtonLink href="/sorular" variant="quiet" size="lg" className="!px-4" icon={<Library className="size-6" />} aria-label="Soru bankası">
           <span className="hidden sm:inline">Soru bankası</span>
         </ButtonLink>
       </header>

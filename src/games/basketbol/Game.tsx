@@ -19,6 +19,8 @@ import { sfx } from "@/lib/sound";
 import { basketbol } from "../registry";
 import { difficultyOf } from "../shared/difficulty";
 import { optionOrder } from "../shared/duel";
+import { BOT_SIDE, useBotAction, useSolo } from "../shared/solo";
+import { botRange, botShootAt } from "./bot";
 import { basketAudio } from "./audio";
 import { TEAM_STYLES } from "../teams";
 import type { GameProps, Team } from "../types";
@@ -39,7 +41,7 @@ function hydrate(s: BasketState): BasketState {
   return s;
 }
 
-export default function Basketbol({ config, deck, onRestart }: GameProps) {
+export default function Basketbol({ config, deck, onRestart, solo }: GameProps) {
   const settings = config.settings as unknown as BasketSettings;
   const teams = config.teams.slice(0, 2) as [Team, Team];
   const reducer = useMemo(() => basketReducer(deck), [deck]);
@@ -60,9 +62,31 @@ export default function Basketbol({ config, deck, onRestart }: GameProps) {
   const ticking = (s.phase === "question" && s.deadline !== null) || aiming;
   const now = useNow(ticking, aiming ? 100 : 200);
   const paused = s.phase === "question" && s.deadline === null && s.remaining !== null;
+  // Tek oyunculu modda sağdaki takımı bilgisayar oynar.
+  const botTurn = Boolean(solo) && s.shooter === BOT_SIDE;
+  useSolo(solo, {
+    seed: config.seed,
+    ready: s.phase === "ready",
+    start: () => {
+      basketAudio.say("baslangic", 0.3);
+      dispatch({ type: "start", now: clock() });
+    },
+    done: s.phase === "finished" && showResults,
+    result: () => ({ winner: s.winner === null || s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1, score: s.score, log: s.log, deck }),
+    asking: s.phase === "question" && !paused && s.duel.winner === null && !s.duel.locked[BOT_SIDE],
+    questionKey: String(s.asked),
+    question: q,
+    answer: (option) => dispatch({ type: "answer", side: BOT_SIDE, option, now: clock() }),
+  });
   const remaining = s.deadline !== null ? Math.max(0, s.deadline - now) : (s.remaining ?? settings.seconds * 1000);
-  const canPick = aiming && s.range === null && now - s.aimStart! >= AIM_LOCK_MS;
-  const canShoot = aiming && s.meterStart !== null && now - s.meterStart >= METER_LOCK_MS;
+  const canPick = !botTurn && aiming && s.range === null && now - s.aimStart! >= AIM_LOCK_MS;
+  const canShoot = !botTurn && aiming && s.meterStart !== null && now - s.meterStart >= METER_LOCK_MS;
+  const botAiming = botTurn && s.phase === "aim";
+  useBotAction(botAiming && s.range === null, `mesafe:${s.asked}`, { at: (s.aimStart ?? 0) + AIM_LOCK_MS + 900 }, () =>
+    dispatch({ type: "range", range: botRange(config.seed, String(s.asked)), now: clock() }),
+  );
+  const botAt = botAiming && s.range !== null && s.meterStart !== null ? botShootAt(config.seed, String(s.asked), solo!.bot.skill, s.meterStart, s.range, difficultyOf(settings)) : 0;
+  useBotAction(botAt > 0, `atis:${s.asked}`, { at: botAt }, () => dispatch({ type: "shoot", now: botAt }));
   const lastShot: Shot | undefined = s.shots[s.shots.length - 1];
   const fire = s.shooter !== null && onFire(s.shots, s.shooter);
 
@@ -125,10 +149,11 @@ export default function Basketbol({ config, deck, onRestart }: GameProps) {
     const onKey = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement || e.metaKey || e.ctrlKey) return;
       const key = e.key.toLowerCase();
-      if (s.phase === "aim" && (key === "2" || key === "3")) {
+      if (!botTurn && s.phase === "aim" && (key === "2" || key === "3")) {
         e.preventDefault();
         pick(Number(key) as Range);
       } else if ((key === " " || key === "enter") && s.phase === "aim") {
+        if (botTurn) return;
         e.preventDefault();
         shoot();
       } else if ((key === " " || key === "enter") && ((s.phase === "result" && shotDone >= s.shots.length) || s.phase === "reveal")) {
@@ -141,6 +166,7 @@ export default function Basketbol({ config, deck, onRestart }: GameProps) {
   });
 
   if (s.phase === "ready") {
+    if (solo) return null;
     return (
       <GameIntro
         game={basketbol}
@@ -156,6 +182,7 @@ export default function Basketbol({ config, deck, onRestart }: GameProps) {
   }
 
   if (s.phase === "finished" && showResults) {
+    if (solo) return null;
     return (
       <Results
         standings={([0, 1] as const)
@@ -198,7 +225,7 @@ export default function Basketbol({ config, deck, onRestart }: GameProps) {
     <div className="relative flex min-h-0 flex-1 flex-col">
       <div
         className={`relative mx-3 min-h-[12rem] shrink-0 overflow-hidden rounded-xl bg-ink-950 shadow-[var(--surface-light)] sm:mx-6 ${
-          expanded ? "h-[calc(100%-15rem)] sm:h-[calc(100%-9rem)]" : "h-[34%] sm:h-[42%]"
+          expanded ? "h-[calc(100%-17.5rem)] sm:h-[calc(100%-9rem)]" : "h-[34%] sm:h-[42%]"
         } ${canShoot ? "cursor-pointer" : ""}`}
         style={{ transition: `height var(--dur-scene) var(--ease-out)` }}
         onPointerDown={(e) => {
@@ -248,6 +275,7 @@ export default function Basketbol({ config, deck, onRestart }: GameProps) {
                 duel={s.duel}
                 orders={[optionOrder(q.id, config.seed, 0, q.options.length), optionOrder(q.id, config.seed, 1, q.options.length)]}
                 revealed={s.phase === "reveal"}
+                only={solo ? 0 : undefined}
                 disabled={paused}
                 onAnswer={(side, option) => dispatch({ type: "answer", side, option, now: clock() })}
                 meta={
@@ -300,7 +328,7 @@ export default function Basketbol({ config, deck, onRestart }: GameProps) {
               <TurnBadge team={shooter} label={fire ? "Ateşli el" : "Atışta"} fire={fire} />
               {s.range === null ? (
                 <>
-                  <p className="min-w-[12rem] flex-1 text-lg font-bold sm:text-2xl">Nereden atacaksın?</p>
+                  <p className="min-w-0 flex-1 text-lg font-bold sm:min-w-[12rem] sm:text-2xl">{botTurn ? "Rakip mesafesini seçiyor…" : "Nereden atacaksın?"}</p>
                   {([2, 3] as const).map((r) => (
                     <button
                       key={r}
@@ -311,7 +339,7 @@ export default function Basketbol({ config, deck, onRestart }: GameProps) {
                         e.preventDefault();
                         pick(r);
                       }}
-                      className="pressable flex h-20 flex-1 shrink-0 flex-col items-center justify-center rounded-xl px-6 text-ink-950 transition-opacity disabled:opacity-40 sm:h-24 sm:flex-none"
+                      className="pressable flex h-20 flex-1 basis-[40%] flex-col items-center justify-center rounded-xl px-3 text-ink-950 sm:shrink-0 sm:basis-auto sm:px-6 transition-opacity disabled:opacity-40 sm:h-24 sm:flex-none"
                       style={{ background: r === 3 ? "var(--color-kehribar)" : TEAM_STYLES[shooter.color].base, "--edge": r === 3 ? "var(--color-kehribar-deep)" : TEAM_STYLES[shooter.color].deep } as CSSProperties}
                     >
                       <span className="text-3xl font-bold sm:text-4xl">{r} sayı</span>
@@ -322,7 +350,7 @@ export default function Basketbol({ config, deck, onRestart }: GameProps) {
               ) : (
                 <>
                   <div className="min-w-[14rem] flex-1">
-                    <p className="mb-2 text-lg font-bold sm:text-xl">İğne yeşile gelince AT!</p>
+                    <p className="mb-2 text-lg font-bold sm:text-xl">{botTurn ? "Rakip atıyor…" : "İğne yeşile gelince AT!"}</p>
                     <PowerMeter range={s.range} meterStart={s.meterStart!} fire={fire} reducedMotion={reducedMotion} difficulty={difficultyOf(settings)} />
                   </div>
                   <button
@@ -334,7 +362,7 @@ export default function Basketbol({ config, deck, onRestart }: GameProps) {
                       shoot();
                     }}
                     className="pressable flex h-20 w-full shrink-0 items-center justify-center gap-3 rounded-xl px-10 text-4xl font-bold text-ink-950 transition-opacity disabled:opacity-40 sm:h-24 sm:w-auto sm:text-5xl"
-                    style={{ background: TEAM_STYLES[shooter.color].base, "--edge": TEAM_STYLES[shooter.color].deep } as CSSProperties}
+                    style={{ display: botTurn ? "none" : undefined, background: TEAM_STYLES[shooter.color].base, "--edge": TEAM_STYLES[shooter.color].deep } as CSSProperties}
                   >
                     AT!
                   </button>
