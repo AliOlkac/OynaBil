@@ -1,4 +1,4 @@
-import type { Kick } from "../logic";
+import { BALL_X, type Kick } from "../logic";
 import { BALL_R, BOARD_H, BOARD_Z, GOAL_H, GOAL_HALF, guessPoint, hitsBar, KEEPER_HIP_Y, KEEPER_REACH, KEEPER_Z, KICKER_READY, KICKER_STRIKE, NET_DEPTH_BOTTOM, NET_DEPTH_TOP, SPOT, STAND_Z, standHeightAt, type V3 } from "./world";
 
 /**
@@ -125,6 +125,17 @@ export function planKick(kick: Kick, index: number): KickPlan {
     vx = d * 5.2;
     vy = 2.4 + 1.4 * (1 - clamp01(kick.y));
     vz = 5.4;
+  } else if (kick.result === "gol" && kick.post) {
+    // Direkten içeri: top direğe değip kalenin içine, ağa doğru seker.
+    if (Math.abs(kick.x) < 1 - BALL_X - 1e-6) {
+      vx *= 0.3;
+      vy = -3.4;
+      vz = -4.6;
+    } else {
+      vx = -d * 3.4;
+      vy = 0.8;
+      vz = -6.2;
+    }
   } else if (kick.result === "direk") {
     if (hitsBar(kick.x, kick.y)) {
       const over = kick.y > 1;

@@ -7,11 +7,11 @@ import type { AnswerLog, Team } from "../types";
  * Basketbol oyun mantığı.
  *
  * İki takıma aynı soru sorulur (düello sorusu). İlk doğru cevaplayan takım atış hakkı kazanır ve
- * atışın mesafesini seçer: yakından 2 sayı ya da üç sayı çizgisinin dışından 3 sayı. Ardından güç
- * çubuğu inip çıkar; öğrenci çubuk yeşil bölgedeyken "AT!" der. Yeşilin ortası tertemiz basket,
- * kenarı çemberden içeri, biraz dışı çemberden dönen top, çok dışı havaya giden ya da panyadan seken
- * toptur. Üçlükte yeşil bölge daha dar, çubuk daha hızlıdır. Üst üste iki basket atan takımın eli
- * "ateş alır": sıradaki atışında yeşil bölge genişler.
+ * atışın mesafesini seçer: yakından 2 sayı ya da üç sayı çizgisinin dışından 3 sayı. Ardından topu
+ * sapan gibi geri çeker: çekişin uzunluğu gücü, yönü açıyı verir. Top gerçek bir yay çizer; çemberin
+ * ortasına inen tertemiz basket, kenarına inen çemberden içeri, biraz dışı çemberden dönen top, çok kısası
+ * havaya giden, çok uzunu panyadan seken toptur. Dik inen top daha kolay girer. Üst üste iki basket atan
+ * takımın eli "ateş alır": sıradaki atışında isabet penceresi genişler.
  *
  * Sorular bitince çok sayı atan kazanır; eşitlikte uzatmaya geçilir, ilk basketi atan kazanır.
  * Saf reducer: zaman eylemle gelir.
@@ -19,7 +19,7 @@ import type { AnswerLog, Team } from "../types";
 
 /** Doğru cevaptan sonra oyuncu topu alır; bu sürede mesafe seçilemez (çift dokunuş). */
 export const AIM_LOCK_MS = 700;
-/** Mesafe seçildikten sonra güç çubuğu bu kadar bekler, sonra inip çıkmaya başlar. */
+/** Mesafe seçildikten sonra oyuncu atış noktasına geçer; bu sürede atış alınmaz. */
 export const METER_LOCK_MS = 500;
 /** Uzatmada en fazla bu kadar soru sorulur; yine eşitse berabere biter. */
 export const OVERTIME_MAX = 6;
@@ -29,16 +29,32 @@ export type ShotResult = "temiz" | "cember" | "kacti-on" | "kacti-arka" | "kisa"
 
 export const RESULT_MADE: Record<ShotResult, boolean> = { temiz: true, cember: true, "kacti-on": false, "kacti-arka": false, kisa: false, panya: false };
 
-/** Güç çubuğunun bir aşağı-yukarı turu (ms). Üçlükte çubuk daha hızlı gider. */
-export const METER_PERIOD: Record<Range, number> = { 2: 1_900, 3: 1_450 };
-/** Yeşil bölgenin ortası ve yarı genişliği (güç ölçeğinde, 0..1). */
-export const SWEET = 0.72;
-export const ZONE_HALF: Record<Range, number> = { 2: 0.1, 3: 0.065 };
-/** Ateşli elde yeşil bölge bu kadar genişler. */
+/** Ateşli elde isabet penceresi bu kadar genişler. */
 export const FIRE_BONUS = 1.4;
-/** Zorluğa göre (kolay, normal, zor): çubuğun hızı ve yeşil bölgenin genişliği, kolaya göre kat. */
-export const METER_SPEED = [1, 1.2, 1.4] as const;
+/** Zorluğa göre (kolay, normal, zor) isabet penceresinin genişliği, kolaya göre kat. */
 export const ZONE_SCALE = [1, 0.8, 0.65] as const;
+
+/**
+ * Atışın fiziği (metre, saniye). Top şutçunun başının üstünden çıkar, çember 2,75 m yükseklikte ve
+ * atış noktasından `DIST` kadar ileridedir. Top, çember yüksekliğine inerken çemberin ortasına ne kadar
+ * yakınsa o kadar iyi: tam ortası tertemiz, kenarı çemberden içeri, biraz dışı çemberden döner.
+ */
+export const GRAVITY = 9.8;
+export const RELEASE_H = 2.17;
+export const HOOP_H = 2.75;
+export const DIST: Record<Range, number> = { 2: 3.68, 3: 6.43 };
+/** Çıkış hızı (m/sn): çekiş gücü 0 iken ve 1 iken. */
+export const SPEED = { min: 3.5, max: 10.5 } as const;
+export const ANGLE = { min: (25 * Math.PI) / 180, max: (75 * Math.PI) / 180 } as const;
+/** İsabet pencereleri (kolay zorlukta; çemberin ortasından metre): tertemiz, çemberden içeri, çemberden döner. */
+export const WINDOW = { temiz: 0.22, cember: 0.45, kacti: 0.9 } as const;
+/** Yolun gösterilen kısmı (çembere olan mesafenin oranı): gerisini oyuncu kestirir. */
+export const PREVIEW = 0.45;
+/** Bu kadar çekilmeden bırakılan top atılmaz (yanlış dokunuş). */
+export const MIN_PULL = 0.12;
+
+/** Atışın çekilişi: açı (radyan, yataydan yukarı) ve güç (0..1). */
+export type Launch = { angle: number; power: number };
 
 export type BasketSettings = {
   /** Oyundaki soru sayısı; her soruda en fazla bir atış yapılır. */
@@ -52,7 +68,9 @@ export type BasketSettings = {
 export type Shot = {
   side: 0 | 1;
   range: Range;
-  /** Atış anında güç çubuğunun yeri (0..1). */
+  /** Atışın çekilişi (eski kayıtlarda yok). */
+  launch?: Launch;
+  /** Topun çember yüksekliğine indiğinde çemberin ortasından uzaklığı (metre; eksi kısa). */
   power: number;
   onFire: boolean;
   result: ShotResult;
@@ -90,19 +108,41 @@ export type BasketAction =
   | { type: "answer"; side: 0 | 1; option: number; now: number }
   | { type: "timeout"; now: number }
   | { type: "range"; range: Range; now: number }
-  | { type: "shoot"; now: number }
+  | { type: "shoot"; launch: Launch; now: number }
   | { type: "next"; now: number }
   | { type: "pause"; now: number }
   | { type: "resume"; now: number };
 
 // ---- saf yardımcılar (sahne ve ekran da kullanır) ----
 
-/** Güç çubuğunun yeri: METER_LOCK_MS sonra 0'dan başlar, bir turda 1'e çıkıp geri iner. */
-export function meterAt(elapsedMs: number, range: Range, d: Difficulty = 1): number {
-  const t = Math.max(0, elapsedMs - METER_LOCK_MS);
-  const period = METER_PERIOD[range] / byDifficulty(d, METER_SPEED);
-  const f = (t % period) / period;
-  return f < 0.5 ? f * 2 : 2 - f * 2;
+export const clampLaunch = (l: Launch): Launch => ({
+  angle: Math.min(ANGLE.max, Math.max(ANGLE.min, l.angle)),
+  power: Math.min(1, Math.max(0, l.power)),
+});
+
+export function velocityOf(launch: Launch): { vx: number; vy: number } {
+  const l = clampLaunch(launch);
+  const v = SPEED.min + (SPEED.max - SPEED.min) * l.power;
+  return { vx: v * Math.cos(l.angle), vy: v * Math.sin(l.angle) };
+}
+
+/** Topun, çembere olan yatay mesafenin `frac` oranındaki yüksekliği (metre). */
+export function ballHeight(launch: Launch, range: Range, frac: number): number {
+  const { vx, vy } = velocityOf(launch);
+  const t = (frac * DIST[range]) / vx;
+  return RELEASE_H + vy * t - (GRAVITY / 2) * t * t;
+}
+
+/**
+ * Top çember yüksekliğine inerken nerede: çemberin ortasından uzaklık (metre; eksi kısa, artı uzun) ve
+ * iniş açısı. Top çember yüksekliğine hiç çıkmıyorsa `null`.
+ */
+export function rimPass(launch: Launch, range: Range): { miss: number; entry: number } | null {
+  const { vx, vy } = velocityOf(launch);
+  const disc = vy * vy - 2 * GRAVITY * (HOOP_H - RELEASE_H);
+  if (disc < 0) return null;
+  const t = (vy + Math.sqrt(disc)) / GRAVITY;
+  return { miss: vx * t - DIST[range], entry: Math.atan2(GRAVITY * t - vy, vx) };
 }
 
 /** Takımın son iki atışı basketse eli ateş almıştır. */
@@ -111,19 +151,34 @@ export function onFire(shots: Shot[], side: 0 | 1): boolean {
   return own.length >= 2 && own.slice(-2).every((s) => RESULT_MADE[s.result]);
 }
 
-export function zoneHalf(range: Range, fire: boolean, d: Difficulty = 1): number {
-  return ZONE_HALF[range] * (fire ? FIRE_BONUS : 1) * byDifficulty(d, ZONE_SCALE);
+/** İsabet penceresinin ölçeği: dik inen top çembere daha kolay girer, yatık inen zor. */
+export function windowScale(entry: number, fire: boolean, d: Difficulty = 1): number {
+  const steep = Math.min(1.15, Math.max(0.5, Math.sin(entry) / Math.sin(Math.PI / 4)));
+  return steep * (fire ? FIRE_BONUS : 1) * byDifficulty(d, ZONE_SCALE);
 }
 
-/** Atışın sonucu güç çubuğunun yerinden çıkar: yeşilin ortası tertemiz, kenarı çemberden içeri. */
-export function shotResult(power: number, range: Range, fire = false, level: Difficulty = 1): ShotResult {
-  const w = zoneHalf(range, fire, level);
-  const d = power - SWEET;
-  const a = Math.abs(d);
-  if (a <= w * 0.4) return "temiz";
-  if (a <= w) return "cember";
-  if (a <= w * 1.9) return d < 0 ? "kacti-on" : "kacti-arka";
-  return d < 0 ? "kisa" : "panya";
+/** Atışın sonucu topun çembere göre geçtiği yerden çıkar. */
+export function shotResult(launch: Launch, range: Range, fire = false, level: Difficulty = 1): { result: ShotResult; miss: number } {
+  const pass = rimPass(launch, range);
+  if (!pass) return { result: "kisa", miss: -DIST[range] };
+  const k = windowScale(pass.entry, fire, level);
+  const a = Math.abs(pass.miss);
+  const result: ShotResult =
+    a <= WINDOW.temiz * k ? "temiz" : a <= WINDOW.cember * k ? "cember" : a <= WINDOW.kacti * k ? (pass.miss < 0 ? "kacti-on" : "kacti-arka") : pass.miss < 0 ? "kisa" : "panya";
+  return { result, miss: pass.miss };
+}
+
+/** Verilen açıyla topu çemberin ortasına (`target` kadar kayık) indiren güç; ulaşılamıyorsa en yakını. */
+export function powerFor(angle: number, range: Range, target = 0): number {
+  let lo = 0;
+  let hi = 1;
+  for (let i = 0; i < 30; i++) {
+    const mid = (lo + hi) / 2;
+    const pass = rimPass({ angle, power: mid }, range);
+    if (!pass || pass.miss < target) lo = mid;
+    else hi = mid;
+  }
+  return (lo + hi) / 2;
 }
 
 export function createBasket(teams: [Team, Team], settings: BasketSettings): BasketState {
@@ -227,11 +282,11 @@ export function basketReducer(deck: PlayableQuestion[]) {
         if (s.phase !== "aim" || s.shooter === null || s.range === null || s.meterStart === null) return s;
         if (a.now - s.meterStart < METER_LOCK_MS) return s;
         const fire = onFire(s.shots, s.shooter);
-        const d = difficultyOf(s.settings);
-        const power = meterAt(a.now - s.meterStart, s.range, d);
-        const result = shotResult(power, s.range, fire, d);
+        if (!Number.isFinite(a.launch?.angle) || !Number.isFinite(a.launch?.power) || a.launch.power < MIN_PULL) return s;
+        const launch = clampLaunch(a.launch);
+        const { result, miss } = shotResult(launch, s.range, fire, difficultyOf(s.settings));
         const points = RESULT_MADE[result] ? s.range : 0;
-        const shot: Shot = { side: s.shooter, range: s.range, power, onFire: fire, result, points, at: a.now, questionId: q?.id ?? "" };
+        const shot: Shot = { side: s.shooter, range: s.range, launch, power: miss, onFire: fire, result, points, at: a.now, questionId: q?.id ?? "" };
         const score = [...s.score] as [number, number];
         score[s.shooter] += points;
         const next: BasketState = { ...s, phase: "result", score, shots: [...s.shots, shot], aimStart: null, meterStart: null };

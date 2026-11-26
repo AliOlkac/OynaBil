@@ -6,7 +6,7 @@ import { cssColor } from "@/lib/color";
 import { sfx } from "@/lib/sound";
 import { fmt, reach, type Vec } from "../../shared/skeleton";
 import { penaltyAudio } from "../audio";
-import { classify, KICK_LOCK_MS, type Kick, type PenaltyState } from "../logic";
+import { classify, GOAL_KIND_TEXT, goalKind, KICK_LOCK_MS, type Kick, type PenaltyState } from "../logic";
 import { DUST_COUNT, netGrid, SceneArt, type ArtTeam } from "./art";
 import {
   ballAt,
@@ -480,6 +480,12 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
             const d = Math.sign(k.x) || 1;
             if (k.result === "gol") {
               anim.loose = { p: { ...anim.target }, v: { x: (anim.target.x - SPOT.x) * 0.25, y: (anim.target.y - SPOT.y) * 0.1 }, r: BALL_FAR, back: true, spin: 600 };
+              if (k.post) {
+                // Direkten içeri: önce direk çınlar ve titrer, top ağa seker.
+                st.postHit = { start: performance.now() };
+                st.shake = 8;
+                penaltyAudio.post();
+              }
               st.bulge = { at: toNetBack(anim.target), start: time };
               st.celebrate = { side: k.side, start: time };
               penaltyAudio.net();
@@ -554,8 +560,11 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
           if (!anim.bannered && tau > CONTACT + 0.16) {
             anim.bannered = true;
             const color = k.result === "gol" ? teamsRef.current[k.side].base : k.result === "kurtardi" ? "var(--color-kehribar)" : "var(--color-cream)";
-            bannerText!.textContent = { gol: "GOL!", kurtardi: "KURTARDI!", direk: "DİREK!", aut: "AUT!" }[k.result];
+            const kind = goalKind(k);
+            bannerText!.textContent = kind ? GOAL_KIND_TEXT[kind] : { gol: "GOL!", kurtardi: "KURTARDI!", direk: "DİREK!", aut: "AUT!" }[k.result];
             bannerText!.setAttribute("fill", color);
+            // Uzun yazı (DİREKTEN GOL!) sahneye sığsın.
+            bannerText!.setAttribute("font-size", kind ? "96" : "150");
             st.banner = { start: performance.now() };
           }
         }

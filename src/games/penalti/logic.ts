@@ -34,11 +34,16 @@ export const BALL_Y = 0.067;
  */
 export const SCATTER = [0, 0.09, 0.15] as const;
 /**
- * Direğe yakın şut riski: topun kenarı direğe (ya da üst direğe) bu kadar yaklaşırsa top direğe çarpar.
- * Köşeye çok yakın nişan almak artık ödüllü değil, risklidir.
+ * Direğe yakın şut: topun kenarı direğe (ya da üst direğe) bu kadar yaklaşırsa top direğe değer. Payı
+ * dardır; değen topun yarıdan çoğu kalenin içindeyse direkten içeri seker (direkten gol), değilse döner.
  */
-export const POST_BAND = 0.075;
-export const BAR_BAND = 0.1;
+export const POST_BAND = 0.035;
+export const BAR_BAND = 0.045;
+/**
+ * Doksan: üst köşeye giden top. Bu bölgeye isabetli (zayıf olmayan) vurulan şuta kaleci doğru yöne atlasa
+ * da yetişemez; köşeyi bulmak ödüllüdür, direk payı ise risktir.
+ */
+export const TOP_CORNER = { x: 0.68, y: 0.72 } as const;
 
 /** Güç çubuğu: nişandan sonra bekleyip inip çıkar. Yer, oyun mantığıyla ekranda aynı fonksiyondan çizilir. */
 export const POWER_LOCK_MS = 450;
@@ -108,6 +113,8 @@ export type Kick = {
   third: Third;
   keeper: Third;
   result: KickResult;
+  /** Top direğe (ya da üst direğe) değip içeri girdi. */
+  post?: boolean;
   at: number;
   questionId: string;
 };
@@ -158,6 +165,22 @@ export function classify(x: number, y: number): "ic" | "direk" | "aut" {
   return "aut";
 }
 
+/** Direğe değen top kalenin içine mi seker: topun yarıdan çoğu kale ağzının içindeyse evet. */
+export function postIn(x: number, y: number): boolean {
+  return classify(x, y) === "direk" && y >= 0 && Math.abs(x) <= 1 - BALL_X / 2 && y <= 1 - BALL_Y / 2;
+}
+
+/** Top doksana mı gidiyor (üst köşe). */
+export const isTopCorner = (x: number, y: number) => Math.abs(x) >= TOP_CORNER.x && y >= TOP_CORNER.y;
+
+/** Golün özel adı: direkten ya da doksandan girdiyse sahne ve sonuç kartı bunu yazar. */
+export function goalKind(kick: Pick<Kick, "result" | "x" | "y" | "post">): "direkten" | "doksan" | null {
+  if (kick.result !== "gol") return null;
+  if (kick.post) return "direkten";
+  return isTopCorner(kick.x, kick.y) ? "doksan" : null;
+}
+export const GOAL_KIND_TEXT = { direkten: "DİREKTEN GOL!", doksan: "DOKSANA GOL!" } as const;
+
 export function thirdOf(x: number): Third {
   return x < -1 / 3 ? "sol" : x > 1 / 3 ? "sag" : "orta";
 }
@@ -194,7 +217,9 @@ export function keeperFor(seed: number, kickIndex: number, habits: readonly Thir
 }
 
 /** Kaleci topa yetişir mi: top atladığı üçlüdeyse ya da sınırına `KEEPER_REACH` kadar yakınsa. */
-export function keeperReaches(x: number, keeper: Third, extraReach = 0): boolean {
+export function keeperReaches(x: number, keeper: Third, extraReach = 0, y = 0): boolean {
+  // Doksana isabetli giden topa kaleci yetişemez; zayıf vuruşta yetişir.
+  if (extraReach === 0 && isTopCorner(x, y)) return false;
   const [from, to] = ZONE[keeper];
   const reach = KEEPER_REACH + extraReach;
   return x >= from - reach && x <= to + reach;
@@ -218,8 +243,9 @@ export function scatterFor(seed: number, kickIndex: number, d: Difficulty): { dx
 
 export function kickResult(x: number, y: number, keeper: Third, extraReach = 0): KickResult {
   const place = classify(x, y);
+  if (place === "direk" && postIn(x, y)) return keeperReaches(x, keeper, extraReach, y) ? "kurtardi" : "gol";
   if (place !== "ic") return place;
-  return keeperReaches(x, keeper, extraReach) ? "kurtardi" : "gol";
+  return keeperReaches(x, keeper, extraReach, y) ? "kurtardi" : "gol";
 }
 
 export function createPenalty(teams: [Team, Team], settings: PenaltySettings, seed: number): PenaltyState {
@@ -327,15 +353,22 @@ export function penaltyReducer(deck: PlayableQuestion[]) {
         const keeper = keeperFor(s.seed, s.kicks.length, habits);
         let { x, y } = shotFrom(s.aim, power);
         const result = kickResult(x, y, keeper, weakReach(power));
+        const post = result === "gol" && postIn(x, y);
         // Direğe çarpan top sahnede gerçekten direğe değsin: yeri direğin çizgisine çekilir.
-        if (result === "direk") {
+        if (post) {
+          if (y > 1 - BALL_Y - BAR_BAND && Math.abs(x) <= 1 - BALL_X - POST_BAND) y = 1 - BALL_Y;
+          else {
+            x = Math.sign(x || 1) * (1 - BALL_X);
+            y = Math.min(y, 0.92);
+          }
+        } else if (result === "direk") {
           if (y > 1 - BALL_Y - BAR_BAND && Math.abs(x) <= 1 - BALL_X) y = 1;
           else {
             x = Math.sign(x || 1);
             y = Math.min(y, 0.92);
           }
         }
-        const kick: Kick = { side: s.shooter, x, y, aimX: s.aim.x, aimY: s.aim.y, power, third: thirdOf(x), keeper, result, at: a.now, questionId: q?.id ?? "" };
+        const kick: Kick = { side: s.shooter, x, y, aimX: s.aim.x, aimY: s.aim.y, power, third: thirdOf(x), keeper, result, ...(post ? { post } : {}), at: a.now, questionId: q?.id ?? "" };
         const goals = [...s.goals] as [number, number];
         if (result === "gol") goals[s.shooter] += 1;
         const next: PenaltyState = { ...s, phase: "result", goals, kicks: [...s.kicks, kick], kickStart: null, aim: null };

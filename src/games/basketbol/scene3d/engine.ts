@@ -9,7 +9,7 @@ import { createFrameWatch, type Tier } from "../../shared/stage3d/support";
 import { basketAudio } from "../audio";
 import { RESULT_MADE, type Shot, type ShotResult } from "../logic";
 import type { BasketSceneInput, SceneTeam } from "../scene/types";
-import { ballAt, ballSpin, BALL_R, BOARD_BOTTOM, BOARD_H, BOARD_W, BOARD_Z, GATHER, LAND, NET_DEPTH, planShot, RELEASE, RIM_R, RIM_Y, shooterAt, spotFor, THREE_POINT, type ShotPlan, type V3 } from "../timeline";
+import { ballAt, ballSpin, BALL_R, BOARD_BOTTOM, BOARD_H, BOARD_W, BOARD_Z, GATHER, LAND, NET_DEPTH, planShot, previewPath, RELEASE, releasePoint, RIM_R, RIM_Y, shooterAt, spotFor, THREE_POINT, type ShotPlan, type V3 } from "../timeline";
 
 /**
  * Basketbol sahnesinin üç boyutlu motoru: okul spor salonu, parke saha, pota ve file, tribündeki
@@ -362,6 +362,15 @@ export function createBasketEngine(o: EngineOptions): { dispose: () => void } {
     return s;
   });
   const trailPos: THREE.Vector3[] = [];
+  // Çekiş sürerken topun gideceği yolun başı: küçük, parlak noktalar.
+  const dotMat = new THREE.MeshBasicMaterial({ color: tokenColor("var(--color-cream)"), fog: false });
+  const dotGeo = new THREE.SphereGeometry(0.05, 10, 8);
+  const dots = Array.from({ length: 9 }, () => {
+    const d = new THREE.Mesh(dotGeo, dotMat);
+    d.visible = false;
+    scene.add(d);
+    return d;
+  });
   const sparks = new ChipPool(60, 7);
   scene.add(sparks.mesh);
   const blobMat = new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.28, depthWrite: false });
@@ -670,6 +679,19 @@ export function createBasketEngine(o: EngineOptions): { dispose: () => void } {
         m.headPitch = -0.25 * p.arms;
         m.mouth = "focus";
         holding = tau < RELEASE;
+      } else if (isShooter && aiming && inp.pull && spotNow) {
+        // Topu sapan gibi geri çeker: top başının üstünde, çekiş arttıkça biraz geride ve aşağıda.
+        m.mouth = "focus";
+        const r = releasePoint(spotNow, KID);
+        const back = inp.pull.power * 0.35;
+        const d = Math.hypot(spotNow.x, spotNow.z) || 1;
+        holding = true;
+        ballPos.set(r.x + (spotNow.x / d) * back, r.y - 0.12 - back * 0.5, r.z + (spotNow.z / d) * back);
+        m.handL = { x: -0.1, y: m.hip + 1.0 * KID - back * 0.5, z: 0.2 - back };
+        m.handR = { x: 0.06, y: m.hip + 1.02 * KID - back * 0.5, z: 0.17 - back };
+        m.lean = -0.06 - back * 0.2;
+        m.headPitch = -0.3;
+        fig.poseBody(m, t);
       } else if (isShooter && aiming) {
         // Topu sektirir: mesafe seçilince atış noktasında, seçilmeden önce bulunduğu yerde.
         m.mouth = "focus";
@@ -768,11 +790,29 @@ export function createBasketEngine(o: EngineOptions): { dispose: () => void } {
       s.material.color.copy(tokenColor(fire ? "var(--color-ates)" : "var(--color-cream)"));
     });
     sparks.update(dt);
+    const path = aiming && !plan && inp.pull && inp.range ? previewPath(inp.pull, inp.range, inp.shots.length, KID, dots.length) : null;
+    if (path) dotMat.color.copy(tokenColor(teams[inp.shooter!].base));
+    dots.forEach((d, i) => {
+      d.visible = !!path;
+      if (path) d.position.set(path[i].x, path[i].y, path[i].z);
+    });
 
     // -- kamera --
     let shotCam: CamShot = QUESTION_SHOT;
     let rate = 2.4;
-    if (aiming && !plan) {
+    if (aiming && !plan && spotNow) {
+      // Mesafe seçilince kamera çapraz yandan bakar: topun yayı ve potaya uzaklık birlikte okunur.
+      const d = Math.hypot(spotNow.x, spotNow.z) || 1;
+      const dir = { x: spotNow.x / d, z: spotNow.z / d };
+      const side = spotNow.x > 0.01 ? -1 : 1;
+      const wide = st.aspect < 1.2;
+      shotCam = {
+        pos: { x: spotNow.x * 0.5 + dir.x * 3 + dir.z * side * 6.5, y: 2.4, z: spotNow.z * 0.5 + dir.z * 3 - dir.x * side * 6.5 },
+        look: { x: spotNow.x * 0.48, y: RIM_Y - 0.35, z: spotNow.z * 0.48 },
+        fitW: wide ? d + 2.2 : d + 5,
+        fitH: 4.4,
+      };
+    } else if (aiming && !plan) {
       const sp = spotNow ?? { x: 0, y: 0, z: 4.2 };
       const d = Math.hypot(sp.x, sp.z) || 1;
       const back = spotNow ? 3.4 : 5;

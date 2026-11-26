@@ -607,6 +607,12 @@ export function createPenaltyEngine(o: EngineOptions): { dispose: () => void } {
         o.handlers().onContact(plan.index);
         if (k.result === "gol") {
           st.celebrate = { side: k.side, start: time };
+          if (k.post) {
+            // Direkten içeri: direk çınlar ve titrer, top ağa seker.
+            st.postHit = { start: st.clock };
+            st.shake = 0.14;
+            penaltyAudio.post();
+          }
           penaltyAudio.crowdGoal();
           penaltyAudio.say("gol", 0.15);
           if (!quiet) {

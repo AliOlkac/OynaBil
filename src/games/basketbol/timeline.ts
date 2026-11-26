@@ -1,4 +1,4 @@
-import type { Range, Shot, ShotResult } from "./logic";
+import { ballHeight, PREVIEW, RELEASE_H, velocityOf, type Launch, type Range, type Shot, type ShotResult } from "./logic";
 
 /**
  * Basketbol sahnesinin ölçüleri (metre) ve atışın zaman çizelgesi. Saf hesap, three.js içermez;
@@ -43,6 +43,19 @@ export function releasePoint(spot: V3, scale: number): V3 {
   return { x: spot.x - (spot.x / d) * 0.22, y: 2.05 * scale + 0.32, z: spot.z - (spot.z / d) * 0.22 };
 }
 
+/**
+ * Çekiş sürerken gösterilen yolun başı: elden çıkış noktasından potaya doğru, yolun `PREVIEW` kadarı.
+ * Yükseklik oyun mantığının fiziğinden gelir; gerisini oyuncu kestirir.
+ */
+export function previewPath(launch: Launch, range: Range, index: number, scale = 0.9, count = 9): V3[] {
+  const r = releasePoint(spotFor(range, index), scale);
+  const lift = r.y - RELEASE_H;
+  return Array.from({ length: count }, (_, i) => {
+    const f = ((i + 1) / count) * PREVIEW;
+    return { x: r.x * (1 - f), y: ballHeight(launch, range, f) + lift, z: r.z * (1 - f) };
+  });
+}
+
 /** Topun bir bölümü: `from` noktasından `to` noktasına `dur` saniyede, yerçekimiyle uçan yay. */
 type Segment = { t0: number; dur: number; from: V3; to: V3; spin: number };
 export type ShotEvent = { t: number; kind: "release" | "rim" | "board" | "net" | "floor" | "made"; strength: number };
@@ -73,16 +86,19 @@ const add = (a: V3, b: V3): V3 => ({ x: a.x + b.x, y: a.y + b.y, z: a.z + b.z })
 const v = (x: number, y: number, z: number): V3 => ({ x, y, z });
 
 /** İki nokta arası yayın süresi: uzaklık arttıkça uzar. */
-const flightTime = (a: V3, b: V3) => 0.78 + Math.hypot(b.x - a.x, b.z - a.z) * 0.085;
+const baseFlight = (a: V3, b: V3) => 0.78 + Math.hypot(b.x - a.x, b.z - a.z) * 0.085;
 
 /**
  * Atışın bütün yolu. Sonuç oyun mantığından gelir; sahne yalnızca onu inandırıcı biçimde oynatır:
  * tertemiz basket çembere değmeden fileye, çemberden giren top bir iki sekip içeri, kaçan top çemberden
  * ya da panyadan dışarı.
  */
-export function planShot(shot: Pick<Shot, "range" | "result">, index: number, scale = 0.9): ShotPlan {
+export function planShot(shot: Pick<Shot, "range" | "result" | "launch">, index: number, scale = 0.9): ShotPlan {
   const spot = spotFor(shot.range, index);
   const r = releasePoint(spot, scale);
+  // Çekilen atışta topun ilk yayı çekişin hızıyla uçar: yatay hız sabit, süre mesafeden çıkar.
+  const vx = shot.launch ? velocityOf(shot.launch).vx : 0;
+  const flightTime = (a: V3, b: V3) => (vx > 0 ? Math.min(2.4, Math.max(0.5, Math.hypot(b.x - a.x, b.z - a.z) / vx)) : baseFlight(a, b));
   const segs: Segment[] = [];
   const events: ShotEvent[] = [{ t: RELEASE, kind: "release", strength: 1 }];
   let t = RELEASE;

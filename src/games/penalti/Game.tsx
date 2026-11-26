@@ -25,7 +25,7 @@ import { TEAM_STYLES } from "../teams";
 import type { GameProps, Team } from "../types";
 import { difficultyOf } from "../shared/difficulty";
 import { PowerBar } from "./PowerBar";
-import { createPenalty, KICK_LOCK_MS, penaltyReducer, SCATTER, type Kick, type KickResult, type PenaltyAction, type PenaltySettings, type PenaltyState } from "./logic";
+import { createPenalty, goalKind, KICK_LOCK_MS, penaltyReducer, SCATTER, type Kick, type KickResult, type PenaltyAction, type PenaltySettings, type PenaltyState } from "./logic";
 import type { ArtTeam } from "./scene/art";
 import type { SceneInput } from "./scene/PenaltyScene";
 import { PenaltyStage, preloadPenaltyStage } from "./scene3d/PenaltyStage";
@@ -512,7 +512,8 @@ function TurnBadge({ team, label }: { team: Team; label: string }) {
 function ResultBadge({ kick, team }: { kick: Kick; team: Team }) {
   const goal = kick.result === "gol";
   const save = kick.result === "kurtardi";
-  const text = RESULT_TEXT[kick.result];
+  const kind = goalKind(kick);
+  const text = kind === "direkten" ? { title: "Direkten gol!", detail: "Top direği öpüp ağlara gitti." } : kind === "doksan" ? { title: "Doksana gol!", detail: "Kaleci köşeye yetişemedi." } : RESULT_TEXT[kick.result];
   return (
     <motion.div
       className="flex shrink-0 items-center gap-3 rounded-xl py-2 pr-6 pl-4"

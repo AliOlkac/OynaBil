@@ -15,6 +15,8 @@ import {
   BALL_X,
   BALL_Y,
   BAR_BAND,
+  goalKind,
+  postIn,
   POST_BAND,
   POWER_LOCK_MS,
   POWER_PERIOD_MS,
@@ -89,8 +91,11 @@ describe("Penaltı: kale ve kaleci", () => {
     expect(keeperFor(5, 3)).toBe(keeperFor(5, 3));
   });
 
-  it("kaleci topun gittiği üçlüye atlarsa yükseklik ne olursa olsun kurtarır", () => {
-    expect(kickResult(-0.8, 0.8, "sol")).toBe("kurtardi");
+  it("kaleci topun gittiği üçlüye atlarsa kurtarır; doksana isabetli şuta yetişemez", () => {
+    expect(kickResult(-0.8, 0.6, "sol")).toBe("kurtardi");
+    expect(kickResult(-0.8, 0.8, "sol")).toBe("gol");
+    expect(kickResult(-0.8, 0.8, "sol", weakReach(0.3))).toBe("kurtardi");
+    expect(kickResult(-0.5, 0.8, "sol")).toBe("kurtardi");
     expect(kickResult(-0.8, 0.05, "sol")).toBe("kurtardi");
     expect(kickResult(-0.8, 0.5, "sag")).toBe("gol");
     expect(kickResult(1.0, 0.5, "orta")).toBe("direk");
@@ -224,8 +229,23 @@ describe("Penaltı: güç ve direk", () => {
     expect(classify(0.8, 0.6)).toBe("ic");
     let s = start({}, seedWithKeeper("sol"));
     s = reduce(s, { type: "answer", side: 0, option: right(s), now: 0 });
-    s = scoreKick(s, 0.9, 0.5);
+    s = scoreKick(s, 1.01, 0.5);
     expect(s.kicks[0]).toMatchObject({ result: "direk", x: 1 });
+  });
+
+  it("direğe değen topun yarıdan çoğu içerideyse direkten gol olur", () => {
+    const x = 1 - BALL_X - POST_BAND / 2;
+    expect(postIn(x, 0.5)).toBe(true);
+    expect(postIn(1.01, 0.5)).toBe(false);
+    expect(postIn(0.5, 1 - BALL_Y - BAR_BAND / 2)).toBe(true);
+    expect(kickResult(x, 0.5, "orta")).toBe("gol");
+    let s = start({}, seedWithKeeper("sol"));
+    s = reduce(s, { type: "answer", side: 0, option: right(s), now: 0 });
+    s = scoreKick(s, x, 0.5);
+    expect(s.kicks[0]).toMatchObject({ result: "gol", post: true, x: 1 - BALL_X });
+    expect(goalKind(s.kicks[0])).toBe("direkten");
+    expect(goalKind({ result: "gol", x: 0.8, y: 0.8 })).toBe("doksan");
+    expect(goalKind({ result: "gol", x: 0.3, y: 0.3 })).toBeNull();
   });
 });
 

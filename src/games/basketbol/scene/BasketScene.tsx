@@ -6,7 +6,7 @@ import { cssColor } from "@/lib/color";
 import { DARK, Head, SKIN, HAIR, STYLES } from "../../shared/kid";
 import { basketAudio } from "../audio";
 import type { ShotResult } from "../logic";
-import { ballAt, BALL_R, BOARD_BOTTOM, BOARD_H, BOARD_Z, LAND, NET_DEPTH, planShot, RELEASE, RIM_R, RIM_Y, shooterAt, spotFor, type ShotPlan, type V3 } from "../timeline";
+import { ballAt, BALL_R, BOARD_BOTTOM, BOARD_H, BOARD_Z, LAND, NET_DEPTH, planShot, previewPath, RELEASE, releasePoint, RIM_R, RIM_Y, shooterAt, spotFor, type ShotPlan, type V3 } from "../timeline";
 import type { BasketSceneInput, SceneTeam } from "./types";
 
 /**
@@ -48,6 +48,7 @@ export function BasketScene({ input, teams, reducedMotion, onContact, onShotDone
     const kids = [0, 1].map((i) => q<SVGGElement>(`[data-kid="${i}"]`));
     const arms = [0, 1].map((i) => q<SVGPathElement>(`[data-kid="${i}"] [data-part="arms"]`));
     const net = q<SVGPathElement>('[data-part="net"]');
+    const dots = Array.from(svg.querySelectorAll<SVGCircleElement>('[data-part="dot"]'));
     const start = live.current.input;
     const st = {
       t0: performance.now(),
@@ -148,8 +149,8 @@ export function BasketScene({ input, teams, reducedMotion, onContact, onShotDone
           const p = shooterAt(tau);
           lift = p.lift * PX;
           up = p.arms;
-        } else if (isShooter && inp.phase === "aim" && !quiet) {
-          up = 0.15;
+        } else if (isShooter && inp.phase === "aim" && inp.pull) {
+          up = 1 - inp.pull.power * 0.35;
         }
         if (!isShooter && plan && tau > 0.3 && tau < LAND + 0.3) {
           lift = Math.sin(Math.min(1, (tau - 0.3) / 0.5) * Math.PI) * 0.25 * PX;
@@ -175,6 +176,11 @@ export function BasketScene({ input, teams, reducedMotion, onContact, onShotDone
         const p = ballAt(plan, Math.min(tau, plan.end + 5))!;
         bx = sx(p);
         by = sy(p.y);
+      } else if (shooter !== null && inp.phase === "aim" && inp.pull) {
+        // Çekiş: top başın üstünde, çekildikçe geriye ve aşağıya.
+        const r = releasePoint(spot, 0.9);
+        bx = sx(spot) + 14 - inp.pull.power * 30;
+        by = sy(r.y - 0.15) + inp.pull.power * 22;
       } else if (shooter !== null && inp.phase === "aim") {
         bx = sx(spot) + 26;
         by = sy(quiet ? 0.7 : 0.25 + Math.abs(Math.cos(((t % 0.6) / 0.6) * Math.PI)) * 0.55);
@@ -183,6 +189,14 @@ export function BasketScene({ input, teams, reducedMotion, onContact, onShotDone
         bx = sx(plan.spot) + 18;
         by = GROUND - p.lift * PX - 96 - p.arms * 70;
       }
+      const path = !plan && inp.phase === "aim" && inp.pull && inp.range ? previewPath(inp.pull, inp.range, inp.shots.length, 0.9, dots.length) : null;
+      dots.forEach((d, i) => {
+        d.style.display = path ? "" : "none";
+        if (!path) return;
+        d.setAttribute("cx", sx(path[i]).toFixed(1));
+        d.setAttribute("cy", sy(path[i].y).toFixed(1));
+        d.setAttribute("fill", inp.shooter !== null ? live.current.teams[inp.shooter].base : "var(--color-cream)");
+      });
       ball?.setAttribute("transform", `translate(${bx.toFixed(1)} ${by.toFixed(1)}) rotate(${((t * 400) % 360).toFixed(0)})`);
       st.wobble *= 0.95;
       const wob = quiet ? 0 : Math.sin(t * 25) * 6 * st.wobble;
@@ -245,6 +259,10 @@ export function BasketScene({ input, teams, reducedMotion, onContact, onShotDone
           <ellipse cx={-6} cy={2} rx={10} ry={5} fill={DARK} />
           <ellipse cx={8} cy={2} rx={10} ry={5} fill={DARK} />
         </g>
+      ))}
+      {/* Çekiş sırasında yolun başı */}
+      {Array.from({ length: 9 }, (_, i) => (
+        <circle key={i} data-part="dot" r={9 - i * 0.5} stroke="var(--color-ink-950)" strokeWidth={2.5} style={{ display: "none" }} />
       ))}
       {/* Top */}
       <g data-part="ball">

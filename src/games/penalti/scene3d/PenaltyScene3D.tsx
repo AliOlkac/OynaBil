@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { spring } from "@/lib/motion";
 import { initialTier, rememberTier } from "../../shared/stage3d/support";
-import type { KickResult } from "../logic";
+import { GOAL_KIND_TEXT, goalKind, type KickResult } from "../logic";
 import type { ArtTeam } from "../scene/art";
 import type { SceneInput } from "../scene/PenaltyScene";
 
@@ -125,7 +125,11 @@ export function PenaltyScene3D({ input, teams, reducedMotion, onKick, onContact,
             exit={{ opacity: 0, scale: 1.1 }}
             transition={spring.celebrate}
           >
-            {BANNER[banner.result]}
+            {(() => {
+              const last = input.kicks[input.kicks.length - 1];
+              const kind = last ? goalKind(last) : null;
+              return kind ? GOAL_KIND_TEXT[kind] : BANNER[banner.result];
+            })()}
           </motion.p>
         )}
       </AnimatePresence>

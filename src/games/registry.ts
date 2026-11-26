@@ -197,8 +197,8 @@ export const basketbol: GameDefinition = {
   howTo: [
     "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
     "İlk doğru cevaplayan takım atış hakkı kazanır ve mesafeyi seçer: yakından 2 sayı ya da üçlük çizgisinden 3 sayı. Yanlış cevap veren takım bekler.",
-    "Güç çubuğu inip çıkar. İğne yeşil bölgedeyken AT'a dokunun: ortası tertemiz basket, kenarı çemberden içeri. Üçlükte yeşil bölge daha dardır.",
-    "Üst üste iki basket atan takımın eli ateş alır, yeşil bölgesi genişler. Sorular bitince çok sayı atan kazanır; eşitlikte uzatmada ilk basketi atan kazanır.",
+    "Topu sapan gibi geri çekip bırakın: çekişin uzunluğu gücü, yönü açıyı verir; düz aşağı çekmek yüksek yay demektir. Noktalar yolun yalnızca başını gösterir. Kısa kalan top ön çembere, güçlü giden panyaya çarpar; dik inen top daha kolay girer.",
+    "Üst üste iki basket atan takımın eli ateş alır, isabet payı genişler. Sorular bitince çok sayı atan kazanır; eşitlikte uzatmada ilk basketi atan kazanır.",
   ],
   teamCount: { min: 2, max: 2, default: 2 },
   // Doğru/yanlış soruları kullanılmaz: bir takımın yanlış cevabı görülünce doğrusu belli olurdu.

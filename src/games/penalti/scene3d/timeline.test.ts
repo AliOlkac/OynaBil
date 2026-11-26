@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { kickResult, thirdOf, type Kick, type Third } from "../logic";
+import { BALL_X, BALL_Y, kickResult, thirdOf, type Kick, type Third } from "../logic";
 import { ballAt, CONTACT, divePose, flightPoint, keeperAt, kickerStrike, kickTarget, LIVE_END, netBulgeAt, planKick, REPLAY, REPLAY_SECONDS, replayTau, STRIKE, type BallState } from "./timeline";
 import { BALL_R, GOAL_H, GOAL_HALF, KEEPER_REACH, NET_DEPTH_BOTTOM, SPOT } from "./world";
 
@@ -103,6 +103,19 @@ describe("temastan sonrası", () => {
     }
   });
 
+  it("direkten giren top direğe değip ağa gider", () => {
+    for (const [x, y] of [
+      [1 - BALL_X, 0.5],
+      [-(1 - BALL_X), 0.3],
+      [0.4, 1 - BALL_Y],
+    ]) {
+      const plan = planKick({ ...kick(x, y, "orta"), result: "gol", post: true }, 0);
+      const p = at(plan, CONTACT + 1.2).p;
+      expect(p.z, `direkten giren top ağda değil (${x}, ${y})`).toBeLessThan(-0.3);
+      expect(Math.abs(p.x)).toBeLessThan(GOAL_HALF);
+    }
+  });
+
   it("auta giden top kaleye girmez; tribüne giderse gözden kaybolur", () => {
     const wide = planKick(kick(1.4, 0.4, "orta"), 0);
     expect(wide.kick.result).toBe("aut");
@@ -123,7 +136,7 @@ describe("temastan sonrası", () => {
 describe("kaleci", () => {
   it("kurtarışta eldivenleri topun olduğu yere ulaşır", () => {
     for (const [x, y] of [
-      [0.75, 0.8],
+      [0.75, 0.6],
       [-0.75, 0.1],
       [0.5, 0.5],
       [0.02, 0.8],
