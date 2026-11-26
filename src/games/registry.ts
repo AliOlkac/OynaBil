@@ -197,8 +197,8 @@ export const basketbol: GameDefinition = {
   howTo: [
     "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
     "İlk doğru cevaplayan takım atış hakkı kazanır ve mesafeyi seçer: yakından 2 sayı ya da üçlük çizgisinden 3 sayı. Yanlış cevap veren takım bekler.",
-    "Topu sapan gibi geri çekip bırakın: çekişin uzunluğu gücü, yönü açıyı verir; düz aşağı çekmek yüksek yay demektir. Noktalar yolun yalnızca başını gösterir. Kısa kalan top ön çembere, güçlü giden panyaya çarpar; dik inen top daha kolay girer.",
-    "Üst üste iki basket atan takımın eli ateş alır, isabet payı genişler. Sorular bitince çok sayı atan kazanır; eşitlikte uzatmada ilk basketi atan kazanır.",
+    "Topa basılı tutun: oyuncu çömelip güç toplar, güç çubuğu dolar. İğne yeşil bölgedeyken bırakın: ortası tertemiz basket, kenarı çemberden içeri. Erken bırakılan top kısa kalır, geç bırakılan panyaya gider. Üçlükte yeşil bölge daha dardır.",
+    "Üst üste iki basket atan takımın eli ateş alır, yeşil bölgesi genişler. Sorular bitince çok sayı atan kazanır; eşitlikte uzatmada ilk basketi atan kazanır.",
   ],
   teamCount: { min: 2, max: 2, default: 2 },
   // Doğru/yanlış soruları kullanılmaz: bir takımın yanlış cevabı görülünce doğrusu belli olurdu.
@@ -239,7 +239,7 @@ export const okculuk: GameDefinition = {
   howTo: [
     "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
     "İlk doğru cevaplayan takım ok atma hakkı kazanır. Yanlış cevap veren takım bekler.",
-    "Sahneye basılı tutun: yay gerilir. Basılıyken parmağı kaydırarak nişan alın, bırakınca ok çıkar. Yay tam gerilmeden bırakılan ok düşer; uzun tutulan yayda kol yorulur, nişan titrer. Rüzgâr oku estiği yana iter: rüzgâr sağa esiyorsa nişanı biraz sola alın.",
+    "Sahneye ya da BASILI TUT düğmesine basılı tutun: yay gerilir, nişangâh hedefin üstünde sağa sola salınır. Ortaya gelince bırakın. Yay tam gerilmeden bırakılan ok düşer; uzun tutulan yayda kol yorulur, nişangâh daha geniş savrulur. Rüzgâr oku estiği yana iter: rüzgâr sağa esiyorsa nişanı biraz sola alın.",
     "Halkalar ortadan dışa 10'dan 1'e puan verir. Sorular bitince çok puan toplayan kazanır; eşitlikte uzatmada 7 ve üstünü vuran kazanır.",
   ],
   teamCount: { min: 2, max: 2, default: 2 },

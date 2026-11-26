@@ -17,13 +17,15 @@ import { memoryScope, useRememberAsked } from "@/lib/memory";
 import { dur, ease, spring } from "@/lib/motion";
 import { sfx } from "@/lib/sound";
 import { basketbol } from "../registry";
+import { difficultyOf } from "../shared/difficulty";
 import { optionOrder } from "../shared/duel";
 import { BOT_SIDE, useBotAction, useSolo } from "../shared/solo";
 import { botRange, botShot } from "./bot";
 import { basketAudio } from "./audio";
 import { TEAM_STYLES } from "../teams";
 import type { GameProps, Team } from "../types";
-import { AIM_LOCK_MS, basketReducer, clampLaunch, createBasket, METER_LOCK_MS, MIN_PULL, onFire, RESULT_MADE, type BasketAction, type BasketSettings, type BasketState, type Launch, type Range, type Shot } from "./logic";
+import { AIM_LOCK_MS, basketReducer, createBasket, METER_LOCK_MS, onFire, RESULT_MADE, type BasketAction, type BasketSettings, type BasketState, type Range, type Shot } from "./logic";
+import { PowerMeter } from "./PowerMeter";
 import type { BasketSceneInput, SceneTeam } from "./scene/types";
 import { BasketStage, preloadBasketStage } from "./scene3d/BasketStage";
 import { RESULT_TEXT } from "./timeline";
@@ -83,17 +85,15 @@ export default function Basketbol({ config, deck, onRestart, solo }: GameProps) 
   useBotAction(botAiming && s.range === null, `mesafe:${s.asked}`, { at: (s.aimStart ?? 0) + AIM_LOCK_MS + 900 }, () =>
     dispatch({ type: "range", range: botRange(config.seed, String(s.asked)), now: clock() }),
   );
-  // Top sapan gibi geri çekilir: `pull` çekiş sürerken açı ve gücü taşır; sahne yolun başını çizer.
-  const [pull, setPull] = useState<Launch | null>(null);
-  const drag = useRef<{ id: number; x: number; y: number } | null>(null);
-  const [band, setBand] = useState<{ x0: number; y0: number; x1: number; y1: number } | null>(null);
-  const botPlan = botAiming && s.range !== null && s.meterStart !== null ? botShot(config.seed, String(s.asked), solo!.bot.skill, s.meterStart, s.range) : null;
-  // Rakip bırakmadan önce topu çeker: oyuncu rakibin nişanını da görür.
-  useBotAction(botPlan !== null, `cek:${s.asked}`, { at: (botPlan?.at ?? 0) - 900 }, () => botPlan && setPull(botPlan.launch));
+  // Topa basılı tutulduğu an: güç çubuğu ve şutçunun çömelmesi buradan dolar, bırakınca atar.
+  const [pressAt, setPressAt] = useState<number | null>(null);
+  const holding = useRef<number | null>(null);
+  const botPlan = botAiming && s.range !== null && s.meterStart !== null ? botShot(config.seed, String(s.asked), solo!.bot.skill, s.meterStart, s.range, difficultyOf(settings)) : null;
+  useBotAction(botPlan !== null, `bas:${s.asked}`, { at: botPlan?.pressAt ?? 0 }, () => botPlan && setPressAt(botPlan.pressAt));
   useBotAction(botPlan !== null, `atis:${s.asked}`, { at: botPlan?.at ?? 0 }, () => {
     if (!botPlan) return;
-    setPull(null);
-    dispatch({ type: "shoot", launch: botPlan.launch, now: botPlan.at });
+    setPressAt(null);
+    dispatch({ type: "shoot", pressAt: botPlan.pressAt, now: botPlan.at });
   });
   const lastShot: Shot | undefined = s.shots[s.shots.length - 1];
   const fire = s.shooter !== null && onFire(s.shots, s.shooter);
@@ -143,23 +143,15 @@ export default function Basketbol({ config, deck, onRestart, solo }: GameProps) 
   }, [s.phase, s.overtime, s.shooter, s.shots, showResults]);
 
   const pick = useCallback((range: Range) => dispatch({ type: "range", range, now: clock() }), [dispatch]);
-  const shoot = useCallback(
-    (launch: Launch) => {
-      if (!canShoot) return;
-      dispatch({ type: "shoot", launch, now: clock() });
-    },
-    [canShoot, dispatch],
-  );
-  /** Parmağın çekiş vektöründen açı ve güç: geri ve aşağı çekilen top ileri ve yukarı uçar. */
-  const pullFrom = (e: React.PointerEvent<HTMLDivElement>): Launch | null => {
-    const from = drag.current;
-    if (!from) return null;
-    const side = Math.abs(e.clientX - from.x);
-    const down = e.clientY - from.y;
-    const reach = Math.max(160, e.currentTarget.clientHeight * 0.6);
-    const power = Math.min(1, Math.hypot(side, Math.max(0, down)) / reach);
-    return clampLaunch({ angle: Math.atan2(Math.max(0, down), Math.max(1, side)), power });
-  };
+  const press = useCallback(() => {
+    if (!canShoot || pressAt !== null) return;
+    setPressAt(clock());
+  }, [canShoot, pressAt]);
+  const release = useCallback(() => {
+    if (pressAt === null) return;
+    setPressAt(null);
+    if (canShoot) dispatch({ type: "shoot", pressAt, now: clock() });
+  }, [canShoot, pressAt, dispatch]);
   const next = useCallback(() => dispatch({ type: "next", now: clock() }), [dispatch]);
   const onContact = useCallback((index: number) => setContacted((n) => Math.max(n, index + 1)), []);
   const onShotDone = useCallback((index: number) => {
@@ -179,23 +171,23 @@ export default function Basketbol({ config, deck, onRestart, solo }: GameProps) 
       } else if ((key === " " || key === "enter") && s.phase === "aim") {
         if (botTurn) return;
         e.preventDefault();
-        if (pull) {
-          shoot(pull);
-          setPull(null);
-        }
-      } else if (canShoot && key.startsWith("arrow")) {
-        // Klavyeyle nişan: yukarı/aşağı açı, sol/sağ güç; boşluk atar.
-        e.preventDefault();
-        const base = pull ?? { angle: (52 * Math.PI) / 180, power: 0.5 };
-        const step = { arrowup: [0.02, 0], arrowdown: [-0.02, 0], arrowright: [0, 0.01], arrowleft: [0, -0.01] }[key] ?? [0, 0];
-        setPull(clampLaunch({ angle: base.angle + step[0], power: base.power + step[1] }));
+        // Boşluğu basılı tutmak güç toplar, bırakmak atar.
+        if (!e.repeat) press();
       } else if ((key === " " || key === "enter") && ((s.phase === "result" && shotDone >= s.shots.length) || s.phase === "reveal")) {
         e.preventDefault();
         next();
       } else if (key === "p" && s.phase === "question") dispatch({ type: paused ? "resume" : "pause", now: clock() });
     };
+    const onKeyUp = (e: KeyboardEvent) => {
+      const key = e.key.toLowerCase();
+      if ((key === " " || key === "enter") && holding.current === null) release();
+    };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    window.addEventListener("keyup", onKeyUp);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("keyup", onKeyUp);
+    };
   });
 
   if (s.phase === "ready") {
@@ -239,7 +231,7 @@ export default function Basketbol({ config, deck, onRestart, solo }: GameProps) 
 
   const expanded = s.phase === "aim" || s.phase === "result" || s.phase === "finished";
   const winnerSide = s.winner === null ? null : s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1;
-  const sceneInput: BasketSceneInput = { phase: s.phase, shooter: s.shooter, range: s.range, pull: s.phase === "aim" ? pull : null, shots: s.shots, winner: winnerSide };
+  const sceneInput: BasketSceneInput = { phase: s.phase, shooter: s.shooter, range: s.range, pressAt: s.phase === "aim" ? pressAt : null, shots: s.shots, winner: winnerSide };
   const sceneTeams = teams.map((t) => ({ base: TEAM_STYLES[t.color].base, deep: TEAM_STYLES[t.color].deep })) as [SceneTeam, SceneTeam];
   const winnerTeam = typeof winnerSide === "number" ? teams[winnerSide] : null;
   const shooter = s.shooter !== null ? teams[s.shooter] : null;
@@ -259,49 +251,27 @@ export default function Basketbol({ config, deck, onRestart, solo }: GameProps) 
       <div
         className={`relative mx-3 min-h-[12rem] shrink-0 overflow-hidden rounded-xl bg-ink-950 shadow-[var(--surface-light)] sm:mx-6 ${
           expanded ? "h-[calc(100%-17.5rem)] sm:h-[calc(100%-9rem)]" : "h-[34%] sm:h-[42%]"
-        } ${canShoot ? "cursor-grab touch-none" : ""}`}
+        } ${canShoot ? "cursor-pointer touch-none" : ""}`}
         style={{ transition: `height var(--dur-scene) var(--ease-out)` }}
         onPointerDown={(e) => {
-          // Sahnenin herhangi bir yerinden çekilir: tahtada büyük hedef.
-          if (!canShoot || e.button !== 0) return;
+          // Sahnenin her yerinde basılı tutmak güç toplar: tahtada büyük hedef.
+          if (!canShoot || e.button !== 0 || pressAt !== null) return;
           e.preventDefault();
           e.currentTarget.setPointerCapture(e.pointerId);
-          drag.current = { id: e.pointerId, x: e.clientX, y: e.clientY };
-          const r = e.currentTarget.getBoundingClientRect();
-          setBand({ x0: e.clientX - r.left, y0: e.clientY - r.top, x1: e.clientX - r.left, y1: e.clientY - r.top });
-          setPull({ angle: (52 * Math.PI) / 180, power: 0 });
-        }}
-        onPointerMove={(e) => {
-          if (drag.current?.id !== e.pointerId) return;
-          const next = pullFrom(e);
-          if (next) setPull(next);
-          const r = e.currentTarget.getBoundingClientRect();
-          setBand((b) => b && { ...b, x1: e.clientX - r.left, y1: e.clientY - r.top });
+          holding.current = e.pointerId;
+          press();
         }}
         onPointerUp={(e) => {
-          if (drag.current?.id !== e.pointerId) return;
-          const launch = pullFrom(e);
-          drag.current = null;
-          setPull(null);
-          setBand(null);
-          // Çok az çekilip bırakılırsa atış olmaz: yanlış dokunuş hakkı yakmaz.
-          if (launch && launch.power >= MIN_PULL) shoot(launch);
+          if (holding.current !== e.pointerId) return;
+          holding.current = null;
+          release();
         }}
         onPointerCancel={() => {
-          drag.current = null;
-          setPull(null);
-          setBand(null);
+          holding.current = null;
+          setPressAt(null);
         }}
       >
         <BasketStage input={sceneInput} teams={sceneTeams} reducedMotion={reducedMotion} onContact={onContact} onShotDone={onShotDone} onFinale={onFinale} />
-        {band && pull && shooter && (
-          <svg className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden>
-            <line x1={band.x0} y1={band.y0} x2={band.x1} y2={band.y1} stroke="var(--color-ink-950)" strokeWidth={10} strokeLinecap="round" opacity={0.55} />
-            <line x1={band.x0} y1={band.y0} x2={band.x1} y2={band.y1} stroke={pull.power >= MIN_PULL ? TEAM_STYLES[shooter.color].base : "var(--color-ink-400)"} strokeWidth={5} strokeLinecap="round" />
-            <circle cx={band.x0} cy={band.y0} r={9} fill="var(--color-cream)" stroke="var(--color-ink-950)" strokeWidth={3} />
-            <circle cx={band.x1} cy={band.y1} r={16 + pull.power * 10} fill="var(--color-ates)" stroke="var(--color-ink-950)" strokeWidth={3} opacity={0.9} />
-          </svg>
-        )}
         <Scoreboard teams={teams} score={shownScore} shots={s.shots.slice(0, contacted)} label={s.overtime ? "UZATMA" : `Soru ${s.asked}/${settings.questions}`} compact={!expanded} />
         <AnimatePresence>
           {s.phase === "finished" && finaleDone && (
@@ -415,22 +385,34 @@ export default function Basketbol({ config, deck, onRestart, solo }: GameProps) 
                 </>
               ) : (
                 <>
-                  <div className="min-w-0 flex-1 basis-60">
-                    <p className="text-lg font-bold sm:text-2xl">{botTurn ? "Rakip atıyor…" : "Topu geri çek, bırak!"}</p>
-                    {!botTurn && (
-                      <p className="text-base leading-snug text-ink-300 sm:text-lg">
-                        Aşağı çektikçe güç artar, düz aşağı çekmek yüksek yay verir. Noktalar yolun yalnızca başını gösterir; kısa kalan ön çembere, güçlü giden panyaya çarpar.
-                      </p>
-                    )}
+                  <div className="min-w-[14rem] flex-1">
+                    <p className="mb-2 text-lg font-bold sm:text-xl">{botTurn ? "Rakip atıyor…" : pressAt !== null ? "İğne yeşildeyken bırak!" : "Topa basılı tut, güç dolsun!"}</p>
+                    <PowerMeter range={s.range} pressAt={pressAt} fire={fire} reducedMotion={reducedMotion} difficulty={difficultyOf(settings)} />
                   </div>
-                  {pull && (
-                    <p className="flex shrink-0 items-baseline gap-2 rounded-xl bg-ink-800 px-4 py-2" aria-live="polite">
-                      <span className="tabular text-3xl font-bold sm:text-4xl" style={{ color: TEAM_STYLES[shooter.color].base }}>
-                        %{Math.round(pull.power * 100)}
-                      </span>
-                      <span className="text-sm font-semibold text-ink-300">güç · {Math.round((pull.angle * 180) / Math.PI)}°</span>
-                    </p>
-                  )}
+                  <button
+                    type="button"
+                    disabled={!canShoot}
+                    onPointerDown={(e) => {
+                      if (e.button !== 0 || pressAt !== null) return;
+                      e.preventDefault();
+                      e.currentTarget.setPointerCapture(e.pointerId);
+                      holding.current = e.pointerId;
+                      press();
+                    }}
+                    onPointerUp={(e) => {
+                      if (holding.current !== e.pointerId) return;
+                      holding.current = null;
+                      release();
+                    }}
+                    onPointerCancel={() => {
+                      holding.current = null;
+                      setPressAt(null);
+                    }}
+                    className="pressable flex h-20 w-full shrink-0 touch-none select-none items-center justify-center gap-3 rounded-xl px-8 text-3xl font-bold text-ink-950 transition-opacity disabled:opacity-40 sm:h-24 sm:w-auto sm:text-4xl"
+                    style={{ display: botTurn ? "none" : undefined, background: TEAM_STYLES[shooter.color].base, "--edge": TEAM_STYLES[shooter.color].deep } as CSSProperties}
+                  >
+                    {pressAt !== null ? "BIRAK!" : "BASILI TUT"}
+                  </button>
                 </>
               )}
             </motion.section>

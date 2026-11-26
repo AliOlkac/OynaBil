@@ -6,13 +6,13 @@ import type { Difficulty } from "../shared/difficulty";
 import { DRAW_MS, releaseAim, type Point, type Wind } from "./logic";
 import { RING_COLORS } from "./timeline";
 
-/** Yay gerilirken nişanın kaynağı: parmağın nişanı ve gerilmenin başladığı an (Date.now). */
-export type DrawSource = () => { aim: Point; drawAt: number } | null;
+/** Yayın gerilmeye başladığı an (Date.now); yay gerilmiyorsa null. */
+export type DrawSource = () => number | null;
 
 /**
- * Nişangâh dürbünü: hedef önden görünür. Yay gerilirken artı işareti parmağın nişanı + sallantı + (yay
- * tam gerilmediyse) düşüş kadar yerdedir; yer, oyun mantığıyla aynı fonksiyondan (`releaseAim`)
- * hesaplanır, bırakıldığı anda görünen yer ile okun nişanı birebir aynıdır (rüzgâr ayrıca iter).
+ * Nişangâh dürbünü: hedef önden görünür. Yay gerilirken artı işareti hedefin üstünde gezinir (yay tam
+ * gerilmediyse aşağıda durur); yer, oyun mantığıyla aynı fonksiyondan (`releaseAim`) hesaplanır,
+ * bırakıldığı anda görünen yer ile okun nişanı birebir aynıdır (rüzgâr ayrıca iter).
  * Ok bırakılınca dürbün okun saplandığı yeri gösterir.
  */
 export function AimScope({ active, draw, wind, hit, color, difficulty }: { active: boolean; draw: DrawSource; wind: Wind; hit: Point | null; color: string; difficulty: Difficulty }) {
@@ -23,13 +23,13 @@ export function AimScope({ active, draw, wind, hit, color, difficulty }: { activ
     let raf = 0;
     const tick = () => {
       const d = draw();
-      const held = d ? Date.now() - d.drawAt : 0;
-      const p = d ? releaseAim(d.aim, held, difficulty) : { x: 0, y: 0 };
+      const held = d !== null ? Date.now() - d : 0;
+      const p = d !== null ? releaseAim(held, difficulty) : { x: 0, y: 0 };
       const el = cross.current;
       if (el) {
         el.setAttribute("transform", `translate(${p.x.toFixed(4)} ${(-p.y).toFixed(4)})`);
         // Yay gerilmeden nişangâh soluk; tam gerilince belirginleşir.
-        el.style.opacity = !d ? "0.35" : held < DRAW_MS ? "0.6" : "1";
+        el.style.opacity = d === null ? "0.35" : held < DRAW_MS ? "0.6" : "1";
       }
       // Gerilme halkası: yay tam gerilince kapanır.
       meter.current?.setAttribute("stroke-dashoffset", String((1 - Math.min(1, held / DRAW_MS)) * 8.04));

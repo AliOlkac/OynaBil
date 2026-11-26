@@ -39,7 +39,7 @@ Yeni oyun icat etmeye gerek yoktur: tahta sürümündeki altı oyunun hepsi iki 
 
 ### 3.3 Beceri kısmı kolay değildir
 
-Basketbol, Okçuluk ve Kule Yıkmaca tek ayarda, zor oynanır: atışlar çekip bırakılarak yapılır, isabet payı dardır, okçunun nişanı sallanır, rüzgâr serttir. Soruyu bilmek atış hakkı verir ama sayıyı garanti etmez. Penaltı şansa dayandığı için zorlaştırılmaz. Tahta sürümünde de ayar böyledir; kolay ve normal seçenekleri kaldırıldı.
+Basketbol, Okçuluk ve Kule Yıkmaca tek ayarda, zor oynanır: yeşil bölge dardır, okçunun nişangâhı hızlı gezinir ve uzun tutunca titrer, rüzgâr serttir. Soruyu bilmek atış hakkı verir ama sayıyı garanti etmez. Penaltı şansa dayandığı için zorlaştırılmaz. Tahta sürümünde de ayar böyledir; kolay ve normal seçenekleri kaldırıldı.
 
 ### 3.4 Sonra: Bil ve Fethet, Türkiye (3–4 kişilik)
 
