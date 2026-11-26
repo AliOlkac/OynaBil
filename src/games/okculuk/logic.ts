@@ -8,9 +8,11 @@ import type { AnswerLog, Team } from "../types";
  * Okçuluk oyun mantığı.
  *
  * İki takıma aynı soru sorulur (düello sorusu). İlk doğru cevaplayan takım ok atma hakkı kazanır.
- * Nişangâh hedefin üstünde yavaşça gezinir; öğrenci "BIRAK!" dediği anda ok, nişangâhın o anki yerine
- * gider. Her atışta rüzgâr eser: ok rüzgârın estiği yana kayar. Rüzgâr ekranda okla ve şiddetiyle
- * gösterilir; iyi okçu nişanı rüzgârın tersine kaydırır. Puan, okun saplandığı halkadır: ortadaki
+ * Okçu yayı parmakla gerer: sahneye basıp tutunca yay `DRAW_MS` içinde tam gerilir; basılıyken parmağı
+ * kaydırmak nişanı oynatır, bırakınca ok çıkar. Yay tam gerilmeden bırakılırsa ok düşük gider. Tam
+ * gerilmiş yayda nişan hafifçe sallanır; yay uzun tutuldukça kol yorulur ve sallantı büyür, doğru anı
+ * kollamak gerekir. Her atışta rüzgâr eser: ok rüzgârın estiği yana kayar. Rüzgâr ekranda okla ve
+ * şiddetiyle gösterilir; iyi okçu nişanı rüzgârın tersine kaydırır. Puan, okun saplandığı halkadır: ortadaki
  * sarı 10, en dıştaki beyaz 1; hedefi bulmayan ok 0.
  *
  * Sorular bitince çok puan toplayan kazanır. Eşitlikte uzatmaya geçilir: soruyu bilen atar, sarıyı ya da
@@ -25,8 +27,18 @@ export const OVERTIME_MAX = 6;
 export const OVERTIME_WIN = 7;
 /** Bir rüzgâr kademesinin oku kaydırdığı mesafe (hedef yarıçapı 1, kolay zorlukta). Her halka 0.1 geniştir. */
 export const WIND_STEP = 0.11;
-/** Zorluğa göre: nişangâhın hızı (kolaya göre kat) ve rüzgâr kademesinin etkisi. */
+/** Zorluğa göre: nişangâh sallantısının hızı (kolaya göre kat) ve rüzgâr kademesinin etkisi. */
 export const SIGHT_SPEED = [1, 1.3, 1.6] as const;
+/** Yayın tam gerilme süresi (basılı tutulan süre). */
+export const DRAW_MS = 700;
+/** Yarım gerilmiş yayda okun düşmesi (gerilmeyen her birim için, hedef yarıçapı cinsinden). */
+export const WEAK_DROP = 1.1;
+/** Tam gerilmiş yayda sallantının genişliği; bu süreden sonra kol yorulur ve sallantı büyür. */
+export const SWAY = [0.08, 0.12, 0.16] as const;
+export const STEADY_MS = 1_400;
+/** Yorgunlukta sallantının saniyede büyümesi ve üst sınırı. */
+export const FATIGUE = 0.22;
+export const SWAY_MAX = 0.75;
 export const WIND_STEPS = [WIND_STEP, 0.13, 0.15] as const;
 /** Hedefin saman tabanı yüzden biraz geniştir: bu yarıçapa kadar ok tabana saplanır (0 puan). */
 export const BOSS_R = 1.28;
@@ -88,21 +100,37 @@ export type ArcheryAction =
   | { type: "start"; now: number }
   | { type: "answer"; side: 0 | 1; option: number; now: number }
   | { type: "timeout"; now: number }
-  | { type: "shoot"; now: number }
+  /** Ok bırakıldı: parmağın nişanı (sallantısız), yayın gerilmeye başladığı an ve bırakıldığı an. */
+  | { type: "shoot"; aim: Point; drawAt: number; now: number }
   | { type: "next"; now: number }
   | { type: "pause"; now: number }
   | { type: "resume"; now: number };
 
 // ---- saf yardımcılar (sahne ve ekran da kullanır) ----
 
+/** Yayın gerilmesi (0..1): basılı tutulan süreden. */
+export const drawOf = (heldMs: number) => Math.min(1, Math.max(0, heldMs / DRAW_MS));
+
+/** Sallantının genişliği: tam gerilince sabit, `STEADY_MS` sonra yorgunlukla büyür. */
+export function swayAmp(heldMs: number, d: Difficulty = 1): number {
+  const tired = Math.max(0, heldMs - DRAW_MS - STEADY_MS) / 1000;
+  return Math.min(SWAY_MAX, byDifficulty(d, SWAY) + FATIGUE * tired);
+}
+
 /**
- * Nişangâhın yeri: yay gerildikten (AIM_LOCK_MS) sonra hedefin üstünde iki farklı hızda salınır;
- * salınımın genişliği nefes alıp verir gibi büyüyüp küçülür. Yol merkezden sık sık geçer.
+ * Nişangâhın sallantısı: yay gerilmeye başladığından beri geçen süreye göre iki farklı hızda salınır,
+ * genişliği `swayAmp`. Yol merkezden sık sık geçer; doğru an kollanır.
  */
-export function sightAt(elapsedMs: number, d: Difficulty = 1): Point {
-  const t = (Math.max(0, elapsedMs - AIM_LOCK_MS) / 1000) * byDifficulty(d, SIGHT_SPEED);
-  const amp = 0.6 + 0.22 * Math.sin(t * 0.85 + 1.2);
+export function swayAt(heldMs: number, d: Difficulty = 1): Point {
+  const t = (Math.max(0, heldMs) / 1000) * 2.2 * byDifficulty(d, SIGHT_SPEED);
+  const amp = swayAmp(heldMs, d) * (0.75 + 0.25 * Math.sin(t * 0.85 + 1.2));
   return { x: amp * Math.sin(t * 1.55), y: amp * 0.78 * Math.sin(t * 2.15 + 0.7) };
+}
+
+/** Bırakıldığı anda okun nişanı: parmağın nişanı + sallantı; yay tam gerilmediyse ok düşer. */
+export function releaseAim(aim: Point, heldMs: number, d: Difficulty = 1): Point {
+  const w = swayAt(heldMs, d);
+  return { x: aim.x + w.x, y: aim.y + w.y - (1 - drawOf(heldMs)) * WEAK_DROP };
 }
 
 /** Okun saplandığı yer: rüzgâr oku kendi yönüne kaydırır. */
@@ -227,8 +255,10 @@ export function archeryReducer(deck: PlayableQuestion[]) {
       case "shoot": {
         if (s.phase !== "aim" || s.shooter === null || s.aimStart === null) return s;
         if (a.now - s.aimStart < AIM_LOCK_MS) return s;
+        if (![a.aim?.x, a.aim?.y, a.drawAt].every(Number.isFinite) || a.drawAt < s.aimStart || a.drawAt > a.now) return s;
         const d = difficultyOf(s.settings);
-        const aim = sightAt(a.now - s.aimStart, d);
+        const finger = { x: Math.max(-1.5, Math.min(1.5, a.aim.x)), y: Math.max(-1.5, Math.min(1.5, a.aim.y)) };
+        const aim = releaseAim(finger, a.now - a.drawAt, d);
         const hit = hitPoint(aim, s.wind, d);
         const points = ringOf(hit);
         // Uzatmada yalnızca kazandıran atış sayılır; kısa kalan ok skoru değiştirmez, eşitlik sürer.

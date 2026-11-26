@@ -7,7 +7,7 @@ import { canvasTexture, clamp01, createRenderer, disposeTree, easeInOut, follow,
 import { ChipPool } from "../../shared/stage3d/particles";
 import { createFrameWatch, type Tier } from "../../shared/stage3d/support";
 import { archeryAudio } from "../audio";
-import { AIM_LOCK_MS, BOSS_R, type Shot, type ShotResult } from "../logic";
+import { BOSS_R, DRAW_MS, type Shot, type ShotResult } from "../logic";
 import type { ArcherySceneInput, SceneTeam } from "../scene/types";
 import { arrowAt, ARROW_LEN, FACE_R, FACE_Z, planArrow, quiver, RING_COLORS, TARGET_D, TARGET_Y, type ArrowPlan, type V3 } from "../timeline";
 
@@ -720,9 +720,9 @@ export function createArcheryEngine(o: EngineOptions): { dispose: () => void } {
     // -- okçular --
     const aiming = inp.phase === "aim" && inp.shooter !== null && inp.aimStart !== null;
     const shooterSide = plan && shot ? shot.side : aiming ? inp.shooter! : null;
-    const drawK = aiming && !plan ? clamp01((Date.now() - inp.aimStart!) / AIM_LOCK_MS) : 0;
-    if (aiming && !plan && drawK > 0.05 && st.drawSoundFor !== inp.aimStart) {
-      st.drawSoundFor = inp.aimStart!;
+    const drawK = aiming && !plan && inp.drawAt !== null ? clamp01((Date.now() - inp.drawAt) / DRAW_MS) : 0;
+    if (aiming && !plan && drawK > 0.05 && st.drawSoundFor !== inp.drawAt) {
+      st.drawSoundFor = inp.drawAt!;
       archeryAudio.draw();
     }
     let nockAt: THREE.Vector3 | null = null;

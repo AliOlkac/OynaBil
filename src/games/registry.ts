@@ -239,7 +239,7 @@ export const okculuk: GameDefinition = {
   howTo: [
     "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
     "İlk doğru cevaplayan takım ok atma hakkı kazanır. Yanlış cevap veren takım bekler.",
-    "Nişangâh hedefin üstünde gezinir. Ortaya gelince BIRAK'a dokunun. Rüzgâr oku estiği yana iter: rüzgâr sağa esiyorsa nişanı biraz sola alın.",
+    "Sahneye basılı tutun: yay gerilir. Basılıyken parmağı kaydırarak nişan alın, bırakınca ok çıkar. Yay tam gerilmeden bırakılan ok düşer; uzun tutulan yayda kol yorulur, nişan titrer. Rüzgâr oku estiği yana iter: rüzgâr sağa esiyorsa nişanı biraz sola alın.",
     "Halkalar ortadan dışa 10'dan 1'e puan verir. Sorular bitince çok puan toplayan kazanır; eşitlikte uzatmada 7 ve üstünü vuran kazanır.",
   ],
   teamCount: { min: 2, max: 2, default: 2 },

@@ -1,8 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { ArrowRight, Check, Flag, Pause, Play, Target, X } from "lucide-react";
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { ArrowRight, Check, Flag, Pause, Play, X } from "lucide-react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AutoAdvance } from "@/components/game/AutoAdvance";
 import { DuelQuestion } from "@/components/game/DuelQuestion";
 import { GameIntro } from "@/components/game/GameIntro";
@@ -19,12 +19,12 @@ import { sfx } from "@/lib/sound";
 import { okculuk } from "../registry";
 import { optionOrder } from "../shared/duel";
 import { BOT_SIDE, useBotAction, useSolo } from "../shared/solo";
-import { botReleaseAt } from "./bot";
+import { botShot } from "./bot";
 import { archeryAudio } from "./audio";
 import { TEAM_STYLES } from "../teams";
 import type { GameProps, Team } from "../types";
 import { AimScope } from "./AimScope";
-import { AIM_LOCK_MS, archeryReducer, createArchery, OVERTIME_WIN, type ArcheryAction, type ArcherySettings, type ArcheryState, type Shot } from "./logic";
+import { AIM_LOCK_MS, archeryReducer, createArchery, OVERTIME_WIN, type ArcheryAction, type ArcherySettings, type ArcheryState, type Point, type Shot } from "./logic";
 import type { ArcherySceneInput, SceneTeam } from "./scene/types";
 import { ArcheryStage, preloadArcheryStage } from "./scene3d/ArcheryStage";
 import { difficultyOf } from "../shared/difficulty";
@@ -83,8 +83,35 @@ export default function Okculuk({ config, deck, onRestart, solo }: GameProps) {
   });
   const remaining = s.deadline !== null ? Math.max(0, s.deadline - now) : (s.remaining ?? settings.seconds * 1000);
   const canShoot = !botTurn && aiming && now - s.aimStart! >= AIM_LOCK_MS;
-  const botAt = botTurn && s.phase === "aim" && s.aimStart !== null ? botReleaseAt(config.seed, String(s.asked), solo!.bot.skill, s.aimStart, s.wind, difficultyOf(settings)) : 0;
-  useBotAction(botAt > 0, `ok:${s.asked}`, { at: botAt }, () => dispatch({ type: "shoot", now: botAt }));
+  // Yay parmakla gerilir: basılı tutunca gerilir, parmak kayınca nişan oynar, bırakınca ok çıkar.
+  // Nişan her karede değiştiği için ref'te durur; dürbün ve sahne oradan okur.
+  const draw = useRef<{ id: number | null; x0: number; y0: number; scale: number; base: Point; aim: Point; drawAt: number } | null>(null);
+  const [drawAt, setDrawAt] = useState<number | null>(null);
+  const keyAim = useRef<Point>({ x: 0, y: 0 });
+  const drawSource = useCallback(() => (draw.current ? { aim: draw.current.aim, drawAt: draw.current.drawAt } : null), []);
+  const startDraw = (id: number | null, x0: number, y0: number, scale: number, at = Date.now()) => {
+    draw.current = { id, x0, y0, scale, base: { ...keyAim.current }, aim: { ...keyAim.current }, drawAt: at };
+    setDrawAt(at);
+  };
+  const release = (now = clock()) => {
+    const d = draw.current;
+    draw.current = null;
+    setDrawAt(null);
+    if (!d || !canShoot) return;
+    dispatch({ type: "shoot", aim: d.aim, drawAt: d.drawAt, now });
+  };
+  const botPlan = botTurn && s.phase === "aim" && s.aimStart !== null ? botShot(config.seed, String(s.asked), solo!.bot.skill, s.aimStart, s.wind, difficultyOf(settings)) : null;
+  useBotAction(botPlan !== null, `yay:${s.asked}`, { at: botPlan?.drawAt ?? 0 }, () => {
+    if (!botPlan) return;
+    draw.current = { id: null, x0: 0, y0: 0, scale: 1, base: botPlan.aim, aim: botPlan.aim, drawAt: botPlan.drawAt };
+    setDrawAt(botPlan.drawAt);
+  });
+  useBotAction(botPlan !== null, `ok:${s.asked}`, { at: botPlan?.at ?? 0 }, () => {
+    if (!botPlan) return;
+    draw.current = null;
+    setDrawAt(null);
+    dispatch({ type: "shoot", aim: botPlan.aim, drawAt: botPlan.drawAt, now: botPlan.at });
+  });
   const lastShot: Shot | undefined = s.shots[s.shots.length - 1];
 
   const shownScore = [...s.score] as [number, number];
@@ -131,7 +158,6 @@ export default function Okculuk({ config, deck, onRestart, solo }: GameProps) {
     }
   }, [s.phase, s.overtime, s.wind, s.shots, showResults]);
 
-  const shoot = useCallback(() => dispatch({ type: "shoot", now: clock() }), [dispatch]);
   const next = useCallback(() => dispatch({ type: "next", now: clock() }), [dispatch]);
   const onContact = useCallback((index: number) => setContacted((n) => Math.max(n, index + 1)), []);
   const onShotDone = useCallback((index: number) => {
@@ -148,14 +174,28 @@ export default function Okculuk({ config, deck, onRestart, solo }: GameProps) {
       if ((key === " " || key === "enter") && s.phase === "aim") {
         if (botTurn) return;
         e.preventDefault();
-        shoot();
+        // Boşluğu basılı tutmak yayı gerer, bırakmak oku atar.
+        if (!e.repeat && canShoot && !draw.current) startDraw(null, 0, 0, 1);
+      } else if (canShoot && key.startsWith("arrow")) {
+        e.preventDefault();
+        const step = { arrowleft: [-0.04, 0], arrowright: [0.04, 0], arrowup: [0, 0.04], arrowdown: [0, -0.04] }[key] ?? [0, 0];
+        keyAim.current = { x: Math.max(-1, Math.min(1, keyAim.current.x + step[0])), y: Math.max(-1, Math.min(1, keyAim.current.y + step[1])) };
+        if (draw.current) draw.current.aim = { ...keyAim.current };
       } else if ((key === " " || key === "enter") && ((s.phase === "result" && shotDone >= s.shots.length) || s.phase === "reveal")) {
         e.preventDefault();
         next();
       } else if (key === "p" && s.phase === "question") dispatch({ type: paused ? "resume" : "pause", now: clock() });
     };
+    const onKeyUp = (e: KeyboardEvent) => {
+      const key = e.key.toLowerCase();
+      if ((key === " " || key === "enter") && draw.current && draw.current.id === null && !botTurn) release();
+    };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    window.addEventListener("keyup", onKeyUp);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("keyup", onKeyUp);
+    };
   });
 
   if (s.phase === "ready") {
@@ -199,7 +239,7 @@ export default function Okculuk({ config, deck, onRestart, solo }: GameProps) {
 
   const expanded = s.phase === "aim" || s.phase === "result" || s.phase === "finished";
   const winnerSide = s.winner === null ? null : s.winner === "draw" ? "draw" : s.winner === teams[0].id ? 0 : 1;
-  const sceneInput: ArcherySceneInput = { phase: s.phase, shooter: s.shooter, aimStart: s.aimStart, wind: s.wind, shots: s.shots, winner: winnerSide };
+  const sceneInput: ArcherySceneInput = { phase: s.phase, shooter: s.shooter, aimStart: s.aimStart, drawAt: s.phase === "aim" ? drawAt : null, wind: s.wind, shots: s.shots, winner: winnerSide };
   const sceneTeams = teams.map((t) => ({ base: TEAM_STYLES[t.color].base, deep: TEAM_STYLES[t.color].deep })) as [SceneTeam, SceneTeam];
   const winnerTeam = typeof winnerSide === "number" ? teams[winnerSide] : null;
   const shooter = s.shooter !== null ? teams[s.shooter] : null;
@@ -219,13 +259,28 @@ export default function Okculuk({ config, deck, onRestart, solo }: GameProps) {
       <div
         className={`relative mx-3 min-h-[12rem] shrink-0 overflow-hidden rounded-xl bg-ink-950 shadow-[var(--surface-light)] sm:mx-6 ${
           expanded ? "h-[calc(100%-15rem)] sm:h-[calc(100%-9rem)]" : "h-[34%] sm:h-[42%]"
-        } ${canShoot ? "cursor-pointer" : ""}`}
+        } ${canShoot ? "cursor-crosshair touch-none" : ""}`}
         style={{ transition: `height var(--dur-scene) var(--ease-out)` }}
         onPointerDown={(e) => {
-          // Sahneye dokunmak da oku bırakır: tahtada büyük hedef.
-          if (!canShoot || e.button !== 0) return;
+          // Sahnenin her yerinde basılı tutmak yayı gerer: tahtada büyük hedef.
+          if (!canShoot || e.button !== 0 || draw.current) return;
           e.preventDefault();
-          shoot();
+          e.currentTarget.setPointerCapture(e.pointerId);
+          startDraw(e.pointerId, e.clientX, e.clientY, Math.max(160, e.currentTarget.clientHeight * 0.5));
+        }}
+        onPointerMove={(e) => {
+          const d = draw.current;
+          if (!d || d.id !== e.pointerId) return;
+          // Parmak kaydıkça nişan oynar: sahne yüksekliğinin yarısı kadar kaydırmak hedefin yarıçapı kadar.
+          d.aim = { x: Math.max(-1.5, Math.min(1.5, d.base.x + (e.clientX - d.x0) / d.scale)), y: Math.max(-1.5, Math.min(1.5, d.base.y - (e.clientY - d.y0) / d.scale)) };
+        }}
+        onPointerUp={(e) => {
+          if (draw.current?.id !== e.pointerId) return;
+          release();
+        }}
+        onPointerCancel={() => {
+          draw.current = null;
+          setDrawAt(null);
         }}
       >
         <ArcheryStage input={sceneInput} teams={sceneTeams} reducedMotion={reducedMotion} onContact={onContact} onShotDone={onShotDone} onFinale={onFinale} />
@@ -233,7 +288,8 @@ export default function Okculuk({ config, deck, onRestart, solo }: GameProps) {
         {(s.phase === "aim" || (s.phase === "result" && lastShot && contacted >= s.shots.length)) && (s.shooter !== null || lastShot) && (
           <div className={`pointer-events-none absolute bottom-3 aspect-[5/6] h-[58%] max-h-[30rem] min-h-[10rem] sm:bottom-5 ${scene3d ? "left-3 sm:left-5" : "right-3 sm:right-5"}`}>
             <AimScope
-              aimStart={s.phase === "aim" ? s.aimStart : null}
+              active={s.phase === "aim"}
+              draw={drawSource}
               wind={s.phase === "aim" ? s.wind : lastShot!.wind}
               hit={s.phase === "result" && lastShot ? lastShot.hit : null}
               color={TEAM_STYLES[teams[s.phase === "aim" ? s.shooter! : lastShot!.side].color].base}
@@ -331,23 +387,11 @@ export default function Okculuk({ config, deck, onRestart, solo }: GameProps) {
             >
               <TurnBadge team={shooter} label="Yayı gerdi" />
               <div className="min-w-[12rem] flex-1">
-                <p className="text-lg font-bold sm:text-2xl">{botTurn ? "Rakip nişan alıyor…" : "Nişangâh ortaya gelince BIRAK!"}</p>
-                <p className="text-base text-ink-300 sm:text-lg">{s.wind === 0 ? "Hava sakin: tam ortaya nişan al." : `Rüzgâr oku ${s.wind < 0 ? "sola" : "sağa"} iter; nişanı biraz ${s.wind < 0 ? "sağa" : "sola"} al.`}</p>
+                <p className="text-lg font-bold sm:text-2xl">{botTurn ? "Rakip yayını geriyor…" : drawAt !== null ? "Nişangâh ortaya gelince bırak!" : "Sahneye basılı tut: yay gerilsin!"}</p>
+                <p className="text-base text-ink-300 sm:text-lg">
+                  {s.wind === 0 ? "Hava sakin: parmağını kaydırıp tam ortaya nişan al." : `Rüzgâr oku ${s.wind < 0 ? "sola" : "sağa"} iter; parmağını biraz ${s.wind < 0 ? "sağa" : "sola"} kaydır.`} Erken bırakılan ok düşer, uzun tutulan yay titrer.
+                </p>
               </div>
-              <button
-                type="button"
-                disabled={!canShoot}
-                onPointerDown={(e) => {
-                  if (e.button !== 0) return;
-                  e.preventDefault();
-                  shoot();
-                }}
-                className="pressable flex h-20 w-full shrink-0 items-center justify-center gap-3 rounded-xl px-10 text-4xl font-bold text-ink-950 transition-opacity disabled:opacity-40 sm:h-24 sm:w-auto sm:text-5xl"
-                style={{ display: botTurn ? "none" : undefined, background: TEAM_STYLES[shooter.color].base, "--edge": TEAM_STYLES[shooter.color].deep } as CSSProperties}
-              >
-                <Target className="size-9 sm:size-11" strokeWidth={2.5} />
-                BIRAK!
-              </button>
             </motion.section>
           )}
 

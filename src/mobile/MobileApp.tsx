@@ -258,7 +258,7 @@ function GradePicker({ grade, onPick }: { grade: Grade; onPick: (g: Grade) => vo
 const GAME_ART: Record<MobileGameId | "sirayla", { tip: string; from: string; to: string }> = {
   sirayla: { tip: "Her maçta sıradaki oyun gelir.", from: "var(--color-ink-600)", to: "var(--color-ink-800)" },
   basketbol: { tip: "Soruyu bil, mesafeni seç, topu geri çekip bırak!", from: "var(--color-ates)", to: "var(--color-ahsap-koyu)" },
-  okculuk: { tip: "Soruyu bil, nişangâh ortadayken BIRAK! Rüzgâra dikkat.", from: "var(--color-cim-acik)", to: "var(--color-servi)" },
+  okculuk: { tip: "Soruyu bil, basılı tutup yayı ger, nişanı kaydır, doğru anda bırak! Rüzgâra dikkat.", from: "var(--color-cim-acik)", to: "var(--color-servi)" },
   penalti: { tip: "Soruyu bil, kaleye doğru hızlıca çiz: çizgi köşeyi, hız gücü, kavis falsoyu verir!", from: "var(--color-saha-acik)", to: "var(--color-saha)" },
   "kule-yikmaca": { tip: "Soruyu bil, mancınığı geri çek ve pencereye nişan al.", from: "var(--color-ufuk)", to: "var(--color-tas-koyu)" },
   "halat-cekme": { tip: "Hızlı ve doğru cevapla, ipi kendine çek.", from: "var(--color-camur-parlak)", to: "var(--color-camur-koyu)" },

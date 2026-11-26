@@ -6,6 +6,8 @@ export type ArcherySceneInput = {
   shooter: 0 | 1 | null;
   /** Nişan alma başladığında (yay gerilir). */
   aimStart: number | null;
+  /** Yayın gerilmeye başladığı an (parmak basılı); yay bu andan `DRAW_MS` içinde tam gerilir. */
+  drawAt: number | null;
   wind: Wind;
   shots: Shot[];
   winner: 0 | 1 | "draw" | null;

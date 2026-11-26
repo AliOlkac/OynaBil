@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import { cssColor } from "@/lib/color";
 import { DARK, HAIR, Head, SKIN, STYLES } from "../../shared/kid";
 import { archeryAudio } from "../audio";
-import { AIM_LOCK_MS, type Shot, type ShotResult } from "../logic";
+import { DRAW_MS, type Shot, type ShotResult } from "../logic";
 import { arrowAt, ARROW_LEN, FACE_R, planArrow, quiver, RING_COLORS, TARGET_D, TARGET_Y, type ArrowPlan, type V3 } from "../timeline";
 import type { ArcherySceneInput, SceneTeam } from "./types";
 
@@ -145,7 +145,7 @@ export function ArcheryScene({ input, teams, reducedMotion, onContact, onShotDon
 
       // Okçular: atış hakkı kazanan çizgiye geçer, yayı gerer; öbürü geride bekler.
       const shooter = plan && shot ? shot.side : inp.phase === "aim" ? inp.shooter : null;
-      const aimFor = inp.phase === "aim" && inp.aimStart !== null ? (Date.now() - inp.aimStart) / AIM_LOCK_MS : 0;
+      const aimFor = inp.phase === "aim" && inp.drawAt !== null ? (Date.now() - inp.drawAt) / DRAW_MS : 0;
       [0, 1].forEach((side) => {
         const el = kids[side];
         if (!el) return;
@@ -169,8 +169,8 @@ export function ArcheryScene({ input, teams, reducedMotion, onContact, onShotDon
         nocked[side]?.setAttribute("transform", `translate(${(46 - pull).toFixed(1)} -96)`);
         nocked[side]?.setAttribute("opacity", isShooter && inp.phase === "aim" && !plan ? "1" : "0");
       });
-      if (shooter !== null && inp.phase === "aim" && !plan && aimFor > 0.05 && st.drawSound !== inp.aimStart) {
-        st.drawSound = inp.aimStart ?? -1;
+      if (shooter !== null && inp.phase === "aim" && !plan && aimFor > 0.05 && st.drawSound !== inp.drawAt) {
+        st.drawSound = inp.drawAt ?? -1;
         archeryAudio.draw();
       }
 

@@ -3,33 +3,41 @@
 import { ArrowLeft, ArrowRight, Wind as WindIcon } from "lucide-react";
 import { useEffect, useRef } from "react";
 import type { Difficulty } from "../shared/difficulty";
-import { AIM_LOCK_MS, sightAt, type Point, type Wind } from "./logic";
+import { DRAW_MS, releaseAim, type Point, type Wind } from "./logic";
 import { RING_COLORS } from "./timeline";
 
+/** Yay gerilirken nişanın kaynağı: parmağın nişanı ve gerilmenin başladığı an (Date.now). */
+export type DrawSource = () => { aim: Point; drawAt: number } | null;
+
 /**
- * Nişangâh dürbünü: hedef önden görünür, artı işareti hedefin üstünde salınır. Yer, oyun mantığıyla
- * aynı fonksiyondan (`sightAt`) hesaplanır; dokunulduğu anda görünen yer ile okun nişanı birebir aynıdır.
+ * Nişangâh dürbünü: hedef önden görünür. Yay gerilirken artı işareti parmağın nişanı + sallantı + (yay
+ * tam gerilmediyse) düşüş kadar yerdedir; yer, oyun mantığıyla aynı fonksiyondan (`releaseAim`)
+ * hesaplanır, bırakıldığı anda görünen yer ile okun nişanı birebir aynıdır (rüzgâr ayrıca iter).
  * Ok bırakılınca dürbün okun saplandığı yeri gösterir.
  */
-export function AimScope({ aimStart, wind, hit, color, difficulty }: { aimStart: number | null; wind: Wind; hit: Point | null; color: string; difficulty: Difficulty }) {
+export function AimScope({ active, draw, wind, hit, color, difficulty }: { active: boolean; draw: DrawSource; wind: Wind; hit: Point | null; color: string; difficulty: Difficulty }) {
   const cross = useRef<SVGGElement>(null);
+  const meter = useRef<SVGCircleElement>(null);
   useEffect(() => {
-    if (aimStart === null) return;
+    if (!active) return;
     let raf = 0;
     const tick = () => {
-      const elapsed = Date.now() - aimStart;
-      const p = sightAt(elapsed, difficulty);
+      const d = draw();
+      const held = d ? Date.now() - d.drawAt : 0;
+      const p = d ? releaseAim(d.aim, held, difficulty) : { x: 0, y: 0 };
       const el = cross.current;
       if (el) {
         el.setAttribute("transform", `translate(${p.x.toFixed(4)} ${(-p.y).toFixed(4)})`);
-        // Yay gerilirken nişangâh soluk; kilit bitince belirginleşir.
-        el.style.opacity = elapsed < AIM_LOCK_MS ? "0.35" : "1";
+        // Yay gerilmeden nişangâh soluk; tam gerilince belirginleşir.
+        el.style.opacity = !d ? "0.35" : held < DRAW_MS ? "0.6" : "1";
       }
+      // Gerilme halkası: yay tam gerilince kapanır.
+      meter.current?.setAttribute("stroke-dashoffset", String((1 - Math.min(1, held / DRAW_MS)) * 8.04));
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [aimStart, difficulty]);
+  }, [active, draw, difficulty]);
 
   return (
     <div className="flex h-full w-full flex-col items-center justify-end gap-2">
@@ -48,7 +56,8 @@ export function AimScope({ aimStart, wind, hit, color, difficulty }: { aimStart:
             <circle r={0.035} fill={color} stroke="var(--color-ink-950)" strokeWidth={0.015} />
           </g>
         )}
-        {aimStart !== null && !hit && (
+        {active && !hit && <circle ref={meter} r={1.28} fill="none" stroke={color} strokeWidth={0.05} strokeDasharray={8.04} strokeDashoffset={8.04} transform="rotate(-90)" />}
+        {active && !hit && (
           <g ref={cross} style={{ opacity: 0.35 }}>
             <circle r={0.16} fill="none" stroke="var(--color-ink-950)" strokeWidth={0.05} />
             <circle r={0.16} fill="none" stroke={color} strokeWidth={0.026} />

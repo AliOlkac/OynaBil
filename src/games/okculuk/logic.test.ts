@@ -10,7 +10,12 @@ import {
   OVERTIME_MAX,
   resultOf,
   ringOf,
-  sightAt,
+  DRAW_MS,
+  releaseAim,
+  STEADY_MS,
+  SWAY,
+  swayAmp,
+  swayAt,
   WIND_STEP,
   windFor,
   type ArcherySettings,
@@ -35,23 +40,24 @@ const wrong = (s: ArcheryState, k = 1) => (deck[s.current].correctIndex + k) % 4
 const start = (over: Partial<ArcherySettings> = {}) => reduce(createArchery(teams, { questions: 4, seconds: 20, difficulty: 1, ...over }), { type: "start", now: 0 });
 const next = (s: ArcheryState, now = 0) => reduce(s, { type: "next", now });
 
-/** Nişangâhın verilen noktaya en yakın geçtiği an (kilitten sonraki ilk 12 saniyede). */
-function momentNear(target: { x: number; y: number }) {
-  let best = { t: AIM_LOCK_MS, d: Infinity };
-  for (let t = AIM_LOCK_MS; t < AIM_LOCK_MS + 12_000; t += 5) {
-    const p = sightAt(t);
-    const d = Math.hypot(p.x - target.x, p.y - target.y);
+/** Tam gerilmiş yayda, yorulmadan önce, nişangâhın `aim`e en yakın geçtiği an (basılı süre). */
+function momentNear(aim: { x: number; y: number }) {
+  let best = { t: DRAW_MS, d: Infinity };
+  for (let t = DRAW_MS; t < DRAW_MS + STEADY_MS; t += 5) {
+    const p = releaseAim(aim, t);
+    const d = Math.hypot(p.x - aim.x, p.y - aim.y);
     if (d < best.d) best = { t, d };
   }
   return best;
 }
 
-/** Takımın soruyu bilip nişangâh `target` noktasına en yakınken oku bırakması. */
+/** Takımın soruyu bilip yayı gerip `target` noktasına nişan alması ve doğru anda bırakması. */
 function attempt(s: ArcheryState, side: 0 | 1, target = { x: 0, y: 0 }, now = 0) {
   s = reduce(s, { type: "answer", side, option: right(s), now });
   // Rüzgâr payı: nişan rüzgârın tersine kaydırılır.
-  const aimAt = { x: target.x - s.wind * WIND_STEP, y: target.y };
-  return reduce(s, { type: "shoot", now: now + momentNear(aimAt).t });
+  const aim = { x: target.x - s.wind * WIND_STEP, y: target.y };
+  const drawAt = now + AIM_LOCK_MS;
+  return reduce(s, { type: "shoot", aim, drawAt, now: drawAt + momentNear(aim).t });
 }
 
 describe("Okçuluk: nişan, rüzgâr ve puan", () => {
@@ -70,15 +76,15 @@ describe("Okçuluk: nişan, rüzgâr ve puan", () => {
     expect(hitPoint({ x: 0, y: 0 }, -3).x).toBeCloseTo(-3 * WIND_STEP);
   });
 
-  it("nişangâh hedefin içinde kalır ve merkezden geçer", () => {
-    for (let t = 0; t < 30_000; t += 37) {
-      const p = sightAt(t);
-      expect(Math.hypot(p.x, p.y)).toBeLessThan(1.05);
-    }
+  it("tam gerilmiş yayda nişan az sallanır; uzun tutunca kol yorulur, sallantı büyür", () => {
+    for (let t = DRAW_MS; t < DRAW_MS + STEADY_MS; t += 23) expect(Math.hypot(swayAt(t).x, swayAt(t).y)).toBeLessThanOrEqual(SWAY[0] * 1.27);
+    expect(swayAmp(DRAW_MS + STEADY_MS + 2_000)).toBeGreaterThan(swayAmp(DRAW_MS + STEADY_MS) * 3);
     expect(momentNear({ x: 0, y: 0 }).d).toBeLessThan(0.03);
-    // Rüzgâr payı verilebilsin diye kenarlara da yarım halka yakınından geçer.
-    expect(momentNear({ x: 0.33, y: 0 }).d).toBeLessThan(0.06);
-    expect(momentNear({ x: -0.33, y: 0 }).d).toBeLessThan(0.06);
+  });
+
+  it("yay tam gerilmeden bırakılan ok düşer", () => {
+    expect(releaseAim({ x: 0, y: 0 }, DRAW_MS / 2).y).toBeLessThan(-0.45);
+    expect(releaseAim({ x: 0, y: 0 }, DRAW_MS * 2).y).toBeGreaterThan(-SWAY[0] - 1e-9);
   });
 
   it("rüzgâr soruya bağlıdır ve sakin hava daha sıktır", () => {
@@ -95,8 +101,12 @@ describe("Okçuluk: oyun akışı", () => {
     s = reduce(s, { type: "answer", side: 1, option: right(s), now: 100 });
     expect(s.phase).toBe("aim");
     expect(s.shooter).toBe(1);
-    expect(reduce(s, { type: "shoot", now: 100 + AIM_LOCK_MS - 1 })).toBe(s);
-    s = reduce(s, { type: "shoot", now: 100 + AIM_LOCK_MS + 2_000 });
+    const aim = { x: 0, y: 0 };
+    expect(reduce(s, { type: "shoot", aim, drawAt: 100, now: 100 + AIM_LOCK_MS - 1 })).toBe(s);
+    // Yay soru hakkı kazanılmadan gerilmiş sayılmaz; bozuk eylem yok sayılır.
+    expect(reduce(s, { type: "shoot", aim, drawAt: 50, now: 100 + AIM_LOCK_MS + 2_000 })).toBe(s);
+    expect(reduce(s, { type: "shoot", aim: { x: Number.NaN, y: 0 }, drawAt: 100 + AIM_LOCK_MS, now: 100 + AIM_LOCK_MS + 2_000 })).toBe(s);
+    s = reduce(s, { type: "shoot", aim, drawAt: 100 + AIM_LOCK_MS, now: 100 + AIM_LOCK_MS + 2_000 });
     expect(s.phase).toBe("result");
     expect(s.shots).toHaveLength(1);
     expect(s.score[1]).toBe(s.shots[0].points);
@@ -175,10 +185,9 @@ describe("Okçuluk: oyun akışı", () => {
 });
 
 describe("Okçuluk: zorluk", () => {
-  it("normal ve zorda nişangâh daha hızlı gezinir, rüzgâr daha sert iter", () => {
-    const at = AIM_LOCK_MS + 1_000;
-    expect(sightAt(at, 2)).toEqual(sightAt(AIM_LOCK_MS + 1_300, 1));
-    expect(sightAt(at, 3)).toEqual(sightAt(AIM_LOCK_MS + 1_600, 1));
+  it("normal ve zorda nişan daha çok sallanır, rüzgâr daha sert iter", () => {
+    expect(swayAmp(DRAW_MS, 2)).toBeGreaterThan(swayAmp(DRAW_MS, 1));
+    expect(swayAmp(DRAW_MS, 3)).toBeGreaterThan(swayAmp(DRAW_MS, 2));
     expect(hitPoint({ x: 0, y: 0 }, 2, 3).x).toBeGreaterThan(hitPoint({ x: 0, y: 0 }, 2, 1).x);
   });
 
@@ -187,9 +196,9 @@ describe("Okçuluk: zorluk", () => {
     const shoot = (difficulty?: number) => {
       let s = reduce(createArchery(teams, { questions: 4, seconds: 20, ...(difficulty === undefined ? {} : { difficulty }) }), { type: "start", now: 0 });
       s = reduce(s, { type: "answer", side: 0, option: right(s), now: 100 });
-      return reduce(s, { type: "shoot", now: t }).shots[0];
+      return reduce(s, { type: "shoot", aim: { x: 0.1, y: 0 }, drawAt: 100 + AIM_LOCK_MS, now: t }).shots[0];
     };
-    expect(shoot().aim).toEqual(sightAt(t - 100, 3));
-    expect(shoot(1).aim).toEqual(sightAt(t - 100, 1));
+    expect(shoot().aim).toEqual(releaseAim({ x: 0.1, y: 0 }, 2_000, 3));
+    expect(shoot(1).aim).toEqual(releaseAim({ x: 0.1, y: 0 }, 2_000, 1));
   });
 });
