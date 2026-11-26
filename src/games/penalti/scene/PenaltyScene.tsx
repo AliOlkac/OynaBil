@@ -6,6 +6,7 @@ import { cssColor } from "@/lib/color";
 import { sfx } from "@/lib/sound";
 import { fmt, reach, type Vec } from "../../shared/skeleton";
 import { penaltyAudio } from "../audio";
+import { readSwipe, type Swipe, type SwipeSample } from "../swipe";
 import { classify, GOAL_KIND_TEXT, goalKind, KICK_LOCK_MS, type Kick, type PenaltyState } from "../logic";
 import { DUST_COUNT, netGrid, SceneArt, type ArtTeam } from "./art";
 import {
@@ -58,7 +59,7 @@ type Props = {
   input: SceneInput;
   teams: [ArtTeam, ArtTeam];
   reducedMotion: boolean;
-  onKick: (x: number, y: number) => void;
+  onKick: (swipe: Swipe) => void;
   /** Top kaleye, kaleciye ya da direğe ulaştı: skor bu anda güncellenir. */
   onContact: (index: number) => void;
   onKickDone: (index: number) => void;
@@ -201,7 +202,9 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
       keeper: { hip: { ...KEEPER_HIP }, angle: 0, hands: [{ x: -62, y: -30 }, { x: 62, y: -30 }] as Vec[] },
       finale: null as null | { start: number; called: boolean; confetti: boolean },
       lastPhase: start.phase,
-      aiming: null as null | { id: number; p: Vec },
+      aiming: null as null | { id: number; samples: SwipeSample[]; p: Vec | null },
+      /** Görünen alanın yüksekliği (çizim birimi): kaydırmanın hızı buna göre ölçülür. */
+      viewH: 540,
       whistled: start.kickStart,
       keeperPose: { hip: { ...KEEPER_HIP }, angle: 0 },
     };
@@ -235,26 +238,41 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
       const inp = inputRef.current;
       return inp.aimable !== false && !inp.aim && inp.phase === "kick" && inp.kickStart !== null && Date.now() - inp.kickStart >= KICK_LOCK_MS && inp.kicks.length === st.seenKicks;
     };
+    // ---- şut: kaleye doğru bir çizgi çiz ----
+    // Çizginin bittiği yer hedef, hızı güç, kavisi falsodur (bkz. swipe.ts). Çizim sürerken halka
+    // topun gideceği yeri gösterir.
+    const goalOf = (x: number, y: number) => toGoal({ x, y });
+    const sample = (e: PointerEvent): SwipeSample | null => {
+      const p = toWorld(e);
+      return p ? { x: p.x, y: p.y, t: e.timeStamp } : null;
+    };
+    const preview = () => {
+      if (!st.aiming) return;
+      const sw = readSwipe(st.aiming.samples, goalOf, st.viewH);
+      st.aiming.p = sw ? toScreen(sw.x, sw.y) : null;
+    };
     const onDown = (e: PointerEvent) => {
       if (!canAim() || st.aiming || (e.pointerType === "mouse" && e.button !== 0)) return;
-      const p = toWorld(e);
+      const p = sample(e);
       if (!p) return;
       e.preventDefault();
       svg.setPointerCapture(e.pointerId);
-      st.aiming = { id: e.pointerId, p };
+      st.aiming = { id: e.pointerId, samples: [p], p: null };
     };
     const onMove = (e: PointerEvent) => {
       if (!st.aiming || st.aiming.id !== e.pointerId) return;
-      const p = toWorld(e);
-      if (p) st.aiming.p = p;
+      const p = sample(e);
+      if (p) st.aiming.samples.push(p);
+      preview();
     };
     const onUp = (e: PointerEvent) => {
       if (!st.aiming || st.aiming.id !== e.pointerId) return;
-      const p = toWorld(e) ?? st.aiming.p;
+      const p = sample(e);
+      if (p) st.aiming.samples.push(p);
+      const sw = readSwipe(st.aiming.samples, goalOf, st.viewH);
       st.aiming = null;
-      if (!canAim()) return;
-      const g = toGoal(p);
-      handlers.current.onKick(g.x, g.y);
+      if (!canAim() || !sw) return;
+      handlers.current.onKick(sw);
     };
     const onCancel = () => {
       st.aiming = null;
@@ -467,7 +485,7 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
         if (u < 0) {
           // Vuruştan önce top yerinde.
         } else if (u <= 1) {
-          const f = ballAt(anim.target, u);
+          const f = ballAt(anim.target, u, k.curve ?? 0);
           ballPos = f.p;
           ballR = f.r;
           ballGround = f.ground;
@@ -725,8 +743,8 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
       // -- nişan --
       // Nişan kilitlenince (güç seçilirken) halka nişan noktasında durur.
       const lockedAim = inp.phase === "kick" && inp.aim ? toScreen(inp.aim.x, inp.aim.y) : null;
-      if ((st.aiming && canAim()) || lockedAim) {
-        const p = lockedAim ?? st.aiming!.p;
+      if ((st.aiming?.p && canAim()) || lockedAim) {
+        const p = lockedAim ?? st.aiming!.p!;
         const g = toGoal(p);
         const place = classify(g.x, g.y);
         aim?.setAttribute("opacity", "1");
@@ -807,6 +825,7 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
       const sx = quiet ? 0 : Math.sin(now / 17) * st.shake;
       const sy = quiet ? 0 : Math.cos(now / 23) * st.shake * 0.6;
       svg.setAttribute("viewBox", `${(cx - vw / 2 + sx).toFixed(1)} ${(cy - vh / 2 + sy).toFixed(1)} ${vw.toFixed(1)} ${vh.toFixed(1)}`);
+      st.viewH = vh;
 
       raf = requestAnimationFrame(frame);
     };

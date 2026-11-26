@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { spring } from "@/lib/motion";
 import { initialTier, rememberTier } from "../../shared/stage3d/support";
 import { GOAL_KIND_TEXT, goalKind, type KickResult } from "../logic";
+import type { Swipe } from "../swipe";
 import type { ArtTeam } from "../scene/art";
 import type { SceneInput } from "../scene/PenaltyScene";
 
@@ -20,7 +21,7 @@ type Props = {
   input: SceneInput;
   teams: [ArtTeam, ArtTeam];
   reducedMotion: boolean;
-  onKick: (x: number, y: number) => void;
+  onKick: (swipe: Swipe) => void;
   onContact: (index: number) => void;
   onKickDone: (index: number) => void;
   onFinale: () => void;

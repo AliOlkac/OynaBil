@@ -7,12 +7,12 @@ import type { AnswerLog, Team } from "../types";
  * Penaltı oyun mantığı.
  *
  * İki takıma aynı soru sorulur (düello sorusu). İlk doğru cevaplayan takımın oyuncusu penaltıyı çeker;
- * yanlış cevap veren takım bekler, iki takım da bilemezse kimse çekmez. Şutçu parmağıyla topu
- * kalenin istediği yerine sürükler, ardından güç çubuğu inip çıkarken VUR der. Yeşil bölge isabetli
- * vuruştur; zayıf vuruşa kaleci yetişir, fazla sert vuruş yükselip açılır (üst direk, direk ya da aut).
- * Direğe çok yakın nişan da risklidir. Kaleci bilgisayardır ve takımın alışkanlığını okur: önceki şutların
- * gittiği yöne atlama olasılığı artar. Atladığı üçlüdeki ve sınırına yakın topları kurtarır; yükseklik
- * fark etmez. Gol atmanın yolu yön değiştirmek ve kalecinin uzanamayacağı yere vurmaktır.
+ * yanlış cevap veren takım bekler, iki takım da bilemezse kimse çekmez. Şutçu parmağıyla kaleye doğru
+ * bir çizgi çizer: çizginin bittiği yer (kalenin altında biterse kaleye doğru uzatılır) hedef, hızı güç,
+ * kavisi falsodur. İsabetli hızdaki vuruş hedefe gider; yavaşına kaleci yetişir, fazla hızlısı yükselip
+ * açılır (üst direk, direk ya da aut). Falsolu top kaleciyi biraz şaşırtır. Kaleci bilgisayardır ve
+ * takımın alışkanlığını okur: önceki şutların gittiği yöne atlama olasılığı artar. Atladığı üçlüdeki ve
+ * sınırına yakın topları kurtarır; doksana isabetli giden topa yetişemez.
  *
  * Sorular bitince çok gol atan kazanır; eşitlikte seri penaltıya geçilir, ilk golü atan kazanır.
  * Saf reducer: zaman eylemle gelir, kalecinin seçimi oyun tohumundan türetilir.
@@ -45,12 +45,14 @@ export const BAR_BAND = 0.045;
  */
 export const TOP_CORNER = { x: 0.68, y: 0.72 } as const;
 
-/** Güç çubuğu: nişandan sonra bekleyip inip çıkar. Yer, oyun mantığıyla ekranda aynı fonksiyondan çizilir. */
-export const POWER_LOCK_MS = 450;
-export const POWER_PERIOD_MS = 1_500;
-/** Yeşil bölgenin ortası ve yarı genişliği (güç ölçeğinde, 0..1). */
-export const POWER_SWEET = 0.66;
-export const POWER_HALF = 0.11;
+/**
+ * Şutun gücü kaydırmanın hızından gelir (0..1). Yeşil bölgenin ortası ve yarı genişliği: bu aralıktaki
+ * vuruş nişana gider; daha yavaşı zayıf kalır, daha hızlısı yükselip açılır.
+ */
+export const POWER_SWEET = 0.62;
+export const POWER_HALF = 0.14;
+/** Falso: kavisli kaydırma topu eğri yoldan götürür, kaleci bu kadar daha az uzanır (tam falsoda). */
+export const CURL_DODGE = 0.12;
 /** Zayıf vuruşta kalecinin fazladan uzanabildiği mesafe (en zayıfta); top yavaş geldiği için. */
 export const WEAK_REACH = 0.75;
 /** Sert vuruşta topun yükselmesi ve dışa açılması (yeşilin üstündeki her birim güç için). */
@@ -58,13 +60,6 @@ export const LOFT = 2.4;
 export const SLICE = 0.55;
 
 export type Power = "zayif" | "isabetli" | "sert";
-
-/** Güç çubuğunun yeri: POWER_LOCK_MS sonra 0'dan başlar, bir turda 1'e çıkıp geri iner. */
-export function powerAt(elapsedMs: number): number {
-  const t = Math.max(0, elapsedMs - POWER_LOCK_MS);
-  const f = (t % POWER_PERIOD_MS) / POWER_PERIOD_MS;
-  return f < 0.5 ? f * 2 : 2 - f * 2;
-}
 
 export function powerZone(power: number): Power {
   if (power < POWER_SWEET - POWER_HALF) return "zayif";
@@ -110,6 +105,8 @@ export type Kick = {
   aimY?: number;
   /** Vuruşun gücü (0..1; eski kayıtlarda yok). */
   power?: number;
+  /** Falso (-1..1; eksi sola, artı sağa kavis). */
+  curve?: number;
   third: Third;
   keeper: Third;
   result: KickResult;
@@ -132,7 +129,7 @@ export type PenaltyState = {
   outcome: "correct" | "wrong" | "timeout" | null;
   shooter: 0 | 1 | null;
   kickStart: number | null;
-  /** Nişan alındıysa nişan noktası ve güç çubuğunun başladığı an. */
+  /** Eski iki adımlı şutun nişanı; kaydırmalı şutta hep boştur (eski kayıtlar için durur). */
   aim: { x: number; y: number; at: number } | null;
   deadline: number | null;
   remaining: number | null;
@@ -149,8 +146,7 @@ export type PenaltyAction =
   | { type: "start"; now: number }
   | { type: "answer"; side: 0 | 1; option: number; now: number }
   | { type: "timeout"; now: number }
-  | { type: "aim"; x: number; y: number; now: number }
-  | { type: "kick"; now: number }
+  | { type: "kick"; x: number; y: number; power: number; curve: number; now: number }
   | { type: "next"; now: number }
   | { type: "pause"; now: number }
   | { type: "resume"; now: number };
@@ -219,7 +215,7 @@ export function keeperFor(seed: number, kickIndex: number, habits: readonly Thir
 /** Kaleci topa yetişir mi: top atladığı üçlüdeyse ya da sınırına `KEEPER_REACH` kadar yakınsa. */
 export function keeperReaches(x: number, keeper: Third, extraReach = 0, y = 0): boolean {
   // Doksana isabetli giden topa kaleci yetişemez; zayıf vuruşta yetişir.
-  if (extraReach === 0 && isTopCorner(x, y)) return false;
+  if (extraReach <= 0 && isTopCorner(x, y)) return false;
   const [from, to] = ZONE[keeper];
   const reach = KEEPER_REACH + extraReach;
   return x >= from - reach && x <= to + reach;
@@ -337,22 +333,19 @@ export function penaltyReducer(deck: PlayableQuestion[]) {
         return { ...s, phase: "reveal", outcome: "timeout", log, deadline: null, remaining: null };
       }
 
-      case "aim": {
-        if (s.phase !== "kick" || s.shooter === null || s.kickStart === null || s.aim) return s;
-        if (a.now - s.kickStart < KICK_LOCK_MS) return s;
-        if (!Number.isFinite(a.x) || !Number.isFinite(a.y)) return s;
-        return { ...s, aim: { x: a.x, y: a.y, at: a.now } };
-      }
-
       case "kick": {
-        if (s.phase !== "kick" || s.shooter === null || !s.aim) return s;
-        if (a.now - s.aim.at < POWER_LOCK_MS) return s;
-        const power = powerAt(a.now - s.aim.at);
+        // Kaydırmalı şut: hedef, güç ve falso tek eylemde gelir.
+        if (s.phase !== "kick" || s.shooter === null || s.kickStart === null) return s;
+        if (a.now - s.kickStart < KICK_LOCK_MS) return s;
+        if (![a.x, a.y, a.power, a.curve].every(Number.isFinite)) return s;
+        const power = Math.min(1, Math.max(0, a.power));
+        const curve = Math.min(1, Math.max(-1, a.curve));
+        const aim = { x: Math.min(2.4, Math.max(-2.4, a.x)), y: Math.min(2.4, Math.max(0, a.y)) };
         // Kaleci bu takımın önceki şutlarını hatırlar.
         const habits = s.kicks.filter((k) => k.side === s.shooter).map((k) => k.third);
         const keeper = keeperFor(s.seed, s.kicks.length, habits);
-        let { x, y } = shotFrom(s.aim, power);
-        const result = kickResult(x, y, keeper, weakReach(power));
+        let { x, y } = shotFrom(aim, power);
+        const result = kickResult(x, y, keeper, weakReach(power) - CURL_DODGE * Math.abs(curve));
         const post = result === "gol" && postIn(x, y);
         // Direğe çarpan top sahnede gerçekten direğe değsin: yeri direğin çizgisine çekilir.
         if (post) {
@@ -368,7 +361,7 @@ export function penaltyReducer(deck: PlayableQuestion[]) {
             y = Math.min(y, 0.92);
           }
         }
-        const kick: Kick = { side: s.shooter, x, y, aimX: s.aim.x, aimY: s.aim.y, power, third: thirdOf(x), keeper, result, ...(post ? { post } : {}), at: a.now, questionId: q?.id ?? "" };
+        const kick: Kick = { side: s.shooter, x, y, aimX: aim.x, aimY: aim.y, power, ...(curve ? { curve } : {}), third: thirdOf(x), keeper, result, ...(post ? { post } : {}), at: a.now, questionId: q?.id ?? "" };
         const goals = [...s.goals] as [number, number];
         if (result === "gol") goals[s.shooter] += 1;
         const next: PenaltyState = { ...s, phase: "result", goals, kicks: [...s.kicks, kick], kickStart: null, aim: null };

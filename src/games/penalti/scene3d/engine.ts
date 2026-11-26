@@ -6,6 +6,7 @@ import { DARK, HAIR, PANTS, SKIN } from "../../shared/kid";
 import { FIGURE, KidFigure, type FigureLook, type Mouth } from "../../shared/stage3d/figure";
 import { canvasTexture, clamp01, createRenderer, disposeTree, easeInOut, easeOut, follow, glowTexture, lerp, tierSettings, tokenColor } from "../../shared/stage3d/kit";
 import { createFrameWatch, type Tier } from "../../shared/stage3d/support";
+import { readSwipe, type Swipe, type SwipeSample } from "../swipe";
 import { penaltyAudio } from "../audio";
 import { classify, KICK_LOCK_MS, type KickResult } from "../logic";
 import { KICKER_LOOKS, type ArtTeam } from "../scene/art";
@@ -24,7 +25,7 @@ import { BALL_R, GOAL_H, GOAL_HALF, KEEPER_HIP_Y, KEEPER_Z, KICKER_HOME, KICKER_
  */
 
 export type EngineHandlers = {
-  onKick: (x: number, y: number) => void;
+  onKick: (swipe: Swipe) => void;
   /** Top kaleye, kaleciye ya da direğe ulaştı: skor bu anda güncellenir. */
   onContact: (index: number) => void;
   onKickDone: (index: number) => void;
@@ -310,7 +311,8 @@ export function createPenaltyEngine(o: EngineOptions): { dispose: () => void } {
     keeper: { x: 0, y: KEEPER_HIP_Y, z: KEEPER_Z, roll: 0 },
     finale: null as null | { start: number; called: boolean; confetti: boolean },
     lastPhase: start.phase,
-    aiming: null as null | { id: number; gx: number; gy: number },
+    /** Çizilen şut: parmağın izi ve o ana kadarki tahmini hedef (kale koordinatı). */
+    aiming: null as null | { id: number; gx: number; gy: number; samples: SwipeSample[]; live: boolean },
     whistled: start.kickStart,
     aspect: 2,
   };
@@ -352,15 +354,16 @@ export function createPenaltyEngine(o: EngineOptions): { dispose: () => void } {
   const ndc = new THREE.Vector2();
   const goalPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
   const hit = new THREE.Vector3();
-  const pointToGoal = (e: PointerEvent): { gx: number; gy: number } | null => {
+  /** Ekran noktasının kale düzlemindeki karşılığı (kale koordinatı, sınırlanmamış). */
+  const screenToGoal = (clientX: number, clientY: number): { x: number; y: number } => {
     const rect = canvas.getBoundingClientRect();
-    if (!rect.width || !rect.height) return null;
-    ndc.set(((e.clientX - rect.left) / rect.width) * 2 - 1, -(((e.clientY - rect.top) / rect.height) * 2 - 1));
+    ndc.set(((clientX - rect.left) / Math.max(1, rect.width)) * 2 - 1, -(((clientY - rect.top) / Math.max(1, rect.height)) * 2 - 1));
     ray.setFromCamera(ndc, camera);
-    if (!ray.ray.intersectPlane(goalPlane, hit)) return null;
-    // Kalenin önündeki çime uzanan parmak yerden bir şut demektir; çok uzağa giden nişan sınırlanır.
-    return { gx: Math.max(-2.4, Math.min(2.4, hit.x / GOAL_HALF)), gy: Math.max(0.04, Math.min(2.3, hit.y / GOAL_H)) };
+    if (!ray.ray.intersectPlane(goalPlane, hit)) return { x: 0, y: -1 };
+    return { x: hit.x / GOAL_HALF, y: hit.y / GOAL_H };
   };
+  const sampleOf = (e: PointerEvent): SwipeSample => ({ x: e.clientX, y: e.clientY, t: e.timeStamp });
+  const swipeOf = (samples: SwipeSample[]) => readSwipe(samples, screenToGoal, canvas.getBoundingClientRect().height);
   const canAim = () => {
     const inp = o.getInput();
     return inp.aimable !== false && !inp.aim && inp.phase === "kick" && inp.kickStart !== null && Date.now() - inp.kickStart >= KICK_LOCK_MS && inp.kicks.length === st.seenKicks;
@@ -369,27 +372,32 @@ export function createPenaltyEngine(o: EngineOptions): { dispose: () => void } {
     if (st.aiming) canvas.dataset.aim = `${st.aiming.gx.toFixed(3)},${st.aiming.gy.toFixed(3)}`;
     else delete canvas.dataset.aim;
   };
+  // Şut: kaleye doğru bir çizgi çizilir; bittiği yer hedef, hızı güç, kavisi falso (bkz. swipe.ts).
   const onDown = (e: PointerEvent) => {
     if (!canAim() || st.aiming || (e.pointerType === "mouse" && e.button !== 0)) return;
-    const g = pointToGoal(e);
-    if (!g) return;
     e.preventDefault();
     canvas.setPointerCapture(e.pointerId);
-    st.aiming = { id: e.pointerId, ...g };
+    st.aiming = { id: e.pointerId, gx: 0, gy: 0, samples: [sampleOf(e)], live: false };
     setAimAttr();
   };
   const onMove = (e: PointerEvent) => {
     if (!st.aiming || st.aiming.id !== e.pointerId) return;
-    const g = pointToGoal(e);
-    if (g) st.aiming = { id: e.pointerId, ...g };
+    st.aiming.samples.push(sampleOf(e));
+    const sw = swipeOf(st.aiming.samples);
+    st.aiming.live = sw !== null;
+    if (sw) {
+      st.aiming.gx = sw.x;
+      st.aiming.gy = sw.y;
+    }
     setAimAttr();
   };
   const onUp = (e: PointerEvent) => {
     if (!st.aiming || st.aiming.id !== e.pointerId) return;
-    const g = pointToGoal(e) ?? st.aiming;
+    st.aiming.samples.push(sampleOf(e));
+    const sw = swipeOf(st.aiming.samples);
     st.aiming = null;
     setAimAttr();
-    if (canAim()) o.handlers().onKick(g.gx, g.gy);
+    if (sw && canAim()) o.handlers().onKick(sw);
   };
   const onCancel = () => {
     st.aiming = null;
@@ -714,7 +722,7 @@ export function createPenaltyEngine(o: EngineOptions): { dispose: () => void } {
       const u = flying ? (tau - STRIKE) / FLIGHT - (i + 1) * 0.035 : -1;
       sprite.visible = u > 0;
       if (u > 0) {
-        flightPoint(plan!.target, u, flightTmp);
+        flightPoint(plan!.target, u, flightTmp, plan!.kick.curve ?? 0);
         sprite.position.set(flightTmp.x, flightTmp.y, flightTmp.z);
       }
     });
@@ -834,7 +842,7 @@ export function createPenaltyEngine(o: EngineOptions): { dispose: () => void } {
     // -- nişan --
     // Nişan kilitlenince (güç seçilirken) halka nişan noktasında durur, yol noktaları akmaya devam eder.
     const locked = inp.phase === "kick" && inp.aim ? { gx: inp.aim.x, gy: inp.aim.y } : null;
-    if ((st.aiming && canAim()) || locked) {
+    if ((st.aiming?.live && canAim()) || locked) {
       const g = locked ?? st.aiming!;
       const target = kickTarget(g.gx, g.gy);
       aimGroup.visible = true;

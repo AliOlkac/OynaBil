@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import type { PlayableQuestion } from "@/core/deck";
 import { defaultTeams } from "../teams";
 import type { Team } from "../types";
-import { powerTime } from "./bot";
+import { readSwipe, type SwipeSample } from "./swipe";
 import {
   classify,
   createPenalty,
@@ -18,10 +18,8 @@ import {
   goalKind,
   postIn,
   POST_BAND,
-  POWER_LOCK_MS,
-  POWER_PERIOD_MS,
+  CURL_DODGE,
   POWER_SWEET,
-  powerAt,
   powerZone,
   shotFrom,
   weakReach,
@@ -57,15 +55,13 @@ function seedWithKeeper(keeper: Third) {
 
 /** Atış hakkı kazanılmışken verilen yere isabetli güçle şut. */
 function scoreKick(s: PenaltyState, x: number, y: number, now = 0) {
-  s = reduce(s, { type: "aim", x, y, now: now + KICK_LOCK_MS });
-  return reduce(s, { type: "kick", now: now + KICK_LOCK_MS + powerTime(POWER_SWEET) });
+  return reduce(s, { type: "kick", x, y, power: POWER_SWEET, curve: 0, now: now + KICK_LOCK_MS });
 }
 
 /** Takımın soruyu bilip verilen yere şut çekmesi. */
 function scoreAttempt(s: PenaltyState, side: 0 | 1, x: number, y: number, now = 0) {
   s = reduce(s, { type: "answer", side, option: right(s), now });
-  s = reduce(s, { type: "aim", x, y, now: now + KICK_LOCK_MS });
-  return reduce(s, { type: "kick", now: now + KICK_LOCK_MS + powerTime(POWER_SWEET) });
+  return reduce(s, { type: "kick", x, y, power: POWER_SWEET, curve: 0, now: now + KICK_LOCK_MS });
 }
 
 describe("Penaltı: kale ve kaleci", () => {
@@ -110,11 +106,10 @@ describe("Penaltı: oyun akışı", () => {
     expect(s.phase).toBe("kick");
     expect(s.shooter).toBe(1);
     // Oyuncu topun başına gelmeden şut alınmaz.
-    expect(reduce(s, { type: "aim", x: -0.7, y: 0.8, now: 100 + KICK_LOCK_MS - 1 }).aim).toBeNull();
-    s = reduce(s, { type: "aim", x: -0.7, y: 0.8, now: 100 + KICK_LOCK_MS });
-    // Güç çubuğu beklerken vuruş alınmaz.
-    expect(reduce(s, { type: "kick", now: 100 + KICK_LOCK_MS + POWER_LOCK_MS - 1 }).phase).toBe("kick");
-    s = reduce(s, { type: "kick", now: 100 + KICK_LOCK_MS + powerTime(POWER_SWEET) });
+    const shot = { type: "kick", x: -0.7, y: 0.6, power: POWER_SWEET, curve: 0 } as const;
+    expect(reduce(s, { ...shot, now: 100 + KICK_LOCK_MS - 1 }).phase).toBe("kick");
+    expect(reduce(s, { ...shot, power: Number.NaN, now: 100 + KICK_LOCK_MS }).phase).toBe("kick");
+    s = reduce(s, { ...shot, now: 100 + KICK_LOCK_MS });
     expect(s.phase).toBe("result");
     expect(s.kicks[0]).toMatchObject({ side: 1, third: "sol", keeper: "sag", result: "gol" });
     expect(s.goals).toEqual([0, 1]);
@@ -139,7 +134,7 @@ describe("Penaltı: oyun akışı", () => {
     t = reduce(t, { type: "answer", side: 0, option: wrong(t, 1), now: 10 });
     t = reduce(t, { type: "answer", side: 1, option: wrong(t, 2), now: 20 });
     expect(t.phase).toBe("reveal");
-    expect(reduce(t, { type: "aim", x: 0, y: 0.5, now: 99_999 }).aim).toBeNull();
+    expect(reduce(t, { type: "kick", x: 0, y: 0.5, power: POWER_SWEET, curve: 0, now: 99_999 }).kicks).toHaveLength(0);
     t = reduce(t, { type: "next", now: 30 });
     expect(t.phase).toBe("question");
     expect(t.asked).toBe(2);
@@ -199,10 +194,7 @@ describe("Penaltı: oyun akışı", () => {
 });
 
 describe("Penaltı: güç ve direk", () => {
-  it("güç çubuğu inip çıkar; yer oyun mantığıyla aynı fonksiyondan gelir", () => {
-    expect(powerAt(0)).toBe(0);
-    expect(powerAt(powerTime(0.5))).toBeCloseTo(0.5);
-    expect(powerAt(POWER_LOCK_MS + POWER_PERIOD_MS / 2)).toBeCloseTo(1);
+  it("güç bölgeleri: yavaş zayıf, ortası isabetli, çok hızlısı sert", () => {
     expect(powerZone(0.3)).toBe("zayif");
     expect(powerZone(POWER_SWEET)).toBe("isabetli");
     expect(powerZone(0.95)).toBe("sert");
@@ -271,5 +263,47 @@ describe("Penaltı: akıllı kaleci", () => {
     expect(count(["sol", "orta", "sag"])).toBeLessThan(0.4);
     // Yalnızca son dört şut hatırlanır.
     expect(count(["sag", "sag", "sag", "sol", "sol", "sol", "sol"])).toBeLessThan(0.25);
+  });
+});
+
+describe("Penaltı: kaydırmalı şut", () => {
+  // Basit bir kale: ekranın ortası x=0, 100 piksel = yarım kale; kale çizgisi y=400, 100 piksel = kale yüksekliği.
+  const toGoal = (x: number, y: number) => ({ x: (x - 500) / 100, y: (400 - y) / 100 });
+  const line = (pts: [number, number][], ms: number): SwipeSample[] => pts.map(([x, y], i) => ({ x, y, t: (i / (pts.length - 1)) * ms }));
+  const straight = (x0: number, y0: number, x1: number, y1: number, ms: number, n = 8) =>
+    line(Array.from({ length: n + 1 }, (_, i) => [x0 + ((x1 - x0) * i) / n, y0 + ((y1 - y0) * i) / n] as [number, number]), ms);
+
+  it("çizginin bittiği yer hedeftir; hızlı çizgi güçlü, yavaşı zayıftır", () => {
+    const fast = readSwipe(straight(500, 700, 585, 320, 120), toGoal, 600)!;
+    expect(fast.x).toBeCloseTo(0.85, 5);
+    expect(fast.y).toBeCloseTo(0.8, 5);
+    const slow = readSwipe(straight(500, 700, 585, 320, 900), toGoal, 600)!;
+    expect(slow.power).toBeLessThan(fast.power);
+    expect(powerZone(slow.power)).toBe("zayif");
+    expect(fast.curve).toBe(0);
+  });
+
+  it("kalenin altında biten çizgi kaleye kadar uzatılır: yerden şut", () => {
+    const sw = readSwipe(straight(500, 700, 540, 600, 150), toGoal, 600)!;
+    expect(sw.y).toBeLessThan(0.1);
+    // Çizginin yönü korunur: 100 piksel yukarıda 40 piksel sağa, kale çizgisine 300 piksel var.
+    expect(sw.x).toBeCloseTo(1.2, 1);
+  });
+
+  it("kavisli çizgi falso verir; aşağı ya da çok kısa çizgi şut değildir", () => {
+    const pts: [number, number][] = Array.from({ length: 9 }, (_, i) => [500 + Math.sin((Math.PI * i) / 8) * 90, 700 - i * 45]);
+    expect(readSwipe(line(pts, 200), toGoal, 600)!.curve).toBeGreaterThan(0.5);
+    expect(readSwipe(straight(500, 400, 500, 700, 150), toGoal, 600)).toBeNull();
+    expect(readSwipe(straight(500, 700, 502, 690, 150), toGoal, 600)).toBeNull();
+  });
+
+  it("falsolu şut kaleciyi şaşırtır", () => {
+    const x = 1 / 3 + KEEPER_REACH - CURL_DODGE / 2;
+    expect(kickResult(x, 0.4, "orta")).toBe("kurtardi");
+    expect(kickResult(x, 0.4, "orta", -CURL_DODGE)).toBe("gol");
+    let s = start({}, seedWithKeeper("orta"));
+    s = reduce(s, { type: "answer", side: 0, option: right(s), now: 0 });
+    s = reduce(s, { type: "kick", x, y: 0.4, power: POWER_SWEET, curve: -1, now: KICK_LOCK_MS });
+    expect(s.kicks[0]).toMatchObject({ result: "gol", curve: -1 });
   });
 });

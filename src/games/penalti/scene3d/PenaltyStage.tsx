@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { setStage3dPref, shouldUse3d, useStage3d } from "../../shared/stage3d/support";
 import type { ArtTeam } from "../scene/art";
 import { PenaltyScene, type SceneInput } from "../scene/PenaltyScene";
+import type { Swipe } from "../swipe";
 import { PenaltyScene3D } from "./PenaltyScene3D";
 
 /**
@@ -15,7 +16,7 @@ type Props = {
   input: SceneInput;
   teams: [ArtTeam, ArtTeam];
   reducedMotion: boolean;
-  onKick: (x: number, y: number) => void;
+  onKick: (swipe: Swipe) => void;
   onContact: (index: number) => void;
   onKickDone: (index: number) => void;
   onFinale: () => void;

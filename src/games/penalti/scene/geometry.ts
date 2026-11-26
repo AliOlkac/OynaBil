@@ -45,10 +45,12 @@ export function toNetBack(p: Vec): Vec {
 }
 
 /** Topun uçuşu: u=0 penaltı noktası, u=1 kale ağzı. Uzaklaştıkça küçülür, hafif bir yay çizer. */
-export function ballAt(target: Vec, u: number): { p: Vec; r: number; ground: Vec } {
+export function ballAt(target: Vec, u: number, bend = 0): { p: Vec; r: number; ground: Vec } {
   const e = 1 - (1 - Math.min(1, u)) ** 1.35;
-  const lift = Math.sin(Math.PI * Math.min(1, u)) * 26;
-  const p = { x: SPOT.x + (target.x - SPOT.x) * e, y: SPOT.y + (target.y - SPOT.y) * e - lift };
+  const s = Math.sin(Math.PI * Math.min(1, u));
+  const lift = s * 26;
+  // Falsolu şut yolun ortasında yana açılır, sonra hedefe döner.
+  const p = { x: SPOT.x + (target.x - SPOT.x) * e + bend * 150 * s, y: SPOT.y + (target.y - SPOT.y) * e - lift };
   const r = BALL_NEAR + (BALL_FAR - BALL_NEAR) * Math.min(1, u);
   const ground = { x: p.x, y: SPOT.y + 14 + (GOAL_BOTTOM + 4 - SPOT.y - 14) * e };
   return { p, r, ground };

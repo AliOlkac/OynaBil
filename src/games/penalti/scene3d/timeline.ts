@@ -40,17 +40,21 @@ const guessHeight = (index: number) => [0.25, 0.7, 0.45, 0.85, 0.15, 0.6][index 
  * Topun penaltı noktasından kaleye uçuşu: u=0 nokta, u=1 kale çizgisi. Hafif yükselir ve köşeye
  * doğru falso alır. Nişan çizgisi de bu fonksiyonla çizilir; görünen yol ile gidilen yol aynıdır.
  */
-export function flightPoint(target: V3, u: number, out: V3 = { x: 0, y: 0, z: 0 }): V3 {
+export function flightPoint(target: V3, u: number, out: V3 = { x: 0, y: 0, z: 0 }, bend = 0): V3 {
   const t = clamp01(u);
   const e = t * (1.14 - 0.14 * t);
   const s = Math.sin(Math.PI * t);
   const curve = clamp(target.x, -GOAL_HALF, GOAL_HALF) * 0.085;
   const arc = 0.2 + 0.14 * clamp01(target.y / GOAL_H);
-  out.x = SPOT.x + (target.x - SPOT.x) * e + curve * s;
+  // Falsolu şut yolun ortasında yana açılır, sonra hedefe döner.
+  out.x = SPOT.x + (target.x - SPOT.x) * e + curve * s + bend * CURL_M * s;
   out.y = SPOT.y + (target.y - SPOT.y) * e + arc * s;
   out.z = SPOT.z + (target.z - SPOT.z) * e;
   return out;
 }
+
+/** Tam falsoda topun yolun ortasında yana açılması (metre). */
+export const CURL_M = 1.1;
 
 /** Kale koordinatındaki bir şutun dünyadaki hedefi (topun merkezi). */
 export function kickTarget(gx: number, gy: number): V3 {
@@ -108,8 +112,9 @@ export function planKick(kick: Kick, index: number): KickPlan {
   const plan: KickPlan = { kick, index, target, guess, held, samples: n, pos: new Float32Array(n * 3), quat: new Float32Array(n * 4), push: new Float32Array(n), visible: new Uint8Array(n), net: null, bounces: [], boardAt: -1 };
 
   // Temas anındaki hız: uçuş eğrisinin sonundaki eğim.
-  const a = flightPoint(target, 1 - 1e-3);
-  const b = flightPoint(target, 1);
+  const bend = kick.curve ?? 0;
+  const a = flightPoint(target, 1 - 1e-3, undefined, bend);
+  const b = flightPoint(target, 1, undefined, bend);
   const k = 1 / (1e-3 * FLIGHT);
   let vx = (b.x - a.x) * k;
   let vy = (b.y - a.y) * k;
@@ -277,7 +282,7 @@ export function ballAt(plan: KickPlan, tau: number, out: BallState): BallState {
   }
   if (tau <= CONTACT) {
     const u = (tau - STRIKE) / FLIGHT;
-    flightPoint(plan.target, u, out.p);
+    flightPoint(plan.target, u, out.p, plan.kick.curve ?? 0);
     out.q = flightQuat(plan.target, u);
     out.visible = true;
     out.held = false;

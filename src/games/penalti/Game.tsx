@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowRight, Check, Flag, Hand, Pause, Play, X } from "lucide-react";
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AutoAdvance } from "@/components/game/AutoAdvance";
 import { DuelQuestion } from "@/components/game/DuelQuestion";
 import { GameIntro } from "@/components/game/GameIntro";
@@ -24,8 +24,8 @@ import { penaltyAudio } from "./audio";
 import { TEAM_STYLES } from "../teams";
 import type { GameProps, Team } from "../types";
 import { difficultyOf } from "../shared/difficulty";
-import { PowerBar } from "./PowerBar";
-import { createPenalty, goalKind, KICK_LOCK_MS, penaltyReducer, SCATTER, type Kick, type KickResult, type PenaltyAction, type PenaltySettings, type PenaltyState } from "./logic";
+import type { Swipe } from "./swipe";
+import { createPenalty, goalKind, KICK_LOCK_MS, POWER_SWEET, penaltyReducer, SCATTER, type Kick, type KickResult, type PenaltyAction, type PenaltySettings, type PenaltyState } from "./logic";
 import type { ArtTeam } from "./scene/art";
 import type { SceneInput } from "./scene/PenaltyScene";
 import { PenaltyStage, preloadPenaltyStage } from "./scene3d/PenaltyStage";
@@ -139,13 +139,13 @@ export default function Penalti({ config, deck, onRestart, solo }: GameProps) {
     }
   }, [s.phase, s.suddenDeath, s.kicks.length, showResults]);
 
-  // İki adımlı şut: önce nişan (sahnede sürükle ya da sayı tuşu), sonra güç çubuğunda VUR.
-  const aimed = s.phase === "kick" && Boolean(s.aim);
-  const aim = useCallback((x: number, y: number) => !botTurn && dispatch({ type: "aim", x, y, now: clock() }), [dispatch, botTurn]);
-  const shoot = useCallback(() => !botTurn && dispatch({ type: "kick", now: clock() }), [dispatch, botTurn]);
+  // Kaydırmalı şut: sahnede kaleye doğru çizilen çizgi hedefi, gücü ve falsoyu verir (sayı tuşları da vurur).
+  const shoot = useCallback((sw: Swipe) => !botTurn && dispatch({ type: "kick", ...sw, now: clock() }), [dispatch, botTurn]);
   const botPlan = botTurn && s.phase === "kick" && s.kickStart !== null ? botKick(config.seed, String(s.asked), solo!.bot.skill, s.kickStart) : null;
-  useBotAction(botPlan !== null, `nisan:${s.asked}`, { at: botPlan?.aimAt ?? 0 }, () => botPlan && dispatch({ type: "aim", x: botPlan.x, y: botPlan.y, now: botPlan.aimAt }));
-  useBotAction(botPlan !== null && aimed, `sut:${s.asked}`, { at: botPlan?.kickAt ?? 0 }, () => botPlan && dispatch({ type: "kick", now: botPlan.kickAt }));
+  useBotAction(botPlan !== null, `sut:${s.asked}`, { at: botPlan?.kickAt ?? 0 }, () => botPlan && dispatch({ type: "kick", x: botPlan.x, y: botPlan.y, power: botPlan.power, curve: botPlan.curve, now: botPlan.kickAt }));
+  // Parmağın izi: sahne şutu kendisi okur; burada yalnızca çizilen çizgi gösterilir.
+  const [trail, setTrail] = useState<{ points: [number, number][]; done: boolean } | null>(null);
+  const tracing = useRef<number | null>(null);
   const next = useCallback(() => dispatch({ type: "next", now: clock() }), [dispatch]);
   const onContact = useCallback((index: number) => setContacted((n) => Math.max(n, index + 1)), []);
   const onKickDone = useCallback((index: number) => {
@@ -159,12 +159,10 @@ export default function Penalti({ config, deck, onRestart, solo }: GameProps) {
     const onKey = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement || e.metaKey || e.ctrlKey) return;
       const key = e.key.toLowerCase();
-      if (!botTurn && s.phase === "kick" && !aimed && KEY_SPOTS[key]) {
+      if (!botTurn && s.phase === "kick" && armed && KEY_SPOTS[key]) {
         e.preventDefault();
-        aim(...KEY_SPOTS[key]);
-      } else if (!botTurn && aimed && (key === " " || key === "enter")) {
-        e.preventDefault();
-        shoot();
+        const [x, y] = KEY_SPOTS[key];
+        shoot({ x, y, power: POWER_SWEET, curve: 0 });
       } else if ((key === " " || key === "enter") && ((s.phase === "result" && kickDone >= s.kicks.length) || s.phase === "reveal")) {
         e.preventDefault();
         next();
@@ -234,16 +232,46 @@ export default function Penalti({ config, deck, onRestart, solo }: GameProps) {
       <div
         className={`relative mx-3 min-h-[12rem] shrink-0 overflow-hidden rounded-xl bg-ink-950 shadow-[var(--surface-light)] sm:mx-6 ${
           expanded ? "h-[calc(100%-15rem)] sm:h-[calc(100%-9rem)]" : "h-[34%] sm:h-[42%]"
-        } ${armed && !aimed ? "cursor-grab" : aimed && !botTurn ? "cursor-pointer" : ""}`}
+        } ${armed ? "cursor-crosshair touch-none" : ""}`}
         style={{ transition: `height var(--dur-scene) var(--ease-out)` }}
         onPointerDown={(e) => {
-          // Nişan alındıktan sonra sahneye dokunmak da vurur: tahtada büyük hedef.
-          if (!aimed || botTurn || e.button !== 0) return;
-          e.preventDefault();
-          shoot();
+          if (!armed || botTurn || tracing.current !== null) return;
+          const r = e.currentTarget.getBoundingClientRect();
+          tracing.current = e.pointerId;
+          setTrail({ points: [[e.clientX - r.left, e.clientY - r.top]], done: false });
+        }}
+        onPointerMove={(e) => {
+          if (tracing.current !== e.pointerId) return;
+          const r = e.currentTarget.getBoundingClientRect();
+          setTrail((t) => t && { ...t, points: [...t.points, [e.clientX - r.left, e.clientY - r.top]] });
+        }}
+        onPointerUp={(e) => {
+          if (tracing.current !== e.pointerId) return;
+          tracing.current = null;
+          setTrail((t) => t && { ...t, done: true });
+        }}
+        onPointerCancel={() => {
+          tracing.current = null;
+          setTrail(null);
         }}
       >
-        <PenaltyStage input={sceneInput} teams={sceneTeams} reducedMotion={reducedMotion} onKick={aim} onContact={onContact} onKickDone={onKickDone} onFinale={onFinale} />
+        <PenaltyStage input={sceneInput} teams={sceneTeams} reducedMotion={reducedMotion} onKick={shoot} onContact={onContact} onKickDone={onKickDone} onFinale={onFinale} />
+        <AnimatePresence>
+          {trail && trail.points.length > 1 && shooter && (
+            <motion.svg
+              key="trail"
+              className="pointer-events-none absolute inset-0 h-full w-full"
+              aria-hidden
+              initial={{ opacity: 1 }}
+              animate={{ opacity: trail.done ? 0 : 1 }}
+              transition={{ duration: trail.done ? dur.slow : 0 }}
+              onAnimationComplete={() => trail.done && setTrail(null)}
+            >
+              <polyline points={trail.points.map((p) => p.join(",")).join(" ")} fill="none" stroke="var(--color-ink-950)" strokeWidth={14} strokeLinecap="round" strokeLinejoin="round" opacity={0.45} />
+              <polyline points={trail.points.map((p) => p.join(",")).join(" ")} fill="none" stroke={TEAM_STYLES[shooter.color].base} strokeWidth={7} strokeLinecap="round" strokeLinejoin="round" />
+            </motion.svg>
+          )}
+        </AnimatePresence>
         <Scoreboard teams={teams} goals={shownGoals} kicks={s.kicks.slice(0, contacted)} label={s.suddenDeath ? "SERİ PENALTI" : `Soru ${s.asked}/${settings.questions}`} compact={!expanded} />
         <AnimatePresence>
           {s.phase === "finished" && finaleDone && (
@@ -334,36 +362,15 @@ export default function Penalti({ config, deck, onRestart, solo }: GameProps) {
               transition={{ duration: dur.base, ease }}
             >
               <TurnBadge team={shooter} label="Penaltıda" />
-              {aimed ? (
-                <>
-                  <div className="min-w-[14rem] flex-1">
-                    <p className="mb-2 text-lg font-bold sm:text-2xl">{botTurn ? "Rakip vuruyor…" : "İğne yeşildeyken VUR!"}</p>
-                    <PowerBar aimAt={s.aim!.at} />
-                  </div>
-                  {!botTurn && (
-                    <button
-                      type="button"
-                      onPointerDown={(e) => {
-                        if (e.button !== 0) return;
-                        e.preventDefault();
-                        shoot();
-                      }}
-                      className="pressable flex h-20 w-full shrink-0 items-center justify-center rounded-xl px-10 text-4xl font-bold text-ink-950 sm:h-24 sm:w-auto sm:text-5xl"
-                      style={{ background: TEAM_STYLES[shooter.color].base, "--edge": TEAM_STYLES[shooter.color].deep } as CSSProperties}
-                    >
-                      VUR!
-                    </button>
-                  )}
-                </>
-              ) : (
               <div className="min-w-[14rem] flex-1">
                 <p className="flex items-center gap-2 text-lg font-bold sm:text-2xl">
                   {armed && !botTurn && <Hand className="size-7 shrink-0 text-kehribar" />}
-                  {botTurn ? "Rakip nişan alıyor…" : armed ? "Kalede nişan alacağın yere sürükle ve bırak!" : "Oyuncu topun başına geçiyor…"}
+                  {botTurn ? "Rakip şuta hazırlanıyor…" : armed ? "Kaleye doğru hızlıca bir çizgi çiz!" : "Oyuncu topun başına geçiyor…"}
                 </p>
-                <p className="mt-0.5 hidden text-base text-ink-300 sm:block sm:text-lg">Önce nişan al, sonra güç seç. Direğe çok yakın nişan direğe çarpabilir; kaleci de önceki şutlarını aklında tutar, yön değiştir.</p>
+                <p className="mt-0.5 hidden text-base text-ink-300 sm:block sm:text-lg">
+                  Çizgi nerede biterse top oraya gider; hızlı çizersen sert, yavaş çizersen yavaş vurur. Kavisli çizersen top falso alır. Çok sert vuruş yükselir, direğin dibi risklidir.
+                </p>
               </div>
-              )}
             </motion.section>
           )}
 
