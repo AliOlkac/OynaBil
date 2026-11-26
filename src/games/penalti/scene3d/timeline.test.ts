@@ -39,8 +39,8 @@ describe("topun uçuşu", () => {
 
 describe("temastan sonrası", () => {
   it("gol olan top ağda kalır, kale çizgisinden geri çıkmaz", () => {
-    for (const x of [-0.9, -0.5, 0, 0.5, 0.9]) {
-      for (const y of [0.05, 0.5, 0.9]) {
+    for (const x of [-0.85, -0.5, 0, 0.5, 0.85]) {
+      for (const y of [0.05, 0.5, 0.8]) {
         const keeper: Third = thirdOf(x) === "sol" ? "sag" : "sol";
         const plan = planKick(kick(x, y, keeper), 0);
         expect(plan.kick.result).toBe("gol");
@@ -123,10 +123,10 @@ describe("temastan sonrası", () => {
 describe("kaleci", () => {
   it("kurtarışta eldivenleri topun olduğu yere ulaşır", () => {
     for (const [x, y] of [
-      [0.75, 0.85],
+      [0.75, 0.8],
       [-0.75, 0.1],
       [0.5, 0.5],
-      [0.02, 0.9],
+      [0.02, 0.8],
       [-0.1, 0.1],
     ]) {
       const plan = planKick(kick(x, y, thirdOf(x)), 0);

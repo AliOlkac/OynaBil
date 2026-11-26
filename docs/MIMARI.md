@@ -177,3 +177,7 @@ Atış açı ve güçle yapılır (`Launch`). Öğrenci sahnede parmağını ger
 ## Penaltı: kaleci
 
 Kaleci şutu çeken takımın son dört şutunu hatırlar (`keeperFor`, `habits`): o yönlere atlama ağırlığı artar. Atladığı üçlünün sınırından `KEEPER_REACH` kadar ötedeki topa da uzanır (`keeperReaches`). Seçim yine oyun tohumundan türetilir; aynı oyun yeniden açılınca kaleci aynı yere atlar.
+
+## Penaltı: iki adımlı şut
+
+Şut iki eylemdir: `aim` (nişan noktası) ve `kick` (güç çubuğunun o anki yeri, `powerAt`). Güç yeşil bölgedeyse top nişana gider; zayıfsa kaleci fazladan uzanır (`weakReach`), sertse top yükselip dışa açılır (`shotFrom`). Direğe ya da üst direğe çok yakın top (`POST_BAND`, `BAR_BAND`) direğe çarpar; sahnede gerçekten direğe değsin diye topun yeri direğin çizgisine çekilir. Kilitlenen nişan sahnelerde halka olarak durur.

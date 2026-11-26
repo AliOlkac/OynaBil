@@ -363,7 +363,7 @@ export function createPenaltyEngine(o: EngineOptions): { dispose: () => void } {
   };
   const canAim = () => {
     const inp = o.getInput();
-    return inp.aimable !== false && inp.phase === "kick" && inp.kickStart !== null && Date.now() - inp.kickStart >= KICK_LOCK_MS && inp.kicks.length === st.seenKicks;
+    return inp.aimable !== false && !inp.aim && inp.phase === "kick" && inp.kickStart !== null && Date.now() - inp.kickStart >= KICK_LOCK_MS && inp.kicks.length === st.seenKicks;
   };
   const setAimAttr = () => {
     if (st.aiming) canvas.dataset.aim = `${st.aiming.gx.toFixed(3)},${st.aiming.gy.toFixed(3)}`;
@@ -826,8 +826,10 @@ export function createPenaltyEngine(o: EngineOptions): { dispose: () => void } {
     if (lively) stadium.setFlags(st.clock, cheerSide !== null);
 
     // -- nişan --
-    if (st.aiming && canAim()) {
-      const g = st.aiming;
+    // Nişan kilitlenince (güç seçilirken) halka nişan noktasında durur, yol noktaları akmaya devam eder.
+    const locked = inp.phase === "kick" && inp.aim ? { gx: inp.aim.x, gy: inp.aim.y } : null;
+    if ((st.aiming && canAim()) || locked) {
+      const g = locked ?? st.aiming!;
       const target = kickTarget(g.gx, g.gy);
       aimGroup.visible = true;
       ring.position.set(target.x, target.y, 0.04);

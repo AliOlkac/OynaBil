@@ -259,7 +259,7 @@ const GAME_ART: Record<MobileGameId | "sirayla", { tip: string; from: string; to
   sirayla: { tip: "Her maçta sıradaki oyun gelir.", from: "var(--color-ink-600)", to: "var(--color-ink-800)" },
   basketbol: { tip: "Soruyu bil, mesafeni seç, iğne yeşildeyken AT!", from: "var(--color-ates)", to: "var(--color-ahsap-koyu)" },
   okculuk: { tip: "Soruyu bil, nişangâh ortadayken BIRAK! Rüzgâra dikkat.", from: "var(--color-cim-acik)", to: "var(--color-servi)" },
-  penalti: { tip: "Soruyu bil, topu kalede bir köşeye sürükle.", from: "var(--color-saha-acik)", to: "var(--color-saha)" },
+  penalti: { tip: "Soruyu bil, köşeye nişan al, iğne yeşildeyken VUR!", from: "var(--color-saha-acik)", to: "var(--color-saha)" },
   "kule-yikmaca": { tip: "Soruyu bil, mancınığı geri çek ve pencereye nişan al.", from: "var(--color-ufuk)", to: "var(--color-tas-koyu)" },
   "halat-cekme": { tip: "Hızlı ve doğru cevapla, ipi kendine çek.", from: "var(--color-camur-parlak)", to: "var(--color-camur-koyu)" },
   "bilgi-yarismasi": { tip: "Sırayla soru. Rakip bilemezse soruyu çal.", from: "var(--color-kobalt)", to: "var(--color-kobalt-deep)" },

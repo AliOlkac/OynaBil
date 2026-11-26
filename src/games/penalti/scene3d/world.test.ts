@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { BALL_X, BALL_Y, classify } from "../logic";
+import { BALL_X, BALL_Y, classify, POST_BAND } from "../logic";
 import { BALL_R, GOAL_H, GOAL_HALF, goalToWorld, guessPoint, hitsBar, NET_DEPTH_BOTTOM, NET_DEPTH_TOP, netDepthAt, POST_R, standHeightAt, STAND_BASE_Y, STAND_Z, worldToGoal } from "./world";
 
 describe("penaltı sahnesinin ölçüleri", () => {
@@ -20,7 +20,9 @@ describe("penaltı sahnesinin ölçüleri", () => {
     // İçeride sayılan en dıştaki topun kenarı direğin iç yüzüne ancak değer.
     const edge = (1 - BALL_X) * GOAL_HALF + BALL_R;
     expect(edge).toBeLessThanOrEqual(GOAL_HALF + 1e-9);
-    expect(classify(1 - BALL_X, 0.5)).toBe("ic");
+    // Direğe yakın bantta top direğe çarpar (mantıktaki risk payı); bandın içi kalededir.
+    expect(classify(1 - BALL_X - POST_BAND, 0.5)).toBe("ic");
+    expect(classify(1 - BALL_X, 0.5)).toBe("direk");
     expect(classify(1, 0.5)).toBe("direk");
     expect(POST_R).toBeLessThan(BALL_R);
   });

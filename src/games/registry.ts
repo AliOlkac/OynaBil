@@ -154,7 +154,8 @@ export const penalti: GameDefinition = {
   howTo: [
     "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
     "İlk doğru cevaplayan takımın oyuncusu topun başına geçer. Yanlış cevap veren takım bekler; iki takım da bilemezse kimse çekmez.",
-    "Şutçu topa dokunur, parmağını kalede istediği yere sürükleyip bırakır. Kaleci sola, ortaya ya da sağa atlar ve yakınına giden topa uzanır. Takımın önceki şutlarını aklında tutar: hep aynı köşeye vuran takımı bekler.",
+    "Şutçu önce parmağını kalede istediği yere sürükleyip bırakır, sonra güç çubuğu inip çıkarken VUR'a dokunur. Yeşil isabetli vuruştur; zayıf vuruşa kaleci yetişir, fazla sert vuruş yükselip direğe ya da dışarı gider. Direğe çok yakın nişan da direğe çarpabilir.",
+    "Kaleci sola, ortaya ya da sağa atlar ve yakınına giden topa uzanır. Takımın önceki şutlarını aklında tutar: hep aynı köşeye vuran takımı bekler.",
     "Sorular bitince çok gol atan kazanır. Eşitlikte seri penaltıya geçilir: ilk golü atan kazanır.",
   ],
   teamCount: { min: 2, max: 2, default: 2 },

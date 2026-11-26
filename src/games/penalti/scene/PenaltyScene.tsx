@@ -48,6 +48,8 @@ export type SceneInput = {
   winner: 0 | 1 | "draw" | null;
   /** Yanlışsa nişan alınamaz (tek oyunculu modda rakibin şutu). */
   aimable?: boolean;
+  /** Kilitlenen nişan (kale koordinatı): güç seçilirken halka orada durur. */
+  aim?: { x: number; y: number } | null;
   /** Şutun sapma yarıçapı (kale yarı genişliği cinsinden); nişan halkası bu kadar büyür. */
   scatter: number;
 };
@@ -231,7 +233,7 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
     };
     const canAim = () => {
       const inp = inputRef.current;
-      return inp.aimable !== false && inp.phase === "kick" && inp.kickStart !== null && Date.now() - inp.kickStart >= KICK_LOCK_MS && inp.kicks.length === st.seenKicks;
+      return inp.aimable !== false && !inp.aim && inp.phase === "kick" && inp.kickStart !== null && Date.now() - inp.kickStart >= KICK_LOCK_MS && inp.kicks.length === st.seenKicks;
     };
     const onDown = (e: PointerEvent) => {
       if (!canAim() || st.aiming || (e.pointerType === "mouse" && e.button !== 0)) return;
@@ -712,8 +714,10 @@ export function PenaltyScene({ input, teams, reducedMotion, onKick, onContact, o
       } else banner?.setAttribute("opacity", "0");
 
       // -- nişan --
-      if (st.aiming && canAim()) {
-        const p = st.aiming.p;
+      // Nişan kilitlenince (güç seçilirken) halka nişan noktasında durur.
+      const lockedAim = inp.phase === "kick" && inp.aim ? toScreen(inp.aim.x, inp.aim.y) : null;
+      if ((st.aiming && canAim()) || lockedAim) {
+        const p = lockedAim ?? st.aiming!.p;
         const g = toGoal(p);
         const place = classify(g.x, g.y);
         aim?.setAttribute("opacity", "1");
