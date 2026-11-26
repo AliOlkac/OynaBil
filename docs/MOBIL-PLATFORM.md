@@ -30,10 +30,10 @@ Yeni oyun icat etmeye gerek yoktur: tahta sürümündeki altı oyunun hepsi iki 
 
 | Oyun | Düelloda nasıl oynanır | Not |
 |---|---|---|
-| **Basketbol** | Bilen atar: yakından 2 sayı ya da üçlük. Üst üste iki basket eli ateşlendirir | Dik ekrana hazır |
-| **Okçuluk** | Bilen yayını gerer; nişangâh gezinir, rüzgâr oku iter. En çok puanı toplayan kazanır | Dik ekrana hazır |
-| **Penaltı** | Bilen penaltıyı çeker; kaleci bilgisayardır, üç yönden birine atlar | Dik ekrana hazır. İleride isteğe bağlı "canlı kaleci" (rakip yön seçer) eklenebilir |
-| **Kule Yıkmaca** | Bilen rakibin kulesine taş atar; kulesi önce yıkılan kaybeder | Dik ekranda çapraz kamerayla oynanır |
+| **Basketbol** | Bilen atar: yakından 2 sayı ya da üçlük; topa basılı tutar, güç çubuğu yeşildeyken bırakır. Üst üste iki basket eli ateşlendirir | Dik ekrana hazır |
+| **Okçuluk** | Bilen basılı tutup yayını gerer; nişangâh salınır, ortaya gelince bırakır, rüzgâr oku iter. En çok puanı toplayan kazanır | Dik ekrana hazır |
+| **Penaltı** | Bilen kaleye doğru bir çizgi çizerek şut çeker (uç hedef, hız güç, kavis falso); kaleci bilgisayardır, önceki şutları aklında tutar | Dik ekrana hazır. İleride isteğe bağlı "canlı kaleci" (rakip yön seçer) eklenebilir |
+| **Kule Yıkmaca** | Bilen mancınığı sapan gibi geri çekip rakibin kulesine taş atar; kulesi önce yıkılan kaybeder | Dik ekranda çapraz kamerayla oynanır |
 | **Halat Çekme** | İki oyuncu aynı anda kendi hızında soru çözer; her doğru ipi çeker | Canlı maça en uygun mod; dik ekranda çapraz kamera |
 | **Bilgi Yarışması** | Sırayla soru, bilemeyenin sorusu çalınır | Beceri gerektirmez |
 
