@@ -325,7 +325,7 @@ export default function Penalti({ config, deck, onRestart, solo }: GameProps) {
                   {armed && !botTurn && <Hand className="size-7 shrink-0 text-kehribar" />}
                   {botTurn ? "Rakip penaltıyı kullanıyor…" : armed ? "Kalede topu göndermek istediğin yere sürükle ve bırak!" : "Oyuncu topun başına geçiyor…"}
                 </p>
-                <p className="mt-0.5 hidden text-base text-ink-300 sm:block sm:text-lg">Kaleci sola, ortaya ya da sağa atlar. Köşeyi tutturursa kurtarır; direğe ya da dışarıya giden şut gol olmaz.{difficultyOf(settings, 1) > 1 && " Top halkanın içinde biraz sapar: köşeye çok yaklaşma."}</p>
+                <p className="mt-0.5 hidden text-base text-ink-300 sm:block sm:text-lg">Kaleci önceki şutlarını aklında tutar: hep aynı köşeye vurursan oraya atlar. Yön değiştir; direğe ya da dışarıya giden şut gol olmaz.{difficultyOf(settings, 1) > 1 && " Top halkanın içinde biraz sapar: köşeye çok yaklaşma."}</p>
               </div>
             </motion.section>
           )}

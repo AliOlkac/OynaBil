@@ -1,4 +1,4 @@
-import { BANDS, type Shot } from "../logic";
+import { BANDS, flightSeconds, landingFraction, pathHeight, RANGE_M, type Launch, type Shot } from "../logic";
 import { RANGE as SVG_RANGE, Y0 as SVG_Y0 } from "../scene/geometry";
 
 /**
@@ -12,7 +12,7 @@ import { RANGE as SVG_RANGE, Y0 as SVG_Y0 } from "../scene/geometry";
 export type V3 = { x: number; y: number; z: number };
 
 /** Nişangâh ölçeğinin tamamı (0..1) kaç metre eder. */
-export const RANGE = 12;
+export const RANGE = RANGE_M;
 /** Nişangâh değerinin yerden yüksekliği; 0.12'nin altı toprağın altıdır (kısa düşen atış). */
 export const heightOf = (p: number) => (p - BANDS[0].to) * RANGE;
 /** Çizim sahnesinin (SVG) y değerini metreye çevirir: hasar cetveli iki sahnede aynı veriden çizilir. */
@@ -93,7 +93,18 @@ export type Flight = {
 };
 
 /** Atışın yolu: taş kepçeden çıkar, isabet yüksekliğine göre kuleye, önüne ya da arkasına düşer. */
-export function flightFor(shot: Pick<Shot, "side" | "hit" | "zone">): Flight {
+/** Kepçeden çıkan taşın yolu üzerinde, kuleye olan mesafenin `frac` oranındaki nokta (yol noktaları ve uçuş aynı hesaptan). */
+export function pathPoint(side: 0 | 1, launch: Launch, wind: number, frac: number, out: V3 = { x: 0, y: 0, z: 0 }): V3 {
+  const d = dirOf(side);
+  const from = catapultToWorld(side, bucketPoint(ARM_RELEASE));
+  const face = TOWER_X[(1 - side) as 0 | 1] - d * R_BODY;
+  out.x = from.x + (face - from.x) * frac;
+  out.y = pathHeight(launch, side, wind, frac);
+  out.z = 0;
+  return out;
+}
+
+export function flightFor(shot: Pick<Shot, "side" | "hit" | "zone"> & Partial<Pick<Shot, "launch" | "wind">>): Flight {
   const side = shot.side;
   const d = dirOf(side);
   const tx = TOWER_X[(1 - side) as 0 | 1];
@@ -124,7 +135,23 @@ export function flightFor(shot: Pick<Shot, "side" | "hit" | "zone">): Flight {
     const dx = Math.abs(to.x - from.x);
     via = { x: (from.x + to.x) / 2, y: Math.max(from.y, to.y) + 4 + dx * 0.12, z: 0 };
   }
-  const duration = 1.1 + Math.abs(to.x - from.x) / 70 + (end === "long" ? 0.15 : 0);
+  let duration = 1.1 + Math.abs(to.x - from.x) / 70 + (end === "long" ? 0.15 : 0);
+  if (shot.launch) {
+    // Çekilerek atılan taş gerçek yolunu izler: düştüğü yer, tepe noktası ve süre fizikten gelir.
+    const wind = shot.wind ?? 0;
+    const face = tx - d * R_BODY;
+    let frac = (to.x - from.x) / (face - from.x);
+    if (end !== "tower") {
+      const land = landingFraction(shot.launch, side, wind);
+      const before = (Math.abs(tx - from.x) - R_BASE - 0.7) / Math.abs(face - from.x);
+      frac = end === "short" ? Math.min(Math.max(0.1, land), before) : Math.min(1.6, Math.max(land, 1 + (R_ROOF * 2 + 1.5) / Math.abs(face - from.x)));
+      to = { x: from.x + (face - from.x) * frac, y: STONE_R, z: 0 };
+      if (end === "short") roll = Math.min(2.4, Math.max(0.3, Math.abs(tx - to.x) - R_BASE - 0.6));
+    }
+    const mid = frac / 2;
+    via = { x: from.x + (face - from.x) * mid, y: Math.max(pathHeight(shot.launch, side, wind, mid), Math.max(from.y, to.y) + 0.4), z: 0 };
+    duration = Math.max(0.75, flightSeconds(shot.launch, side, wind, frac));
+  }
   return { from, to, via, duration, end, roll };
 }
 

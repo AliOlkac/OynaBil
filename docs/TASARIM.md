@@ -34,14 +34,14 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
   - Gün batımında iki taş kule. Gövde taş örgüdür, üst gövdede İznik çinisinden bir kuşak geçer, burç mazgallıdır, külah takım renginde kiremitlidir.
   - Pencere içeriden kandille aydınlanır. En değerli hedef olduğu için uzaktan seçilir.
   - Ahşap mancınıkların başında iki çocuk durur: biri vinci çevirip taşı yükler, öteki karşı kuleyi gösterir. Çocuklar Halat Çekme'dekilerle aynı karakter tasarımını paylaşır (`src/games/shared/kid.tsx`).
-- **Nişangâh ve hasar cetveli:** Nişan anında hedef kulenin önünde takım renginde bir nişangâh inip çıkar. Kesikli çizgi kuleyi boydan boya geçer ve kulenin dış yanındaki cetvele ulaşır. Cetvel her yüksekliğin kaç hasar verdiğini yazar; pencere bandı kehribar renkle işaretlidir. Kural ekranda görünür, öğrenci ezberlemek zorunda kalmaz.
+- **Nişan ve hasar cetveli:** Mancınık sapan gibi geri çekilir. Çekiş sürerken dokunulan yerden parmağa takım renginde bir lastik çizgisi uzanır, mancınığın kolu çekişle birlikte geriye yatar ve taşın yolunun başı krem rengi noktalarla çizilir (noktalar yol boyunca akar, uzaklaştıkça küçülür). Yolun gerisi gösterilmez. Hedef kulenin yanında her bölgenin vereceği hasarı gösteren cetvel durur; pencere kehribar renklidir.
 - **Kule sağlamlık çubukları:**
   - Hasar önce takım rengindeki çubuktan düşer. Arkasındaki krem iz yarım saniye sonra yetişir, böylece kaybedilen parça bir an görünür kalır.
   - Can 30'un altına inince çubuk mercana döner.
   - Soru sırasında çubuklar küçülür ki kuleleri örtmesin.
 - **Kamera:** Kuleler sahanın iki ucundadır, taş uzun bir yay çizer.
   - Soru sırasında iki kule geniş çerçevede durur.
-  - Doğru cevapta sahne büyür (`--dur-scene`). Kamera önce mancınığını kuran takıma, sonra hedef kuleye yaklaşır; nişangâh ve cetvel büyük görünür.
+  - Doğru cevapta sahne büyür (`--dur-scene`). Kamera önce mancınığını kuran takıma yaklaşır, sonra mancınık ile hedef kuleyi aynı kareye alacak kadar açılır; nişangâh ve cetvel büyük görünür.
   - ATEŞ'te kamera bütün sahayı gösterir. İsabet anında vurulan kuleye yaklaşıp sarsılır, yıkılışta yıkılan kuleyi izler.
   - Telefonda yakın planlar daha da daralır.
 - **Rüzgâr:** Bulutlar ve bayraklar rüzgârın yönünde ve şiddetinde hareket eder. Bu sürekli hareket oyun bilgisi taşıdığı için sonsuz döngü yasağının ikinci istisnasıdır.
@@ -76,7 +76,7 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
   - Kuleler taş taş örülüdür: geniş temel, gövde, çini kuşak, mazgallı burç ve takım renginde kiremitli külah. Pencereler içeriden aydınlıktır, kepenkler takım rengindedir.
   - İsabet alan yerin taşları yerinden fırlar ve kulenin dibine yığılır; arkada karanlık dolgu görünür. Pencereye isabet camı ve kepenkleri dağıtır, burca isabet mazgalları düşürür, külaha isabet külahı yana yatırır. Hasar 70'i geçince kule yana yatmaya başlar.
   - Kamera olayı izler: kurulurken atan mancınık, nişan alınırken hedef kule (çapraz açıdan), atışta taşın bütün yolu, isabette çarpma noktası. Soru sırasında iki kule birlikte görünür.
-  - Nişangâh hedef kulenin atış gelen yüzünde inip çıkar; yanında her bölgenin vereceği hasarı gösteren cetvel durur, pencere kehribar renklidir.
+  - Nişan alınırken mancınık ve hedef kule aynı karededir; yol noktaları mancınıktan çıkar, hedef kulenin yanında hasar cetveli durur, pencere kehribar renklidir.
   - Ekip (her mancınıkta kurucu ve gözcü) vinci çevirir, taşı kepçeye taşır, hedefi gösterir, isabette sevinir, karşı taş tepeden geçerken başını korur.
   - Yıkılış: kule sarsılır, taşlar alttan başlayarak çözülür ve moloz yığınına dökülür, külah yığının üstüne yana yatmış düşer. Kamera kulenin çevresinde döner, toz kalkar, kazanan takımın renginde konfeti atılır.
   - Sesler çizim sahnesiyle aynıdır (`src/lib/sound.ts`).

@@ -7,6 +7,8 @@ import {
   createPenalty,
   KICK_LOCK_MS,
   keeperFor,
+  KEEPER_REACH,
+  keeperReaches,
   kickResult,
   penaltyReducer,
   SCATTER,
@@ -128,8 +130,12 @@ describe("Penaltı: oyun akışı", () => {
     // Soru 1 ve 2: mavi iki gol atar (kaleci hep başka köşede olsun diye şutlar kaleciden uzağa).
     for (let i = 0; i < 2; i++) {
       s = reduce(s, { type: "answer", side: 0, option: right(s), now: i * 10 });
-      const keeper = keeperFor(s.seed, s.kicks.length);
-      const x = keeper === "sol" ? 0.7 : -0.7;
+      const keeper = keeperFor(
+        s.seed,
+        s.kicks.length,
+        s.kicks.filter((k) => k.side === 0).map((k) => k.third),
+      );
+      const x = keeper === "sol" ? 0.9 : -0.9;
       s = reduce(s, { type: "kick", x, y: 0.5, now: i * 10 + KICK_LOCK_MS });
       s = reduce(s, { type: "next", now: i * 10 + 5000 });
     }
@@ -189,5 +195,30 @@ describe("Penaltı: zorluk", () => {
   it("zorda köşeye çok yakın nişan bazen direğe ya da auta gider", () => {
     const results = Array.from({ length: 40 }, (_, seed) => scoreAttempt(start({ difficulty: 3 }, seed + 1), 0, 0.93, 0.9).kicks[0].result);
     expect(results.some((r) => r === "direk" || r === "aut")).toBe(true);
+  });
+});
+
+describe("Penaltı: akıllı kaleci", () => {
+  it("atladığı üçlünün yakınındaki topa da uzanır, uzağına uzanamaz", () => {
+    expect(keeperReaches(1 / 3 + KEEPER_REACH - 0.01, "orta")).toBe(true);
+    expect(keeperReaches(1 / 3 + KEEPER_REACH + 0.01, "orta")).toBe(false);
+    expect(kickResult(0.2, 0.5, "sag")).toBe("kurtardi");
+    expect(kickResult(0.05, 0.5, "sag")).toBe("gol");
+    expect(kickResult(0.9, 0.5, "orta")).toBe("gol");
+  });
+
+  it("hep aynı köşeye vuran takımı bekler; yön değiştireni bekleyemez", () => {
+    const count = (habits: ("sol" | "orta" | "sag")[]) => {
+      let n = 0;
+      for (let i = 0; i < 3000; i++) if (keeperFor(77, i, habits) === "sag") n++;
+      return n / 3000;
+    };
+    expect(count([])).toBeGreaterThan(0.28);
+    expect(count([])).toBeLessThan(0.39);
+    expect(count(["sag"])).toBeGreaterThan(0.45);
+    expect(count(["sag", "sag", "sag"])).toBeGreaterThan(0.65);
+    expect(count(["sol", "orta", "sag"])).toBeLessThan(0.4);
+    // Yalnızca son dört şut hatırlanır.
+    expect(count(["sag", "sag", "sag", "sol", "sol", "sol", "sol"])).toBeLessThan(0.25);
   });
 });

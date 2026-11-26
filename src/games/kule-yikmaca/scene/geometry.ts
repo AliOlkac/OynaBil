@@ -1,5 +1,5 @@
 import type { Vec } from "../../shared/skeleton";
-import { BANDS, type Shot } from "../logic";
+import { BANDS, flightSeconds, landingFraction, pathHeight, RANGE_M, type Launch, type Shot } from "../logic";
 
 /**
  * Kule Yıkmaca sahnesinin dünya ölçüleri. Saf geometri: çizim de, motor da buradan beslenir.
@@ -82,7 +82,18 @@ export type Flight = {
 };
 
 /** Atışın uçuş yolu: taş kepçeden çıkar, isabet yüksekliğine göre kuleye, önüne ya da arkasına düşer. */
-export function flightFor(shot: Pick<Shot, "side" | "hit" | "zone">): Flight {
+/** Metre cinsinden yüksekliği çizim birimine çevirir. */
+const yOfMetres = (m: number) => yOf(m / RANGE_M + BANDS[0].to);
+
+/** Kepçeden çıkan taşın yolu üzerinde, kuleye olan mesafenin `frac` oranındaki nokta. */
+export function pathPoint(side: 0 | 1, launch: Launch, wind: number, frac: number): Vec {
+  const d = dirOf(side);
+  const from = catapultToWorld(side, armTip(ARM_RELEASE));
+  const face = TOWER_X[(1 - side) as 0 | 1] - d * BODY_HALF;
+  return { x: from.x + (face - from.x) * frac, y: yOfMetres(pathHeight(launch, side, wind, frac)) };
+}
+
+export function flightFor(shot: Pick<Shot, "side" | "hit" | "zone"> & Partial<Pick<Shot, "launch" | "wind">>): Flight {
   const side = shot.side;
   const d = dirOf(side);
   const target = (1 - side) as 0 | 1;
@@ -110,7 +121,22 @@ export function flightFor(shot: Pick<Shot, "side" | "hit" | "zone">): Flight {
     const dx = Math.abs(to.x - from.x);
     via = { x: (from.x + to.x) / 2, y: Math.min(from.y, to.y) - 200 - dx * 0.12 };
   }
-  const duration = 1.1 + Math.abs(to.x - from.x) / 3500 + (end === "long" ? 0.15 : 0);
+  let duration = 1.1 + Math.abs(to.x - from.x) / 3500 + (end === "long" ? 0.15 : 0);
+  if (shot.launch) {
+    // Çekilerek atılan taş gerçek yolunu izler: düştüğü yer, tepe noktası ve süre fizikten gelir.
+    const wind = shot.wind ?? 0;
+    const face = tx - d * BODY_HALF;
+    let frac = (to.x - from.x) / (face - from.x);
+    if (end !== "tower") {
+      const land = landingFraction(shot.launch, side, wind);
+      const before = (Math.abs(tx - from.x) - BASE_HALF - 40) / Math.abs(face - from.x);
+      frac = end === "short" ? Math.min(Math.max(0.1, land), before) : Math.min(1.5, Math.max(land, 1 + (BASE_HALF * 2 + 90) / Math.abs(face - from.x)));
+      to = { x: from.x + (face - from.x) * frac, y: to.y };
+    }
+    const mid = frac / 2;
+    via = { x: from.x + (face - from.x) * mid, y: Math.min(yOfMetres(pathHeight(shot.launch, side, wind, mid)), Math.min(from.y, to.y) - 20) };
+    duration = Math.max(0.75, flightSeconds(shot.launch, side, wind, frac));
+  }
   return { from, to, via, duration, end };
 }
 

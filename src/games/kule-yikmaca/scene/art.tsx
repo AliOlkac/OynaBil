@@ -177,6 +177,11 @@ export function SceneArt({ teams }: { teams: [ArtTeam, ArtTeam] }) {
       </g>
       <circle data-part="ring" r={0} fill="none" stroke="var(--color-kehribar)" strokeWidth={8} opacity={0} />
 
+      {/* Yol noktaları: mancınık çekilirken taşın yolunun başı */}
+      {Array.from({ length: 11 }, (_, i) => (
+        <circle key={i} data-part="preview-dot" r={6} fill="var(--color-cream)" stroke="var(--color-ink-950)" strokeWidth={2} opacity={0} />
+      ))}
+
       {/* Nişangâh */}
       <g data-part="crosshair" opacity={0}>
         <line data-part="aim-line" stroke="var(--color-cream)" strokeWidth={4} strokeDasharray="14 10" opacity={0.85} />

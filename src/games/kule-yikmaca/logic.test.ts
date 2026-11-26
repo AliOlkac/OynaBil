@@ -5,14 +5,20 @@ import type { Team } from "../types";
 import {
   AIM_LOCK_MS,
   BANDS,
-  SWEEP_MS,
   TOWER_HP,
-  WIND_STEP,
+  ANGLE,
+  FIELD,
+  impactOf,
+  landingFraction,
+  MIN_PULL,
+  pathHeight,
+  powerFor,
+  PREVIEW,
+  WIND_PUSH,
   createSiege,
   damageFor,
   dealt,
   siegeReducer,
-  sweepAt,
   windFor,
   windShift,
   zoneAt,
@@ -45,23 +51,37 @@ function calmSeed(rounds: number) {
 }
 
 const start = (over: Partial<SiegeSettings> = {}, seed = calmSeed(2)) =>
-  reduce(createSiege(teams, { questions: 6, seconds: 30, difficulty: 1, ...over }, seed), { type: "start", now: 0 });
+  reduce(createSiege(teams, { questions: 6, seconds: 30, ...over }, seed), { type: "start", now: 0 });
 
-/** Nişangâhın verilen yüksekliğe ilk ulaştığı an (çıkışta). */
-const timeFor = (aim: number) => AIM_LOCK_MS + (aim * SWEEP_MS) / 2;
+const DEG45 = Math.PI / 4;
+/** Rüzgârsız havada kulenin `aim` yüksekliğine isabet ettiren çekiş. */
+const launchFor = (aim: number, side: 0 | 1 = 0) => ({ angle: DEG45, power: powerFor(DEG45, side, 0, aim) });
 
 function fireAt(s: SiegeState, aim: number) {
-  return reduce(s, { type: "fire", now: (s.aimStart ?? 0) + timeFor(aim) });
+  return reduce(s, { type: "fire", launch: launchFor(aim, s.shooter ?? 0), now: (s.aimStart ?? 0) + AIM_LOCK_MS });
 }
 
 describe("Kule Yıkmaca: atış hesabı", () => {
-  it("nişangâh aşağıdan yukarı çıkıp iner, kilitliyken yerde bekler", () => {
-    expect(sweepAt(0)).toBe(0);
-    expect(sweepAt(AIM_LOCK_MS - 1)).toBe(0);
-    expect(sweepAt(timeFor(0.5))).toBeCloseTo(0.5);
-    expect(sweepAt(AIM_LOCK_MS + SWEEP_MS / 2)).toBeCloseTo(1);
-    expect(sweepAt(AIM_LOCK_MS + SWEEP_MS * 0.75)).toBeCloseTo(0.5);
-    expect(sweepAt(AIM_LOCK_MS + SWEEP_MS)).toBeCloseTo(0);
+  it("taş gerçek bir mermi gibi uçar: güç arttıkça kuleye daha yüksekten varır", () => {
+    const hits = [0.3, 0.5, 0.7, 0.9].map((power) => impactOf({ angle: DEG45, power }, 0, 0));
+    for (let i = 1; i < hits.length; i++) expect(hits[i]).toBeGreaterThan(hits[i - 1]);
+    // Çıkış noktasında yol, kepçenin yüksekliğindedir; yolun başı yükselir.
+    expect(pathHeight({ angle: DEG45, power: 0.6 }, 0, 0, 0)).toBeCloseTo(FIELD.height);
+    expect(pathHeight({ angle: DEG45, power: 0.6 }, 0, 0, PREVIEW / 2)).toBeGreaterThan(FIELD.height);
+    // Zayıf atış kuleye varmadan düşer, güçlü atış üstünden aşar.
+    expect(landingFraction({ angle: DEG45, power: 0.1 }, 0, 0)).toBeLessThan(1);
+    expect(zoneAt(impactOf({ angle: DEG45, power: 0.1 }, 0, 0))).toBe("kisa");
+    expect(zoneAt(impactOf({ angle: DEG45, power: 1 }, 0, 0))).toBe("uzun");
+    expect(landingFraction({ angle: DEG45, power: 1 }, 0, 0)).toBeGreaterThan(1);
+  });
+
+  it("her bölgeye isabet ettiren bir çekiş vardır; açı sınırlanır", () => {
+    for (const target of [0.18, 0.31, 0.43, 0.55, 0.68, 0.8]) {
+      for (const angle of [DEG45, (52 * Math.PI) / 180]) expect(impactOf({ angle, power: powerFor(angle, 0, 0, target) }, 0, 0)).toBeCloseTo(target, 3);
+    }
+    expect(impactOf({ angle: 5, power: 0.5 }, 0, 0)).toBe(impactOf({ angle: ANGLE.max, power: 0.5 }, 0, 0));
+    // İki taraf için de aynı fizik.
+    expect(impactOf({ angle: DEG45, power: 0.6 }, 1, 0)).toBe(impactOf({ angle: DEG45, power: 0.6 }, 0, 0));
   });
 
   it("bölgeler aralıksız ve sıralı; pencere en çok, temel en az hasar verir", () => {
@@ -84,8 +104,8 @@ describe("Kule Yıkmaca: atış hesabı", () => {
     expect(Math.min(...winds)).toBe(-3);
     expect(Math.max(...winds)).toBe(3);
     expect(winds.filter((w) => w === 0).length).toBeGreaterThan(20);
-    expect(windShift(0, 2)).toBeCloseTo(2 * WIND_STEP);
-    expect(windShift(1, 2)).toBeCloseTo(-2 * WIND_STEP);
+    expect(windShift(0, 2)).toBeCloseTo(2 * WIND_PUSH);
+    expect(windShift(1, 2)).toBeCloseTo(-2 * WIND_PUSH);
   });
 });
 
@@ -99,7 +119,9 @@ describe("Kule Yıkmaca: düello sorusu", () => {
     // Karar verildikten sonra öteki takımın cevabı sayılmaz.
     expect(reduce(s, { type: "answer", side: 0, option: right(0), now: 1001 })).toBe(s);
     // Kurulurken atış alınmaz.
-    expect(reduce(s, { type: "fire", now: 1000 + AIM_LOCK_MS - 1 }).phase).toBe("aim");
+    expect(reduce(s, { type: "fire", launch: launchFor(0.43, 1), now: 1000 + AIM_LOCK_MS - 1 }).phase).toBe("aim");
+    // Neredeyse hiç çekilmeden bırakılan mancınık ateşlenmez.
+    expect(reduce(s, { type: "fire", launch: { angle: DEG45, power: MIN_PULL - 0.01 }, now: 1000 + AIM_LOCK_MS }).phase).toBe("aim");
     s = fireAt(s, 0.43);
     expect(s.phase).toBe("shot");
     expect(s.shots[0]).toMatchObject({ side: 1, zone: "pencere", ammo: "tas" });
@@ -130,7 +152,7 @@ describe("Kule Yıkmaca: düello sorusu", () => {
     s = reduce(s, { type: "answer", side: 1, option: wrong(0, 2), now: 200 });
     expect(s.phase).toBe("reveal");
     expect(s.misfireAt).toEqual([100, 200]);
-    expect(reduce(s, { type: "fire", now: 10_000 }).shots).toHaveLength(0);
+    expect(reduce(s, { type: "fire", launch: launchFor(0.43), now: 10_000 }).shots).toHaveLength(0);
     s = reduce(s, { type: "next", now: 300 });
     expect(s.phase).toBe("question");
     expect(s.current).toBe(1);
@@ -147,15 +169,19 @@ describe("Kule Yıkmaca: düello sorusu", () => {
     expect(s.hp[1]).toBe(TOWER_HP - damageFor("govde", "ates", 3));
   });
 
-  it("rüzgâr isabet yüksekliğini kaydırır", () => {
+  it("arkadan esen rüzgâr taşı ileri taşır, önden esen geri iter", () => {
     let seed = 1;
     while (windFor(seed, 0) !== 3) seed++;
     let s = start({}, seed);
     s = reduce(s, { type: "answer", side: 0, option: right(0), now: 0 });
     s = fireAt(s, 0.43);
-    // Sağa esen güçlü rüzgâr soldaki takımın taşını pencerenin üstüne, gövdeye taşır.
-    expect(s.shots[0].hit).toBeCloseTo(0.43 + 3 * WIND_STEP);
-    expect(s.shots[0].zone).toBe("govde");
+    // Sağa esen güçlü rüzgâr soldaki takımın taşını pencerenin üstüne taşır.
+    expect(s.shots[0].aim).toBeCloseTo(0.43, 3);
+    expect(s.shots[0].hit).toBeGreaterThan(0.48);
+    expect(s.shots[0].zone).not.toBe("pencere");
+    expect(windShift(0, 3)).toBe(3 * WIND_PUSH);
+    expect(windShift(1, 3)).toBe(-3 * WIND_PUSH);
+    expect(impactOf(launchFor(0.43), 1, 3)).toBeLessThan(0.43);
   });
 
   it("süre dolunca cevap vermeyen takımlar bilemedi sayılır", () => {
@@ -205,14 +231,5 @@ describe("Kule Yıkmaca: düello sorusu", () => {
     expect(reduce(s, { type: "answer", side: 0, option: 0, now: 11_000 })).toBe(s);
     s = reduce(s, { type: "resume", now: 50_000 });
     expect(s.deadline).toBe(70_000);
-  });
-});
-
-describe("Kule Yıkmaca: zorluk", () => {
-  it("normal ve zorda nişangâh daha hızlı tarar", () => {
-    const t = AIM_LOCK_MS + SWEEP_MS / 4;
-    expect(sweepAt(t, 1)).toBeCloseTo(0.5);
-    expect(sweepAt(t, 2)).toBeCloseTo(0.65);
-    expect(sweepAt(t, 3)).toBeCloseTo(0.8);
   });
 });

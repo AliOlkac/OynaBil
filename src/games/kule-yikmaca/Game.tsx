@@ -1,13 +1,12 @@
 "use client";
 
 import { BOT_SIDE, useBotAction, useSolo } from "../shared/solo";
-import { botFireAt } from "./bot";
-import { difficultyOf } from "../shared/difficulty";
+import { botShot } from "./bot";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { ArrowRight, Check, Crosshair, Flag, Flame, Pause, Play, X } from "lucide-react";
+import { ArrowRight, Check, Flag, Flame, Hand, Pause, Play, X } from "lucide-react";
 import { AutoAdvance } from "@/components/game/AutoAdvance";
 import { DuelQuestion } from "@/components/game/DuelQuestion";
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { GameIntro } from "@/components/game/GameIntro";
 import { ReportDialog } from "@/components/game/ReportDialog";
 import { Results } from "@/components/game/Results";
@@ -26,6 +25,9 @@ import type { GameProps, Team } from "../types";
 import {
   AIM_LOCK_MS,
   ammoFor,
+  clampLaunch,
+  MIN_PULL,
+  type Launch,
   BANDS,
   createSiege,
   damageFor,
@@ -130,13 +132,37 @@ export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps
     question: q,
     answer: (option) => dispatch({ type: "answer", side: BOT_SIDE, option, now: clock() }),
   });
-  const botAt = botTurn && s.phase === "aim" && s.aimStart !== null ? botFireAt(config.seed, String(roundOf(s)), solo!.bot.skill, s.aimStart, wind, difficultyOf(settings)) : 0;
-  useBotAction(botAt > 0, `tas:${roundOf(s)}`, { at: botAt }, () => dispatch({ type: "fire", now: botAt }));
+  // Mancınık sapan gibi çekilir: `pull` çekiş sürerken açı ve gücü taşır; sahne yolun başını çizer.
+  const [pull, setPull] = useState<Launch | null>(null);
+  const drag = useRef<{ id: number; x: number; y: number } | null>(null);
+  // Parmağın çekiş çizgisi (sahne kutusuna göre): sapanın lastiği gibi, dokunulan yerden parmağa uzanır.
+  const [band, setBand] = useState<{ x0: number; y0: number; x1: number; y1: number } | null>(null);
+  const botPlan = botTurn && s.phase === "aim" && s.aimStart !== null ? botShot(config.seed, String(roundOf(s)), solo!.bot.skill, s.aimStart, wind) : null;
+  // Rakip ateşlemeden önce mancınığını çeker: oyuncu rakibin nişanını da görür.
+  useBotAction(botPlan !== null, `cek:${roundOf(s)}`, { at: (botPlan?.at ?? 0) - 900 }, () => botPlan && setPull(botPlan.launch));
+  useBotAction(botPlan !== null, `tas:${roundOf(s)}`, { at: botPlan?.at ?? 0 }, () => {
+    if (!botPlan) return;
+    setPull(null);
+    dispatch({ type: "fire", launch: botPlan.launch, now: botPlan.at });
+  });
 
-  const fire = useCallback(() => {
-    if (!aiming || botTurn) return;
-    dispatch({ type: "fire", now: clock() });
-  }, [aiming, botTurn, dispatch]);
+  const fire = useCallback(
+    (launch: Launch) => {
+      if (!armed) return;
+      dispatch({ type: "fire", launch, now: clock() });
+    },
+    [armed, dispatch],
+  );
+  /** Parmağın çekiş vektöründen açı ve güç: geri ve aşağı çekilen mancınık ileri ve yukarı atar. */
+  const pullFrom = (e: React.PointerEvent<HTMLDivElement>): Launch | null => {
+    const from = drag.current;
+    if (!from) return null;
+    const forward = (from.x - e.clientX) * (s.shooter === 1 ? -1 : 1);
+    const up = e.clientY - from.y;
+    const reach = Math.max(120, e.currentTarget.clientHeight * 0.42);
+    const power = Math.min(1, Math.hypot(Math.max(0, forward), Math.max(0, up)) / reach);
+    return clampLaunch({ angle: Math.atan2(Math.max(0, up), Math.max(1, forward)), power });
+  };
 
   const next = useCallback(() => {
     sfx.tap();
@@ -151,11 +177,20 @@ export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps
       if (key === " " || key === "enter") {
         if (s.phase === "aim") {
           e.preventDefault();
-          fire();
+          if (pull && !botTurn) {
+            fire(pull);
+            setPull(null);
+          }
         } else if ((s.phase === "shot" && impactShown) || s.phase === "reveal") {
           e.preventDefault();
           next();
         }
+      } else if (armed && key.startsWith("arrow")) {
+        // Klavyeyle nişan: yukarı/aşağı açı, sol/sağ güç; boşluk ateşler.
+        e.preventDefault();
+        const base = pull ?? { angle: Math.PI / 4, power: 0.55 };
+        const step = { arrowup: [0.03, 0], arrowdown: [-0.03, 0], arrowright: [0, 0.02], arrowleft: [0, -0.02] }[key] ?? [0, 0];
+        setPull(clampLaunch({ angle: base.angle + step[0], power: base.power + step[1] }));
       } else if (key === "p" && s.phase === "question") dispatch({ type: paused ? "resume" : "pause", now: clock() });
     };
     window.addEventListener("keydown", onKey);
@@ -213,7 +248,7 @@ export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps
     locked: s.duel.locked,
     shooter: s.shooter,
     aimStart: s.aimStart,
-    difficulty: difficultyOf(settings),
+    pull: s.phase === "aim" ? pull : null,
     wind,
     ammo,
     shots: s.shots,
@@ -240,15 +275,48 @@ export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps
       <div
         className={`relative mx-3 min-h-[12rem] shrink-0 overflow-hidden rounded-xl bg-ink-950 shadow-[var(--surface-light)] sm:mx-6 ${
           expanded ? "h-[calc(100%-15rem)] sm:h-[calc(100%-9rem)]" : "h-[34%] sm:h-[44%]"
-        } ${aiming ? "cursor-crosshair" : ""}`}
+        } ${armed ? "cursor-grab touch-none" : ""}`}
         style={{ transition: `height var(--dur-scene) var(--ease-out)` }}
         onPointerDown={(e) => {
-          if (!aiming || e.button !== 0) return;
+          if (!armed || e.button !== 0) return;
           e.preventDefault();
-          fire();
+          e.currentTarget.setPointerCapture(e.pointerId);
+          drag.current = { id: e.pointerId, x: e.clientX, y: e.clientY };
+          const r = e.currentTarget.getBoundingClientRect();
+          setBand({ x0: e.clientX - r.left, y0: e.clientY - r.top, x1: e.clientX - r.left, y1: e.clientY - r.top });
+          setPull({ angle: Math.PI / 4, power: 0 });
+        }}
+        onPointerMove={(e) => {
+          if (drag.current?.id !== e.pointerId) return;
+          const next = pullFrom(e);
+          if (next) setPull(next);
+          const r = e.currentTarget.getBoundingClientRect();
+          setBand((b) => b && { ...b, x1: e.clientX - r.left, y1: e.clientY - r.top });
+        }}
+        onPointerUp={(e) => {
+          if (drag.current?.id !== e.pointerId) return;
+          const launch = pullFrom(e);
+          drag.current = null;
+          setPull(null);
+          setBand(null);
+          // Çok az çekilip bırakılırsa atış olmaz: yanlış dokunuş taşı harcamaz.
+          if (launch && launch.power >= MIN_PULL) fire(launch);
+        }}
+        onPointerCancel={() => {
+          drag.current = null;
+          setPull(null);
+          setBand(null);
         }}
       >
         <SiegeStage input={sceneInput} teams={sceneTeams} ruler={ruler} reducedMotion={reducedMotion} onImpact={onImpact} onFinale={onFinale} />
+        {band && pull && (
+          <svg className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden>
+            <line x1={band.x0} y1={band.y0} x2={band.x1} y2={band.y1} stroke="var(--color-ink-950)" strokeWidth={10} strokeLinecap="round" opacity={0.55} />
+            <line x1={band.x0} y1={band.y0} x2={band.x1} y2={band.y1} stroke={pull.power >= MIN_PULL ? TEAM_STYLES[teams[shooter].color].base : "var(--color-ink-400)"} strokeWidth={5} strokeLinecap="round" />
+            <circle cx={band.x0} cy={band.y0} r={9} fill="var(--color-cream)" stroke="var(--color-ink-950)" strokeWidth={3} />
+            <circle cx={band.x1} cy={band.y1} r={16 + pull.power * 10} fill={TEAM_STYLES[teams[shooter].color].base} stroke="var(--color-ink-950)" strokeWidth={3} opacity={0.9} />
+          </svg>
+        )}
         <div className="pointer-events-none absolute inset-x-3 top-3 flex items-start justify-between gap-3 sm:inset-x-4">
           <TowerBar team={teams[0]} hp={shownHp[0]} align="left" compact={!expanded} />
           <WindBadge wind={wind} compact={!expanded} />
@@ -353,25 +421,23 @@ export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps
             >
               <TurnBadge team={teams[shooter]} label="Atışta" />
               <div className="min-w-[14rem] flex-1">
-                <p className="text-lg font-bold sm:text-2xl">{botTurn ? "Rakip nişan alıyor…" : armed ? "Nişangâh pencereye gelince ATEŞ!" : "Mancınık kuruluyor, taş yükleniyor…"}</p>
+                <p className="flex items-center gap-2 text-lg font-bold sm:text-2xl">
+                  {armed && <Hand className="size-7 shrink-0 text-kehribar" />}
+                  {botTurn ? "Rakip mancınığını çekiyor…" : armed ? "Sahnede parmağını geri çek, nişan al ve bırak!" : "Mancınık kuruluyor, taş yükleniyor…"}
+                </p>
                 <p className="mt-0.5 hidden text-base text-ink-300 sm:block sm:text-lg">
                   {windHint(wind, shooter)}
                   {ammo === "ates" && <span className="ml-2 font-semibold text-ates">Ateşli gülle: hasar 1,5 kat.</span>}
                 </p>
               </div>
-              <button
-                type="button"
-                disabled={!armed}
-                onPointerDown={(e) => {
-                  if (e.button !== 0) return;
-                  e.preventDefault();
-                  fire();
-                }}
-                className="pressable flex h-20 w-full shrink-0 items-center justify-center gap-4 rounded-xl px-10 text-4xl font-bold text-ink-950 transition-opacity disabled:opacity-40 sm:h-24 sm:w-auto sm:text-5xl"
-                style={{ display: botTurn ? "none" : undefined, background: TEAM_STYLES[teams[shooter].color].base, "--edge": TEAM_STYLES[teams[shooter].color].deep } as CSSProperties}
-              >
-                <Crosshair className="size-11" strokeWidth={2.6} /> ATEŞ!
-              </button>
+{pull && (
+                <p className="tabular shrink-0 rounded-xl bg-ink-800 px-4 py-2 text-center leading-tight">
+                  <span className="block text-3xl font-bold" style={{ color: TEAM_STYLES[teams[shooter].color].base }}>
+                    %{Math.round(pull.power * 100)}
+                  </span>
+                  <span className="text-sm font-semibold text-ink-300">güç · {Math.round((pull.angle * 180) / Math.PI)}°</span>
+                </p>
+              )}
             </motion.section>
           )}
 
@@ -450,10 +516,10 @@ export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps
 }
 
 function windHint(wind: number, shooter: 0 | 1) {
-  if (wind === 0) return "Rüzgâr yok: taş nişan aldığınız yere gider.";
+  if (wind === 0) return "Rüzgâr yok. Noktalar yolun başını gösterir; pencereyi hedefle.";
   const tail = wind * (shooter === 0 ? 1 : -1) > 0;
   const power = ["", "hafif", "orta", "sert"][Math.abs(wind)];
-  return tail ? `Arkadan ${power} rüzgâr: taş nişandan daha yükseğe çarpar.` : `Önden ${power} rüzgâr: taş nişandan daha alçağa çarpar.`;
+  return tail ? `Arkadan ${power} rüzgâr: taş daha ileri gider, biraz az çek.` : `Önden ${power} rüzgâr: taş geri kalır, biraz fazla çek.`;
 }
 
 function TowerBar({ team, hp, align, compact }: { team: Team; hp: number; align: "left" | "right"; compact: boolean }) {

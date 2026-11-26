@@ -7,7 +7,7 @@ import { FIGURE, KidFigure, type BodyMotion, type Mouth } from "../../shared/sta
 import { canvasTexture, clamp01, createRenderer, disposeTree, easeInOut, easeOut, follow, glowTexture, lerp, tierSettings, tokenColor, tokenCss } from "../../shared/stage3d/kit";
 import { ChipPool, DustPool } from "../../shared/stage3d/particles";
 import { createFrameWatch, type Tier } from "../../shared/stage3d/support";
-import { AIM_LOCK_MS, sweepAt, ZONE_LABEL, type Shot } from "../logic";
+import { AIM_LOCK_MS, PREVIEW, ZONE_LABEL, type Shot } from "../logic";
 import { CREW, type ArtTeam } from "../scene/art";
 import type { RulerSpec, SceneInput } from "../scene/SiegeScene";
 import { Catapult, rockGeometry } from "./catapult";
@@ -26,6 +26,7 @@ import {
   DRUM,
   flightAt,
   flightFor,
+  pathPoint,
   H_BODY_TOP,
   heightOf,
   heightOfSvgY,
@@ -261,6 +262,17 @@ export function createSiegeEngine(o: EngineOptions): { dispose: () => void } {
   const rulerMesh = new THREE.Mesh(new THREE.PlaneGeometry(RULER_W, RANGE), new THREE.MeshBasicMaterial({ map: rulerTex, transparent: true, depthTest: false, depthWrite: false, fog: false }));
   rulerMesh.renderOrder = 6;
   aimGroup.add(aimLine, rulerMesh, reticle);
+  // Yol noktaları: mancınık çekilirken taşın yolunun başı görünür, gerisini oyuncu kestirir.
+  const DOTS = 11;
+  const dotMat = new THREE.MeshBasicMaterial({ color: tokenColor("var(--color-cream)"), transparent: true, opacity: 0.95, depthTest: false, fog: false });
+  const pathDots = Array.from({ length: DOTS }, () => {
+    const dot = new THREE.Mesh(new THREE.SphereGeometry(0.2, 10, 8), dotMat);
+    dot.renderOrder = 9;
+    dot.visible = false;
+    scene.add(dot);
+    return dot;
+  });
+  const dotTmp: V3 = { x: 0, y: 0, z: 0 };
   aimGroup.visible = false;
   scene.add(aimGroup);
   let rulerKey = "";
@@ -582,6 +594,8 @@ export function createSiegeEngine(o: EngineOptions): { dispose: () => void } {
         const e = wall - c.wall;
         const k = clamp01(e / 650);
         c.angle = lerp(ARM_REST, ARM_COCKED, easeInOut(k));
+        // Sapan gibi: çekiş gücü arttıkça kol daha da geriye yatar.
+        if (inp.pull && side === inp.shooter && k >= 1) c.angle = lerp(ARM_COCKED - 30, ARM_COCKED + 9, inp.pull.power);
         c.crank = k * Math.PI * 4;
         if (!c.sounds.has("crank") && e < 400) {
           c.sounds.add("crank");
@@ -726,7 +740,7 @@ export function createSiegeEngine(o: EngineOptions): { dispose: () => void } {
       const shooter = inp.shooter!;
       const targetSide = (1 - shooter) as 0 | 1;
       const d = dirOf(shooter);
-      const y = heightOf(sweepAt(aimElapsed, inp.difficulty));
+      const y = heightOf(0.5);
       const tx = TOWER_X[targetSide];
       const appear = clamp01((aimElapsed - AIM_LOCK_MS) / 250);
       const faceX = tx - d * (R_BODY + 0.35);
@@ -737,6 +751,8 @@ export function createSiegeEngine(o: EngineOptions): { dispose: () => void } {
       reticle.material.rotation = quiet ? 0 : t * 0.7;
       reticle.material.color.copy(tokenColor(teams[shooter].base)).lerp(tokenColor("var(--color-cream)"), 0.35);
       reticle.material.opacity = appear;
+      // Nişangâh artık kulede gezinmez: nişan mancınık çekilerek alınır.
+      reticle.visible = aimLine.visible = false;
       const lineTo = rulerX - d * (RULER_W / 2 - 0.2);
       aimLine.position.set((faceX + lineTo) / 2, y, 0.2);
       aimLine.scale.x = Math.abs(lineTo - faceX);
@@ -746,6 +762,18 @@ export function createSiegeEngine(o: EngineOptions): { dispose: () => void } {
       rulerMesh.rotation.y = Math.atan2(camera.position.x - rulerX, camera.position.z);
       rulerMesh.material.opacity = appear;
     }
+
+    const pull = live ? inp.pull : null;
+    pathDots.forEach((dot, k) => {
+      dot.visible = pull !== null;
+      if (!pull) return;
+      // Noktalar yol boyunca akar ve uzaklaştıkça küçülür.
+      const slide = quiet ? 0 : (t * 0.9) % 1;
+      const frac = (PREVIEW * (k + slide)) / DOTS;
+      pathPoint(inp.shooter!, pull, inp.wind, frac, dotTmp);
+      dot.position.set(dotTmp.x, Math.max(0.2, dotTmp.y), 0.3);
+      dot.scale.setScalar(1.15 - 0.6 * (frac / PREVIEW));
+    });
 
     // -- yıkılış --
     ([0, 1] as const).forEach((side) => {
@@ -985,9 +1013,9 @@ export function createSiegeEngine(o: EngineOptions): { dispose: () => void } {
       const side = inp.shooter!;
       if (aimElapsed < 1050) shot = cockShot(side);
       else {
-        const tx = TOWER_X[1 - side];
+        // Nişan: mancınık ve hedef kule aynı karede; taşın yolu boydan boya görünür.
         const d = dirOf(side);
-        shot = { pos: { x: tx - d * 15, y: 6, z: 18 }, look: { x: tx + d * 0.7, y: 4.6, z: 0 }, fitW: 10.5, fitH: 13 };
+        shot = { pos: { x: d * 2, y: 9, z: 46 }, look: { x: d * 2, y: 8.4, z: 0 }, fitW: 45, fitH: 21 };
       }
     } else if (fin?.honor && !fin.fired && (inp.winner === 0 || inp.winner === 1)) {
       shot = cockShot(inp.winner);

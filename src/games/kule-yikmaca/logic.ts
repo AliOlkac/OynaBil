@@ -1,4 +1,3 @@
-import { byDifficulty, difficultyOf, type Difficulty } from "../shared/difficulty";
 import type { PlayableQuestion } from "@/core/deck";
 import { duelAnswer, freshDuel, type Duel } from "../shared/duel";
 import type { AnswerLog, Team } from "../types";
@@ -9,8 +8,9 @@ import type { AnswerLog, Team } from "../types";
  * İki takımın birer kulesi ve kulesinin önünde bir mancınığı vardır. İki takıma aynı soru sorulur
  * (düello sorusu): ilk doğru cevaplayan takım atış hakkı kazanır. Hasar üç şeye bağlıdır:
  * - Bilgi: soruyu bilmek. Zor soruyu bilen takım ateşli gülle atar.
- * - Beceri: karşı kulenin önünde inip çıkan nişangâhı doğru anda durdurmak.
- * - Şans: her turda değişen rüzgâr. Arkadan esen rüzgâr taşı yükseğe, önden esen alçağa taşır.
+ * - Beceri: mancınığı sapan gibi geri çekip açıyı ve gücü ayarlamak. Taş gerçek bir mermi gibi uçar;
+ *   yolun yalnızca başı gösterilir, gerisini oyuncu kestirir.
+ * - Şans: her turda değişen rüzgâr. Arkadan esen rüzgâr taşı ileri taşır, önden esen geri iter.
  * Kulenin neresine isabet ettiği hasarı belirler: pencere en çok, temel en az.
  * Yanlış cevap veren takımın mancınığı tutukluk yapar ve takım bekler; öteki takım bilirse o atar.
  * İki takım da bilemezse kimse atmaz, sıradaki soruya geçilir. Doğru/yanlış soruları kullanılmaz:
@@ -26,12 +26,21 @@ export const TOWER_HP = 100;
  * Çift dokunuşla yanlışlıkla atış da olmaz.
  */
 export const AIM_LOCK_MS = 1_600;
-/** Nişangâhın aşağıdan yukarı çıkıp geri inme süresi. */
-export const SWEEP_MS = 2_400;
-/** Zorluğa göre (kolay, normal, zor) nişangâhın hızı, kolaya göre kat. */
-export const SWEEP_SPEED = [1, 1.3, 1.6] as const;
-/** Rüzgârın her kademesi isabet yüksekliğini bu kadar kaydırır (nişangâh ölçeğinde). */
-export const WIND_STEP = 0.035;
+/** Nişangâh ölçeğinin tamamı (0..1) kaç metre eder; yer, ölçekte 0.12'dedir. */
+export const RANGE_M = 12;
+/** Taşın kepçeden çıktığı nokta ile karşı kulenin yüzü arasındaki yatay mesafe ve çıkış yüksekliği (metre). */
+export const FIELD = { distance: 29.6, height: 3.8 } as const;
+export const GRAVITY = 16;
+/** Çıkış hızı (m/sn): çekiş gücü 0 iken ve 1 iken. */
+export const SPEED = { min: 15, max: 24 } as const;
+/** Atış açısının sınırları (radyan). */
+export const ANGLE = { min: (12 * Math.PI) / 180, max: (76 * Math.PI) / 180 } as const;
+/** Rüzgârın her kademesi taşın yatay hızını bu kadar değiştirir (m/sn). */
+export const WIND_PUSH = 0.5;
+/** Yolun gösterilen kısmı (kuleye olan mesafenin oranı): gerisini oyuncu kestirir. */
+export const PREVIEW = 0.42;
+/** Bu kadar çekilmeden bırakılan mancınık ateşlenmez (yanlış dokunuş). */
+export const MIN_PULL = 0.12;
 export const MAX_WIND = 3;
 export const FIRE_MULTIPLIER = 1.5;
 
@@ -71,14 +80,16 @@ export type SiegeSettings = {
   questions: number;
   /** Soru süresi (saniye); 0 süresiz. */
   seconds: number;
-  /** 1 kolay, 2 normal, 3 zor (bkz. shared/difficulty). */
-  difficulty?: number;
 };
+
+/** Mancınığın çekilişi: açı (radyan, yataydan yukarı) ve güç (0..1). */
+export type Launch = { angle: number; power: number };
 
 export type Shot = {
   /** Atan taraf: 0 soldaki, 1 sağdaki takım. */
   side: 0 | 1;
-  /** Nişangâhın durdurulduğu yükseklik (0..1). */
+  launch: Launch;
+  /** Rüzgâr olmasaydı taşın çarpacağı yükseklik (0..1 ölçeğinde; yerin altı ve çatının üstü olabilir). */
   aim: number;
   wind: number;
   /** Rüzgârla birlikte taşın çarptığı yükseklik. */
@@ -122,19 +133,60 @@ export type SiegeAction =
   | { type: "start"; now: number }
   | { type: "answer"; side: 0 | 1; option: number; now: number }
   | { type: "timeout"; now: number }
-  | { type: "fire"; now: number }
+  | { type: "fire"; launch: Launch; now: number }
   | { type: "next"; now: number }
   | { type: "pause"; now: number }
   | { type: "resume"; now: number };
 
 // ---- saf yardımcılar (sahne de kullanır) ----
 
-/** Nişangâhın konumu: AIM_LOCK_MS sonra aşağıdan başlar, SWEEP_MS'de bir aşağı yukarı gidip gelir. */
-export function sweepAt(elapsedMs: number, d: Difficulty = 1): number {
-  const t = Math.max(0, elapsedMs - AIM_LOCK_MS);
-  const period = SWEEP_MS / byDifficulty(d, SWEEP_SPEED);
-  const f = (t % period) / period;
-  return f < 0.5 ? f * 2 : 2 - f * 2;
+export const clampLaunch = (l: Launch): Launch => ({
+  angle: Math.min(ANGLE.max, Math.max(ANGLE.min, l.angle)),
+  power: Math.min(1, Math.max(0, l.power)),
+});
+
+/** Taşın hızı: rüzgâr yalnızca yatay hızı değiştirir (arkadan eserse artırır). */
+export function velocityOf(launch: Launch, side: 0 | 1, wind: number): { vx: number; vy: number } {
+  const l = clampLaunch(launch);
+  const v = SPEED.min + (SPEED.max - SPEED.min) * l.power;
+  return { vx: Math.max(3, v * Math.cos(l.angle) + windShift(side, wind)), vy: v * Math.sin(l.angle) };
+}
+
+/** Taşın, kuleye olan mesafenin `frac` oranındaki yüksekliği (metre, yerden). `frac` 1'den büyük olabilir. */
+export function pathHeight(launch: Launch, side: 0 | 1, wind: number, frac: number): number {
+  const { vx, vy } = velocityOf(launch, side, wind);
+  const t = (frac * FIELD.distance) / vx;
+  return FIELD.height + vy * t - (GRAVITY / 2) * t * t;
+}
+
+/** Taşın yere düştüğü yer (kuleye olan mesafenin oranı): kule olmasaydı nereye inerdi. */
+export function landingFraction(launch: Launch, side: 0 | 1, wind: number): number {
+  const { vx, vy } = velocityOf(launch, side, wind);
+  const t = (vy + Math.sqrt(vy * vy + 2 * GRAVITY * FIELD.height)) / GRAVITY;
+  return (vx * t) / FIELD.distance;
+}
+
+/** Kule yüzüne varış süresi (saniye). */
+export function flightSeconds(launch: Launch, side: 0 | 1, wind: number, frac = 1): number {
+  return (frac * FIELD.distance) / velocityOf(launch, side, wind).vx;
+}
+
+/** Taşın kule yüzündeki yüksekliği, nişangâh ölçeğinde (0.12 yer, 0.86 çatının ucu). */
+export function impactOf(launch: Launch, side: 0 | 1, wind: number): number {
+  return pathHeight(launch, side, wind, 1) / RANGE_M + BANDS[0].to;
+}
+
+/** Verilen açıyla, kulenin `target` yüksekliğine (0..1) isabet ettiren güç; ulaşılamıyorsa en yakını. */
+export function powerFor(angle: number, side: 0 | 1, wind: number, target: number): number {
+  let lo = 0;
+  let hi = 1;
+  // Güç arttıkça taş kule yüzüne daha yüksekten varır (bu açı aralığında tekdüze).
+  for (let i = 0; i < 28; i++) {
+    const mid = (lo + hi) / 2;
+    if (impactOf({ angle, power: mid }, side, wind) < target) lo = mid;
+    else hi = mid;
+  }
+  return (lo + hi) / 2;
 }
 
 /** Sorunun rüzgârı: oyun tohumu ve soru sırasından türetilir, -3..3. Sakin ve hafif rüzgâr daha sık eser. */
@@ -148,9 +200,9 @@ export function windFor(seed: number, round: number): number {
   return (h >>> 8) & 1 ? strength : -strength;
 }
 
-/** Atan taraf için rüzgârın etkisi: sağa esen rüzgâr soldaki takımın taşını yükseltir, sağdakininkini alçaltır. */
+/** Atan taraf için rüzgârın yatay hıza etkisi (m/sn): sağa esen rüzgâr soldaki takımın taşını ileri taşır, sağdakininkini geri iter. */
 export function windShift(side: 0 | 1, wind: number): number {
-  return wind * (side === 0 ? 1 : -1) * WIND_STEP;
+  return wind * (side === 0 ? 1 : -1) * WIND_PUSH;
 }
 
 export function zoneAt(hit: number): Zone {
@@ -267,15 +319,17 @@ export function siegeReducer(deck: PlayableQuestion[]) {
         if (a.now - s.aimStart < AIM_LOCK_MS) return s;
         const shooter = s.shooter;
         const target = (1 - shooter) as 0 | 1;
-        const aim = sweepAt(a.now - s.aimStart, difficultyOf(s.settings));
+        if (!Number.isFinite(a.launch.angle) || !Number.isFinite(a.launch.power) || a.launch.power < MIN_PULL) return s;
+        const launch = clampLaunch(a.launch);
         const wind = windFor(s.seed, roundOf(s));
-        const hit = aim + windShift(shooter, wind);
+        const aim = impactOf(launch, shooter, 0);
+        const hit = impactOf(launch, shooter, wind);
         const zone = zoneAt(hit);
         const ammo = ammoFor(q);
         const damage = damageFor(zone, ammo, shotsPerTeam(s));
         const hp = [...s.hp] as [number, number];
         hp[target] = Math.max(0, hp[target] - damage);
-        const shot: Shot = { side: shooter, aim, wind, hit, zone, ammo, damage, at: a.now, questionId: q?.id ?? "" };
+        const shot: Shot = { side: shooter, launch, aim, wind, hit, zone, ammo, damage, at: a.now, questionId: q?.id ?? "" };
         const next: SiegeState = { ...s, phase: "shot", hp, shots: [...s.shots, shot], aimStart: null };
         if (hp[target] === 0) return { ...next, phase: "finished", winner: s.teams[shooter].id, endReason: "collapse" };
         return next;

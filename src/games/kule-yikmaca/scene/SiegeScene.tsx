@@ -1,12 +1,11 @@
 "use client";
 
-import type { Difficulty } from "../../shared/difficulty";
 import confetti from "canvas-confetti";
 import { useEffect, useMemo, useRef } from "react";
 import { cssColor } from "@/lib/color";
 import { sfx } from "@/lib/sound";
 import { fmt, type Vec } from "../../shared/skeleton";
-import { AIM_LOCK_MS, sweepAt, ZONE_LABEL, type Ammo, type Shot, type SiegeState, type Zone } from "../logic";
+import { AIM_LOCK_MS, PREVIEW, ZONE_LABEL, type Ammo, type Launch, type Shot, type SiegeState, type Zone } from "../logic";
 import {
   ARM_COCKED,
   ARM_RELEASE,
@@ -21,6 +20,7 @@ import {
   DRUM,
   flightAt,
   flightFor,
+  pathPoint,
   GROUND,
   PILE,
   PIVOT,
@@ -56,8 +56,8 @@ export type SceneInput = {
   shooter: 0 | 1 | null;
   /** Nişan evresinin başladığı an (Date.now). */
   aimStart: number | null;
-  /** Nişangâhın hızı zorluğa bağlıdır. */
-  difficulty: Difficulty;
+  /** Mancınık çekilirken açı ve güç; çekilmiyorken null. Sahne yolun başını ve gerilen kolu çizer. */
+  pull: Launch | null;
   wind: number;
   ammo: Ammo;
   shots: Shot[];
@@ -94,7 +94,6 @@ const OVERVIEW: Rect = { x: -60, y: 96, w: 2320, h: 724 };
 const WIDE: Rect = { x: -60, y: -40, w: 2320, h: 870 };
 /** Kurulurken atan mancınık, nişan alırken hedef kule yakından görünür. */
 const cockRect = (side: 0 | 1): Rect => ({ x: CATAPULT_X[side] + dirOf(side) * 120 - 720, y: 150, w: 1440, h: 680 });
-const aimRect = (side: 0 | 1): Rect => ({ x: TOWER_X[(1 - side) as 0 | 1] - dirOf(side) * 320 - 720, y: 150, w: 1440, h: 680 });
 
 type Particle = {
   kind: "dust" | "chip";
@@ -238,6 +237,7 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
     const chipEls = qa<SVGPathElement>("[data-chip]");
     const ring = q<SVGCircleElement>('[data-part="ring"]');
     const crosshair = q<SVGGElement>('[data-part="crosshair"]');
+    const previewDots = [...svg.querySelectorAll<SVGCircleElement>('[data-part="preview-dot"]')];
     const aimLine = q<SVGLineElement>('[data-part="aim-line"]');
     const reticle = q<SVGGElement>('[data-part="reticle"]');
     const reticleRing = q<SVGCircleElement>('[data-part="reticle-ring"]');
@@ -515,6 +515,7 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
         if (c.mode === "cock") {
           const k = clamp01(e / 650);
           c.angle = lerp(ARM_REST, ARM_COCKED, easeInOut(k));
+          if (inp.pull && side === inp.shooter && k >= 1) c.angle = lerp(ARM_COCKED - 30, ARM_COCKED + 9, inp.pull.power);
           c.crank = k * Math.PI * 4;
           if (!c.sounds.has("crank") && e < 400) {
             c.sounds.add("crank");
@@ -660,11 +661,11 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
         const shooter = inp.shooter!;
         const target = (1 - shooter) as 0 | 1;
         const d = dirOf(shooter);
-        const p = sweepAt(aimElapsed, inp.difficulty);
-        const y = yOf(p);
+        const y = yOf(0.5);
         const face = TOWER_X[target] - d * BODY_HALF;
         const appear = clamp01((aimElapsed - AIM_LOCK_MS) / 250);
-        crosshair?.setAttribute("opacity", appear.toFixed(2));
+        // Nişangâh artık kulede gezinmez; yalnızca hasar cetveli görünür.
+        crosshair?.setAttribute("opacity", "0");
         aimLine?.setAttribute("x1", (face - d * 30).toFixed(1));
         aimLine?.setAttribute("x2", (TOWER_X[target] + d * (BASE_HALF + 30)).toFixed(1));
         aimLine?.setAttribute("y1", y.toFixed(1));
@@ -676,6 +677,18 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
         crosshair?.setAttribute("opacity", "0");
         rulerEl()?.setAttribute("opacity", "0");
       }
+
+      const pull = live ? inp.pull : null;
+      previewDots.forEach((dot, k) => {
+        if (!pull) return dot.setAttribute("opacity", "0");
+        const slide = quiet ? 0 : (time * 0.9) % 1;
+        const frac = (PREVIEW * (k + slide)) / previewDots.length;
+        const pt = pathPoint(inp.shooter!, pull, inp.wind, frac);
+        dot.setAttribute("cx", pt.x.toFixed(1));
+        dot.setAttribute("cy", Math.min(GROUND - 6, pt.y).toFixed(1));
+        dot.setAttribute("r", (9 - 5 * (frac / PREVIEW)).toFixed(1));
+        dot.setAttribute("opacity", "0.95");
+      });
 
       // -- yıkılış --
       ([0, 1] as const).forEach((side) => {
@@ -1027,7 +1040,8 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
         focus = WIDE;
         rate = 4.5;
       } else if (inp.phase === "aim" && inp.shooter !== null && inp.aimStart !== null) {
-        focus = wallNow - inp.aimStart < 1050 ? cockRect(inp.shooter) : aimRect(inp.shooter);
+        // Nişan: mancınık ve hedef kule aynı karede; taşın yolu boydan boya görünür.
+        focus = wallNow - inp.aimStart < 1050 ? cockRect(inp.shooter) : WIDE;
       } else if (fin?.honor && !fin.fired && (inp.winner === 0 || inp.winner === 1)) {
         focus = cockRect(inp.winner);
       } else if (st.flight || inp.phase === "shot" || inp.phase === "finished") {

@@ -169,3 +169,11 @@ Service worker yalnızca derlenmiş sürümde kaydolur, `npm run dev` sırasınd
 - **Lig** (`src/mobile/league.ts`, saf): 16 basamak (Bronz III … Elmas I, Usta), basamak başına 0–100 lig puanı, gizli beceri puanı, Bronz ve Gümüş'te düşmeme, basamak atlayınca üç maçlık koruma, yenilgide kaybı yarıya indiren kalkan.
 - **Oyuncu kaydı** (`src/mobile/profile.ts`): `localStorage` içinde durur: lig, kalkanlar, maç geçmişi, ünite bazında başarı, süren maç. `recordMatch` bir maçı yalnızca bir kez işler. Sunuculu sürümde bu kayıt hesaba taşınır.
 - **Ekranlar** (`src/mobile/MobileApp.tsx`): karşılama, lobi (lig kartı, oyun kartları, ders paneli, OYNA), eşleşme (nasıl oynanır ipucuyla), maç, maç sonu (sayan puan, basamak atlama töreni, galibiyet serisi, zayıf konu, yanlışlar), lig, çalışma ve profil (amblem, ses ve 3D ayarı). Mobil maçların sorulanlar hafızası tahtadakinden ayrıdır (`mobil` şubesi).
+
+## Kule Yıkmaca: sapan nişanı
+
+Atış açı ve güçle yapılır (`Launch`). Öğrenci sahnede parmağını geri ve aşağı çeker: çekişin uzunluğu gücü, yönü açıyı verir; çok az çekilip bırakılan mancınık ateşlenmez (`MIN_PULL`). Taşın yolu oyun mantığındaki saf balistik hesaptır (`velocityOf`, `pathHeight`, `impactOf`): rüzgâr yatay hızı değiştirir, taşın kule yüzündeki yüksekliği hangi bölgeye isabet ettiğini belirler. Sahnelerin yol noktaları (`pathPoint`) ve uçuşu (`flightFor`) aynı hesaptan çıkar; noktalar yolun yalnızca ilk kısmını (`PREVIEW`) gösterir. Bilgisayar rakip bir açı seçer ve `powerFor` ile pencereye isabet ettiren gücü bulur, becerisine göre şaşar.
+
+## Penaltı: kaleci
+
+Kaleci şutu çeken takımın son dört şutunu hatırlar (`keeperFor`, `habits`): o yönlere atlama ağırlığı artar. Atladığı üçlünün sınırından `KEEPER_REACH` kadar ötedeki topa da uzanır (`keeperReaches`). Seçim yine oyun tohumundan türetilir; aynı oyun yeniden açılınca kaleci aynı yere atlar.

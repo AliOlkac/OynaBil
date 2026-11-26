@@ -8,8 +8,9 @@ import type { AnswerLog, Team } from "../types";
  *
  * İki takıma aynı soru sorulur (düello sorusu). İlk doğru cevaplayan takımın oyuncusu penaltıyı çeker;
  * yanlış cevap veren takım bekler, iki takım da bilemezse kimse çekmez. Şutçu parmağıyla topu
- * kalenin istediği yerine sürükler. Kaleci bilgisayardır: her şutta üçte bir olasılıkla sola, ortaya
- * ya da sağa atlar. Topun gittiği üçlüyü tutturursa kurtarır; yükseklik fark etmez.
+ * kalenin istediği yerine sürükler. Kaleci bilgisayardır ve takımın alışkanlığını okur: önceki şutların
+ * gittiği yöne atlama olasılığı artar. Atladığı üçlüdeki ve sınırına yakın topları kurtarır; yükseklik
+ * fark etmez. Gol atmanın yolu yön değiştirmek ve kalecinin uzanamayacağı yere vurmaktır.
  *
  * Sorular bitince çok gol atan kazanır; eşitlikte seri penaltıya geçilir, ilk golü atan kazanır.
  * Saf reducer: zaman eylemle gelir, kalecinin seçimi oyun tohumundan türetilir.
@@ -107,13 +108,41 @@ export function thirdOf(x: number): Third {
   return x < -1 / 3 ? "sol" : x > 1 / 3 ? "sag" : "orta";
 }
 
-/** Kalecinin atlayacağı yer: oyun tohumu ve şutun sırasından türetilir; her biri üçte bir olasılıklı. */
-export function keeperFor(seed: number, kickIndex: number): Third {
+/** Kaleci atladığı üçlünün sınırından bu kadar ötedeki topa da uzanır (kale yarı genişliği cinsinden). */
+export const KEEPER_REACH = 0.2;
+/** Kaleci, şutu çeken takımın son bu kadar şutunu aklında tutar. */
+export const KEEPER_MEMORY = 4;
+/** Hatırlanan her şut, o yöne atlama ağırlığını bu kadar artırır (başlangıç ağırlığı 1). */
+export const KEEPER_HABIT = 1.2;
+
+const THIRDS = ["sol", "orta", "sag"] as const;
+const ZONE: Record<Third, [number, number]> = { sol: [-1, -1 / 3], orta: [-1 / 3, 1 / 3], sag: [1 / 3, 1] };
+
+/**
+ * Kalecinin atlayacağı yer: oyun tohumu ve şutun sırasından türetilir. Kaleci şutu çeken takımın
+ * alışkanlığını okur: `habits` o takımın son şutlarının gittiği yönlerdir ve o yönlerin olasılığı artar.
+ * Hep aynı köşeye vuran takımın şutunu kaleci çoğu zaman bekler; alışkanlık yokken üç yön eşit olasılıklıdır.
+ */
+export function keeperFor(seed: number, kickIndex: number, habits: readonly Third[] = []): Third {
   let h = (seed ^ Math.imul(kickIndex + 7, 0x9e3779b1)) >>> 0;
   h = Math.imul(h ^ (h >>> 16), 0x85ebca6b) >>> 0;
   h = Math.imul(h ^ (h >>> 13), 0xc2b2ae35) >>> 0;
   h = (h ^ (h >>> 16)) >>> 0;
-  return (["sol", "orta", "sag"] as const)[h % 3];
+  const recent = habits.slice(-KEEPER_MEMORY);
+  if (recent.length === 0) return THIRDS[h % 3];
+  const weights = THIRDS.map((t) => 1 + KEEPER_HABIT * recent.filter((r) => r === t).length);
+  let roll = (h / 0x100000000) * weights.reduce((a, b) => a + b, 0);
+  for (let i = 0; i < 3; i++) {
+    roll -= weights[i];
+    if (roll < 0) return THIRDS[i];
+  }
+  return "sag";
+}
+
+/** Kaleci topa yetişir mi: top atladığı üçlüdeyse ya da sınırına `KEEPER_REACH` kadar yakınsa. */
+export function keeperReaches(x: number, keeper: Third): boolean {
+  const [from, to] = ZONE[keeper];
+  return x >= from - KEEPER_REACH && x <= to + KEEPER_REACH;
 }
 
 /**
@@ -135,7 +164,7 @@ export function scatterFor(seed: number, kickIndex: number, d: Difficulty): { dx
 export function kickResult(x: number, y: number, keeper: Third): KickResult {
   const place = classify(x, y);
   if (place !== "ic") return place;
-  return thirdOf(x) === keeper ? "kurtardi" : "gol";
+  return keeperReaches(x, keeper) ? "kurtardi" : "gol";
 }
 
 export function createPenalty(teams: [Team, Team], settings: PenaltySettings, seed: number): PenaltyState {
@@ -229,7 +258,9 @@ export function penaltyReducer(deck: PlayableQuestion[]) {
         if (s.phase !== "kick" || s.shooter === null || s.kickStart === null) return s;
         if (a.now - s.kickStart < KICK_LOCK_MS) return s;
         if (!Number.isFinite(a.x) || !Number.isFinite(a.y)) return s;
-        const keeper = keeperFor(s.seed, s.kicks.length);
+        // Kaleci bu takımın önceki şutlarını hatırlar.
+        const habits = s.kicks.filter((k) => k.side === s.shooter).map((k) => k.third);
+        const keeper = keeperFor(s.seed, s.kicks.length, habits);
         const { dx, dy } = scatterFor(s.seed, s.kicks.length, difficultyOf(s.settings, 1));
         const x = a.x + dx;
         const y = a.y + dy;

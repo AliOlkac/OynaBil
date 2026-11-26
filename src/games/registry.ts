@@ -108,12 +108,12 @@ export const halatCekme: GameDefinition = {
 export const kuleYikmaca: GameDefinition = {
   id: "kule-yikmaca",
   name: "Kule Yıkmaca",
-  tagline: "İki takıma aynı soru. İlk bilen mancınığı kurar, nişangâhı doğru anda durdurup karşı kuleyi yıkar.",
+  tagline: "İki takıma aynı soru. İlk bilen mancınığını sapan gibi geri çeker, nişan alır ve karşı kuleyi yıkar.",
   howTo: [
     "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
     "İlk doğru cevaplayan takım atış hakkı kazanır. Yanlış cevap veren takımın mancınığı tutukluk yapar ve takım bekler; iki takım da bilemezse kimse atmaz.",
-    "Karşı kulenin önünde nişangâh inip çıkar. Pencere hizasında ATEŞ'e dokunan en çok hasarı verir, temel en azını. Zor soruyu bilen ateşli gülle atar.",
-    "Rüzgâr her soruda değişir: arkadan eserse taş daha yükseğe, önden eserse daha alçağa çarpar. Kulesi önce yıkılan kaybeder.",
+    "Sahnede parmağınızı geri ve aşağı çekin: çekiş uzadıkça taş hızlanır, yönü açıyı belirler. Noktalar yolun başını gösterir; bırakınca taş uçar. Pencereyi vuran en çok hasarı verir, temel en azını. Zor soruyu bilen ateşli gülle atar.",
+    "Rüzgâr her soruda değişir: arkadan eserse taş daha ileri gider, önden eserse geri kalır. Kulesi önce yıkılan kaybeder.",
   ],
   teamCount: { min: 2, max: 2, default: 2 },
   // Doğru/yanlış soruları kullanılmaz: bir takımın yanlış cevabı görülünce doğrusu belli olurdu.
@@ -154,7 +154,7 @@ export const penalti: GameDefinition = {
   howTo: [
     "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
     "İlk doğru cevaplayan takımın oyuncusu topun başına geçer. Yanlış cevap veren takım bekler; iki takım da bilemezse kimse çekmez.",
-    "Şutçu topa dokunur, parmağını kalede istediği yere sürükleyip bırakır. Kaleci sola, ortaya ya da sağa atlar; köşeyi tutturursa kurtarır.",
+    "Şutçu topa dokunur, parmağını kalede istediği yere sürükleyip bırakır. Kaleci sola, ortaya ya da sağa atlar ve yakınına giden topa uzanır. Takımın önceki şutlarını aklında tutar: hep aynı köşeye vuran takımı bekler.",
     "Sorular bitince çok gol atan kazanır. Eşitlikte seri penaltıya geçilir: ilk golü atan kazanır.",
   ],
   teamCount: { min: 2, max: 2, default: 2 },
