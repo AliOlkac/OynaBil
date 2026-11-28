@@ -38,6 +38,8 @@ Basketbol, Okçuluk ve Kule Yıkmaca bilerek zordur: basketin yeşil bölgesi da
 
 Kule Yıkmaca, Penaltı, Basketbol ve Okçuluk'ta iki takıma aynı soru sorulur: iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir, şıklar iki tarafta farklı sırayla dizilir. Bu oyunlarda yalnızca çoktan seçmeli sorular kullanılır; doğru/yanlış sorusunda bir takımın yanlış cevabı görülünce doğrusu belli olurdu. Atıştan sonra sıradaki soruya kendiliğinden geçilir; öğretmen geçişi durdurup konuyu anlatabilir.
 
+**Ders videoları (`/dersler`):** Her konu için sesli anlatımlı, canlandırmalı kısa dersler. Türkiye Yüzyılı Maarif Modeli'nin akışını izler: merak uyandıran bir soruyla başlar, keşfeder, öğretir, günlük hayatla ilişkilendirir, oynatıcı durup öğrenciye bir soru sorar ve ders özetle biter. Altyazıda okunan kelime vurgulanır; tahtada tam ekran açılır, telefonda da oynar, internetsiz çalışır. Şu an Din Kültürü 5. sınıf "Allah İnancı" ünitesinin dört konusu hazırdır. Ayrıntılar ve yeni ders ekleme: [docs/DERSLER.md](docs/DERSLER.md).
+
 **Mobil prototip (`/mobil`):** Telefonda tek kişilik, dereceli maçlar. Oyuncu takma adını ve sınıfını seçer, oyun kartlarından birini seçer (ya da "Sırayla"), **OYNA**'ya dokunur ve altı oyunun herhangi birinde bilgisayar rakibe karşı kısa bir maç yapar (6 soru; Halat Çekme'de 90 saniye). Kazandıkça lig puanı toplar (Bronz III'ten Usta'ya); maç sonunda yanlışlarını ve zayıf konusunu görür, kısa bir çalışmayla kalkan kazanır. Kayıt telefonda durur, sunucu yoktur. Telefonda tarayıcının "Ana ekrana ekle" seçeneğiyle uygulama gibi açılır. Yön ve sonraki aşamalar: [docs/MOBIL-PLATFORM.md](docs/MOBIL-PLATFORM.md).
 
 **Üç boyutlu sahne ve eski tahtalar:** Bütün oyunların üç boyutlu sahnesi vardır ve ekran kartı olan tahtalarda kendiliğinden açılır; Bilgi Yarışması'nda bu, soru ekranının üstündeki stüdyo şerididir. Oyun tahtanın gücünü kendisi ölçer: sahne akmıyorsa ayrıntıyı azaltır, yine akmıyorsa aynı oyunu çizim sahnesiyle sürdürür. Üst çubuktaki **3D** düğmesiyle sahneyi siz de açıp kapatabilirsiniz; tercih o tahtada hatırlanır. Üç boyutlu sahne ve sesler ilk açılışta indirilir, sonra internetsiz de çalışır.
@@ -71,16 +73,18 @@ src/
     din-kulturu/subject.ts   üniteler
     din-kulturu/sorular/     5.json … 8.json elle yazılan sorular, 8-lgs.json paragraf soruları
     din-kulturu/kartlar/     5.json … 8.json bilgi kartları (soruya dönüştürülür)
+    din-kulturu/dersler/     ders videolarının sahneleri (5.json) ve ses zamanları (5.ses.json)
   core/                    Soru modeli (zod), bilgi kartı motoru, deste kurucu, soru deposu
   lib/                     Ses, hareket belirteçleri, sorulanlar hafızası, hata bildirimleri
+  lessons/                 Ders videoları: model, oynatıcı, sahne görselleri ve çizimler
   games/                   Oyunlar: her biri saf bir oyun mantığı (logic.ts) + tahta ekranı (Game.tsx)
     registry.ts              oyun tanımları ve ayarları
     shared/stage3d/          üç boyutlu sahnelerin ortak altyapısı (three.js)
   components/              Ortak arayüz: düğmeler, takım amblemleri, oyun çerçevesi, sonuç ekranı
-  app/                     Sayfalar: ana sayfa, /kurulum, /oyun/[oyun], /sorular
-public/ses/                Kayıtlı sesler (Penaltı'nın spikeri ve tribünü)
+  app/                     Sayfalar: ana sayfa, /kurulum, /oyun/[oyun], /sorular, /dersler, /dersler/[ders]
+public/ses/                Kayıtlı sesler (oyunların spikeri ve ortam sesleri, ders anlatımları)
 docs/                      Mimari, tasarım sistemi, sesler, içerik kontrol listesi, mobil platform planı
-scripts/                   Service worker üretimi, LGS soru üretim hattı (lgs-uret.ts), ses hazırlama (sesleri-hazirla.sh)
+scripts/                   Service worker üretimi, LGS soru üretim hattı (lgs-uret.ts), ses hazırlama (sesleri-hazirla.sh, dersleri-hazirla.mjs)
 ```
 
 ## Ekleme rehberi
