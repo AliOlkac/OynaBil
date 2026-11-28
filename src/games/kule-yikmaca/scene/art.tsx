@@ -1,17 +1,14 @@
 import { EMBLEM_SHAPES } from "@/components/ui/TeamEmblem";
 import { HAIR, Head, PANTS, SHOE, SKIN, STYLES, type KidLook } from "../../shared/kid";
 import {
-  ARM_LEN,
   BASE_HALF,
   BODY_HALF,
   CATAPULT_X,
   CENTER,
-  CRANK_R,
-  DRUM,
   GROUND,
   PARAPET_HALF,
   PILE,
-  PIVOT,
+  POUCH_REST,
   ROOF_HALF,
   TOWER_X,
   Y_APEX,
@@ -40,6 +37,7 @@ export const DUST_COUNT = 80;
 export const CHIP_COUNT = 44;
 export const BLOCK_COUNT = 14;
 export const TRAIL_COUNT = 8;
+export const PUFF_COUNT = 40;
 export const CLOUDS: { x: number; y: number; s: number }[] = [
   { x: -560, y: 120, s: 1.3 },
   { x: 260, y: 40, s: 0.9 },
@@ -56,7 +54,7 @@ export const CREW: { side: 0 | 1; role: "kurucu" | "gozcu"; look: KidLook }[] = 
   { side: 1, role: "kurucu", look: { skin: SKIN[2], hair: HAIR[2], style: STYLES[2] } },
   { side: 1, role: "gozcu", look: { skin: SKIN[3], hair: HAIR[1], style: STYLES[3] } },
 ];
-export const CREW_X = { kurucu: -98, gozcu: 112 } as const;
+export const CREW_X = { kurucu: -138, gozcu: 112 } as const;
 export const CREW_SCALE = 1.05;
 
 const STONE = "M-6 -5 L5 -6 L8 2 L0 7 L-7 3 Z";
@@ -133,9 +131,19 @@ export function SceneArt({ teams }: { teams: [ArtTeam, ArtTeam] }) {
       {/* Gözcüler mancınığın önünde */}
       {CREW.map((c, i) => (c.role === "gozcu" ? <CrewKid key={i} index={i} look={c.look} team={teams[c.side]} /> : null))}
 
-      {/* Tutukluk yapan mancınığın düşürdüğü taş */}
+      {/* Tutukluk yapan sapanın düşürdüğü taş ve kurucunun cebe fırlattığı taş */}
       <g data-part="dud" opacity={0}>
         <Stone />
+      </g>
+      <g data-part="toss" opacity={0}>
+        <Stone />
+      </g>
+
+      {/* Uçuşun geride bıraktığı nokta izi: bir sonraki atışa kadar kalır */}
+      <g>
+        {Array.from({ length: PUFF_COUNT }, (_, i) => (
+          <circle key={i} data-puff={i} r={i % 4 === 3 ? 9 : 6} fill="var(--color-cream)" stroke="var(--color-ink-950)" strokeWidth={2} opacity={0} />
+        ))}
       </g>
 
       {/* Mermi: gölge, iz, taş ve ateş */}
@@ -408,20 +416,14 @@ const RUBBLE: [number, number, number, number][] = [
   [-80, -8, 2.4, 70], [-30, -30, 2.6, 0], [40, -24, 2.8, 90], [96, -6, 2.4, 45], [0, -84, 2.2, 30], [-150, 4, 2, 0], [160, 4, 2.2, 20],
 ];
 
+/**
+ * Dev sapan: kalın Y gövde, iki çatal, lastikler ve deri cep. Arkadaki lastik taşın arkasında, öndeki
+ * önünde çizilir; sahne her karede cebin yerini ve lastiklerin uçlarını günceller.
+ */
 function Catapult({ side, team }: { side: 0 | 1; team: ArtTeam }) {
   const d = dirOf(side);
-  const wheel = (cx: number) => (
-    <g data-part="wheel" transform={`translate(${cx} -24)`}>
-      <circle r={24} fill="var(--color-ahsap-koyu)" />
-      <circle r={17} fill="var(--color-ahsap)" />
-      <g stroke="var(--color-ahsap-koyu)" strokeWidth={4}>
-        <line x1={-17} y1={0} x2={17} y2={0} />
-        <line x1={-8.5} y1={-14.7} x2={8.5} y2={14.7} />
-        <line x1={-8.5} y1={14.7} x2={8.5} y2={-14.7} />
-      </g>
-      <circle r={5} fill="var(--color-ink-950)" />
-    </g>
-  );
+  const fx = POUCH_REST.x;
+  const tipY = POUCH_REST.y - 14;
   return (
     <g data-catapult={side} transform={`translate(${CATAPULT_X[side]} ${GROUND}) scale(${d} 1)`}>
       {/* Taş yığını: kurucu taşı buradan alır */}
@@ -441,40 +443,29 @@ function Catapult({ side, team }: { side: 0 | 1; team: ArtTeam }) {
             {EMBLEM_SHAPES[team.emblem]}
           </g>
         </g>
-        {/* Gövde: kızak, dikmeler, kasnak */}
-        <rect x={-96} y={-42} width={180} height={16} rx={5} fill="var(--color-ahsap)" />
-        <rect x={-96} y={-42} width={180} height={5} rx={2} fill="var(--color-ahsap-acik)" />
-        <path d="M-22 -36 L22 -166 M70 -36 L30 -166" stroke="var(--color-ahsap)" strokeWidth={13} strokeLinecap="round" />
-        <path d="M2 -98 L50 -98" stroke="var(--color-ahsap-koyu)" strokeWidth={8} strokeLinecap="round" />
-        <rect x={8} y={-178} width={46} height={16} rx={4} fill="var(--color-ahsap-koyu)" />
-        <rect x={6} y={-170} width={14} height={24} rx={6} fill={team.base} />
-        {/* Vinç */}
-        <path d={`M${DRUM.x - 10} -36 L${DRUM.x} ${DRUM.y} L${DRUM.x + 10} -36`} stroke="var(--color-ahsap-koyu)" strokeWidth={8} fill="none" strokeLinejoin="round" />
-        <circle cx={DRUM.x} cy={DRUM.y} r={13} fill="var(--color-ahsap-koyu)" />
-        <circle cx={DRUM.x} cy={DRUM.y} r={8} fill="var(--color-ip)" />
-        <path data-part="winch-rope" stroke="var(--color-ip)" strokeWidth={4} fill="none" strokeLinecap="round" />
-        {/* Kol: kepçe ve yüklü taş */}
-        <g data-part="arm">
-          <rect x={-14} y={-7} width={ARM_LEN - 6} height={14} rx={6} fill="var(--color-ahsap-acik)" />
-          <rect x={-14} y={2} width={ARM_LEN - 6} height={5} rx={2} fill="var(--color-ahsap)" />
-          <path d="M40 -8 V8 M48 -8 V8 M56 -8 V8" stroke="var(--color-ip-koyu)" strokeWidth={3} />
-          <g data-part="loaded" opacity={0} transform={`translate(${ARM_LEN} 5)`}>
+        {/* Arkadaki lastik (taşın arkasında) */}
+        <path data-part="band-back" stroke={team.deep} strokeWidth={10} strokeLinecap="round" fill="none" />
+        {/* Gövde: toprağa gömülü kalın dal, arkaya destek, iki çatal */}
+        <ellipse cx={fx} cy={-4} rx={40} ry={10} fill="var(--color-ahsap-koyu)" />
+        <path d={`M${fx - 70} -2 L${fx - 6} -96`} stroke="var(--color-ahsap-koyu)" strokeWidth={9} strokeLinecap="round" />
+        <path d={`M${fx} -4 L${fx} -118`} stroke="var(--color-ahsap)" strokeWidth={22} strokeLinecap="round" />
+        <path d={`M${fx - 4} -4 L${fx - 4} -118`} stroke="var(--color-ahsap-acik)" strokeWidth={5} strokeLinecap="round" opacity={0.6} />
+        <path d={`M${fx} -112 C ${fx - 6} -150 ${fx - 22} -170 ${fx - 20} ${tipY} M${fx} -112 C ${fx + 6} -150 ${fx + 22} -170 ${fx + 20} ${tipY}`} stroke="var(--color-ahsap)" strokeWidth={15} strokeLinecap="round" fill="none" />
+        <rect x={fx - 28} y={tipY + 2} width={16} height={12} rx={4} fill={team.base} />
+        <rect x={fx + 12} y={tipY + 2} width={16} height={12} rx={4} fill={team.base} />
+        {/* Cep: deri ve içindeki taş */}
+        <g data-part="pouch" transform={`translate(${POUCH_REST.x} ${POUCH_REST.y})`}>
+          <g data-part="loaded" opacity={0}>
             <g data-part="loaded-fire" opacity={0}>
               <path d="M-14 -4 C -20 10 -10 26 0 34 C 10 26 20 10 14 -4 Z" fill="var(--color-ates)" />
               <path d="M-7 0 C -10 10 -5 18 0 24 C 5 18 10 10 7 0 Z" fill="var(--color-kehribar)" />
             </g>
             <Stone />
           </g>
-          <path d={`M${ARM_LEN - 22} 0 A22 20 0 0 1 ${ARM_LEN + 22} 0 L${ARM_LEN + 15} 0 A15 13 0 0 0 ${ARM_LEN - 15} 0 Z`} fill="var(--color-ahsap-koyu)" />
+          <path d="M-20 2 C -16 20 16 20 20 2 L14 2 C 10 12 -10 12 -14 2 Z" fill="var(--color-ahsap-koyu)" />
         </g>
-        <circle cx={PIVOT.x} cy={PIVOT.y} r={9} fill="var(--color-ink-950)" />
-        <circle cx={PIVOT.x} cy={PIVOT.y} r={4} fill="var(--color-ink-400)" />
-        <g data-part="crank" transform={`translate(${DRUM.x} ${DRUM.y})`}>
-          <line x1={0} y1={0} x2={CRANK_R} y2={0} stroke="var(--color-ink-950)" strokeWidth={5} strokeLinecap="round" />
-          <circle cx={CRANK_R} cy={0} r={5} fill="var(--color-ahsap-acik)" />
-        </g>
-        {wheel(-62)}
-        {wheel(56)}
+        {/* Öndeki lastik (taşın önünde) */}
+        <path data-part="band-front" stroke={team.deep} strokeWidth={10} strokeLinecap="round" fill="none" />
       </g>
     </g>
   );

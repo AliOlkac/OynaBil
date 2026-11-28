@@ -132,7 +132,7 @@ export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps
     question: q,
     answer: (option) => dispatch({ type: "answer", side: BOT_SIDE, option, now: clock() }),
   });
-  // Mancınık sapan gibi çekilir: `pull` çekiş sürerken açı ve gücü taşır; sahne yolun başını çizer.
+  // Dev sapan çekilir: `pull` çekiş sürerken açı ve gücü taşır; sahne yolun başını çizer.
   const [pull, setPull] = useState<Launch | null>(null);
   const drag = useRef<{ id: number; x: number; y: number } | null>(null);
   // Parmağın çekiş çizgisi (sahne kutusuna göre): sapanın lastiği gibi, dokunulan yerden parmağa uzanır.
@@ -153,7 +153,7 @@ export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps
     },
     [armed, dispatch],
   );
-  /** Parmağın çekiş vektöründen açı ve güç: geri ve aşağı çekilen mancınık ileri ve yukarı atar. */
+  /** Parmağın çekiş vektöründen açı ve güç: geri ve aşağı çekilen sapan ileri ve yukarı atar. */
   const pullFrom = (e: React.PointerEvent<HTMLDivElement>): Launch | null => {
     const from = drag.current;
     if (!from) return null;
@@ -209,7 +209,7 @@ export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps
       <GameIntro
         game={kuleYikmaca}
         teams={teams}
-        questionInfo={`${settings.questions} soru${settings.seconds ? `, soru başına ${settings.seconds} saniye` : ""}. İki takıma aynı soru sorulur; ilk bilen takım mancınıkla karşı kuleye atış yapar.`}
+        questionInfo={`${settings.questions} soru${settings.seconds ? `, soru başına ${settings.seconds} saniye` : ""}. İki takıma aynı soru sorulur; ilk bilen takım dev sapanla karşı kuleye atış yapar.`}
         onStart={() => {
           sfx.go();
           dispatch({ type: "start", now: clock() });
@@ -310,11 +310,10 @@ export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps
       >
         <SiegeStage input={sceneInput} teams={sceneTeams} ruler={ruler} reducedMotion={reducedMotion} onImpact={onImpact} onFinale={onFinale} />
         {band && pull && (
+          // Lastikler sahnenin içinde gerilir; burada yalnızca parmağın tuttuğu yer ve çekiş yönü soluk gösterilir.
           <svg className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden>
-            <line x1={band.x0} y1={band.y0} x2={band.x1} y2={band.y1} stroke="var(--color-ink-950)" strokeWidth={10} strokeLinecap="round" opacity={0.55} />
-            <line x1={band.x0} y1={band.y0} x2={band.x1} y2={band.y1} stroke={pull.power >= MIN_PULL ? TEAM_STYLES[teams[shooter].color].base : "var(--color-ink-400)"} strokeWidth={5} strokeLinecap="round" />
-            <circle cx={band.x0} cy={band.y0} r={9} fill="var(--color-cream)" stroke="var(--color-ink-950)" strokeWidth={3} />
-            <circle cx={band.x1} cy={band.y1} r={16 + pull.power * 10} fill={TEAM_STYLES[teams[shooter].color].base} stroke="var(--color-ink-950)" strokeWidth={3} opacity={0.9} />
+            <line x1={band.x0} y1={band.y0} x2={band.x1} y2={band.y1} stroke="var(--color-cream)" strokeWidth={3} strokeDasharray="6 8" strokeLinecap="round" opacity={0.45} />
+            <circle cx={band.x0} cy={band.y0} r={8} fill="none" stroke="var(--color-cream)" strokeWidth={3} opacity={0.6} />
           </svg>
         )}
         <div className="pointer-events-none absolute inset-x-3 top-3 flex items-start justify-between gap-3 sm:inset-x-4">
@@ -423,7 +422,7 @@ export default function KuleYikmaca({ config, deck, onRestart, solo }: GameProps
               <div className="min-w-[14rem] flex-1">
                 <p className="flex items-center gap-2 text-lg font-bold sm:text-2xl">
                   {armed && <Hand className="size-7 shrink-0 text-kehribar" />}
-                  {botTurn ? "Rakip mancınığını çekiyor…" : armed ? "Sahnede parmağını geri çek, nişan al ve bırak!" : "Mancınık kuruluyor, taş yükleniyor…"}
+                  {botTurn ? "Rakip sapanını geriyor…" : armed ? "Sapanı geri çek, nişan al ve bırak!" : "Taş sapana yükleniyor…"}
                 </p>
                 <p className="mt-0.5 hidden text-base text-ink-300 sm:block sm:text-lg">
                   {windHint(wind, shooter)}

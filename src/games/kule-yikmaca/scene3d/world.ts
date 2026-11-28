@@ -58,6 +58,8 @@ export const CRANK_R = 0.26;
 export const CRANK_Z = 0.86;
 export const PILE = { x: -2.75, z: 0.5 };
 export const STONE_R = 0.27;
+/** Sapanın en çok geri çekilebildiği mesafe (cebin dinlenme yerinden, metre). */
+export const MAX_PULL = 1.7;
 /** Taş kepçenin içinde, kolun ucundan bu kadar içeride durur. */
 const BUCKET_INSET = 0.2;
 /** Ekip mancınığın kamera tarafında durur: kurucu vinçte, gözcü önde. */
@@ -73,6 +75,15 @@ export function bucketPoint(angleDeg: number): { x: number; y: number } {
   const a = (angleDeg * Math.PI) / 180;
   const tip = armTip(angleDeg);
   return { x: tip.x + Math.sin(a) * BUCKET_INSET, y: tip.y - Math.cos(a) * BUCKET_INSET };
+}
+
+/** Sapanın cebinin dinlenme yeri (yerel): taş buradan fırlar; eski mancınığın bırakma noktasıyla aynıdır. */
+export const POUCH_REST = bucketPoint(ARM_RELEASE);
+
+/** Çekişin cebi götürdüğü yer (yerel): atış yönünün tersine, güçle orantılı. */
+export function pullOffset(angle: number, power: number): { x: number; y: number } {
+  const len = Math.max(0, Math.min(1, power)) * MAX_PULL;
+  return { x: -Math.cos(angle) * len, y: Math.max(-(POUCH_REST.y - 0.7), -Math.sin(angle) * len) };
 }
 
 /** Mancınığın yerel bir noktasını dünyaya taşır. Sağdaki mancınık x ekseninde aynalıdır; ekip yine kamera tarafındadır. */

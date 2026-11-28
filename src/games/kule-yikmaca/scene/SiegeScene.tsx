@@ -7,23 +7,18 @@ import { sfx } from "@/lib/sound";
 import { fmt, type Vec } from "../../shared/skeleton";
 import { AIM_LOCK_MS, PREVIEW, ZONE_LABEL, type Ammo, type Launch, type Shot, type SiegeState, type Zone } from "../logic";
 import {
-  ARM_COCKED,
-  ARM_RELEASE,
-  ARM_REST,
-  armTip,
   BASE_HALF,
   BODY_HALF,
   CATAPULT_X,
   catapultToWorld,
-  CRANK_R,
   dirOf,
-  DRUM,
   flightAt,
   flightFor,
   pathPoint,
   GROUND,
   PILE,
-  PIVOT,
+  POUCH_REST,
+  pullOffset,
   TOWER_X,
   Y_APEX,
   Y_BASE_TOP,
@@ -37,7 +32,7 @@ import {
   yOf,
   type Flight,
 } from "./geometry";
-import { BLOCK_COUNT, CHIP_COUNT, CLOUDS, CREW, CREW_SCALE, CREW_X, DamageRuler, DUST_COUNT, SceneArt, TRAIL_COUNT, type ArtTeam } from "./art";
+import { BLOCK_COUNT, CHIP_COUNT, CLOUDS, CREW, CREW_SCALE, CREW_X, DamageRuler, DUST_COUNT, PUFF_COUNT, SceneArt, TRAIL_COUNT, type ArtTeam } from "./art";
 import { solveCrew, type CrewPose } from "./crew";
 
 /**
@@ -81,7 +76,6 @@ type Props = {
 
 // ---- yardımcılar ----
 const clamp01 = (v: number) => Math.max(0, Math.min(1, v));
-const easeIn = (t: number) => t * t * t;
 const easeOut = (t: number) => 1 - (1 - t) ** 3;
 const easeInOut = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
@@ -118,13 +112,14 @@ type Particle = {
 type Block = { x: number; y: number; vx: number; vy: number; rot: number; vr: number; life: number; settled: boolean; floor: number };
 
 type CatMode = "rest" | "cock" | "fire" | "misfire";
-type Cat = { mode: CatMode; start: number; angle: number; crank: number; recoil: number; recoilVel: number; loaded: boolean; fire: boolean; sounds: Set<string> };
+/** Sapanın durumu: `back` cebin dinlenme yerinden kayması (yerel), `from` atış anında nereden fırladığı. */
+type Cat = { mode: CatMode; start: number; back: Vec; from: Vec; dir: Vec; recoil: number; recoilVel: number; loaded: boolean; fire: boolean; sounds: Set<string> };
 
 type Reaction = { kind: "cheer" | "dismay" | "relief"; start: number; until: number };
 
 type ActiveFlight = {
   index: number;
-  shot: Pick<Shot, "side" | "hit" | "zone" | "ammo" | "damage">;
+  shot: Pick<Shot, "side" | "hit" | "zone" | "ammo" | "damage"> & Partial<Pick<Shot, "launch" | "wind">>;
   flight: Flight;
   start: number;
   launched: boolean;
@@ -189,12 +184,11 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
       const root = q<SVGGElement>(`[data-catapult="${s}"]`)!;
       return {
         body: q<SVGGElement>('[data-part="cat-body"]', root),
-        arm: q<SVGGElement>('[data-part="arm"]', root),
+        pouch: q<SVGGElement>('[data-part="pouch"]', root),
         loaded: q<SVGGElement>('[data-part="loaded"]', root),
         loadedFire: q<SVGGElement>('[data-part="loaded-fire"]', root),
-        crank: q<SVGGElement>('[data-part="crank"]', root),
-        rope: q<SVGPathElement>('[data-part="winch-rope"]', root),
-        wheels: qa<SVGGElement>('[data-part="wheel"]', root),
+        bandBack: q<SVGPathElement>('[data-part="band-back"]', root),
+        bandFront: q<SVGPathElement>('[data-part="band-front"]', root),
         pennant: q<SVGPathElement>('[data-part="pennant"]', root),
       };
     });
@@ -254,7 +248,8 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
       shake: 0,
       punch: null as null | { x: number; y: number; until: number },
       seenShots: start.shots.length,
-      seenAim: start.aimStart,
+      // Nişan sırasında yeniden açılan sahnede sapan hemen kurulur (taş cepte).
+      seenAim: start.phase === "aim" ? null : start.aimStart,
       seenMisfire: [...start.misfireAt] as (number | null)[],
       cloudX: CLOUDS.map((c) => c.x),
       flight: null as ActiveFlight | null,
@@ -265,7 +260,11 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
       finale: null as null | { start: number; called: boolean; honor: boolean; confetti: boolean; fired: boolean },
       lastFrame: t0,
     };
-    const cat: Cat[] = [0, 1].map(() => ({ mode: "rest", start: 0, angle: ARM_REST, crank: 0, recoil: 0, recoilVel: 0, loaded: false, fire: false, sounds: new Set() }));
+    const cat: Cat[] = [0, 1].map(() => ({ mode: "rest", start: 0, back: { x: 0, y: 0 }, from: { x: 0, y: 0 }, dir: { x: 0.7, y: -0.7 }, recoil: 0, recoilVel: 0, loaded: false, fire: false, sounds: new Set() }));
+    const puffEls = qa<SVGCircleElement>("[data-puff]");
+    const tossEl = q<SVGGElement>('[data-part="toss"]');
+    let puffCount = 0;
+    let lastPuff = -1;
     const vis: TowerVis[] = [0, 1].map(() => ({ taken: 0, windowBroken: false, merlons: [true, true, true, true, true], roofHits: 0, baseHits: 0, collapse: null }));
     const pose: CrewPose[] = CREW.map(() => ({ lean: 0.04, crouch: 0, near: { x: 10, y: -42 }, far: { x: -4, y: -44 }, armsUp: 0, cover: 0 }));
     const particles: Particle[] = [];
@@ -398,6 +397,13 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
       c.mode = "fire";
       c.start = now;
       c.loaded = true;
+      // Cep çekildiği yerden ileri fırlar; çekilmeden atılan (şeref atışı) taş için kısa bir çekiş varsayılır.
+      c.from = Math.hypot(c.back.x, c.back.y) > 10 ? { ...c.back } : pullOffset(0.8, 0.55);
+      const a = shot.launch?.angle ?? 0.8;
+      c.dir = { x: Math.cos(a), y: -Math.sin(a) };
+      puffEls.forEach((el) => el.setAttribute("opacity", "0"));
+      puffCount = 0;
+      lastPuff = -1;
       c.fire = shot.ammo === "ates";
       c.sounds = new Set();
       st.flight = { index, shot, flight: flightFor(shot), start: now, launched: false, impacted: false, roll: null, trail: [], honor };
@@ -508,68 +514,83 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
         launch({ side: inp.winner, hit: 0.43, zone: "pencere", ammo: "ates", damage: 0 }, -1, t, true);
       }
 
-      // -- mancınıklar --
+      // -- sapanlar --
       ([0, 1] as const).forEach((side) => {
         const c = cat[side];
         const e = t - c.start;
         if (c.mode === "cock") {
-          const k = clamp01(e / 650);
-          c.angle = lerp(ARM_REST, ARM_COCKED, easeInOut(k));
-          if (inp.pull && side === inp.shooter && k >= 1) c.angle = lerp(ARM_COCKED - 30, ARM_COCKED + 9, inp.pull.power);
-          c.crank = k * Math.PI * 4;
-          if (!c.sounds.has("crank") && e < 400) {
-            c.sounds.add("crank");
-            sfx.crank();
-          }
-          if (e >= 1050 && !c.loaded) {
+          if (e >= 1300 && !c.loaded) {
             c.loaded = true;
-            if (!c.sounds.has("load") && e < 1500) {
+            if (!c.sounds.has("load") && e < 1700) {
               c.sounds.add("load");
               sfx.load();
               if (c.fire) sfx.ignite();
             }
           }
+          // Cep çekişi izler: parmak geri çektikçe lastikler gerilir.
+          let goal: Vec = { x: 0, y: 0 };
+          if (c.loaded && inp.pull && side === inp.shooter) {
+            goal = pullOffset(inp.pull.angle, inp.pull.power);
+            if (!c.sounds.has("stretch") && inp.pull.power > 0.15) {
+              c.sounds.add("stretch");
+              sfx.bowDraw();
+            }
+          } else if (!inp.pull) c.sounds.delete("stretch");
+          const k = quiet ? 1 : Math.min(1, dt * 20);
+          c.back = { x: c.back.x + (goal.x - c.back.x) * k, y: c.back.y + (goal.y - c.back.y) * k };
         } else if (c.mode === "fire") {
           const sec = e / 1000;
-          if (sec < 0.12) c.angle = ARM_COCKED - (ARM_COCKED - ARM_REST) * easeIn(sec / 0.12);
-          else c.angle = ARM_REST + 9 * Math.exp(-7 * (sec - 0.12)) * Math.abs(Math.sin(24 * (sec - 0.12)));
-          if (c.angle <= ARM_RELEASE && c.loaded) {
-            c.loaded = false;
-            c.recoilVel = -260;
-            if (!quiet) dustPuff(catapultToWorld(side, { x: -60, y: 0 }).x, GROUND, 5, 50);
-            sfx.launch();
+          if (sec < 0.109) {
+            const k = (sec / 0.109) ** 2;
+            c.back = { x: c.from.x * (1 - k), y: c.from.y * (1 - k) };
+          } else {
+            if (c.loaded) {
+              c.loaded = false;
+              c.recoilVel = -260;
+              if (!quiet) dustPuff(catapultToWorld(side, { x: POUCH_REST.x, y: 0 }).x, GROUND, 5, 50);
+              sfx.launch();
+            }
+            // Taş çıktıktan sonra boş cep ileri savrulur ve sönerek titrer.
+            const u = sec - 0.109;
+            const amp = quiet ? 0 : 36 * Math.exp(-5 * u) * Math.sin(20 * u + 0.3);
+            c.back = { x: c.dir.x * amp, y: c.dir.y * amp };
           }
           if (sec > 1.5) c.mode = "rest";
         } else if (c.mode === "misfire") {
+          // Tutukluk: lastik gevşek kalır, taş cepten kayıp önüne düşer.
           const sec = e / 1000;
-          if (sec < 0.35) c.angle = lerp(ARM_REST, 122, easeOut(sec / 0.35));
-          else if (sec < 0.45) c.angle = lerp(122, ARM_REST - 2, easeIn((sec - 0.35) / 0.1));
-          else c.angle = ARM_REST + 6 * Math.exp(-6 * (sec - 0.45)) * Math.abs(Math.sin(20 * (sec - 0.45)));
-          c.crank = clamp01(sec / 0.35) * Math.PI * 1.6;
+          const sag = Math.min(1, sec / 0.35);
+          c.back = { x: -12 * sag, y: 26 * sag };
           if (sec >= 0.4 && c.loaded) {
             c.loaded = false;
-            const tip = catapultToWorld(side, armTip(c.angle));
-            st.dud = { x: tip.x, y: tip.y, vx: dirOf(side) * 120, vy: -240, rot: 0, start: t };
-            if (!quiet) dustPuff(catapultToWorld(side, DRUM).x, GROUND - 50, 6, 14, "var(--color-ink-300)");
+            const p = catapultToWorld(side, { x: POUCH_REST.x + c.back.x, y: POUCH_REST.y + c.back.y });
+            st.dud = { x: p.x, y: p.y, vx: dirOf(side) * 80, vy: -60, rot: 0, start: t };
+            if (!quiet) dustPuff(p.x, GROUND - 20, 6, 14, "var(--color-ink-300)");
             sfx.misfire();
           }
           if (sec > 2) c.mode = "rest";
         } else {
-          c.angle += (ARM_REST - c.angle) * Math.min(1, dt * 6);
-          c.crank *= Math.exp(-dt * 2);
+          const k = Math.min(1, dt * 6);
+          c.back = { x: c.back.x * (1 - k), y: c.back.y * (1 - k) };
         }
         c.recoilVel += (-140 * c.recoil - 13 * c.recoilVel) * dt;
         c.recoil += c.recoilVel * dt;
 
         const els = cats[side];
         els.body?.setAttribute("transform", `translate(${c.recoil.toFixed(2)} 0)`);
-        els.arm?.setAttribute("transform", `translate(${PIVOT.x} ${PIVOT.y}) rotate(${(-c.angle).toFixed(2)})`);
+        const px = POUCH_REST.x + c.back.x;
+        const py = POUCH_REST.y + c.back.y;
+        els.pouch?.setAttribute("transform", `translate(${px.toFixed(1)} ${py.toFixed(1)}) rotate(${((Math.atan2(c.back.y, c.back.x) * 180) / Math.PI * 0.15).toFixed(1)})`);
         els.loaded?.setAttribute("opacity", c.loaded ? "1" : "0");
         els.loadedFire?.setAttribute("opacity", c.loaded && c.fire ? String(0.75 + 0.25 * Math.sin(time * 30)) : "0");
-        els.crank?.setAttribute("transform", `translate(${DRUM.x} ${DRUM.y}) rotate(${((c.crank * 180) / Math.PI).toFixed(1)})`);
-        const attach = armTip(c.angle, 52);
-        els.rope?.setAttribute("d", `M${DRUM.x} ${DRUM.y - 8} Q ${((DRUM.x + attach.x) / 2).toFixed(1)} ${((DRUM.y + attach.y) / 2 + 6).toFixed(1)} ${fmt(attach)}`);
-        els.wheels.forEach((w, k) => w.setAttribute("transform", `translate(${k === 0 ? -62 : 56} -24) rotate(${((c.recoil / 24) * 57.3).toFixed(1)})`));
+        // Lastikler çatal uçlarından cebin iki yanına uzanır; uzadıkça incelir.
+        const tipY = POUCH_REST.y - 6;
+        const stretch = Math.hypot(c.back.x, c.back.y);
+        const width = Math.max(4, 10 - stretch / 14).toFixed(1);
+        els.bandBack?.setAttribute("d", `M${POUCH_REST.x - 20} ${tipY} L${(px - 14).toFixed(1)} ${(py + 4).toFixed(1)}`);
+        els.bandFront?.setAttribute("d", `M${POUCH_REST.x + 20} ${tipY} L${(px + 12).toFixed(1)} ${(py + 4).toFixed(1)}`);
+        els.bandBack?.setAttribute("stroke-width", width);
+        els.bandFront?.setAttribute("stroke-width", width);
       });
 
       // -- uçuş --
@@ -592,6 +613,13 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
             shotFire?.setAttribute("transform", `rotate(${((ang * 180) / Math.PI).toFixed(1)})`);
             shotStone?.setAttribute("transform", `rotate(${(sec * 720 * dir).toFixed(1)})`);
             f.trail.unshift(shotPos);
+            if (puffCount < PUFF_COUNT && sec - lastPuff >= 0.055) {
+              lastPuff = sec;
+              const el = puffEls[puffCount++];
+              el?.setAttribute("cx", shotPos.x.toFixed(1));
+              el?.setAttribute("cy", shotPos.y.toFixed(1));
+              el?.setAttribute("opacity", "0.9");
+            }
             if (f.trail.length > TRAIL_COUNT * 2) f.trail.length = TRAIL_COUNT * 2;
             if (f.shot.ammo === "ates" && !quiet && Math.random() < 0.6) {
               emit({ kind: "dust", x: shotPos.x, y: shotPos.y, vx: rnd(-20, 20), vy: rnd(-40, 0), r: rnd(4, 8), grow: -4, max: 0.4, alpha: 0.9, color: Math.random() < 0.5 ? "var(--color-ates)" : "var(--color-kehribar)" });
@@ -774,6 +802,7 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
       }
 
       // -- ekip --
+      const toss = { at: null as { x: number; y: number; rot: number } | null };
       CREW.forEach((member, i) => {
         const side = member.side;
         const c = cat[side];
@@ -787,24 +816,32 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
         const toLocal = (p: Vec, face: number): Vec => ({ x: (p.x - kidX) / (CREW_SCALE * face), y: p.y / CREW_SCALE });
         const cockE = c.mode === "cock" ? t - c.start : -1;
 
-        if (member.role === "kurucu" && cockE >= 0 && cockE < 1200) {
+        if (member.role === "kurucu" && cockE >= 0 && cockE < 1300) {
           if (cockE < 650) {
-            // Vinci çevirir: iki el de kolda.
-            const a = c.crank;
-            const handle = { x: DRUM.x + Math.cos(a) * CRANK_R, y: DRUM.y + Math.sin(a) * CRANK_R };
-            target = { lean: 0.3, crouch: 0.2, near: toLocal(handle, 1), far: toLocal(handle, 1), armsUp: 0, cover: 0 };
+            // Yığının başına geçip uygun bir taş seçer.
+            facing = -1;
+            const pileTop = { x: PILE.x, y: -40 };
+            const k = clamp01(cockE / 300);
+            target = { lean: 0.5 * k, crouch: 0.75 * k, near: toLocal(pileTop, -1), far: toLocal({ x: pileTop.x + 10, y: pileTop.y }, -1), armsUp: 0, cover: 0 };
             mouth = "grit";
           } else if (cockE < 1050) {
-            // Arkasındaki yığından taşı alıp kepçeye koyar.
-            facing = -1;
-            const k = clamp01((cockE - 650) / 170);
+            // Taşı kaldırıp sapanın altına getirir.
             const k2 = easeInOut(clamp01((cockE - 820) / 230));
             const pileTop = { x: PILE.x, y: -40 };
-            const bucket = { x: armTip(ARM_COCKED).x, y: armTip(ARM_COCKED).y - 20 };
-            const hand = cockE < 820 ? pileTop : mixV(pileTop, bucket, k2);
-            target = { lean: lerp(0.5, 0.2, k2), crouch: cockE < 820 ? 0.75 * k : lerp(0.75, 0.1, k2), near: toLocal(hand, -1), far: toLocal({ x: hand.x + 10, y: hand.y }, -1), armsUp: 0, cover: 0 };
+            const under = { x: POUCH_REST.x - 30, y: -120 };
+            const hand = cockE < 820 ? pileTop : mixV(pileTop, under, k2);
+            facing = k2 > 0.5 ? 1 : -1;
+            target = { lean: lerp(0.5, 0, k2), crouch: cockE < 820 ? 0.75 : lerp(0.75, 0.05, k2), near: toLocal(hand, facing), far: toLocal({ x: hand.x + 10, y: hand.y }, facing), armsUp: 0, cover: 0 };
             held = cockE > 780;
             mouth = "grit";
+          } else {
+            // Taşı cebe fırlatır: kollar yukarıda.
+            target = { lean: -0.12, crouch: 0, near: { x: 24, y: -150 }, far: { x: 18, y: -146 }, armsUp: 1, cover: 0 };
+            mouth = "open";
+            const k = (cockE - 1050) / 250;
+            const from = catapultToWorld(side, { x: POUCH_REST.x - 30, y: -130 });
+            const to = catapultToWorld(side, { x: POUCH_REST.x + c.back.x, y: POUCH_REST.y + c.back.y });
+            toss.at = { x: lerp(from.x, to.x, k), y: lerp(from.y, to.y, k) - Math.sin(k * Math.PI) * 60, rot: k * 400 };
           }
         } else if (member.role === "gozcu" && c.mode === "cock" && cockE >= AIM_LOCK_MS - 200) {
           // Gözcü karşı kuleyi gösterir.
@@ -902,6 +939,9 @@ export function SiegeScene({ input, teams, ruler, reducedMotion, onImpact, onFin
         el.mouths.smile?.setAttribute("opacity", mouth === "smile" ? "1" : "0");
         el.mouths.calm?.setAttribute("opacity", mouth === "calm" ? "1" : "0");
       });
+      // Kurucunun cebe fırlattığı taş.
+      tossEl?.setAttribute("opacity", toss.at ? "1" : "0");
+      if (toss.at) tossEl?.setAttribute("transform", `translate(${toss.at.x.toFixed(1)} ${toss.at.y.toFixed(1)}) rotate(${toss.at.rot.toFixed(0)})`);
 
       // -- rüzgâr: bulutlar ve bayraklar --
       const wind = inp.wind;

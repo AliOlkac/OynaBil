@@ -172,7 +172,7 @@ Service worker yalnızca derlenmiş sürümde kaydolur, `npm run dev` sırasınd
 
 ## Kule Yıkmaca: sapan nişanı
 
-Atış açı ve güçle yapılır (`Launch`). Öğrenci sahnede parmağını geri ve aşağı çeker: çekişin uzunluğu gücü, yönü açıyı verir; çok az çekilip bırakılan mancınık ateşlenmez (`MIN_PULL`). Taşın yolu oyun mantığındaki saf balistik hesaptır (`velocityOf`, `pathHeight`, `impactOf`): rüzgâr yatay hızı değiştirir, taşın kule yüzündeki yüksekliği hangi bölgeye isabet ettiğini belirler. Sahnelerin yol noktaları (`pathPoint`) ve uçuşu (`flightFor`) aynı hesaptan çıkar; noktalar yolun yalnızca ilk kısmını (`PREVIEW`) gösterir. Bilgisayar rakip bir açı seçer ve `powerFor` ile pencereye isabet ettiren gücü bulur, becerisine göre şaşar.
+Atış açı ve güçle yapılır (`Launch`). Öğrenci sahnede parmağını geri ve aşağı çeker: çekişin uzunluğu gücü, yönü açıyı verir; çok az çekilip bırakılan sapan ateşlenmez (`MIN_PULL`). Sahnelerde mancınığın yerini dev sapan alır (`scene3d/slingshot.ts`, `scene/art.tsx`): cebin dinlenme yeri (`POUCH_REST`) eski bırakma noktasıyla aynıdır, böylece uçuş hesabı değişmez; çekiş cebi `pullOffset` kadar geri götürür, bırakınca cep `RELEASE_DELAY` içinde ileri fırlar. Taşın yolu oyun mantığındaki saf balistik hesaptır (`velocityOf`, `pathHeight`, `impactOf`): rüzgâr yatay hızı değiştirir, taşın kule yüzündeki yüksekliği hangi bölgeye isabet ettiğini belirler. Sahnelerin yol noktaları (`pathPoint`) ve uçuşu (`flightFor`) aynı hesaptan çıkar; noktalar yolun yalnızca ilk kısmını (`PREVIEW`) gösterir. Bilgisayar rakip bir açı seçer ve `powerFor` ile pencereye isabet ettiren gücü bulur, becerisine göre şaşar.
 
 ## Penaltı: kaleci
 

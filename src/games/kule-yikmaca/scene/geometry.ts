@@ -65,6 +65,17 @@ export function armTip(angleDeg: number, length = ARM_LEN): Vec {
   return { x: PIVOT.x + Math.cos(a) * length, y: PIVOT.y - Math.sin(a) * length };
 }
 
+/** Sapanın cebinin dinlenme yeri (yerel): taş buradan fırlar; eski mancınığın bırakma noktasıyla aynıdır. */
+export const POUCH_REST: Vec = armTip(ARM_RELEASE);
+/** Sapanın en çok geri çekilebildiği mesafe (çizim birimi). */
+export const MAX_PULL = 85;
+
+/** Çekişin cebi götürdüğü yer (yerel; y aşağı artı): atış yönünün tersine, güçle orantılı. */
+export function pullOffset(angle: number, power: number): Vec {
+  const len = Math.max(0, Math.min(1, power)) * MAX_PULL;
+  return { x: -Math.cos(angle) * len, y: Math.min(-POUCH_REST.y - 34, Math.sin(angle) * len) };
+}
+
 /** Yerel bir noktayı dünyaya taşır. */
 export function catapultToWorld(side: 0 | 1, p: Vec, recoil = 0): Vec {
   const d = dirOf(side);

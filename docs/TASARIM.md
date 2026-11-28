@@ -33,15 +33,15 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
 - **Kule Yıkmaca sahnesi:**
   - Gün batımında iki taş kule. Gövde taş örgüdür, üst gövdede İznik çinisinden bir kuşak geçer, burç mazgallıdır, külah takım renginde kiremitlidir.
   - Pencere içeriden kandille aydınlanır. En değerli hedef olduğu için uzaktan seçilir.
-  - Ahşap mancınıkların başında iki çocuk durur: biri vinci çevirip taşı yükler, öteki karşı kuleyi gösterir. Çocuklar Halat Çekme'dekilerle aynı karakter tasarımını paylaşır (`src/games/shared/kid.tsx`).
-- **Nişan ve hasar cetveli:** Mancınık sapan gibi geri çekilir. Çekiş sürerken dokunulan yerden parmağa takım renginde bir lastik çizgisi uzanır, mancınığın kolu çekişle birlikte geriye yatar ve taşın yolunun başı krem rengi noktalarla çizilir (noktalar yol boyunca akar, uzaklaştıkça küçülür). Yolun gerisi gösterilmez. Hedef kulenin yanında her bölgenin vereceği hasarı gösteren cetvel durur; pencere kehribar renklidir.
+  - Ahşap dev sapanların başında iki çocuk durur: biri yığından taş alıp cebe fırlatır, öteki karşı kuleyi gösterir. Çocuklar Halat Çekme'dekilerle aynı karakter tasarımını paylaşır (`src/games/shared/kid.tsx`).
+- **Nişan ve hasar cetveli:** Atış Angry Birds tarzındadır. Dev sapanın deri cebi taşla birlikte çekiş yönünün tersine gelir; takım renginde iki lastik çatal uçlarından cebe gerilir, uzadıkça incelir. Ekranda yalnızca parmağın tuttuğu yer soluk bir halka ve kesik çizgiyle görünür. Taşın yolunun başı krem rengi noktalarla çizilir (noktalar yol boyunca akar, uzaklaştıkça küçülür). Yolun gerisi gösterilmez. Hedef kulenin yanında her bölgenin vereceği hasarı gösteren cetvel durur; pencere kehribar renklidir.
 - **Kule sağlamlık çubukları:**
   - Hasar önce takım rengindeki çubuktan düşer. Arkasındaki krem iz yarım saniye sonra yetişir, böylece kaybedilen parça bir an görünür kalır.
   - Can 30'un altına inince çubuk mercana döner.
   - Soru sırasında çubuklar küçülür ki kuleleri örtmesin.
 - **Kamera:** Kuleler sahanın iki ucundadır, taş uzun bir yay çizer.
   - Soru sırasında iki kule geniş çerçevede durur.
-  - Doğru cevapta sahne büyür (`--dur-scene`). Kamera önce mancınığını kuran takıma yaklaşır, sonra mancınık ile hedef kuleyi aynı kareye alacak kadar açılır; nişangâh ve cetvel büyük görünür.
+  - Doğru cevapta sahne büyür (`--dur-scene`). Kamera önce sapanına taş yükleyen takıma yaklaşır, sonra sapan ile hedef kuleyi aynı kareye alacak kadar açılır; nişangâh ve cetvel büyük görünür.
   - ATEŞ'te kamera bütün sahayı gösterir. İsabet anında vurulan kuleye yaklaşıp sarsılır, yıkılışta yıkılan kuleyi izler.
   - Telefonda yakın planlar daha da daralır.
 - **Rüzgâr:** Bulutlar ve bayraklar rüzgârın yönünde ve şiddetinde hareket eder. Bu sürekli hareket oyun bilgisi taşıdığı için sonsuz döngü yasağının ikinci istisnasıdır.
@@ -72,12 +72,12 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
 - **Bilgi Yarışması stüdyosu (üç boyutlu):** Soru ekranının üstünde ince bir şerit: her takımın kendi renginde kürsüsü, kürsüde puanı, arkasında üç yarışmacısı vardır. Sıradaki takımın kürsüsüne spot ışığı düşer. Doğru cevapta takım zıplayarak sevinir ve kürsüden takım renginde kıvılcımlar saçılır; yanlışta yarışmacılar başını tutar; soru çalınınca ışık çalan takıma geçer. Önde olan takımın kürsüsünde taç durur. Soru okunurken sahnede hareket yoktur.
 - **Halat Çekme sahnesi (üç boyutlu):** Akşam vakti bir okul şenliği: çayır, flamalar, ortada çamur havuzu, iki yanda takım renginde çizgi ve bayrak. Dörder çocuk ipe asılır; doğru cevapta takım geriye yaslanıp çeker ve ayaklarından toz kalkar, yanlışta çocuklar buz kalıbının içinde kalır. Kurdele çizgiye ulaşınca kaybedenler çamura kapaklanır ve çamur sıçrar; kazananlar ip boşalınca geriye devrilir, sonra kalkıp zıplayarak sevinir. Berabere bitişte ip ortadan kopar. Çizim yedeği aynı sahnenin SVG hâlidir.
 - **Kule Yıkmaca sahnesi (üç boyutlu):**
-  - Gün batımı: ufukta güneş, sıra sıra tepeler, serviler ve çayır. İki kule sahanın iki ucunda, mancınıklar kulelerinin önündedir.
+  - Gün batımı: ufukta güneş, sıra sıra tepeler, serviler ve çayır. İki kule sahanın iki ucunda, dev sapanlar kulelerinin önündedir.
   - Kuleler taş taş örülüdür: geniş temel, gövde, çini kuşak, mazgallı burç ve takım renginde kiremitli külah. Pencereler içeriden aydınlıktır, kepenkler takım rengindedir.
   - İsabet alan yerin taşları yerinden fırlar ve kulenin dibine yığılır; arkada karanlık dolgu görünür. Pencereye isabet camı ve kepenkleri dağıtır, burca isabet mazgalları düşürür, külaha isabet külahı yana yatırır. Hasar 70'i geçince kule yana yatmaya başlar.
-  - Kamera olayı izler: kurulurken atan mancınık, nişan alınırken hedef kule (çapraz açıdan), atışta taşın bütün yolu, isabette çarpma noktası. Soru sırasında iki kule birlikte görünür.
-  - Nişan alınırken mancınık ve hedef kule aynı karededir; yol noktaları mancınıktan çıkar, hedef kulenin yanında hasar cetveli durur, pencere kehribar renklidir.
-  - Ekip (her mancınıkta kurucu ve gözcü) vinci çevirir, taşı kepçeye taşır, hedefi gösterir, isabette sevinir, karşı taş tepeden geçerken başını korur.
+  - Kamera olayı izler: taş yüklenirken atan sapan, nişan alınırken hedef kule (çapraz açıdan), atışta taşın bütün yolu, isabette çarpma noktası. Soru sırasında iki kule birlikte görünür.
+  - Nişan alınırken sapan ve hedef kule aynı karededir; yol noktaları sapanın cebinden çıkar, hedef kulenin yanında hasar cetveli durur, pencere kehribar renklidir.
+  - Ekip (her sapanda kurucu ve gözcü) yığından taş alıp cebe fırlatır, hedefi gösterir, isabette sevinir, karşı taş tepeden geçerken başını korur.
   - Yıkılış: kule sarsılır, taşlar alttan başlayarak çözülür ve moloz yığınına dökülür, külah yığının üstüne yana yatmış düşer. Kamera kulenin çevresinde döner, toz kalkar, kazanan takımın renginde konfeti atılır.
   - Sesler çizim sahnesiyle aynıdır (`src/lib/sound.ts`).
 - **Kule Yıkmaca sahnesi (çizim):** Tahta üç boyutlu çizemiyorsa ya da 3D düğmesi kapalıysa aynı oyun yandan görünen SVG çizimiyle oynanır.
@@ -91,12 +91,12 @@ Kod tarafındaki karşılıkları: `src/app/globals.css` (renk, yazı, süre bel
   - Önde olan takımda taç, üst üste doğrularda alev rozeti.
   - Sonuç ekranında yükselen kürsü.
   - Kule Yıkmaca'da:
-    - Mancınık kurulur ve vinç döner. Taş yığından alınıp kepçeye konur. Kol kasnağa çarpıp sekerken mancınık geri teper.
-    - Taş iz bırakarak uçar, yerde gölgesi gezer. Ateşli güllenin alev kuyruğu vardır.
+    - Kurucu yığından taş alır, sapanın altına gelir ve taşı cebe fırlatır. Çekişte lastik gerilme sesi duyulur; bırakınca cep ileri fırlar, boş lastik sönerek titrer.
+    - Taş iz bırakarak uçar, yerde gölgesi gezer; yolunda bir sonraki atışa kadar kalan krem rengi nokta izi bırakır. Ateşli güllenin alev kuyruğu vardır.
     - Karşı ekip taş üstünden geçerken başını korur.
     - İsabette taş kırıkları saçılır, toz kalkar, çatlaklar belirir. Mazgallar düşer, külah eğilir, pencere kırılır.
     - Kritik vuruşta kehribar bir halka açılır ve hasar yazısı yaylanarak yükselir.
-    - Yanlış cevapta mancınık tutukluk yapar: kol boşa çıkar, taş mancınığın önüne düşer, vinçten duman çıkar.
+    - Yanlış cevapta sapan tutukluk yapar: lastik gevşer, taş cepten kayıp sapanın önüne düşer, toz kalkar.
     - Yıkılışta kule katları sırayla çöker. Toz bulutunun içinden kırık bayraklı bir moloz yığını çıkar. Kazananlar zıplayıp sevinir, kaybedenler çöker.
 
 ## Renkler

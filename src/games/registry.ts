@@ -108,10 +108,10 @@ export const halatCekme: GameDefinition = {
 export const kuleYikmaca: GameDefinition = {
   id: "kule-yikmaca",
   name: "Kule Yıkmaca",
-  tagline: "İki takıma aynı soru. İlk bilen mancınığını sapan gibi geri çeker, nişan alır ve karşı kuleyi yıkar.",
+  tagline: "İki takıma aynı soru. İlk bilen dev sapanını geri çeker, nişan alır ve karşı kuleyi yıkar.",
   howTo: [
     "İki takıma aynı soru sorulur; iki öğrenci tahtada kendi yarısındaki şıklara aynı anda dokunabilir.",
-    "İlk doğru cevaplayan takım atış hakkı kazanır. Yanlış cevap veren takımın mancınığı tutukluk yapar ve takım bekler; iki takım da bilemezse kimse atmaz.",
+    "İlk doğru cevaplayan takım atış hakkı kazanır. Yanlış cevap veren takımın sapanı tutukluk yapar ve takım bekler; iki takım da bilemezse kimse atmaz.",
     "Sahnede parmağınızı geri ve aşağı çekin: çekiş uzadıkça taş hızlanır, yönü açıyı belirler. Noktalar yolun başını gösterir; bırakınca taş uçar. Pencereyi vuran en çok hasarı verir, temel en azını. Zor soruyu bilen ateşli gülle atar.",
     "Rüzgâr her soruda değişir: arkadan eserse taş daha ileri gider, önden eserse geri kalır. Kulesi önce yıkılan kaybeder.",
   ],
